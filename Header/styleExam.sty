@@ -1,0 +1,41 @@
+\colorgrids
+\qformat{\Large\textbf{Aufgabe \thequestion\hfill\thepoints}}
+\newlist{partes}{enumerate}{3}
+\setlist[partes]{label=(\alph*)}
+\newcommand{\parte}{\item}
+\newlist{subpartes}{enumerate}{3}
+\setlist[subpartes]{label=\roman*)}
+\newcommand{\subparte}{\item}
+\setlist[enumerate,1]{%(
+	leftmargin=*, itemsep=12pt, label={\textbf{\arabic*.)}}}
+\newcommand\answerbox{%%
+	\fbox{\rule{2in}{0pt}\rule[-0.1ex]{0pt}{4ex}}}
+\pointpoints{Punkt}{Punkte}
+\hqword{Frage:}
+\hpword{Mögliche Punkte:}
+\hsword{Erreicht:}
+\htword{Total}
+\renewcommand*\half{.5}
+\newcommand{\antwort}[1]{
+    {\setlength{\textwidth}{\textwidth}\fillwithgrid{#1cm}\vspace{5pt}}
+}
+\renewcommand{\solutiontitle}{\noindent\textbf{Lösung:}\par\noindent}
+
+% Graphed boxes
+\newcommand{\karos}[2]{
+  \begin{tikzpicture}
+    \draw[step=0.4cm,color=cyan,dotted] (0,0) grid (#1 cm ,#2 cm);
+  %  \draw((#1)/2 cm,0)--((#1)/2 cm,/#2)/2cm)
+  \end{tikzpicture}
+}
+\usetikzlibrary{arrows, petri, topaths, graphs}
+\linespread{1.2} % Line spacing
+
+%=========================================================
+\newenvironment{parcols}[1][]{
+    \begin{parts}\begin{multicols}{#1}
+}{
+    \end{multicols}\end{parts}
+}
+
+
