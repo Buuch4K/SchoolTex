@@ -1,0 +1,157 @@
+\documentclass[11pt]{exam}
+\input{../Header/packages.sty}
+\input{../Header/styleExam.sty}
+\input{../Header/mathexpressions.sty}
+\input{../Header/headerGZP.sty}
+%=========================================================
+\newcommand{\theme}{Grenzwerte von Folgen und Reihen}
+\newcommand{\teacher}{Jonas Guler}
+\newcommand{\class}{3GaMa}
+\renewcommand{\date}{27.02.25}
+%=========================================================
+\begin{document}
+\fontsize{14}{14}\selectfont
+%========================================================
+
+%========================================================
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}}l @{\extracolsep{6pt}}l}
+    \textbf{\theme} & {\bf Note:} & {\answerbox}\\
+    \textbf{Klasse \class} & & \\
+    \textbf{\teacher} & {\bf Name:} &\textbf{\hrulefill}\\[8pt]
+\end{tabular*}
+%--------------------
+\begin{center}
+    \rule[1ex]{\textwidth}{1pt}
+    Dauer: $45$ Minuten \hspace{9cm}Datum: \date\\
+    \vspace{5pt}
+    \rule[1ex]{\textwidth}{1pt}
+\end{center}
+%=========================================================
+
+%=========================================================
+\begin{center}
+    \textbf{Bewertungstabelle}\\
+    \small Wird von der Lehrperson ausgefüllt\\
+    \vspace{5pt}
+    \addpoints
+    \gradetable[h][questions]\\
+    \vspace{5pt}
+    Der Rechenweg muss \textbf{vollständig und nachvollziehbar} sein.\\
+    Lösen Sie die Prüfung mit einen schwarzen oder blauen Kugelschreiber.\\
+    Als Hilfsmittel ist der Taschenrechner erlaubt.
+\end{center}
+
+\noindent
+\rule[1ex]{\textwidth}{1pt}
+
+\vspace{10cm}
+\begin{center}
+    \Huge{Repetitionsprüfung}
+\end{center}
+
+\newpage
+\begin{questions}
+%=========================================================
+%-------------------TESTFRAGEN
+%=========================================================
+\question[2] %
+Erkläre in eigenen Worten, unter welchen Bedingungen eine unendliche geometrische Reihe konvergiert bzw. divergiert. Erfinde dazu passende Beispiele.
+\vspace{5pt}
+\antwort{9}
+
+\question[3] %DMK Ana S29 A181
+Berechne den Grenzwert der unendlichen geometrischen Reihe \[\sqrt{12}+\sqrt{6}+\sqrt{3}+\ldots\]
+\vspace{5pt}
+\antwort{9}
+
+%---------------------------------------------------------
+\newpage
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+In der unten abgebildeten Figurenfolge wird von Figur zu Figur einen Teil der Fläche herausgeschnitten. Die Eckpunkte des neuen Dreiecks sind jeweils die Seitenmittelpunkte des vorherigen. Das ursprüngliche Dreieck ist gleichseitig und hat Seitenlänge $4$m. 
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.45]{Analysis/data-analysis/FR_sirpinskiDreieck_2.png}
+\end{figure}
+\begin{parts}
+    \part[3] Beschreibe die Fläche, die von Figur zu Figur jeweils weggenommen wurde.
+\end{parts}
+\vspace{5pt}
+\antwort{7}
+\begin{parts}
+    \setcounter{partno}{1}
+    \part[3] Wie gross ist die übriggebliebene Fläche, wenn der Prozess unendlich fortgeführt wird.
+\end{parts}
+\vspace{5pt}
+\antwort{7}
+
+%---------------------------------------------------------
+\newpage
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+Ein Ball wird vom Boden aus senkrecht hochgeworfen. Bis zum ersten Aufprall am Boden legt er einen Weg von insgesamt $10$m zurück. Nach jeder Berührung mit den Boden legt er jeweils nur noch $75\%$ des vorherigen Weges bis zur nächsten Berührung zurück.
+\begin{parts}
+    \part[2] Berechne die Summe des zurückgelegten Weges bis zum 25. Aufprall.
+\end{parts}
+\vspace{5pt}
+\antwort{8}
+\begin{parts}
+    \setcounter{partno}{1}
+    \part[2] Welchen Weg legt der Ball insgesamt zurück?
+\end{parts}
+\vspace{5pt}
+\antwort{10}
+
+%---------------------------------------------------------
+\newpage
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+\begin{minipage}{0.7\linewidth}
+    Einem Quadrat mit Seitenlänge $1$ wird ein Kreis einbeschrieben, diesem dann ein Quadrat und so weiter (Beachte die Abbildung rechts).\newline
+    \begin{parts}
+        \part[3] Gib die explizite Beschreibung der zugehörigen geometrischen Folge $A_1, A_2, A_3, \ldots$ an.
+        \part[1] Berechne den Grenzwert, wenn unendlich viele solcher Flächen addiert werden.
+    \end{parts}
+\end{minipage}
+\hfill
+\begin{minipage}{0.25\linewidth}
+    \centering
+    \includegraphics[scale=0.4]{Analysis/data-analysis/FR_kreisquadrat.png}
+\end{minipage}
+\vspace{5pt}
+\antwort{18}
+
+%---------------------------------------------------------
+\newpage
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+Im Folgenden sind drei Behauptungen zu Grenzwerten von Folgen notiert. Nimm zu jeder Aussage Stellung und erläutere, ob sie recht haben oder nicht. Begründe deine Antwort.
+\begin{parts}
+    \part[2] Manuel behauptet: \flqq Die Folge $\displaystyle a_n=\frac{6\*(-1)^n}{10}$ konvergiert und hat genau zwei Grenzwerte, nämlich $0.6$ und $-0.6$.\frqq
+\end{parts}
+\vspace{5pt}
+\antwort{5}
+\begin{parts}
+    \setcounter{partno}{1}
+    \part[2] Daniela behauptet: \flqq Die Folge $\displaystyle a_n=\frac{\sqrt{3}}{4}$ ist weder konvergent noch divergent.\frqq
+\end{parts}
+\vspace{5pt}
+\antwort{5}
+\begin{parts}
+    \setcounter{partno}{2}
+    \part[3] Franziska behauptet: \flqq Falls eine Folge gegen den Grenzwert\newline $a\in\R$ konvergiert, dann konvergiert auch die zugehörige Reihe.\frqq
+\end{parts}
+\vspace{5pt}
+\antwort{5.5}
+
+
+%---------------------------------------------------------
+\newpage
+\ 
+
+\end{questions}
+\end{document}

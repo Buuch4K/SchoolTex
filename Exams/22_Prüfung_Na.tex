@@ -1,0 +1,165 @@
+\documentclass[11pt]{exam}
+\input{../Header/packages.sty}
+\input{../Header/styleExam.sty}
+\input{../Header/mathexpressions.sty}
+\input{../Header/headerGZP.sty}
+%=========================================================
+\newcommand{\theme}{Folgen, Reihen und Grenzwerte}
+\newcommand{\teacher}{Jonas Guler}
+\newcommand{\class}{3Na}
+\renewcommand{\date}{07.03.25}
+%=========================================================
+\begin{document}
+\fontsize{14}{14}\selectfont
+%========================================================
+
+%========================================================
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}}l @{\extracolsep{6pt}}l}
+    \textbf{\theme} & {\bf Note:} & {\answerbox}\\
+    \textbf{Klasse \class} & & \\
+    \textbf{\teacher} & {\bf Name:} &\textbf{\hrulefill}\\[8pt]
+\end{tabular*}
+%--------------------
+\begin{center}
+    \rule[1ex]{\textwidth}{1pt}
+    Dauer: $45$ Minuten \hspace{9cm}Datum: \date\\
+    \vspace{5pt}
+    \rule[1ex]{\textwidth}{1pt}
+\end{center}
+%=========================================================
+
+%=========================================================
+\begin{center}
+    \textbf{Bewertungstabelle}\\
+    \small Wird von der Lehrperson ausgefüllt\\
+    \vspace{5pt}
+    \addpoints
+    \gradetable[h][questions]\\
+    \vspace{5pt}
+    Der Rechenweg muss \textbf{vollständig und nachvollziehbar} sein.\\
+    Lösen Sie die Prüfung mit einen schwarzen oder blauen Kugelschreiber.\\
+    Als Hilfsmittel ist nur der Taschenrechner erlaubt.\\
+    \textbf{Beachte: In den Aufgaben 6, 7 und 8a gibt es für Lösungen ohne Lösungswege keine Punkte!}
+\end{center}
+
+\noindent
+\rule[1ex]{\textwidth}{1pt}
+
+\vspace{10cm}
+\begin{center}
+    %\Huge{Repetitionsprüfung}
+\end{center}
+
+\newpage
+\begin{questions}
+%=========================================================
+%-------------------TESTFRAGEN
+%=========================================================
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+\begin{parts}
+    \part[3] Erkläre einem Laien unter welchen Bedingungen eine unendliche geometrische Reihe konvergiert. Erfinde dazu passende Beispiele.
+\end{parts}
+\vspace{5pt}
+\antwort{9}
+\begin{parts}
+    \setcounter{partno}{1}
+    \part[2] Von einer geometrischen Folge sind zwei Folgenglieder bekannt, $a_2=96$ und $a_9=1640.25$. Berechne $q$ und $a_{35}$.
+\end{parts}
+\vspace{5pt}
+\antwort{10}
+
+
+%---------------------------------------------------------
+\newpage
+\question[3] % DMK Ana S29 A177d
+Gegeben ist die geometrische Folge mit $a_4=1.6$ und $a_9=51.2$. Berechne den Index $n\in\N$, sodass $s_n=26214.2$.
+\vspace{5pt}
+\antwort{9}
+\question[3] % DMK Ana S29 A183a
+Berechne den Grenzwert der folgenden Summe: \[18.9+12.6+8.4+\ldots=\]
+\antwort{9}
+
+%---------------------------------------------------------
+\newpage
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+\begin{minipage}{0.6\linewidth}
+    Ein Pendel wird $a_1=20$cm nach rechts aus seiner Ruhelage entfernt und dann losgelassen. Der Betrag der Amplitude\footnotemark{}\:nimmt pro vollständigen Pendel (von rechts $a_1$ nach links $a_2$ und zurück $a_3$) um $81\%$ ab.
+\end{minipage}
+\hfill
+\begin{minipage}{0.37\linewidth}
+    \centering\includegraphics[scale=0.25]{Analysis/data-analysis/FR_pendel.jpeg}
+\end{minipage}
+\begin{parts}
+        \part[2] Beschreibe die Folge $a_n$, die jede Amplitude als Folgenglied enthält, explizit.
+        \part[1] Berechne die Summe der Amplituden bis zum 20. Ausschlag.
+        \part[2] Welche Summe der Amplituden hat das Pendel bis zum erneuten Stillstand insgesamt zurückgelegt?
+    \end{parts}
+\vspace{5pt}\footnotetext{Die Amplitude ist die Distanz des Pendels vom maximalen Ausschlag zur Ruhelage. In der Skizze mit horizontalen \textcolor{red}{Pfeilen} dargestellt.}
+\antwort{15}
+
+%---------------------------------------------------------
+\newpage
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+\begin{minipage}{0.68\linewidth}
+    Einem Quadrat mit Seitenlänge $1$ wird ein Kreis einbeschrieben, diesem dann ein Quadrat und so weiter (Beachte die Abbildung rechts).
+    \begin{parts}
+        \part[3] Gib die explizite Beschreibung der zugehörigen geometrischen Folge $A_1, A_2, A_3, \ldots$ an.
+        \part[2] Berechne den Grenzwert, wenn unendlich viele solcher Flächen addiert werden.
+    \end{parts}
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\linewidth}
+    \centering\includegraphics[scale=0.5]{Analysis/data-analysis/FR_kreisquadrat.png}
+\end{minipage}
+\vspace{5pt}\newline
+\antwort{18}
+
+
+%---------------------------------------------------------
+\newpage
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+Im Folgenden sind drei Behauptungen zu Grenzwerten von Folgen notiert. Nimm zu jeder Aussage Stellung und erläutere, ob sie recht haben oder nicht. Begründe deine Antwort.
+\begin{parts}
+    \part[2] Manuel behauptet: \flqq Die Folge $\displaystyle a_n=\frac{6\*(-1)^n}{10}$ konvergiert und hat genau zwei Grenzwerte, nämlich $0.6$ und $-0.6$.\frqq
+\end{parts}
+\vspace{5pt}
+\antwort{3.5}
+\begin{parts}
+    \setcounter{partno}{1}
+    \part[2] Franziska behauptet: \flqq Falls eine Folge gegen den Grenzwert\newline $a\in\R$ konvergiert, dann konvergiert auch die zugehörige Reihe.\frqq
+\end{parts}
+\vspace{5pt}
+\antwort{3.5}
+\question[2]
+Wie muss der Parameter $a$ und der Exponent $m$ gewählt werden, damit der die folgende Gleichung wahr ist? \[\lim_{x\to\infty}\frac{a\*x^m-4x^3-1}{2x^4-11x^2+5}=3\]
+\antwort{6}
+
+
+%---------------------------------------------------------
+\newpage
+\noaddpoints
+\question[\totalpoints] % Grenzwert einer Funktion berechnen
+\addpoints
+\begin{parts}
+    \part[4] Berechne den folgenden Grenzwert ohne Verwendung des Taschenrechners: \[\lim_{n\to\infty}\frac{3n^5-6n^3+2}{n^5+3n^2-1}=\]
+\end{parts}
+\vspace{5pt}
+\antwort{9}
+\begin{parts}
+    \setcounter{partno}{1}
+    \part[2] Ab welchem Index $N\in\N$ ist der Abstand zum Grenzwert kleiner $0.001$. 
+\end{parts}
+\vspace{5pt}
+\antwort{9}
+
+
+\end{questions}
+\end{document}

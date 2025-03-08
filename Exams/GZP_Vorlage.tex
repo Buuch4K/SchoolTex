@@ -1,0 +1,323 @@
+\documentclass[12pt]{exam}
+\input{../Header/packages.sty}
+\input{../Header/styleExam.sty}
+\input{../Header/mathexpressions.sty}
+\input{../Header/headerGZP.sty}
+\printanswers
+%\noprintanswers
+
+%=========================================================
+\newcommand{\theme}{Zwischenprüfung 2025}
+\renewcommand{\date}{27.05.25}
+%=========================================================
+\begin{document}
+\fontsize{14}{14}\selectfont
+%=========================================================
+%------------------- TEIL EINS
+%=========================================================
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}}l @{\extracolsep{7pt}}l}
+     Kanton St. Gallen & & \multirow{4}{4em}{\includegraphics[scale=0.2]{../Header/wappen_sg.png}}\\
+     Bildungsdepartement & & \\
+     & & \\
+     \textbf{Kantonsschule Heerbrugg} & & \\
+\end{tabular*}
+\vspace{1cm}\newline
+%--------------------
+\begingroup
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}}l @{\extracolsep{6pt}}l}\hline
+    \textbf{\theme} & {\bf Lehrpersonen} & Dc, Fh, Gt, Gu, Ss \\\hline
+    \textbf{Mathematik, Teil 1} & {\bf Dauer} & {\bf 45 Minuten} \\\hline
+    \textbf{Name:} & {\bf Klasse:} &  \\\hline
+    \textbf{Vorname:} &  & \\\hline
+\end{tabular*}
+\endgroup
+
+\begin{center}
+    \textbf{Bewertungstabelle}\\
+    {\small Wird von der Lehrperson ausgefüllt}\\
+    \vspace{10pt}
+    \addpoints
+    \partialgradetable{ersterTeil}[h][questions]\\[0.25in]
+    \partialgradetable{zweiterTeil}[h][questions]\\[1cm]
+    Der Rechenweg muss \textbf{vollständig und nachvollziehbar} sein. \\
+    Unvollständige Lösungswege haben einen Punktabzug zur Folge.\\
+    Es sind keine Hilfsmittel zugelassen.\\
+\end{center}
+
+\noindent
+\rule[1ex]{\textwidth}{1pt}
+
+\vfill
+\begin{center}
+    %\Huge{Repetitionsprüfung}
+\end{center}
+
+\newpage
+\begin{questions}
+\begingradingrange{ersterTeil} % unterteilt die Notentabelle in zwei Teile
+%=========================================================
+%-------------------TESTFRAGEN
+%=========================================================
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+\begin{parts}
+\part[6] Bestimmen Sie die Funktionsgleichungen $f(x),g(x),h(x)$ anhand folgender Graphen.
+(Schreiben Sie die Funktionsgleichungen in der Scheitelpunktsform: $f(x)=a(x-u)^2+v$)
+\end{parts}
+\ifprintanswers
+    \begin{solution}
+        \begin{align*}
+            f(x) &= x^2-4 \\
+            g(x) &= \frac{1}{4}(x-2)^2 \\
+            h(x) &= -2(x+1)^2+5
+        \end{align*}
+    \end{solution}
+\else
+    \vspace{5pt}
+    \antwort{11}
+\fi
+\begin{parts}
+    \setcounter{partno}{1}
+    \part[1] Notieren Sie $k(x)=\frac{1}{8}(x-4)^2+2$ in der Normalform \\ $k(x)=ax^2+bx+c$.
+\end{parts}
+\ifthenelse{\boolean{printanswers}}
+    {\begin{solution}
+    \begin{align*}
+        k(x) &= \frac{1}{8}(x-4)^2+2 \\
+        k(x) &= \frac{1}{8}(x^2-8x+16)+2 \\
+        k(x) &= \frac{1}{8}x^2-x+2+2 \\
+        k(x) &= \frac{1}{8}x^2-x+4 \\
+        %g(x) &= \frac{1}{4}x^2-x+1 \\
+        %h(x) &= -2x^2-4x+3
+    \end{align*}
+    \end{solution}}
+    {\vspace{5pt}\antwort{11}}
+
+%------------------------------------------------
+\newpage
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+Gegeben seien die Funktionen \[f(x)=x^2-6x+8 \text{ , } \quad g(x) = x^2-7x+6\]
+\begin{parts}
+\setlength{\columnsep}{30pt}
+\part[2] Skizzieren sie den Graphen der Funktionen $f(x)$ in folgendem \\ Koordinatensystem:
+(Kennzeichnen Sie die berechneten Punkte)
+\begin{solution}
+\begin{center}
+    blablabla
+\end{center}
+\end{solution}
+\ifprintanswers\else
+    \begin{center}
+     blablabla
+    \end{center}
+\fi
+\part[2] Berechnen Sie die Nullstellen der Funktion $g(x)$ ohne TR.
+\begin{solution}
+    \begin{align*}
+        g(x)&=x^2-7x+6 \\
+        g(x)&=(x-6)(x-1) \\
+        x_1 &= 6 \quad x_2 = 1
+    \end{align*}
+\end{solution}
+\part[2] Berechnen sie den Scheitelpunkt der Funktion $g(x)$ anhand der Nullstellen. (ohne TR)
+\begin{solution}
+Nullstellen bei $x_1=6$ und $x_2=1$ $\implies$ $x$-Wert des Scheitelpunkts bei $3.5$
+\begin{align*}
+    g(3.5)&=(3.5)^2-7\cdot3.5+6 \\
+    &= -6.25
+\end{align*}
+$\implies$ $y$-Wert bei -6.25 $\implies$ Scheitelpunkt $=(3.5,-6.25)$
+\end{solution}
+\part[2] Bringen Sie die Funktion $g(x)$ in Scheitelpunktsform. \\
+($g(x)=a(x-u)^2+v$)
+\begin{solution}
+Scheitelpunkt bei $(3.5,-6.25) \implies$
+\begin{align*}
+    g(x)&=a(x-3.5)^2-6.25 \\
+    0&=a(1-3.5)^2-6.25 \\
+    a(1-3.5)^2&=6.25 \\
+    6.25a&=6.25 \\
+    a&=\frac{6.25}{6.25} \\
+    &= 1
+\end{align*}
+$\implies g(x)=(x-3.5)^2-6.25$
+\end{solution}
+\end{parts}
+\ifprintanswers\else
+    \vspace{5pt}
+    \antwort{10}
+\fi
+
+\endgradingrange{ersterTeil} % beendet die Unterteilung der Notentabelle
+\end{questions}
+
+
+
+
+%=========================================================
+%------------------- TEIL ZWEI
+%=========================================================
+\newpage
+\thispagestyle{empty}
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}}l @{\extracolsep{7pt}}l}
+     Kanton St. Gallen & & \multirow{4}{4em}{\includegraphics[scale=0.2]{../Header/wappen_sg.png}}\\
+     Bildungsdepartement & & \\
+     & & \\
+     \textbf{Kantonsschule Heerbrugg} & & \\
+\end{tabular*}
+\vspace{1cm}\newline
+\begingroup
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}}l @{\extracolsep{6pt}}l}\hline
+    \textbf{\theme} & {\bf Lehrpersonen} & Dc, Fh, Gt, Gu, Ss \\\hline
+    \textbf{Mathematik, Teil 1} & {\bf Dauer} & {\bf 45 Minuten} \\\hline
+    \textbf{Name:} & {\bf Klasse:} &  \\\hline
+    \textbf{Vorname:} &  & \\\hline
+\end{tabular*}
+\endgroup
+
+\begin{center}
+    \textbf{Bewertungstabelle}\\
+    {\small Wird von der Lehrperson ausgefüllt}\\
+    \vspace{10pt}
+    \addpoints
+    \setlength{\doublerulesep}{0.25in}
+    \setlength{\doublerulesep}{0.25in}
+    \partialgradetable{ersterTeil}[h][questions]\\[0.25in]
+    \partialgradetable{zweiterTeil}[h][questions]\\[1cm]
+    Der Rechenweg muss \textbf{vollständig und nachvollziehbar} sein. \\
+    Unvollständige Lösungswege haben einen Punktabzug zur Folge.\\
+    Als Hilfsmittel ist nur ein Taschenrechner (Ti-30X o.a.) erlaubt.\\
+\end{center}
+
+\noindent
+\rule[1ex]{\textwidth}{1pt}
+
+\vfill
+\begin{center}
+    %\Huge{Repetitionsprüfung}
+\end{center}
+%========================================================
+
+\newpage
+\begin{questions}
+\setcounter{question}{5} % fixiert den counter für fortlaufende Nummerierung
+\begingradingrange{zweiterTeil} % beginnt die Unterteilung der Notentabelle
+%=========================================================
+%-------------------TESTFRAGEN
+%=========================================================
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+Veränderungen von Funktionsgleichungen:\\
+(Notieren sie bei a),b) jeweils die veränderte Funktionsgleichung
+als $f'(x),g'(x)$)
+\begin{parts}
+\setlength{\columnsep}{30pt}
+\part[2] Verschieben sie $f(x)=3x^2-4$ \\ um 3 Einheiten nach Rechts und um 5 Einheiten nach Oben.
+\begin{solution}
+\begin{align*}
+    f'(x)=3(x-3)^2+1
+\end{align*}
+\end{solution}
+\part[2] Verschieben sie $g(x)=-(x-3)^2+3$ \\ um 4 Einheiten nach Rechts und um 2 Einheiten nach Unten.
+\begin{solution}
+\begin{align*}
+    g'(x)=-(x+1)^2-1
+\end{align*}
+\end{solution}
+%\part Verschieben sie $h(x)=-\frac{1}{2}x^2-4x+3$ um 3 Einheiten nach Links und um 5 Einheiten nach Unten.
+\part[2] Um wieviele Einheiten nach Rechts/Links resp. nach Oben/ Unten wurde verschoben wenn $h(x)$ zu $h'(x)$ wird?
+\begin{center}
+    $h(x)=(x-\frac{1}{2})^2-3 \quad \rightarrow \quad h'(x)=(x+4)^2+9$
+\end{center}
+\begin{solution}
+Um 4.5 Einheiten nach Links und um 12 nach Oben.
+\end{solution}
+\end{parts}
+
+\ifprintanswers\else
+    \newpage
+    \antwort{24}
+\fi
+
+%-----------------------------------------------------
+\newpage
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+% skizze und gebe gleichung an...
+Ein Bauer baut auf einer Flachen Wiese ein rechteckiges Gehege für seine Hühner. Er hat Zaun in der länge von $20m$ gekauft und will den ganzen Zaun verbauen (der Umfang des entstehenden Rechtecks soll $20m$ messen). Es gilt:
+\begin{align}
+    2a+2b&=20m  \\
+    \text{Fläche } A&=a\cdot b
+\end{align}
+wenn $a$ und $b$ die Seiten des Rechtecks sind.
+\begin{parts}
+\part[1] Formulieren Sie die Gleichung (1) nach $a$ um ($a=\ldots$).
+\part[1] Setzen Sie das berechnete $a$ in die Gleichung (2) ein ($A=\ldots\quad\cdot b$).
+\part[2] Skizzieren sie die Funktion aus (b) ins folgende Koordinatensystem: \\ (falls Sie (a) und (b) nicht berechnen konnten: Skizzieren Sie $A=-\frac{1}{2}b^2+5b$)
+\ifprintanswers\else
+    \begin{center}
+        blablabla
+    \end{center}
+\fi
+\part[3] Wie sind die Seitenlängen $a$ und $b$ des Rechtecks zu wählen wenn das Gehege $16m^2$ Fläche haben soll?
+\part(1 Bonuspunkt) Bei welchen Seitenlängen $a$ und $b$ is das Gehege maximal gross?
+\end{parts}
+\ifprintanswers\else
+    \newpage
+    \antwort{24}
+\fi
+
+%-------------------------------------------------------
+\newpage
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+Gegeben seien die folgenden Funktionen:
+\begin{align*}
+    f(x)= 1.75x^2-3x-2 \text{ , } \quad g(x) = -x^2+2.5x-2
+\end{align*}
+\begin{parts}
+\part[1] Berechnen sie die Nullstellen von $f(x)$ und $g(x)$ (TR möglich).
+\part[1] Berechnen sie die Scheitelpunkte von $f(x)$ und $g(x)$ (TR möglich).
+%\part Skizzieren Sie die beiden Graphen $f(x)$ und $g(x)$ ins gleiche Koordinatensystem (\textbf{Achten sie auf korrekte Beschriftung der Achsen})
+\part[4] Berechnen Sie die $x$- und $y$-Koordinaten der Schnittpunkte von $f(x)$ mit $g(x)$.
+\end{parts}
+\ifprintanswers\else
+    \vspace{5pt}
+    \antwort{18}
+\fi
+
+%---------------------------------------------------------
+\newpage
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+Gegeben seien die folgenden Funktionen:
+\begin{align*}
+    f(x)= 2x^2+8x+7 \text{ , } \quad g(x) = 5x^2+4x+3
+\end{align*}
+\begin{parts}
+\part[\half] Berechnen Sie mittels TR die Nullstellen von $f(x)$.
+\part[2] Berechnen Sie von Hand mittels Lösungsformel (Mitternachtsformel) die Nullstellen von $f(x)$.
+\part[1] Argumentieren Sie in ein bis zwei Sätzen, welcher Vorteil die Berechnung der Nullstellen ohne TR bieten kann.
+\part[1] Weshalb können die Nullstellen von $g(x)$ nicht \\
+berechnet werden ? (Argumentieren Sie in ein bis zwei Sätzen)
+\end{parts}
+
+\ifprintanswers\else
+    \vspace{5pt}
+    \antwort{17}
+\fi
+\endgradingrange{zweiterTeil} % beendet die Unterteilung der Notentabelle
+
+\end{questions}
+\end{document}

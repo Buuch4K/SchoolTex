@@ -1,0 +1,153 @@
+\documentclass[11pt]{exam}
+\input{../Header/packages.sty}
+\input{../Header/styleExam.sty}
+\input{../Header/mathexpressions.sty}
+\input{../Header/headerGZP.sty}
+%=========================================================
+\newcommand{\theme}{Potenzen, Wurzeln und Bruchterme}
+\newcommand{\teacher}{Jonas Guler}
+\newcommand{\class}{1Na}
+\renewcommand{\date}{07.03.25}
+%=========================================================
+\begin{document}
+\fontsize{14}{14}\selectfont
+%========================================================
+
+%========================================================
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}}l @{\extracolsep{6pt}}l}
+    \textbf{\theme} & {\bf Note:} & {\answerbox}\\
+    \textbf{Klasse \class} & & \\
+    \textbf{\teacher} & {\bf Name:} &\textbf{\hrulefill}\\[8pt]
+\end{tabular*}
+%--------------------
+\begin{center}
+    \rule[1ex]{\textwidth}{1pt}
+    Dauer: $45$ Minuten \hspace{9cm}Datum: \date\\
+    \vspace{5pt}
+    \rule[1ex]{\textwidth}{1pt}
+\end{center}
+%=========================================================
+
+%=========================================================
+\begin{center}
+    \textbf{Bewertungstabelle}\\
+    \small Wird von der Lehrperson ausgefüllt\\[5mm]
+    \addpoints
+    \gradetable[h][questions]\\[10mm]
+    Der Rechenweg muss \textbf{vollständig und nachvollziehbar} sein.\\
+    Lösen Sie die Prüfung mit einen schwarzen oder blauen Kugelschreiber.\\
+    Als Hilfsmittel ist der kleine Taschenrechner (Ti-30X o.ä.) erlaubt.
+\end{center}
+
+\noindent
+\rule[1ex]{\textwidth}{1pt}
+
+\vspace{10cm}
+\begin{center}
+    %\Huge{Repetitionsprüfung}
+\end{center}
+
+\newpage
+\begin{questions}
+%=========================================================
+%---------------------TESTFRAGEN
+%=========================================================
+\question[4] % Potenzen
+Vereinfache den folgenden Ausdruck so weit wie möglich
+\begin{parcols}[2]
+    \part $\left(6a^9\*4b^4\right):8a^3$
+    \part $\left(3ab^2\right)^3\*\frac{\left(a^2b^3\right)^4}{3a^2b^2}$
+\end{parcols}
+\vspace{5pt}
+\antwort{8}
+\vfill
+\question[3]
+Betrachte den folgenden Lösungsweg. Kennzeichne, wo einen Fehler gemacht wurde und korrigiere die Umformung ab diesem Punkt.
+\begin{align*}
+    \left(\frac{a}{3}\right)^4\*\left(\frac{27b}{a^2}\right)^2 &= \frac{a^4}{3}\*\frac{\left(27b\right)^2}{a^2}\\
+    &= \frac{a^4}{3}\*\frac{27b^2}{a^2} \\
+    &= 9a^2b^2
+\end{align*}
+\antwort{6}
+
+
+%---------------------------------------------------------
+\newpage
+\question[4] % Wurzeln
+Schreibe die folgenden Terme ohne Wurzelzeichen.
+\begin{parcols}[2]
+    \part $\sqrt{(a-2)^2+8a}$
+    \part $\sqrt{\frac{49(2x+y)^2}{2401x^2}}$
+\end{parcols}
+\vspace{5pt}
+\antwort{12}
+\vfill
+\question[2]
+Entscheide in der Tabelle unten, ob die Aussagen wahr oder falsch sind. Die Antworten müssen nicht begründet werden.\newline
+\begin{small}
+    Bewertung: Für $0-2$ korrekte Antworten gibt es keine Punkte; $3$ korrekte Antworten einen Punkt und falls alle Antworten korrekt sind, gibt es $2$ Punkte.
+\end{small}
+\begingroup
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|p{12cm}|c|c|}\hline
+         & wahr & falsch \\\hline
+        $\sqrt{a}$ hat zwei Lösungen, wobei eine positiv und eine negativ ist. & & \\\hline
+        $\displaystyle\left(\sqrt{x-2}\right)^2=x+1-\sqrt{9x}:\sqrt{x}$ & & \\\hline %Algebra 910 S132 A1c
+        In der Gleichung $3^\triangle=81^{3}$ muss das Symbol $\triangle$ mit der Zahl $12$ ersetzt werden, damit die Gleichheit stimmt. & & \\\hline
+        In der Gleichung $\square^{8}=16^4$ muss das Symbol $\square$ mit der Zahl $4$ ersetzt werden, damit die Gleichheit stimmt.  & & \\\hline
+    \end{tabular}
+\end{table}
+\endgroup
+
+
+%---------------------------------------------------------
+\newpage
+\question[3] % Wurzeln
+Betrachte den folgenden Lösungsweg. Kennzeichne, wo einen Fehler gemacht wurde und korrigiere die Umformungen ab diesem Punkt.
+\begin{normalsize}
+    \begin{align*}
+        \left(\sqrt{x}-5\sqrt{y}\right)\left(\sqrt{x}+5\sqrt{y}\right)-\left(\sqrt{x}-5\sqrt{y}\right)^2 &= \left(\sqrt{x}\right)^2-\left(5\sqrt{y}\right)^2-\left(\left(\sqrt{x}\right)^2-2\*5\*\sqrt{x}\*\sqrt{y}+\left(5\sqrt{y}\right)^2\right) \\
+        &= \left(x-5y\right)-\left(x-10\sqrt{x}\sqrt{y}+5y\right) \\
+        &= x-5y-x+10\sqrt{x+y}-5y \\
+        &= 10\sqrt{x+y}-10y
+    \end{align*}
+\end{normalsize}
+\antwort{6}
+\vfill
+\question[4]
+Berechne das kleinste gemeinsame Vielfache und der grösste gemeinsame Teiler der folgenden beiden Termen.
+\[25a^2-16b^4\quad\text{und}\quad 15a^2+12ab^2\]
+\antwort{8}
+
+%---------------------------------------------------------
+\newpage
+\question[6] % Bruchterm Addition
+Erweitere die Brüche auf einen gemeinsamen Nenner und vereinfache dann den Term so weit wie möglich.
+\begin{parcols}[2]
+    \part $\displaystyle\frac{3}{2x-1}+\frac{4}{4x-2}-\frac{5}{6x-3}$ %KSWillisau A2e
+    \part $\displaystyle\frac{2x-8}{x^2-x-12}-\frac{3x-6}{x^2-5x+6}$ %KSWillisau A2k
+\end{parcols}
+\vspace{5pt}
+\antwort{20}
+
+%---------------------------------------------------------
+\newpage
+\question[4] % Bruchterm Multiplikation
+Multipliziere die Brüche und vereinfache den Term so weit wie möglich.
+\begin{parcols}[2]
+    \part $\displaystyle\frac{4(x+2)}{5}\*\frac{25x}{x^2+4x+4}\*\frac{2x+4}{35}$
+    \part $\displaystyle\left(\frac{5p^2}{7y^2}-\frac{7q^2}{5y^2}\right)\*\left(\frac{35y^2}{5p+7q}\right)$
+\end{parcols}
+\vspace{5pt}
+\antwort{20}
+
+
+%---------------------------------------------------------
+\newpage
+\ 
+
+
+\end{questions}
+\end{document}
