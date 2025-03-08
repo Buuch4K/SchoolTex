@@ -1,0 +1,345 @@
+\documentclass[11pt,oneside]{article}
+\input{Header/layout_article.sty}
+
+\newcommand{\Skriptname}{Potenzen und Wurzeln}
+\newcommand{\Autor}{Jonas Guler (Gu)}
+
+\begin{document}   % Barth Buch 2 Kap 2
+\begin{titlepage}
+	\clearpage
+	\title{\Huge\textbf{\Skriptname} \\[1cm]}
+	\author{Autor:\\ \Autor}
+	\date{\normalsize {Version 1.0}\\ \datelong}
+	\maketitle
+    \thispagestyle{empty}
+    \vfill
+    \tableofcontents
+\end{titlepage}
+\pagenumbering{arabic}
+% ########################################## ERSTE KLASSE ##################################################
+\section{Potenzen mit natürlichen Exponenten}
+    Zur Erinnerung: Die Multiplikation kann man erklären als Zusammenfassung der Addition:
+    \[n\*a=\underbrace{a+a+a+\ldots+a}_{n \text{ Summanden}}\qquad a\in\R, n\in\N\]
+    Unter Potenzieren versteht man die Zusammenfassung der Multiplikation:
+    \begin{definition}
+        Für ein $a\in\R$ und ein $n\in\N$ definieren wir die \textbf{$n-$te Potenz} von $a$ als
+        \[a^{n}=\underbrace{a\*a\*a\*\ldots\*a}_{n \text{ Faktoren}}.\]
+        Wir lesen: \glqq $a$ hoch $n$\grqq\:. Weiter heisst $a$ \textbf{Basis} und $n$ \textbf{Exponent}.
+    \end{definition}
+    In diesem Abschnitt lernen wir die Rechengesetze zu Potenzen kennen und überlegen uns, wie man Potenzen mit negativen Exponenten definieren kann. Wir lösen zuerst einige Beispiele:
+    \begin{beispiel}\ 
+    	\begin{enumerate}[label=\alph*)]
+        	\item Kürze soweit wie möglich, ohne auszurechnen:
+        	\[\frac{5^{2}\*14^{3}\*3\*2^{5}}{15\*28^{2}\*6^{3}} =\hspace{12cm}\]\vspace{3cm}
+        	\item Welche der folgenden Zahlen ist die grösste?\[2^{32},\quad4^{15},\quad8^{11},\quad16^8,\quad32^6\]\vspace{2cm}
+    	\end{enumerate}
+    \end{beispiel}
+    Im Allgemeinen gelten für Potenzen folgende Rechenregeln, die sogenannten Potenzgesetze:\newpage
+    \begin{satz}[Potenzgesetze für natürliche Exponenten]
+    	Für Potenzen mit reellen Basen $a,b\in\R$ und natürlichen Exponenten $m,n\in\N $ gelten folgende Rechengesetze:
+    	\begin{enumerate}
+    		\item Potenzen mit gleicher Basis $a^{m}\*a^{n}=$
+    		\item Potenzen mit gleichem Exponenten $a^{n}\*b^{n}=$
+    		\item Iterierte Potenzen $(a^{m})^{n}=$
+            \item Potenz eines Bruches mit gleicher Basis $\displaystyle\frac{a^n}{a^m}=$
+            \item Potenz eines Bruches mit gleichem Exponent $\displaystyle\frac{a^n}{b^n}=$
+        \end{enumerate}
+        Es liegt auf der Hand, dass bei 4. $a\neq0$ und bei 5. $b\neq0$ gelten muss.
+    \end{satz}
+    \begin{beweis}
+        Wir möchten hier beispielhaft einen ersten Beweis durchführen. Dazu betrachten wir die Definition einer Potenz:\vspace{5pt}\newline\karos{6}
+    \end{beweis}
+    \begin{aufgabe} %Algebra 9/10 Brückenkapitel
+        \begin{enumerate}
+            \item Vereinfache die folgenden Terme.
+            \begin{enumcols}[2]
+                \item $z^2+z^2+z^2$
+                \item $a-1+a-2+a-3$
+                \item $n\*p\*n\*p\*n\*p$
+                \item $x^2\*x^2\*x^2$
+            \end{enumcols}
+            \item Schreibe als Potenz mit Basis $m$.
+            \begin{enumcols}[2]
+                \item $m^2\*m^3\*m$
+                \item $m^3\*m\*m^5$
+                \item $\left(m^2\right)^5$
+                \item $m^5\div m^2$
+                \item $\left(m^4\*m^3\right)\div m^2$
+                \item $\left(\frac{m^5}{m^2}\right)^2$
+            \end{enumcols}\newpage
+            \item Wahr oder Falsch?!
+            \begin{enumcols}[2]
+                \item $10^3\*10^4=10^2\*10^5$
+                \item $2\*10^2=10^4$
+                \item $a^2\*a^4=a^8$
+                \item $a^5\*\left(\frac{1}{a}\right)^3=a^2$
+            \end{enumcols}
+            \item Welche Zahl muss für $\square$ stehen, damit die Umformung richtig ist?
+            \begin{enumcols}[2]
+                \item $2^3\*2\*2^6=2^{\square+5}$
+                \item $2\*10^3\*1.2\*10^\square=2.4\*10^7$
+                \item $3^\square\div3^3=3$
+                \item $\left(5^2\right)^7=5^\square$
+                \item $5^4\*\square^4=10^4$
+                \item $4^2\*4^3=2^\square$
+                \item $a^4\*a^\square\div a^2=a^{10}$
+            \end{enumcols}
+        \end{enumerate}
+    \end{aufgabe}
+
+\newpage
+\section{Quadratwurzel}
+    \begin{aufgabe}
+        Jemand bittet dich, ein Quadrat mit Flächeninhalt $20$ cm$^2$ zu konstruieren.
+        \begin{enumerate}
+            \item Wie kannst du die Seitenlänge des Quadrats ausdrücken, wenn du keinen TR hast.
+            \item Was sagt der TR. Wie lange ist die Quadratseite? Ist dieses Resultat exakt?
+            \item Wie kannst du nun mit Massstab, Geodreieck und Zirkel eine Strecke konstruieren, sodass das Quadrat über dieser Strecke Flächeninhalt $20$ cm$^2$ hat?\newline\textit{Tipp: Denke an ein rechtwinkliges Dreieck und wende darin den Höhensatz an.}
+        \end{enumerate}
+    \end{aufgabe}
+    Wir kennen also die Quadratwurzel bereits. Dennoch möchten wir sie nochmals klar definieren, damit wir alle vom gleichen sprechen.
+    \begin{definition}
+        Sei $a\in\R_0^+$. Die \textbf{Wurzel} von $a$ ist diejenige nicht-negative reele Zahl $x$, sodass \[\lineortext{x^2=a}\] gilt. Wir schreiben auch $x=\sqrt{a}$. Der Term unter der Wurzel heisst \textit{Radikand}.
+    \end{definition}
+    Bemerke, dass beispielsweise $-4$ nicht in Frage kommt, wenn wir $\sqrt{16}$ bilden wollen. Deshalb ist es extrem wichtig, ob die Aufgabe nach der Wurzel einer nicht-negativen Zahl $a$ fragt oder ob die Aufgabe nach der Lösung der Gleichung $x^2=a$ fragt.
+    \begin{itemize}
+        \item Berechne $\quad\sqrt{49}=\lineortext{\qquad 7}$
+        \item Löse die Gleichung $x^2=49$. $\qquad\lineortext{\mathbb{L}=\left\{-7,7\right\}\qquad}$
+    \end{itemize}
+    Um mit der Wurzel rechnen zu können und Terme auch zu vereinfachen, sind wir auf einige Gesetze angewiesen. Direkt aus der Definition folgen:
+    \begin{satz}\begin{enumerate}[label=\alph*)]
+        \item $(\sqrt{a})^2=a$ für jede $a\geq0$
+        \item $\sqrt{a^2}=\abs{a}$ für jede $a\in\R$ 
+    \end{enumerate}\end{satz}
+    Die Betragstriche bei $b)$ sind entscheidend. Da falls beispielsweise $a=-3$ gilt, so ist $\sqrt{a^2}=\sqrt{9}=3$. Wir erhalten also hier nicht die Ausgangszahl sondern den Betrag.\newpage
+    \begin{aufgabe}
+        Vereinfache die folgenden Terme so weit wie möglich. Überlege dir gut, wo es Betragstriche braucht.
+        \begin{enumerate}[label=\alph*)]\begin{multicols}{4}
+            \item $\sqrt{100u^2}$
+            \item $\sqrt{81(rs)^2}$
+            \item $\sqrt{a^2b^2}$
+            \item $\sqrt{81(a+b)^2}$
+            \item $\sqrt{x^4}$
+            \item $\sqrt{u^8}$
+            \item $\sqrt{4p^2q^2}$
+            \item $\sqrt{-(x-3)(3-x)}$
+            \item $\left(4\sqrt{5}\right)^2$
+            \item $\left(\frac{2}{\sqrt{2}}\right)^2$
+            \item $\left(\frac{\sqrt{5}}{10}\right)^2$
+        \end{multicols}\end{enumerate}
+    \end{aufgabe}
+    Als nächstes wollen wir die Wurzelgesetze näher anschauen. um effektiv Terme umformen zu können.
+    \begin{aufgabe}
+        Begründe, warum $\sqrt{4\cdot 81} = \sqrt{4}\cdot\sqrt{81}$ gilt.\newline
+        \karos{2}
+    \end{aufgabe}
+    Selbstverständlich ist ein Beispiel nicht genug, um die obige Aussage $\sqrt{a\cdot b}=\sqrt{a}\cdot\sqrt{b}$ für alle nicht negativen Zahlen $a$ und $b$ zu behaupten. Deshalb möchten wir diese Aussage gemeinsam beweisen.
+    \begin{satz}\label{satz:wurzelgesetz}
+        Für alle nicht negativen reellen Zahlen $a$ und $b$ gilt:
+        \[\sqrt{a\cdot b}=\sqrt{a}\cdot\sqrt{b}.\]
+    \end{satz}
+    \begin{beweis}
+        \karos{4}
+    \end{beweis}
+    \begin{satz}
+         Für alle nicht negativen reellen Zahlen $a$ und $b$ gilt:
+         \[\sqrt{\frac{a}{b}}=\frac{\sqrt{a}}{\sqrt{b}}.\]
+    \end{satz}
+    Für das zweite Gesetz verzichten wir auf die Angabe eines Beweises, da er von der Idee her genau gleich wie Satz \ref{satz:wurzelgesetz} funktioniert. 
+    \begin{aufgabe}
+        Vereinfache die Terme soweit bis keine Wurzel mehr enthalten ist.
+        \begin{enumerate}[label=\alph*)]\begin{multicols}{3}
+            \item $\sqrt{x^2-2xy+y^2}$
+            \item $\sqrt{4n^2-28n+49}$
+            \item $\sqrt{\left(\frac{u+v}{2}\right)^2-uv}$
+            \item $\sqrt{\left(c^2-\frac{1}{4}\right)^2+c^2}$
+            \item $\sqrt{2r}\sqrt{3s}\sqrt{6rs}$
+            \item $\sqrt{xy}\sqrt{\frac{x}{y}}$
+        \end{multicols}\end{enumerate}
+    \end{aufgabe}
+    \begin{aufgabe}
+        Vereinfache die Terme so weit wie möglich.
+        \begin{enumerate}[label=\alph*)]\begin{multicols}{3}
+            \item $\sqrt{2}\left(\sqrt{2}-1\right)$
+            \item $\sqrt{6}\left(\sqrt{\frac{1}{2}}-\sqrt{\frac{1}{3}}\right)$
+            \item $\left(\sqrt{2}+1\right)\left(\sqrt{2}-1\right)$
+            \item $\sqrt{9+4\sqrt{2}}\sqrt{9-4\sqrt{2}}$
+            \item $\sqrt{\frac{\sqrt{10}}{6}-\frac{\sqrt{6}}{10}}\sqrt{\frac{\sqrt{10}}{6}+\frac{\sqrt{6}}{10}}$
+            \item $\left(\sqrt{2-\frac{1}{2}\sqrt{7}}-\sqrt{2+\frac{1}{2}\sqrt{7}}\right)^2$
+        \end{multicols}\end{enumerate}
+    \end{aufgabe}
+    \begin{aufgabe}
+        Vereinfach die folgenden Brüche soweit bis keine Wurzeln mehr im Nenner enthalten sind.
+        \begin{enumerate}[label=\alph*)]\begin{multicols}{4}
+            \item $\frac{3}{\sqrt{6}}$
+            \item $\frac{\sqrt{3}}{\sqrt{5}}$
+            \item $\sqrt{\frac{2}{5}}$
+            \item $\frac{28}{\sqrt{42}}$
+            \item $\frac{\sqrt{99}}{\sqrt{80}}$
+            \item $\sqrt{\frac{25}{98}}$
+            \item $\frac{5-\sqrt{5}}{\sqrt{5}}$
+            \item $\frac{\sqrt{2}-2\sqrt{3}}{\sqrt{6}}$
+        \end{multicols}\end{enumerate}
+    \end{aufgabe}
+
+
+% ########################################## ZWEITE KLASSE ##################################################
+\newpage
+\section{Potenzen mit negativen Exponenten}
+    Im ersten Kanti-Jahr habe wir die folgenden Potenzgesetze kennengelernt. 
+    \begin{satz}[Potenzgesetze für natürliche Exponenten]
+    	Für Potenzen mit reellen Basen $a,b\in\R$ und natürlichen Exponenten $m,n\in\N $ gelten folgende Rechengesetze:
+        \begingroup
+        \renewcommand{\arraystretch}{2}
+        \begin{table}[H]
+        \centering
+        	\begin{tabular}{l c}
+        	    Potenzen mit gleicher Basis & $\displaystyle a^{m}\*a^{n}=a^{m+n}$ \\
+        	    Potenzen mit gleichem Exponenten & $\displaystyle a^{n}\*b^{n}=(ab)^n$ \\
+                Verschachtelte Potenzen & $\displaystyle(a^{m})^{n}=a^{m\*n}$ \\
+                Potenz eines Bruches mit gleicher Basis & $\displaystyle\frac{a^m}{a^n}=a^{m-n}$ \\
+                Potenz eines Bruches mit gleichem Exponent & $\displaystyle\frac{a^n}{b^n}=\left(\frac{a}{b}\right)^n$ \\
+        	\end{tabular}
+        \end{table}
+        \endgroup
+        Es liegt auf der Hand, dass bei 4. $a\neq0$ und bei 5. $b\neq0$ gelten muss.
+    \end{satz}
+    Wenden wir diese direkt in einer Repetitionsaufgabe an.
+    \begin{aufgabe}
+        Bob, Alice und Carol beschäftigen sich mit Potenzen. Sie sind bei den folgenden Aufgaben jedoch nicht einer Meinung, was die Lösungen angehen. Wer ist jeweils korrekt? Begründe anhand der Potenzgesetze.
+        \begin{enumerate}[label=\alph*)]
+            \item$2^7\*2^{10}=$\begin{enumerate}\begin{multicols}{3}
+                \item[Alice: ] $2^{17}$
+                \item[Bob: ] $2^{70}$
+                \item[Carol: ] $4^{70}$
+            \end{multicols}\end{enumerate}
+            \item$3^5\*7^5=$\begin{enumerate}\begin{multicols}{3}
+                \item[Alice: ] $21^{10}$
+                \item[Bob: ] $21^{25}$
+                \item[Carol: ] $21^{5}$
+            \end{multicols}\end{enumerate}
+            \item$\left(3^4\right)^5=$\begin{enumerate}\begin{multicols}{3}
+                \item[Alice: ] $3^{9}$
+                \item[Bob: ] $3^{20}$
+                \item[Carol: ] $3^{\left(4^5\right)}$
+            \end{multicols}\end{enumerate}
+            \item$\frac{12^5}{3^5}=$\begin{enumerate}\begin{multicols}{3}
+                \item[Alice: ] $9^{5}$
+                \item[Bob: ] $\left(\frac{12}{3}\right)^5$
+                \item[Carol: ] $4^5$
+            \end{multicols}\end{enumerate}
+        \end{enumerate}
+        \karos{3}
+    \end{aufgabe}
+    Beachte, dass im Potenzgesetz 4. gefordert wird, dass $n>m$, weil wir ansonsten einen negativen Exponenten erhalten würden. Genau diesem Problem möchten wir nun auf die Spur begeben und genauer unter die Lupe nehmen. Starten wir mit einem Beispiel: \[2^5\div2^8=\gap{2}.\]
+    Was bedeutet aber $2^{-3}$? Was für eine Zahlenwert hat dieser Term?
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.8]{Algebra/3_potenzwurzel/images/ganzzahligeexp.png}
+    \end{figure}
+    Aus der obigen Graphik lassen sich die folgenden beiden Definitionen ablesen.
+    \begin{definition}
+        Sei $a\in\R$ eine beliebige reelle Zahl und $n\in\Z$ eine beliebige ganze Zahl. Dann gilt:
+        \begin{enumerate}[label=\ ]\begin{multicols}{2}
+            \item $a^0=1$ \item $\displaystyle a^{-n}=\frac{1}{a^n}$
+        \end{multicols}\end{enumerate}
+    \end{definition}
+    Natürlich muss im Punkt 2. die Einschränkung $a\neq0$ ebenfalls gelten, anderenfalls wäre der Bruch natürlich nicht definiert. Selbstverständlich lassen sich alle Potenzgesetze auf ganzzahlige Exponenten erweitern. Um dies aufzuzeigen, möchten wir das erste Gesetz auch für zwei negative negative Exponenten beweisen.\newline
+    Wir behaupten $\mathbf{a^n\*a^m=a^{n+m}}$ für eine beliebige reelle Zahl $a$ und zwei negative Exponenten $n$ und $m$.
+    \begin{beweis}
+        \karos{4}
+    \end{beweis}
+    \begin{aufgabe}
+        BlaBlaBla
+    \end{aufgabe}
+
+\newpage
+\section{Die n-te Wurzeln}
+    \begin{definition}
+        Sei $a\in\R_0^+$ und $n\in\N$. Die \textbf{n-te Wurzel} von $a$ ist diejenige nicht-negative reele Zahl $x$, sodass \[\lineortext{x^n=a}\] gilt. Wir schreiben auch $x=\sqrt{a}$. Der Term unter der Wurzel heisst \textit{Radikand}.
+        Falls $n=2$ gilt, handelt es sich um die bereits bekannte Quadratwurzel, wobei man meistens den Wurzelindex weglässt: \[\sqrt[2]{a}=\sqrt{a}.\]
+    \end{definition}
+
+\subsection{Wurzeln als rationale Exponenten}
+
+
+    
+\subsection{Anwendungen}
+\subsubsection{Lineare Gleichungen mit Wurzelkoeffizienten}
+    Als erstes betrachten wir die bereits bekannten linearen Gleichungen, aber wir lassen als Koeffizienten auch Wurzelterme zu. Dass heisst, der Faktor vor der Unbekannten kann eine Wurzel enthalten. Der Lösungsweg geht genau gleich wie ohne Wurzel. Zur Erinnerung fassen wir nochmals zusammen:
+    \begin{algo}
+        \begin{enumerate}
+            \item ausmultiplizieren, falls notwendig
+            \item alle Unbekannte auf die eine Seite, der Rest auf die andere Seite
+            \item die Unbekannte ausklammern
+            \item durch die Klammer vor der Unbekannten dividieren
+        \end{enumerate}
+    \end{algo}
+    Starten wir mit einem Beispiel gemeinsam.
+    \begin{beispiel}
+        \[x\sqrt{8}+6=\sqrt{8}-x\]
+        \karos{4}
+    \end{beispiel}
+    \begin{aufgabe}
+        Löse die linaeren Gleichungen nach $x$ auf.
+        \begin{enumerate}[label=\alph*)]\begin{multicols}{2}
+            \item $x\sqrt{2}+\sqrt{3}=\sqrt{5}-x\sqrt{2}$
+            \item $4x-5=\sqrt{6}\cdot x+7$
+            \item $(x-4)\sqrt{2}=\sqrt{3}(x-5)$
+            \item $(x+2-\sqrt{2})^2=x^2+\sqrt{2}$
+        \end{multicols}\end{enumerate}
+    \end{aufgabe}
+\subsubsection{Quadrierte Gleichungen}
+    Als erste Anwendung betrachten wir eine neue Form von Gleichungen, die wir allerdings mit einem Trick auf die linearen Gleichungen zurückführen können. Das heisst auch, die Unbekannte ist nie unter der Wurzel anzutreffen.
+    \begin{definition}
+        Eine Gleichung heisst quadrierte Gleichung, falls die Unbekannte im Quadrat vorkommt. 
+    \end{definition}
+    Starten wir mit zwei gemeinsamen Beispielen:
+    \begin{beispiel}\begin{enumerate}
+        \item \[(x-3)^2=64\]\karos{6}\newpage
+        \item \[(3x-16)^2=(4x-19)^2\]\karos{6}
+    \end{enumerate}\end{beispiel}
+    \begin{aufgabe}
+        Löse die folgenden Gleichungen. Überlege dir genau welche beiden Fälle du betrachten musst.
+        \begin{enumerate}[label=\alph*)]\begin{multicols}{2}
+            \item $(x-6)^2=(2x-7)^2$
+            \item $(2x+3)^2-9\*(6x-7)^2=16\*(6x-7)^2$
+            \item $9x^4=(5x^2-2)^2$
+            \item $(x^2+x-14)^2=(x^2-x+6)^2$
+        \end{multicols}\end{enumerate}
+    \end{aufgabe}
+\subsubsection{Wurzelgleichungen}
+    Als zweites betrachten wir sogenannte Wurzelgleichungen. Diese zeichnen sich aus, dass die Unbekannte unter der Wurzel zu finden ist. Um die Gleichung lösen zu können, müssen wir es schaffen, die Unbekannte aus der Wurzel herausnehmen zu können.
+    \begin{beispiel}
+        \[x+1=\sqrt{2x+5}\]\karos{4}
+    \end{beispiel}
+    \textbf{Wichtig: } Durch das \lineortext{quadrieren} einer Gleichung können zusätzliche falsche Lösungen entstehen. Deshalb ist eine Überprüfung der Lösungen unerlässlich.\newline
+    \karos{2}
+    \begin{aufgabe}
+        Löse die folgenden Gleichung nach $x$ auf und überprüfe sie hinsichtlich möglicher Scheinlösungen.
+        \begin{enumerate}[label=\alph*)]\begin{multicols}{2}
+            \item $\sqrt{x+5}=\sqrt{4-x}$
+            \item $\sqrt{x(x-4)}=2\sqrt{1-x}$
+            \item $\sqrt{3x^2-50}=-x$
+            \item $\sqrt{x}+\sqrt{x+4}=4$
+            \item $\sqrt{6-x}+\sqrt{2x+1}=\sqrt{x+7}$
+            \item $\sqrt{x-2}+\sqrt{x-11}=\sqrt{x+13}$
+        \end{multicols}\end{enumerate}
+    \end{aufgabe}
+
+\newpage
+\subsection*{History}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|p{13mm}|p{20mm}|p{30mm}|p{70mm}|}\hline
+        %\multicolumn{4}{|l|}{History}\\\hline
+        Version & Datum & Person & Bemerkung \\\hline
+        $0.1$ & 16.12.2023 & Jonas Guler & Kapitel erstellt \\\hline
+        $0.2$ & 02.10.2024 & Jonas Guler & Definition auf n-te Wurzel verallgemeinert \\\hline
+        $0.3$ & ToDo & Jonas Guler & Aufgaben hinzufügen und Rationale Exponenten \\\hline
+    \end{tabular}
+\end{table}
+
+
+
+\end{document}

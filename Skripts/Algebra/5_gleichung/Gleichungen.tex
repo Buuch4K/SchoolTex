@@ -1,0 +1,80 @@
+\documentclass[11pt,oneside]{article}
+\input{Header/layout_article.sty}
+
+\newcommand{\Skriptname}{Gleichungen}
+\newcommand{\Autor}{Jonas Guler (Gu)}
+
+\begin{document}   %KSH-Gubser - LATEX/PDF
+\begin{titlepage}
+	\clearpage
+	\title{\Huge\textbf{\Skriptname} \\[1cm]}
+	\author{Autor:\\ \Autor}
+	\date{\normalsize {Version 1.0}\\ \datelong}
+	\maketitle
+    \thispagestyle{empty}
+    \vfill
+    \tableofcontents
+\end{titlepage}
+\pagenumbering{arabic}
+%########################################## Kapitel 4 ##################################################
+\section{Einstieg}
+    Wir steigen mit zwei interessanten Entdeckungsaufgaben ein.
+    \begin{aufgabe}
+        \begin{enumerate}
+            \item Du stehst auf einem Hügel und schauen auf eine Wiese, auf der Schafe und Zeigen weiden. Nach einer Weile fällt dir auf, dass sich fünfmal so viele Schafe wie Ziegen auf der Wiese befinden. Drücke diesen Sachverhalt als Gleichung aus? Was muss du dabei einführen? Welche Vorteile gibt diese Darstellung im Vergleich zur sprachlichen Fassung?
+        \end{enumerate}\karos{2.5}
+        \begin{enumerate}\setcounter{enumi}{1}
+            \item Du planst eine USA-Reise und liest dazu einen Reiseblog. Unteranderem findest du den Hinweis, dass in den USA die Temperaruten in Grad Fahrenheit angegeben wird und nicht wie bei uns üblich in Grad Celsius. Folglich solltest du wissen, wie das Mass ins andere umgerechnet wird. Dem Blog ist zu entnehmen, dass man, um Fahrenheit in Grad umzurechnen, erst $32$ abziehen und dann den erhaltenen Wert mit $\frac{5}{9}$ multiplizieren muss. Drücke diesen Sachverhalt als Gleichung aus? Was muss du dabei einführen? Welche Vorteile gibt diese Darstellung im Vergleich zur sprachlichen Fassung?
+        \end{enumerate}\karos{2.5}
+    \end{aufgabe}
+    Wir sehen also, dass Gleichungen nicht einfach vom Himmel fallen sondern drücken vielmehr eine Frage zu einem bestimmten Thema aus. Dabei können Gleichungen sehr einfach, wie beispielsweise eine lineare Gleichung
+    \[2x-5=17-3x,\]
+    oder auch extrem komplexe, wie zum Beispiel
+    \[-\frac{\hslash^2}{2m}\*\frac{\partial^2\Psi(x,t)}{\partial x^2}+V\*\Psi=i\*\hslash\*\frac{\delta\Psi(x,t)}{\delta t}\]
+    sein. Beide dieser Gleichungen haben aber gemeinsam, dass ihre Aussage entweder \textbf{wahr} oder \textbf{falsch} ist. Betrachten wir dazu die lineare Gleichung. Falls wir $x=4.4$ in die Gleichung einsetzen, so erhalten wir eine wahre Aussage:
+    \[2\*4.4-5=8.8-5=3.8=17-13.2=17-3\*4.4.\]
+    Wird eine andere Zahl für $x$ eingesetzt, erhalten wir immer eine falsche Aussage. Das heisst also, wir können den Begriff einer Gleichung mathematisch definieren.
+    \begin{definition}
+        Unter einer \textbf{Aussage} versteht man eine Behauptung, der eindeutig einen der beiden Wahrheitswerte (\textit{wahr}) oder (\textit{falsch}) zugeordnet werden kann.\newline
+        Eine \textbf{Gleichung} ist eine Aussage, die eine oder mehrere Variablen enthält. Indem die Variablen mit Zahlen belegt werden, entsteht entweder eine wahre oder eine falsche Aussage.
+    \end{definition}
+    Wir werden uns zu Beginn vor allem darauf fokussieren, alle Zahlen einer Gleichung zu finden, sodass eine wahre Aussage entsteht. Dabei beschränken wir uns auf maximal eine Variable.
+    \begin{aufgabe}
+        \begin{enumerate} %Barth1 S142 A1,2
+            \item Formuliere aus den folgenden Fragestellungen jeweils eine Gleichung. 
+            \begin{enumerate}[label=\alph*)]
+                \item Ich denke mir eine Zahl: Ihr $11-$Faches ist um 7 grösser als $400$. An welche Zahl denke ich?
+                \item Wenn ich eine bestimmte Zahl verdopple, erhalte ich gleich viel, wie wenn ich die von $33$ subtrahiere. Welche Zahl ist das?
+                \item Addiere ich $5$ zum $5-$Fachen einer bestimmten Zahl, so erhalte ich $5$. Welche Zahl ist gesucht?
+            \end{enumerate}
+            \item Ein Zirkus verkaufte für die Abendvorstellung $60$ Karten in der Preiskategorie I, $125$ Karten in der Kategorie II und $75$ in der Kategorie III. Die Gesamteinnahmen an diesem Abend betrugen $5'140.-$ CHF. Ein Platz der Kategorie I war $8.-$ CHF teurer als ein Platz in der Kategorie III. Ein Platz in der Kategorie II war $4.-$ CHF billiger als ein Platz der Kategorie I. Stelle diesen Sachverhalt in einer einzigen Gleichung mit einer Variable dar. Mache dabei deutlich, was deine Variable bedeutet. 
+        \end{enumerate}
+    \end{aufgabe}
+\subsection{Typen von Gleichungen}
+    
+
+    
+\newpage
+\section{Lösungsmenge}
+
+\section{Grundstrategie zur Lösung linearer Gleichungen}
+
+\section{Gleichungen der Form \(a\*b=0\)}
+
+\section{Textaufgaben}
+
+
+\newpage
+\subsection*{History}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|p{13mm}|p{20mm}|p{30mm}|p{70mm}|}\hline
+        %\multicolumn{4}{|l|}{History}\\\hline
+        Version & Datum & Person & Bemerkung \\\hline
+        $0.1$ & 16.12.2023 & Jonas Guler & Einführungsaufgaben \\\hline
+        $0.2$ & ToDo & Jonas Guler & Alle Theorieinhalte \\\hline
+    \end{tabular}
+\end{table}
+
+
+\end{document}
