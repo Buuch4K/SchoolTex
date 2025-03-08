@@ -1,0 +1,132 @@
+%%
+% Math Arrows
+%%
+\newcommand{\same}{\ensuremath{\Longleftrightarrow}}
+\renewcommand{\to}{\ensuremath{\longrightarrow}}
+\newcommand{\qsame}{\quad\same\quad}
+\newcommand{\dsame}{\ensuremath{:\Leftrightarrow}}
+\newcommand{\qdsame}{\quad\dsame\quad}
+\newcommand{\ldsame}{\ensuremath{:\Longleftrightarrow}}
+\newcommand{\samedef}{\ensuremath{\us {\text{def}} \Leftrightarrow}}
+\newcommand{\qsamedef}{\quad\samedef\quad}
+\newcommand{\lsamedef}{\ensuremath{\us {\text{def}} \Longleftrightarrow}}
+\newcommand{\qlsamedef}{\quad\lsamedef\quad}
+
+
+%%
+% Mengendefinitionen
+%%
+\newcommand{\M}{\ensuremath{\mathcal{M}}}
+\newcommand{\N}{\ensuremath{\mathbb{N}}}
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
+\newcommand{\Q}{\ensuremath{\mathbb{Q}}}
+\newcommand{\I}{\ensuremath{\mathbb{I}}}
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+\newcommand{\C}{\ensuremath{\mathbb{C}}}
+\renewcommand{\S}{\ensuremath{\mathbb{S}}}
+\newcommand{\Prim}{\ensuremath{\mathbb{P}}}
+\newcommand{\0}{\ensuremath{\emptyset}}
+\renewcommand{\Re}{\ensuremath{\operatorname{Re}}}
+\renewcommand{\Im}{\ensuremath{\operatorname{Im}}}
+\newcommand{\strich}{\ensuremath{\big\vert}}
+
+%%
+% Mengenoperation
+%%
+\renewcommand{\nin}{\not\in}
+
+
+%%
+% Logisches Und und Oder
+%%
+\newcommand{\sand}{\ensuremath{\; \land \;}}
+\newcommand{\sor}{\ensuremath{\; \lor \;}}
+\renewcommand{\*}{\ensuremath{\cdot}}
+\newcommand{\oder}{\vee}
+\newcommand{\n}{\neg}
+\newcommand{\und}{\wedge}
+
+
+%%
+% Bei Integral, Summe,... die Grenzen über bzw.
+% unter das Zeichen
+%%
+\renewcommand{\d}[1]{\ensuremath{\operatorname{d}\!{#1}}}
+\newcommand{\Sum}{\sum\limits}
+\newcommand{\Prod}{\prod\limits}
+\newcommand{\Min}{\min\limits}
+\newcommand{\Max}{\max\limits}
+\newcommand{\Lim}{\lim\limits}
+\newcommand{\Inf}{\inf\limits}
+\newcommand{\Sup}{\sup\limits}
+\newcommand{\Liminf}{\liminf\limits}
+\newcommand{\Limsup}{\limsup\limits}
+%\renewcommand{\Cup}{\bigcup\limits}
+%\renewcommand{\Cap}{\bigcap\limits}
+\newcommand{\Otimes}{\bigotimes\limits}
+\newcommand{\Oplus}{\bigoplus\limits}
+
+
+%%
+% Arcus Cotangens, Logarithmus
+%%
+\let\oldsin\sin
+\renewcommand{\sin}[1]{\oldsin{\left(#1\right)}}
+\let\oldcos\cos
+\renewcommand{\cos}[1]{\oldcos{\left(#1\right)}}
+\let\oldtan\tan
+\renewcommand{\tan}[1]{\oldtan{\left(#1\right)}}
+\let\oldarcsin\arcsin
+\renewcommand{\arcsin}[1]{\oldarcsin{\left(#1\right)}}
+\let\oldarccos\arccos
+\renewcommand{\arccos}[1]{\oldarccos{\left(#1\right)}}
+\let\oldarctan\arctan
+\renewcommand{\arctan}[1]{\oldarctan{\left(#1\right)}}
+\let\oldln\ln
+\renewcommand{\ln}[1]{\oldln{\left(#1\right)}}
+\newcommand{\Log}[2]{\ensuremath{\operatorname{log}_{#1}\left(#2\right)}}
+\newcommand{\e}{\operatorname{e}}
+\renewcommand{\exp}[1]{\ensuremath{\operatorname{\e}^{#1}}}
+
+
+%%
+% Griechische Buchstaben
+%%
+\renewcommand{\epsilon}{\ensuremath{\varepsilon}}
+\renewcommand{\phi}{\varphi}
+\renewcommand{\l}{\lambda}
+\renewcommand{\t}{\tau}
+
+
+%%
+% Bezeichnungen
+%%
+\newcommand{\Rgn}{\R_{>0}} % R grösser Null
+\newcommand{\Rad}{\operatorname{Rad}}   % Radikal
+\newcommand{\kgV}{\operatorname{kgV}}   % Kleinster gemeinsame Vielfache
+\newcommand{\ggT}{\operatorname{ggT}}   % Grösster gemeinsame Teiler
+\newcommand{\winkel}{\sphericalangle}          % Winkelsymbol
+\DeclarePairedDelimiter\abs{\lvert}{\rvert} % besserer Betrag
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+\makeatother
+
+
+%%
+% Vektorgeometrie
+%%
+\renewcommand{\v}[1]{\vv{#1}}       % besserer Pfeil über Buchstaben
+\renewcommand{\vec}[2]{\begingroup\renewcommand{\arraystretch}{1}\left(\begin{array}{c} #1 \\ #2 \end{array}\right)\endgroup}   % two dimensional vector
+\renewcommand{\Vec}[3]{\begingroup\renewcommand{\arraystretch}{1}\left(\begin{array}{c} #1 \\ #2 \\ #3 \end{array}\right)\endgroup}      % three dimensional vector
+
+
+%%
+% Text
+%%
+\newcommand*{\Ueq}[1]{\mathrel{\mathop{=}\limits_{\text{#1}}}}
+\newcommand*{\Oeq}[1]{\mathrel{\stackrel{\text{#1}}{=}}}
+\newcommand{\utext}[2]{\underbrace{#1}_{\substack{#2}}}
+\newcommand{\otext}[2]{$\overbrace{\textrm{#1}}^{\textrm{#2}}$}
+\newcommand{\lineortext}[1]{\hspace{0,1cm}\underline{\hspace{0.1cm}\hphantom{#1}\hspace{0.1cm}}\hspace{0,1cm}} % Lückentext erstellen
+\newcommand{\gap}[1]{\rule{#1 cm}{1pt}}
