@@ -5,7 +5,7 @@
 \usepackage[german,ngerman]{babel}
 \usepackage{amsthm, esvect}
 \usepackage{mathtools}
-\RequirePackage{amssymb, amsfonts, amsmath, latexsym, verbatim, xspace, setspace}
+\RequirePackage{amssymb, amsfonts, amsmath, latexsym, verbatim, xspace}
 \usepackage{systeme}
 \usepackage{multicol}
 \usepackage{multirow}
@@ -24,7 +24,7 @@
 \usepackage[colorlinks=true,urlcolor=magenta,citecolor=red,linkcolor=blue,bookmarks=true]{hyperref}%Links
 \usepackage{enumerate}
 \usepackage{enumitem}
-\usepackage{xcolor, colortbl}
+\usepackage{xcolor}
 \usepackage[german,ruled,vlined,linesnumbered,algosection]{algorithm2e}
 \usepackage[labelfont=sf]{caption}
 \usepackage{lmodern}
@@ -34,12 +34,11 @@
 \usepackage{hhline}
 \usepackage{subfiles}
 \usepackage{stackengine}
-\usepackage{MnSymbol}
 \usepackage{setspace}
+\usepackage{MnSymbol}
 \usepackage{tcolorbox}
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage{bbm}
-\usepackage{fancyhdr}
 \usepackage{url}
 \usepackage{xparse}
 \usepackage{sectsty}
@@ -50,21 +49,6 @@
 
 % definiert die Sprache
 \selectlanguage{German}
-
-
-\tcbuselibrary{breakable,skins}
-\usetikzlibrary{mindmap,trees}
-\newlength\tindent
-\setlength{\tindent}{\parindent}
-\setlength{\parindent}{0pt}
-\renewcommand{\indent}{\hspace*{\tindent}}
-
-\makeatletter
-\def\ifEmpty#1{\def\@temp{#1}\ifx\@temp\@empty}
-\makeatother
-
-\sectionfont{\underline}
-\usetikzlibrary{arrows, petri, topaths, graphs}
 
 % add command for different dates in Swiss fashion
 \newcommand{\monthwordlong}[1]{\ifcase#1 \or Januar\or Februar\or März\or April\or Mai\or Juni\or Juli\or August\or September\or Oktober\or November\or Dezember\fi}
@@ -81,6 +65,7 @@
 \definecolor{highdive}{RGB}{10,169,194}
 \hypersetup{
 	colorlinks=true,
+	bookmarks=true,
 	linkcolor=linkblue,
 	filecolor=magenta,
 	urlcolor=plotblue,

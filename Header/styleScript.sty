@@ -1,3 +1,20 @@
+\usepackage{fancyhdr}
+
+\tcbuselibrary{breakable,skins}
+\usetikzlibrary{mindmap,trees}
+\newlength\tindent
+\setlength{\tindent}{\parindent}
+\setlength{\parindent}{0pt}
+\renewcommand{\indent}{\hspace*{\tindent}}
+
+\makeatletter
+\def\ifEmpty#1{\def\@temp{#1}\ifx\@temp\@empty}
+\makeatother
+
+\sectionfont{\underline}
+\usetikzlibrary{arrows, petri, topaths, graphs}
+
+
 % =================== BEISPIEL ====================
 \theoremstyle{definition}
 \newtheorem{beispiel}{Beispiel}[section]
