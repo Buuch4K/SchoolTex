@@ -1,0 +1,522 @@
+\usepackage[utf8]{inputenc}
+\usepackage{import}
+\usepackage[a4paper, bottom=2cm,left=2.5cm,right=2.5cm,top=2.5cm]{geometry}
+\usepackage[german]{babel}
+\usepackage{framed}
+\usepackage{tikz,graphicx}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{xcolor, colortbl}
+\usepackage[german,ruled,vlined,linesnumbered,algosection]{algorithm2e}
+\usepackage[labelfont=sf]{caption}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{float} % Allows putting an [H] in \begin{figure} to specify the exact location of the figure
+\usepackage{wrapfig} % Allows in-line images such as the example fish picture
+\usepackage[position=top]{subfig}
+\RequirePackage{amssymb, amsfonts, amsmath, latexsym, verbatim}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{lmodern}
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{systeme}
+\usepackage{hhline}
+\usepackage{subfiles}
+\usepackage{stackengine}
+\usepackage{MnSymbol}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{tcolorbox}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{bbm}
+\usepackage{fancyhdr}
+\usepackage{url}
+%\usepackage{tkz-berge}
+\usepackage{xparse}
+\usepackage{sectsty}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{ragged2e}
+
+% definiert die Sprache
+\selectlanguage{German}
+%\setlocalcaption{german}{figure}{Figur}
+%\setlocalcaption{german}{table}{Tabelle}
+
+
+\tcbuselibrary{breakable,skins}
+\usetikzlibrary{mindmap,trees}
+\newlength\tindent
+\setlength{\tindent}{\parindent}
+\setlength{\parindent}{0pt}
+\renewcommand{\indent}{\hspace*{\tindent}}
+\makeatletter
+\let\org@subfile\subfile
+\renewcommand*{\subfile}[1]{%
+  \filename@parse{#1}% LaTeX's file name parser
+  \expandafter
+  \graphicspath\expandafter{\expandafter{\filename@area}}%
+  \org@subfile{#1}%
+}
+\makeatother
+
+\makeatletter
+\def\ifEmpty#1{\def\@temp{#1}\ifx\@temp\@empty}
+\makeatother
+
+\sectionfont{\underline}
+\usetikzlibrary{arrows,%
+                petri,%
+                topaths, graphs}%
+\newcommand{\re}[1]{\scriptscriptstyle \mathrm{#1}}
+
+% =================== BEISPIEL ====================
+\theoremstyle{definition}
+\newtheorem{beispiel}{Beispiel}[section]
+\renewcommand{\thebeispiel}{\arabic{beispiel}}
+
+% =================== AUFGABE =====================
+\newcounter{aufg}[section] % Zähler für die Umgebungen
+
+\newenvironment{aufgabe}[1][]{%
+    \refstepcounter{aufg}% Inkrementiere den Zähler
+    \begin{tcolorbox}[%
+        enhanced,
+        overlay unbroken and first={\mytitleaufg[#1]}, % Titelleiste mit Icons wird nicht über Seite gebrochen
+        colframe=black,
+        boxrule=0pt,
+        breakable,
+        top=15pt,
+        before=\vskip18pt,
+    ]
+}{%
+    \end{tcolorbox}
+}
+
+\newcommand{\mytitleaufg}[1][]{% Definiert die Titelleiste und Icons
+    \node[fill=black!20,
+        rounded corners,
+        draw=black,
+        text=black,
+        line width=1pt,
+        inner sep=4pt,
+        anchor=west,
+        xshift=12pt]
+        at (frame.north west){\bfseries Aufgabe \thesection.\theaufg.\ifEmpty{#1}\else\emph{ (#1)}\fi}; % Titel, letzter Teil mit ifempty testet ob #1 leer und macht Klammern und Titel, falls Titelargument übergeben wird bzw. falls #1 leer erscheint nichts - auch keine Klammern
+
+    \node[% Icon
+        rounded corners,
+        text=black,
+        fill=black,
+        line width=0pt,
+        inner sep=3pt,
+        anchor=west,
+        xshift=5pt,
+        % yshift=-35pt
+        ]
+        at (frame.north east){\includegraphics[width=24pt]{../../../Header/Icons/aufgabeicon.png}};
+}
+
+% =================== DEFINITION ==================
+\newcounter{def}[section] % Zähler für die Umgebungen
+
+\newenvironment{definition}[1][]{%
+    \refstepcounter{def}% Inkrementiere den Zähler
+    \begin{tcolorbox}[%
+        enhanced,
+        drop shadow southeast,
+        overlay unbroken and first={\mytitledef[#1]}, % Titelleiste mit Icons wird nicht über Seite gebrochen
+        colback=blue!5!white,
+        colframe=blue!75!black,
+        boxrule=2pt,
+        breakable,
+        top=15pt,
+        before=\vskip18pt,
+    ]
+}{%
+    \end{tcolorbox}
+}
+
+\newcommand{\mytitledef}[1][]{% Definiert die Titelleiste und Icons
+    \node[fill=blue!40!white,
+        rounded corners,
+        draw=black,
+        text=black,
+        line width=1pt,
+        inner sep=4pt,
+        anchor=west,
+        xshift=12pt]
+        at (frame.north west){\bfseries Definition \thesection.\thedef.\ifEmpty{#1}\else\emph{ (#1)}\fi}; % Titel, letzter Teil mit ifempty testet ob #1 leer und macht Klammern und Titel, falls Titelargument übergeben wird bzw. falls #1 leer erscheint nichts - auch keine Klammern
+
+    \node[% Icon
+        rounded corners,
+        text=black,
+        fill=black,
+        line width=0pt,
+        inner sep=3pt,
+        anchor=west,
+        xshift=5pt,
+        % yshift=-35pt
+        ]
+        at (frame.north east){\includegraphics[width=24pt]{../../../Header/Icons/definitionicon.png}};
+}
+
+% =================== NOTATION ====================
+\newcounter{nota}[section] % Zähler für die Umgebungen
+
+\newenvironment{notation}[1][]{%
+    \refstepcounter{nota}% Inkrementiere den Zähler
+    \begin{tcolorbox}[%
+        enhanced,
+        drop shadow southeast,
+        colback=yellow!5!white,
+        colframe=yellow!75!black,
+        overlay unbroken and first={\mytitlenota[#1]},   % Titelleiste mit Icons wird nicht über Seite gebrochen
+        boxrule=2pt,
+        breakable,
+        top=15pt,
+        before=\vskip18pt,
+    ]
+}{%
+    \end{tcolorbox}
+}
+
+\newcommand{\mytitlenota}[1][]{% Definiert die Titelleiste und Icons
+    \node[fill=yellow!40!white,,
+        rounded corners,
+        draw=black,
+        text=black,
+        line width=1pt,
+        inner sep=4pt,
+        anchor=west,
+        xshift=12pt]
+        at (frame.north west){\bfseries Notation \thesection.\thenota.\ifEmpty{#1}\else\emph{ (#1)}\fi}; % Titel, letzter Teil mit ifempty testet ob #1 leer und macht Klammern und Titel, falls Titelargument übergeben wird bzw. falls #1 leer erscheint nichts - auch keine Klammern
+
+    \node[% Icon
+        rounded corners,
+        text=black,
+        fill=black,
+        line width=0pt,
+        inner sep=3pt,
+        anchor=west,
+        xshift=5pt,
+        % yshift=-35pt
+        ]
+        at (frame.north east){\includegraphics[width=24pt]{../../../Header/Icons/definitionicon.png}};
+}
+
+% =================== SATZ ========================
+\newcounter{satz}[section]  % creates a counter and resets it after each chapter
+
+\newenvironment{satz}[1][]{   % Hauptbox mit Satz drin
+    \refstepcounter{satz}
+    \begin{tcolorbox}[%
+        enhanced,
+        colback=red!5!white,
+        fuzzy halo=2mm with gray,
+        colframe=red!75!black,
+        overlay unbroken and first={\mytitlesatz[#1]},   % Titelleiste mit Icons wird nicht über Seite gebrochen
+        boxrule=2pt,
+        breakable,
+        top=15pt,
+        before=\vskip18pt,
+    ]
+}{%
+    \end{tcolorbox}
+}
+
+\newcommand{\mytitlesatz}[1][]{                     % Macht Titelbox und Icons
+   \node[fill=red!90!white,
+      rounded corners,
+      draw=black,,
+      text=black,
+      line width=1pt,
+      inner sep=4pt,
+      anchor=west,
+      xshift=12pt]
+   at (frame.north west){\bfseries Satz \thesection.\thesatz.\ifEmpty{#1}\else\emph{ (#1)}\fi};  % Titel, letzter Teil mit ifx testet ob #1 leer und macht Klammern und Titel, falls Titelargument übergeben wird bzw.  falls #1 leer erscheint nichts - auch keine Klammern
+
+ \node[ % Icon
+      rounded corners,
+      text=black,
+      fill=black,
+      line width=0pt,
+      inner sep=3pt,
+      anchor=west,
+      xshift=5pt,
+%     yshift=-35pt
+]
+   at (frame.north east){ \includegraphics[width=24pt]{../../../Header/Icons/satzicon.png} };
+}
+
+% =================== BEWEIS ======================
+\newenvironment{beweis}[1][]{
+    \begin{tcolorbox}[
+        enhanced,
+        overlay unbroken and first={\mybeweis[#1]},     % Titelleiste mit Icons wird nicht über Seite gebrochen
+        colback=white,
+        colframe=black,
+        boxrule=0pt,
+        breakable,
+        top=15pt,
+        before=\vskip18pt,
+    ]
+}{
+        \end{tcolorbox}
+}
+
+\newcommand{\mybeweis}[1][]{                     % Macht Titelbox und Icons
+   \node[fill=white,
+      rounded corners,
+      draw=black,
+      text=black,
+      line width=1pt,
+      inner sep=4pt,
+      anchor=west,
+      xshift=12pt]
+   at (frame.north west){\bfseries Beweis \ifEmpty{#1}\else\emph{ (#1)}\fi};  % Titel, letzter Teil mit ifx testet ob #1 leer und macht Klammern und Titel, falls Titelargument übergeben wird bzw.  falls #1 leer erscheint nichts - auch keine Klammern
+}
+
+% =================== ALGORITHM ===================
+\newcounter{algo}[section]  % creates a counter and resets it after each chapter
+
+\newenvironment{algo}[1][]{   % Hauptbox mit Satz drin
+    \refstepcounter{algo}
+    \begin{tcolorbox}[%
+        enhanced,
+        drop shadow southeast,
+        colback=yellow!5!white,
+        colframe=yellow!75!black,
+        overlay unbroken and first={\algotitle[#1]},   % Titelleiste mit Icons wird nicht über Seite gebrochen
+        boxrule=2pt,
+        breakable,
+        top=15pt,
+        before=\vskip18pt,
+    ]
+}{%
+    \end{tcolorbox}
+}
+
+\newcommand{\algotitle}[1][]{                     % Macht Titelbox und Icons
+   \node[fill=yellow!40!white,
+      rounded corners,
+      draw=black,
+      text=black,
+      line width=1pt,
+      inner sep=4pt,
+      anchor=west,
+      xshift=12pt]
+   at (frame.north west){\bfseries \ifEmpty{#1}{Ablauf}\else{#1}\fi};  % Titel, letzter Teil mit ifx testet ob #1 leer und macht Klammern und Titel, falls Titelargument übergeben wird bzw.  falls #1 leer erscheint nichts - auch keine Klammern
+
+ \node[ % Icon
+      rounded corners,
+      text=black,
+      fill=black,
+      line width=0pt,
+      inner sep=3pt,
+      anchor=west,
+      xshift=5pt
+      % yshift=-35pt
+      ]
+   at (frame.north east){ \includegraphics[width=24pt]{../../../Header/Icons/algoicon.png} };
+}
+
+% ================ Nummerierte Multicol ================
+\newenvironment{enumcols}[1][]{
+    \begin{enumerate}[label=\alph*)]\begin{multicols}{#1}
+}{
+    \end{multicols}\end{enumerate}
+}
+
+
+%%
+% Header and Footer
+%%
+\linespread{1.2} % Line spacing
+\fancypagestyle{plain}{
+   \pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{\Autor}
+\cfoot{\Skriptname}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\rightmark}
+\lfoot{\leftmark}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+%\setlength\parindent{0pt} % Uncomment to remove all indentation from paragraphs
+
+\usetikzlibrary{shapes,arrows}
+\tikzstyle{decision} = [diamond, draw, fill=blue!20,
+    text width=6em, text badly centered, node distance=4cm, inner sep=0pt]
+\tikzstyle{block} = [rectangle, draw, fill=blue!20,
+    text width=8em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{cloud} = [draw, ellipse,fill=red!20, node distance=2cm,
+    minimum height=2em]
+
+%%
+% Math Arrows
+%%
+\newcommand{\same}{\ensuremath{\Longleftrightarrow}}
+\renewcommand{\to}{\ensuremath{\longrightarrow}}
+\newcommand{\qsame}{\quad\same\quad}
+\newcommand{\dsame}{\ensuremath{:\Leftrightarrow}}
+\newcommand{\qdsame}{\quad\dsame\quad}
+\newcommand{\ldsame}{\ensuremath{:\Longleftrightarrow}}
+\newcommand{\samedef}{\ensuremath{\us {\text{def}} \Leftrightarrow}}
+\newcommand{\qsamedef}{\quad\samedef\quad}
+\newcommand{\lsamedef}{\ensuremath{\us {\text{def}} \Longleftrightarrow}}
+\newcommand{\qlsamedef}{\quad\lsamedef\quad}
+
+%%
+% Mengendefinitionen
+%%
+\newcommand{\M}{\ensuremath{\mathcal{M}}}
+\newcommand{\N}{\ensuremath{\mathbb{N}}}
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
+\newcommand{\Q}{\ensuremath{\mathbb{Q}}}
+\newcommand{\I}{\ensuremath{\mathbb{I}}}
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+\newcommand{\C}{\ensuremath{\mathbb{C}}}
+\renewcommand{\S}{\ensuremath{\mathbb{S}}}
+\newcommand{\Prim}{\ensuremath{\mathbb{P}}}
+\newcommand{\0}{\ensuremath{\emptyset}}
+\renewcommand{\Re}{\ensuremath{\operatorname{Re}}}
+\renewcommand{\Im}{\ensuremath{\operatorname{Im}}}
+\newcommand{\strich}{\ensuremath{\big\vert}}
+
+%%
+% Logisches Und und Oder
+%%
+\newcommand{\sand}{\ensuremath{\; \land \;}}
+\newcommand{\sor}{\ensuremath{\; \lor \;}}
+\renewcommand{\*}{\ensuremath{\cdot}}
+\newcommand{\oder}{\vee}
+\newcommand{\n}{\neg}
+\newcommand{\und}{\wedge}
+
+%%
+% nicht Element von
+%%
+\renewcommand{\nin}{\not\in}
+
+%%
+% Bei Integral, Summe,... die Grenzen über bzw.
+% unter das Zeichen
+%%
+\renewcommand{\d}[1]{\ensuremath{\operatorname{d}\!{#1}}}
+\newcommand{\Sum}{\sum\limits}
+\newcommand{\Prod}{\prod\limits}
+\newcommand{\Min}{\min\limits}
+\newcommand{\Max}{\max\limits}
+\newcommand{\Lim}{\lim\limits}
+\newcommand{\Inf}{\inf\limits}
+\newcommand{\Sup}{\sup\limits}
+\newcommand{\Liminf}{\liminf\limits}
+\newcommand{\Limsup}{\limsup\limits}
+%\renewcommand{\Cup}{\bigcup\limits}
+%\renewcommand{\Cap}{\bigcap\limits}
+\newcommand{\Otimes}{\bigotimes\limits}
+\newcommand{\Oplus}{\bigoplus\limits}
+
+
+%%
+% Arcus Cotangens, Logarithmus
+%%
+\let\oldsin\sin
+\renewcommand{\sin}[1]{\oldsin{\left(#1\right)}}
+\let\oldcos\cos
+\renewcommand{\cos}[1]{\oldcos{\left(#1\right)}}
+\let\oldtan\tan
+\renewcommand{\tan}[1]{\oldtan{\left(#1\right)}}
+\let\oldarcsin\arcsin
+\renewcommand{\arcsin}[1]{\oldarcsin{\left(#1\right)}}
+\let\oldarccos\arccos
+\renewcommand{\arccos}[1]{\oldarccos{\left(#1\right)}}
+\let\oldarctan\arctan
+\renewcommand{\arctan}[1]{\oldarctan{\left(#1\right)}}
+\let\oldln\ln
+\renewcommand{\ln}[1]{\oldln{\left(#1\right)}}
+\newcommand{\Log}[2]{\ensuremath{\operatorname{log}_{#1}\left(#2\right)}}
+\newcommand{\e}{\operatorname{e}}
+\renewcommand{\exp}[1]{\ensuremath{\operatorname{\e}^{#1}}}
+
+
+%%
+% Griechische Buchstaben
+%%
+\renewcommand{\epsilon}{\ensuremath{\varepsilon}}
+\renewcommand{\phi}{\varphi}
+\renewcommand{\l}{\lambda}
+\renewcommand{\t}{\tau}
+
+
+%%
+% Bezeichnungen
+%%
+\newcommand{\Rgn}{\R_{>0}} % R grösser Null
+\newcommand{\Rad}{\operatorname{Rad}}   % Radikal
+\newcommand{\kgV}{\operatorname{kgV}}   % Kleinster gemeinsame Vielfache
+\newcommand{\ggT}{\operatorname{ggT}}   % Grösster gemeinsame Teiler
+\newcommand{\winkel}{\sphericalangle}          % Winkelsymbol
+\DeclarePairedDelimiter\abs{\lvert}{\rvert} % besserer Betrag
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+\makeatother
+
+%%
+% Vektorgeometrie
+%%
+\renewcommand{\v}[1]{\vv{#1}}       % besserer Pfeil über Buchstaben
+\renewcommand{\vec}[2]{\begingroup\renewcommand{\arraystretch}{1}\left(\begin{array}{c} #1 \\ #2 \end{array}\right)\endgroup}   % two dimensional vector
+\renewcommand{\Vec}[3]{\begingroup\renewcommand{\arraystretch}{1}\left(\begin{array}{c} #1 \\ #2 \\ #3 \end{array}\right)\endgroup}      % three dimensional vector
+
+%%
+% Text
+%%
+\newcommand*{\Ueq}[1]{\mathrel{\mathop{=}\limits_{\text{#1}}}}
+\newcommand*{\Oeq}[1]{\mathrel{\stackrel{\text{#1}}{=}}}
+\newcommand{\utext}[2]{\underbrace{#1}_{\substack{#2}}}
+\newcommand{\otext}[2]{$\overbrace{\textrm{#1}}^{\textrm{#2}}$}
+\newcommand{\lineortext}[1]{\hspace{0,1cm}\underline{\hspace{0.1cm}\hphantom{#1}\hspace{0.1cm}}\hspace{0,1cm}} % Lückentext erstellen
+\newcommand{\gap}[1]{\rule{#1 cm}{1pt}}
+
+
+% add command for different dates in Swiss fashion
+\newcommand{\monthwordlong}[1]{\ifcase#1 \or Januar\or Februar\or März\or April\or Mai\or Juni\or Juli\or August\or September\or Oktober\or November\or Dezember\fi}
+\newcommand{\monthwordshort}[1]{\ifcase#1\or Jan\or Feb\or Mar\or Apr\or Mai\or Jun\or Jul\or Aug\or Sept\or Okt\or Nov\or Dez\fi}
+\newcommand{\datelong}{\number\day.\:\monthwordlong{\the\month}\:\number\year}
+\newcommand{\dateshort}{\number\day.\:\monthwordshort{\the\month}\:\number\year}
+
+% define color of links inside a text
+\definecolor{linkblue}{RGB}{0, 0, 80}
+\definecolor{plotblue}{RGB}{100, 100, 255}
+\definecolor{myblue}{RGB}{8,164,214}
+\definecolor{myred}{RGB}{143,42,41}
+\definecolor{forestgreen}{RGB}{34,139,34}
+\definecolor{highdive}{RGB}{10,169,194}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=linkblue,
+	filecolor=magenta,
+	urlcolor=plotblue,
+	citecolor=linkblue,
+	pdfpagemode=FullScreen,
+}
+
+
+% Row Height of Table times 1.5
+\renewcommand{\arraystretch}{1.5}
+
+% Karriertes Papier für Antwort
+\newcommand{\karos}[1]{\begin{tikzpicture}\draw[step=0.5cm,color=gray] (0,0) grid (\linewidth,#1 cm);\end{tikzpicture}}

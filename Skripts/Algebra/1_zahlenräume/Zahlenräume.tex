@@ -1,5 +1,5 @@
 \documentclass[11pt,oneside]{article}
-\input{Header/layout_article.sty}
+\input{../../../Header/layout_article.sty}
 
 \newcommand{\Skriptname}{Zahlenräume}
 \newcommand{\Autor}{Jonas Guler (Gu)}
@@ -59,9 +59,9 @@
         Wir betrachten die beiden Mengen $A=\{-1,0,1,2,3\}$ und $B=\{2\}$ in einem Mengendiagramm.
         \begin{figure}[H]
             \centering
-            \includegraphics[scale=0.8]{Algebra/1_menge/images/teilmenge.png}
+            \includegraphics[scale=0.8]{images/teilmenge.png}
         \end{figure}
-        Es ist einfach zu erkennen, dass die Menge $B$ vollständig von der grösseren Menge $A$ umschlossen wird und somit alle Elemente von $B$ auch in $A$ enthalten sind. 
+        Es ist einfach zu erkennen, dass die Menge $B$ vollständig von der grösseren Menge $A$ umschlossen wird und somit alle Elemente von $B$ auch in $A$ enthalten sind.
     \end{beispiel}
     \begin{definition}[leere Menge]
         Eine Menge, die keine Elemente enthält, heisst \textbf{leere Menge} und wird mit $\emptyset$ bezeichnet.
@@ -82,7 +82,7 @@
             \hfill
             \begin{minipage}{0.37\linewidth}
                 \centering
-                \includegraphics[scale=0.7]{Algebra/1_menge/images/operationen.png}
+                \includegraphics[scale=0.7]{images/operationen.png}
             \end{minipage}\vspace{18pt}
             \item\begin{minipage}{0.6\linewidth}
                 \textbf{Vereinigung:} $C\cup D=\gap{5}$\newline
@@ -91,7 +91,7 @@
             \hfill
             \begin{minipage}{0.37\linewidth}
                 \centering
-                \includegraphics[scale=0.7]{Algebra/1_menge/images/operationen.png}
+                \includegraphics[scale=0.7]{images/operationen.png}
             \end{minipage}\vspace{18pt}
             \item\begin{minipage}{0.6\linewidth}
                 \textbf{Differenzmenge:} $C\backslash D=\gap{2}$\newline
@@ -100,14 +100,14 @@
             \hfill
             \begin{minipage}{0.37\linewidth}
                 \centering
-                \includegraphics[scale=0.7]{Algebra/1_menge/images/operationen.png}
+                \includegraphics[scale=0.7]{images/operationen.png}
             \end{minipage}
     \end{enumerate}
     \begin{aufgabe}
         Löse die Aufgaben $1-4$ in der Aufgabensammlung.
     \end{aufgabe}
 
-    
+
 \newpage
 \section{Die natürlichen Zahlen}
     \begin{aufgabe}
@@ -190,7 +190,7 @@
             \item $54254055625=$
         \end{enumerate}
     \end{aufgabe}
-    
+
 \subsection{Grösster gemeinsamer Teiler und kleinstes gemeinsames Vielfach}
     Die Primfaktorzerlegung hilft uns vor allem bei der Suche nach dem grössten gemeinsamen Teiler ($\ggT$) oder dem kleinsten gemeinsamen Vielfach ($\kgV$).
     \begin{definition}
@@ -246,7 +246,7 @@
     \begin{minipage}{0.47\linewidth}
         %Venn Diagramm mit \Z und \N
     \end{minipage}
-    \begin{beispiel}\ 
+    \begin{beispiel}\
     	\begin{itemize}
     		\item Die Zahl $-3$ hat negatives Vorzeichen ($-$) und den Betrag $\abs{-3} =3$.
     		\item Die Zahl $12$ hat positives Vorzeichen ($+$) und den Betrag $\abs{12} = 12$.
@@ -391,7 +391,7 @@
     \begin{definition}
         Sei $x\in\R$ eine beliebige reelle Zahl, so ist der Betrag von $x$ definiert als \[\abs{x} = \begin{cases} x &\text{ falls } x\geq0 \\ -x &\text{ falls } x<0. \end{cases}\]
     \end{definition}
-    Wir sehen es gibt überhaupt keinen Unterschied, ausser dass die Zahl nun eine reelle Zahl sein darf. 
+    Wir sehen es gibt überhaupt keinen Unterschied, ausser dass die Zahl nun eine reelle Zahl sein darf.
 
 \subsection{Approximation}
     Da reelle Zahlen teils nicht exakt angegeben werden können, sollten wir ein Symbol einführen, das deutlich macht, dass wir eine Zahl nur näherungsweise angegeben. Zum Beispiel können wir die Nachkommastellen von $\sqrt{2}$ niemals alle aufschreiben, da sie eine unendliche und nicht periodische Dezimalbruchentwicklung besitzt. Wenn wir also mit $n$ die Wurzel von $2$ meinen, dann schreiben wir entweder $n=\sqrt{2}$ für die abstrakte Notation oder $n\approx 1.414$ für den gerundeten Wert.
@@ -411,7 +411,7 @@
             \end{minipage}
             \hfill
             \begin{minipage}{0.37\linewidth}
-                \centering\includegraphics[scale=1]{Algebra/1_menge/images/geschlossen.png}
+                \centering\includegraphics[scale=1]{images/geschlossen.png}
             \end{minipage}
             \item \textbf{offenes} Intervall\newline
             \begin{minipage}{0.60\linewidth}
@@ -420,7 +420,7 @@
             \end{minipage}
             \hfill
             \begin{minipage}{0.37\linewidth}
-                \centering\includegraphics[scale=1]{Algebra/1_menge/images/offen.png}
+                \centering\includegraphics[scale=1]{images/offen.png}
             \end{minipage}
             \item \textbf{halboffenes} Intervall (nach links)\newline
             \begin{minipage}{0.60\linewidth}
@@ -429,7 +429,7 @@
             \end{minipage}
             \hfill
             \begin{minipage}{0.37\linewidth}
-                \centering\includegraphics[scale=1]{Algebra/1_menge/images/halboffenlinks.png}
+                \centering\includegraphics[scale=1]{images/halboffenlinks.png}
             \end{minipage}
             \item \textbf{halboffenes} Intervall (nach rechts)\newline
             \begin{minipage}{0.60\linewidth}
@@ -438,7 +438,7 @@
             \end{minipage}
             \hfill
             \begin{minipage}{0.37\linewidth}
-                \centering\includegraphics[scale=1]{Algebra/1_menge/images/halboffenrechts.png}
+                \centering\includegraphics[scale=1]{images/halboffenrechts.png}
             \end{minipage}
         \end{enumerate}
     \end{definition}
