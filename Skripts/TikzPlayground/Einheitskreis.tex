@@ -1,0 +1,22 @@
+\documentclass{standalone}
+\usepackage{tikz}
+
+\begin{document}
+\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm, 
+        >=latex,   %Voreinstellung für Pfeilspitzen
+        font= \footnotesize, scale=2.8]
+        %Raster zeichnen
+        % \draw [color=gray!50]  [step=5mm] (-1.1,-1.1) grid (1.1,1.1);
+        % Achsen zeichnen
+        \draw[->,thick] (-1.1,0) -- (1.2,0) node[right, below] {\normalsize $x$};
+        \draw[->,thick] (0,-1.1) -- (0,1.2) node[above, left] {\normalsize $y$};
+        % Achsen beschriften
+        \foreach \x in {-1,1} \draw (\x,-.03) -- (\x,.03) node[below=4pt] {$\x$};
+        \foreach \y in {-1,1} \draw (-.03,\y) -- (.03,\y) node[left=4pt] {$\y$};
+        % Besserer Ursprung
+        \draw[color=black] (0pt,-3pt) node[right] {$0$};
+        %Funktionen zeichnen:
+        \clip(-1.1,-1.1) rectangle (1.1,1.1); %Bildbereich
+        \draw circle [radius=1];
+    \end{tikzpicture}
+\end{document}
