@@ -1,0 +1,273 @@
+\documentclass[11pt]{exam}
+\input{../../Header/packages.sty}
+\input{../../Header/styleExam.sty}
+\input{../../Header/headerQuestion.sty}
+\input{../../Header/mathexpressions.sty}
+%=========================================================
+\newcommand{\theme}{Folgen \& Reihen}
+\newcommand{\teacher}{Jonas Guler}
+%=========================================================
+\begin{document}
+\fontsize{14}{14}\selectfont
+\begin{center}
+    \huge\bf\theme
+\end{center}
+
+\begin{questions}
+%=========================================================
+%-------------------TESTFRAGEN
+%=========================================================
+\question[10] %NeueWege
+Zu jeder angefangenen Zahlenfolge gehört eine explizite und rekursive Beschreibung. Ordne einander zu!
+\begin{itemize}
+\begin{multicols}{3}
+    \item[(1)] $1,3,6,10,...$
+    \item[(2)] $100,90,81,72.9,...$
+    \item[(3)] $1,2,4,8,...$
+    \item[(4)] $1,\frac{1}{2},\frac{1}{4},\frac{1}{8},...$
+    \item[(5)] $1,3,7,15,...$
+    \item[(a)] $a_n=2^{n-1}$
+    \item[(b)] $a_n=2^n-1$
+    \item[(c)] $a_n=\frac{1}{2}\cdot n(n+1)$
+    \item[(d)] $a_n=100\cdot0.9^{n-1}$
+    \item[(e)] $a_n=2^{1-n}$
+    \item[(A)] $a_n=0.9\cdot a_{n-1}$
+    \item[(B)] $a_n=a_{n-1}+n$
+    \item[(C)] $a_n=0.5\cdot a_{n-1}$
+    \item[(D)] $a_n=2a_{n-1}$
+    \item[(E)] $a_n=2a_{n-1}+1$
+\end{multicols}
+\end{itemize}
+
+%---------------------------------------------------------
+\question[6] %NeueWege
+Ordne jeder der drei angefangenen Zahlenfolge eine passende explizite und rekursive Beschreibung zu. Begründe!
+\begin{itemize}\begin{multicols}{3}
+    \item[(1)] $1,3,6,10,...$
+    \item[\ ]
+    \item[(2)] $1,2,4,8,...$
+    \item[\ ]
+    \item[(3)] $1,\frac{1}{2},\frac{1}{4},\frac{1}{8},...$
+    \item[(a)] $a_n=2^{n-1}$
+    \item[(b)] $a_n=2^n-1$
+    \item[(c)] $a_n=\frac{1}{2}\cdot n(n+1)$
+    \item[(d)] $a_n=1\*0.9^{n-1}$
+    \item[(e)] $a_n=2^{1-n}$
+    \item[(A)] $a_n=0.9\* a_{n-1}$
+    \item[(B)] $a_n=2a_{n-1}$
+    \item[(C)] $a_n=0.5\* a_{n-1}$
+    \item[(D)] $a_n=a_{n-1}+n$
+    \item[(E)] $a_n=2a_{n-1}+1$
+\end{multicols}\end{itemize}
+
+%---------------------------------------------------------
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+\begin{parts}
+    \part[2] Erkläre einem Laien in zwei Sätzen, wie eine Reihe mit seiner zugehörigen Folge verknüpft ist. Mache dazu ein geeignetes Beispiel.
+    \part[4]  Von einer Folge $(a_n)$ sind das erste Glied und die rekursive Beschreibung gegeben. Schreibe die ersten $5$ Folgenglieder auf und entwickle daraus eine explizite Darstellung für das allgemeine Glied $a_n$ der Folge. \[a_1=1,\:a_{n+1}=a_n+\frac{1}{2^n}\]
+\end{parts}
+
+%---------------------------------------------------------
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+\begin{parts}
+    \part[3] Erkläre einem Laien unter welchen Bedingungen eine unendliche geometrische Reihe konvergiert. Erfinde dazu passende Beispiele.
+    \part[2] Von einer geometrischen Folge sind zwei Folgenglieder bekannt, $a_2=96$ und $a_9=1640.25$. Berechne $q$ und $a_{35}$.
+\end{parts}
+
+%---------------------------------------------------------
+\question[6] %Rhyn bzw. Mir
+Betrachte die Folgen
+\[n\mapsto a_n=\frac{1}{n(n+2)} \quad\text{ und }\quad n\mapsto b_n=b_{n-1}+\frac{2}{(n+1)(n+2)}.\]
+Berechne für beide Folgen die ersten $4$ Partialsummen.
+
+%---------------------------------------------------------
+\question[6]
+Betrachte die Folgen
+\[n\mapsto a_n=(n^2+2n)^{-1} \quad\text{ und }\quad b_1=1, n\mapsto b_n=b_{n-1}+\frac{n^3}{3}.\]
+Berechne für beide Folgen die ersten $4$ Partialsummen.
+
+%---------------------------------------------------------
+\question[6] %DMK Ana S28 A167
+Begründe, ob es sich bei den Folgen um eine arithmetische, geometrische oder weder noch handelt?
+\begin{parts} %e
+    \part $1,2,4,8,15,\ldots$ %e
+    \part $765, 654, 543, 432, 321,\ldots$ %c
+    \part $2, -6, 18, -54, 162, -486,\ldots$ %h
+\end{parts}
+
+
+%---------------------------------------------------------
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+Begründe, ob es sich bei den Folgen um eine arithmetische handelt?
+\begin{parts}
+    \part[2] $-1,+1,-1,+1,-1,\ldots$
+    \part[2] $765, 654, 543, 423, 312,\ldots$
+    \part[2] $22, 26, 30, 34, 38, 42,\ldots$
+\end{parts}
+
+
+%---------------------------------------------------------
+\question[4] %
+Berechne die folgende Summe: \[70+77+84+\ldots+378=\]
+
+
+
+%---------------------------------------------------------
+\question[4]
+Bei einer arithmetischen Folge ist $s_7=21$ und $s_8=25$. Berechne $a_1$ und die Differenz d.
+
+
+%---------------------------------------------------------
+\question[4] %DMK Ana S28 A174
+Eine arithmetische Folge beginnt mit $3$, endet mit $37$ und hat die Summe $400$. Wie viele Glieder hat die Folge?
+
+%---------------------------------------------------------
+\question[4] %DMK Ana S28 A171c
+Berechne aus den gegebenen Informationen einer arithmetischen Folge die gesuchten Grössen.\\
+Gegeben: $a_8=-2$, $a_{24}=12$. Gesucht: $a_1$, $\sum_{k=8}^{12} a_k$ und Index $i\in\N$, sodass $a_i=82$.
+
+
+%---------------------------------------------------------
+\question[4] %DMK Ana S28 A171b
+Berechne aus den gegebenen Informationen einer arithmetischen Folge die gesuchten Grössen.\\
+Gegeben: $a_3=22$, $a_{7}=-2$. Gesucht: $a_1$, $s_{24}$ und der Index $n\in\N$, sodass $a_n=-80$.
+
+%---------------------------------------------------------
+\question[3] %DMK Ana S29 A177a
+Berechne aus den gegebenen Informationen einer geometrischen Folge die gesuchten Grössen.\\
+Gegeben: $b_1=1000$, $b_4=27$. Gesucht: $q$, $s_9$ und Index $i\in\N$, sodass $b_i\leq 0.001$.
+
+%---------------------------------------------------------
+\question[3] % DMK Ana S29 A177d
+Gegeben ist die geometrische Folge mit $a_4=1.6$ und $a_9=51.2$. Berechne den Index $n\in\N$, sodass $s_n=26214.2$.
+
+%---------------------------------------------------------
+\question[4]
+Die Summe der ersten $n$ Glieder einer geometrischen Folge mit Quotient $q=2$ beträgt $315$. Lässt man das erste und letzte Glied weg, so beträgt die Summe der restlichen Glieder noch $150$. Bestimme $n$ und die Glieder der Folge.
+
+%---------------------------------------------------------
+\question[3] %DMK Ana S29 A180
+Von einer geometrischen Folge sind $a_7=\frac{729}{32}$ und $q=\frac{3}{4}$ bekannt. Berechne den Grenzwert $s$ der unendlichen geometrischen Reihe.
+
+%---------------------------------------------------------
+\question[4] % DMK Ana S29 A183a
+Berechne den Grenzwert der folgenden Summe: \[18.9+12.6+8.4+\ldots=\]
+
+%---------------------------------------------------------
+\question[4]
+Begründe die folgende Gleichheit mit Hilfe der Partialsummen einer geometrischen Reihe.
+\[1+2+4+8+\ldots+2^{n-1}=2^n-1\]
+
+
+%---------------------------------------------------------
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+\begin{parts}
+    \part[2] Sabrina zersägt eine Dachlatte von $4$m Länge in zehn Teile. Dabei ist jeder Teil $6$cm länger als der zuvor abgesägte. Es bleibt kein Reststück übrig. Wie lang ist das kürzeste Stück?
+    \part[1] Wie lange ist das längste so entstandene Teil?
+    \part[2] Wie viele Stücke könnte Sabrina aus einer doppelt so langen Dachlatte sägen, wenn sie mit der gleichen Länge startet.\newline
+    \textit{Tipp: Falls a) und b) nicht gelöst wurden, nimm $a_1=20$cm.}
+\end{parts}
+
+
+%---------------------------------------------------------
+\question[5] %DMK Ana S29 A182
+\begin{minipage}{0.6\linewidth}
+    Gegeben ist ein Quadrat mit Seitenlänge 100 cm, in welches weitere Quadrate einbeschrieben sind (siehe Skizze). $Q_1,Q_2,Q_3,\ldots$ ist die Folge der Flächeninhalte der einbeschriebenen Quadrate, deren Seitenlänge eine Geometrische Folge bilden.
+\end{minipage}
+\hfill
+\begin{minipage}{0.35\linewidth}
+    \centering\includegraphics[scale=0.6]{data-analysis/FR_Quadrate.png}
+\end{minipage}
+\begin{parts}
+    \part[2] Berechne die drei Folgenglieder $Q_1$, $Q_2$, $Q_3$ und $Q_4$.
+    \part[2] Bestimme die explizite Beschreibung für die Folge der Flächeninhalte $Q_n$.
+    \part[2] Ab welchem $n\in\N$ ist der Flächeninhalt $Q_n$ kleiner als $10^{-34}$?
+    \part[2] Bestimme die Gesamtfläche der ersten $10$ Quadrate.
+    \part[2] Gegen welchen Wert strebt die Summe der Flächeninhalte aller Quadrate?
+\end{parts}
+
+
+%---------------------------------------------------------
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+In der unten abgebildeten Figurenfolge wird von Figur zu Figur einen Teil der Fläche herausgeschnitten. Das ursprüngliche Quadrat hat Seitenlänge $1$m.
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.5]{data-analysis/FR_sirpinskiQuadrate.png}
+\end{figure}
+\begin{parts}
+    \part[3] Beschreibe die Fläche, die von Figur zu Figur jeweils weggenommen wurde.
+    \part[3] Wie gross ist die übriggebliebene Fläche, wenn der Prozess unendlich fortgeführt wird.
+\end{parts}
+
+%---------------------------------------------------------
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+In der unten abgebildeten Figurenfolge wird von Figur zu Figur einen Teil der Fläche herausgeschnitten. Das ursprüngliche gleichseitige Dreieck hat Seitenlänge $1$m.
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.45]{data-analysis/FR_sirpinskiDreieck_2.png}
+\end{figure}
+\begin{parts}
+    \part[3] Beschreibe die Fläche, die von Figur zu Figur jeweils weggenommen wurde.
+    \part[3] Wie gross ist die übriggebliebene Fläche, wenn der Prozess unendlich fortgeführt wird.
+\end{parts}
+
+%---------------------------------------------------------
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+Ein Ball wird vom Boden aus senkrecht hochgeworfen. Bis zum ersten Aufprall am Boden legt er einen Weg von insgesamt $5$m zurück. Nach jeder Berührung mit den Boden legt er jeweils nur noch $70\%$ des vorherigen Weges bis zur nächsten Berührung zurück.
+\begin{parts}
+    \part[2] Berechne die Summe des zurückgelegten Weges bis zum 20. Aufprall.
+    \part[2] Welchen Weg legt der Ball insgesamt zurück?
+\end{parts}
+
+%---------------------------------------------------------
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+\begin{minipage}{0.6\linewidth}
+    Ein Pendel wird $a_1=20$cm nach rechts aus seiner Ruhelage entfernt und dann losgelassen. Der Betrag der Amplitude\footnotemark{}\:nimmt pro vollständigen Pendel (von rechts $a_1$ nach links $a_2$ und zurück $a_3$) um $81\%$ ab.
+\end{minipage}
+\hfill
+\begin{minipage}{0.37\linewidth}
+    \centering\includegraphics[scale=0.25]{data-analysis/FR_pendel.jpeg}
+\end{minipage}
+\begin{parts}
+        \part[2] Beschreibe die Folge $a_n$, die jede Amplitude als Folgenglied enthält, explizit.
+        \part[1] Berechne die Summe der Amplituden bis zum 20. Ausschlag.
+        \part[2] Welche Summe der Amplituden hat das Pendel bis zum erneuten Stillstand insgesamt zurückgelegt?
+    \end{parts}
+\vspace{5pt}\footnotetext{Die Amplitude ist die Distanz des Pendels vom maximalen Ausschlag zur Ruhelage. In der Skizze mit horizontalen \textcolor{red}{Pfeilen} dargestellt.}
+
+%---------------------------------------------------------
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+\begin{minipage}{0.7\linewidth}
+    Einem Quadrat mit Seitenlänge $1$ wird ein Kreis einbeschrieben, diesem dann ein Quadrat und so weiter (Beachte die Abbildung rechts).
+    \begin{parts}
+        \part[3] Gib die explizite Beschreibung der zugehörigen geometrischen Folge $A_1, A_2, A_3, \ldots$ an.
+        \part[1] Berechne den Grenzwert, wenn unendlich viele solcher Flächen addiert werden.
+    \end{parts}
+\end{minipage}
+\hfill
+\begin{minipage}{0.25\linewidth}
+    \centering\includegraphics[scale=0.4]{data-analysis/FR_kreisquadrat.png}
+\end{minipage}
+
+
+
+\end{questions}
+\end{document}

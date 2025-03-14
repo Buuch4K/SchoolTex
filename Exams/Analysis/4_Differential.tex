@@ -1,0 +1,78 @@
+\documentclass[11pt]{exam}
+\input{../../Header/packages.sty}
+\input{../../Header/styleExam.sty}
+\input{../../Header/headerQuestion.sty}
+\input{../../Header/mathexpressions.sty}
+%=========================================================
+\newcommand{\theme}{Differentialrechnung}
+\newcommand{\teacher}{Jonas Guler}
+%=========================================================
+\begin{document}
+\fontsize{14}{14}\selectfont
+\begin{center}
+    \huge\bf\theme
+\end{center}
+
+\begin{questions}
+%=========================================================
+%-------------------TESTFRAGEN
+%=========================================================
+\question[6] %DMK Ana S112 A377
+Das verbleibende Wasservolumen in einem Schwimmbecken, dessen Abfluss man geöffnet hat, kann näherungsweise durch die Funktion $V$ mit der Gleichung $V(t)=200\cdot(50-t)^2$ beschrieben werden ($t$ in Minuten, $V$ in Litern).
+\begin{parts}
+    \part Berechne $\frac{V(5)-V(0)}{5-0}$. Was ist die Bedeutung dieses Zahlenwertes?
+    \part Berechne $V'(t)$. Was bedeutet diese Ableitung? Erkläre unter anderem, die Bereiche $V'(t)<0$ und $V'(t)>0$.
+    \part Berechne $V'(5)$. Was sagt dieser Wert aus?
+\end{parts}
+
+%---------------------------------------------------------
+\question[4]
+Ein Pilz wird auf einem Nährboden beobachtet. Nach einer Stunde bedeckt er $34\%$ der Petrischale und nach $7$ Stunden bereits $82\%$. Es bezeichne $P(t)$ die  bedeckte Fläche der Petrischale und $t$ die verstrichene Zeit. Welche der folgenden Aussagen trifft sicherlich zu (\textbf{nur eine!})? Begründe deine Antwort.
+\begin{parts}
+    \part Von $t=1$ bis $t=7$ wuchs der Pilz stündlich um exakt $8\%$.
+    \part $P(2)=42\%$
+    \part Von $t=1$ bis $t=7$ wuchs der Pilz durchschnittlich um $8\%$ pro Stunde.
+    \part $P'(0)=8$
+\end{parts}
+
+%---------------------------------------------------------
+\question[4] % Barth3 S166 A9
+Eine Eiche, die im Jahr  $2010$ eine Höhe von $10$ Metern hatte, erreichte im Jahre $2016$ eine Höhe von $11.8$ Metern. Es bezeichne $H(t)$ die Höhe der Eiche in Metern und $t$ die Jahre nach $2010$. Welche der folgenden Aussagen trifft sicherlich zu (\textbf{nur eine!})? Begründe deine Antwort.
+\begin{parts}
+    \part $H(1)=10.3$
+    \part Von $t=0$ bis $t=6$ wuchs die Eiche durchschnittlich um $30$cm pro Jahr.
+    \part Von $t=0$ bis $t=6$ wuchs die Eiche jährlich um exakt $30$cm.
+    \part $H'(0)=0.3$
+\end{parts}
+
+%---------------------------------------------------------
+\question[6]
+Bestimme die Ableitungsfunktion $f'$ für folgende Funktionen.
+\begin{parts}
+    \part $f(x)=3x^4-2x^2+6x$
+    \part $f(x)=\frac{-2}{x^3}+x^3$
+    \part $f(x)=x^2\left(x^2-3x+1\right)$
+\end{parts}
+
+%---------------------------------------------------------
+\question[4]
+Gegeben ist die Funktion $f(x)=\frac{-1}{2}x^2-4x$. Bestimme die Gleichungen der Tangente $t$ und der Normalen $n$ im Punkt $x_0=6$.
+
+%---------------------------------------------------------
+\question[4]
+Für welchen Wert des Parameters $a\in\R$ berührt der Graph der Funktion\\
+$f(x)=\frac{1}{2}x^3+ax^2+32x-48$ an der Stelle $x_0=4$ die x-Achse?
+
+
+%---------------------------------------------------------
+\question[4]
+Unter welchem spitzen Winkel schneiden sich die Graphen der Funktion\\
+$f(x)=\frac{1}{2}x^2$ und $g(x)=\frac{1}{2}x^2-2x+6$.
+
+%---------------------------------------------------------
+\question[4]
+Unter welchem spitzen Winkel schneiden sich die Graphen der Funktion\\
+$f(x)=\frac{2}{x^3}$ und $g(x)=2x^3$.
+
+\end{questions}
+\end{document}

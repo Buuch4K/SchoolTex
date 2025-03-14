@@ -1,0 +1,162 @@
+\documentclass[11pt]{exam}
+\input{Data/headerExam.sty}
+%=========================================================
+\newcommand{\theme}{Geraden \& Ebenen}
+\newcommand{\teacher}{Jonas Guler}
+\newcommand{\class}{4GaLaWa}
+\newcommand{\serie}{Repetitionsprüfung}
+%\newcommand{\date}{\today}
+\newcommand{\duration}{45 Minuten}
+\newcommand{\name}{\bf Name:}
+\newcommand{\grade}{Note:}
+\newcommand{\datum}{06.05.24}
+%=========================================================
+\begin{document}
+\fontsize{14}{14}\selectfont
+%========================================================
+
+%========================================================
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}}l @{\extracolsep{6pt}}l}
+\textbf{\theme} & \textbf{\grade} & {\answerbox}\\
+\textbf{Klasse \class} & & \\
+\textbf{\teacher}  & {\name} &\textbf{\hrulefill}\\[8pt]
+%-------------------
+\end{tabular*}
+%--------------------
+\begin{center}
+\rule[1ex]{\textwidth}{1pt}
+Dauer: \duration \hspace{9cm}Datum: \datum\\
+\vspace{5pt}
+\rule[2ex]{\textwidth}{1pt}
+\end{center}
+%=========================================================
+
+%=========================================================
+\begin{center}
+\textbf{Bewertungstabelle}\\
+\small Wird von der Lehrperson ausgefüllt\\
+\vspace{5pt}
+\addpoints
+\gradetable[h][questions]\\
+\vspace{5pt}
+Der Rechenweg muss \textbf{vollständig und nachvollziehbar} sein.\\
+Lösen Sie die Prüfung mit einen schwarzen oder blauen Kugelschreiber. Resultate in Bleistift, roter oder grüner Farbe werden nicht berücksichtigt.\\
+Als Hilfsmittel sind der grosse Taschenrechner und das Formelbüchlein erlaubt.
+\end{center}
+
+\noindent
+\rule[1ex]{\textwidth}{1pt}
+
+\vspace{10cm}
+\begin{center}
+    %\Huge{Serie \serie}
+\end{center}
+
+\newpage
+\begin{questions}
+%=========================================================
+%-------------------TESTFRAGEN
+%=========================================================
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+\begin{parts}
+    \part[1] Erkläre einem Laien in etwa zwei Sätzen, wie du entscheidest, ob ein Punkt $P$ auf einer Gerade $g$ liegt.
+\end{parts}
+\vspace{5pt}
+\antwort{4}
+\begin{parts}
+    \setcounter{partno}{1}
+    \part[2] Welche der folgenden Geraden passt nicht dazu? Begründe deine Antwort.
+    \[g:\Vec{x}{y}{z}=\Vec{3}{-5}{6}+t\*\Vec{6}{11}{-3},\quad h:\Vec{x}{y}{z}=\Vec{9}{6}{3}+t\*\Vec{-6}{-11}{3}\]
+    \[l:\Vec{x}{y}{z}=\Vec{3}{-5}{6}+t\*\Vec{-24}{-44}{12},\quad m:\Vec{x}{y}{z}=\Vec{9}{6}{3}+t\*\Vec{2}{4}{-1}\]
+\end{parts}
+\vspace{5pt}
+\antwort{11.5}
+
+%---------------------------------------------------------
+\newpage
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+\begin{parts}
+    \part[3] Zeige, dass die beiden Geraden $g$ und $h$ parallel sind.
+        \[g:\Vec{x}{y}{z}=\Vec{2}{2}{2}+s\*\Vec{9}{-3}{6},\quad h:\Vec{x}{y}{z}=\Vec{12}{-\frac{3}{2}}{9}+t\*\Vec{-6}{2}{-4}\]
+\end{parts}
+\vspace{5pt}
+\antwort{10}
+\begin{parts}
+    \setcounter{partno}{1}
+    \part[2] Gib die Parametergleichung der Ebene $E$ an, die die beiden Geraden $g$ und $h$ enthält.
+\end{parts}
+\vspace{5pt}
+\antwort{8}
+
+%---------------------------------------------------------
+\newpage
+\question[4]
+Berechne den Schnittpunkt und den Schnittwinkel der beiden Geraden $g$ und $h$.
+\[g:\Vec{x}{y}{z}=\Vec{1}{-2}{-5}+s\*\Vec{4}{5}{6},\quad h:\Vec{x}{y}{z}=\Vec{-3}{0}{3}+t\*\Vec{3}{2}{1}\]
+\vspace{5pt}
+\antwort{8}
+\question[2]
+Entscheide in der Tabelle unten, ob die Aussagen wahr oder falsch sind. Die Antworten müssen nicht begründet werden.\newline
+\begin{small}
+    Bewertung: Für $0-2$ korrekte Antworten gibt es keine Punkte; $3$ korrekte Antworten einen Punkt und falls alle Antworten korrekt sind, gibt es $2$ Punkte.
+\end{small}
+\begingroup
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|p{12cm}|c|c|}\hline
+         & wahr & falsch \\\hline
+        Der Punkt $P(1,6,-3)$ liegt auf der Ebene $E:5x-y-2z-5=0$. & & \\\hline
+        Falls das Gleichungssystem zur Berechnung eines Durchstosspunktes keine Lösung besitzt, ist die Gerade vollständig in der Ebene enthalten. & & \\\hline
+        Zwei windschiefe Geraden besitzen keine gemeinsamen Punkte. & & \\\hline
+        \begingroup\renewcommand{\arraystretch}{1} Die Gerade $g:\Vec{x}{y}{z}=\Vec{0}{0}{7}+t\*\Vec{-6}{2}{4}$ enthält den Punkt $P(-21,7,21)$.\endgroup & & \\\hline
+    \end{tabular}
+\end{table}
+\endgroup
+
+%---------------------------------------------------------
+\newpage
+\question[2]
+Gib die Koordinatengleichung der Ebene $F$ an, die parallel zur Ebene $E$ liegt und den Punkt $P$ enthält.
+\[E:2x+y-3z-37=0\quad\text{und}\quad P(4,8,7)\]
+\vspace{5pt}
+\antwort{7}
+\vfill
+\question[3]
+Berechne den Durchstosspunkt der Ebene $E$ mit der Gerade $g$.
+\[g:\Vec{x}{y}{z}=\Vec{7}{6}{3}+t\*\Vec{2}{-1}{-2}, \quad E:2x-2y-z+17=0\]
+\vspace{5pt}
+\antwort{7}
+
+%---------------------------------------------------------
+\newpage
+\question[4] %Matura 2020 T2A7
+Gegeben sind die Punkte $A(1,0,1), B(7,-9,4)$ und $C(3,0,-2)$.\newline Bestimme die Punkte auf der Gerade durch $A$ und $B$, die vom Punkt $C$ den Abstand $5$ haben.
+\vspace{5pt}
+\antwort{21.5}
+
+%---------------------------------------------------------
+\newpage
+\noaddpoints
+\question[\totalpoints] %Matura 2022 A14
+\addpoints
+In der Grundebene (xy-Ebene) befinden sich drei Dörfer bei den Koordinaten $A(9,2,0), B(1,8,0)$ und $C(9,12,0)$. Zwei Berggipfel haben die Koordinaten $D(5,4,6)$ und $E(3,6,8)$.\newline
+\begin{minipage}{0.6\linewidth}
+    \begin{parts}
+        \part[2] Zeige durch Rechnung, dass das Dorf $A$ und die beiden Berggipfel $D$ und $E$ nicht auch einer Gerade liegen.
+        \part[3] In welchem Punkt $P$ der Grundebene $ABC$ befinden sich beide Bergspitzen $D$ und $E$ genau hintereinander?
+    \end{parts}
+\end{minipage}
+\hfill
+\begin{minipage}{0.38\linewidth}
+    \centering\includegraphics[scale=0.8]{Vektorgeometrie/data-vektor/dörferberge.png}
+\end{minipage}
+\vspace{5pt}
+\antwort{17.5}
+
+\end{questions}
+\end{document}

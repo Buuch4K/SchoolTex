@@ -1,0 +1,331 @@
+\documentclass[11pt]{exam}
+\input{../../Header/packages.sty}
+\input{../../Header/styleExam.sty}
+\input{../../Header/headerQuestion.sty}
+\input{../../Header/mathexpressions.sty}
+%=========================================================
+\newcommand{\theme}{Wachstum \& Zerfall}
+\newcommand{\teacher}{Jonas Guler}
+%=========================================================
+\begin{document}
+\fontsize{14}{14}\selectfont
+\begin{center}
+    \huge\bf\theme
+\end{center}
+
+\begin{questions}
+%=========================================================
+%-------------------TESTFRAGEN
+%=========================================================
+\question[3]
+Entschiede, ob die folgenden Funktionen eine Exponentialfunktion sind. Begründe deine Antwort.
+\begin{parcols}[3]
+    \part $y=3^{x-1}$
+    \part $y=-3x+1$
+    \part $y=\sqrt{3}^x+\frac{2}{3}$
+    \part $y=0.2^{-x}$
+    \part $y=2\*\left(\frac{1}{2^x}\right)$
+    \part $y=x^3$
+\end{parcols}
+
+%---------------------------------------------------------
+\question[3]
+Entschiede, ob die folgenden Funktionen eine Exponentialfunktion sind. Begründe deine Antwort.
+\begin{parcols}[3]
+    \part $y=3^{x-1}$
+    \part $y=x^3$
+    \part $y=0.2^{-x}$
+    \part $y=2\*\left(\frac{1}{2}\right)^x-2$
+    \part $y=-3x+1$
+    \part $y=\sqrt{3}^x+\frac{2}{3}$
+\end{parcols}
+
+%---------------------------------------------------------
+\question[2]
+Beschreibe in eigenen Worten, unter welcher Bedingung eine Funktion der Form $f(x)=b\*a^x$ wachsend bzw. fallend ist. Veranschauliche deine Aussage anhand zwei geeigneter Beispiele.
+
+%---------------------------------------------------------
+\question[2]
+Skizziere die beiden Funktionen $f(x)=1.3^x$ und $g(x)=\left(\frac{1}{3}\right)^x$
+\begin{figure}[H]
+    \hspace{1cm}
+    \begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=5mm,
+        >=latex,   %Voreinstellung für Pfeilspitzen
+        font=\footnotesize, scale=1]
+        %Raster zeichnen
+        \draw [color=gray!50]  [step=5mm] (-4.3,-1.3) grid (4.3,16.3);
+        % Achsen zeichnen
+        \draw[->,thick] (-4.3,0) -- (4.8,0) node[left, below] {\normalsize $x$};
+        \draw[->,thick] (0,-1.3) -- (0,17.3) node[above, left=4pt] {\normalsize $y$};
+        % Achsen beschriften
+        \foreach \x in {-4,-3,-2,-1,1,2,3,4} \draw (\x,-.2) -- (\x,.2) node[below=4pt] {$\x$};
+        \foreach \y in {2,4,...,16} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+        % Besserer Ursprung
+        \draw[color=black] (0pt,-7pt) node[left] {$0$};
+        %Funktionen zeichnen:
+        \clip(-4.3,-1.3) rectangle (4.3,10.3); %Bildbereich
+        %Beschriftung
+        %\node[forestgreen]  at (3.2,1) {\normalsize$g$};
+    \end{tikzpicture}
+\end{figure}
+
+%---------------------------------------------------------
+\question[2]
+Skizziere die beiden Funktionen $f(x)=1.5^x$ und $g(x)=\left(\frac{2}{3}\right)^x$
+\begin{figure}[H]
+    \hspace{1cm}
+    \begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=5mm,
+        >=latex,   %Voreinstellung für Pfeilspitzen
+        font=\footnotesize, scale=1]
+        %Raster zeichnen
+        \draw [color=gray!50]  [step=5mm] (-4.3,-1.3) grid (4.3,16.3);
+        % Achsen zeichnen
+        \draw[->,thick] (-4.3,0) -- (4.8,0) node[left, below] {\normalsize $x$};
+        \draw[->,thick] (0,-1.3) -- (0,17.3) node[above, left=4pt] {\normalsize $y$};
+        % Achsen beschriften
+        \foreach \x in {-4,-3,-2,-1,1,2,3,4} \draw (\x,-.2) -- (\x,.2) node[below=4pt] {$\x$};
+        \foreach \y in {2,4,...,16} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+        % Besserer Ursprung
+        \draw[color=black] (0pt,-7pt) node[left] {$0$};
+        %Funktionen zeichnen:
+        \clip(-4.3,-1.3) rectangle (4.3,10.3); %Bildbereich
+        %Beschriftung
+        %\node[forestgreen]  at (3.2,1) {\normalsize$g$};
+    \end{tikzpicture}
+\end{figure}
+
+%---------------------------------------------------------
+\question[3]
+Im folgenden sind drei Wertetabellen gegeben. Entscheide für jede Wertetabelle, ob es sich um eine Exponentialfunktion handelt. Wenn ja, gib die Funktionsgleichung an.
+\begin{parcols}[3]
+    \part \
+        \begin{table}[H]
+            \begin{tabular}{|c|c|c|c|c|}\hline
+                $x$ & 1 & 2 & 3 & 4 \\\hline
+                $f(x)$ & 4 & 16 & 64 & 256 \\\hline
+            \end{tabular}
+        \end{table}
+    \part \
+        \begin{table}[H]
+            \begin{tabular}{|c|c|c|c|c|}\hline
+                $x$ & 1 & 2 & 3 & 4 \\\hline
+                $f(x)$ & -6 & 2 & 10 & 10 \\\hline
+            \end{tabular}
+        \end{table}
+    \part\
+        \begin{table}[H]
+            \begin{tabular}{|c|c|c|c|c|}\hline
+                $x$ & 1 & 2 & 3 & 4 \\\hline
+                $f(x)$ & 20 & 5 & $\frac{5}{4}$ & $\frac{5}{16}$ \\\hline
+            \end{tabular}
+        \end{table}
+\end{parcols}
+
+%---------------------------------------------------------
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+Beantworte für die beiden Funktionen $f:y=a\*x$ und $g:y=a^x$ die folgenden Fragen: Wie verändert sich der Funktionswert, ...
+\begin{parts}
+    \part[2] ... wenn man den $x-$Wert um 6 erhöht?
+    \part[2] ... wenn man den $x-$Wert um 4 verkleinert?
+\end{parts}
+
+
+%---------------------------------------------------------
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+Beantworte für die beiden Funktionen $f:y=a\*x$ und $g:y=a^x$ die folgenden Fragen: Wie verändert sich der Funktionswert, ...
+\begin{parts}
+    \part[2] ... wenn man den $x-$Wert um 4 erhöht?
+    \part[2] ... wenn man den $x-$Wert halbiert?
+\end{parts}
+
+%---------------------------------------------------------
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+Betrachte die beiden Funktionen $f:y=a\*x$ und $g:y=a^x$. Wie lautet die Funktionsgleichung, wenn bei jeder Erhöhung von $x$ um $1$ ...
+\begin{parts}
+    \part[2] ... der Funktionswert verdreifacht wird?
+    \part[2] ... der Funktionswert um $20\%$ zunimmt?
+\end{parts}
+
+
+%---------------------------------------------------------
+\question[6]
+Ordne die Graphen den Funktionsgleichungen zu. Begründe deine Antwort.\\
+\begin{minipage}{0.45\linewidth}
+    \centering\includegraphics[scale=3]{data-algebra/expGraph.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\linewidth}
+    \begin{parts}
+    \part $f_1(x)=2\cdot0.5^x$
+    \part $f_2(x)=-3^x$
+    \part $f_3(x)=\left(\frac{2}{3}\right)^x$
+    \part $f_4(x)=\frac{1}{3}\cdot1.5^x$
+    \part $f_5(x)=0.2^x$
+    \part $f_6(x)=2\cdot 2^x$
+\end{parts}
+\end{minipage}
+
+%---------------------------------------------------------
+\question[4]
+Am Eröffnungstag eines Streichelzoos befanden sich $93$ Meerschweinchen in einem Gehege. Ein Jahr später waren es bereits $115$.
+\begin{parts}
+    \part Wie viele Meerschweinchen werden es am Tag des $10-$jährigen Jubiläums sein, wenn wir ein lineares Wachstum annehmen?
+    \part Wie viele Meerschweinchen werden es an diesem Tag sein, wenn wir ein exponentielles Wachstum annehmen?
+\end{parts}
+
+
+%---------------------------------------------------------
+\question[4]
+In einem See verringert sich die Intensität des Lichtes mit jedem Meter Wassertiefe um $40\%$.
+\begin{parts}
+    \part Stelle ein Zerfallsgesetz auf, das die Wassertiefe in Meter der Lichtintensität in Prozent zuordnet.
+    \part In welcher Wassertiefe beträgt die Lichtintensität noch $5\%$ der Intensität über der Wasseroberfläche?
+\end{parts}
+
+%---------------------------------------------------------
+\question[4] %DMK 9-10 A25
+Ein Kapital von $1000.-$ CHF wird bei einer Bank angelegt. Der Zins wird jeweils am Ende der Zinsperiode zu Kapital addiert. Berechne das Kapital nach 10 Jahren, wenn...
+\begin{parts}
+    \part ... das Kapital jährlich zu $1\%$ verzinst wird.
+    \part ... das Kapital monatlich zu $\frac{1}{12}\%$ verzinst wird.
+\end{parts}
+Welche Variante würdest du bevorzugen? Begründe.
+
+%---------------------------------------------------------
+\question[5]
+Von einem neu entdeckten radioaktiven Element namens Heerbruggium zerfallen in $7$ Minuten $10\%$ seines noch vorhandenen Bestandes.
+\begin{parts}
+    \part Berechne seine Halbwertszeit.
+    \part Wie viel Prozent seines noch vorhandenen Bestandes zerfallen in der nächsten Stunde?
+\end{parts}
+
+%---------------------------------------------------------
+\question[6]
+Die Vermehrung von Keimen in Kuhmilch lässt sich durch eine Exponentialfunktion beschreiben. In $1$ cm$^3$ Kuhmilch werden $3$ Stunden nach dem Melken $66'000$ Keime nachgewiesen. $2$ Stunden später sind es bereits $1.1$ Millionen Keime.
+\begin{parts}
+    \part Berechne die Anzahl der Keime $6$ Stunden nach dem Melken.
+    \part In welcher Zeit verdreifacht sich die Anzahl der Keime?
+    \part Um wie viele Prozent wächst die Anzahl der Keime innerhalb einer Stunde?
+\end{parts}
+
+%---------------------------------------------------------
+\question[4] %Ss
+Eine Pilzkultur an einer Kellerwand wird in einem Beobachtungszeitraum von drei Monaten chemisch so behandelt, dass ihre Fläche jede Woche um $11\%$ abnimmt. Zu Beginn des Zeitraums bedeckt sie eine Fläche von $2.4\:m^2$.
+\begin{parts}
+    \part Welche Fläche bedeckt sie am Ende des Beobachtungszeitraums?
+    \part Wie viele Tage muss die Behandlung insgesamt dauern, dass die Pilzkultur höchstens noch eine Fläche von $0.1\:m^2$ bedeckt?
+\end{parts}
+
+%---------------------------------------------------------
+\question[6]
+Die Entwicklung der wöchentlichen Corona-Fallzahlen verlief in gewissen Zeiträumen annähernd exponentiell. Im Jahr $2021$ wurden in der Kalenderwoche $44$ insgesamt $17'203$ und in der Kalenderwoche $45$ insgesamt $24'823$ positive Fälle gemeldet. Unter der Annahme eines exponentiellen Wachstums der positiven Fälle berechne das Folgende:
+\begin{parts}
+    \part Bestimme die prozentuale wöchentliche Zunahme.
+    \part Wie viele Fälle sind in der Kalenderwoche $48$ zu erwarten?
+    \part In welchem Zeitraum (in Tagen) verdoppeln sich die positiven Fälle?
+    \part Wir nehmen an, das exponentielle Wachstum setzt sich ungebremst fort. In welcher Kalenderwoche wäre erstmals mit mehr als $250'000$ Fälle pro Woche zu rechnen?
+\end{parts}
+
+%---------------------------------------------------------
+\question[4] %Ss
+Faltet man ein Stück Papier im DIN Format mehrfach längs der Mittellinie, so liegen erst zwei, dann vier Schichten,... übereinander. Es wird dabei immer kleiner und dicker. Wie oft müsste das Blatt gefaltet werden, um einen Turm, der bis zum Mond reicht, zu erhalten?\\
+(Entfernung zum Mond: $384'000\:km$, Papierdicke: $0.1\:mm$)
+
+%---------------------------------------------------------
+\question[4] %DMK 9-10 A25
+Ein Kapital von $1000.-$ CHF wird bei einer Bank angelegt. Der Zins wird jeweils am Ende der Zinsperiode zu Kapital addiert. Berechne das Kapital nach 10 Jahren, wenn
+\begin{itemize}
+    \item das Kapital jährlich zu $1\%$ verzinst wird.
+    \item das Kapital monatlich zu $\frac{1}{12}\%$ verzinst wird.
+\end{itemize}
+Vergleiche nun die beiden Zinsvarianten. Welche Variante würdest du bevorzugen? Begründe.
+
+%---------------------------------------------------------
+\question[6]
+Vor $10$ Jahren betrug der Holzbestand eines Waldes $7'000$ m$^3$. Ohne Abholzen ist er inzwischen auf $9'880$ m$^3$ angewachsen. Man darf annehmen, dass daas Holzwachstum ein exponentieller Vorgang ist.
+\begin{parts}
+    \part Bestimme die jährliche Wachstumsrate.
+    \part Berechne die Zeitspanne, innerhalb der sich der Holzbestand verdoppelt.
+    \part Der Besitzer plant, in $3$ Jahren $3'000$ m$^3$ Holz zu schlagen. Wann wird dieser Wald den heutigen Holzbestand wieder erreichen.
+\end{parts}
+
+%---------------------------------------------------------
+\question[8] %NeueWege
+\begin{parts}
+    \part Im Jahr $1950$ lebten $2.5$ Milliarden Menschen auf der Erde, $1980$ waren es dann $4.5$ Milliarden. Modelliere das Bevölkerungswachstum und bestimme die Verdoppelungszeit.
+    \part Vergleiche dein Resultat mit den Daten von $2005$ ($6.4$ Milliarden) und $1920$ ($1.8$ Milliarden). Was fällt dir auf?
+    \part $2005$ prognostizierten Experten der Vereinten Nationen bis zum Jahr $2050$ einen Anstieg auf $9.1$ Milliarden. Wie lautet deine Prognose?
+\end{parts}
+
+%---------------------------------------------------------
+\question[6]
+Im Jahr $1945$ lebten $4.2$ Millionen Menschen in der Schweiz, $1967$ waren es dann $6.9$ Millionen.
+\begin{parts}
+    \part Stelle eine Wachstumsfunktion auf, die den Prozess oben beschreibt.
+    \part Bestimme die Verdoppelungszeit.
+    \part Vergleiche das Wachstum aus (a) mit den neuen erhobenen Daten von $2005$ ($7.3$ Millionen) und $1900$ ($3.4$ Millionen). Beschreibe in eigenen Worten, was dir dabei auffällt.
+\end{parts}
+
+%---------------------------------------------------------
+\question[8]
+\begin{parts}
+    \part Im Jahr $1945$ lebten $4.2$ Millionen Menschen in der Schweiz, $1967$ waren es dann $6.9$ Millionen. Modelliere das Bevölkerungswachstum und bestimme die Verdoppelungszeit.
+    \part Vergleiche das Wachstum aus (a) mit den neuen Daten von $2005$ ($7.3$ Millionen) und $1900$ ($3.4$ Millionen). Was fällt dir auf?
+    \part $2005$ prognostizierten Experten des Bundesamtes für Statistik bis zum Jahr $2050$ einen Anstieg auf $9.5$ Millionen. Wie lautet deine Prognose?
+\end{parts}
+
+%---------------------------------------------------------
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+Eine Computeranlage mit Neuwert $2056900.-$ CHF wird nach $6.5$ Jahren für $400000.-$ CHF verkauft.
+\begin{parts}
+    \part[2] Wie viel Prozent beträgt die mittlere jährliche Wertabnahme?
+    \part[3] Nach $20$ Jahren möchten neue Investoren die Anlage wieder auf den neusten Stand bringen. Wie viel Geld müssten investiert werden, um wieder auf den Neuwert zu gelangen?
+\end{parts}
+
+%---------------------------------------------------------
+\question[2]
+Entscheide in der Tabelle unten, ob die Aussagen wahr oder falsch sind. Die Antworten müssen nicht begründet werden.\newline
+\begin{small}
+    Bewertung: Für $0-2$ korrekte Antworten gibt es keine Punkte; $3$ korrekte Antworten einen Punkt und falls alle Antworten korrekt sind, gibt es $2$ Punkte.
+\end{small}
+\begingroup
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|p{12cm}|c|c|}\hline
+         & wahr & falsch \\\hline
+        Wenn eine Grösse jährlich um $7\%$ wächst, dann wächst sie in zwei Jahren um exakt 14\%. & & \\\hline
+        Eine Funktion $f(t)=200\*0.65^t$ beschreibt einen exponentiellen Prozess, bei dem eine Grösse pro Zeiteinheit um $35\%$ abnimmt. & & \\\hline
+        Eine Funktion $f(t)=200\*1.7^t$ beschreibt einen exponentiellen Prozess, bei dem eine Grösse pro Zeiteinheit um $170\%$ zunimmt. & & \\\hline
+        Eine Funktion $f(t)=200\*\left(\frac{1}{\sqrt{2}}\right)^t$ beschreibt einen exponentiellen Prozess, bei dem sich eine Grösse alle zwei Jahre halbiert. & & \\\hline
+        Eine Funktion $f(t)=200\*0.75^t$ beschreibt einen exponentiellen Prozess, bei dem eine Grösse pro Zeiteinheit um $25\%$ abnimmt. & & \\\hline
+        Eine Funktion $f(t)=200\*\left(\frac{1}{\sqrt{2}}\right)^t$ beschreibt einen exponentiellen Prozess, bei dem sich eine Grösse alle zwei Jahre halbiert. & & \\\hline
+        Wenn eine Grösse jährlich um $9\%$ wächst, dann wächst sie in zwei Jahren um exakt $18\%$. & & \\\hline
+        Eine Funktion $f(t)=200\*1.7^t$ beschreibt einen exponentiellen Prozess, bei dem eine Grösse pro Zeiteinheit um $170\%$ zunimmt. & & \\\hline
+        Wenn eine Grösse jährlich um $7\%$ wächst, dann wächst sie in zwei Jahren um exakt 14\%. & & \\\hline
+        Eine Funktion $f(t)=200\*0.65^t$ beschreibt einen exponentiellen Prozess, bei dem eine Grösse pro Zeiteinheit um $35\%$ abnimmt. & & \\\hline
+        Eine Funktion $f(t)=200\*1.7^t$ beschreibt einen exponentiellen Prozess, bei dem eine Grösse pro Zeiteinheit um $170\%$ zunimmt. & & \\\hline
+        Eine Funktion $f(t)=200\*\left(\frac{1}{\sqrt{2}}\right)^t$ beschreibt einen exponentiellen Prozess, bei dem sich eine Grösse alle zwei Jahre halbiert. & & \\\hline
+        Eine Funktion $f(t)=200\*0.55^t$ beschreibt einen exponentiellen Prozess, bei dem eine Grösse pro Zeiteinheit um $55\%$ abnimmt. & & \\\hline
+        Eine Funktion $f(t)=200\*\left(\frac{1}{\sqrt{2}}\right)^t$ beschreibt einen exponentiellen Prozess, bei dem sich eine Grösse alle zwei Jahre halbiert. & & \\\hline
+        Wenn eine Grösse jährlich um $10\%$ abnimmt, dann nimmt sie in zwei Jahren um exakt $19\%$ ab. & & \\\hline
+        Eine Funktion $f(t)=200\*1.3^t$ beschreibt einen exponentiellen Prozess, bei dem eine Grösse pro Zeiteinheit um $30\%$ zunimmt. & & \\\hline
+    \end{tabular}
+\end{table}
+\endgroup
+
+
+
+
+
+
+\end{questions}
+\end{document}

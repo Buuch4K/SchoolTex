@@ -1,0 +1,140 @@
+\documentclass[11pt]{exam}
+\input{../../Header/packages.sty}
+\input{../../Header/styleExam.sty}
+\input{../../Header/headerQuestion.sty}
+\input{../../Header/mathexpressions.sty}
+%=========================================================
+\newcommand{\theme}{Strahlensätze}
+\newcommand{\teacher}{Jonas Guler}
+%=========================================================
+\begin{document}
+\fontsize{14}{14}\selectfont
+\begin{center}
+    \huge\bf\theme
+\end{center}
+
+\begin{questions}
+%=========================================================
+%-------------------TESTFRAGEN
+%=========================================================
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+Formuliere je einen 1. und einen 2. Strahlensatz aus der folgenden Figur (als Formeln).\newline
+\begin{minipage}{0.35\linewidth}
+    \centering\includegraphics[scale=1]{data-geometrie/strahlensatzfigurkomplex.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.6\linewidth}
+    \begin{parts}
+        \part[1] 1. Strahlensatz\vspace{2cm}
+        \part[1] 2. Strahlensatz\vspace{2cm}
+    \end{parts}
+\end{minipage}
+
+%---------------------------------------------------------
+\question[4]
+Bestimme die unbekannten Seiten $a,b,c,d$ in der Figur unten.
+\begin{figure}[H]
+    \centering\includegraphics[scale=0.8]{data-geometrie/strahlensatz2.png}
+\end{figure}
+
+%---------------------------------------------------------
+\question[4]
+Bestimme die unbekannten Seiten $a,b,c,d$ in der Figur unten.
+\begin{figure}[H]
+    \centering\includegraphics[scale=0.8]{data-geometrie/strahlensatz3.png}
+\end{figure}
+
+%---------------------------------------------------------
+\question[5]
+Begründe mit Hilfe der Strahlensätze, ob alle drei, nur zwei oder keine der Geraden $a,b,c$ parallel sind.
+\begin{figure}[H]
+    \centering\includegraphics[width=0.5\linewidth]{data-geometrie/parallelität_wahr.png}
+\end{figure}
+
+%---------------------------------------------------------
+\question[4]
+Begründe mit Hilfe der Strahlensätze, ob alle drei, nur zwei oder keine der Geraden $a,b,c$ parallel sind.
+\begin{figure}[H]
+    \centering\includegraphics[width=0.5\linewidth]{data-geometrie/parallelität_falsch.jpeg}
+\end{figure}
+
+%---------------------------------------------------------
+\question[5]
+Für ein Flugzeug soll ein neuer Hangar gebaut werden. Die Masse des Hangars sind rechts im Querschnitt angegeben. Vom Tor weiss man, dass es $50$m breit ist. Leider ist im Plan die Höhe vergessen gegangen. Berechne sie.
+\begin{figure}[H]
+    \centering\includegraphics[scale=0.1]{data-geometrie/flugzeughangar.png}
+\end{figure}
+
+%---------------------------------------------------------
+\question[4]
+\begin{minipage}{0.55\linewidth}
+    Betrachte die nebenstehende Figur (Skizze!). Entscheide, ob die beiden Dreiecke $\triangle ABC$ und $\triangle ADE$ zueinander ähnlich sind. Begründe deine Antwort.
+\end{minipage}
+\hfill
+\begin{minipage}{0.4\linewidth}
+    \centering\includegraphics[scale=0.8]{data-geometrie/ähnlicheDreiecke.jpg}
+\end{minipage}
+
+%---------------------------------------------------------
+\question[4]
+\begin{minipage}{0.6\linewidth}
+    $ABCD$ und $EBFG$ sind zwei Rechtecke. Entscheide und begründe, welche der vier Dreiecke ähnlich sind.
+\end{minipage}
+\hfill
+\begin{minipage}{0.35\linewidth}
+    \centering\includegraphics[scale=0.8]{data-geometrie/RechteckeMitÄhnlichkein.png}
+\end{minipage}
+
+%---------------------------------------------------------
+\question[5]
+\begin{minipage}{0.65\linewidth}
+    Von der nebenstehenden Figur wissen wir, dass $\overline{BC}$ parallel zu $\overline{DE}$ und $\overline{CD}$ parallel zu $\overline{EF}$ sind. Weiter sind $\overline{AF}=4$ und $\overline{DF}=3$ lang. Wie lang ist die Strecke $\overline{BD}$?
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\linewidth}
+    \centering\includegraphics[scale=0.5]{data-geometrie/doppelterstralelnsatz.png}
+\end{minipage}
+
+%---------------------------------------------------------
+\question[4]
+Gegeben ist ein gleichschenkliges Dreieck $\triangle ABC$ mit Höhe $h_a=36$cm und Basis $a=12$cm. Das einbeschriebene Rechteck $DEFG$ hat einen Umfang von $30$cm. Berechne die Länge und Breite des Rechtecks.
+\begin{figure}[H]
+    \centering\includegraphics[scale=0.8]{data-geometrie/rechteckstrahelnsatz.png}
+\end{figure}
+
+
+%---------------------------------------------------------
+\question[3]
+\begin{minipage}{0.6\linewidth}
+    Die Fläche des kleineren Dreiecks beträgt $36\%$ des grösseren. Berechne $x$.
+\end{minipage}
+\hfill
+\begin{minipage}{0.35\linewidth}
+    \centering\includegraphics[scale=0.4]{data-geometrie/ähnlicheflächen.png}
+\end{minipage}
+\vspace{5pt}
+
+%---------------------------------------------------------
+\question[2]
+Entscheide in der Tabelle unten, ob die Aussagen wahr oder falsch sind. Die Antworten müssen nicht begründet werden.\newline
+\begin{small}
+    Bewertung: Für $0-2$ korrekte Antworten gibt es keine Punkte; $3$ korrekte Antworten einen Punkt und falls alle Antworten korrekt sind, gibt es $2$ Punkte.
+\end{small}
+\begingroup
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|p{12cm}|c|c|}\hline
+         & wahr & falsch \\\hline
+        Zwei Rechtecke, bei denen eine Seite $3$cm lang ist, sind ähnlich. & & \\\hline
+        Zwei Parallelogramme mit dem Seitenverhältnis 3:4 sind ähnlich. & & \\\hline
+        Zwei gleichschenklige Dreiecke sind ähnlich. & & \\\hline
+        Für negative Streckfaktoren sind die beiden Dreiecke nicht ähnlich. & & \\\hline
+    \end{tabular}
+\end{table}
+\endgroup
+
+\end{questions}
+\end{document}
