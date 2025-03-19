@@ -3,8 +3,8 @@
 \input{../Header/styleExam.sty}
 \input{../Header/mathexpressions.sty}
 \input{../Header/headerGZP.sty}
-\printanswers
-%\noprintanswers
+%\printanswers
+\noprintanswers
 
 %=========================================================
 \newcommand{\theme}{Zwischenprüfung 2025}
@@ -27,8 +27,8 @@
 \begingroup
 \renewcommand{\arraystretch}{1.5}
 \begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}}l @{\extracolsep{6pt}}l}\hline
-    \textbf{\theme} & {\bf Lehrpersonen} & Dc, Fh, Gt, Gu, Ss \\\hline
-    \textbf{Mathematik, Teil 1 (ohne TR)} & {\bf Dauer} & {\bf 45 Minuten} \\\hline
+    \textbf{\theme} & {\bf Lehrpersonen:} & Dc, Fh, Gt, Gu, Ss \\\hline
+    \textbf{Mathematik, Teil 1 (ohne TR)} & {\bf Dauer:} & {\bf 45 Minuten} \\\hline
     \textbf{Name:} & {\bf Klasse:} &  \\\hline
     \textbf{Vorname:} &  & \\\hline
 \end{tabular*}
@@ -60,103 +60,209 @@
 %=========================================================
 %-------------------TESTFRAGEN
 %=========================================================
-\noaddpoints
-\question[\totalpoints]
-\addpoints
-\begin{parts}
-\part[6] Bestimmen Sie die Funktionsgleichungen $f(x),g(x),h(x)$ anhand folgender Graphen.
-(Schreiben Sie die Funktionsgleichungen in der Scheitelpunktsform: $f(x)=a(x-u)^2+v$)
-\end{parts}
+\question[3]
+Vereinfache und forme den Term so um, dass im endergebnis keine negativen Exponenten vorhanden sind.
+\[\frac{x\*x^4\left(y^{-2}\*\sqrt{y^{16}}\right)}{x^{-2}\*x^7\*\sqrt{x^4}}\]
 \ifprintanswers
     \begin{solution}
-        \begin{align*}
-            f(x) &= x^2-4 \\
-            g(x) &= \frac{1}{4}(x-2)^2 \\
-            h(x) &= -2(x+1)^2+5
-        \end{align*}
+        tbd
     \end{solution}
 \else
     \vspace{5pt}
-    \antwort{11}
+    \antwort{9}
 \fi
-\begin{parts}
-    \setcounter{partno}{1}
-    \part[1] Notieren Sie $k(x)=\frac{1}{8}(x-4)^2+2$ in der Normalform \\ $k(x)=ax^2+bx+c$.
-\end{parts}
+
+\question[3]
+Entscheide in der Tabelle unten, ob die Gleichungen richtig oder falsch sind. Die Antworten müssen nicht begründet werden.\newline
+\begin{small}
+	Bewertung: Für $0-2$ korrekte Antworten gibt es keine Punkte; $3$ korrekte Antworten $1.5$ Punkt und falls alle Antworten korrekt sind, gibt es $3$ Punkte.
+\end{small}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|p{12cm}|c|c|}\hline
+		& richtig & falsch \\\hline
+		\[\displaystyle\frac{b}{a}+\frac{a}{b}=1\] & & \\\hline
+		\[\displaystyle\frac{1}{\sqrt{x}}+\frac{1}{\sqrt{y}}=\frac{\sqrt{x}+\sqrt{y}}{\sqrt{xy}}\] & & \\\hline
+		\[\displaystyle\left(\frac{a^n}{a^{-n}}\right)\*a^{2n}=a^{4n^2+2n}\] & & \\\hline
+		\[\displaystyle\frac{\frac{x+y}{x}}{\frac{y}{x-y}}=\frac{x^2-2xy-y^2}{xy}\] & & \\\hline
+	\end{tabular}
+\end{table}
 \ifthenelse{\boolean{printanswers}}
 {\begin{solution}
-	\begin{align*}
-		k(x) &= \frac{1}{8}(x-4)^2+2 \\
-		k(x) &= \frac{1}{8}(x^2-8x+16)+2 \\
-		k(x) &= \frac{1}{8}x^2-x+2+2 \\
-		k(x) &= \frac{1}{8}x^2-x+4 \\
-		%g(x) &= \frac{1}{4}x^2-x+1 \\
-		%h(x) &= -2x^2-4x+3
-	\end{align*}
+	tbd
 \end{solution}}
-{\vspace{5pt}\antwort{11}}
+{}
+
+%------------------------------------------------
+\newpage
+\question[3]
+Faktorisiere den Term so weit wie möglich: \[30xy-18y-50xz+30z=\hspace{8cm}\]
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		tbd
+\end{solution}}
+{\antwort{9}}
+
+\question[4]
+Berechne die fehlenden Grössen $w, x, y$ und $z$.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{Geometrie/data-geometrie/GZP25_Teil1Aufg4.png}
+\end{figure}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		tbd
+\end{solution}}
+{}
 
 %------------------------------------------------
 \newpage
 \noaddpoints
 \question[\totalpoints]
 \addpoints
-Gegeben seien die Funktionen \[f(x)=x^2-6x+8 \text{ , } \quad g(x) = x^2-7x+6\]
+\begin{minipage}{0.4\linewidth}
+	\begin{parts}
+		\part[1] Bestimme $\displaystyle\frac{A_2}{A_1}$
+		\part[1] Bestimme $\displaystyle\frac{A_3}{A_1}$
+	\end{parts}
+\end{minipage}
+\hfill
+\begin{minipage}{0.55\linewidth}
+	\centering\includegraphics[scale=0.18]{Geometrie/data-geometrie/GZP25_Teil1Aufg5.png}
+\end{minipage}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		tbd
+\end{solution}}
+{\antwort{9}}
+
+
+\question[3]
+Entscheide in der Tabelle unten, ob die Gleichungen richtig oder falsch sind. Die Antworten müssen nicht begründet werden.\newline
+\begin{small}
+	Bewertung: Für $0-2$ korrekte Antworten gibt es keine Punkte; $3$ korrekte Antworten $1.5$ Punkt und falls alle Antworten korrekt sind, gibt es $3$ Punkte.\newline
+\end{small}
+\begin{minipage}{0.35\linewidth}
+	\centering
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm, 
+		>=latex,   %Voreinstellung für Pfeilspitzen
+		font= \footnotesize, scale=2.4]
+		%Raster zeichnen
+		% \draw [color=gray!50]  [step=5mm] (-1.1,-1.1) grid (1.1,1.1);
+		% Achsen zeichnen
+		\draw[->,thick] (-1.1,0) -- (1.2,0) node[right, below] {\normalsize $x$};
+		\draw[->,thick] (0,-1.1) -- (0,1.2) node[above, left] {\normalsize $y$};
+		% Achsen beschriften
+		\foreach \x in {-1,1} \draw (\x,-.03) -- (\x,.03) node[below=4pt] {$\x$};
+		\foreach \y in {-1,1} \draw (-.03,\y) -- (.03,\y) node[left=4pt] {$\y$};
+		% Besserer Ursprung
+		\draw[color=black] (0pt,-3pt) node[right] {$0$};
+		%Funktionen zeichnen:
+		\clip(-1.1,-1.1) rectangle (1.1,1.1); %Bildbereich
+		\draw circle [radius=1];
+	\end{tikzpicture}
+\end{minipage}
+\hfill
+\begin{minipage}{0.6\linewidth}
+	\begingroup
+	\renewcommand{\arraystretch}{1.5}
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|p{6cm}|c|c|}\hline
+			& richtig & falsch \\\hline
+			$\displaystyle\tan{125^\circ}<0$ & & \\\hline
+			$\displaystyle\sin{\alpha}=\sin{180^\circ-\alpha}$ & & \\\hline
+			$\displaystyle\cos{34'^\circ}=\cos{200^\circ}$ & & \\\hline
+			$\displaystyle\cos{10^\circ}\*\tan{10^\circ}=\sin{10^\circ}$ & & \\\hline
+		\end{tabular}
+	\end{table}
+	\endgroup
+\end{minipage}
+
+
+%------------------------------------------------
+\newpage
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+Berechne die Lösungsmenge der folgenden Gleichungen für $x$.
 \begin{parts}
-\setlength{\columnsep}{30pt}
-\part[2] Skizzieren sie den Graphen der Funktionen $f(x)$ in folgendem \\ Koordinatensystem:
-(Kennzeichnen Sie die berechneten Punkte)
-\ifprintanswers
-\begin{solution}
-	\begin{center}
-		blablabla
-	\end{center}
-\end{solution}
-\else
-    \begin{center}
-     blablabla
-    \end{center}
-\fi
-\part[2] Berechnen Sie die Nullstellen der Funktion $g(x)$ ohne TR.
-\begin{solution}
-    \begin{align*}
-        g(x)&=x^2-7x+6 \\
-        g(x)&=(x-6)(x-1) \\
-        x_1 &= 6 \quad x_2 = 1
-    \end{align*}
-\end{solution}
-\part[2] Berechnen sie den Scheitelpunkt der Funktion $g(x)$ anhand der Nullstellen. (ohne TR)
-\begin{solution}
-Nullstellen bei $x_1=6$ und $x_2=1$ $\implies$ $x$-Wert des Scheitelpunkts bei $3.5$
-\begin{align*}
-    g(3.5)&=(3.5)^2-7\cdot3.5+6 \\
-    &= -6.25
-\end{align*}
-$\implies$ $y$-Wert bei -6.25 $\implies$ Scheitelpunkt $=(3.5,-6.25)$
-\end{solution}
-\part[2] Bringen Sie die Funktion $g(x)$ in Scheitelpunktsform. \\
-($g(x)=a(x-u)^2+v$)
-\begin{solution}
-Scheitelpunkt bei $(3.5,-6.25) \implies$
-\begin{align*}
-    g(x)&=a(x-3.5)^2-6.25 \\
-    0&=a(1-3.5)^2-6.25 \\
-    a(1-3.5)^2&=6.25 \\
-    6.25a&=6.25 \\
-    a&=\frac{6.25}{6.25} \\
-    &= 1
-\end{align*}
-$\implies g(x)=(x-3.5)^2-6.25$
-\end{solution}
+	\part[2] $11-6(x-14)=20-3(2x-25)$
 \end{parts}
-\ifprintanswers\else
-    \vspace{5pt}
-    \antwort{10}
-\fi
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		tbd
+\end{solution}}
+{\vspace{5pt}\antwort{4.5}}
+\begin{parts}
+	\setcounter{partno}{1}
+	\part[2] $(x^2-7x+10)(7x-1)=0$
+\end{parts}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		tbd
+\end{solution}}
+{\vspace{5pt}\antwort{5}}
+\begin{parts}
+	\setcounter{partno}{2}
+	\part[2] $2x^2+3=7x$
+\end{parts}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		tbd
+\end{solution}}
+{\vspace{5pt}\antwort{5}}
+\begin{parts}
+	\setcounter{partno}{3}
+	\part[2] $\displaystyle\frac{x-1}{x+3}-\frac{x-4}{x+5}=\frac{7x+13}{x^2+8x+1}$
+\end{parts}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		tbd
+\end{solution}}
+{\vspace{5pt}\antwort{5}}
+
+
+%------------------------------------------------
+\newpage
+\question[4]
+Löse das Gleichungssystem ohne Diskussion der Sonderfälle.
+\[\systeme{ax+2y=4,x+y=a}\]
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		tbd
+\end{solution}}
+{\antwort{20}}
+
+%------------------------------------------------
+\newpage
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+\begin{minipage}{0.47\linewidth}
+	\begin{parts}
+		\part[2] Gib die Funktionsgleichung der dargestellten Gerade $a$ an.
+		\part[1] Zeichne die Gerade $b:y=2x-1$ ins Koordinatensystem ein.
+	\end{parts}
+\end{minipage}
+\hfill
+\begin{minipage}{0.47\linewidth}
+	\centering\includegraphics[scale=0.6]{Geometrie/data-geometrie/GZP25_Teil1Aufg9.png}
+\end{minipage}
+\begin{parts}
+	\setcounter{partno}{2}
+	\part[2] Bestimme die Gleichung der zu $b$ senkrechten Gerade $c$, die durch den Punkt $P(5,-7)$ geht.
+	\part[2] Bestimme den Schnittpunkt der beiden Geraden $a$ und $b$.
+\end{parts}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		tbd
+\end{solution}}
+{\vspace{5pt}\antwort{17}}
+
 
 \endgradingrange{ersterTeil} % beendet die Unterteilung der Notentabelle
 \end{questions}
-
 
 
 
@@ -176,8 +282,8 @@ $\implies g(x)=(x-3.5)^2-6.25$
 \begingroup
 \renewcommand{\arraystretch}{1.5}
 \begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}}l @{\extracolsep{6pt}}l}\hline
-    \textbf{\theme} & {\bf Lehrpersonen} & Dc, Fh, Gt, Gu, Ss \\\hline
-    \textbf{Mathematik, Teil 2 (mit TR)} & {\bf Dauer} & {\bf 45 Minuten} \\\hline
+    \textbf{\theme} & {\bf Lehrpersonen:} & Dc, Fh, Gt, Gu, Ss \\\hline
+    \textbf{Mathematik, Teil 2 (mit TR)} & {\bf Dauer:} & {\bf 45 Minuten} \\\hline
     \textbf{Name:} & {\bf Klasse:} &  \\\hline
     \textbf{Vorname:} &  & \\\hline
 \end{tabular*}
@@ -188,9 +294,6 @@ $\implies g(x)=(x-3.5)^2-6.25$
     {\small Wird von der Lehrperson ausgefüllt}\\
     \vspace{10pt}
     \addpoints
-    \setlength{\doublerulesep}{0.25in}
-    \setlength{\doublerulesep}{0.25in}
-    \partialgradetable{ersterTeil}[h][questions]\\[0.25in]
     \partialgradetable{zweiterTeil}[h][questions]\\[1cm]
     Der Rechenweg muss \textbf{vollständig und nachvollziehbar} sein. \\
     Unvollständige Lösungswege haben einen Punktabzug zur Folge.\\
@@ -208,116 +311,121 @@ $\implies g(x)=(x-3.5)^2-6.25$
 
 \newpage
 \begin{questions}
-\setcounter{question}{5} % fixiert den counter für fortlaufende Nummerierung
+\setcounter{question}{9} % fixiert den counter für fortlaufende Nummerierung
 \begingradingrange{zweiterTeil} % beginnt die Unterteilung der Notentabelle
 %=========================================================
 %-------------------TESTFRAGEN
 %=========================================================
-\noaddpoints
-\question[\totalpoints]
-\addpoints
-Veränderungen von Funktionsgleichungen:\\
-(Notieren sie bei a),b) jeweils die veränderte Funktionsgleichung
-als $f'(x),g'(x)$)
-\begin{parts}
-\setlength{\columnsep}{30pt}
-\part[2] Verschieben sie $f(x)=3x^2-4$ \\ um 3 Einheiten nach Rechts und um 5 Einheiten nach Oben.
-\begin{solution}
-\begin{align*}
-    f'(x)=3(x-3)^2+1
-\end{align*}
-\end{solution}
-\part[2] Verschieben sie $g(x)=-(x-3)^2+3$ \\ um 4 Einheiten nach Rechts und um 2 Einheiten nach Unten.
-\begin{solution}
-\begin{align*}
-    g'(x)=-(x+1)^2-1
-\end{align*}
-\end{solution}
-%\part Verschieben sie $h(x)=-\frac{1}{2}x^2-4x+3$ um 3 Einheiten nach Links und um 5 Einheiten nach Unten.
-\part[2] Um wieviele Einheiten nach Rechts/Links resp. nach Oben/ Unten wurde verschoben wenn $h(x)$ zu $h'(x)$ wird?
-\begin{center}
-    $h(x)=(x-\frac{1}{2})^2-3 \quad \rightarrow \quad h'(x)=(x+4)^2+9$
-\end{center}
-\begin{solution}
-Um 4.5 Einheiten nach Links und um 12 nach Oben.
-\end{solution}
-\end{parts}
+\question[3]
+Berechne $x$ und $y$.
+\begin{figure}[H]
+	\centering\includegraphics[scale=0.8]{Geometrie/data-geometrie/GZP25_Teil2aufg1.png}
+\end{figure}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		tbd
+\end{solution}}
+{\vspace{5pt}\antwort{8}}
+\vfill
+\question[3]
+\begin{minipage}{0.45\linewidth}
+	In einem rechtwinkligen Dreieck mit der Hypothenuse $c=10$ cm unterscheiden sich die Kathetenquadrate um $20$ cm$^2$.\\ Berechne die Höhe $h_c$.
+\end{minipage}
+\hfill
+\begin{minipage}{0.52\linewidth}
+	\centering\includegraphics[scale=0.2]{Geometrie/data-geometrie/GZP25_Teil2Aufg2.png}
+\end{minipage}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		tbd
+\end{solution}}
+{\vspace{5pt}\antwort{8}}
 
-\ifprintanswers\else
-    \newpage
-    \antwort{24}
-\fi
 
-%-----------------------------------------------------
+%------------------------------------------------
+\newpage
+\question[4]
+Die Katheten eines rechtwinkligen Dreiecks messen $a=3.7$ und $b=2.4$ Berechne die Länge der Winkelhalbierenden des Winkel $\alpha$.
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		tbd
+\end{solution}}
+{\vspace{5pt}\antwort{9}}
+\vfill
+\question[4]
+\begin{minipage}{0.47\linewidth}
+	Berechne die Berghöhe $h$ aus den Angaben $\alpha=42^\circ$ und $\beta=59^\circ$.
+\end{minipage}
+\hfill
+\begin{minipage}{0.47\linewidth}
+	\centering\includegraphics[scale=0.5]{Geometrie/data-geometrie/GZP25_Teil2Aufg4.png}
+\end{minipage}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		tbd
+\end{solution}}
+{\vspace{5pt}\antwort{9}}
+
+
+%------------------------------------------------
 \newpage
 \noaddpoints
 \question[\totalpoints]
 \addpoints
-% skizze und gebe gleichung an...
-Ein Bauer baut auf einer Flachen Wiese ein rechteckiges Gehege für seine Hühner. Er hat Zaun in der länge von $20m$ gekauft und will den ganzen Zaun verbauen (der Umfang des entstehenden Rechtecks soll $20m$ messen). Es gilt:
-\begin{align}
-    2a+2b&=20m  \\
-    \text{Fläche } A&=a\cdot b
-\end{align}
-wenn $a$ und $b$ die Seiten des Rechtecks sind.
 \begin{parts}
-\part[1] Formulieren Sie die Gleichung (1) nach $a$ um ($a=\ldots$).
-\part[1] Setzen Sie das berechnete $a$ in die Gleichung (2) ein ($A=\ldots\quad\cdot b$).
-\part[2] Skizzieren sie die Funktion aus (b) ins folgende Koordinatensystem: \\ (falls Sie (a) und (b) nicht berechnen konnten: Skizzieren Sie $A=-\frac{1}{2}b^2+5b$)
-\ifprintanswers\else
-    \begin{center}
-        blablabla
-    \end{center}
-\fi
-\part[3] Wie sind die Seitenlängen $a$ und $b$ des Rechtecks zu wählen wenn das Gehege $16m^2$ Fläche haben soll?
-\part(1 Bonuspunkt) Bei welchen Seitenlängen $a$ und $b$ is das Gehege maximal gross?
+	\part[3] Bestimme die Gleichung $y=ax^2+bx+c$ einer quadratischen Funktion mit den Nullstellen $x_1=2$ und $x_2=4$ so, dass die Parabel durch den Punkt $P(-1/30)$ geht.
+	\part[1] Gib die Koordinaten des Scheitelpunktes an.
 \end{parts}
-\ifprintanswers\else
-    \newpage
-    \antwort{24}
-\fi
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		tbd
+\end{solution}}
+{\vspace{5pt}\antwort{22}}
 
-%-------------------------------------------------------
+
+%------------------------------------------------
+\newpage
+\question[2]
+\begin{minipage}{0.65\linewidth}
+	In einer geraden, quadratischen Säule misst die Seite des Grundquadrates $1$ m. Die Körperdiagonale $d=\overline{AB}$ ist um $40\%$ kürzer als der kürzeste Weg $k$, auf dem man allein über die Kanten von $A$ nach $B$ gelangen kann.\\ Berechne die Höhe der Säule $h$.
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\linewidth}
+	\centering\includegraphics[scale=0.6]{Geometrie/data-geometrie/GZP25_Teil2Aufg6.png}
+\end{minipage}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		tbd
+\end{solution}}
+{\vspace{5pt}\antwort{21}}
+
+
+%------------------------------------------------
+\newpage
+\question[6]
+Die Parabel mit der Gleichung $y=ax^2+bx+c$ hat den Scheitelpunkt $S(-1/5)$ und schneidet die Gerade $g:y=5x-43$ bei $x=3$. Berechne den zweiten Schnittpunkt der Parabel mit der Geraden.
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		tbd
+\end{solution}}
+{\vspace{5pt}\antwort{23}}
+
+%------------------------------------------------
 \newpage
 \noaddpoints
 \question[\totalpoints]
 \addpoints
-Gegeben seien die folgenden Funktionen:
-\begin{align*}
-    f(x)= 1.75x^2-3x-2 \text{ , } \quad g(x) = -x^2+2.5x-2
-\end{align*}
+Thomas steht gerne früh auf und fährt gerne Velo. Um $06:40$ Uhr startet er jeweils und fährt mit konstanter Geschwindigkeit an die Kanti. Er wohnt $7.5$ km von der Schule entfernt und kommt jeweils um $07:25$ Uhr an. Sein Kollege Franz, der weiter weg wohnt, fährt manchmal mit ihm, aber heute morgen hat er verschlafen. Franz nimmt deshalb das Töffli, mit dem er konstante $40$ km/h fahren kann, und rast um $07:10$ Uhr am Haus von Thomas vorbei.
 \begin{parts}
-\part[1] Berechnen sie die Nullstellen von $f(x)$ und $g(x)$ (TR möglich).
-\part[1] Berechnen sie die Scheitelpunkte von $f(x)$ und $g(x)$ (TR möglich).
-%\part Skizzieren Sie die beiden Graphen $f(x)$ und $g(x)$ ins gleiche Koordinatensystem (\textbf{Achten sie auf korrekte Beschriftung der Achsen})
-\part[4] Berechnen Sie die $x$- und $y$-Koordinaten der Schnittpunkte von $f(x)$ mit $g(x)$.
+	\part[2] Kann Franz Thomas noch einholen?
+	\part[4] Wenn ja, um welche Uhrzeit holt er Thomas ein und wie viele Kilometer sind sie noch von der Schule entfernt?\newline\ \newline Wenn nein, kommt Franz noch rechtzeitig zum Unterricht zur Schule?
 \end{parts}
-\ifprintanswers\else
-    \vspace{5pt}
-    \antwort{18}
-\fi
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		tbd
+\end{solution}}
+{\vspace{5pt}\antwort{18}}
 
-%---------------------------------------------------------
-\newpage
-\noaddpoints
-\question[\totalpoints]
-\addpoints
-Gegeben seien die folgenden Funktionen:
-\begin{align*}
-    f(x)= 2x^2+8x+7 \quad,\quad g(x) = 5x^2+4x+3
-\end{align*}
-\begin{parts}
-\part[\half] Berechnen Sie mittels TR die Nullstellen von $f(x)$.
-\part[2] Berechnen Sie von Hand mittels Lösungsformel (Mitternachtsformel) die Nullstellen von $f(x)$.
-\part[1] Argumentieren Sie in ein bis zwei Sätzen, welcher Vorteil die Berechnung der Nullstellen ohne TR bieten kann.
-\part[1] Weshalb können die Nullstellen von $g(x)$ nicht \\
-berechnet werden ? (Argumentieren Sie in ein bis zwei Sätzen)
-\end{parts}
-
-\ifprintanswers\else
-    \vspace{5pt}
-    \antwort{17}
-\fi
 \endgradingrange{zweiterTeil} % beendet die Unterteilung der Notentabelle
 
 \end{questions}
