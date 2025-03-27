@@ -25,10 +25,10 @@
     Wir steigen mit zwei interessanten Entdeckungsaufgaben ein.
     \begin{aufgabe}
         \begin{enumerate}
-            \item Du stehst auf einem Hügel und schauen auf eine Wiese, auf der Schafe und Zeigen weiden. Nach einer Weile fällt dir auf, dass sich fünfmal so viele Schafe wie Ziegen auf der Wiese befinden. Drücke diesen Sachverhalt als Gleichung aus? Was muss du dabei einführen? Welche Vorteile gibt diese Darstellung im Vergleich zur sprachlichen Fassung?
+            \item Du stehst auf einem Hügel und schaust auf eine Wiese, auf der Schafe und Ziegen weiden. Nach einer Weile fällt dir auf, dass sich fünfmal so viele Schafe wie Ziegen auf der Wiese befinden. Drücke diesen Sachverhalt als Gleichung aus? Was muss du dabei einführen? Welche Vorteile gibt diese Darstellung im Vergleich zur sprachlichen Fassung?
         \end{enumerate}\karos{2.5}
         \begin{enumerate}\setcounter{enumi}{1}
-            \item Du planst eine USA-Reise und liest dazu einen Reiseblog. Unteranderem findest du den Hinweis, dass in den USA die Temperaruten in Grad Fahrenheit angegeben wird und nicht wie bei uns üblich in Grad Celsius. Folglich solltest du wissen, wie das Mass ins andere umgerechnet wird. Dem Blog ist zu entnehmen, dass man, um Fahrenheit in Grad umzurechnen, erst $32$ abziehen und dann den erhaltenen Wert mit $\frac{5}{9}$ multiplizieren muss. Drücke diesen Sachverhalt als Gleichung aus? Was muss du dabei einführen? Welche Vorteile gibt diese Darstellung im Vergleich zur sprachlichen Fassung?
+            \item Du planst eine USA-Reise und liest dazu einen Reiseblog. Unter anderem findest du den Hinweis, dass in den USA die Temperaturen in Grad Fahrenheit angegeben werden und nicht wie bei uns üblich in Grad Celsius. Folglich solltest du wissen, wie das Mass ins andere umgerechnet wird. Dem Blog ist zu entnehmen, dass man, um Fahrenheit in Grad umzurechnen, erst $32$ abziehen und dann den erhaltenen Wert mit $\frac{5}{9}$ multiplizieren muss. Drücke diesen Sachverhalt als Gleichung aus? Was muss du dabei einführen? Welche Vorteile gibt diese Darstellung im Vergleich zur sprachlichen Fassung?
         \end{enumerate}\karos{2.5}
     \end{aufgabe}
     Wir sehen also, dass Gleichungen nicht einfach vom Himmel fallen sondern drücken vielmehr eine Frage zu einem bestimmten Thema aus. Dabei können Gleichungen sehr einfach, wie beispielsweise eine lineare Gleichung
@@ -55,17 +55,130 @@
         \end{enumerate}
     \end{aufgabe}
 \subsection{Typen von Gleichungen}
+	Durch das Gleichsetzen von Termen entstehen also Gleichungen. Aber Gleichungen können sich in ihrer Bedeutung und Behandlung stark unterscheiden. Wir besprechen nun kurz und der Reihe nach die folgenden Typen von Gleichungen: Bestimmungsgleichungen, Identitäten, Axiome, naturwissenschaftliche Gesetze und Definitionsgleichungen.
+	\subsubsection*{Bestimmungsgleichungen}
+		Bestimmungsgleichungen sind Gleichungen mit mindestens einer Unbekannten, üblicherweise mit $x$ bezeichnet. Dabei stellt sich jeweils die Frage, ob die Gleichung durch das Belegen der Unbekannten mit einer Zahl in eine \textbf{wahre} Aussage übergeht.
+		\begin{beispiel}
+			Die Bestimmungsgleichung \[x^2=2\] besitzt zwei Lösungen. Wenn wir nämlich für $x$ entweder $+\sqrt{2}$ oder $-\sqrt{2}$ einsetzen, so ergibt sich die wahre Aussage \[\left(+\sqrt{2}\right)^2=2\quad\text{oder}\quad\left(-\sqrt{2}\right)^2=2.\]
+		\end{beispiel}
+		Bei Bestimmungsgleichungen geht es also überwiegend darum eine Lösung für Unbekannten zu finden. Wir werden uns in Zukunft auch mehrheitlich mit solchen Gleichungen auseinander setzen.
 
+	\subsubsection*{Identitäten}
+		Die Gleichung \[a^2-b^2=(a+b)\*(a-b)\] unterscheidet sich in offensichtlicher Weise von den bisher betrachteten Bestimmungsgleichungen. Dies ist eine sogenannte Identität. Es zeichnet sie aus, dass sie für jede mögliche Belegung von $a$ und $b$ zu einer wahren Aussage wird. Deshalb es ist auch nicht interessant, nach einer der enthaltenen Variablen aufzulösen. Es soll nicht nach einer ganz bestimmten Belegung gesucht werden, sondern es wird ganz allgemein festgestellt, dass die beiden Terme $a^2-b^2$ und $(a+b)\*(a-b)$ generell denselben Wert haben.\newline
+		Eine Identität kann bewiesen werden, indem die eine Seite in die andere umgeformt wird. Unter Verwendung des Distributivgesetzes und des Kommutativgesetzes erhalten wir nämlich:
+		\begin{align*}
+			(a+b)\*(a-b) &= a\*(a-b)+b\*(a-b)\\
+			&= a^2-a\*b+b\*a-b^2\\
+			&= a^2-b^2
+		\end{align*}
+
+	\subsubsection*{Naturwissenschaftliche Gesetze}
+		Naturwissenschaftliche Gesetze haben oftmals die Form von Gleichungen, aber sie sind keine Bestimmungsgleichungen und keine Identitäten. Das folgende Beispiel mögen den Unterschied erhellen.\newline
+		Durch Experimente kann festgestellt werden, dass eine Masse, die sich im freien Fall befindet, in guter Näherung nach $t$ Sekunden Fall die Strecke  $5t^2$ in Metern zurückgelegt hat. Das Gesetz lautet also so: \[s=5t^2.\] Nun ist das keine Bestimmungsgleichung, weil es nicht darum geht, nach einer Variablen aufzulösen, und es ist keine Identität, denn es ist nicht möglich, die eine Seite durch formales Umformen in die andere Seite zu überführen. Es ist vielmehr die Feststellung eines Zusammenhangs zweier Grössen, welcher durch Experimente erhärtet, aber nicht formal bewiesen werden kann.
+
+	\subsubsection*{Definitionsgleichungen}
+		Zum Schluss soll noch eine weitere Art von Gleichungen kurz gestreift werden: die Definitionsgleichung. Angenommen, wir sind in längere Berechnungen verstrickt und stellen fest, dass gehäuft die Zahl \[\frac{1+\sqrt{5}}{2}\approx 1.618\ldots\] vorkommt. Um diesen Term nicht jedes Mal in voller Länge aufschreiben zu müssen, beschliessen wir, den Term durch einen Buchstaben abzukürzen und wir wählen dazu den griechischen Buchstaben $\phi$ (Phi). Von jetzt an soll also immer dieser Buchstabe für die oben erwähnte Zahl stehen. Das nennt man eine Definition; einem neuen Symbol (oder Begriff) wird eine klare Bedeutung zugeordnet. Und dafür verwendet man in der Mathematik nicht das gewöhnliche Gleichheitszeichen, sondern ein Gleichheitszeichen mit vorangestelltem Doppelpunkt: \[\phi:=\frac{1+\sqrt[]{5}}{2}\]
+		Übrigens der Buchstabe, der hier gewählt wird, kann vollkommen selbst bestimmt werden. Es gibt absolut keine Einschränkungen, die hier beachtet werden müssen. Wichtig ist lediglich, dass die Buchstaben nicht vertauscht werden.
+	\begin{aufgabe} % Barth 1 Kap. 3.3 SE A5-8
+		Nimm zu den folgenden Behauptungen Stellung. Haben die Schülerinnen und Schüler recht? Begründe!
+		\begin{enumerate}[label=\alph*)]
+			\item Bob behauptet: \flqq Die Bestimmungsgleichung $x-7=5$ besitzt keine Lösung in der Menge der natürlichen Zahlen.\frqq
+			\item Céline behauptet: \flqq Die Gleichung $(x+1)^2=x^2+2x+3$ besitzt überhaupt keine Lösung.\frqq
+			\item David behauptet: \flqq Der Ausdruck $(a-b)^2=a^2-2ab+b^2$ ist eine Identität.\frqq
+			\item Eliane behauptet: \flqq Das Assoziativgesetz $(a+b)+c=a+(b+c)$ könne sie durchaus beweisen.\frqq Sie wählt die drei Zahlen $1, 2$ und $3$ und rechnet: $(1+2)+3=3+3=6$ und $1+(2+3)=1+5=6$. Da beide Ergebnisse gleich seien, hält Eliane das Gesetz für bewiesen.
+		\end{enumerate}
+	\end{aufgabe}
 
 
 \newpage
 \section{Lösungsmenge}
+	Eine Bestimmungsgleichung kann aus ganz unterschiedlichen Aussagen entstehen und unterschiedliche Zusammenhänge mathematisch beschreiben. In der folgende Aufgabe sind einige Möglichkeiten abgebildet.
+	\begin{aufgabe}
+		Löse die folgenden Aufgaben.
+		\begin{enumerate}[label=\alph*)]
+			\item \flqq Ich denke mir eine Zahl, wenn ich sie verdopple und danach $3$ abziehe, so erhalten ich exakt $13$. Welche Zahl denke ich mir?\frqq\vspace{1cm}
+			\item \flqq Ich denke mir eine Zahl, die verdoppelt genau dasselbe ergibt, wie wenn ich sie quadriere. An welche Zahl denke ich?\frqq\vspace{1cm}
+			\item \flqq Ich denke mir eine Zahl zwischen $1$ und $100$. Wenn ich das Quadrat der Zahl um $17$ erhöhe, erhalte ich $746$. Welche Zahl denke ich mir?\frqq\vspace{1cm}
+			\item \flqq Ich denke mir eine Zahl zwischen $1$ und $10$. Wenn ich das Quadrat der Zahl um $3$ verringere, erhalte ich eine Zahl, die durch $2$ teilbar ist. Welche Zahlen denke ich mir?\frqq\vspace{1cm}
+		\end{enumerate}
+	\end{aufgabe}
+	Alle obigen Bestimmungsgleichungen haben also eine oder mehrere Lösungen. Eine Zahl ist genau dann eine Lösung einer Gleichung, wenn sich die Gleichung durch Einsetzen der Zahl in eine wahre Aussage verwandelt. Üblicherweise werden alle Lösungen in der \textbf{Lösungsmenge} zusammengefasst. Beim Lösen von Gleichungen im Allgemeinen unterscheiden wir folgende $3$ Fälle:
+	\subsubsection*{Fall 1: Die Gleichung lässt sich \textbf{eindeutig} Lösen}
+		\[6x+(1-7x)=9-(5x+5)\]\karos{5.5}
+	\subsubsection*{Fall 2: Die Gleichung besitzt \textbf{keine} Lösung.}
+		\[x\*(2+x)=2\*(2+x)+x^2\]\karos{5.5}
+	\subsubsection*{Fall 3: Die Gleichung besitzt \textbf{unendliche viele} Lösungen.}
+		\[2\*(x+2)+5x-10=2x+4+5\*(x+2)\]\karos{5.5}
+	\begin{aufgabe}
+		\begin{enumerate}[label=\alph*)]
+			\item Finde die Lösungsmenge der folgenden Gleichung. \[x-\left(15-4\*(2x-1)\right)=3\*\left(3\*(x+1)-5\right)\]
+			\item Verändere nun eine einzige Zahl an der obigen Gleichung, sodass sie jetzt unendliche viele Lösungen besitzt.
+		\end{enumerate}
+	\end{aufgabe}
 
-\section{Grundstrategie zur Lösung linearer Gleichungen}
+\newpage
+\section{Lösungsstrategie für lineare Gleichungen}
+	Unser Ziel ist es auf den folgenden Seite eine Strategie zu erarbeiten, mit der sich eine spezielle Gruppe von Bestimmungsgleichungen (sogenannte lineare Gleichungen) lösen lässt. Ihr habt in eurem mathematischen Werkzeugskoffer bereits einige Mittel, um solche Gleichungen zu lösen. Zuerst wollen wir aber die lineare Gleichung korrekt definieren.
+	\begin{definition}[lineare Gleichung]
+		Eine Gleichung in der Variable $x$, die in die Form \[a\*x+b=0\] gebracht werden kann, wobei $a, b\in\R$ gilt, wird als \textbf{lineare Gleichung} bezeichnet.
+	\end{definition}
+	\begin{aufgabe}
+		Entscheide, ob die folgenden Gleichungen linear sind. Begründe deine Antwort.
+		\begin{enumcols}[2]
+			\item $6-(5x-4)=3-(2x-1)$
+			\item $\frac{x-3}{3}-\frac{x-2}{2}=x+1$
+			\item $\frac{x}{6}+\frac{3x}{4}-\frac{2x}{3}-\frac{x}{2}=5$
+			\item $(x-3)(x+3)+9=x^2$
+		\end{enumcols}
+	\end{aufgabe}
+	Du bringst im Lösen von linearen Gleichungen schon einige Erfahrungen mit. Jedoch wollen wir diese noch ein wenig vertiefen und in Zukunft auch Gleichungen mit nicht nur natürlichen Koeffizienten $a,b$ lösen können. Deshalb brauchen wir eine allgemein durchführbare Lösungsstrategie für lineare Gleichungen. In diesem \href{https://www.youtube.com/watch?v=B5PJhPuiKzA&list=PLZDmY1No3ODo_z43GEirwmEYslEo8K27G&index=3&t=0s}{Video}\footnote{\url{https://www.youtube.com/watch?v=B5PJhPuiKzA&list=PLZDmY1No3ODo_z43GEirwmEYslEo8K27G&index=3&t=0s}} wird dir eine entsprechende Lösungsstrategie vorgestellt. Beschreibe die wichtigsten Punkte in der Box unten.
+	\begin{algo}[Lösungsstrategie]
+		\begin{enumerate}
+			\item \gap{14}
+			\item \gap{14}
+			\item \gap{14}
+		\end{enumerate}
+	\end{algo}
+	\begin{aufgabe}
+		\begin{enumerate}
+			\item Bestimme die Lösungen der folgenden linearen Gleichungen.
+			\begin{enumcols}[2]
+				\item $(4x-5)=4\*(x+3)$
+				\item $\frac{1}{6}\*(x-2)+\frac{2}{3}x=\frac{1}{3}\*(\frac{5}{2}x-1)$
+				\item $x\*(x-2)-3x=x^2+5$
+				\item $(8x-1)(x+3)=8\*(x-2)^2$
+				\item $x\sqrt{2}+\sqrt{3}=\sqrt{5}-x\sqrt{2}$
+				\item $4x-5=\sqrt{6}\cdot x+7$
+				\item $(x-4)\sqrt{2}=\sqrt{3}(x-5)$
+				\item $(x+2-\sqrt{2})^2=x^2+\sqrt{2}$
+			\end{enumcols}
+			\item Löse die Aufgaben $121-126$ aus der Aufgabensammlung.
+		\end{enumerate}
+	\end{aufgabe}
 
+\subsection{Lineare Gleichungen mit Parameter}
+	\begin{beispiel}
+		Angenommen wir schleudern einen Gegenstand mit einer Startgeschwindigkeit von $v_0=50\frac{m}{s}$ senkrecht nach oben. Das entspricht etwa der Geschwindigkeit eines Tennisballs beim Aufschlag eines Profis. Durch die Erdanziehung wird die Geschwindigkeit laufend gebremst, und zwar pro Sekunde um exakt $9.81 \frac{m}{s^2}$. Nach wie vielen Sekunden wird die Masse ihren höchsten Punkt erreicht haben, an dem die Geschwindigkeit $0$ ist?\vspace*{17pt}\newline
+		Dieser Zusammenhang kann mit der folgenden linearen Gleichung beschrieben werden: \[\gap{8},\] wobei die Variable $t$ der Zeit in Sekunden entspricht. Die Lösung dieser Gleichung kann sehr einfach berechnet werden.\vspace{5pt}\newline\karos{3.5}
+		Was wäre nun aber, wenn wir die Startgeschwindigkeit verändern und trotzdem herausfinden wollen, wann der Gegenstand am höchsten Punkt angekommen ist? Klar ich könnte nun einfach eine neue Gleichung mit der veränderten Startgeschwindigkeit aufstellen und ebenfalls lösen. Um dieses ständige neu Aufstellen und Lösen zu umgehen, können wir aber auch einen sogenannten Parameter einführen. Wir wählen also einen Buchstaben, der die Startgeschwindigkeit in der Gleichung drin repräsentiert. Zum Beispiel \[\gap{8}\] Die Gleichung ist nach wie vor linear und $t$ die Unbekannte; aber die Gleichung enthält nun einen weiteren Buchstaben, der für eine angegebene Grösse steht. Nun können wir die Gleichung einmal wie gewohnt lösen: \vspace*{5pt}\newline\karos{5.5}
+		Nun sind die Vorteile auf den ersten Blick ersichtlich. Wir kennen die Lösung nun für jede beliebige Startgeschwindigkeit. Das einzige was gewöhnungsbedürftig ist, ist der Umstand, dass keine Zahl als Lösung mehr erscheint sondern die Lösung abhängig von der Wahl der Parameters ist.
+	\end{beispiel}
+	Nachdem wir den Nutzen von Parametern gesehen haben, wollen wir ein weiteres Beispiel besprechen, welches eine zusätzliche Herausforderung beleuchtet.
+	\begin{beispiel}
+		Betrachte die folgende Gleichung mit Parameter. Wir möchten die Gleichung nach der Unbekannten $x$ auflösen:
+		\begin{align*}
+			asöldkfjsa
+		\end{align*}
+	\end{beispiel}
+
+
+\newpage
 \section{Gleichungen der Form \(a\*b=0\)}
 
 \section{Textaufgaben}
+
+\section{Bruchtermgleichungen}
+
 
 
 \newpage
