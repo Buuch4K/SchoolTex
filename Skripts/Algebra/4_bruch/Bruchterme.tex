@@ -1,5 +1,8 @@
 \documentclass[11pt,oneside]{article}
-\input{Header/layout_article.sty}
+\input{../../../Header/packages.sty}
+\input{../../../Header/styleScript.sty}
+\input{../../../Header/headerScript.sty}
+\input{../../../Header/mathexpressions.sty}
 
 \newcommand{\Skriptname}{Potenzen und Wurzeln}
 \newcommand{\Autor}{Jonas Guler (Gu)}
@@ -26,97 +29,6 @@
 
 \section{Division}
 \subsection{Doppelbrüche}
-
-
-\section{Bruchgleichungen}
-\subsection{Definitionsmenge}
-    \vspace{5pt}
-    \begin{aufgabe}
-        Gegeben ist die folgende Gleichung \[\frac{4-x}{3x-1}=\frac{2x+3}{3x-1}.\] Gehört $x=\frac{1}{3}$ zur Lösungsmenge dieser Gleichung? Begründe deine Antwort.
-    \end{aufgabe}
-    Aus dieser Aufgabe können wir also die folgende Definition ableiten.
-    \begin{definition}
-        Die \textbf{Definitionsmenge} einer Gleichung enthält alle Zahlen, die für die Variable $x$ akzeptabel sind, sodass die Gleichung einen sinnvollen mathematischen Ausdruck ergibt.\vspace{5pt}\newline
-        Einschränkungen entstehen beispielsweise durch eine Division durch Null oder eine negative Zahl unter der Wurzel.
-    \end{definition}
-    \begin{beispiel}
-        Bestimme die Definitionsmenge dieser Gleichung. \[\frac{52}{4x+5}-\frac{15}{4x-5}+\frac{39}{16x^2-25}=0\]
-        \vspace{5pt}\karos{5}
-    \end{beispiel}
-    \begin{aufgabe}
-        Gib für die Aufgaben $84-92$ auf Seite $29$ im Algebra $9/10$ die Definitionsmenge an. Du musst die Gleichung noch nicht lösen.
-    \end{aufgabe}
-    \newpage
-\subsection{Bruchgleichung auflösen}
-    \vspace{5pt}
-    \begin{definition}
-        Eine Gleichung heisst \textbf{Bruchtermgleichung}, falls die Lösungsvariable im Nenner vorkommt.
-    \end{definition}
-    \begin{beispiel}
-        \[\frac{3x+5}{2x-8}=\frac{17}{2x-8}\]\vspace{5pt}\karos{4}
-    \end{beispiel}
-    \begin{beispiel}
-         \[\frac{5+x}{5-x}-\frac{5-x}{5+x}=\frac{5x-25}{x^2-25}\]\vspace{5pt}\karos{6}    
-    \end{beispiel}
-    \begin{aufgabe}
-        Löse nun die Gleichungen in Aufgabe $84-92$ auf Seite $29$ im Algebra $9/10$.
-    \end{aufgabe}
-    \newpage
-    \begin{aufgabe}
-        \begin{enumcols}[2]
-            \item $\displaystyle\frac{1}{x-5}+\frac{2x-3}{x}=2$ \item $\displaystyle\frac{3x-7}{x-4}=\frac{x+1}{x-4}$
-        \end{enumcols}
-        \karos{6}
-    \end{aufgabe}
-\newpage
-\subsection{Bruchgleichungen mit Parametern}
-    \begin{beispiel}
-        \[\frac{a}{x}+1=\frac{x}{x-b}\]\vspace{5pt}\karos{22}
-    \end{beispiel}
-
-\newpage
-\subsection{Textaufgaben}
-    In diesem Abschnitt werden Textaufgaben, die eine Bruchtermgleichung im Lösungsweg enthalten, besprochen. Dazu wird zuerst ein Beispiel erläutert.
-    \begin{beispiel} % Bsp Td K4 Leistung  
-        Bruno möchte seinen $40$m langen Zaun von einem Maler frisch streichen lassen. Der Maler $A$ schafft in $3$ Stunden $10$m Zaun, der Maler $B$ streicht in $4$ Stunden ein $13$m langes Zaunstück.
-        \begin{enumerate}[label=\alph*)]
-            \item Welcher Maler soll Bruno wählen, wenn bezüglich Preis und Qualität der Maler keinen Unterschied besteht?\newline
-            Es wird schnell klar, dass die beiden Maler nur auf ihre Geschwindigkeit her verglichen werden sollen. Das heisst, die eigentliche Fragestellung lautet:\newline
-            Wie viel Meter Zaun streichen die beiden Maler je in einer Stunde?
-        \end{enumerate}
-        \vspace{5pt}\karos{8}
-        \begin{enumerate}[label=\alph*)]\setcounter{enumi}{1}
-            \item Der Maler $A$ braucht alleine $12$ Stunden. Wie lange brauchen beide zusammen?
-        \end{enumerate}
-        \vspace{5pt}\karos{7}\newpage
-        \begin{enumerate}[label=\alph*)]\setcounter{enumi}{2}
-            \item Bruno und seine Frau, Margrit, möchten nun noch einen kleineren Zaun selber streichen. Margrit beginnt um $13:00$ Uhr. Jedoch kann Bruno erst ab $16:30$ Uhr mithelfen. Gemeinsam werden sie um $18:30$ fertig. Ohne die Hilfe von Bruno wäre Margrit bis $21:00$ Uhr mit Streichen beschäftigt gewesen. Wie lange braucht Bruno, wenn er den gesamten Zaun alleine streichen würde?
-        \end{enumerate}
-        \begin{table}[ht]
-            \centering
-            \begin{tabular}{|p{4.5cm}|p{4.5cm}|p{4.5cm}|}\hline
-                Taufe\newline & benötigte Zeit, um Zaun alleine zu streichen & Leistung [Zaun/h]\\\hline
-                Margrit\newline & & \\\hline
-                Bruno\newline &  &  \\\hline
-            \end{tabular}
-        \end{table}
-        \vspace{5pt}\karos{6}
-    \end{beispiel}
-    \begin{aufgabe}
-        Ein grosser Bagger benötigt für einen Aushub $12$ Stunden. Würde noch ein kleiner Bagger helfen, so könnte der Aushub in $9$ Stunden gemacht werden. Wie lange hätte der kleine Bagger alleine?
-    \end{aufgabe}
-    \begin{aufgabe}
-        Ein Baugeschäft verfügt über $2$ Bagger. Der grosse Bagger kann einen Aushub doppelt so schnell erledigen wie der kleine Bagger. Der grosse Bagger beginnt mit dem Aushub um $9:00$ Uhr. Von $12:00$ Uhr bis $13:00$ Uhr ist Mittagspause. Danach wird weitergearbeitet. Ab $14:30$ Uhr wird auch der kleine Bagger eingesetzt. So werden sie gemeinsam um $17:00$ Uhr mit dem Aushub fertig.\newline Bis wann hätte der grosse Bagger arbeiten müssen, wenn der kleine Bagger nicht geholfen hätte?
-    \end{aufgabe}
-    \begin{aufgabe}
-        Zum Entladen eines Getreideschiffes benötigen zwei Fördergebläse $4$ Stunden. Das eine Gebläse leistet $75\%$ des stärkeren Gebläses. Wie viele Stunden benötigt jedes Gebläse alleine?
-    \end{aufgabe}
-    \begin{aufgabe}
-        Eine Badewanne wird in $6$ Minuten gefüllt, wenn man den Warm- und Kaltwasserhahn gleichzeitig öffnet. Füllt man die Wanne nur mit warmem Wasser, so dauert es $5$ Minuten länger, als wenn man sie nur mit kaltem Wasser füllt.\newline In welcher Zeit füllt jeder Zufluss allein die Wanne?
-    \end{aufgabe}
-    \begin{aufgabe}
-        Löse die Aufgaben $100-105$ und $107-109$ auf Seite $31$ im Algebra $9/10$.
-    \end{aufgabe}
 
 
 \newpage

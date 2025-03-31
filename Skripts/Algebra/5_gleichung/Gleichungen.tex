@@ -57,10 +57,8 @@
 \subsection{Typen von Gleichungen}
 	Durch das Gleichsetzen von Termen entstehen also Gleichungen. Aber Gleichungen können sich in ihrer Bedeutung und Behandlung stark unterscheiden. Wir besprechen nun kurz und der Reihe nach die folgenden Typen von Gleichungen: Bestimmungsgleichungen, Identitäten, Axiome, naturwissenschaftliche Gesetze und Definitionsgleichungen.
 	\subsubsection*{Bestimmungsgleichungen}
-		Bestimmungsgleichungen sind Gleichungen mit mindestens einer Unbekannten, üblicherweise mit $x$ bezeichnet. Dabei stellt sich jeweils die Frage, ob die Gleichung durch das Belegen der Unbekannten mit einer Zahl in eine \textbf{wahre} Aussage übergeht.
-		\begin{beispiel}
-			Die Bestimmungsgleichung \[x^2=2\] besitzt zwei Lösungen. Wenn wir nämlich für $x$ entweder $+\sqrt{2}$ oder $-\sqrt{2}$ einsetzen, so ergibt sich die wahre Aussage \[\left(+\sqrt{2}\right)^2=2\quad\text{oder}\quad\left(-\sqrt{2}\right)^2=2.\]
-		\end{beispiel}
+		Bestimmungsgleichungen sind Gleichungen mit mindestens einer Unbekannten, üblicherweise mit $x$ bezeichnet. Dabei stellt sich jeweils die Frage, ob die Gleichung durch das Belegen der Unbekannten mit einer Zahl in eine \textbf{wahre} Aussage übergeht.\newline
+		Die Bestimmungsgleichung \[x^2=2\] besitzt zwei Lösungen. Wenn wir nämlich für $x$ entweder $+\sqrt{2}$ oder $-\sqrt{2}$ einsetzen, so ergibt sich die wahre Aussage \[\left(+\sqrt{2}\right)^2=2\quad\text{oder}\quad\left(-\sqrt{2}\right)^2=2.\]
 		Bei Bestimmungsgleichungen geht es also überwiegend darum eine Lösung für Unbekannten zu finden. Wir werden uns in Zukunft auch mehrheitlich mit solchen Gleichungen auseinander setzen.
 
 	\subsubsection*{Identitäten}
@@ -85,13 +83,13 @@
 			\item Bob behauptet: \flqq Die Bestimmungsgleichung $x-7=5$ besitzt keine Lösung in der Menge der natürlichen Zahlen.\frqq
 			\item Céline behauptet: \flqq Die Gleichung $(x+1)^2=x^2+2x+3$ besitzt überhaupt keine Lösung.\frqq
 			\item David behauptet: \flqq Der Ausdruck $(a-b)^2=a^2-2ab+b^2$ ist eine Identität.\frqq
-			\item Eliane behauptet: \flqq Das Assoziativgesetz $(a+b)+c=a+(b+c)$ könne sie durchaus beweisen.\frqq Sie wählt die drei Zahlen $1, 2$ und $3$ und rechnet: $(1+2)+3=3+3=6$ und $1+(2+3)=1+5=6$. Da beide Ergebnisse gleich seien, hält Eliane das Gesetz für bewiesen.
+			\item Eliane behauptet: Das Assoziativgesetz $(a+b)+c=a+(b+c)$ könne sie durchaus beweisen. Sie wählt die drei Zahlen $1, 2$ und $3$ und rechnet: $(1+2)+3=3+3=6$ und $1+(2+3)=1+5=6$. Da beide Ergebnisse gleich seien, hält Eliane das Gesetz für bewiesen.
 		\end{enumerate}
 	\end{aufgabe}
 
 
 \newpage
-\section{Lösungsmenge}
+\section{Lösungsmenge von Gleichungen}
 	Eine Bestimmungsgleichung kann aus ganz unterschiedlichen Aussagen entstehen und unterschiedliche Zusammenhänge mathematisch beschreiben. In der folgende Aufgabe sind einige Möglichkeiten abgebildet.
 	\begin{aufgabe}
 		Löse die folgenden Aufgaben.
@@ -108,7 +106,7 @@
 	\subsubsection*{Fall 2: Die Gleichung besitzt \textbf{keine} Lösung.}
 		\[x\*(2+x)=2\*(2+x)+x^2\]\karos{5.5}
 	\subsubsection*{Fall 3: Die Gleichung besitzt \textbf{unendliche viele} Lösungen.}
-		\[2\*(x+2)+5x-10=2x+4+5\*(x+2)\]\karos{5.5}
+		\[2\*(x+2)+5x-10=2x+4+5\*(x-2)\]\karos{5.5}
 	\begin{aufgabe}
 		\begin{enumerate}[label=\alph*)]
 			\item Finde die Lösungsmenge der folgenden Gleichung. \[x-\left(15-4\*(2x-1)\right)=3\*\left(3\*(x+1)-5\right)\]
@@ -157,8 +155,8 @@
 	\end{aufgabe}
 
 \subsection{Lineare Gleichungen mit Parameter}
-	\begin{beispiel}
-		Angenommen wir schleudern einen Gegenstand mit einer Startgeschwindigkeit von $v_0=50\frac{m}{s}$ senkrecht nach oben. Das entspricht etwa der Geschwindigkeit eines Tennisballs beim Aufschlag eines Profis. Durch die Erdanziehung wird die Geschwindigkeit laufend gebremst, und zwar pro Sekunde um exakt $9.81 \frac{m}{s^2}$. Nach wie vielen Sekunden wird die Masse ihren höchsten Punkt erreicht haben, an dem die Geschwindigkeit $0$ ist?\vspace*{17pt}\newline
+	\begin{beispiel} \ \\
+		Angenommen wir schleudern einen Gegenstand mit einer Startgeschwindigkeit von $v_0=50\:\frac{m}{s}$ senkrecht nach oben. Das entspricht etwa der Geschwindigkeit eines Tennisballs beim Aufschlag eines Profis. Durch die Erdanziehung wird die Geschwindigkeit laufend gebremst, und zwar pro Sekunde um exakt $9.81\:\frac{m}{s^2}$. Nach wie vielen Sekunden wird die Masse ihren höchsten Punkt erreicht haben, an dem die Geschwindigkeit $0$ ist?\vspace*{17pt}\newline
 		Dieser Zusammenhang kann mit der folgenden linearen Gleichung beschrieben werden: \[\gap{8},\] wobei die Variable $t$ der Zeit in Sekunden entspricht. Die Lösung dieser Gleichung kann sehr einfach berechnet werden.\vspace{5pt}\newline\karos{3.5}
 		Was wäre nun aber, wenn wir die Startgeschwindigkeit verändern und trotzdem herausfinden wollen, wann der Gegenstand am höchsten Punkt angekommen ist? Klar ich könnte nun einfach eine neue Gleichung mit der veränderten Startgeschwindigkeit aufstellen und ebenfalls lösen. Um dieses ständige neu Aufstellen und Lösen zu umgehen, können wir aber auch einen sogenannten Parameter einführen. Wir wählen also einen Buchstaben, der die Startgeschwindigkeit in der Gleichung drin repräsentiert. Zum Beispiel \[\gap{8}\] Die Gleichung ist nach wie vor linear und $t$ die Unbekannte; aber die Gleichung enthält nun einen weiteren Buchstaben, der für eine angegebene Grösse steht. Nun können wir die Gleichung einmal wie gewohnt lösen: \vspace*{5pt}\newline\karos{5.5}
 		Nun sind die Vorteile auf den ersten Blick ersichtlich. Wir kennen die Lösung nun für jede beliebige Startgeschwindigkeit. Das einzige was gewöhnungsbedürftig ist, ist der Umstand, dass keine Zahl als Lösung mehr erscheint sondern die Lösung abhängig von der Wahl der Parameters ist.
@@ -167,18 +165,174 @@
 	\begin{beispiel}
 		Betrachte die folgende Gleichung mit Parameter. Wir möchten die Gleichung nach der Unbekannten $x$ auflösen:
 		\begin{align*}
-			asöldkfjsa
+			(x-b)^2 &= (x-a)^2
 		\end{align*}
+		\karos{14.5}
 	\end{beispiel}
-
+	\begin{aufgabe}
+		\begin{enumerate}
+			\item Löse die folgenden Parametergleichungen mit Diskussion der Sonderfälle.
+			\begin{enumcols}[2]
+				\item $ax=60$
+				\item $5x=3-ax$
+				\item $3a(x-5)=2(5-x)$
+				\item $\displaystyle\frac{6x+1}{4a}=4-x$
+				\item $5(x+a)=b\*(x-2)$
+				\item $\displaystyle\frac{7+3x}{2}=\frac{x}{a+1}$
+				\item $(x+1)^2=2(a^2+x)-1$
+				\item $(t+1)x=(t-1)x+5$
+				\item $3(ax-b)=x(2a-1)$
+				\item $x(t+1)^2=4(xt+2)$
+			\end{enumcols}
+			\item Löse die Aufgaben ... aus der Aufgabensammlung, ohne die Sonderfälle zu diskutieren.
+		\end{enumerate}
+	\end{aufgabe}
 
 \newpage
 \section{Gleichungen der Form \(a\*b=0\)}
+	Unter \flqq Gleichungen der Form $a\*b=0$\frqq\: sind beispielsweise folgende Gleichungen einzuordnen:
+	\begin{align*}
+		(3x+12)\*(x-13) &= 0\\
+		34x\*(2x+6) &= 0\\
+		(7x-28)\*x &= 0.
+	\end{align*}
+	Solche Gleichungen lassen sich mit den bekannten Methode ebenfalls lösen. Dabei müssen wir uns aber eine entscheidende Frage über die Faktoren stellen: \flqq Vorausgesetzt das Produkt zweier Zahlen ist gleich $0$, was wissen wir über die einzelnen Faktoren?\frqq\vspace{5pt}\newline\karos{4.5}
+	Das bedeutete also, wir können Gleichungen der Form $a\*b=0$ folgendermassen lösen:
+	\begin{beispiel} \
+		\begin{enumerate}
+			\item $(7x-14)\*(5x-10)\*(2x+3)=0$
+		\end{enumerate}
+		\karos{2}
+		\begin{enumerate}
+			\setcounter{enumi}{1}
+			\item $x^2+2x-24=0$
+		\end{enumerate}
+	\end{beispiel}
+	\karos{3}
+	\begin{aufgabe}
+		Löse die folgenden Gleichungen nach der Unbekannten $x$ auf.\vspace*{5pt}\newline
+		\begin{minipage}{0.3\linewidth}
+			\begin{enumerate}[label=\alph*)]
+				\item $(x-3)(x-4)=0$
+				\item $(x+5)(x-2)=0$
+				\item $(3x+12)(12+8x)=0$
+				\item $(5x-2)(4x+3)=0$
+			\end{enumerate}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.4\linewidth}
+			\begin{enumerate}[label=\alph*)]
+				\setcounter{enumi}{4}
+				\item $x(x-9)(2x+13)(3x-15)=0$
+				\item $(5x+7)(6x-90)(9x+60)=0$
+				\item $(x-7.5)(7.5-x)(4x+10)=0$
+				\item $3x(4+x)(16-5x)(16x+24)=0$
+			\end{enumerate}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.25\linewidth}
+			\begin{enumerate}[label=\alph*)]
+				\setcounter{enumi}{8}
+				\item $x^2-5x+6=0$
+				\item $x^2-9x+20=0$
+				\item $x^2-2x+63=0$
+				\item $x^2-5x+14=0$
+			\end{enumerate}
+		\end{minipage}
+	\end{aufgabe}
 
+
+\newpage
+\section{Bruchgleichungen}
+\subsection{Definitionsmenge}
+	\vspace{5pt}
+	\begin{aufgabe}
+		Gegeben ist die folgende Gleichung \[\frac{4-x}{3x-1}=\frac{2x+3}{3x-1}.\] Gehört $x=\frac{1}{3}$ zur Lösungsmenge dieser Gleichung? Begründe deine Antwort.
+	\end{aufgabe}
+	Aus dieser Aufgabe können wir also die folgende Definition ableiten.
+	\begin{definition}
+		Die \textbf{Definitionsmenge} einer Gleichung enthält alle Zahlen, die für die Variable $x$ akzeptabel sind, sodass die Gleichung einen sinnvollen mathematischen Ausdruck ergibt.\vspace{5pt}\newline
+		Einschränkungen entstehen beispielsweise durch eine Division durch Null oder eine negative Zahl unter der Wurzel.
+	\end{definition}
+	\begin{beispiel}
+		Bestimme die Definitionsmenge dieser Gleichung. \[\frac{52}{4x+5}-\frac{15}{4x-5}+\frac{39}{16x^2-25}=0\]
+		\vspace{5pt}\karos{5}
+	\end{beispiel}
+	\begin{aufgabe}
+		\textcolor{red}{Gib für die Aufgaben $84-92$ auf Seite $29$ im Algebra $9/10$ die Definitionsmenge an. Du musst die Gleichung noch nicht lösen.}
+	\end{aufgabe}
+	\newpage
+	\subsection{Bruchgleichung auflösen}
+	\vspace{5pt}
+	\begin{definition}
+		Eine Gleichung heisst \textbf{Bruchtermgleichung}, falls die Lösungsvariable im Nenner vorkommt.
+	\end{definition}
+	\begin{beispiel}
+		\[\frac{3x+5}{2x-8}=\frac{17}{2x-8}\]\vspace{5pt}\karos{4}
+	\end{beispiel}
+	\begin{beispiel}
+		\[\frac{5+x}{5-x}-\frac{5-x}{5+x}=\frac{5x-25}{x^2-25}\]\vspace{5pt}\karos{6}
+	\end{beispiel}
+	\begin{aufgabe}
+		\textcolor{red}{Löse nun die Gleichungen in Aufgabe $84-92$ auf Seite $29$ im Algebra $9/10$.}
+		\begin{enumcols}[2]
+			\item $\displaystyle\frac{1}{x-5}+\frac{2x-3}{x}=2$
+			\item $\displaystyle\frac{3x-7}{x-4}=\frac{x+1}{x-4}$
+		\end{enumcols}
+	\end{aufgabe}
+\newpage
+\subsection{Bruchgleichungen mit Parametern}
+	\begin{beispiel}
+		\[\frac{a}{x}+1=\frac{x}{x-b}\]\vspace{5pt}\karos{22}
+	\end{beispiel}
+
+\newpage
+\subsection{Textaufgaben}
+	In diesem Abschnitt werden Textaufgaben, die eine Bruchtermgleichung im Lösungsweg enthalten, besprochen. Dazu wird zuerst ein Beispiel erläutert.
+	\begin{beispiel} % Bsp Td K4 Leistung
+		Bruno möchte seinen $40$m langen Zaun von einem Maler frisch streichen lassen. Der Maler $A$ schafft in $3$ Stunden $10$m Zaun, der Maler $B$ streicht in $4$ Stunden ein $13$m langes Zaunstück.
+		\begin{enumerate}[label=\alph*)]
+			\item Welcher Maler soll Bruno wählen, wenn bezüglich Preis und Qualität der Maler keinen Unterschied besteht?\newline
+			Es wird schnell klar, dass die beiden Maler nur auf ihre Geschwindigkeit her verglichen werden sollen. Das heisst, die eigentliche Fragestellung lautet:\newline
+			Wie viel Meter Zaun streichen die beiden Maler je in einer Stunde?
+		\end{enumerate}
+		\vspace{5pt}\karos{8}
+		\begin{enumerate}[label=\alph*)]\setcounter{enumi}{1}
+			\item Der Maler $A$ braucht alleine $12$ Stunden. Wie lange brauchen beide zusammen?
+		\end{enumerate}
+		\vspace{5pt}\karos{7}\newpage
+		\begin{enumerate}[label=\alph*)]\setcounter{enumi}{2}
+			\item Bruno und seine Frau, Margrit, möchten nun noch einen kleineren Zaun selber streichen. Margrit beginnt um $13:00$ Uhr. Jedoch kann Bruno erst ab $16:30$ Uhr mithelfen. Gemeinsam werden sie um $18:30$ fertig. Ohne die Hilfe von Bruno wäre Margrit bis $21:00$ Uhr mit Streichen beschäftigt gewesen. Wie lange braucht Bruno, wenn er den gesamten Zaun alleine streichen würde?
+		\end{enumerate}
+		\begin{table}[ht]
+			\centering
+			\begin{tabular}{|p{4.5cm}|p{4.5cm}|p{4.5cm}|}\hline
+				Taufe\newline & benötigte Zeit, um Zaun alleine zu streichen & Leistung [Zaun/h]\\\hline
+				Margrit\newline & & \\\hline
+				Bruno\newline &  &  \\\hline
+			\end{tabular}
+		\end{table}
+		\vspace{5pt}\karos{6}
+	\end{beispiel}
+	\begin{aufgabe}
+		Ein grosser Bagger benötigt für einen Aushub $12$ Stunden. Würde noch ein kleiner Bagger helfen, so könnte der Aushub in $9$ Stunden gemacht werden. Wie lange hätte der kleine Bagger alleine?
+	\end{aufgabe}
+	\begin{aufgabe}
+		Ein Baugeschäft verfügt über $2$ Bagger. Der grosse Bagger kann einen Aushub doppelt so schnell erledigen wie der kleine Bagger. Der grosse Bagger beginnt mit dem Aushub um $9:00$ Uhr. Von $12:00$ Uhr bis $13:00$ Uhr ist Mittagspause. Danach wird weitergearbeitet. Ab $14:30$ Uhr wird auch der kleine Bagger eingesetzt. So werden sie gemeinsam um $17:00$ Uhr mit dem Aushub fertig.\newline Bis wann hätte der grosse Bagger arbeiten müssen, wenn der kleine Bagger nicht geholfen hätte?
+	\end{aufgabe}
+	\begin{aufgabe}
+		Zum Entladen eines Getreideschiffes benötigen zwei Fördergebläse $4$ Stunden. Das eine Gebläse leistet $75\%$ des stärkeren Gebläses. Wie viele Stunden benötigt jedes Gebläse alleine?
+	\end{aufgabe}
+	\begin{aufgabe}
+		Eine Badewanne wird in $6$ Minuten gefüllt, wenn man den Warm- und Kaltwasserhahn gleichzeitig öffnet. Füllt man die Wanne nur mit warmem Wasser, so dauert es $5$ Minuten länger, als wenn man sie nur mit kaltem Wasser füllt.\newline In welcher Zeit füllt jeder Zufluss allein die Wanne?
+	\end{aufgabe}
+	\begin{aufgabe}
+		\textcolor{red}{Löse die Aufgaben $100-105$ und $107-109$ auf Seite $31$ im Algebra $9/10$.}
+	\end{aufgabe}
+
+
+\newpage
 \section{Textaufgaben}
-
-\section{Bruchtermgleichungen}
-
 
 
 \newpage
