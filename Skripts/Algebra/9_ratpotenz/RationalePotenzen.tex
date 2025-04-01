@@ -1,0 +1,183 @@
+\documentclass[11pt,oneside]{article}
+\input{../../../Header/packages.sty}
+\input{../../../Header/styleScript.sty}
+\input{../../../Header/headerScript.sty}
+\input{../../../Header/mathexpressions.sty}
+
+
+\newcommand{\Skriptname}{Rationale Potenzen}
+\newcommand{\Autor}{Jonas Guler (Gu)}
+\newcommand{\version}{\textit{v}1.0}
+
+\begin{document}   %KSH-Gubser - LATEX/PDF
+\begin{titlepage}
+	\clearpage
+	\title{\Huge\textbf{\Skriptname} \\[1cm]}
+	\author{Autor:\\ \Autor}
+	\date{\normalsize {Version \version}\\ \datelong}
+	\maketitle
+	\thispagestyle{empty}
+	\vfill
+	\tableofcontents
+\end{titlepage}
+\pagenumbering{arabic}
+%############################################################################################
+\section{Potenzen mit negativen Exponenten}
+Im ersten Kanti-Jahr habe wir die folgenden Potenzgesetze kennengelernt.
+\begin{satz}[Potenzgesetze für natürliche Exponenten]
+	Für Potenzen mit reellen Basen $a,b\in\R$ und natürlichen Exponenten $m,n\in\N $ gelten folgende Rechengesetze:
+	\begingroup
+	\renewcommand{\arraystretch}{2}
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{l c}
+			Potenzen mit gleicher Basis & $\displaystyle a^{m}\*a^{n}=a^{m+n}$ \\
+			Potenzen mit gleichem Exponenten & $\displaystyle a^{n}\*b^{n}=(ab)^n$ \\
+			Verschachtelte Potenzen & $\displaystyle(a^{m})^{n}=a^{m\*n}$ \\
+			Potenz eines Bruches mit gleicher Basis & $\displaystyle\frac{a^m}{a^n}=a^{m-n}$ \\
+			Potenz eines Bruches mit gleichem Exponent & $\displaystyle\frac{a^n}{b^n}=\left(\frac{a}{b}\right)^n$ \\
+		\end{tabular}
+	\end{table}
+	\endgroup
+	Es liegt auf der Hand, dass bei 4. $a\neq0$ und bei 5. $b\neq0$ gelten muss.
+\end{satz}
+Wenden wir diese direkt in einer Repetitionsaufgabe an.
+\begin{aufgabe}
+	Bob, Alice und Carol beschäftigen sich mit Potenzen. Sie sind bei den folgenden Aufgaben jedoch nicht einer Meinung, was die Lösungen angehen. Wer ist jeweils korrekt? Begründe anhand der Potenzgesetze.
+	\begin{enumerate}[label=\alph*)]
+		\item$2^7\*2^{10}=$\begin{enumerate}\begin{multicols}{3}
+				\item[Alice: ] $2^{17}$
+				\item[Bob: ] $2^{70}$
+				\item[Carol: ] $4^{70}$
+		\end{multicols}\end{enumerate}
+		\item$3^5\*7^5=$\begin{enumerate}\begin{multicols}{3}
+				\item[Alice: ] $21^{10}$
+				\item[Bob: ] $21^{25}$
+				\item[Carol: ] $21^{5}$
+		\end{multicols}\end{enumerate}
+		\item$\left(3^4\right)^5=$\begin{enumerate}\begin{multicols}{3}
+				\item[Alice: ] $3^{9}$
+				\item[Bob: ] $3^{20}$
+				\item[Carol: ] $3^{\left(4^5\right)}$
+		\end{multicols}\end{enumerate}
+		\item$\frac{12^5}{3^5}=$\begin{enumerate}\begin{multicols}{3}
+				\item[Alice: ] $9^{5}$
+				\item[Bob: ] $\left(\frac{12}{3}\right)^5$
+				\item[Carol: ] $4^5$
+		\end{multicols}\end{enumerate}
+	\end{enumerate}
+	\karos{3}
+\end{aufgabe}
+Beachte, dass im Potenzgesetz 4. gefordert wird, dass $n>m$, weil wir ansonsten einen negativen Exponenten erhalten würden. Genau diesem Problem möchten wir nun auf die Spur begeben und genauer unter die Lupe nehmen. Starten wir mit einem Beispiel: \[2^5\div2^8=\gap{2}.\]
+Was bedeutet aber $2^{-3}$? Was für eine Zahlenwert hat dieser Term?
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.8]{images/ganzzahligeexp.png}
+\end{figure}
+Aus der obigen Graphik lassen sich die folgenden beiden Definitionen ablesen.
+\begin{definition}
+	Sei $a\in\R$ eine beliebige reelle Zahl und $n\in\Z$ eine beliebige ganze Zahl. Dann gilt:
+	\begin{enumerate}[label=\ ]\begin{multicols}{2}
+			\item $a^0=1$ \item $\displaystyle a^{-n}=\frac{1}{a^n}$
+	\end{multicols}\end{enumerate}
+\end{definition}
+Natürlich muss im Punkt 2. die Einschränkung $a\neq0$ ebenfalls gelten, anderenfalls wäre der Bruch natürlich nicht definiert. Selbstverständlich lassen sich alle Potenzgesetze auf ganzzahlige Exponenten erweitern. Um dies aufzuzeigen, möchten wir das erste Gesetz auch für zwei negative negative Exponenten beweisen.\newline
+Wir behaupten $\mathbf{a^n\*a^m=a^{n+m}}$ für eine beliebige reelle Zahl $a$ und zwei negative Exponenten $n$ und $m$.
+\begin{beweis}
+	\karos{4}
+\end{beweis}
+\begin{aufgabe}
+	BlaBlaBla
+\end{aufgabe}
+
+\newpage
+\section{Die n-te Wurzeln}
+
+
+
+\begin{definition}
+	Sei $a\in\R_0^+$ und $n\in\N$. Die \textbf{n-te Wurzel} von $a$ ist diejenige nicht-negative reele Zahl $x$, sodass \[\lineortext{x^n=a}\] gilt. Wir schreiben auch $x=\sqrt{a}$. Der Term unter der Wurzel heisst \textit{Radikand}.
+	Falls $n=2$ gilt, handelt es sich um die bereits bekannte Quadratwurzel, wobei man meistens den Wurzelindex weglässt: \[\sqrt[2]{a}=\sqrt{a}.\]
+\end{definition}
+
+\subsection{Wurzeln als rationale Exponenten}
+
+\subsection{Anwendungen}
+\subsubsection{Lineare Gleichungen mit Wurzelkoeffizienten}
+Als erstes betrachten wir die bereits bekannten linearen Gleichungen, aber wir lassen als Koeffizienten auch Wurzelterme zu. Dass heisst, der Faktor vor der Unbekannten kann eine Wurzel enthalten. Der Lösungsweg geht genau gleich wie ohne Wurzel. Zur Erinnerung fassen wir nochmals zusammen:
+\begin{algo}
+	\begin{enumerate}
+		\item ausmultiplizieren, falls notwendig
+		\item alle Unbekannte auf die eine Seite, der Rest auf die andere Seite
+		\item die Unbekannte ausklammern
+		\item durch die Klammer vor der Unbekannten dividieren
+	\end{enumerate}
+\end{algo}
+Starten wir mit einem Beispiel gemeinsam.
+\begin{beispiel}
+	\[x\sqrt{8}+6=\sqrt{8}-x\]
+	\karos{4}
+\end{beispiel}
+\begin{aufgabe}
+	Löse die linaeren Gleichungen nach $x$ auf.
+	\begin{enumerate}[label=\alph*)]\begin{multicols}{2}
+			\item $x\sqrt{2}+\sqrt{3}=\sqrt{5}-x\sqrt{2}$
+			\item $4x-5=\sqrt{6}\cdot x+7$
+			\item $(x-4)\sqrt{2}=\sqrt{3}(x-5)$
+			\item $(x+2-\sqrt{2})^2=x^2+\sqrt{2}$
+	\end{multicols}\end{enumerate}
+\end{aufgabe}
+\subsubsection{Quadrierte Gleichungen}
+Als erste Anwendung betrachten wir eine neue Form von Gleichungen, die wir allerdings mit einem Trick auf die linearen Gleichungen zurückführen können. Das heisst auch, die Unbekannte ist nie unter der Wurzel anzutreffen.
+\begin{definition}
+	Eine Gleichung heisst quadrierte Gleichung, falls die Unbekannte im Quadrat vorkommt.
+\end{definition}
+Starten wir mit zwei gemeinsamen Beispielen:
+\begin{beispiel}\begin{enumerate}
+		\item \[(x-3)^2=64\]\karos{6}\newpage
+		\item \[(3x-16)^2=(4x-19)^2\]\karos{6}
+\end{enumerate}\end{beispiel}
+\begin{aufgabe}
+	Löse die folgenden Gleichungen. Überlege dir genau welche beiden Fälle du betrachten musst.
+	\begin{enumerate}[label=\alph*)]\begin{multicols}{2}
+			\item $(x-6)^2=(2x-7)^2$
+			\item $(2x+3)^2-9\*(6x-7)^2=16\*(6x-7)^2$
+			\item $9x^4=(5x^2-2)^2$
+			\item $(x^2+x-14)^2=(x^2-x+6)^2$
+	\end{multicols}\end{enumerate}
+\end{aufgabe}
+\subsubsection{Wurzelgleichungen}
+Als zweites betrachten wir sogenannte Wurzelgleichungen. Diese zeichnen sich aus, dass die Unbekannte unter der Wurzel zu finden ist. Um die Gleichung lösen zu können, müssen wir es schaffen, die Unbekannte aus der Wurzel herausnehmen zu können.
+\begin{beispiel}
+	\[x+1=\sqrt{2x+5}\]\karos{4}
+\end{beispiel}
+\textbf{Wichtig: } Durch das \lineortext{quadrieren} einer Gleichung können zusätzliche falsche Lösungen entstehen. Deshalb ist eine Überprüfung der Lösungen unerlässlich.\newline
+\karos{2}
+\begin{aufgabe}
+	Löse die folgenden Gleichung nach $x$ auf und überprüfe sie hinsichtlich möglicher Scheinlösungen.
+	\begin{enumerate}[label=\alph*)]\begin{multicols}{2}
+			\item $\sqrt{x+5}=\sqrt{4-x}$
+			\item $\sqrt{x(x-4)}=2\sqrt{1-x}$
+			\item $\sqrt{3x^2-50}=-x$
+			\item $\sqrt{x}+\sqrt{x+4}=4$
+			\item $\sqrt{6-x}+\sqrt{2x+1}=\sqrt{x+7}$
+			\item $\sqrt{x-2}+\sqrt{x-11}=\sqrt{x+13}$
+	\end{multicols}\end{enumerate}
+\end{aufgabe}
+
+\newpage
+\subsection*{History}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|p{13mm}|p{20mm}|p{30mm}|p{70mm}|}\hline
+		%\multicolumn{4}{|l|}{History}\\\hline
+		Version & Datum & Person & Bemerkung \\\hline
+		$0.1$ & 16.12.2023 & Jonas Guler & Kapitel erstellt \\\hline
+		$0.2$ & 02.10.2024 & Jonas Guler & Definition auf n-te Wurzel verallgemeinert \\\hline
+		$0.3$ & ToDo & Jonas Guler & Aufgaben hinzufügen und Rationale Exponenten \\\hline
+	\end{tabular}
+\end{table}
+
+
+
+\end{document}
