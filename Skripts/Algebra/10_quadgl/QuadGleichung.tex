@@ -1,0 +1,383 @@
+\documentclass[11pt,oneside]{article}
+\input{../../../Header/packages.sty}
+\input{../../../Header/styleScript.sty}
+\input{../../../Header/headerScript.sty}
+\input{../../../Header/mathexpressions.sty}
+
+
+\newcommand{\Skriptname}{Quadratische Gleichung}
+\newcommand{\Autor}{Jonas Guler (Gu)}
+\newcommand{\version}{\textit{v}1.0}
+
+\begin{document}   %KSH-Gubser - LATEX/PDF
+\begin{titlepage}
+	\clearpage
+	\title{\Huge\textbf{\Skriptname} \\[1cm]}
+	\author{Autor:\\ \Autor}
+	\date{\normalsize {Version \version}\\ \datelong}
+	\maketitle
+	\thispagestyle{empty}
+	\vfill
+	\tableofcontents
+\end{titlepage}
+\pagenumbering{arabic}
+%############################################################################################
+\subsection*{Worum geht es?}
+	In diesem Kapitel lernst du eine neue Sorte von Gleichungen kennen: die \textit{quadratischen Gleichungen}.
+	Stell dir vor, du stehst auf einer 25 Meter hohen Brücke und wirfst einen Stein in den Fluss. Wie lange dauert es, bis er unten ankommt. Aus der Physik ist dir unter Umständen schon das Fallgesetz bekannt. Es besagt, dass sich die Geschwindigkeit des fallenden Körpers nach folgendem Gesetz verhält:
+	\begin{align*}
+		v(t)=g\cdot t
+	\end{align*}
+	wobei $g$ eine Konstante ist. Der zurückgelegte Weg nach Zeit t ist:
+	\begin{align*}
+		s(t)=\frac{1}{2}\cdot g\cdot t^2
+	\end{align*}
+	Wir interessieren uns an dieser Stelle nicht so sehr für die physikalischen Details. Wir nähern die Konstante der Erdbeschleunigung $g$ mit 10 an und erhalten so die Gleichung für den 25 Meter frei gefallenen Stein:
+	\begin{align*}
+		25=5\cdot t^2
+	\end{align*}
+	Wollen wir also wissen, wie viel Zeit verstrichen ist, so müssen wir die Gleichung nach $t$ auflösen.
+	Diese Gleichung ist \emph{nicht linear}. Die Unbekannte $t$ kommt als Quadrat vor. Aus diesem Grund nennt man diese Gleichungen \textbf{quadratisch}.
+\subsection*{Was lernst du in diesem Kapitel?}
+	Quadratische Gleichungen können auch einiges komplizierter sein. Zum Beispiel:
+	\begin{align*}
+		5\cdot (x-7)=2\cdot x^2 -x +1
+	\end{align*}
+	Nach diesem Kapitel wirst du mühelos in der Lage sein, solch eine Gleichung aufzulösen. Wir werden sogar eine Lösungsformel entwickeln, womit die Lösungen fast schon automatisch berechnet werden können.
+\subsection*{Wieso lernst du das?}
+	In vielen Anwendungen (u.a. Physik, Wirtschaft, Informatik...) der Mathematik müssen Gleichungen und Gleichungssysteme gelöst werden. Dies können lineare, häufig aber auch nichtlineare Gleichungen sein. Lineare Gleichungen hast du schon kennengelernt.  Alle anderen sind dir noch fremd, deshalb betrachten wir an dieser Stelle ein erstes Beispiel einer Sorte nichtlinearer Gleichungen.
+
+\newpage
+\section{Einführung}
+	Eine lineare Gleichung kann immer in die Form \[ax+b=0 \qquad\vert\:a,b\in\R\] gebracht werden. Entscheidend dabei ist, dass die Unbekannte $x$ nur als Faktor eines Parameters auftaucht. Wir wissen bereits wie solche Gleichungen gelöst werden können. In diesem Abschnitt lernen wir eine weitere Familie von Gleichungen kennen.
+	\begin{aufgabe}
+		Verlängert man bei einem Quadrat die eine Seite um $5$cm und kürzt die zweite um $3$cm, so hat das resultierende Rechteck einen Flächeninhalt von $120$cm$^2$. Stelle eine Gleichung für die Seitenlänge $s$ des Quadrats auf und löse sie mithilfe des Taschenrechners. Überprüfe anschliessend die Lösungen durch Einsetzen.\vspace{5pt}\newline
+		\karos{4}
+	\end{aufgabe}
+	\begin{aufgabe}
+		\label{aufg:fallenderStein}
+		Du stehst auf einer Brücke über einer Schlucht, die gemäss Infotafel $150$m unter dir verläuft. Aus Neugier lässt du einen Stein von der Brücke in die Schlucht fallen und lauschst dem dumpfen Geräusch, wenn er unten aufschlägt. Wie lange war der Stein unterwegs?\newline
+		\textit{Tipp: Aus dem Unterricht erinnerst du dich, gehört zu haben, dass ein Objekt nach $t$ Sekunden etwa $5t^2$ Meter weit gefallen sein wird.}
+		\begin{enumerate}[label=\alph*)]
+			\item Stelle aus der Beschreibung oben eine Gleichung auf und löse sie nach $t$ auf.
+			\item Um was für eine Art von Gleichung handelt es sich?
+		\end{enumerate}
+		\karos{5}
+	\end{aufgabe}
+	Wir sehen die Form der Gleichung in den obigen beiden Beispielen entspricht nicht mehr der einer linearen. Durch vergleichen der beiden Gleichungen stellen wir aber fest, dass in beiden die Unbekannte $s$ bzw. $t$ mit dem Exponent $2$ darin vorkommen. Das heisst, die Unbekannte tritt in den Gleichungen im Quadrat auf. Aus diesem Grund spricht man in dem Fall auch von quadratischen Gleichungen.
+	\begin{definition}
+		Eine Quadratische Gleichung ist eine Gleichung, die man auf die Form \[ax^2+bx+c=0\qquad\vert\:a,b,c\in\R,a\neq0\] bringen kann. Die Parameter $a, b$ und $c$ nennen wir Koeffizienten der Gleichung und $x$ ist die Unbekannte/Variablel.
+	\end{definition}
+	\begin{aufgabe}
+		Entscheide, ob die folgenden Gleichungen quadratisch sind. Begründe deine Antwort.
+		\begin{enumcols}[3]
+			\item $2x^4-x^2-28=0$
+			\item $2x^2=5x$
+			\item $x^2-4x-21=0$
+			\item $(x-2)(x-1)=0$
+			\item $16x^2+25x=-10$
+			\item $x^2+2ux+4=0$
+		\end{enumcols}
+	\end{aufgabe}
+	\newpage
+
+\section{Erste Lösungsansätze}
+	Wir möchten in der Folge also Lösungsansätze suchen, mit denen wir auch in der Lage sind, quadratische Gleichungen zu lösen. Dazu brauchen wir unter anderem wieder die binomischen Formeln.
+	\begin{framed}
+		Zur Erinnerung hier nochmals die binomische Formeln:
+		\begin{align*}
+			\left(a+b\right)^2&=a^2+2ab+b^2\\
+			\left(a-b\right)^2&=a^2-2ab+b^2\\
+			\left(a+b\right)\*\left(a-b\right)&=a^2-b^2
+		\end{align*}
+	\end{framed}
+
+\subsection{Zwei Lösungen}
+	Betrachten wir nochmals die Gleichung aus der Einstiegsaufgabe mit dem fallenden Stein \ref{aufg:fallenderStein}.
+	\[5\*t^2=150\]
+	Wir haben als Lösung $\sqrt{30}$ erhalten. Wie wir allerdings bereits beim Wurzel ziehen gesehen haben, erhalten wir für eine Gleichung dieser Form zwei Lösungen; nämlich erfüllt auch $-\sqrt{30}$ die Gleichung, da\[5\*\left(-\sqrt{30}\right)\left(-\sqrt{30}\right)=5\*30.\]
+	\begin{satz}
+		Eine quadratische Gleichung kann \textbf{zwei Lösungen} haben.
+	\end{satz}
+	In der vorliegenden Aufgabe, in der die Zeit als Unbekannte fungiert, fällt die negative Lösung ausser Betracht, denn die Zeit verläuft ja nicht rückwärts. Trotzdem wollen wir immer alle möglichen Lösungen angeben. Denn häufig ist nicht klar, welche Lösung interessant ist, und es gibt auch Fälle, wo beide Lösungen relevant sind.
+	\begin{aufgabe}
+		Versuche die folgenden Gleichungen zu lösen:
+		\begin{enumerate}[label=\alph*)]\begin{multicols}{2}
+				\item $x^2+5=13$
+				\item $\frac{1}{3}z^2+\sqrt{3}=\sqrt{3}$
+				\item $s^2+16=0$
+				\item $(x+2)^2=4$
+				\item  $(t-3)^2=9$
+				\item  $(2r-1)^2=81$
+		\end{multicols}\end{enumerate}
+	\end{aufgabe}
+
+\subsection{Lösen durch Faktorisieren}
+	Wir betrachten eine weitere quadratische Gleichung, nämlich:
+	\begin{equation*}
+		(x+1)(x-2)=0
+	\end{equation*}
+	Begründe, warum diese Gleichung quadratisch ist.\vspace{5pt}\newline\karos{4}
+	Betrachten wir aber nochmals die ursprüngliche Form $(x+1)(x-2)=0$. Die ist besonders schön, denn die Lösungen sind auf einen Blick ersichtlich. Wir haben auf der linken Seite ein Produkt zweier Zahlen. Die Zahl $(x+1)$ wird mit $(x-2)$ multipliziert. Wir kennen zwar die beiden Zahlen nicht, aber wissen, dass das Produkt $0$ sein soll. Dies ist nur möglich, wenn entweder:
+	\begin{align*}
+		\lineortext{x+1=0}&\quad\lineortext{\quad\text{, also } x=-1}\\
+		& \text{ oder }\\
+		\lineortext{x-2=0}&\quad\lineortext{\quad\text{, also } x=2}.
+	\end{align*}
+	\begin{satz}
+		Eine quadratische Gleichung der Form
+		\[(x-a)\*(x-b)=0\]
+		hat die beiden Lösungen $x=a$ und $x=b$.\newline
+		Altenativ: \[(x+a)\*(x+b)=0 \quad\Longrightarrow\quad x=-a \text{, und } x=-b\]
+	\end{satz}
+	\begin{aufgabe}
+		Bestimme die Lösungen der folgenden quadratischen Gleichungen.
+		\begin{enumerate}[label=\alph*)]\begin{multicols}{3}
+				\item $(x-7)\*(x+3)=0$
+				\item $5x^2-3x=0$
+				\item $2x=4x^2$
+				\item $x^2+9x+20=0$
+				\item $4x^2+25=20x$
+				\item $x^2+144=26x$
+				\item $z^3-2z^2+z=0$
+				\item $2x^2+7x+3=0$
+				\item $3x^2+48=-24x$
+				\item $x^3=10x$
+				\item $16+5x=5x-x^2$
+				\item $5z^2+10=20$
+				\item $(x+5)^2-4=0$
+				\item $(x+5)^2-3=0$
+				\item $3z^2-\frac{2}{5}z-\frac{1}{5}=0$
+		\end{multicols}\end{enumerate}
+	\end{aufgabe}
+	\begin{aufgabe}[Konstruieren]
+		Suche je eine quadratische Gleichung mit den folgenden Lösungen:
+		\begin{enumerate}[label=\alph*)]\begin{multicols}{2}
+				\item $4$ und $7$
+				\item $1$ und $-1$
+		\end{multicols}\end{enumerate}
+	\end{aufgabe}
+
+\subsection{Lösen durch quadratisches Ergänzen}
+	Leider stösst die Strategie des Faktorisieren mit Binomen bzw. mit Ansatz ziemlich schnell an Grenzen. Beispielsweise ist die folgende Gleichung mit diesen Werkzeugen nicht lösbar: \[x^2-8x+10=0.\]
+	\karos{2}
+	Dennoch wollen wir auch diese Gleichung lösen können. Im folgenden Abschnitt lernen wir eine Methode kennen, mit der wir beliebige quadratische Gleichungen lösen kann bzw. zeigen kann, dass sie keine Lösung besitzen. Die Methode heisst \textit{quadratisches Ergänzen}.
+	\begin{beispiel}
+		Wir betrachten jeweils eine quadratische Gleichung der Form $ax^2+bx+c=0$. Unser Ziel ist es, die linke Seite auf die Form $a(x-u)^2+v$ zu bringen.
+		\begin{enumerate}[label=\alph*)]
+			\item $x^2-6x=0$
+		\end{enumerate}\karos{6}
+		\begin{enumerate}[label=\alph*)]
+			\setcounter{enumi}{1}
+			\item $x^2-8x+10=0$
+		\end{enumerate}\karos{6}
+		\begin{enumerate}[label=\alph*)]
+			\setcounter{enumi}{2}
+			\item $4x^2-x+3=0$
+		\end{enumerate}\karos{6}
+	\end{beispiel}
+	\begin{aufgabe}
+		Löse die folgenden quadratischen Gleichungen, indem du die linke Seite mit geeignetem quadratischen Ergänzen faktorisierst.
+		\begin{enumerate}[label=\alph*)]\begin{multicols}{3}
+				\item $x^2-9x+14=0$
+				\item $x^2+5x+1=0$
+				\item $2x^2-6x+2=0$
+				\item $x^2-20x+50=0$
+				\item $-x^2+3x-3=0$
+				\item $x^2-\frac{8}{5}x-1=0$
+				\item $-3x^2-6x+2=0$
+				\item $-x^2+3x-5=0$
+				\item $4x^2+2x=2$
+				\item $\frac{3}{2}x^2+2x-24=0$
+				\item $x^2+\sqrt{2}\*x=10$
+				\item $-\frac{5}{3}x^2+4x-20=0$
+		\end{multicols}\end{enumerate}
+	\end{aufgabe}
+	\begin{aufgabe}
+		Von den Gleichungen unten sind nur zwei mit quadratischem Ergänzen zu lösen. Alle Anderen lassen sich einfacher, d.h. durch geschicktes Faktorisieren, lösen.
+		\begin{enumerate}[label=\alph*)]\begin{multicols}{3}
+				\item $(x-3)\left(x+\frac{2}{3}\right)=0$
+				\item $(x-5)^2=10$
+				\item $(x+4)\left(x-\frac{1}{2}\right)=5$
+				\item $2x(x-4)=(x-4)^2$
+				\item $4x^2+12x+9=0$
+				\item $(3x-4)^2=4(x+2)^2$
+				\item $3x^2-21x+30=0$
+				\item $-x(2+x)=5$
+				\item $x(5-x)=7(5-x)$
+		\end{multicols}\end{enumerate}
+	\end{aufgabe}
+
+
+\newpage
+\section{Die Lösungsformel für allgemeine quadratische Gleichungen}
+	Wir haben mit dem quadratischen Ergänzen eine Strategie, um quadratische Gleichungen zu lösen. Unser nächstes Ziel ist es, die allgemeine quadratische Gleichung zu lösen und dadurch eine Formel für die Lösungen herzuleiten.
+	\begin{aufgabe}
+		Betrachte den untenstehenden Lösungsweg für eine quadratische Gleichung. Ergänze in jedem Schritt, welche Umformung vorgenommen wurde.
+		\begin{align*}
+			5x^2-8x+2&=0\\
+			5x^2-8x&=-2\\
+			x^2-\frac{8}{5}x&=-\frac{2}{5}\\
+			x^2-2\*\frac{4}{5}x&=-\frac{2}{5}\\
+			x^2-2\*\frac{4}{5}x+\left(\frac{4}{5}\right)^2&=-\frac{2}{5}+\left(\frac{4}{5}\right)^2\\
+			\left(x-\frac{4}{5}\right)^2&=\frac{6}{25}\\
+			x-\frac{4}{5}=\sqrt{\frac{6}{25}}\quad&\vee\quad x-\frac{4}{5}=-\sqrt{\frac{6}{25}}\\
+			x=\frac{4}{5}+\frac{\sqrt{6}}{5}\quad&\vee\quad x=\frac{4}{5}-\frac{\sqrt{6}}{5}\\
+			x_1=\frac{1}{5}\left(4+\sqrt{6}\right)\quad&\quad x_2=\frac{1}{5}\left(4-\sqrt{6}\right)
+		\end{align*}
+	\end{aufgabe}
+	Wir möchten nun gemeinsam dieses Vorgehen auf die allgemeine Gleichung $ax^2+bx+c=0$ übertragen, wobei $a\neq0$ gelten soll. Wir betrachten also die allgemeine quadratische Gleichung
+	\[ax^2+bx+c=0.\]
+	\karos{8}\newpage
+	Zusammenfassend können wir also die Lösung einer allgemeinen quadratischen Gleichung mit der folgenden Formel berechnen.
+	\begin{satz}[Allgemeine Lösungsformel]
+		Die Lösungen einer allgemeinen quadratischen Gleichung der Form:
+		\[ax^2+bx+c=0\]
+		lauten
+		\begin{equation}\label{satz:mitternacht}
+			x_{1,2}=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
+		\end{equation}
+	\end{satz}
+	\begin{aufgabe}
+		Löse die folgenden quadratischen Gleichungen, indem du die Parameter $a,b,c$ in die Lösungsformel einsetzt.
+		\begin{enumerate}[label=\alph*)]\begin{multicols}{2}
+				\item $x^2-4x-8=0$
+				\item $x^2+10x+2=0$
+				\item $3x-1=x^2+1$
+				\item $x^3+19=(x+4)^3$
+		\end{multicols}\end{enumerate}
+	\end{aufgabe}
+
+
+\subsection{Untersuchung der Lösungsformel}
+	Wir haben die Lösungsformel für eine allgemeine quadratische Gleichung kennengelernt. Jedoch haben wir uns seither noch nicht mit der Anzahl der Lösungen auseinander gesetzt. Deshalb wollen wir nun der Frage nachgehen: \glqq Hat jede quadratische Gleichung immer zwei Lösungen oder gibt es eine Bedingung, anhand der wir entscheiden können, wie viele Lösungen wir erhalten?\grqq
+
+	Dazu betrachten wir die folgende Aufgabe:
+	\begin{aufgabe}
+		Löse die folgenden quadratischen Gleichungen mithilfe der binomischen Formeln bzw. dem Klammeransatz für geeignete Trinome.
+		\begin{enumerate}[label=\alph*)]\begin{multicols}{2}
+				\item $x^2+10x+24=0$
+				\item $x^2-14x+49=0$
+		\end{multicols}\end{enumerate}
+		Vergleiche die Anzahl Lösungen. Was fällt dir dabei auf?\vspace{5pt}\newline\karos{6}
+	\end{aufgabe}
+	\begin{aufgabe}
+		Löse die beiden quadratischen Gleichungen aus obigen Aufgabe nochmals mithilfe der Lösungsformel. Beschreibe den Unterschied zwischen a) und b).\vspace{11pt}\newline
+		Beschreibe in eigenen Worten, wie du erkennen kannst, ob eine quadratische Gleichung eine oder zwei Lösungen besitzt.\vspace{5pt}\newline\karos{2}
+	\end{aufgabe}
+	\begin{aufgabe}
+		\begin{align*}
+			x^2-8x+25&=0\\
+			(x^2-8x+16)+9&=0\\
+			(x-4)^2&=-9
+		\end{align*}
+		Betrachte die Umformungen und beschreibe in eigenen Worten, wieso diese Gleichung nicht weiter gelöst werden kann.\vspace{11pt}\newline
+		Was bedeutet dies für die Anzahl der Lösungen dieser Gleichung?\vspace{5pt}\newline\karos{4}
+	\end{aufgabe}
+	\begin{aufgabe}
+		Löse nun die obige Gleichung ($x^2-8x+25=0$) nochmals mithilfe der Lösungsformel. Beschreibe den Unterschied zu den Gleichungen aus vorherigen Aufgaben.\vspace{5pt}\newline\karos{2}
+	\end{aufgabe}
+	Wir können also unsere Erkenntnisse aus dieser Aufgabenkette im folgenden Satz zusammenfassen und haben damit eine eindeutige Bedingung gefunden, die uns hilft, zu entscheiden, wie viele Lösungen eine quadratische Gleichung besitzt.
+	\begin{satz}
+		Eine quadratische Gleichung der Form $ax^2+bx+c=0$ kann entweder unterschiedlich viele Lösungen haben. Dafür definieren wir die Diskriminante \[D:=b^2-4ac.\] Für die Anzahl Lösungen gilt also:
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{c|p{4cm}|p{6cm}}
+				Anzahl Lösungen & Bedingung & Lösungen \\\hline
+				zwei &  &  \\\hline
+				eine &  &  \\\hline
+				keine &  &  \\
+			\end{tabular}
+		\end{table}
+	\end{satz}
+	\begin{aufgabe}
+		Entscheide für die folgenden quadratischen Gleichungen, wie viele Lösungen sie haben. Begründe deine Antwort.
+		\begin{enumerate}[label=\alph*)]\begin{multicols}{3}
+				\item $x^2+100x+1=0$
+				\item $2x^2-x+3=0$
+				\item $0.3x^2-2.4x+4.8=0$
+				\item $4x^2+12x+9=0$
+				\item $16x^2+25x+10=0$
+				\item $6x^2-19x+15=0$
+		\end{multicols}\end{enumerate}
+	\end{aufgabe}
+	\begin{aufgabe}
+		Löse die folgenden quadratischen Gleichungen mithilfe der Lösungsformel.
+		\begin{enumerate}[label=\alph*)]\begin{multicols}{3}
+				\item $2x^2-7x+3=0$
+				\item $4x^2-4x+7=0$
+				\item $16-50x+25x^2=0$
+				\item $x^2-17x+1650=0$
+				\item $(x+3)(2x+1)=9$
+				\item $(3x+1)^2=-2x$
+				\item $\frac{1}{2}x^2+\frac{1}{3}x-\frac{1}{6}=0$
+				\item $\frac{1}{6}x^2-\frac{5}{4}x+\frac{2}{3}=0$
+				\item $12x^2-7x=9x^2-2$
+				\item $9(x-10)-x(x-15)=x$
+				\item $3\left(x^2+2\right)-x(x+9)=11$
+				\item $17x^2-2x+7=8x^2-14x+3$
+		\end{multicols}\end{enumerate}
+	\end{aufgabe}
+	\begin{aufgabe}
+		\begin{enumerate}[label=\alph*)]
+			\item Das Produkt der beiden kleinsten von sechs aufeinanderfolgenden Zahlen ist dreimal so gross wie die Summe der vier übrigen Zahlen. Bestimme die kleinste Zahl.
+			\item An einer Silvesterparty wird um Mitternacht angestossen. Dabei stösst jeder Gast mir jedem anderen Gast genau einmal an. Die Gläser erklingen insgesamt $300$ mal. Wie viele Gäste sind auf der Party?
+		\end{enumerate}
+	\end{aufgabe}
+
+
+\newpage
+\section{Spezielle Typen quadratischer Gleichungen}
+\subsection{Gleichungen mit Bruchtermen}
+	Gleichungen mit Bruchtermen können auf quadratische Gleichungen führen.\\ z.B.:
+	\begin{align*}
+		\frac{x^2}{x+5}&=\frac{25}{x+5}&~&|\cdot (x+5)\\
+		x^2&=25
+		\Rightarrow x_{1,2}=\pm 5
+	\end{align*}
+	Wenn wir die Ausgangsgleichung betrachten, sehen wir, dass -5 keine Lösung ist. Der Nenner wäre unerlaubterweise 0.
+	\begin{framed}\noindent
+		\textbf{Erinnerung:}
+		Multiplikation einer Gleichung mit einem Term, der die Unbekannte enthält, kann \textbf{zu zusätzlichen inkorrekten Lösungen} führen (\textit{Gewinnumformung}).\\
+		\textbf{Abhilfe:}
+		Lösungen überprüfen, d.h. in Ursprungsgleichung einsetzen!
+	\end{framed}
+\subsection{Biquadratische Gleichungen}
+	Eine Gleichung der Form
+	\begin{align*}
+		ax^4+bx^2+c=0~ (a\neq 0)
+	\end{align*}
+	nennt man \textbf{biquadratisch}. Sie ist quadratisch in $x^2$.
+	\begin{framed}\noindent
+		\textbf{Lösungsweg:}
+		Substituiere (d.h. ersetze) $z=x^2$, wir erhalten eine quadratische Gleichung in $z^2$. Die Lösungen $x_1,x_2,x_3,x_4$ (bis zu 4 unterschiedliche Lösungen) sind dann die Wurzeln der Lösungen $z_1$ und $z_2$.
+	\end{framed}
+\subsection{Gleichungen mit Quadratwurzeltermen}
+	Eine Gleichung der Form
+	\begin{align*}
+		\sqrt{x-2}=x+7
+	\end{align*}
+	lässt sich mittels Quadrieren beider Seiten lösen.
+	\begin{framed}\noindent
+		\textbf{Erinnerung:} Das Quadrieren beider Seiten einer Gleichung ist eine Gewinnumformung, d.h. es können zusätzliche falsche Lösungen auftauchen.\\
+		\textbf{Abhilfe:}
+		Lösungen überprüfen, d.h. in Ursprungsgleichung einsetzen!
+	\end{framed}
+
+
+\newpage
+\subsection*{History}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|p{13mm}|p{20mm}|p{30mm}|p{70mm}|}\hline
+		%\multicolumn{4}{|l|}{History}\\\hline
+		Version & Datum & Person & Bemerkung \\\hline
+		$0.1$ & 14.12.2023 & Jonas Guler & Kapitel erstellt \\\hline
+		$1.1$ & 03.11.2024 & Jonas Guler & Einführung mit Aufgaben ergänzt \\\hline
+		& ToDo & Jonas Guler & spezielle Typen von quad Gleichungen überarbeiten \\\hline
+	\end{tabular}
+\end{table}
+
+
+
+\end{document}
