@@ -1,0 +1,462 @@
+\documentclass[11pt,oneside]{article}
+\input{../../../Header/packages.sty}
+\input{../../../Header/styleScript.sty}
+\input{../../../Header/headerScript.sty}
+\input{../../../Header/mathexpressions.sty}
+
+
+\newcommand{\Skriptname}{Logarithmus}
+\newcommand{\Autor}{Jonas Guler (Gu)}
+\newcommand{\version}{\textit{v}1.0}
+
+\begin{document}   %KSH-Gubser - LATEX/PDF
+\begin{titlepage}
+	\clearpage
+	\title{\Huge\textbf{\Skriptname} \\[1cm]}
+	\author{Autor:\\ \Autor}
+	\date{\normalsize {Version \version}\\ \datelong}
+	\maketitle
+	\thispagestyle{empty}
+	\vfill
+	\tableofcontents
+\end{titlepage}
+\pagenumbering{arabic}
+%############################################################################################
+\section{Definition des Logarithmus}
+	In der Primarschule haben wir die Subtraktion als Umkehrung der Addition kennengelernt. Später haben wir dasselbe mit der Division als Umkehrung der Multiplikation erfahren. Mithilfe der Quadratwurzel waren wir in der Lage, das Quadrieren umzukehren und somit eine Lösung für die Gleichung der Form $x^2=r$ zu finden. In gleichen Sinne wollen wir nun eine Möglichkeit finden, das Potenzieren umdrehen zu können. Das heisst, wir möchten die folgende Gleichung lösen:
+	\[2^x=15\]
+	\karos{4}
+	Die Lösung dieser Gleichung nennt man einen Logarithmus.
+	\begin{definition}
+		$x=\Log{a}{b}$ ist die Lösung der zugehörigen Exponentialgleichung $a^x=b$, wobei $a>0$, $a\neq1$ und $b>0$ gilt.\newline
+		\textit{Sprich: } Logarithmus zur Basis $a$ von $b$\newline
+		$\Log{a}{b}$ ist also die Zahl, mit der man $a$ potenzieren muss, um $b$ zu erhalten.
+	\end{definition}
+	\begin{beispiel}
+		\begin{figure}[H]
+			\begin{minipage}[t]{0.3\linewidth}
+				\begin{enumerate}[label=\alph*)]
+					\item Schreibe $6^3=216$ in logarithmischer Form.\newline\textit{Lösung:}\[6^3=216 \Leftrightarrow \Log{6}{216}=3\]
+				\end{enumerate}
+			\end{minipage}
+			\hfill
+			\begin{minipage}[t]{0.3\linewidth}
+				\begin{enumerate}[label=\alph*)]
+					\setcounter{enumi}{1}
+					\item Schreibe $\log_5(625)=4$ in exponetieller Form.\newline\textit{Lösung:}\[\Log{5}{625}=4 \Leftrightarrow 5^4=625\]
+				\end{enumerate}
+			\end{minipage}
+			\hfill
+			\begin{minipage}[t]{0.3\linewidth}
+				\begin{enumerate}[label=\alph*)]
+					\setcounter{enumi}{2}
+					\item Löse $7^x=230$ auf drei Nachkommastellen.\newline\textit{Lösung:}
+					\begin{align*}
+						7^x=230 \Rightarrow x&=\Log{7}{230}\\ &\thickapprox 2.795
+					\end{align*}
+				\end{enumerate}
+			\end{minipage}
+		\end{figure}
+	\end{beispiel}
+	\begin{aufgabe}
+		Schreibe die Exponentialgleichung in logarithmischer Form, die Logaritmusgleichungen in exponetieller Form und löse die Gleichungen auf drei Nachkommastellen genau.
+		\begin{enumcols}[3]
+				\item $3^4=81$ \item $25^\frac{1}{2}=5$ \item $\left(\frac{1}{6}\right)^{-2}=36$ \item $32^\frac{1}{5}=2$
+				\item $\Log{3}{9}=2$ \item $\Log{6}{216}=3$ \item $\Log{5}{0.2}=-1$ \item $\Log{0.5}{8}=-3$
+				\item $3^x=5$ \item $2^x=10$ \item $4^x=32$ \item $5^x=30$
+		\end{enumcols}
+	\end{aufgabe}
+	\begin{aufgabe}
+		Löse die Aufgaben $1-4$ auf Seite 183 im Buuch Algebra $9/10$
+	\end{aufgabe}
+	Wir sind nun also in der Lage, auch schwierigere Exponentialgleichungen zu lösen.
+	\begin{aufgabe}
+		Löse die folgenden Exponantialgleichungen und überprüfe deine Lösung mit dem Taschenrechner.
+		\begin{enumcols}[2]
+				\item $10^{2x-3}=4$ \item $2^{x^2-1}=100$ \item $3^{4x-2}+100=0$ \item $\frac{1}{2}\*4^{x-2}=6$
+				\item $7^{4-x}=1000$ \item $4^{2x-5}=3$
+		\end{enumcols}
+	\end{aufgabe}
+
+
+\section{Rechenregeln}
+	Wir haben nun in den Aufgaben einige Umformungen verwendet, die direkt aus der Definition folgen. Da diese für die Beweise der Rechenregeln mit Logarithmen entscheidend sind, sind sie hier nochmals allgemein zusammengefasst.
+	\begin{satz}
+		Auch hier gilt $a>0$, $a\neq0$ und $b>0$. $r$ sei eine beliebige Zahl ($r\in\R$).
+		\begin{enumerate}
+			\item $a^{\Log{a}{b}}=b$
+			\item $\Log{a}{a^r}=r$
+			\item $\Log{a}{1}=0$
+		\end{enumerate}
+	\end{satz}
+	Wir möchten nun die weiteren Rechenregeln anhand einer Beispielaufgabe entdecken.
+	\begin{aufgabe}
+		Durch systematisches Probieren möchten wir die Regeln selbst entdecken. Betrachte dazu die Tabelle rechts.
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{c|c|c|c|c|c|c|c}
+				x & $2$ & $4$ & $8$ & $16$ & $32$ & $64$ & $128$ \\\hline
+				$\Log{2}{x}$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$
+			\end{tabular}
+		\end{table}
+		\begin{enumerate}[label=\alph*)]
+			\item Wie hängt der Wert des Terms $\log_2(u\*v)$ von $\log_2(u)$ und $\log_2(v)$ ab? Vergleiche dazu die folgenden Terme.\newline
+			$\log_2(2\*4)$ mit $\log_2(2)$ und $\log_2(4)$\vspace{5pt}\newline\karos{2}
+			$\log_2(2\*8)$ mit $\log_2(2)$ und $\log_2(8)$\vspace{5pt}\newline\karos{1}
+			$\log_2(4\*8)$ mit $\log_2(4)$ und $\log_2(8)$\vspace{5pt}\newline\karos{1}
+			$\log_2(8\*16)$ mit $\log_2(8)$ und $\log_2(16)$\vspace{5pt}\newline\karos{1}
+			Stelle eine Vermutung für eine Rechenregel auf und überprüfe sie an eigenen Beispielen.
+			\[\log_a(u\*v)=\lineortext{\qquad\log_a(u)+\log_a(v)\qquad}\]
+			\item Verfahre genauso wie in Teilaufgabe a) mit $\log_2\left(\frac{u}{v}\right)$.\newline
+			$\log_2\left(\frac{32}{4}\right)$ mit $\log_2(32)$ und $\log_2(4)$\vspace{5pt}\newline\karos{1}
+			$\log_2\left(\frac{64}{32}\right)$ mit $\log_2(64)$ und $\log_2(32)$\vspace{5pt}\newline\karos{1}
+			$\log_2\left(\frac{128}{16}\right)$ mit $\log_2(128)$ und $\log_2(16)$\vspace{5pt}\newline\karos{1}
+			$\log_2\left(\frac{8}{64}\right)$ mit $\log_2(8)$ und $\log_2(64)$\vspace{5pt}\newline\karos{1}
+			Stelle eine Vermutung für eine Rechenregel auf und überprüfe sie an eigenen Beispielen.
+			\[\log_a\left(\frac{u}{v}\right)=\lineortext{\qquad\log_a(u)-\log_a(v)\qquad}\]
+		\end{enumerate}
+	\end{aufgabe}\newpage
+	Wir können also die Regeln allgemein zusammenfassen und noch mit einer weiteren Regel, der Potenzregel, erweitern.
+	\begin{satz}
+		\label{satz:logarithmusgesetze}
+		Seien $a>0$, $a\neq0$ sowie $u>0$ und $v>0$. $r$ ist wiederum eine beliebige Zahl ($r\in\R$).
+		\begin{enumerate}[label=\Roman*.]
+			\item Produktregel: \[\lineortext{\log_a(u\*v)=\qquad\log_a(u)+\log_a(v)\qquad}\]
+			\item Quotientenregel: \[\lineortext{\log_a\left(\frac{u}{v}\right)=\qquad\log_a(u)-\log_a(v)\qquad}\]
+			\item Potenzregel: \[\log_a\left(u^r\right)=r\*\log_a(u)\]
+		\end{enumerate}
+	\end{satz}
+	\begin{aufgabe}
+		Vereinfache die folgenden Terme so weit wie möglich.
+		\begin{enumcols}[4]
+				\item $\log_{12}(144)$ \item $\log_{10}(0.001)$
+				\item $\log_a\left(\frac{1}{a^2}\right)$ \item $5^{\log_5(10)}$
+				\item $\log_5\left(25\sqrt{5}\right)$ \item $\log_x\left(x\sqrt{x}\right)$
+				\item $\log_a\left(\frac{1}{\sqrt{a}}\right)$ \item $\log_m\left(\sqrt{m^5}\right)$
+		\end{enumcols}
+	\end{aufgabe}
+	\begin{aufgabe}
+		Löse die Aufgaben $32-43$ auf Seite $187$ im Buch Algebra $9/10$.
+	\end{aufgabe}
+	\begin{aufgabe}
+		Forme die ausgeschriebenen Ausdrücke soweit um, bis nur noch ein Logarithmus übrig bleibt oder umgekehrt. \newline\footnotesize\textit{Tipp: Falls kein Logarithmusgesetz anwendbar scheint, versuche den Ausdruck in ein Produkt umzuwandeln.}\normalsize
+		\begin{enumerate}[label=\alph*)]\begin{multicols}{2}
+				\item $2\*\log_3(x)-\log_3(5)$
+				\item $3\*\log_2(x)-4\*\log_2(x+3)+\log_2(y)$
+				\item $\log_2\left(x^2-25\right)-2\*\log_2(x-5)$
+				\item $2+\frac{\log_{10}(x)}{3}-\log_{10}(x)$
+				\item $\log_a(b^2-b)$
+				\item $\log_a\left(\frac{x^2y}{u-v}\right)$
+				\item $\log_a\left(\sqrt{\frac{x}{y}}\*c^5\right)$
+				\item $\log_a\left(\frac{12xy^5}{5uv^3}\right)$
+		\end{multicols}\end{enumerate}
+	\end{aufgabe}
+	\begin{aufgabe}[für die Schnellen]
+		Beweise die Potenzregel aus Satz \ref{satz:logarithmusgesetze}.
+	\end{aufgabe}
+
+
+
+\newpage
+\section{Der Basiswechselsatz}
+	\begin{definition}
+		Wir definieren drei spezielle Logarithmen.
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{l c}
+				Logarithmus zur Basis $10$: & $\Log{10}{x}=\operatorname{log}(x)$\\
+				Logarithmus zur Basis $2$: & $\Log{2}{x}=\operatorname{lb}(x)$\\
+				Logarithmus zur Basis $\e$: & $\Log{\e}{x}=\ln{(x)}$
+			\end{tabular}
+		\end{table}
+	\end{definition}
+	\begin{minipage}{0.6\linewidth}
+		Wir haben verschiedene Methoden kennengelernt, wie wir Logarithmen vereinfachen können. Können wir aber diese Logarithmen auch mit einfachen Mittel, wie beispielsweise unserem Handy Taschenrechner, approximieren?
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.35\linewidth}
+		\centering\includegraphics[scale=0.05]{images/iPhoneTR.JPEG}
+	\end{minipage}\vspace{5pt}\newline
+	\begin{aufgabe}
+		Ist es möglich die beiden folgenden Logarithmen mit dem Handy-Taschenrechner zu berechnen?
+		\begin{enumerate}\begin{multicols}{2}
+				\item $\Log{10}{1000}=$ \item $\Log{3}{5}=$
+		\end{multicols}\end{enumerate}
+		\karos{2}
+	\end{aufgabe}
+	Wir sehen also die Basis, die auf diesen Tasten hinterlegt ist, ist entscheidend, um das korrekte Resultat zu erhalten. Aus diesem Grund haben wir zu Beginn die drei speziellen Logarithmen hervorgehoben. Gibt es eine Möglichkeit trotz den Einschränkungen auf dem Handy-Taschenrechner einen beliebigen Logarithmus zu berechnen?  Betrachten wir dazu ein Beispiel.\newline
+	\begin{beispiel}
+		Wir wollen den folgenden Logarithmus berechnen: \[\Log{3}{5}=\]
+		\karos{5.5}
+	\end{beispiel}
+	\begin{satz}[Basiswechselsatz]\label{satz:Basiswechsel}
+		Der Logarithmus einer Zahl zu einer \flqq unbequemen\frqq\:Basis $u$ kann mit der folgenden Gleichung umgewandelt werden: \[\Log{u}{b}=\frac{\Log{c}{b}}{\Log{c}{u}}\]
+		\textbf{Wichtig: }$c$ kann frei gewählt werden!
+	\end{satz}
+	\begin{aufgabe}
+		Berechne die folgenden Logarithmen ausschliesslich mit dem Handy-Taschenrechner.
+		\begin{enumcols}[3]
+				\item $\Log{2}{10}\approx$\:\rule{1.7cm}{1pt}
+				\item $\Log{}{50}\approx$\:\rule{1.7cm}{1pt}
+				\item $\Log{15}{11}\approx$\:\rule{1.7cm}{1pt}
+				\item $\Log{5}{17}\approx$\:\rule{1.7cm}{1pt}
+				\item $\Log{3}{29}\approx$\:\rule{1.7cm}{1pt}
+				\item $\Log{2}{-0.1}\approx$\:\rule{1.7cm}{1pt}
+				\item $\Log{8}{0.8}\approx$\:\rule{1.7cm}{1pt}
+				\item $\Log{\e}{1000}\approx$\:\rule{1.7cm}{1pt}
+				\item $\Log{5}{\frac{1}{3}}\approx$\:\rule{1.7cm}{1pt}
+		\end{enumcols}
+		Löse anschliessend die Aufgaben $53-55$ und $58$ auf Seite $189$ im Algebra $9/10$.
+	\end{aufgabe}
+	Mit Hilfe des Basiswechselsatz sind wir also in der Lage, auch ohne leistungsfähigen Taschenrechner einen Logarithmus mit komplizierter Basis zu vereinfachen. Insbesondere können wir so auch die Lösung einer Exponentialgleichung der Form $a^x=b$ mit Hilfe des Basiswechselsatz approximieren. Denn es gilt:
+	\[x=\Log{a}{b}=\frac{\log(b)}{\log(a)}=\frac{\ln(b)}{\ln(a)}\]
+	\begin{aufgabe}
+		Löse die Aufgaben $65-69$ auf Seite $190$ im Algebra $9/10$.
+	\end{aufgabe}\newpage
+	\subsection*{Vergleich von Zahlen}
+	In der folgenden Aufgabe sind zwei Potenzen gegeben, die für unseren einfachen Handy-Taschen- rechner leider nicht möglich sind zu berechnen. Also können wir auch nicht einen direkten Vergleich anstellen. Notiere dir hier deinen Tipp.
+	\begin{aufgabe}
+		Welche Zahl ist grösser? \[2^{2000}\qquad\text{ oder }\qquad 3^{630}\]
+	\end{aufgabe}
+	Wie kann ich nun rechnerisch überprüfen, welcher dieser Potenzen grösser ist?\vspace{5pt}\newline\karos{4}
+	\begin{aufgabe}
+		\begin{enumerate}[label=\alph*)]
+			\item Welche der folgenden Zahlen ist grösser? Begründe deine Antwort. \[0.9^{3000}\qquad\text{ oder }\qquad 0.8^{1500}\]
+			\item Wie viele Ziffern besitzt die im Zehnersystem geschriebene ausgerechnete Potenz?
+			\begin{itemize}[label=\ ]\begin{multicols}{4}
+					\item $837^{837}$ \item $2^{2000}$ \item $\left(8^7\right)^6$ \item $6^{\left(7^8\right)}$
+			\end{multicols}\end{itemize}
+			\footnotesize\textit{Tipp: Denke an die wissenschaftliche Schreibweise.}\normalsize
+			\item Gib für die obigen 4 Potenzen die erste Ziffer des ausgeschriebenen Wertes an.
+		\end{enumerate}
+	\end{aufgabe}
+
+
+\newpage
+\section{Logarithmen zu Zeiten von Jost Bürgi $(1552-1632)$}
+
+
+\newpage
+\section{Die Logarithmusfunktion}
+	Der Logarithmus beschreibt also die exakte Lösung einer Exponentialgleichung. Das heisst, wenn wir mit der natürlichen Exponentialfunktion $f(x)=\exp{x}$ starten, dann ordnet der natürliche Logarithmus jedem Bild $f(x)$ sein Argument $x$ zu. Der Logarithmus dreht also diese Funktion um.
+	\begin{aufgabe}
+		Betrachten wir die drei Einführungsbeispiele der Exponentialfunktion (Wasserpflanze, Taschengeld (Angebot B), Uran-Atome). Zeichne für alle drei Funktionen den Funktionsgraph, wenn du das Bild mit dem Argument vertauschst.\vspace{2pt}\newline
+		\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+			>=latex,   %Voreinstellung für Pfeilspitzen
+			font=\footnotesize, scale=1]
+			%Raster zeichnen
+			\draw [color=gray!50]  [step=5mm] (-0,-0) grid (5.3,5.3);
+			% Achsen zeichnen
+			\draw[->,thick] (-0.3,0) -- (5.5,0) node[right=20pt, below] {\normalsize $x$ in $10000$m$^2$};
+			\draw[->,thick] (0,-0.3) -- (0,5.5) node[above, left] {\normalsize $y$ in Monaten};
+			% Achsen beschriften
+			\foreach \x in {1,2,...,5} \draw (\x,-.1) -- (\x,.1) node[below=5pt] {$\x$};
+			\foreach \y in {1,2,...,5} \draw (-.1,\y) -- (.1,\y) node[left=5pt] {$\y$};
+			% Besserer Ursprung
+			\draw[color=black] (0pt,-7pt) node[right] {$0$};
+			%Funktionen zeichnen:
+			\clip(-0.3,-0.3) rectangle (5.3,5.3); %Bildbereich
+			%Beschriftung
+			%\node[blue]  at (11,5) {\normalsize$f$};
+		\end{tikzpicture}
+
+		\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=0.5mm, y=10mm,
+			>=latex,   %Voreinstellung für Pfeilspitzen
+			font=\footnotesize, scale=0.9]
+			%Raster zeichnen
+			\draw [color=gray!50]  [step=5mm] (-0,-0) grid (204,12.1);
+			% Achsen zeichnen
+			\draw[->,thick] (-5,0) -- (210,0) node[right=25pt, below] {\normalsize $x$ in CHF};
+			\draw[->,thick] (0,-0.3) -- (0,12.5) node[above, left] {\normalsize $y$ in Tage};
+			% Achsen beschriften
+			\foreach \x in {20,40,...,200} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+			\foreach \y in {1,2,...,12} \draw (-2.,\y) -- (2.,\y) node[left=4pt] {$\y$};
+			% Besserer Ursprung
+			\draw[color=black] (0pt,-7pt) node[right] {$0$};
+			%Funktionen zeichnen:
+			%\clip(-0.3,-0.3) rectangle (60.8,6.8); %Bildbereich
+			%Beschriftung
+			%\node[blue]  at (11,5) {\normalsize$f$};
+		\end{tikzpicture}
+
+		\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=2.4mm, y=14.4mm,
+			>=latex,   %Voreinstellung für Pfeilspitzen
+			font=\footnotesize, scale=1]
+			%Raster zeichnen
+			\draw [color=gray!50]  [step=4.8mm] (-0,-0) grid (32.4,4.1);
+			% Achsen zeichnen
+			\draw[->,thick] (-1,0) -- (33,0) node[below=8pt, right] {\normalsize $x$ in $10^3$};
+			\draw[->,thick] (0,-0.3) -- (0,4.5) node[above, left] {\normalsize $y$ in h};
+			% Achsen beschriften
+			\foreach \x in {5,10,...,30} \draw (\x,-.1) -- (\x,.1) node[below=12pt] {$\x$};
+			\foreach \y in {1,2,...,12} \draw (-.2,\y/3) -- (.2,\y/3) node[left=4pt] {$\frac{\y}{3}$};
+			% Besserer Ursprung
+			\draw[color=black] (0pt,-7pt) node[right] {$0$};
+			%Funktionen zeichnen:
+			%\clip(-0.3,-0.3) rectangle (60.8,6.8); %Bildbereich
+			%Beschriftung
+			%\node[blue]  at (11,5) {\normalsize$f$};
+		\end{tikzpicture}
+	\end{aufgabe}
+	In den drei Beispielen sehen wir eine neue Klasse von Funktionen. Diese Graphen haben alle eine Funktionsgleichung der Form: \[f(x)=\Log{a}{\frac{x}{b}}\] mit $b\in\R$ und $a\in\R^+\backslash\left\{1\right\}$. Für die weitere Diskussion der Eigenschaften fixieren wir $b=1$.
+	\begin{definition}
+		Eine Logarithmusfunktion ist eine Funktion der Form \[f(x)=\Log{a}{x}\]
+		mit $a\in\R^+\backslash\left\{1\right\}$.
+	\end{definition}
+	\begin{beispiel}
+		Betrachten wir die beiden folgenden Beispiele: \[\textcolor{blue}{f}(x)=\Log{2}{x} \text{ und } \textcolor{forestgreen}{g}(x)=\Log{\frac{1}{2}}{x}.\]
+		\begin{minipage}{0.48\linewidth}
+			\centering
+			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=4mm, y=10mm,
+				>=latex,   %Voreinstellung für Pfeilspitzen
+				font=\footnotesize, scale=0.8]
+				%Raster zeichnen
+				%\draw [color=gray!50]  [step=8mm] (-0,-0) grid (32.4,4.1);
+				% Achsen zeichnen
+				\draw[->,thick] (-1,0) -- (16,0) node[left, below] {\normalsize $x$};
+				\draw[->,thick] (0,-3.3) -- (0,4.5) node[above, left=4pt] {\normalsize $y$};
+				% Achsen beschriften
+				\foreach \x in {2,4,...,14} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+				\foreach \y in {-3,-2,-1,1,2,...,4} \draw (-.3,\y) -- (.3,\y) node[left=4pt] {$\y$};
+				% Besserer Ursprung
+				\draw[color=black] (0pt,-7pt) node[left] {$0$};
+				%Funktionen zeichnen:
+				\clip(-3,-3.3) rectangle (14.2,4.1); %Bildbereich
+				\draw[blue,domain=0.1:14,samples=100] plot (\x, {ln(\x)/ln(2)}) node[below] {$f$};
+				%Beschriftung
+				%\node[blue]  at (11,5) {\normalsize$f$};
+			\end{tikzpicture}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.48\linewidth}
+			\centering
+			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=4mm, y=10mm,
+				>=latex,   %Voreinstellung für Pfeilspitzen
+				font=\footnotesize, scale=0.8]
+				%Raster zeichnen
+				%\draw [color=gray!50]  [step=8mm] (-0,-0) grid (32.4,4.1);
+				% Achsen zeichnen
+				\draw[->,thick] (-1,0) -- (16,0) node[left, below] {\normalsize $x$};
+				\draw[->,thick] (0,-3.3) -- (0,4.5) node[above, left=4pt] {\normalsize $y$};
+				% Achsen beschriften
+				\foreach \x in {2,4,...,14} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+				\foreach \y in {-3,-2,-1,1,2,...,4} \draw (-.3,\y) -- (.3,\y) node[left=4pt] {$\y$};
+				% Besserer Ursprung
+				\draw[color=black] (0pt,-7pt) node[left] {$0$};
+				%Funktionen zeichnen:
+				\clip(-3,-3.3) rectangle (14.2,4.1); %Bildbereich
+				\draw[forestgreen,domain=0.1:10,samples=100] plot (\x, {ln(\x)/ln(0.5)}) node[above] {$g$};
+				%Beschriftung
+				%\node[blue]  at (11,5) {\normalsize$f$};
+			\end{tikzpicture}
+		\end{minipage}
+	\end{beispiel}
+	\begin{satz}[Wachtumsverhalten]
+		Eine Funktion der Form $h(x)=\Log{a}{x}$ zeigt folgendes Wachtumsverhalten in Abhängigkeit der Basis $a$:
+		\begin{itemize}
+			\item \rule{10cm}{1pt}
+			\item \rule{10cm}{1pt}
+		\end{itemize}
+	\end{satz}
+	Die beiden Funktionen im Beispiel besitzen aber auch sehr viele Gemeinsamkeiten. Bei beiden ist der Einfluss des Parameters $a$ entscheidend für die Gestalt der Kurve. Der Definitions- und Wertebereich ist ebenfalls bei beiden Funktionen gleich. Fasse im folgenden Satz deine Beobachtungen zusammen.
+	\begin{satz}[Eigenschaften]
+		Die Funktion $f(x)=\Log{a}{x}$ hat folgende Eigenschaften:
+		\begin{itemize}
+			\item Der Definitionsbereich ist \gap{2} und der Wertebereich ist \gap{2}.
+			\item Die Funktion hat eine einzige Nullstelle bei \gap{2}.
+			\item Monotonie:\begin{itemize}
+				\item Für $a>1$ ist die Funktion streng monoton wachsend.
+				\item Für $0<a<1$ ist die Funktion streng monoton fallend.\end{itemize}
+			\item Asymptotisches Verhalten:\begin{itemize}
+				\item Die $y-$Achse ist eine Asymptote.\end{itemize}
+		\end{itemize}
+	\end{satz}
+	\begin{aufgabe}
+		\begin{enumerate}[label=\alph*)]
+			\item Löse die Aufgaben $22-24$ und $27$ auf Seite $185$ im Algebra $9/10$.\vspace{6pt}
+			\item\begin{minipage}{0.57\linewidth}
+				Ordne zuerst die Funktionsgleichungen den Graphen zu.
+				\begin{align*}
+					f(x)&=\Log{2}{x}\\
+					g(x)&=\Log{2}{x-1}\\
+					h(x)&=\Log{2}{x}-1
+				\end{align*}
+			\end{minipage}
+			\hfill
+			\begin{minipage}{0.4\linewidth}
+				\centering\includegraphics[scale=0.15]{images/shiftedLog1.png}
+			\end{minipage}
+			\item Beschreibe danach den Einfluss der beiden verschiedenen Parameter $b$ und $c$ der allgemeinen Funktion \[f(x)=\Log{a}{x-b}+c.\] Vergleiche dazu das \href{https://www.geogebra.org/m/qungkacj}{Geogebra-Applet}.
+			\item Löse zum Schluss die Aufgabe $28$ auf Seite $186$ im Algebra $9/10$.
+		\end{enumerate}
+	\end{aufgabe}
+
+
+\newpage
+\section{Verschiedene Anwendungen}
+\subsection{Lautstärke}
+	\begin{figure}[ht]
+		\centering
+		\textbf{Empfinden wir zwei schreiende Kinder doppelt so laut wie eines?}
+		\includegraphics[scale=0.75]{images/Schreihals.png}
+	\end{figure}
+	\begin{wrapfigure}{r}{0.3\textwidth}
+		\center{\includegraphics[scale=0.75]{images/SoundIntensity.png}}
+	\end{wrapfigure}
+	Wie ihr vielleicht wisst, breitet sich der Schall mittels Kompression und Dekompression der Luft aus. Das heisst, wir einen Ton hören, wenn in der Luft gewisse Energie vorhanden ist, die Schallwellen erzeugen. Je weiter weg wir vom Ursprung der Schallquelle sind, desto leiser nehmen wir den Ton wahr. Nehmen wir die Frage zu Beginn nochmals auf: Empfinden wir zwei schreiende Kinder als doppelt so laut wie eines? Intuitiv würde ich diese Frage mit \flqq Nein\frqq\:beantworten. Dies kann auch genau erklärt werden, denn unser Gehör funktioniert mit einer logarithmischen Skala. Aus diesem Grund wird die Schallenergie eines Geräusches mit dem leisest hörbaren verglichen. Daraus lässt sich die Lautstärke wie folgt definieren:
+	\begin{definition}
+		\[\text{Lautstärke [in dB (Dezibel)]}=10\*\Log{10}{\frac{\textcolor{red}{I}}{I_0}},\]
+		wobei $I_0=\left(10^{-12}\frac{W}{m^2}\right)$ die Hörschwelle und $\textcolor{red}{I}$ die gemessene Schallenergie sind.
+	\end{definition}
+	In der Graphik unten sind einerseits einige Lautstärken abgebildet. $0$dB ist das leiseste, was ein menschliches Gehör feststellen kann und interessanterweise ist die Schmerzgrenze bei $130$dB. Lärm der lauter ist als die Schmerzgrenze kann zu abruptem Hörverlust führen. Betrachten wir den Graphen auf der Mitte, so sehen wir die Ähnlichkeit zur klassischen Logarithmusfunktion. Vergleicht man die Werte, so führt eine Verdoppelung der Schallenergie zu einem Anstieg um lediglich $3$ Dezibel.\newline
+	\begin{minipage}{0.3\linewidth}
+		\centering\includegraphics[scale=0.4]{images/DezibelSkala.png}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.3\linewidth}
+		\centering\includegraphics[scale=0.4]{images/DezibelGraph.png}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.3\linewidth}
+		\centering\includegraphics[scale=0.6]{images/ExposureTime.png}
+	\end{minipage}
+	Falls das Gehör zu lange grossem Lärm ausgesetzt ist, kann dies zu Gehörverlust führen. Wird die Schallenergie verdoppelt, also $+3$dB, so halbiert sich die Belastungszeit für diese Lautstärke. Eine Aufstellung für die Belastungszeiten kann in der Abbildung auf der rechten Seite abgelesen werden.
+	\begin{aufgabe}
+		Wähle aus den folgenden Anwendungen eine aus, die dich interessiert.
+		\begin{enumcols}[3]
+			\item Richterskala \item ph-Werte \item C-14 Methode
+		\end{enumcols}
+		Beschreibe deine Anwendung in maximal einer A4-Seite. Beantworte dabei folgende Leitfragen:
+		\begin{enumerate}
+			\item In welchem Zusammenhang wird sie verwendet? Wozu wird sie verwendet?
+			\item Wie ist die Anwendung definiert? (Mache dabei den Bezug zum Logarithmus sichtbar.)
+			\item Erkläre warum die Verwendung von Logarithmus sinnvoll ist.
+			\item Suche ein Beispiel, welches die Anwendung zeigt.
+			\item Ergänze allfällige \flqq Fun Facts\frqq.
+		\end{enumerate}
+		Abgabe: Ende der Doppellektion per \href{mailto://jonas.guler@ksh.edu}{Mail} an jonas.guler@ksh.edu. Die besten Arbeiten pro Anwendung werde ich euch in der Inhaltsbibliothek zur Verfügung stellen.
+	\end{aufgabe}
+
+
+\newpage
+\subsection*{Richterskala}
+\subsection*{pH-Werte}
+\subsection*{C-14 Methode}
+\subsection*{Stetige Rendite}
+\subsection*{Logarithmus im Tennis}
+\subsection*{Widerspenstige Zähmung}
+
+
+\newpage
+\subsection*{History}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|p{13mm}|p{20mm}|p{30mm}|p{70mm}|}\hline
+		%\multicolumn{4}{|l|}{History}\\\hline
+		Version & Datum & Person & Bemerkung \\\hline
+		$0.1$ & 22.12.2023 & Jonas Guler & Kapitel erstellt \\\hline
+		$0.2$ & ToDo & Jonas Guler & Anwendungen ergänzen \\\hline
+	\end{tabular}
+\end{table}
+
+\end{document}
