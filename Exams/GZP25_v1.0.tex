@@ -8,6 +8,7 @@
 
 %=========================================================
 \newcommand{\theme}{Zwischenprüfung 2025}
+\newcommand{\themeshort}{GZP 2025}
 \renewcommand{\date}{27.05.25}
 %=========================================================
 \begin{document}
@@ -27,10 +28,10 @@
 \begingroup
 \renewcommand{\arraystretch}{1.5}
 \begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}}l @{\extracolsep{6pt}}l}\hline
-    \textbf{\theme} & {\bf Lehrpersonen:} & Dc, Fh, Gt, Gu, Ss \\\hline
-    \textbf{Mathematik, Teil 1 (ohne TR)} & {\bf Dauer:} & {\bf 45 Minuten} \\\hline
-    \textbf{Name:} & {\bf Klasse:} &  \\\hline
-    \textbf{Vorname:} &  & \\\hline
+    {\bf \theme} & {\bf Lehrpersonen:} & Dc, Fh, Gt, Gu, Ss \\\hline
+    {\bf Mathematik, Teil 1 (ohne TR)} & {\bf Dauer:} & 45 Minuten \\\hline
+    {\bf Name:} & {\bf Klasse:} &  \\\hline
+    {\bf Vorname:} & {\bf Note:} & \\\hline
 \end{tabular*}
 \endgroup
 
@@ -61,17 +62,28 @@
 %-------------------TESTFRAGEN
 %=========================================================
 \question[3]
-Vereinfache und forme den Term so um, dass im endergebnis keine negativen Exponenten vorhanden sind.
-\[\frac{x\*x^4\left(y^{-2}\*\sqrt{y^{16}}\right)}{x^{-2}\*x^7\*\sqrt{x^4}}\]
-\ifprintanswers
-    \begin{solution}
-        tbd
-    \end{solution}
-\else
-    \vspace{5pt}
-    \antwort{9}
-\fi
+Berechne die Lösungsmenge der folgenden Gleichungen für $x$.
+\begin{parcols}[2]
+	\part $11-6(x-14)=20-3(2x-25)$
+	\part $2x^2+3=7x$
+\end{parcols}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		tbd
+\end{solution}}
+{\vspace{5pt}\antwort{9}\vfill}
 
+\question[2]
+Vereinfache und forme den Term so um, dass im Endergebnis keine negativen Exponenten vorhanden sind.
+\[\frac{x\*x^4\left(y^{-2}\*\sqrt{y^{16}}\right)}{x^{-2}\*x^7\*\sqrt{x^4}}\]
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+	tbd
+\end{solution}}
+{\vspace{5pt}\antwort{9}\newpage}
+
+
+%------------------------------------------------
 \question[3]
 Entscheide in der Tabelle unten, ob die Gleichungen richtig oder falsch sind. Die Antworten müssen nicht begründet werden.\newline
 \begin{small}
@@ -83,7 +95,7 @@ Entscheide in der Tabelle unten, ob die Gleichungen richtig oder falsch sind. Di
 		& richtig & falsch \\\hline
 		\[\displaystyle\frac{b}{a}+\frac{a}{b}=1\] & & \\\hline
 		\[\displaystyle\frac{1}{\sqrt{x}}+\frac{1}{\sqrt{y}}=\frac{\sqrt{x}+\sqrt{y}}{\sqrt{xy}}\] & & \\\hline
-		\[\displaystyle\left(\frac{a^n}{a^{-n}}\right)\*a^{2n}=a^{4n^2+2n}\] & & \\\hline
+		\[\displaystyle\left(\frac{a^n}{a^{-n}}\right)^2\*a^{2n}=a^{4n^2+2n}\] & & \\\hline
 		\[\displaystyle\frac{\frac{x+y}{x}}{\frac{y}{x-y}}=\frac{x^2-2xy-y^2}{xy}\] & & \\\hline
 	\end{tabular}
 \end{table}
@@ -91,18 +103,9 @@ Entscheide in der Tabelle unten, ob die Gleichungen richtig oder falsch sind. Di
 {\begin{solution}
 	tbd
 \end{solution}}
-{}
+{\antwort{13.5}\newpage}
 
 %------------------------------------------------
-\newpage
-\question[3]
-Faktorisiere den Term so weit wie möglich: \[30xy-18y-50xz+30z=\hspace{8cm}\]
-\ifthenelse{\boolean{printanswers}}
-{\begin{solution}
-		tbd
-\end{solution}}
-{\antwort{9}}
-
 \question[4]
 Berechne die fehlenden Grössen $w, x, y$ und $z$.
 \begin{figure}[H]
@@ -113,30 +116,49 @@ Berechne die fehlenden Grössen $w, x, y$ und $z$.
 {\begin{solution}
 		tbd
 \end{solution}}
-{}
+{\antwort{15}\newpage}
+
 
 %------------------------------------------------
-\newpage
-\noaddpoints
-\question[\totalpoints]
-\addpoints
-\begin{minipage}{0.4\linewidth}
-	\begin{parts}
-		\part[1] Bestimme $\displaystyle\frac{A_2}{A_1}$
-		\part[1] Bestimme $\displaystyle\frac{A_3}{A_1}$
-	\end{parts}
-\end{minipage}
-\hfill
-\begin{minipage}{0.55\linewidth}
-	\centering\includegraphics[scale=0.18]{Geometrie/data-geometrie/GZP25_Teil1Aufg5.png}
-\end{minipage}
+\question[7]\
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+		>=latex,   %Voreinstellung für Pfeilspitzen
+		font= \footnotesize, scale=0.9]
+		%Raster zeichnen
+		\draw [color=gray!50]  [step=10mm] (-2.2,-2.2) grid (9.7,6.7);
+		% Achsen zeichnen
+		\draw[->,thick] (-2.4,0) -- (9.9,0) node[below] {\normalsize $x$};
+		\draw[->,thick] (0,-2.4) -- (0,6.9) node[left] {\normalsize $y$};
+		% Achsen beschriften
+		\foreach \x in {-2,-1,1,2,...,9} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+		\foreach \y in {-2,-1,1,2,...,6} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+		% Besserer Ursprung
+		\draw[color=black] (0pt,-7pt) node[right] {$0$};
+		%Funktionen zeichnen:
+		\clip(-2.2,-2.2) rectangle (9.2,6.7); %Bildbereich
+		\draw[black,domain=-2:9,samples=100,line width=1.5pt] plot (\x, {-5/4*\x+19/4});
+		\draw[color=plotblue, fill=plotblue] (-1,6) circle (2.5pt);
+		\draw[color=plotblue, fill=plotblue] (3,1) circle (2.5pt);
+		\draw[color=plotblue] (-1.3,5.7) node {\normalsize $A$};
+		\draw[color=plotblue] (3.3,1.2) node {\normalsize $B$};
+		\draw[fill=black] (5.2,-1.3) node {\normalsize $f$};
+	\end{tikzpicture}
+\end{figure}
+\begin{parts}
+	\part Gib die Funktionsgleichung der dargestellten Gerade $f$ an.
+	\part Zeichne die Gerade $g:y=2x-1$ ins Koordinatensystem ein.
+	\part Bestimme die Gleichung der zu $g$ senkrechten Gerade $h$, die durch den Punkt $P(5,-7)$ geht.
+	\part Bestimme den Schnittpunkt der beiden Geraden $f$ und $g$.
+\end{parts}
 \ifthenelse{\boolean{printanswers}}
 {\begin{solution}
 		tbd
 \end{solution}}
-{\antwort{9}}
+{\vspace{5pt}\antwort{11.5}\antwort{25}\newpage}
 
-
+%------------------------------------------------
 \question[3]
 Entscheide in der Tabelle unten, ob die Gleichungen richtig oder falsch sind. Die Antworten müssen nicht begründet werden.\newline
 \begin{small}
@@ -144,20 +166,24 @@ Entscheide in der Tabelle unten, ob die Gleichungen richtig oder falsch sind. Di
 \end{small}
 \begin{minipage}{0.35\linewidth}
 	\centering
-	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm, 
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
 		>=latex,   %Voreinstellung für Pfeilspitzen
 		font= \footnotesize, scale=2.4]
 		%Raster zeichnen
 		% \draw [color=gray!50]  [step=5mm] (-1.1,-1.1) grid (1.1,1.1);
 		% Achsen zeichnen
-		\draw[->,thick] (-1.1,0) -- (1.2,0) node[right, below] {\normalsize $x$};
-		\draw[->,thick] (0,-1.1) -- (0,1.2) node[above, left] {\normalsize $y$};
+		\draw[->,thick] (-1.1,0) -- (1.3,0) node[right, below] {\normalsize $x$};
+		\draw[->,thick] (0,-1.1) -- (0,1.3) node[above, left] {\normalsize $y$};
 		% Achsen beschriften
-		\foreach \x in {-1,1} \draw (\x,-.03) -- (\x,.03) node[below=4pt] {$\x$};
-		\foreach \y in {-1,1} \draw (-.03,\y) -- (.03,\y) node[left=4pt] {$\y$};
+		\foreach \x in {-1,1} \draw (\x,-.03) -- (\x,.03);
+		\foreach \y in {-1,1} \draw (-.03,\y) -- (.03,\y);
+		\draw[color=black] (1.05,-.1) node {$1$};
+		\draw[color=black] (-.05,1.1) node {$1$};
+		\draw[color=black] (-1.1,-.1) node {$-1$};
+		\draw[color=black] (-.1,-1.1) node {$-1$};
 		% Besserer Ursprung
 		\draw[color=black] (0pt,-3pt) node[right] {$0$};
-		%Funktionen zeichnen:
+		% Funktionen zeichnen:
 		\clip(-1.1,-1.1) rectangle (1.1,1.1); %Bildbereich
 		\draw circle [radius=1];
 	\end{tikzpicture}
@@ -172,97 +198,60 @@ Entscheide in der Tabelle unten, ob die Gleichungen richtig oder falsch sind. Di
 			& richtig & falsch \\\hline
 			$\displaystyle\tan{125^\circ}<0$ & & \\\hline
 			$\displaystyle\sin{\alpha}=\sin{180^\circ-\alpha}$ & & \\\hline
-			$\displaystyle\cos{34'^\circ}=\cos{200^\circ}$ & & \\\hline
+			$\displaystyle\cos{34^\circ}=\cos{200^\circ}$ & & \\\hline
 			$\displaystyle\cos{10^\circ}\*\tan{10^\circ}=\sin{10^\circ}$ & & \\\hline
 		\end{tabular}
 	\end{table}
 	\endgroup
 \end{minipage}
-
-
-%------------------------------------------------
-\newpage
-\noaddpoints
-\question[\totalpoints]
-\addpoints
-Berechne die Lösungsmenge der folgenden Gleichungen für $x$.
-\begin{parts}
-	\part[2] $11-6(x-14)=20-3(2x-25)$
-\end{parts}
-\ifthenelse{\boolean{printanswers}}
-{\begin{solution}
-		tbd
-\end{solution}}
-{\vspace{5pt}\antwort{4.5}}
-\begin{parts}
-	\setcounter{partno}{1}
-	\part[2] $(x^2-7x+10)(7x-1)=0$
-\end{parts}
-\ifthenelse{\boolean{printanswers}}
-{\begin{solution}
-		tbd
-\end{solution}}
-{\vspace{5pt}\antwort{5}}
-\begin{parts}
-	\setcounter{partno}{2}
-	\part[2] $2x^2+3=7x$
-\end{parts}
-\ifthenelse{\boolean{printanswers}}
-{\begin{solution}
-		tbd
-\end{solution}}
-{\vspace{5pt}\antwort{5}}
-\begin{parts}
-	\setcounter{partno}{3}
-	\part[2] $\displaystyle\frac{x-1}{x+3}-\frac{x-4}{x+5}=\frac{7x+13}{x^2+8x+1}$
-\end{parts}
-\ifthenelse{\boolean{printanswers}}
-{\begin{solution}
-		tbd
-\end{solution}}
-{\vspace{5pt}\antwort{5}}
-
-
-%------------------------------------------------
-\newpage
-\question[4]
-Löse das Gleichungssystem ohne Diskussion der Sonderfälle.
-\[\systeme{ax+2y=4,x+y=a}\]
-\ifthenelse{\boolean{printanswers}}
-{\begin{solution}
-		tbd
-\end{solution}}
-{\antwort{20}}
-
-%------------------------------------------------
-\newpage
-\noaddpoints
-\question[\totalpoints]
-\addpoints
-\begin{minipage}{0.47\linewidth}
+\question[3]
+\begin{minipage}{0.3\linewidth}
 	\begin{parts}
-		\part[2] Gib die Funktionsgleichung der dargestellten Gerade $a$ an.
-		\part[1] Zeichne die Gerade $b:y=2x-1$ ins Koordinatensystem ein.
+		\part Bestimme $\displaystyle\frac{A_2}{A_1}$
+		\part Bestimme $\displaystyle\frac{A_3}{A_1}$
 	\end{parts}
 \end{minipage}
 \hfill
-\begin{minipage}{0.47\linewidth}
-	\centering\includegraphics[scale=0.6]{Geometrie/data-geometrie/GZP25_Teil1Aufg9.png}
+\begin{minipage}{0.65\linewidth}
+	\centering\includegraphics[scale=0.22]{Geometrie/data-geometrie/GZP25_Teil1Aufg5.png}
 \end{minipage}
-\begin{parts}
-	\setcounter{partno}{2}
-	\part[2] Bestimme die Gleichung der zu $b$ senkrechten Gerade $c$, die durch den Punkt $P(5,-7)$ geht.
-	\part[2] Bestimme den Schnittpunkt der beiden Geraden $a$ und $b$.
-\end{parts}
 \ifthenelse{\boolean{printanswers}}
 {\begin{solution}
 		tbd
 \end{solution}}
-{\vspace{5pt}\antwort{17}}
+{\vspace{7pt}\antwort{9.5}\newpage}
+
+
+%------------------------------------------------
+\question[3]
+Berechne die Lösungsmenge der folgenden Gleichungen für $x$.
+\[\frac{x-1}{x+3}-\frac{x-4}{x+5}=\frac{7x+13}{x^2+8x+15}\]
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		tbd
+\end{solution}}
+{\antwort{22.5}\newpage}
+
+
+%------------------------------------------------
+\question[4]
+Löse das Gleichungssystem ohne Diskussion der Sonderfälle.
+\[\systeme[xy]{a\*x+2y=4,x+y=a}\]
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		tbd
+\end{solution}}
+{\antwort{22}}
 
 
 \endgradingrange{ersterTeil} % beendet die Unterteilung der Notentabelle
 \end{questions}
+
+\ifthenelse{\boolean{printanswers}}
+{}
+{\noindent \textbf{Reserveplatz}\antwort{25}
+\noindent \textbf{Reserveplatz}\antwort{25}}
+
 
 
 
@@ -283,7 +272,7 @@ Löse das Gleichungssystem ohne Diskussion der Sonderfälle.
 \renewcommand{\arraystretch}{1.5}
 \begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}}l @{\extracolsep{6pt}}l}\hline
     \textbf{\theme} & {\bf Lehrpersonen:} & Dc, Fh, Gt, Gu, Ss \\\hline
-    \textbf{Mathematik, Teil 2 (mit TR)} & {\bf Dauer:} & {\bf 45 Minuten} \\\hline
+    \textbf{Mathematik, Teil 2 (mit TR)} & {\bf Dauer:} & 45 Minuten \\\hline
     \textbf{Name:} & {\bf Klasse:} &  \\\hline
     \textbf{Vorname:} &  & \\\hline
 \end{tabular*}
@@ -297,7 +286,7 @@ Löse das Gleichungssystem ohne Diskussion der Sonderfälle.
     \partialgradetable{zweiterTeil}[h][questions]\\[1cm]
     Der Rechenweg muss \textbf{vollständig und nachvollziehbar} sein. \\
     Unvollständige Lösungswege haben einen Punktabzug zur Folge.\\
-    Als Hilfsmittel ist nur ein Taschenrechner (Ti-30X o.a.) erlaubt.\\
+    Als Hilfsmittel ist ein Taschenrechner (TI-Nspire CX-CAS) erlaubt.\\
 \end{center}
 
 \noindent
@@ -308,7 +297,6 @@ Löse das Gleichungssystem ohne Diskussion der Sonderfälle.
     %\Huge{Repetitionsprüfung}
 \end{center}
 %========================================================
-
 \newpage
 \begin{questions}
 \setcounter{question}{9} % fixiert den counter für fortlaufende Nummerierung
@@ -316,6 +304,26 @@ Löse das Gleichungssystem ohne Diskussion der Sonderfälle.
 %=========================================================
 %-------------------TESTFRAGEN
 %=========================================================
+\question[3]
+\begin{parts}
+	\part Bestimme die Gleichung $f:y=ax^2+bx+c$ einer quadratischen Funktion mit den Nullstellen (zeros) $x_1=2$ und $x_2=4$ so, dass die Parabel durch den Punkt $P(-1/30)$ geht.
+	\part Gib die Koordinaten des Scheitelpunktes (vertex) an.
+\end{parts}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		tbd
+\end{solution}}
+{\vspace{5pt}\antwort{22}\newpage}
+
+
+%------------------------------------------------
+\question[3]
+Die Katheten eines rechtwinkligen Dreiecks messen $a=3.7$ und $b=2.4$. Berechne die Länge der Winkelhalbierenden (angle bisector) des Winkels $\alpha$.
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		tbd
+\end{solution}}
+{\vspace{5pt}\antwort{9}\vfill}
 \question[3]
 Berechne $x$ und $y$.
 \begin{figure}[H]
@@ -325,11 +333,52 @@ Berechne $x$ und $y$.
 {\begin{solution}
 		tbd
 \end{solution}}
-{\vspace{5pt}\antwort{8}}
-\vfill
+{\vspace{5pt}\antwort{9}\newpage}
+
+
+%------------------------------------------------
 \question[3]
+Berechne die Berghöhe $h$ aus den Angaben $\alpha=42^\circ$ und $\beta=59^\circ$.
+\begin{figure}[H]
+	\centering\includegraphics[scale=0.5]{Geometrie/data-geometrie/GZP25_Teil2Aufg4.png}
+\end{figure}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		tbd
+\end{solution}}
+{\vspace{5pt}\antwort{17}\newpage}
+
+
+%------------------------------------------------
+\question[3]
+\begin{minipage}{0.65\linewidth}
+	In einer geraden, quadratischen Säule misst die Seite des Grundquadrates $1$ m. Die Körperdiagonale $d=\overline{AD}$ ist um $40\%$ kürzer als der kürzeste Weg, auf dem man von $A$ über $B$ und $C$ nach $D$ gelangen kann.\\ Berechne die Höhe der Säule $h$.
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\linewidth}
+	\centering\includegraphics[scale=1]{Geometrie/data-geometrie/GZP25_Teil2Aufg6.png}
+\end{minipage}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		tbd
+\end{solution}}
+{\vspace{5pt}\antwort{18}\newpage}
+
+
+%------------------------------------------------
+\question[5]
+Die Parabel mit der Gleichung $f:y=ax^2+bx+c$ hat den Scheitelpunkt (vertex) $S(-1/5)$ und schneidet die Gerade $g:y=5x-43$ bei $x=3$. Berechne den zweiten Schnittpunkt (intersection) der Parabel mit der Geraden.
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		tbd
+\end{solution}}
+{\vspace{5pt}\antwort{23}\newpage}
+
+
+%------------------------------------------------
+\question[4]
 \begin{minipage}{0.45\linewidth}
-	In einem rechtwinkligen Dreieck mit der Hypothenuse $c=10$ cm unterscheiden sich die Kathetenquadrate um $20$ cm$^2$.\\ Berechne die Höhe $h_c$.
+	In einem rechtwinkligen Dreieck mit der Hypotenuse $c=10$ cm unterscheiden sich die Kathetenquadrate um $20$ cm$^2$.\\ Berechne die Höhe $h_c$.
 \end{minipage}
 \hfill
 \begin{minipage}{0.52\linewidth}
@@ -339,94 +388,19 @@ Berechne $x$ und $y$.
 {\begin{solution}
 		tbd
 \end{solution}}
-{\vspace{5pt}\antwort{8}}
+{\vspace{5pt}\antwort{21}\newpage}
 
 
 %------------------------------------------------
-\newpage
 \question[4]
-Die Katheten eines rechtwinkligen Dreiecks messen $a=3.7$ und $b=2.4$ Berechne die Länge der Winkelhalbierenden des Winkel $\alpha$.
+Thomas steht gerne früh auf und fährt gerne Velo. Um $06:40$ Uhr startet er jeweils und fährt mit konstanter Geschwindigkeit an die Kanti. Er wohnt $7.5$ km von der Schule entfernt und kommt jeweils um $07:25$ Uhr an. Sein Kollege Franz, der weiter weg wohnt, fährt manchmal mit ihm, aber heute Morgen hat er verschlafen. Franz nimmt deshalb das Töffli, mit dem er konstante $40$ km/h fahren kann, und rast um $07:10$ Uhr am Haus von Thomas vorbei.\newline
+Um welche Uhrzeit holt Franz Thomas ein und wie viele Kilometer sind sie dann noch von der Schule entfernt?
 \ifthenelse{\boolean{printanswers}}
 {\begin{solution}
 		tbd
 \end{solution}}
-{\vspace{5pt}\antwort{9}}
-\vfill
-\question[4]
-\begin{minipage}{0.47\linewidth}
-	Berechne die Berghöhe $h$ aus den Angaben $\alpha=42^\circ$ und $\beta=59^\circ$.
-\end{minipage}
-\hfill
-\begin{minipage}{0.47\linewidth}
-	\centering\includegraphics[scale=0.5]{Geometrie/data-geometrie/GZP25_Teil2Aufg4.png}
-\end{minipage}
-\ifthenelse{\boolean{printanswers}}
-{\begin{solution}
-		tbd
-\end{solution}}
-{\vspace{5pt}\antwort{9}}
-
-
-%------------------------------------------------
-\newpage
-\noaddpoints
-\question[\totalpoints]
-\addpoints
-\begin{parts}
-	\part[3] Bestimme die Gleichung $y=ax^2+bx+c$ einer quadratischen Funktion mit den Nullstellen $x_1=2$ und $x_2=4$ so, dass die Parabel durch den Punkt $P(-1/30)$ geht.
-	\part[1] Gib die Koordinaten des Scheitelpunktes an.
-\end{parts}
-\ifthenelse{\boolean{printanswers}}
-{\begin{solution}
-		tbd
-\end{solution}}
-{\vspace{5pt}\antwort{22}}
-
-
-%------------------------------------------------
-\newpage
-\question[2]
-\begin{minipage}{0.65\linewidth}
-	In einer geraden, quadratischen Säule misst die Seite des Grundquadrates $1$ m. Die Körperdiagonale $d=\overline{AB}$ ist um $40\%$ kürzer als der kürzeste Weg $k$, auf dem man allein über die Kanten von $A$ nach $B$ gelangen kann.\\ Berechne die Höhe der Säule $h$.
-\end{minipage}
-\hfill
-\begin{minipage}{0.3\linewidth}
-	\centering\includegraphics[scale=0.6]{Geometrie/data-geometrie/GZP25_Teil2Aufg6.png}
-\end{minipage}
-\ifthenelse{\boolean{printanswers}}
-{\begin{solution}
-		tbd
-\end{solution}}
-{\vspace{5pt}\antwort{21}}
-
-
-%------------------------------------------------
-\newpage
-\question[6]
-Die Parabel mit der Gleichung $y=ax^2+bx+c$ hat den Scheitelpunkt $S(-1/5)$ und schneidet die Gerade $g:y=5x-43$ bei $x=3$. Berechne den zweiten Schnittpunkt der Parabel mit der Geraden.
-\ifthenelse{\boolean{printanswers}}
-{\begin{solution}
-		tbd
-\end{solution}}
-{\vspace{5pt}\antwort{23}}
-
-%------------------------------------------------
-\newpage
-\noaddpoints
-\question[\totalpoints]
-\addpoints
-Thomas steht gerne früh auf und fährt gerne Velo. Um $06:40$ Uhr startet er jeweils und fährt mit konstanter Geschwindigkeit an die Kanti. Er wohnt $7.5$ km von der Schule entfernt und kommt jeweils um $07:25$ Uhr an. Sein Kollege Franz, der weiter weg wohnt, fährt manchmal mit ihm, aber heute morgen hat er verschlafen. Franz nimmt deshalb das Töffli, mit dem er konstante $40$ km/h fahren kann, und rast um $07:10$ Uhr am Haus von Thomas vorbei.
-\begin{parts}
-	\part[2] Kann Franz Thomas noch einholen?
-	\part[4] Wenn ja, um welche Uhrzeit holt er Thomas ein und wie viele Kilometer sind sie noch von der Schule entfernt?\newline\ \newline Wenn nein, kommt Franz noch rechtzeitig zum Unterricht zur Schule?
-\end{parts}
-\ifthenelse{\boolean{printanswers}}
-{\begin{solution}
-		tbd
-\end{solution}}
-{\vspace{5pt}\antwort{18}}
+{\vspace{5pt}\antwort{20}}
 
 \endgradingrange{zweiterTeil} % beendet die Unterteilung der Notentabelle
-
 \end{questions}
 \end{document}
