@@ -1,0 +1,309 @@
+\documentclass[11pt,oneside]{article}
+\input{../../../Header/packages.sty}
+\input{../../../Header/styleScript.sty}
+\input{../../../Header/headerScript.sty}
+\input{../../../Header/mathexpressions.sty}
+
+
+\newcommand{\Skriptname}{Die Grundlagen des Kreises}
+\newcommand{\Autor}{Jonas Guler (Gu)}
+\newcommand{\version}{\textit{v}1.0}
+\graphicspath{{images/}} % set path to image directory
+
+\begin{document}
+\begin{titlepage}
+	\clearpage
+	\title{\Huge\textbf{\Skriptname} \\[1cm]}
+	\author{Autor:\\ \Autor}
+	\date{\normalsize {Version \version}\\ \datelong}
+	\maketitle
+	\thispagestyle{empty}
+	\vfill
+	\tableofcontents
+\end{titlepage}
+\pagenumbering{arabic}
+%############################################################################################
+\section{Der Kreis}
+\subsection{Kreisumfang}
+	Wie bestimmt man bei gegebenem Durchmesser den Umfang eines Kreises?\newline
+	Dies ist wohl die älteste Frage der Geometrie. Deshalb wollen wir ihr natürlich auf den Grund gehen.
+	\begin{aufgabe}
+		Berechne in den folgenden Teilaufgaben jeweils den Bruch $\frac{\text{Umfang}}{\text{Durchmesser}}$. Was fällt dir dabei auf?
+		\begin{enumcols}[3]
+			\item $d=2,\quad U=6.283$
+			\item $d=3.4,\quad U=10.681$
+			\item $d=0.3,\quad U=0.942$
+		\end{enumcols}
+		Wir stellen also fest, dass folgender Zusammenhang gilt:
+		\[\lineortext{\frac{\text{Umfang}}{\text{Durchmesser}}=\text{konstant}}.\]
+	\end{aufgabe}
+	Wir sehen also die Grösse des Kreises spielt in der obigen Gleichung keine Rolle. In jedem Fall erhalten wir die gleiche konstante Zahl.
+	Betrachten wir die Formel für den Umfang eines Kreises, so stellen wir fest, um welche bekannte Zahl es sich handelt.
+	\begin{satz}[Kreisumfang]
+		Der Umfang eines Kreises mit Radius $r$ beträgt \[U=\lineortext{d\cdot\pi=2r\cdot\pi}.\]
+	\end{satz}
+	Wagen wir gemeinsam einen Blick in die Vergangenheit und versuchen zu verstehen, wie diese konstante Zahl $\pi$ näherungsweise gefunden wurde. Bereits verschiedene Völker der Antike haben verschiedene Näherungswerte gefunden.
+	\begin{aufgabe}
+		\begin{minipage}{0.6\linewidth}\begin{enumerate}[label=\ ]
+				\item Ägypter ($1900$ v. Chr.)
+				\item Babylonier ($2$. Jahrtausend v. Chr.)
+				\item Inder ($500$ v. Chr.)
+				\item Platon ($427-348$ v. Chr.)
+				\item Zhang Heng \& Brahmagupta ($7$. Jhd)
+		\end{enumerate}\end{minipage}\hfill\begin{minipage}{0.4\linewidth}\begin{enumerate}[label=\ ]
+				\item $\left(\frac{4}{3}\right)^4=$
+				\item $\frac{25}{8}=$
+				\item $\left(\frac{26}{15}\right)^2=$
+				\item $\sqrt{2}+\sqrt{3}=$
+				\item $\sqrt{10}=$
+		\end{enumerate}\end{minipage}
+	\end{aufgabe}
+	\begin{figure}[ht]
+		\centering\includegraphics[scale=0.25]{6-12EckArchimedes.png}
+		\caption{Archimedes' einbeschriebene 6-Eck links und rechts mit einem 12-Eck}
+		\label{fig:Archi6-12e}
+	\end{figure}
+	Die erste systematische Berechnung von $\pi$ absolvierte Archimedes ($287-212$ v. Chr.), in dem er den Kreis zwischen regelmässigen Vielecken einzwängt. Dabei startete er mit zwei $6$-Ecken, welche einem Kreis mit Durchmesser $1$ eingeschrieben werden, bzw. umschliessen. (siehe Abbildung \ref{fig:Archi6-12e}) und verdoppelte danach die Anzahl Ecken viermal bis zum $96$-Eck. Nun berechnetet er für jedes Vieleck jeweils den Umfang des äusseren und des inneren und konnte so die Zahl $\pi$ annähern.\newline
+	Die Formel für den Interationsschritt (von $n$ nach $2n$-Ecken) lautet:
+	\begin{equation}\label{eq:iterArchi}
+		U_{2n}=\frac{2\cdot U_n}{\sqrt{2+2\sqrt{1-\left(\frac{U_n}{n}\right)^2}}},
+	\end{equation}
+	wobei $n$ die Anzahl Ecken, $U_n$ der Umfang des regelmässigen $n$-Ecks und $U_{2n}$ der Umfang des regelmässigen $2n$-Ecks entspricht.
+	\begin{aufgabe}
+		Versuche nun den Iterationsweg von Archimedes mit Hilfe deines Taschenrechners nachzuvollziehen. Es soll der Umfang eines Kreises mit Durchmesser $d=1$ angenähert werden. Dabei starten wir mit dem inneren $6$-Eck mit Seitenlänge $s=0.5$, also dem Umfang $U_6=3$. Benutze die Formel \ref{eq:iterArchi}, um die Tabelle unten zu vervollständigen.
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{c|p{6cm}}
+				Eckenzahl $n$ & Umfang $U_n$ \\\hline
+				$6$ & $3$ \\\hline
+				$12$ & \\\hline
+				$24$ & \\\hline
+				$48$ & \\\hline
+				$96$ & \\\hline
+				$192$ & \\\hline
+				$384$ & \\
+			\end{tabular}
+		\end{table}
+	\end{aufgabe}
+	Der Kreis mit Durchmesser $d=1$ hat also einen Umfang von $U=\pi=3.14159265\ldots$. Halten wir also fest:
+	\begin{definition}
+		Die Kreiszahl $\pi$ entspricht für jeden Kreis dem Quotient $\frac{\text{Umfang}}{\text{Durchmesser}}$ und beträgt konstant \[\pi=3.14159265\ldots\]
+	\end{definition}
+	Leider wird diese Methode zur Berechnung von $\pi$ heute nicht mehr verwendet, da die Berechnung mit unendlichen Summen oder unendlichen Produkten viel effizienter und vorallem für den Computer einfacher ist. Jedoch kann man damit $\pi$ beliebig genau berechnen.\newpage
+
+
+\subsection*{Fun Facts: (Stand $2023$)}
+	\begin{itemize}
+		\item \url{https://www.angio.net/pi}, \url{https://www.piday.org/million}
+		\item Bis heute hat die Fachhochschule Graubünden den Weltrekord für die meisten berechneten Nachkommastellen von $\pi$ inne. Sie haben $62.8$ Billionen Stellen nach dem Komma berechnet.\newline Den Weltrekord für die meisten auswendig aufgesagten Nachkommastellen hält der Inder Suresh Kumar Sharma mit $70'030$ Stellen nach dem Komma.
+		\item Betrachten wir ein Quadrat mit Seitenlänge $s=1$ und in diesem Quadrat einen Viertelkreis mit Radius $r=1$. Die \textcolor{red}{Länge des Viertelkreises} ist $\frac{2r\pi}{4}=\frac{\pi}{2}$. Der \textcolor{blue}{halbe Umfang des Quadrats} hat die Länge $1+1=2$. Nun zerstückeln wir diese beiden äusseren Strecken und machen daraus eine Treppe. Die Länge der beiden horizontalen Linien zusammen beträgt immer noch 1, ebenso die Länge der beiden vertikalen Linien zusammen. Diese Treppenlinie hat also insgesamt immer noch die Länge 2. Diese Treppenlinie kann man nun (fast) beliebig formen. Wichtig ist einfach, dass die Striche immer senkrecht zueinander verlaufen. Die Summe aller horizontalen Linien beträgt immer 1, ebenso die Summe der vertikalen Linien. Insgesamt wird die Treppenlinie also immer die Länge 2 haben, egal, wie nahe wir sie an den Viertelkreis \glqq anschmiegen\grqq. Somit bekämen wir im Unendlichen dann: \[1+1=\frac{\pi}{2}\quad\to\quad\pi=4.\]
+		\begin{figure}[ht]
+			\begin{minipage}{0.3\linewidth}
+				\centering\includegraphics[scale=0.7]{pi4_1.png}
+			\end{minipage}
+			\hfill
+			\begin{minipage}{0.3\linewidth}
+				\centering\includegraphics[scale=0.8]{pi4_2.png}
+			\end{minipage}
+			\hfill
+			\begin{minipage}{0.3\linewidth}
+				\centering\includegraphics[scale=0.7]{pi4_3.png}
+			\end{minipage}
+			\caption{Approximation des Kreises mittels senkrechter Linien}
+			\label{fig:pi4}
+		\end{figure}
+	\end{itemize}
+	\begin{aufgabe}
+		Der Umfang der Erde am Äquator beträgt $40'076$ km. (Die Erde werde hier als Kugel idealisiert.)
+		\begin{enumerate}[label=\alph*)]
+			\item Berechne den Äquatorradius $r$.\newline\karos{2}
+			\item \begin{minipage}{0.6\linewidth}
+				Denke dir eine Schnur um den Aquator gelegt. Diese Schnur ist nun $10$ Meter zu lang, Um sie zu spannen, müsste man sie überalletwas von der Erde abstehen lassen. Wie gross muss der Abstand zur Erdoberfläche sein? Schätze zuerst!
+			\end{minipage}
+			\hfill
+			\begin{minipage}{0.35\linewidth}
+				\begin{figure}[H]
+					\centering\includegraphics[scale=0.5]{ErdeMitSchnur.png}
+				\end{figure}
+			\end{minipage}
+			\karos{4}
+		\end{enumerate}
+	\end{aufgabe}
+	\begin{aufgabe}
+		Berechne die Längen dieser Linien.
+		\begin{figure}[H]
+			\centering\includegraphics[scale=0.6]{AufgUmfang.png}
+		\end{figure}
+	\end{aufgabe}
+
+\subsection{Kreisfläche}
+	Um die  Fläche eines Kreises zu berechnen, wenn man seinen Radius kennt, kann man folgenden Trick anwenden:
+	\begin{aufgabe}
+		Betrachte das Geogebra-Applet unter folgenden Link \url{https://www.geogebra.org/m/gpcvcgxc}.
+		\begin{enumerate}[label=\alph*)]
+			\item Erkläre die Konstruktion des Rechtecks aus dem Kreis.
+			\item Begründe, warum der Flächeninhalt des Rechtecks sich bei feinerer Unterteilung (Schieberegler) immer mehr der Größe des Flächeninhalt des Kreises annähert.
+			\item Stelle eine Formel für den Flächeninhalt des Rechtecks auf. Benutze dabei die Formel für den Umfang des Kreises mit Radius $r$. \textbf{Tipp:} Seite mal Seite ;-)
+		\end{enumerate}
+	\end{aufgabe}
+	\begin{satz}[Kreisfläche]
+		Der Flächeninhalt eines Kreis mit Radius $r$ beträgt also: \[\lineortext{A=r^2\pi}.\]
+	\end{satz}
+	\begin{aufgabe}
+		\begin{enumerate}[label=\alph*)]
+			\item Welchen Flächeninhalt hat ein Kreis mit Durchmesser $d=10$ cm?
+			\item Welchen Durchmesser hat ein Kreis mit Flächeninhalt $A=10$ cm$^2$?
+			\item Welchen Flächeninhalt hat ein Kreis mit Umfang $U=20$ cm?
+			\item Welchen Umfang hat ein Kreis mit Flächeninhalt $A=20$ cm$^2$?
+		\end{enumerate}
+	\end{aufgabe}
+	\begin{aufgabe}
+		Berechne den Inhalt und den Umfang der folgenden grauen Flächen.
+		\begin{figure}[H]
+			\centering\includegraphics[scale=0.6]{AufgFläche.png}
+		\end{figure}
+	\end{aufgabe}
+
+
+\subsection{Kreisbogen und Kreissektor}
+	Starten wir mit einer kurzen Aufgabe aus der realen Welt.
+	\begin{aufgabe}
+		Bearbeite das Geogebra-Applet unter folgendem Link \url{https://www.geogebra.org/m/pyvvjumu} und notiere deine Überlegungen.\vspace{5pt}\newline
+		\karos{4}
+	\end{aufgabe}
+	Die wichtigste Erkenntnis aus der obigen Aufgabe ist:
+	\begin{center}\lineortext{Der Mittelpunktswinkel $\alpha$ ist proportional zur Bogenlänge $b$.}\end{center}
+	Das heisst: \[\frac{b}{U}=\frac{\alpha}{360^\circ}\quad\to\quad b=\lineortext{\frac{\alpha}{360^\circ}\cdot 2r\pi}.\]
+	\begin{satz}[Bogenlänge]
+		\begin{minipage}{0.65\linewidth}
+			Ein Kreisbogen mit Radius $r$ und Mittelpunktswinkel $\alpha$ hat die Länge \[b=\lineortext{\frac{\alpha}{180^\circ}\cdot r\cdot\pi}.\]
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.3\linewidth}
+			\centering\includegraphics[scale=0.5]{Kreisbogen.png}
+		\end{minipage}
+		\textit{Beachte: Mit $\alpha=360^\circ$ erhälst du wieder die Formel für den Umfang des Kreises.}
+	\end{satz}
+	\begin{aufgabe}
+		\begin{enumerate}[label=\alph*)]
+			\item Die Entfernung der Sonne zur Erde beträgt $150$ Millionen Kilometer. Welchen Weg legt die Erde in einem Tag auf ihrer Kreisbahn um die Sonne zurück?
+			\item Ein Satellit umkreist die Erde in $280$ km Höhe über der Erdoberfläche. Für eine komplette Umkreisung braucht er $1.5$ Stunden. Welchen Weg legt der Satellit in einer Stunde zurück? Welche Bahngeschwindigkeit (in km/s) hat der Satellit? \textbf{Tipp: } Erdradius = 6370 km
+		\end{enumerate}
+		\karos{4}
+	\end{aufgabe}
+	Mit einer ähnlichen Überlegung können wir die Fläche eines Kreissektors herleiten. Auch hier ist die Fläche proportional zur Winkel. Das heisst:
+	\[\frac{A_s}{A}=\frac{\alpha}{360^\circ}\quad\to\quad A_s=\frac{\alpha}{360^\circ}\cdot A=\frac{\alpha}{360^\circ}\cdot r^2\pi\]
+	Für die Sektorfläche gibt es aber auch eine zweite Formel, die man bekommt, wenn man die obige Formel mit der Bogenlänge kombiniert:
+	\[A_s=\frac{\alpha}{360^\circ}\cdot r\cdot r\cdot\pi=\frac{1}{2}\cdot\utext{\frac{\alpha}{360^\circ}\cdot 2r\cdot\pi}{=b}\cdot r=\frac{1}{2}\cdot b\cdot r\]
+	Bemerke das die Formel sehr ähnlich ist zum Dreieck, wobei die Bogenlänge als Grundlinie und der Radius als Höhe interpretiert werden kann.
+	\begin{satz}[Sektorfläche]
+		\begin{minipage}{0.65\linewidth}
+			Ein Kreissektor mit Radius $r$ und Mittelpunktswinkel $\alpha$ hat den Flächeninhalt \[A_s=\frac{\alpha}{360^\circ}\cdot r^2\cdot\pi=\frac{1}{2}\cdot b\cdot r\]
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.3\linewidth}
+			\centering\includegraphics[scale=0.5]{Kreissektor.png}
+		\end{minipage}
+	\end{satz}
+	\begin{aufgabe}
+		Berechne den Umfang und den Flächeninhalt folgender Figuren. Gib das Resultat in Abhängigkeit der Gitterlänge an.
+		\begin{figure}[H]
+			\centering\includegraphics[scale=0.7]{AufgSekBog.png}
+		\end{figure}
+		\karos{4}
+	\end{aufgabe}
+	\newpage
+
+
+\section{Das Bogenmass}
+	In diesem Abschnitt möchte wir neben Grad ein neues Winkelmass einführen. Dieses hat grosse Vorteile und wird deshalb vorallem in der höheren Mathematik, naturwissenschaftlichen und technischen Anwendungen im internationalen Froschungsbereich verwendet. Eine Idee für dieses neue Winkelmass wäre, einfach die Bogenlänge des zum Winkel gehörenden Kreissektors als Einheit zu verwenden. Dabei ergibt sicher aber noch eine kleine Herausforderung. Die Bogenlänge ist abhängig von Radius des Kreissektors. Um dies zu umgehen, haben sich die Mathematiker wieder an ihrem Lieblingstrick bedient. Sie wählen den Radius $r=1$, damit er in der Berechung ignoriert werden kann.
+	\begin{definition}
+		\begin{minipage}{0.55\linewidth}
+			Betrachte einen Kreis mit Radius $r=1$ um den Ursprung. Die \textcolor{green}{Bogenlänge} des zum Winkel gehörenden Kreissektors definiert das Bogenmass. \newline
+			Das heisst: der Winkel $45^\circ$ entspricht \lineortext{$\quad0.79\quad$} im Bogenmass.
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.4\linewidth}
+			\begin{figure}[H]
+				\centering\includegraphics[scale=0.29]{Einheitskreis.png}
+			\end{figure}
+		\end{minipage}
+	\end{definition}
+	\begin{aufgabe}
+		\begin{enumerate}
+			\item Ein $360^\circ$ Winkel entspricht, wie viel im Bogenmass? Erkläre deine Lösung.
+			\item Fülle die folgende Tabelle aus.
+			\begin{table}[H]
+				\centering
+				\begin{tabular}{m{3cm}|m{0.6cm}|m{0.6cm}|m{0.6cm}|m{0.6cm}|m{0.6cm}|m{0.6cm}|m{0.6cm}|c|m{0.6cm}}
+					Winkel in Grad & $0$ & $360$ & $\:\:1$ & $\:90$ & $180$ & $270$ & $\:33$ & & \\\hline
+					Winkel in Bogenmass & $0$ & & & & & & & $1.5708$ & $1$ \\\hline
+					Winkel als Vielfaches von $\pi$ & $0$ & & $\:\:$X & $\:\frac{\pi}{2}$ & & & $\:\:$X & X & $\:\:$X \\
+				\end{tabular}
+			\end{table}
+			\item Überprüfe deine Berechnungen aus der Tabelle, indem du im Geogebra-Applet \url{https://www.geogebra.org/m/wwh8jhtm} den roten Punkt auf dem Kreis verschiebst.
+		\end{enumerate}
+		\karos{4}
+	\end{aufgabe}
+	\subsection*{Wie können wir nun aber Grad in Bogenmass umrechnen?}
+	Wir betrachten dafür die Formel für die Bogenlänge:
+	\begin{equation*}
+		\begin{aligned}[c]
+			\textcolor{green}{b}=\frac{\alpha}{360^\circ}\cdot2\pi\cdot r
+		\end{aligned}
+		\qquad\to\qquad
+		\begin{aligned}[c]
+			\alpha=\frac{360^\circ\cdot\textcolor{green}{b}}{2\pi \cdot r}=\frac{180^\circ}{\pi}\approx 57.3^\circ
+		\end{aligned}
+	\end{equation*}
+	Bemerke, dass in der Berechnung oben die Länge des Radius und des Bogens keine Rolle spielen, Solange sie gleich gross sind. Das heisst, für den speziellen Winkel $\alpha=57.3^\circ$ ist die Bogenlänge gleich wie der Radius. Deshalb wird dieser Winkel auch mit $1$ rad bezeichnet.
+	\begin{satz}
+		\begin{minipage}{0.55\linewidth}
+			Für die Umrechnung von Bogenmass auf Grad gilt also
+			\[1 \text{ rad}=\frac{180^\circ}{\pi}.\]
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.4\linewidth}
+			\begin{figure}[H]
+				\centering\includegraphics[scale=0.45]{UmrechnungGradRad.jpeg}
+			\end{figure}
+		\end{minipage}
+	\end{satz}
+	\begin{aufgabe}
+		\begin{enumerate}[label=\alph*)]
+			\item Berechne die folgenden Winkel im Bogenmass.
+			\begin{table}[H]
+				\centering
+				\begin{tabular}{m{3cm}|m{0.8cm}|m{0.8cm}|m{0.8cm}|m{0.8cm}|m{0.8cm}|m{0.8cm}|m{0.8cm}|m{0.8cm}|m{0.8cm}}
+					Winkel in Grad & $0^\circ$ & $30^\circ$ & $45^\circ$ & $60^\circ$ & $90^\circ$ & $120^\circ$ & $180^\circ$ & $270^\circ$ & $360^\circ$\\\hline
+					Winkel in rad & & & & & & & & & \\
+				\end{tabular}
+			\end{table}
+			\item Wandle in Bogenmass bzw. Gradmass um.
+			\begin{enumerate}[label=\roman*)]\begin{multicols}{4}
+					\item $135^\circ$
+					\item $225^\circ$
+					\item $35^\circ$
+					\item $\frac{\pi}{5}$
+					\item $\frac{3\pi}{5}$
+					\item $\frac{7\pi}{9}$
+					\item $\frac{\pi}{10}$
+					\item $\frac{3\pi}{20}$
+			\end{multicols}\end{enumerate}
+		\end{enumerate}
+	\end{aufgabe}\newpage
+
+
+
+\subsection*{History}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|p{13mm}|p{20mm}|p{30mm}|p{70mm}|}\hline
+		%\multicolumn{4}{|l|}{History}\\\hline
+		Version & Datum & Person & Bemerkung \\\hline
+		$0.1$ & 22.12.2023 & Jonas Guler & Kapitel erstellt \\\hline
+		$0.2$ & ToDo & Jonas Guler & \\\hline
+	\end{tabular}
+\end{table}
+
+\end{document}
