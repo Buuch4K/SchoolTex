@@ -1,0 +1,228 @@
+\documentclass[11pt,oneside]{article}
+\input{../../../Header/packages.sty}
+\input{../../../Header/styleScript.sty}
+\input{../../../Header/headerScript.sty}
+\input{../../../Header/mathexpressions.sty}
+
+
+\newcommand{\Skriptname}{Ähnlichkeit}
+\newcommand{\Autor}{Jonas Guler (Gu)}
+\newcommand{\version}{\textit{v}1.0}
+\graphicspath{{images/}} % set the path to the image directory
+
+\begin{document}   % KSH-Gubser und KSH-Aeppli - PDF
+\begin{titlepage}
+	\clearpage
+	\title{\Huge\textbf{\Skriptname} \\[1cm]}
+	\author{Autor:\\ \Autor}
+	\date{\normalsize {Version \version}\\ \datelong}
+	\maketitle
+	\thispagestyle{empty}
+	\vfill
+	\tableofcontents
+\end{titlepage}
+\pagenumbering{arabic}
+%############################################################################################
+\section{Ähnlichkeit}
+\begin{minipage}{0.47\linewidth}
+	Male im folgenden Bild \glqq ähnliche\grqq\: Figuren gleich aus.\newline
+	\includegraphics[scale=0.15]{colorsimilarshapes.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.47\linewidth}
+	Welche der folgenden Figuren würdest du als \glqq ähnliche\grqq\: bezeichnen.\newline\vspace{4.3cm}
+	\includegraphics[scale=0.35]{matchsimilarshapes.png}
+\end{minipage}
+\begin{aufgabe}
+	Vergleiche die obigen beiden Aufgaben. Wie würdest du in deinen eigenen Worten beschreiben, was ähnliche Figuren ausmachen?\vspace{5pt}\newline\karos{3}
+\end{aufgabe}
+Nachdem wir hier sehr einfache Aufgaben betrachtet haben, versuchen wir das in den nächsten beiden ein wenig anspruchsvoller und mathematischer zu betrachten.
+\begin{aufgabe}
+	Zeichne die folgenden Figuren $4$ mal nach. Versuche sie nun so zusammenzufügen, dass sie genauso aussieht wie die abgebildete Figur, einfach grösser.\newline
+	\begin{minipage}{0.47\linewidth}
+		\centering
+		\includegraphics[scale=0.5]{30-60-90-dreieck.png}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.47\linewidth}
+		\centering
+		\includegraphics[scale=0.6]{l-shape.png}
+	\end{minipage}
+\end{aufgabe}
+Wir sind also nun in der Lage, den Begriff der Ähnlichkeit auch mathematisch exakt zu definieren.
+\begin{definition}
+	Zwei Dreiecke heissen ähnlich, wenn sie in ihren Winkeln übereinstimmen. Das heisst, alle enthaltenen Winkel sind gleich.
+	\[\alpha=\alpha',\:\beta=\beta'\text{ und } \gamma=\gamma'\]
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.5]{ähnlichedreiecke.png}
+	\end{figure}
+	Um die Ähnlichkeit beider Dreiecke $\triangle_1$ und $\triangle_2$ auszudrücken, schreiben wir $\triangle_1\sim\triangle_2$.
+\end{definition}
+Daraus können wir auch bereits den wichtigsten Satz für ähnliche Dreiecke angeben.
+\begin{satz}\label{satz:SeitenverhälnisseÄhnlichkeit}
+	Falls zwei Dreiecke ähnlich sind, so sind alle einander entsprechenden Seitenverhältnisse gleich gross.
+	\[\frac{a}{b}=\frac{a'}{b'}\text{ und }\frac{a}{c}=\frac{a'}{c'}\text{ und }\frac{b}{c}=\frac{b'}{c'}\]
+\end{satz}
+Um diesen Umstand zu beweisen, brauchen wir aber noch ein neues Werkzeug, was uns erlaubt ein geometrisches Problem in ein algebraisches, das heisst rechnerisches mit Brüchen, zu Übersetzen.
+\newpage
+
+\section{Die Strahlensätze}
+Betrachten wir eine Strecke von $A$ nach $B$. Das Ziel ist, diese Strecken konstruktiv in $5$ gleich grosse Stücke zu unterteilen. Überlege dir zuerst selbstständig, wie du dies angehen würdest und tausche dich danach mit deinem Nachbarn/ deiner Nachbarin aus.
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[scale=1][line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+		\clip(-3.8,-2.5) rectangle (2.8,0.5);
+		\draw [line width=1pt] (-3,0)--(2,0);
+		\filldraw[black] (-3,0) circle (2pt) node[anchor=east]{$A$};
+		\filldraw[black] (2,0) circle (2pt) node[anchor=west]{$B$};
+	\end{tikzpicture}
+\end{figure}
+Betrachten wir dazu die folgende Aufgaben.
+\begin{aufgabe}
+	\begin{minipage}{0.57\linewidth}
+		Von einem Dreieck $\triangle PQR$ ist der Umfang $U$ bekannt. Jemand möchte nun eine zu $\overline{QR}$ parallele Strecke $\overline{ST}$ anbringen, sodass $U_{\triangle PST}=\frac{1}{2}\*U_{\triangle PQR}$ ist. Wo genau muss diese Person die neue Strecke anbringen? Begründe.
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.37\linewidth}
+		\centering\includegraphics[scale=0.5]{einstiegstrahlensatz.png}
+	\end{minipage}
+	\karos{3}
+\end{aufgabe}
+Wir sehen also, dass wenn zwei Strahlen (in unserem Fall die Seiten $PQ$ und $PR$) von parallelen Geraden geschnitten werden, so werden die Verhältnisse der Teilstrecken vom einen Strahl auf den anderen \glqq vererbt\grqq. Diese Aussage ist auch als erster Strahlensatz bekannt.
+\begin{satz}[Erster Strahlensatz]
+	\begin{minipage}{0.57\linewidth}
+		Gegeben seien zwei Strahlen mir einem gemeinsamen Ausgangspunkt $O$. Auf jedem Strahl liegen jeweils zwei Punkte, die wiederum von zwei Geraden verbunden werden. Betrache die Skizze rechts. Dann gilt:
+		\begin{align*}
+			g\parallel h&\same\frac{\overline{OA}}{\overline{OA'}}=\frac{\overline{OB}}{\overline{OB'}} && \text{1. Fassung}\\
+			g\parallel h&\same\frac{\textcolor{red}{\overline{OA}}}{\textcolor{blue}{\overline{AA'}}}=\frac{\textcolor{red}{\overline{OB}}}{\textcolor{blue}{\overline{BB'}}} && \text{2. Fassung}
+		\end{align*}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.37\linewidth}
+		\centering\includegraphics[scale=0.3]{ersterstrahlenssatz.png}
+	\end{minipage}
+\end{satz}
+Dieser Satz macht eine Äquivalenzaussage. Das bedeutet, dass er in beide Richtungen verwendet werden kann. Betrachten wir dazu ein Beispiel.
+\begin{beispiel}
+	In der folgenden Figur sind die beiden Geraden $e$ und $f$ parallel.\vspace{5pt}\newline
+	\begin{minipage}{0.57\linewidth}
+		Gegeben sind folgende Strecken: $a=2$cm, $b=4$cm und $c=3$cm. Berechne die fehlende Strecke $d$.\vspace{1.5cm}\newline
+		Gegeben sind folgende Strecken: $b=9$cm, $c+d=17$cm und $d=8$cm. Berechne die fehlenden Strecken $a$ und $c$.\vspace{1.5cm}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.37\linewidth}
+		\centering\includegraphics[scale=0.3]{strahlensatzfigur.png}
+	\end{minipage}
+\end{beispiel}
+Der zweite Strahlensatz erlaubt und nun noch die Länge der beiden Parallelenstrecken zu berechnen.
+\begin{satz}[Zweiter Strahlensatz]
+	\begin{minipage}{0.57\linewidth}
+		Gegeben seien zwei Strahlen mir einem gemeinsamen Ausgangspunkt $O$. Auf jedem Strahl liegen jeweils zwei Punkte, die wiederum von zwei Geraden verbunden werden. Betrache die Skizze rechts. Dann gilt:
+		\begin{align*}
+			g\parallel h&\same\frac{\textcolor{red}{\overline{OA}}}{\textcolor{red}{\overline{AB}}}=\frac{\textcolor{blue}{\overline{OA'}}}{\textcolor{blue}{\overline{A'B'}}}
+		\end{align*}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.37\linewidth}
+		\centering\includegraphics[scale=0.34]{zweiterstrahlensatz.png}
+	\end{minipage}
+\end{satz}
+Betrachten wir nochmals dieselbe Figur wie oben, um ein Beispiel für den zweiten Strahlensatz zu zeigen.
+\begin{beispiel}
+	In der folgenden Figur sind die beiden Geraden $e$ und $f$ parallel.\vspace{5pt}\newline
+	\begin{minipage}{0.57\linewidth}
+		Gegeben sind folgende Strecken: $a=2$cm, $b=4$cm und $f=7$cm. Berechne die fehlende Strecke $e$.\vspace{1.5cm}\newline
+		Gegeben sind folgende Strecken: $c+d=17$cm und $e=3$cm. Berechne die fehlenden Strecken $c$ und $f$.\vspace{1.5cm}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.37\linewidth}
+		\centering\includegraphics[scale=0.3]{strahlensatzfigur.png}
+	\end{minipage}
+\end{beispiel}\newpage
+\begin{aufgabe}
+	\begin{enumerate}
+		\item In den Dreiecken sind jeweils zwei Geraden parallel. Berechne die fehlende Seite $x$.
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.6]{aufgstrahlensatz1.png}
+		\end{figure}
+		\item In den Figuren gilt $g\parallel h$. Berechne die fehlenden Grössen.
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.6]{aufgstrahlensatz2.png}
+		\end{figure}
+		\item Zwei Parallelen werden von zwei weiteren Geraden geschnitten. Berechne die fehlenden Längen.
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.6]{aufgstrahlensatz3.png}
+		\end{figure}
+		\item Bestimme $s$ in der folgenden Figur auf zwei verschiedenen Wegen. Folgende Längen sind bekannt: $\overline{AB}=8$cm, $\overline{CD}=3$cm, $\overline{DA}=8$cm und $\overline{DE}=2$cm.
+		\begin{figure}[H]
+			\hspace{1.5cm}\includegraphics[scale=0.5]{aufgtrapez.png}
+		\end{figure}
+	\end{enumerate}
+\end{aufgabe}
+\section{Beweis von Satz \ref{satz:SeitenverhälnisseÄhnlichkeit}}
+Wie bereits gesagt, möchten wir den Hauptsatz für ähnliche Dreiecke beweisen. Mithilfe der Strahlensätze, die wir nun kennengelernt haben, ist dies auch keine grosse Hexerei mehr. Zur Erinnerung nochmals die Behauptung:
+\begin{tcolorbox}[enhanced,colback=red!5!white,fuzzy halo=2mm with gray,colframe=red!75!black]
+	Falls zwei Dreiecke ähnlich sind, so sind alle einander entsprechenden Seitenverhältnisse gleich gross.
+	\[\frac{a}{b}=\frac{a'}{b'}\text{ und }\frac{a}{c}=\frac{a'}{c'}\text{ und }\frac{b}{c}=\frac{b'}{c'}\]
+\end{tcolorbox}
+\begin{beweis}
+	Betrachten wir zwei zueinander ähnliche Dreiecke $\triangle ABC$ und $\triangle A'B'C'$, die so angeordnet sind, dass die Punkte $A$ und $A'$ an derselben Stelle liegen. Dann sehen die beiden Dreiecke aufgund der Ähnlichkeit ($\alpha=\alpha'$) wie folgt aus:
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.4]{beweisähnlich.png}
+	\end{figure}
+	Da nun auch $\beta=\beta'$ und $\gamma=\gamma'$ gilt, sind die beiden Strecken $a$ und $a'$ parallel. Das bedeutet:\vspace{5pt}\newline\karos{6}
+\end{beweis}
+Diese Verhältnisse können wir also genauso wie die Strahlensätze verwenden, um fehlende Strecken einer Figur zu berechnen.
+\begin{aufgabe}
+	\begin{enumerate}
+		\item Von zwei ähnlichen Dreiecken $\triangle ABC$ und $\triangle A'B'C'$ wissen wir Folgendes: $a=9, c=8$ und $b'=c'=2$. Berechne daraus die fehlenden Seiten.
+		\item In der folgenden Figur ist $M$ der Mittelpunkt der Seite $\overline{BC}$, $\overline{AB}=15$ und $\overline{AC}=25$. Welchen Flächeninhalt hat das Viereck $ABMD$.
+		\begin{figure}[H]
+			\hspace{1.5cm}\includegraphics[scale=0.5]{aufgähnlichkeit.png}
+		\end{figure}
+	\end{enumerate}
+\end{aufgabe}
+Den Satz oben könnte man auch anders formulieren. Wie wir nämlich beim Einstieg schon festgestellt haben, sind die Seiten von ähnlichen Figuren vergrössert bzw. verkleinert. Daraus folgt also, dass es für zwei ähnliche Dreiecke eine reelle Zahl $k\in\R$ geben muss, sodass \[a'=k\*a,\quad b'=k\*b\quad\text{und}\quad c'=k\*c\]
+gilt. Diese reelle Zahl $k$ wird auch als Streckfaktor bezeichnet.
+\begin{definition}[Streckfaktor]
+	Der \textbf{Streckfaktor} $k\in\R$ gibt das Mass einer Vergrösserung bzw. Verkleinerung an und entspricht dem Quotienten aus Bildstrecke und Ausgangsstrecke \[k=\frac{a'}{a}=\frac{b'}{b}=\frac{c'}{c}.\]
+\end{definition}
+Wir sehen also, das vergrösserte bzw. verkleinerte Figuren zueinander ähnlich sind. Wie verändert sich die Fläche einer vergrösserten Figur? Dazu untersuchen wir Dreiecke:
+\begin{aufgabe}
+	Betrachte das folgende \href{https://www.geogebra.org/m/afqa8scd}{Geogebra-Applet}. Darin sind zwei zueinander ähnliche Dreiecke abgebildet.
+	\begin{enumerate}[label=\alph*)]
+		\item Vergleiche die Grösse der abgebildeten Flächen und behaupte eine mathematische Formel in Abhängigkeit des Streckfaktors $k$ der Form \[A'=\gap{1.5}\*A\]
+		\item Überprüfe deine Formel an unterschiedlichen Werten für $k$.
+	\end{enumerate}
+	\vspace{5pt}\karos{2}
+	\begin{enumerate}[label=\alph*)]\setcounter{enumi}{2}
+		\item Übertrage deine Behautung in den Satz \thesection.\ref{satz:VergrösserungFlächen} unten und beweise deine Behauptung auch mathematisch.
+	\end{enumerate}
+\end{aufgabe}
+\begin{satz}\label{satz:VergrösserungFlächen}
+	Bei einer Vergrösserung bzw. Verkleinerung um den Faktor $k$ gilt für den Flächeninhalt: \[A'=\gap{1.5}\*A.\]
+\end{satz}
+\begin{beweis}
+	\textit{Tipp:} Es ist vermutlich sinnvoll, die Seiten des im Geogebra braunen Dreiecks als $a,\: b$ und $c$ zu bezeichnen und davon ausgehend die Seiten des blauen Dreiecks zu beschreiben. Im Anschluss probiere die Fläche mit diesen Seiten zu berechnen.
+	\vspace{5pt}\newline\karos{5}
+\end{beweis}
+
+
+\newpage
+\subsection*{History}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|p{13mm}|p{20mm}|p{30mm}|p{70mm}|}\hline
+		%\multicolumn{4}{|l|}{History}\\\hline
+		Version & Datum & Person & Bemerkung \\\hline
+		$1.0$ & 02.08.2024 & Jonas Guler & Kapitel erstellt \\\hline
+		& ToDo & Jonas Guler & \\\hline
+	\end{tabular}
+\end{table}
+
+\end{document}
