@@ -3,8 +3,7 @@
 \input{../Header/styleExam.sty}
 \input{../Header/mathexpressions.sty}
 \input{../Header/headerGZP.sty}
-%\printanswers
-\noprintanswers
+\printanswers % falls kommentiert werden die Antwortenfelder angezeigt
 
 %=========================================================
 \newcommand{\theme}{Zwischenprüfung 2025}
@@ -34,7 +33,6 @@
     {\bf Vorname:} & {\bf Note:} & \\\hline
 \end{tabular*}
 \endgroup
-
 \begin{center}
     \textbf{Bewertungstabelle}\\
     {\small Wird von der Lehrperson ausgefüllt}\\
@@ -46,30 +44,34 @@
     Unvollständige Lösungswege haben einen Punktabzug zur Folge.\\
     Es sind keine Hilfsmittel zugelassen.\\
 \end{center}
-
-\noindent
 \rule[1ex]{\textwidth}{1pt}
 
-\vfill
-\begin{center}
-    %\Huge{Repetitionsprüfung}
-\end{center}
 
 \newpage
 \begin{questions}
 \begingradingrange{ersterTeil} % unterteilt die Notentabelle in zwei Teile
 %=========================================================
-%-------------------TESTFRAGEN
+%----------------------------TESTFRAGEN
 %=========================================================
 \question[3]
 Berechne die Lösungsmenge der folgenden Gleichungen für $x$.
 \begin{parcols}[2]
-	\part $11-6(x-14)=20-3(2x-25)$
 	\part $2x^2+3=7x$
+	\part $11-6(x-14)=20-3(2x-25)$
 \end{parcols}
 \ifthenelse{\boolean{printanswers}}
 {\begin{solution}
-		tbd
+		\begin{parts}
+			\part \begin{align*}
+				2x^2+3&=7x \\
+				2x^2-7x+3&=0\\
+				x_{1,2}&=\frac{-(-7)\pm\sqrt{(-7)^2-4\*2\*3}}{2\*2}\Rightarrow\mathbb{L}=\left\{\frac{1}{2},3\right\}
+			\end{align*}
+			\part \begin{align*}
+				11-6x+84&=20-6x+75\\
+				-6x+95&=-6x+95\Rightarrow\mathbb{L}=\R
+			\end{align*}
+		\end{parts}
 \end{solution}}
 {\vspace{5pt}\antwort{9}\vfill}
 
@@ -78,7 +80,7 @@ Vereinfache und forme den Term so um, dass im Endergebnis keine negativen Expone
 \[\frac{x\*x^4\left(y^{-2}\*\sqrt{y^{16}}\right)}{x^{-2}\*x^7\*\sqrt{x^4}}\]
 \ifthenelse{\boolean{printanswers}}
 {\begin{solution}
-	tbd
+	\[\frac{x\*x^4\left(y^{-2}\*\sqrt{y^{16}}\right)}{x^{-2}\*x^7\*\sqrt{x^4}}=x^5\*y^{-2}\*y^3\*x^{-5}\*x^{-1}=y^1\*x^{-1}=\frac{y}{x}\]
 \end{solution}}
 {\vspace{5pt}\antwort{9}\newpage}
 
@@ -89,32 +91,47 @@ Entscheide in der Tabelle unten, ob die Gleichungen richtig oder falsch sind. Di
 \begin{small}
 	Bewertung: Für $0-2$ korrekte Antworten gibt es keine Punkte; $3$ korrekte Antworten $1.5$ Punkt und falls alle Antworten korrekt sind, gibt es $3$ Punkte.
 \end{small}
-\begin{table}[H]
-	\centering
-	\begin{tabular}{|p{12cm}|c|c|}\hline
-		& richtig & falsch \\\hline
-		\[\displaystyle\frac{b}{a}+\frac{a}{b}=1\] & & \\\hline
-		\[\displaystyle\frac{1}{\sqrt{x}}+\frac{1}{\sqrt{y}}=\frac{\sqrt{x}+\sqrt{y}}{\sqrt{xy}}\] & & \\\hline
-		\[\displaystyle\left(\frac{a^n}{a^{-n}}\right)^2\*a^{2n}=a^{4n^2+2n}\] & & \\\hline
-		\[\displaystyle\frac{\frac{x+y}{x}}{\frac{y}{x-y}}=\frac{x^2-2xy-y^2}{xy}\] & & \\\hline
-	\end{tabular}
-\end{table}
 \ifthenelse{\boolean{printanswers}}
 {\begin{solution}
-	tbd
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|p{10cm}|c|c|}\hline
+			& richtig & falsch \\\hline
+			\[\frac{b}{a}+\frac{a}{b}=1\] & & {\bf X} \\\hline
+			\[\frac{1}{\sqrt{x}}+\frac{1}{\sqrt{y}}=\frac{\sqrt{x}+\sqrt{y}}{\sqrt{xy}}\] & {\bf X} & \\\hline
+			\[\left(\frac{a^n}{a^{-n}}\right)^2\*a^{2n}=a^{4n^2+2n}\] & {\bf X} & \\\hline
+			\[\frac{\frac{x+y}{x}}{\frac{y}{x-y}}=\frac{x^2-2xy-y^2}{xy}\] & & {\bf X} \\\hline
+		\end{tabular}
+	\end{table}
 \end{solution}}
-{\antwort{13.5}\newpage}
+{\begin{table}[H]
+		\centering
+		\begin{tabular}{|p{10cm}|c|c|}\hline
+			& richtig & falsch \\\hline
+			\[\frac{b}{a}+\frac{a}{b}=1\] & & \\\hline
+			\[\frac{1}{\sqrt{x}}+\frac{1}{\sqrt{y}}=\frac{\sqrt{x}+\sqrt{y}}{\sqrt{xy}}\] & & \\\hline
+			\[\left(\frac{a^n}{a^{-n}}\right)^2\*a^{2n}=a^{4n^2+2n}\] & & \\\hline
+			\[\frac{\frac{x+y}{x}}{\frac{y}{x-y}}=\frac{x^2-2xy-y^2}{xy}\] & & \\\hline
+		\end{tabular}
+	\end{table}
+	\antwort{13.5}\newpage}
 
 %------------------------------------------------
 \question[4]
 Berechne die fehlenden Grössen $w, x, y$ und $z$.
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.5]{Geometrie/data-geometrie/GZP25_Teil1Aufg4.png}
+	\includegraphics[scale=0.4]{Geometrie/data-geometrie/GZP25_Teil1Aufg4.png}
 \end{figure}
 \ifthenelse{\boolean{printanswers}}
 {\begin{solution}
-		tbd
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{p{6cm} p{6cm}}
+				\[\frac{w}{12}=\frac{5}{6}\quad\Rightarrow w=10\] &	\[\frac{x}{16}=\frac{8}{12}\quad\Rightarrow x=4\] \\
+				\[\frac{y}{x+12}=\frac{5}{x}\quad\Rightarrow y=20\] & \[\frac{z}{6}=\frac{12}{x}\quad\Rightarrow z=18\]
+			\end{tabular}
+		\end{table}
 \end{solution}}
 {\antwort{15}\newpage}
 
@@ -143,7 +160,10 @@ Berechne die fehlenden Grössen $w, x, y$ und $z$.
 		\draw[color=plotblue, fill=plotblue] (3,1) circle (2.5pt);
 		\draw[color=plotblue] (-1.3,5.7) node {\normalsize $A$};
 		\draw[color=plotblue] (3.3,1.2) node {\normalsize $B$};
-		\draw[fill=black] (5.2,-1.3) node {\normalsize $f$};
+		\draw[color=black] (5.2,-1.3) node {\normalsize $f$};
+		\ifthenelse{\boolean{printanswers}}{
+		\draw[forestgreen,domain=-2:9,samples=100,line width=1.5pt] plot (\x, {2*\x-1});
+		\draw[color=forestgreen] (3.2,4.6) node {\normalsize $g$};}{}
 	\end{tikzpicture}
 \end{figure}
 \begin{parts}
@@ -154,9 +174,33 @@ Berechne die fehlenden Grössen $w, x, y$ und $z$.
 \end{parts}
 \ifthenelse{\boolean{printanswers}}
 {\begin{solution}
-		tbd
+		\begin{parts}
+			\part $f:y=mx+q$ durch die beiden Punkte $A(-1,6)$ und $B(3,1)$. Für die Steigung gilt: \[m_f=\frac{1-6}{3-(-1)}=-\frac{5}{4}.\] Wir können den einen oder anderen Punkt einsetzen, um den $y-$ Achsenabschnitt zu berechnen:
+			\begin{align*}
+				6&=-\frac{5}{4}\*(-1)+q &&1=-\frac{5}{4}\*3+q\\
+				&\Rightarrow q=\frac{19}{4}\\
+				&\Rightarrow f:y=-\frac{5}{4}x+\frac{19}{4}
+			\end{align*}
+			\part Im Koordinatensystem eingezeichnet
+			\part Da die Gerade senkrecht zu $g$ steht, gilt: $m_h=-\frac{1}{m_g}=-\frac{1}{2}$. Der Punkt $P(5,-7)$ gehört zum Graphen:
+			\begin{align*}
+				-7&=-\frac{1}{2}\*5+q\\
+				q&=-7+\frac{5}{2}=-\frac{9}{2}.\\
+				&\Rightarrow h:y=-\frac{1}{2}x-\frac{9}{2}
+			\end{align*}
+			\part Setze die beiden Funktionsgleichungen von $f$ und $g$ gleich:
+			\begin{align*}
+				-\frac{5}{4}x+\frac{19}{4}&=2x-1 &&\vert \*4\\
+				-5x+19&=8x-4\\
+				23&=13x\\
+				x&=\frac{23}{13}\\
+				&\ \\
+				y&=2\*\frac{23}{13}-1=\frac{46}{13}-\frac{13}{13}=\frac{33}{13}\\
+				&\Rightarrow S\left(\frac{23}{13},\frac{33}{13}\right)
+			\end{align*}
+		\end{parts}
 \end{solution}}
-{\vspace{5pt}\antwort{11.5}\antwort{25}\newpage}
+{\vspace{5pt}\antwort{11.5}\newpage}
 
 %------------------------------------------------
 \question[3]
@@ -164,33 +208,48 @@ Entscheide in der Tabelle unten, ob die Gleichungen richtig oder falsch sind. Di
 \begin{small}
 	Bewertung: Für $0-2$ korrekte Antworten gibt es keine Punkte; $3$ korrekte Antworten $1.5$ Punkt und falls alle Antworten korrekt sind, gibt es $3$ Punkte.\newline
 \end{small}
-\begin{minipage}{0.35\linewidth}
-	\centering
-	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
-		>=latex,   %Voreinstellung für Pfeilspitzen
-		font= \footnotesize, scale=2.4]
-		%Raster zeichnen
-		% \draw [color=gray!50]  [step=5mm] (-1.1,-1.1) grid (1.1,1.1);
-		% Achsen zeichnen
-		\draw[->,thick] (-1.1,0) -- (1.3,0) node[right, below] {\normalsize $x$};
-		\draw[->,thick] (0,-1.1) -- (0,1.3) node[above, left] {\normalsize $y$};
-		% Achsen beschriften
-		\foreach \x in {-1,1} \draw (\x,-.03) -- (\x,.03);
-		\foreach \y in {-1,1} \draw (-.03,\y) -- (.03,\y);
-		\draw[color=black] (1.05,-.1) node {$1$};
-		\draw[color=black] (-.05,1.1) node {$1$};
-		\draw[color=black] (-1.1,-.1) node {$-1$};
-		\draw[color=black] (-.1,-1.1) node {$-1$};
-		% Besserer Ursprung
-		\draw[color=black] (0pt,-3pt) node[right] {$0$};
-		% Funktionen zeichnen:
-		\clip(-1.1,-1.1) rectangle (1.1,1.1); %Bildbereich
-		\draw circle [radius=1];
-	\end{tikzpicture}
-\end{minipage}
-\hfill
-\begin{minipage}{0.6\linewidth}
-	\begingroup
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		\begingroup
+		\renewcommand{\arraystretch}{1.5}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|p{6cm}|c|c|}\hline
+				& richtig & falsch \\\hline
+				$\displaystyle\tan{125^\circ}<0$ & {\bf X} & \\\hline
+				$\displaystyle\sin{\alpha}=\sin{180^\circ-\alpha}$ & {\bf X} & \\\hline
+				$\displaystyle\cos{34^\circ}=\cos{200^\circ}$ & & {\bf X} \\\hline
+				$\displaystyle\cos{10^\circ}\*\tan{10^\circ}=\sin{10^\circ}$ & {\bf X} & \\\hline
+			\end{tabular}
+		\end{table}
+		\endgroup
+\end{solution}}
+{\begin{minipage}{0.35\linewidth}
+		\centering
+		\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+			>=latex,   %Voreinstellung für Pfeilspitzen
+			font= \footnotesize, scale=2.4]
+			%Raster zeichnen
+			% \draw [color=gray!50]  [step=5mm] (-1.1,-1.1) grid (1.1,1.1);
+			% Achsen zeichnen
+			\draw[->,thick] (-1.1,0) -- (1.3,0) node[right, below] {\normalsize $x$};
+			\draw[->,thick] (0,-1.1) -- (0,1.3) node[above, left] {\normalsize $y$};
+			% Achsen beschriften
+			\foreach \x in {-1,1} \draw (\x,-.03) -- (\x,.03);
+			\foreach \y in {-1,1} \draw (-.03,\y) -- (.03,\y);
+			\draw[color=black] (1.05,-.1) node {$1$};
+			\draw[color=black] (-.05,1.1) node {$1$};
+			\draw[color=black] (-1.1,-.1) node {$-1$};
+			\draw[color=black] (-.1,-1.1) node {$-1$};
+			% Besserer Ursprung
+			\draw[color=black] (0pt,-3pt) node[right] {$0$};
+			% Funktionen zeichnen:
+			\clip(-1.1,-1.1) rectangle (1.1,1.1); %Bildbereich
+			\draw circle [radius=1];
+		\end{tikzpicture}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.6\linewidth}\begingroup
 	\renewcommand{\arraystretch}{1.5}
 	\begin{table}[H]
 		\centering
@@ -203,7 +262,7 @@ Entscheide in der Tabelle unten, ob die Gleichungen richtig oder falsch sind. Di
 		\end{tabular}
 	\end{table}
 	\endgroup
-\end{minipage}
+\end{minipage}}
 \question[3]
 \begin{minipage}{0.3\linewidth}
 	\begin{parts}
@@ -217,7 +276,18 @@ Entscheide in der Tabelle unten, ob die Gleichungen richtig oder falsch sind. Di
 \end{minipage}
 \ifthenelse{\boolean{printanswers}}
 {\begin{solution}
-		tbd
+	\begin{parts}
+		\part\begin{align*}
+			\frac{A_2}{A_1}&=\left(\frac{2a}{3a}\right)^2=\frac{4}{9}\\
+			A_2&=\frac{4}{9}A_1\\
+		\end{align*}
+		\part\begin{align*}
+			\frac{A_2+A_3}{A_1}&=\left(\frac{5a}{3a}\right)^2=\frac{25}{9}\\
+			A_2+A_3&=\frac{25}{9}A_1\\
+			\Rightarrow A_3+\frac{4}{9}A_1&=\frac{25}{9}A_1=\left(\frac{25}{9}-\frac{4}{9}\right)\*A_1=\frac{7}{3}A_1\\
+			\frac{A_3}{A_1}&=\frac{7}{3}
+		\end{align*}
+	\end{parts}
 \end{solution}}
 {\vspace{7pt}\antwort{9.5}\newpage}
 
@@ -228,9 +298,16 @@ Berechne die Lösungsmenge der folgenden Gleichungen für $x$.
 \[\frac{x-1}{x+3}-\frac{x-4}{x+5}=\frac{7x+13}{x^2+8x+15}\]
 \ifthenelse{\boolean{printanswers}}
 {\begin{solution}
-		tbd
+		Zuerst untersuchen wir den Hauptnenner: $(x+3)(x+5)$. Das bedeutet die Definitionsmenge dieser Gleichung ist: \[\Rightarrow D=\R\setminus\left\{-3,-5\right\}.\] Lasst uns als nächstes die Gleichung lösen:
+		\begin{align*}
+			\frac{(x-1)(x+5)}{(x+3)(x+5)}-\frac{(x-4)(x+3)}{(x+3)(x+5)}&=\frac{7x+13}{(x+3)(x+5)} &&\vert\*(x+3)(x+5)\\
+			(x^2+4x-5)-(x^2-x-12)&=7x+13 &&\vert TU\\
+			5x+7&=7x+13&& \vert-5x-13\\
+			-6&=2x &&\vert\div 2\\
+			x&=-3 \qquad\Rightarrow \mathbb{L}=\emptyset
+		\end{align*}
 \end{solution}}
-{\antwort{22.5}\newpage}
+{\antwort{22}\newpage}
 
 
 %------------------------------------------------
@@ -239,22 +316,23 @@ Löse das Gleichungssystem ohne Diskussion der Sonderfälle.
 \[\systeme[xy]{a\*x+2y=4,x+y=a}\]
 \ifthenelse{\boolean{printanswers}}
 {\begin{solution}
-		tbd
+		\begin{align*}
+			&\systeme[xy]{a\*x+2y=4,-2x-2y=-2a}\\
+			ax-2x&=4-2a\\
+			x(a-2)&=-2(a-2)\\
+			x&=\frac{-2(a-2)}{(a-2)}=-2\\
+			&\Rightarrow y=a+2 \qquad\Rightarrow \mathbb{L}=\left\{(-2,a+2)\right\}
+		\end{align*}
 \end{solution}}
 {\antwort{22}}
-
-
-\endgradingrange{ersterTeil} % beendet die Unterteilung der Notentabelle
-\end{questions}
 
 \ifthenelse{\boolean{printanswers}}
 {}
 {\noindent \textbf{Reserveplatz}\antwort{25}
-\noindent \textbf{Reserveplatz}\antwort{25}}
+	\noindent \textbf{Reserveplatz}\antwort{25}}
 
-
-
-
+\endgradingrange{ersterTeil} % beendet die Unterteilung der Notentabelle
+\end{questions}
 %=========================================================
 %------------------- TEIL ZWEI
 %=========================================================
@@ -311,7 +389,17 @@ Löse das Gleichungssystem ohne Diskussion der Sonderfälle.
 \end{parts}
 \ifthenelse{\boolean{printanswers}}
 {\begin{solution}
-		tbd
+		\begin{parts}
+			\part \begin{enumerate}
+				\item Mit Hilfe der Nullstellenform: $f(x)=a\*(x-2)(x-4)$. Da der Punkt P zur Parabel gehört gilt: \[30=a\*(-1-2)(-1-4) \Rightarrow a=2.\] Also folgt: \[f(x)=2(x-2)(x-4)=2x^2-12x+16\]
+				\item Mit Hilfe eines Gleichungssystems: Da die Punkte $N_1(2,0), N_2(4,0)$ und $P(-1,30)$ zur Parabel gehören, folgt \[\left\{\begin{array}{l}a\*2^2+b\*2+c=0\\a\*4^2+b\*4+c=0\\a\*(-1)^2+b\*(-1)+c=30\end{array}\right.\Rightarrow \left\{\begin{array}{l}a=2\\b=-12\\c=16\end{array}\right.\]
+			\end{enumerate}
+			\part Scheitelpunkt: \begin{align*}
+				x_s&=\frac{-(-12)}{2\*2}=3\\
+				f(3)&=2\*9-12\*3+16=18-36+16=-2\\
+				&\Rightarrow\:S(3,-2)
+			\end{align*}
+		\end{parts}
 \end{solution}}
 {\vspace{5pt}\antwort{22}\newpage}
 
@@ -321,19 +409,26 @@ Löse das Gleichungssystem ohne Diskussion der Sonderfälle.
 Die Katheten eines rechtwinkligen Dreiecks messen $a=3.7$ und $b=2.4$. Berechne die Länge der Winkelhalbierenden (angle bisector) des Winkels $\alpha$.
 \ifthenelse{\boolean{printanswers}}
 {\begin{solution}
-		tbd
+		\begin{align*}
+			\tan{\alpha}&=\frac{3.7}{2.4}\Rightarrow\alpha=57.03^\circ\\
+			\cos{\frac{\alpha}{2}}&=\frac{2.4}{w_\alpha}\Rightarrow w_\alpha=2.73
+		\end{align*}
 \end{solution}}
 {\vspace{5pt}\antwort{9}\vfill}
 \question[3]
 Berechne $x$ und $y$.
 \begin{figure}[H]
-	\centering\includegraphics[scale=0.8]{Geometrie/data-geometrie/GZP25_Teil2aufg1.png}
+	\centering\includegraphics[scale=0.3]{Geometrie/data-geometrie/GZP25_Teil2aufg1.png}
 \end{figure}
 \ifthenelse{\boolean{printanswers}}
 {\begin{solution}
-		tbd
+		\begin{align*}
+			a&=\sqrt{25^2-15^2}=20\\
+			\frac{x}{51}&=\frac{15}{a}&&\Rightarrow x=38.25\\
+			\frac{y}{51}&=\frac{25}{a}&&\Rightarrow y=63.75
+		\end{align*}
 \end{solution}}
-{\vspace{5pt}\antwort{9}\newpage}
+{\vspace{5pt}\antwort{7}\newpage}
 
 
 %------------------------------------------------
@@ -344,7 +439,9 @@ Berechne die Berghöhe $h$ aus den Angaben $\alpha=42^\circ$ und $\beta=59^\circ
 \end{figure}
 \ifthenelse{\boolean{printanswers}}
 {\begin{solution}
-		tbd
+		\begin{align*}
+			\left\{\begin{array}{l} h=\tan{42^\circ}\*(x+250)\\ h=\tan{59^\circ}\*x\end{array}\right.&\Rightarrow\left\{\begin{array}{l} h= 490.43 \\ x=294.68\end{array}\right.
+		\end{align*}
 \end{solution}}
 {\vspace{5pt}\antwort{17}\newpage}
 
@@ -356,13 +453,19 @@ Berechne die Berghöhe $h$ aus den Angaben $\alpha=42^\circ$ und $\beta=59^\circ
 \end{minipage}
 \hfill
 \begin{minipage}{0.3\linewidth}
-	\centering\includegraphics[scale=1]{Geometrie/data-geometrie/GZP25_Teil2Aufg6.png}
+	\centering\includegraphics[scale=0.4]{Geometrie/data-geometrie/GZP25_Teil2Aufg6.png}
 \end{minipage}
 \ifthenelse{\boolean{printanswers}}
 {\begin{solution}
-		tbd
+		Der Weg über die Kanten ist $1+1+h$.\newline Die Körperdiagonale hat die Länge $\sqrt{1+1+h^2}$.\newline Daraus folgt:
+		\begin{align*}
+			\sqrt{1+1+h^2}&=(1+1+h)-(1+1+h)\*0.4\\
+			\sqrt{1+1+h^2}&=(1+1+h)\*0.6\\
+			&\ \\
+			&\overset{\text{TR}}{\Rightarrow} h_1=0.5, h_2=1.75
+		\end{align*}
 \end{solution}}
-{\vspace{5pt}\antwort{18}\newpage}
+{\vspace{5pt}\antwort{18.5}\newpage}
 
 
 %------------------------------------------------
@@ -370,7 +473,18 @@ Berechne die Berghöhe $h$ aus den Angaben $\alpha=42^\circ$ und $\beta=59^\circ
 Die Parabel mit der Gleichung $f:y=ax^2+bx+c$ hat den Scheitelpunkt (vertex) $S(-1/5)$ und schneidet die Gerade $g:y=5x-43$ bei $x=3$. Berechne den zweiten Schnittpunkt (intersection) der Parabel mit der Geraden.
 \ifthenelse{\boolean{printanswers}}
 {\begin{solution}
-		tbd
+		Die $y-$ Koordinate des Schnittpunktes ist: \[y=5\*3-43=-28 \Rightarrow S_1(3,-28).\] Daraus folgt mit der Scheitelpunktform die Funktionsgleichung der Parabel:
+		\begin{align*}
+			-28&=a(3+1)^2+5 \\
+			-33&=a\*16\\
+			a&=-\frac{33}{16}\qquad\Rightarrow f:y=-\frac{33}{16}(x+1)^2+5
+		\end{align*}
+		Wir schneiden nun also die Parabel mit der Gerade:
+		\begin{align*}
+			-\frac{33}{16}(x+1)^2+5&=5x-43\\
+			\overset{\text{TR}}{\Rightarrow} x_2&=-\frac{245}{33}
+		\end{align*}
+		Daraus folgt der zweite Schnittpunkt $S_2(-\frac{245}{33},-\frac{2644}{33})$
 \end{solution}}
 {\vspace{5pt}\antwort{23}\newpage}
 
@@ -386,9 +500,15 @@ Die Parabel mit der Gleichung $f:y=ax^2+bx+c$ hat den Scheitelpunkt (vertex) $S(
 \end{minipage}
 \ifthenelse{\boolean{printanswers}}
 {\begin{solution}
-		tbd
+		\begin{align*}
+			b^2-a^2&=20 && \vert\text{Kathetensatz}\\
+			c\*q-c\*p&=20 && \vert\div c\\
+			&\systeme{q-p=2,p+q=10}\\
+			&\overset{\text{TR}}{\Rightarrow}  p=4, q=6\\
+			&\Rightarrow h=\sqrt{p\*q}=\sqrt{24}
+		\end{align*}
 \end{solution}}
-{\vspace{5pt}\antwort{21}\newpage}
+{\vspace{5pt}\antwort{20.5}\newpage}
 
 
 %------------------------------------------------
@@ -397,7 +517,14 @@ Thomas steht gerne früh auf und fährt gerne Velo. Um $06:40$ Uhr startet er je
 Um welche Uhrzeit holt Franz Thomas ein und wie viele Kilometer sind sie dann noch von der Schule entfernt?
 \ifthenelse{\boolean{printanswers}}
 {\begin{solution}
-		tbd
+		Die beiden Bewegungen können mit den folgenden linearen Funktionen beschrieben werden: 
+		\begin{align*}
+			f_{Thomas}:y&=10x\\
+			f_{Franz}:y&=40x-20
+		\end{align*}
+		Schneiden wir die beiden Geraden erhalten wir den Zeitpunkt, wann Franz Thomas einholt:
+	\[40x-20=10x \quad\Rightarrow t=\frac{2}{3}h.\]
+	Das heisst, sie treffen sich um 07:20 Uhr und sind noch \[7.5-f_{Thomas}\left(\frac{2}{3}\right)=7.5-\frac{20}{3}=0.83km\] von der Schule entfernt.	
 \end{solution}}
 {\vspace{5pt}\antwort{20}}
 
