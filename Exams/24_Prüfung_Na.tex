@@ -2,151 +2,144 @@
 \input{../Header/packages.sty}
 \input{../Header/styleExam.sty}
 \input{../Header/mathexpressions.sty}
-\input{../Header/headerGZP.sty}
+\input{../Header/headerExam.sty}
 %=========================================================
 \newcommand{\theme}{Potenzen, Wurzeln und Bruchterme}
 \newcommand{\teacher}{Jonas Guler}
-\newcommand{\class}{1Ga \& 1Na}
+\newcommand{\class}{1Na}
 \renewcommand{\date}{22.03.25}
 %=========================================================
 \begin{document}
-	\fontsize{14}{14}\selectfont
-	%========================================================
+\fontsize{14}{14}\selectfont
+%========================================================
+\noindent
+\begingroup
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular*}{\textwidth}{l @{\extracolsep{6pt}}l @{\extracolsep{\fill}}l @{\extracolsep{6pt}}l}
+\multicolumn{2}{l}{{\bf \theme}} & {\bf Note:} & {\answerbox}\\
+\multicolumn{2}{l}{{\bf \teacher}} & & \\
+{\bf Klasse:} & {\class} &  {\bf Name:} &\textbf{\hrulefill}\\
+{\bf Dauer:} & $45$ Minuten & {\bf Datum:} & {\date}\\[8pt]
+\end{tabular*}
+\endgroup
+\rule[1ex]{\textwidth}{1pt}
+%=========================================================
+\begin{center}
+	\textbf{Bewertungstabelle}\\
+	\small Wird von der Lehrperson ausgefüllt\\
+	\vspace{5pt}
+	\addpoints
+	\gradetable[h][questions]\\
+	\vspace{5pt}
+	Der Rechenweg muss \textbf{vollständig und nachvollziehbar} sein.\\
+	Lösen Sie die Prüfung mit einen schwarzen oder blauen Kugelschreiber.\\
+	Als Hilfsmittel ist der kleine Taschenrechner (Ti-30X o.ä.) erlaubt.
+\end{center}
+\rule[1ex]{\textwidth}{1pt}
 
-	%========================================================
-	\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}}l @{\extracolsep{6pt}}l}
-		\textbf{\theme} & {\bf Note:} & {\answerbox}\\
-		\textbf{Klasse \class} & & \\
-		\textbf{\teacher} & {\bf Name:} &\textbf{\hrulefill}\\[8pt]
-	\end{tabular*}
-	%--------------------
-	\begin{center}
-		\rule[1ex]{\textwidth}{1pt}
-		Dauer: $45$ Minuten \hspace{9cm}Datum: \date\\
-		\vspace{5pt}
-		\rule[1ex]{\textwidth}{1pt}
-	\end{center}
-	%=========================================================
+\vspace{10cm}
+\begin{center}
+	%\Huge{Repetitionsprüfung}
+\end{center}
 
-	%=========================================================
-	\begin{center}
-		\textbf{Bewertungstabelle}\\
-		\small Wird von der Lehrperson ausgefüllt\\
-		\vspace{5pt}
-		\addpoints
-		\gradetable[h][questions]\\
-		\vspace{5pt}
-		Der Rechenweg muss \textbf{vollständig und nachvollziehbar} sein.\\
-		Lösen Sie die Prüfung mit einen schwarzen oder blauen Kugelschreiber.\\
-		Als Hilfsmittel ist der kleine Taschenrechner (Ti-30X o.ä.) erlaubt.
-	\end{center}
+\newpage
+\begin{questions}
+%=========================================================
+%---------------------TESTFRAGEN
+%=========================================================
+\question[4]
+Vereinfache den folgenden Ausdruck so weit wie möglich.
+\begin{parcols}[2]
+	\part $27ab^2\*\left(\frac{1}{3}a^3b\right)^2$
+	\part $\left(\frac{a}{2}\right)^3:\left(8a^2\right)$
+\end{parcols}
+\vspace{5pt}
+\antwort{8}
+\vfill
+\question[4]
+Betrachte den folgenden Lösungsweg. Kennzeichne, wo einen Fehler gemacht wurde und korrigiere die Umformungen ab diesem Punkt.
+\begin{align*}
+	\left(4xy\right)^3\*\frac{\left(x^2y^3\right)^4}{16x^2y^2}&=4a^4b^4\*\frac{a^6b^7}{16a^2b^2}\\
+	&= 4a^4b^4\*\frac{1}{16}a^4b^5\\
+	&= \frac{1}{4}a^8b^9
+\end{align*}
+\antwort{6}
 
-	\noindent
-	\rule[1ex]{\textwidth}{1pt}
-
-	\vspace{10cm}
-	\begin{center}
-		\Huge{Repetitionsprüfung}
-	\end{center}
-
-	\newpage
-	\begin{questions}
-		%=========================================================
-		%---------------------TESTFRAGEN
-		%=========================================================
-		\question[4]
-		Vereinfache den folgenden Ausdruck so weit wie möglich.
-		\begin{parcols}[2]
-			\part $27ab^2\*\left(\frac{1}{3}a^3b\right)^2$
-			\part $\left(\frac{a}{2}\right)^3:\left(8a^2\right)$
-		\end{parcols}
-		\vspace{5pt}
-		\antwort{8}
-		\vfill
-		\question[4]
-		Betrachte den folgenden Lösungsweg. Kennzeichne, wo einen Fehler gemacht wurde und korrigiere die Umformungen ab diesem Punkt.
-		\begin{align*}
-			\left(4xy\right)^3\*\frac{\left(x^2y^3\right)^4}{16x^2y^2}&=4a^4b^4\*\frac{a^6b^7}{16a^2b^2}\\
-			&= 4a^4b^4\*\frac{1}{16}a^4b^5\\
-			&= \frac{1}{4}a^8b^9
-		\end{align*}
-		\antwort{6}
-
-		%---------------------------------------------------------
-		\newpage
-		\question[4] % Wurzeln
-		Schreibe die folgenden Terme ohne Wurzelzeichen.
-		\begin{parcols}[2]
-			\part $\sqrt{(a-1)^2+4a}$
-			\part $\sqrt{\frac{64a^4b^2}{16c^2}}$
-		\end{parcols}
-		\vspace{5pt}
-		\antwort{12}
-		\vfill
-		\question[2]
-		Entscheide in der Tabelle unten, ob die Aussagen wahr oder falsch sind. Die Antworten müssen nicht begründet werden.\newline
-		\begin{small}
-			Bewertung: Für $0-2$ korrekte Antworten gibt es keine Punkte; $3$ korrekte Antworten einen Punkt und falls alle Antworten korrekt sind, gibt es $2$ Punkte.
-		\end{small}
-		\begingroup
-		\renewcommand{\arraystretch}{1.5}
-		\begin{table}[h]
-			\centering
-			\begin{tabular}{|p{12cm}|c|c|}\hline
-				& wahr & falsch \\\hline
-				$\sqrt{a}$ hat zwei Lösungen, wobei eine positiv und eine negativ ist. & & \\\hline
-				$\displaystyle\sqrt{9x}:\sqrt{x}+\left(\sqrt{x-2}\right)^2=x+1$ & & \\\hline %Algebra 910 S132 A1c
-				In der Gleichung $2^\triangle=8^{3}$ muss das Symbol $\triangle$ mit der Zahl $9$ ersetzt werden, damit die Gleichheit stimmt. & & \\\hline
-				In der Gleichung $\square^{12}=16^3$ muss das Symbol $\square$ mit der Zahl $2$ ersetzt werden, damit die Gleichheit stimmt.  & & \\\hline
-			\end{tabular}
-		\end{table}
-		\endgroup
+%---------------------------------------------------------
+\newpage
+\question[4] % Wurzeln
+Schreibe die folgenden Terme ohne Wurzelzeichen.
+\begin{parcols}[2]
+	\part $\sqrt{(a-1)^2+4a}$
+	\part $\sqrt{\frac{64a^4b^2}{16c^2}}$
+\end{parcols}
+\vspace{5pt}
+\antwort{12}
+\vfill
+\question[2]
+Entscheide in der Tabelle unten, ob die Aussagen wahr oder falsch sind. Die Antworten müssen nicht begründet werden.\newline
+\begin{small}
+	Bewertung: Für $0-2$ korrekte Antworten gibt es keine Punkte; $3$ korrekte Antworten einen Punkt und falls alle Antworten korrekt sind, gibt es $2$ Punkte.
+\end{small}
+\begingroup
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|p{12cm}|c|c|}\hline
+		& wahr & falsch \\\hline
+		$\sqrt{a}$ hat zwei Lösungen, wobei eine positiv und eine negativ ist. & & \\\hline
+		$\displaystyle\sqrt{9x}:\sqrt{x}+\left(\sqrt{x-2}\right)^2=x+1$ & & \\\hline %Algebra 910 S132 A1c
+		In der Gleichung $2^\triangle=8^{3}$ muss das Symbol $\triangle$ mit der Zahl $9$ ersetzt werden, damit die Gleichheit stimmt. & & \\\hline
+		In der Gleichung $\square^{12}=16^3$ muss das Symbol $\square$ mit der Zahl $2$ ersetzt werden, damit die Gleichheit stimmt.  & & \\\hline
+	\end{tabular}
+\end{table}
+\endgroup
 
 
-		%---------------------------------------------------------
-		\newpage
-		\question[3] % Wurzeln
-		Betrachte den folgenden Lösungsweg. Kennzeichne, wo einen Fehler gemacht wurde und korrigiere die Umformungen ab diesem Punkt.
-		\begin{normalsize}
-			\begin{align*}
-				\left(\sqrt{r}-\sqrt{s}\right)^2-\left(\sqrt{r}+\sqrt{s}\right)^2 &= \left(\left(\sqrt{r}\right)^2-2\*\sqrt{r}\sqrt{s}+\left(\sqrt{s}\right)^2\right)-\left(\left(\sqrt{r}\right)^2+2\*\sqrt{r}\sqrt{s}+\left(\sqrt{s}\right)^2\right)\\
-				&= \left(r-2\*\sqrt{r}\sqrt{s}+s\right)-\left(r+2\*\sqrt{r}\sqrt{s}+s\right)\\
-				&= r-2\*\sqrt{r+s}+s-r-2\*\sqrt{r+s}-s\\
-				&=-4\*\sqrt{r+s}
-			\end{align*}
-		\end{normalsize}
-		\antwort{6}
-		\vfill
-		\question[4]
-		Berechne das kleinste gemeinsame Vielfache und der grösste gemeinsame Teiler der folgenden Termen.
-		\[2a+3b,\quad 2a-3b\quad\text{und}\quad 4a^2-9b^2\]
-		\antwort{8}
+%---------------------------------------------------------
+\newpage
+\question[3] % Wurzeln
+Betrachte den folgenden Lösungsweg. Kennzeichne, wo einen Fehler gemacht wurde und korrigiere die Umformungen ab diesem Punkt.
+\begin{normalsize}
+	\begin{align*}
+		\left(\sqrt{r}-\sqrt{s}\right)^2-\left(\sqrt{r}+\sqrt{s}\right)^2 &= \left(\left(\sqrt{r}\right)^2-2\*\sqrt{r}\sqrt{s}+\left(\sqrt{s}\right)^2\right)-\left(\left(\sqrt{r}\right)^2+2\*\sqrt{r}\sqrt{s}+\left(\sqrt{s}\right)^2\right)\\
+		&= \left(r-2\*\sqrt{r}\sqrt{s}+s\right)-\left(r+2\*\sqrt{r}\sqrt{s}+s\right)\\
+		&= r-2\*\sqrt{r+s}+s-r-2\*\sqrt{r+s}-s\\
+		&=-4\*\sqrt{r+s}
+	\end{align*}
+\end{normalsize}
+\antwort{6}
+\vfill
+\question[4]
+Berechne das kleinste gemeinsame Vielfache und der grösste gemeinsame Teiler der folgenden Termen.
+\[2a+3b,\quad 2a-3b\quad\text{und}\quad 4a^2-9b^2\]
+\antwort{8}
 
-		%---------------------------------------------------------
-		\newpage
-		\question[6] % Bruchterm Addition
-		Erweitere die Brüche auf einen gemeinsamen Nenner und vereinfache dann den Term so weit wie möglich.
-		\begin{parcols}[2]
-			\part $\displaystyle\frac{2}{5a}-\frac{3}{10a}+\frac{7}{15a}$ %KSWillisau A2b
-			\part $\displaystyle\frac{5w}{w-3}-\frac{3w}{w+2}-\frac{2w-1}{w^2-w-6}$ %KSWillisau A2f
-		\end{parcols}
-		\vspace{5pt}
-		\antwort{20}
+%---------------------------------------------------------
+\newpage
+\question[6] % Bruchterm Addition
+Erweitere die Brüche auf einen gemeinsamen Nenner und vereinfache dann den Term so weit wie möglich.
+\begin{parcols}[2]
+	\part $\displaystyle\frac{2}{5a}-\frac{3}{10a}+\frac{7}{15a}$ %KSWillisau A2b
+	\part $\displaystyle\frac{5w}{w-3}-\frac{3w}{w+2}-\frac{2w-1}{w^2-w-6}$ %KSWillisau A2f
+\end{parcols}
+\vspace{5pt}
+\antwort{20}
 
-		%---------------------------------------------------------
-		\newpage
-		\question[3] % Bruchterm Multiplication
-		Multipliziere die Brüche und vereinfache den Term so weit wie möglich.
-		\begin{parcols}[2]
-			\part $\displaystyle\frac{15x^2}{2x^4-23}\*\frac{3x^2-12}{5x}$ %KSWillisau A3d
-			\part $\displaystyle\left(\frac{10p^2}{7y^2}-\frac{14q^2}{5y^2}\right)\*\frac{35y^2}{5p+7q}$
-		\end{parcols}
-		\antwort{20}
+%---------------------------------------------------------
+\newpage
+\question[3] % Bruchterm Multiplication
+Multipliziere die Brüche und vereinfache den Term so weit wie möglich.
+\begin{parcols}[2]
+	\part $\displaystyle\frac{15x^2}{2x^4-23}\*\frac{3x^2-12}{5x}$ %KSWillisau A3d
+	\part $\displaystyle\left(\frac{10p^2}{7y^2}-\frac{14q^2}{5y^2}\right)\*\frac{35y^2}{5p+7q}$
+\end{parcols}
+\antwort{20}
 
 
-		%---------------------------------------------------------
-		\newpage
-		\
+%---------------------------------------------------------
+\newpage
+\
 
-	\end{questions}
+\end{questions}
 \end{document}

@@ -2,7 +2,7 @@
 \input{../Header/packages.sty}
 \input{../Header/styleExam.sty}
 \input{../Header/mathexpressions.sty}
-\input{../Header/headerGZP.sty}
+\input{../Header/headerExam.sty}
 %=========================================================
 \newcommand{\theme}{Folgen, Reihen und Grenzwerte}
 \newcommand{\teacher}{Jonas Guler}
@@ -12,18 +12,17 @@
 \begin{document}
 \fontsize{14}{14}\selectfont
 %========================================================
-\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}}l @{\extracolsep{6pt}}l}
-    \textbf{\theme} & {\bf Note:} & {\answerbox}\\
-    \textbf{Klasse \class} & & \\
-    \textbf{\teacher} & {\bf Name:} &\textbf{\hrulefill}\\[8pt]
+\noindent
+\begingroup
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular*}{\textwidth}{l @{\extracolsep{6pt}}l @{\extracolsep{\fill}}l @{\extracolsep{6pt}}l}
+	\multicolumn{2}{l}{{\bf \theme}} & {\bf Note:} & {\answerbox}\\
+	\multicolumn{2}{l}{{\bf \teacher}} & & \\
+	{\bf Klasse:} & {\class} &  {\bf Name:} &\textbf{\hrulefill}\\
+	{\bf Dauer:} & $45$ Minuten & {\bf Datum:} & {\date}\\[8pt]
 \end{tabular*}
-%--------------------
-\begin{center}
-    \rule[1ex]{\textwidth}{1pt}
-    Dauer: $45$ Minuten \hspace{9cm}Datum: \date\\
-    \vspace{5pt}
-    \rule[1ex]{\textwidth}{1pt}
-\end{center}
+\endgroup
+\rule[1ex]{\textwidth}{1pt}
 %=========================================================
 \begin{center}
     \textbf{Bewertungstabelle}\\
@@ -35,15 +34,12 @@
     Der Rechenweg muss \textbf{vollständig und nachvollziehbar} sein.\\
     Lösen Sie die Prüfung mit einen schwarzen oder blauen Kugelschreiber.\\
     Als Hilfsmittel ist nur der Taschenrechner erlaubt.\\
-    \textbf{Beachte: In den Aufgaben 6, 7a und 8 gibt es für Lösungen ohne Lösungswege keine Punkte!}
 \end{center}
-
-\noindent
 \rule[1ex]{\textwidth}{1pt}
 
 \vspace{10cm}
 \begin{center}
-    \Huge{Repetitionsprüfung}
+    %\Huge{Repetitionsprüfung}
 \end{center}
 
 \newpage

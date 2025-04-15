@@ -2,32 +2,27 @@
 \input{../Header/packages.sty}
 \input{../Header/styleExam.sty}
 \input{../Header/mathexpressions.sty}
-\input{../Header/headerGZP.sty}
+\input{../Header/headerExam.sty}
 %=========================================================
 \newcommand{\theme}{Potenzen, Wurzeln und Bruchterme}
 \newcommand{\teacher}{Jonas Guler}
-\newcommand{\class}{1Ga \& 1Na}
+\newcommand{\class}{1Ga}
 \renewcommand{\date}{22.03.25}
 %=========================================================
 \begin{document}
 \fontsize{14}{14}\selectfont
 %========================================================
-
-%========================================================
-\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}}l @{\extracolsep{6pt}}l}
-    \textbf{\theme} & {\bf Note:} & {\answerbox}\\
-    \textbf{Klasse \class} & & \\
-    \textbf{\teacher} & {\bf Name:} &\textbf{\hrulefill}\\[8pt]
+\noindent
+\begingroup
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular*}{\textwidth}{l @{\extracolsep{6pt}}l @{\extracolsep{\fill}}l @{\extracolsep{6pt}}l}
+	\multicolumn{2}{l}{{\bf \theme}} & {\bf Note:} & {\answerbox}\\
+	\multicolumn{2}{l}{{\bf \teacher}} & & \\
+	{\bf Klasse:} & {\class} &  {\bf Name:} &\textbf{\hrulefill}\\
+	{\bf Dauer:} & $45$ Minuten & {\bf Datum:} & {\date}\\[8pt]
 \end{tabular*}
-%--------------------
-\begin{center}
-    \rule[1ex]{\textwidth}{1pt}
-    Dauer: $45$ Minuten \hspace{9cm}Datum: \date\\
-    \vspace{5pt}
-    \rule[1ex]{\textwidth}{1pt}
-\end{center}
-%=========================================================
-
+\endgroup
+\rule[1ex]{\textwidth}{1pt}
 %=========================================================
 \begin{center}
     \textbf{Bewertungstabelle}\\
@@ -40,13 +35,11 @@
     Lösen Sie die Prüfung mit einen schwarzen oder blauen Kugelschreiber.\\
     Als Hilfsmittel ist der kleine Taschenrechner (Ti-30X o.ä.) erlaubt.
 \end{center}
-
-\noindent
 \rule[1ex]{\textwidth}{1pt}
 
 \vspace{10cm}
 \begin{center}
-    \Huge{Repetitionsprüfung}
+    %\Huge{Repetitionsprüfung}
 \end{center}
 
 \newpage
