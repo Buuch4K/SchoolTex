@@ -4,10 +4,10 @@
 \input{../Header/mathexpressions.sty}
 \input{../Header/headerExam.sty}
 %=========================================================
-\newcommand{\theme}{Folgen, Reihen und Grenzwerte}
+\newcommand{\theme}{Stetigkeit und Differentialrechnung}
 \newcommand{\teacher}{Jonas Guler}
 \newcommand{\class}{3Na}
-\renewcommand{\date}{27.03.25}
+\renewcommand{\date}{06.05.25}
 %=========================================================
 \begin{document}
 \fontsize{14}{14}\selectfont
@@ -47,98 +47,125 @@
 %=========================================================
 %-------------------TESTFRAGEN
 %=========================================================
-\noaddpoints
-\question[\totalpoints]
-\addpoints
-\begin{parts}
-    \part[3] Erkläre einem Laien unter welchen Bedingungen eine unendliche geometrische Reihe konvergiert. Erfinde dazu passende Beispiele.
-\end{parts}
-\vspace{5pt}
-\antwort{10}
-\begin{parts}
-    \setcounter{partno}{1}
-    \part[2] Von einer geometrischen Folge sind zwei Folgenglieder bekannt, $a_2=96$ und $a_9=1640.25$. Berechne $q$ und $a_{35}$.
-\end{parts}
-\vspace{5pt}
-\antwort{11}
-\newpage
-
-%---------------------------------------------------------
-\question[3] %DMK Ana S29 A180
-Von einer geometrischen Folge sind $a_7=\frac{729}{32}$ und $q=\frac{3}{4}$ bekannt. Berechne den Grenzwert $s$ der unendlichen geometrischen Reihe.
-\vspace{5pt}
-\antwort{10.5}
-\question[3] % DMK Ana S29 A183a
-Berechne den Grenzwert der folgenden Summe: \[16+12+9+\ldots=\]
-\antwort{10}
-
-%---------------------------------------------------------
-\newpage
-\noaddpoints
-\question[\totalpoints] %DMK Ana S29 A182
-\addpoints
-\begin{minipage}{0.6\linewidth}
-	Gegeben ist ein Quadrat mit Seitenlänge 100 cm, in welches weitere Quadrate einbeschrieben sind (siehe Skizze). $Q_1,Q_2,Q_3,\ldots$ ist die Folge der Flächeninhalte der einbeschriebenen Quadrate, deren Seitenlänge eine Geometrische Folge bilden.
-\end{minipage}
-\hfill
-\begin{minipage}{0.35\linewidth}
-	\centering\includegraphics[scale=0.6]{Analysis/data-analysis/FR_Quadrate.png}
-\end{minipage}
-\begin{parts}
-	\part[2] Bestimme die explizite Beschreibung für die Folge der Flächeninhalte $Q_n$.
-	\part[2] Ab welchem $n\in\N$ ist der Flächeninhalt $Q_n$ kleiner als $10^{-34}$?
-	\part[2] Bestimme die Gesamtfläche der ersten $10$ Quadrate.
-	\part[2] Gegen welchen Wert strebt die Summe der Flächeninhalte aller Quadrate?
-\end{parts}
-\vspace{5pt}
-\antwort{17}
-
-%---------------------------------------------------------
-\newpage
-\question[4]
-Begründe die folgende Gleichheit mit Hilfe der Partialsummen einer geometrischen Reihe.
-\[1+2+4+8+\ldots+2^{n-1}=2^n-1\]
-\antwort{9}
+\question[2]
+Erkläre einem Laien in eigenen Worten den Unterschied zwischen dem Differenzenquotienten und dem Differentialquotienten. Mache dazu eine geeignete Skizze.   
+\vspace{5pt}\antwort{12}
 \vfill
-\noaddpoints
-\question[\totalpoints]
-\addpoints
-Im Folgenden sind drei Behauptungen zu Grenzwerten von Folgen notiert. Nimm zu jeder Aussage Stellung und erläutere, ob sie recht haben oder nicht. Begründe deine Antwort.
-\begin{parts}
-    \part[2] Daniela behauptet: \flqq Die Folge $\displaystyle a_n=\frac{\sqrt{3}}{4}$ ist weder konvergent noch divergent.\frqq
-\end{parts}
-\vspace{5pt}
-\antwort{3.5}
-\begin{parts}
-    \setcounter{partno}{1}
-    \part[2] Franziska behauptet: \flqq Falls eine Folge gegen den Grenzwert\newline $a\in\R$ konvergiert, dann konvergiert auch die zugehörige Reihe.\frqq
-\end{parts}
-\vspace{5pt}
-\antwort{3.5}
+\question[2]
+Entscheide in der Tabelle unten, ob die Aussagen wahr oder falsch sind. Die Antworten müssen nicht begründet werden.\newline
+\begin{small}
+	Bewertung: Für $0-2$ korrekte Antworten gibt es keine Punkte; $3$ korrekte Antworten $1$ Punkt und falls alle Antworten korrekt sind, gibt es $2$ Punkte.
+\end{small}
+\begingroup
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|p{12cm}|c|c|}\hline
+		& wahr & falsch \\\hline
+		Eine Funktion mit Definitionslücke kann nie im gesamten Definitionsbereich stetig sein. & & \\\hline
+		Die Steigung einer linearen Funktion ist identisch mit dem Differentialquotienten. & & \\\hline
+		Durch den Grenzwert im Differentialquotienten kann die durchschnittliche Steigung der Funktion genauer wie im Differenzenquotienten berechnet werden. & & \\\hline
+		Jede beliebige Funktion besitzt eine Ableitung, die die Steigung an dieser Stelle beschreibt. & & \\\hline
+	\end{tabular}
+\end{table}
+\endgroup
 
 
 %---------------------------------------------------------
 \newpage
 \noaddpoints
-\question[\totalpoints] % Grenzwert einer Funktion berechnen
+\question[\totalpoints]
 \addpoints
+Gegeben ist die Funktion \[f(x)=\begin{cases} x^2, & x\leq 1 \\ \frac{x}{2}+1, & x> 1. \end{cases}\]
 \begin{parts}
-    \part[4] Berechne den folgenden Grenzwert ohne Verwendung des Taschenrechners: \[\lim_{n\to\infty}\frac{3n^5-6n^3+2}{n^5+3n^2-1}=\]
+	\part[2] Skizziere die Funktion möglichst exakt ins abgebildete Koordinatensystem.
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=20mm, y=20mm,
+			>=latex,   %Voreinstellung für Pfeilspitzen
+			font= \footnotesize, scale=0.7]
+			%Raster zeichnen
+			\draw [color=gray!50]  [step=10mm] (-2.3,-1.3) grid (4.3,3.3);
+			% Achsen zeichnen
+			\draw[->,thick] (-2.5,0) -- (4.5,0) node[right, below] {\normalsize $x$};
+			\draw[->,thick] (0,-1.5) -- (0,3.5) node[above, left] {\normalsize $y$};
+			% Achsen beschriften
+			\foreach \x in {-2,-1,1,2,...,4} \draw (\x,-.05) -- (\x,.05) node[below=4pt] {$\x$};
+			\foreach \y in {-1,1,2,3} \draw (-.05,\y) -- (.05,\y) node[left=4pt] {$\y$};
+			% Besserer Ursprung
+			\draw[color=black] (0pt,-10pt) node[right] {$0$};
+			%Funktionen zeichnen:
+			\clip(-2.3,-1.3) rectangle (4.3,3.3); %Bildbereich
+			%Beschriftung
+			%\node[blue]  at (11,5) {\normalsize$f$};
+		\end{tikzpicture}
+	\end{figure}
+	\part[4] Ist die Funktion $f$ stetig in $x_0=1$? Begründe deine Antwort rechnerisch.
 \end{parts}
-\vspace{5pt}
-\antwort{10}
-\begin{parts}
-    \setcounter{partno}{1}
-    \part[2] Ab welchem Index $N\in\N$ ist der Abstand zum Grenzwert kleiner $0.001$.
-\end{parts}
-\vspace{5pt}
-\antwort{10}
+\vspace{5pt}\antwort{11}
 
 %---------------------------------------------------------
 \newpage
 \question[2]
-Wie muss der Parameter $a$ und der Exponent $m$ gewählt werden, damit der die folgende Gleichung wahr ist? \[\lim_{x\to\infty}\frac{a\*x^m-4x^3-1}{2x^4-11x^2+5}=12\]
-\antwort{22}
+Jemand formuliert sehr ungenau: \[\text{\flqq Die 1. Ableitung einer Funktion ist die Tangente.\frqq}\] Erläutere, was daran falsch und formuliere einen korrekten Merksatz.
+\vspace{5pt}\antwort{8}
+\vfill
+\question[4]
+Ein Pilz wird auf einem Nährboden beobachtet. Nach einer Stunde bedeckt er $34\%$ der Petrischale und nach $7$ Stunden bereits $82\%$. Es bezeichne $P(t)$ die  bedeckte Fläche der Petrischale und $t$ die verstrichene Zeit. Welche der folgenden Aussagen trifft sicherlich zu (\textbf{nur eine!})? Begründe deine Antwort.
+\begin{parts}
+	\part Von $t=1$ bis $t=7$ wuchs der Pilz stündlich um exakt $8\%$.
+	\part $P(2)=42\%$
+	\part Von $t=1$ bis $t=7$ wuchs der Pilz durchschnittlich um $8\%$ pro Stunde.
+	\part $P'(0)=8$
+\end{parts}
+\vspace{5pt}\antwort{7}
+
+%---------------------------------------------------------
+\newpage
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+Die Länge des bis zum Zeitpunkt $t$ zurückgelegten Weges $s$ eines Objektes wird durch die Funktionsgleichung $s(t)=5t^2+2t+1$ beschrieben ($t$ in Sekunden und $s$ in Metern).
+\begin{parts}
+	\part[1] Welche Strecke hat das Objekt bis zur Zeit $t=5$ zurückgelegt?
+\end{parts}
+\vspace{5pt}\antwort{6}
+\begin{parts}
+\setcounter{partno}{1}
+	\part[2] Berechne den Differenzenquotienten im Intervall $\left[3,5\right]$. Welche Bedeutung hat dieser Zahlenwert im Zusammenhang mit der Bewegung des Objektes?
+\end{parts}
+\vspace{5pt}\antwort{6}
+\begin{parts}
+\setcounter{partno}{2}
+	\part[2] Berechne $s'(3)$. Was sagt dieser Wert aus?
+\end{parts}
+\vspace{5pt}\antwort{6}
+
+
+%---------------------------------------------------------
+\newpage
+\question[6]
+Bestimme die Ableitungsfunktion $f'$ für die folgenden Funktionen.
+\begin{parts}
+	\part $f(x)=\frac{2}{3}x^6-2x^3+x^2+5$
+\end{parts}
+\vspace{5pt}\antwort{7}
+\begin{parts}
+\setcounter{partno}{1}
+	\part $f(x)=\frac{-2}{x^4}+\frac{1}{3}x^3$
+\end{parts}
+\vspace{5pt}\antwort{7}
+\begin{parts}
+\setcounter{partno}{2}
+	\part $f(x)=2x\left(x^4+3x^3+3\right)$
+\end{parts}
+\vspace{5pt}\antwort{7}
+
+%---------------------------------------------------------
+\newpage
+\question[4]
+Gegeben ist die Funktion $f(x)=\frac{-1}{2}x^2-4x$. Bestimme die Gleichungen der Tangente $t$ und der Normalen $n$ im Punkt $x_0=6$.
+\vspace{5pt}\antwort{23.5}
 
 
 \end{questions}
