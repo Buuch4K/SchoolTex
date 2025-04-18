@@ -23,147 +23,504 @@
 \pagenumbering{arabic}
 %############################################################################################
 \section{Potenzen mit negativen Exponenten}
-Im ersten Kanti-Jahr habe wir die folgenden Potenzgesetze kennengelernt.
-\begin{satz}[Potenzgesetze für natürliche Exponenten]
-	Für Potenzen mit reellen Basen $a,b\in\R$ und natürlichen Exponenten $m,n\in\N $ gelten folgende Rechengesetze:
-	\begingroup
-	\renewcommand{\arraystretch}{2}
-	\begin{table}[H]
+	Im ersten Kanti-Jahr habe wir die folgenden Potenzgesetze kennengelernt.
+	\begin{satz}[Potenzgesetze für natürliche Exponenten]
+		Für Potenzen mit reellen Basen $a,b\in\R$ und natürlichen Exponenten $m,n\in\N $ gelten folgende Rechengesetze:
+		\begingroup
+		\renewcommand{\arraystretch}{2}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{l c}
+				Potenzen mit gleicher Basis & $\displaystyle a^{m}\*a^{n}=a^{m+n}$ \\
+				Potenzen mit gleichem Exponenten & $\displaystyle a^{n}\*b^{n}=(ab)^n$ \\
+				Verschachtelte Potenzen & $\displaystyle(a^{m})^{n}=a^{m\*n}$ \\
+				Potenz eines Bruches mit gleicher Basis & $\displaystyle\frac{a^m}{a^n}=a^{m-n}$ \\
+				Potenz eines Bruches mit gleichem Exponent & $\displaystyle\frac{a^n}{b^n}=\left(\frac{a}{b}\right)^n$ \\
+			\end{tabular}
+		\end{table}
+		\endgroup
+		Es liegt auf der Hand, dass bei 4. $a\neq0$ und bei 5. $b\neq0$ gelten muss.
+	\end{satz}
+	Wenden wir diese direkt in einer Repetitionsaufgabe an.
+	\begin{aufgabe}
+		Bob, Alice und Carol beschäftigen sich mit Potenzen. Sie sind bei den folgenden Aufgaben jedoch nicht einer Meinung, was die Lösungen angehen. Wer ist jeweils korrekt? Begründe anhand der Potenzgesetze.
+		\begin{enumerate}[label=\alph*)]
+			\item$2^7\*2^{10}=$\begin{enumerate}\begin{multicols}{3}
+					\item[Alice: ] $2^{17}$
+					\item[Bob: ] $2^{70}$
+					\item[Carol: ] $4^{70}$
+			\end{multicols}\end{enumerate}
+			\item$3^5\*7^5=$\begin{enumerate}\begin{multicols}{3}
+					\item[Alice: ] $21^{10}$
+					\item[Bob: ] $21^{25}$
+					\item[Carol: ] $21^{5}$
+			\end{multicols}\end{enumerate}
+			\item$\left(3^4\right)^5=$\begin{enumerate}\begin{multicols}{3}
+					\item[Alice: ] $3^{9}$
+					\item[Bob: ] $3^{20}$
+					\item[Carol: ] $3^{\left(4^5\right)}$
+			\end{multicols}\end{enumerate}
+			\item$\frac{12^5}{3^5}=$\begin{enumerate}\begin{multicols}{3}
+					\item[Alice: ] $9^{5}$
+					\item[Bob: ] $\left(\frac{12}{3}\right)^5$
+					\item[Carol: ] $4^5$
+			\end{multicols}\end{enumerate}
+		\end{enumerate}
+		\karos{3}
+	\end{aufgabe}
+	Beachte, dass im Potenzgesetz 4. gefordert wird, dass $n>m$, weil wir ansonsten einen negativen Exponenten erhalten würden. Genau diesem Problem möchten wir nun auf die Spur begeben und genauer unter die Lupe nehmen. Starten wir mit einem Beispiel: \[2^5\div2^8=\gap{2}.\]
+	Was bedeutet aber $2^{-3}$? Was für eine Zahlenwert hat dieser Term?
+	\begin{figure}[H]
 		\centering
-		\begin{tabular}{l c}
-			Potenzen mit gleicher Basis & $\displaystyle a^{m}\*a^{n}=a^{m+n}$ \\
-			Potenzen mit gleichem Exponenten & $\displaystyle a^{n}\*b^{n}=(ab)^n$ \\
-			Verschachtelte Potenzen & $\displaystyle(a^{m})^{n}=a^{m\*n}$ \\
-			Potenz eines Bruches mit gleicher Basis & $\displaystyle\frac{a^m}{a^n}=a^{m-n}$ \\
-			Potenz eines Bruches mit gleichem Exponent & $\displaystyle\frac{a^n}{b^n}=\left(\frac{a}{b}\right)^n$ \\
-		\end{tabular}
-	\end{table}
-	\endgroup
-	Es liegt auf der Hand, dass bei 4. $a\neq0$ und bei 5. $b\neq0$ gelten muss.
-\end{satz}
-Wenden wir diese direkt in einer Repetitionsaufgabe an.
-\begin{aufgabe}
-	Bob, Alice und Carol beschäftigen sich mit Potenzen. Sie sind bei den folgenden Aufgaben jedoch nicht einer Meinung, was die Lösungen angehen. Wer ist jeweils korrekt? Begründe anhand der Potenzgesetze.
-	\begin{enumerate}[label=\alph*)]
-		\item$2^7\*2^{10}=$\begin{enumerate}\begin{multicols}{3}
-				\item[Alice: ] $2^{17}$
-				\item[Bob: ] $2^{70}$
-				\item[Carol: ] $4^{70}$
+		\includegraphics[scale=0.8]{images/ganzzahligeexp.png}
+	\end{figure}
+	Aus der obigen Graphik lassen sich die folgenden beiden Definitionen ablesen.
+	\begin{definition}
+		Sei $a\in\R$ eine beliebige reelle Zahl und $n\in\Z$ eine beliebige ganze Zahl. Dann gilt:
+		\begin{enumerate}[label=\ ]\begin{multicols}{2}
+				\item $a^0=1$ \item $\displaystyle a^{-n}=\frac{1}{a^n}$
 		\end{multicols}\end{enumerate}
-		\item$3^5\*7^5=$\begin{enumerate}\begin{multicols}{3}
-				\item[Alice: ] $21^{10}$
-				\item[Bob: ] $21^{25}$
-				\item[Carol: ] $21^{5}$
-		\end{multicols}\end{enumerate}
-		\item$\left(3^4\right)^5=$\begin{enumerate}\begin{multicols}{3}
-				\item[Alice: ] $3^{9}$
-				\item[Bob: ] $3^{20}$
-				\item[Carol: ] $3^{\left(4^5\right)}$
-		\end{multicols}\end{enumerate}
-		\item$\frac{12^5}{3^5}=$\begin{enumerate}\begin{multicols}{3}
-				\item[Alice: ] $9^{5}$
-				\item[Bob: ] $\left(\frac{12}{3}\right)^5$
-				\item[Carol: ] $4^5$
-		\end{multicols}\end{enumerate}
-	\end{enumerate}
-	\karos{3}
-\end{aufgabe}
-Beachte, dass im Potenzgesetz 4. gefordert wird, dass $n>m$, weil wir ansonsten einen negativen Exponenten erhalten würden. Genau diesem Problem möchten wir nun auf die Spur begeben und genauer unter die Lupe nehmen. Starten wir mit einem Beispiel: \[2^5\div2^8=\gap{2}.\]
-Was bedeutet aber $2^{-3}$? Was für eine Zahlenwert hat dieser Term?
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.8]{images/ganzzahligeexp.png}
-\end{figure}
-Aus der obigen Graphik lassen sich die folgenden beiden Definitionen ablesen.
-\begin{definition}
-	Sei $a\in\R$ eine beliebige reelle Zahl und $n\in\Z$ eine beliebige ganze Zahl. Dann gilt:
-	\begin{enumerate}[label=\ ]\begin{multicols}{2}
-			\item $a^0=1$ \item $\displaystyle a^{-n}=\frac{1}{a^n}$
-	\end{multicols}\end{enumerate}
-\end{definition}
-Natürlich muss im Punkt 2. die Einschränkung $a\neq0$ ebenfalls gelten, anderenfalls wäre der Bruch natürlich nicht definiert. Selbstverständlich lassen sich alle Potenzgesetze auf ganzzahlige Exponenten erweitern. Um dies aufzuzeigen, möchten wir das erste Gesetz auch für zwei negative negative Exponenten beweisen.\newline
-Wir behaupten $\mathbf{a^n\*a^m=a^{n+m}}$ für eine beliebige reelle Zahl $a$ und zwei negative Exponenten $n$ und $m$.
-\begin{beweis}
-	\karos{4}
-\end{beweis}
-\begin{aufgabe}
-	BlaBlaBla
-\end{aufgabe}
+	\end{definition}
+	Natürlich muss im Punkt 2. die Einschränkung $a\neq0$ ebenfalls gelten, anderenfalls wäre der Bruch natürlich nicht definiert. Selbstverständlich lassen sich alle Potenzgesetze auf ganzzahlige Exponenten erweitern. Um dies aufzuzeigen, möchten wir das erste Gesetz auch für zwei negative negative Exponenten beweisen.\newline
+	Wir behaupten $\mathbf{a^n\*a^m=a^{n+m}}$ für eine beliebige reelle Zahl $a$ und zwei negative Exponenten $n$ und $m$.
+	\begin{beweis}
+		\karos{4}
+	\end{beweis}
+	\begin{aufgabe}
+		\begin{enumerate}
+			\item Fasse die folgenden Ausdrücke zu einer Potenz zusammen.
+			\begin{enumcols}[4]
+				\item $4^9\*4^7$
+				\item $3^{n-1}\*3^{n+1}$
+				\item $5^2\div 5^8$
+				\item $8^{n+2}\div 8^{n-4}$
+			\end{enumcols}
+			\item Stelle jede der folgenden Zahlen als eine Potenz dar, deren Basis eine möglichst kleine natürliche Zahl und deren Exponent ganzzahlig ist.
+			\begin{enumcols}[4]
+				\item $25$
+				\item $100'000'000$
+				\item $0.001$
+				\item $\frac{1}{625}$
+				\item $\frac{1}{10^{57}}$
+				\item $0.008$
+				\item $\frac{1}{169}$
+				\item $1024$
+			\end{enumcols}
+			\item Vereinfache die folgenden Terme so weit wie möglich und markiere bei jedem Umformungsschritt die verwendete Definition oder das verwendete Potenzgesetz.
+			\begin{enumcols}[2]
+				\item $\left(a^3\*a\*a^0\*a^{-2}\right)\div\left(a^4\*a^{-5}\right)$
+				\item $\frac{1}{3^{-7}}\*3^8$
+				\item $\frac{a^3\*b^2\*c\*d^{-5}}{b\*d^2}\*\frac{a^{-2}\*d^8}{c^2}$
+				\item $p^{-5}\*p^{-4}\*p^{-3}\*p^{-2}\*p^{-1}\*p^0\*p^1\*p^2\*p^3\*p^4$
+			\end{enumcols}
+			\item Vereinfache dir folgenden Terme so weit wie möglich und markiere bei jedem Umformungsschritt die verwendete Definition oder das verwendete Potenzgesetz.
+			\begin{enumcols}[2]
+				\item $(18y)^{-4}\div (9y)^{-4}$
+				\item $\left(\left(\left(a^2\right)^{-3}\right)^4\right)^{-5}$
+				\item $\left(\frac{2}{7}\right)^{-13}\*\left(\frac{7}{2}\right)^4\div\left(\frac{2}{7}\right)^{-18}$
+				\item $\frac{2^{-1}}{1+\frac{2^{-1}}{1+\frac{2^{-1}}{2}}}$
+			\end{enumcols}
+		\end{enumerate}
+	\end{aufgabe}
 
 \newpage
 \section{Die n-te Wurzeln}
-
-
-
-\begin{definition}
-	Sei $a\in\R_0^+$ und $n\in\N$. Die \textbf{n-te Wurzel} von $a$ ist diejenige nicht-negative reele Zahl $x$, sodass \[\lineortext{x^n=a}\] gilt. Wir schreiben auch $x=\sqrt{a}$. Der Term unter der Wurzel heisst \textit{Radikand}.
-	Falls $n=2$ gilt, handelt es sich um die bereits bekannte Quadratwurzel, wobei man meistens den Wurzelindex weglässt: \[\sqrt[2]{a}=\sqrt{a}.\]
-\end{definition}
-
-\subsection{Wurzeln als rationale Exponenten}
+	Auch die Wurzelgesetze haben wir für die Quadratwurzel im ersten Schuljahr bereits gesehen. Wir rufen sie also in Erinnerung:
+	\begin{satz}[Wurzegesetze]
+		Seien $a,b\in\R_0^+$. Dann gilt für die Quadratwurzel: 
+		\begin{align*}
+			\sqrt{a\*b}&=\sqrt{a}\*\sqrt{b}\\
+			\sqrt{\frac{a}{b}}&=\frac{\sqrt{a}}{\sqrt{b}},&& \text{ falls zusätzlich } b\neq 0 \text{ gilt}
+		\end{align*} 
+	\end{satz}
+	Um die beiden Gesetze zu repetieren, bearbeite die folgende Aufgabe.
+	\begin{aufgabe}
+		\begin{enumerate}
+			\item Wie heisst eine berühmte Mathematikerin des $20.$ Jahrhunderts? Die Reihenfolge der Aufgaben folgt der Reihenfolge der Buchstaben des Namens.
+			\begingroup
+			\renewcommand{\arraystretch}{1.2}
+			\begin{table}[H]
+				\centering
+				\begin{tabularx}{0.8\textwidth}{| >{\raggedright\arraybackslash}X | >{\centering\arraybackslash}X | >{\centering\arraybackslash}X | }\hline
+					\multirow{3}{4em}{$\sqrt{\sqrt{256}}=$} & $8$ & E \\\cline{2-3}
+					& $2$ & G \\\cline{2-3}
+					& $4$ & C \\\hline\hline
+					\multirow{3}{4em}{$\sqrt{(-7)^2}=$} & $-7$ & Ö \\\cline{2-3}
+					& $7$ & L \\\cline{2-3}
+					& nicht definiert & U \\\hline\hline
+					\multirow{3}{4em}{$\sqrt{a^{16}\*b^{64}}=$} & $a^{14}\*b^{62}$ & S \\\cline{2-3}
+					& $a^4\*b^8$ & D \\\cline{2-3}
+					& $a^8\*b^{16}$ & A \\\hline\hline
+					\multirow{3}{4em}{$\sqrt{-9}=$} & nicht definiert & R \\\cline{2-3}
+					& $3$ & M \\\cline{2-3}
+					& $-3$ & E \\\hline\hline
+					\multirow{3}{4em}{$\sqrt{20^2+21^2}=$} & $41$ & R \\\cline{2-3}
+					& $29$ & K \\\cline{2-3}
+					& $20.5$ & L \\\hline\hline
+					\multirow{3}{4em}{$\sqrt{12+\frac{1}{4}}=$} & $3.5$ & E \\\cline{2-3}
+					& $6.25$ & F \\\cline{2-3}
+					& $12.25$ & U \\\hline
+				\end{tabularx}
+			\end{table}
+			\endgroup
+			\item Vereinfache die folgenden Ausdrücke, so weit wie möglich.
+			\begin{enumcols}[2]
+				\item $\sqrt{6}\left(\sqrt{\frac{1}{2}}-\sqrt{\frac{1}{3}}\right)$
+				\item $\sqrt{9+4\sqrt{2}}\sqrt{9-4\sqrt{2}}$
+			\end{enumcols}
+			\karos{2}
+		\end{enumerate}
+	\end{aufgabe}
+	Wir wissen, aus der Definition der Quadratwurzel, dass dies die Lösung einer Gleichung der Form $x^2=a$ ist. Wie kann ich nun aber die Lösung einer Gleichung berechnen, die als Exponenten eine grössere Zahl als die $2$ hat?
+	\begin{beispiel}
+		Betrachte die Gleichung \[x^6=64.\] Mit welchem Ausdruck kann die Lösung dieser Gleichung exakt beschrieben werden?\vspace{5pt}\newline\karos{4.5}
+	\end{beispiel}
+	Um dieses Problem zu lösen, definieren wir den allgemeinen Wurzelbegriff:
+	\begin{definition}[n-te Wurzel]
+		Sei $a\in\R_0^+$ und $n\in\N$. Die \textbf{n-te Wurzel} von $a$ ist diejenige nicht-negative reele Zahl $x$, sodass \[\gap{4}\] gilt. Wir schreiben auch $x=\sqrt{a}$. Der Term unter der Wurzel heisst \textit{Radikand}.
+		Falls $n=2$ gilt, handelt es sich um die bereits bekannte Quadratwurzel, wobei man meistens den Wurzelindex weglässt: \[\sqrt[2]{a}=\sqrt{a}.\]
+	\end{definition}
+	Selbstverständlich gelten die beiden Wurzelgesetze oben auch für diese allgemeine Beschreibung der Wurzel. Um solche Terme vereinfachen zu können, bearbeite die folgenden Aufgaben.
+	\begin{aufgabe}
+		Forme die folgenden Terme so um, dass immer mindestens ein Wurzelgesetz angewendet wird.
+		\begin{enumcols}[2]
+			\item $\sqrt[3]{\sqrt[4]{a}}$
+			\item $\sqrt[5]{2}\*\sqrt[5]{3}\*\sqrt[5]{4}$
+			\item $\frac{\sqrt[3]{10}}{\sqrt[3]{2}\*\sqrt[3]{5}}$
+			\item $\left(\sqrt[4]{a^{16}\*b^8\*c^4}\right)^2$
+			\item $\sqrt[3]{\sqrt{x}+\sqrt{y}}\*\sqrt[3]{\sqrt{x}-\sqrt{y}}$
+			\item $\sqrt[5]{\sqrt[2]{32}}$
+		\end{enumcols}
+	\end{aufgabe}
 
 \subsection{Anwendungen}
 \subsubsection{Lineare Gleichungen mit Wurzelkoeffizienten}
-Als erstes betrachten wir die bereits bekannten linearen Gleichungen, aber wir lassen als Koeffizienten auch Wurzelterme zu. Dass heisst, der Faktor vor der Unbekannten kann eine Wurzel enthalten. Der Lösungsweg geht genau gleich wie ohne Wurzel. Zur Erinnerung fassen wir nochmals zusammen:
-\begin{algo}
-	\begin{enumerate}
-		\item ausmultiplizieren, falls notwendig
-		\item alle Unbekannte auf die eine Seite, der Rest auf die andere Seite
-		\item die Unbekannte ausklammern
-		\item durch die Klammer vor der Unbekannten dividieren
-	\end{enumerate}
-\end{algo}
-Starten wir mit einem Beispiel gemeinsam.
-\begin{beispiel}
-	\[x\sqrt{8}+6=\sqrt{8}-x\]
-	\karos{4}
-\end{beispiel}
-\begin{aufgabe}
-	Löse die linaeren Gleichungen nach $x$ auf.
-	\begin{enumerate}[label=\alph*)]\begin{multicols}{2}
-			\item $x\sqrt{2}+\sqrt{3}=\sqrt{5}-x\sqrt{2}$
-			\item $4x-5=\sqrt{6}\cdot x+7$
-			\item $(x-4)\sqrt{2}=\sqrt{3}(x-5)$
-			\item $(x+2-\sqrt{2})^2=x^2+\sqrt{2}$
-	\end{multicols}\end{enumerate}
-\end{aufgabe}
+	Als erstes betrachten wir die bereits bekannten linearen Gleichungen, aber wir lassen als Koeffizienten auch Wurzelterme zu. Das heisst, der Faktor vor der Unbekannten kann eine Wurzel enthalten. Der Lösungsweg geht genau gleich wie ohne Wurzel. Zur Erinnerung fassen wir nochmals zusammen:
+	\begin{algo}
+		\begin{enumerate}
+			\item ausmultiplizieren, falls notwendig
+			\item alle Unbekannte auf die eine Seite, der Rest auf die andere Seite
+			\item die Unbekannte ausklammern
+			\item durch die Klammer vor der Unbekannten dividieren
+		\end{enumerate}
+	\end{algo}
+	Starten wir mit einem Beispiel gemeinsam.
+	\begin{beispiel}
+		\[x\sqrt{8}+6=\sqrt{8}-x\]
+		\karos{4}
+	\end{beispiel}
+	\begin{aufgabe}
+		Löse die linaeren Gleichungen nach $x$ auf.
+		\begin{enumerate}[label=\alph*)]\begin{multicols}{2}
+				\item $x\sqrt{2}+\sqrt{3}=\sqrt{5}-x\sqrt{2}$
+				\item $4x-5=\sqrt{6}\cdot x+7$
+				\item $(x-4)\sqrt{2}=\sqrt{3}(x-5)$
+				\item $(x+2-\sqrt{2})^2=x^2+\sqrt{2}$
+		\end{multicols}\end{enumerate}
+	\end{aufgabe}
 \subsubsection{Quadrierte Gleichungen}
-Als erste Anwendung betrachten wir eine neue Form von Gleichungen, die wir allerdings mit einem Trick auf die linearen Gleichungen zurückführen können. Das heisst auch, die Unbekannte ist nie unter der Wurzel anzutreffen.
-\begin{definition}
-	Eine Gleichung heisst quadrierte Gleichung, falls die Unbekannte im Quadrat vorkommt.
-\end{definition}
-Starten wir mit zwei gemeinsamen Beispielen:
-\begin{beispiel}\begin{enumerate}
-		\item \[(x-3)^2=64\]\karos{6}\newpage
-		\item \[(3x-16)^2=(4x-19)^2\]\karos{6}
-\end{enumerate}\end{beispiel}
-\begin{aufgabe}
-	Löse die folgenden Gleichungen. Überlege dir genau welche beiden Fälle du betrachten musst.
-	\begin{enumerate}[label=\alph*)]\begin{multicols}{2}
-			\item $(x-6)^2=(2x-7)^2$
-			\item $(2x+3)^2-9\*(6x-7)^2=16\*(6x-7)^2$
-			\item $9x^4=(5x^2-2)^2$
-			\item $(x^2+x-14)^2=(x^2-x+6)^2$
-	\end{multicols}\end{enumerate}
-\end{aufgabe}
+	Als erste Anwendung betrachten wir eine neue Form von Gleichungen, die wir allerdings mit einem Trick auf die linearen Gleichungen zurückführen können. Das heisst auch, die Unbekannte ist nie unter der Wurzel anzutreffen.
+	\begin{definition}
+		Eine Gleichung heisst quadrierte Gleichung, falls die Unbekannte im Quadrat vorkommt.
+	\end{definition}
+	Starten wir mit zwei gemeinsamen Beispielen:
+	\begin{beispiel}\begin{enumerate}
+			\item \[(x-3)^2=64\]\karos{6}
+			\item \[(3x-16)^2=(4x-19)^2\]\karos{6}
+	\end{enumerate}\end{beispiel}
+	\begin{aufgabe}
+		Löse die folgenden Gleichungen. Überlege dir genau welche beiden Fälle du betrachten musst.
+		\begin{enumerate}[label=\alph*)]\begin{multicols}{2}
+				\item $(x-6)^2=(2x-7)^2$
+				\item $(2x+3)^2-9\*(6x-7)^2=16\*(6x-7)^2$
+				\item $9x^4=(5x^2-2)^2$
+				\item $(x^2+x-14)^2=(x^2-x+6)^2$
+		\end{multicols}\end{enumerate}
+	\end{aufgabe}
 \subsubsection{Wurzelgleichungen}
-Als zweites betrachten wir sogenannte Wurzelgleichungen. Diese zeichnen sich aus, dass die Unbekannte unter der Wurzel zu finden ist. Um die Gleichung lösen zu können, müssen wir es schaffen, die Unbekannte aus der Wurzel herausnehmen zu können.
-\begin{beispiel}
-	\[x+1=\sqrt{2x+5}\]\karos{4}
-\end{beispiel}
-\textbf{Wichtig: } Durch das \lineortext{quadrieren} einer Gleichung können zusätzliche falsche Lösungen entstehen. Deshalb ist eine Überprüfung der Lösungen unerlässlich.\newline
-\karos{2}
-\begin{aufgabe}
-	Löse die folgenden Gleichung nach $x$ auf und überprüfe sie hinsichtlich möglicher Scheinlösungen.
-	\begin{enumerate}[label=\alph*)]\begin{multicols}{2}
-			\item $\sqrt{x+5}=\sqrt{4-x}$
-			\item $\sqrt{x(x-4)}=2\sqrt{1-x}$
-			\item $\sqrt{3x^2-50}=-x$
-			\item $\sqrt{x}+\sqrt{x+4}=4$
-			\item $\sqrt{6-x}+\sqrt{2x+1}=\sqrt{x+7}$
-			\item $\sqrt{x-2}+\sqrt{x-11}=\sqrt{x+13}$
-	\end{multicols}\end{enumerate}
-\end{aufgabe}
+	Als zweites betrachten wir sogenannte Wurzelgleichungen. Diese zeichnen sich aus, dass die Unbekannte unter der Wurzel zu finden ist. Um die Gleichung lösen zu können, müssen wir es schaffen, die Unbekannte aus der Wurzel herausnehmen zu können.
+	\begin{beispiel}
+		\[x+1=\sqrt{2x+5}\]\karos{4}
+	\end{beispiel}
+	\textbf{Wichtig: } Durch das \lineortext{quadrieren} einer Gleichung können zusätzliche falsche Lösungen entstehen. Deshalb ist eine Überprüfung der Lösungen unerlässlich.\newline
+	\karos{2}
+	\begin{aufgabe}
+		Löse die folgenden Gleichung nach $x$ auf und überprüfe sie hinsichtlich möglicher Scheinlösungen.
+		\begin{enumerate}[label=\alph*)]\begin{multicols}{2}
+				\item $\sqrt{x+5}=\sqrt{4-x}$
+				\item $\sqrt{x(x-4)}=2\sqrt{1-x}$
+				\item $\sqrt{3x^2-50}=-x$
+				\item $\sqrt{x}+\sqrt{x+4}=4$
+				\item $\sqrt{6-x}+\sqrt{2x+1}=\sqrt{x+7}$
+				\item $\sqrt{x-2}+\sqrt{x-11}=\sqrt{x+13}$
+		\end{multicols}\end{enumerate}
+	\end{aufgabe}
+
+\newpage
+\section{Potenzen mit rationale Exponenten}
+	Wir haben nun ganzzahlige Exponenten kennengelernt und wissen, welche Gesetze dafür gelten. Jedoch drängt sich damit nun die Frage auf, gibt es auch eine plausible Definition von rationalen Exponenten? In diesem Abschnitt soll genau diese Frage beantwortet werden.
+	\begin{aufgabe}
+		\begin{enumerate}[label=\alph*)]
+			\item Was könnte  $9^\frac{1}{2}$ sein? Wir wissen, dass $9^0=1$ und $9^1=9$ ist. Es ist also plausibel zu sagen, dass diese Zahl zwischen $1$ und $9$ liegen muss. Stelle eine Vermutung auf und versuche diese zu begründen.
+		\end{enumerate}\karos{2.5}
+		\begin{enumerate}[label=\alph*)]
+			\setcounter{enumi}{1}
+			\item \flqq Wenn man $a^2$ quadriert, so entsteht der Term $\left(a^2\right)^2=a^4$. Also ist $a^2$ die Quadratwurzel von $a^4$.\frqq\: Verändere diese einfache Überlegung, sodass sie wie folgt beginnt: \flqq Wenn man $a^\frac{1}{2}$ quadriert,...\frqq
+		\end{enumerate}\karos{2.5}
+		\begin{enumerate}[label=\alph*)]
+			\setcounter{enumi}{2}
+			\item Welche Erkenntnis bezüglich $9^\frac{1}{2}$ können wir daraus ziehen?
+		\end{enumerate}\karos{2.5}
+		\begin{enumerate}[label=\alph*)]
+			\setcounter{enumi}{3}
+			\item Welche Zahl könnte mit den Termen $7^\frac{1}{2}$ oder  $7^\frac{3}{2}$ gemeint sein? 
+		\end{enumerate}\karos{2.5}
+	\end{aufgabe}
+	Daraus können wir also folgenden Zusammenhang zwischen Potenzen und der n-ten Wurzel ableiten. 
+	\begin{definition}
+		Sei $a\in\R_0^+$ und $m,n\in\Z$, wobei $n\neq 0$ gilt. Dann gilt: \[a^\frac{m}{n}=\sqrt[n]{a^m}.\]
+	\end{definition}
+	Lasst uns zuerst einige Beispiele gemeinsam betrachten, wie uns dieser Zusammenhang bei der Vereinfachung von Termen helfen wird.
+	\begin{beispiel}
+		\begin{enumerate}
+			\item $\displaystyle\sqrt[2]{12^3}\*\sqrt[3]{12^2}=$\vspace{5pt}\newline\karos{2.5}
+			\item $\displaystyle\left(\sqrt[3]{3^2}\div\sqrt[5]{3^3}\right)\*\sqrt[15]{3^2}=$\vspace{5pt}\newline\karos{2.5}
+		\end{enumerate}
+	\end{beispiel}
+	\begin{aufgabe}
+		\begin{enumerate}
+			\item Vereinfache die folgenden Terme zu einer einzelnen Wurzel, wobei der Radikand eine natürliche Zahl sein soll.
+			\begin{enumcols}[3]
+				\item $\sqrt[5]{\frac{1}{3125}}\*\sqrt[3]{\frac{3^5}{3^6}}$
+				\item $\frac{\sqrt[23]{51^{46}}}{\sqrt[46]{51^{23}}}$
+				\item $\sqrt[3]{111^2}\div\sqrt[5]{111^3}\*\sqrt[30]{111}$
+			\end{enumcols}
+			\item Für die folgende Aufgaben geh wie folgt vor: Wenn ein Term gegeben ist, berechne ihn. Wenn eine Gleichung mit einer Variable gegeben ist, löse sie. Wenn einen Term mit einer Variable gegeben ist, vereinfache ihn. Gib in allen Umformungsschritten jeweils das verwendete Potenz- oder Wurzelgesetz an.
+			\begin{enumcols}[2]
+				\item $\sqrt[3]{\frac{1}{64}}$
+				\item $\sqrt[7]{\frac{1}{128}}$
+				\item $\sqrt[10]{10^{-10}}$
+				\item $\sqrt[60]{64^{10}}$
+				\item $a^{-6}\div a^{-2}$
+				\item $81^{1.5}$
+				\item $\left(\frac{27}{8}\right)^{-\frac{1}{3}}$
+				\item $\left(a^\frac{1}{4}\div a^\frac{1}{5}\right)\*a^\frac{1}{10}$
+				\item $x^{0.75}=8$
+				\item $x^{1.5}=0.001$
+				\item $\left(\sqrt[5]{\sqrt{32}}\right)^2$
+				\item $\left(\left(x^7y^3z^2\right)^\frac{1}{4}\*\left(x^3y^5z^4\right)^\frac{1}{4}\right)\div(xyz)^2$
+				\item $\left(\frac{2a^2b^3}{2c}\right)^3\*\left(\frac{4c^2}{3a^3b^4}\right)^2$
+				\item $\left(10^{0.5}\div 10^{-1.5}\right)\*10^{2.5}$
+				\item $\left(\sqrt[8]{5^3}\div\sqrt[5]{5^6}\right)\div\sqrt[40]{5^35}$
+				\item $\sqrt[10]{x^2\*\sqrt[9]{x^3\*\sqrt[8]{x}}}$
+				\item $x^4\*\sqrt[3]{x^2\*\sqrt{x\*\sqrt[1]{x^3}}}$
+			\end{enumcols}
+			\item Ordne die folgenden Zahlen nach aufsteigender Grösse.
+			\begin{enumcols}[2]
+				\item $3^{-3},10^{-3},2^{-4},2^{-10},10^{-2},3^{-2}$
+				\item $\left(\frac{1}{2}\right)^0,\left(\frac{1}{2}\right)^{-2},\left(\frac{1}{2}\right)^{-3},\left(\frac{1}{2}\right)^2,\left(\frac{1}{2}\right)^3$
+			\end{enumcols}
+		\end{enumerate}
+	\end{aufgabe}
+	
+
+\newpage
+\section{Die Potenzfunktion}
+	Gerade weil Potenzen und Wurzeln in naturwissenschaftlich-technischen Anwendungen immer wieder vorkommen, lohnt es sich, ihr funktionales Verhalten genauer zu untersuchen. Beginnen wir damit zu definieren, was wir unter einer Potenzfunktion verstehen:
+	\begin{definition}
+		Eine Funktion der Form $f:y=a\*x^p$ für einen rationalen Exponenten $p$ heisst \textbf{Potenzfunktion}.
+	\end{definition}
+	Es ist offensichtlich, dass der Definitionsbereich von der Wahl des Exponenten anhängt. Denn für positive Exponenten, wie zum Beispiel $x^2$, ist der Definitionsbereich $\R$. Wohingegen bei negative Exponenten, wie zum Beispiel $x^{-1}=\frac{1}{x}$, haben wir eine Definitionslücke bei $0$. Weiter sind darin auch alle Wurzelfunktionen enthalten, weil ja $\sqrt[n]{x}=x^\frac{1}{n}$ gilt. Diese haben nochmals eine weitere Einschränkung, weil ja nur Wurzeln von positiven Zahlen, also Definitionsmenge $\R_0^+$, gezogen werden können.
+	\begin{beispiel}
+		In der Physik wimmelt es von Potenzfunktionen. Beispielsweise ordnet die folgende Funktion \[h:y=\frac{1}{2}g\*x^2\] die Anzahl Sekunden $x$ der zurückgelegte Fallstrecke $h(x)$ in Metern im freien Fall zu.\vspace{11pt}\newline
+		Die nach dieser Fallstrecke erreichte Endgeschwindigkeit kann ebenfalls als eine Potenzfunktion in der Variable $h$ aufgefasst werden. \[v:y=\sqrt{2g}\*h^\frac{1}{2}\]
+	\end{beispiel}
+	\begin{aufgabe}
+		Entscheide für die folgenden Funktionsgleichungen, ob es sich um eine Potenzfunktion handelt. Begründe deine Antwort.
+		\begin{enumcols}[3]
+			\item $f(x)=\frac{7}{x^3}$
+			\item $f(x)=7\*3^x$
+			\item $f(x)=2\*\sqrt{x\*\sqrt{x}}$
+			\item $f(x)=\frac{5\*x^\frac{1}{3}\*x^\frac{1}{4}}{x^\frac{1}{5}}$
+			\item $1+x+x^2+x^3$
+			\item $\left(\left(\sqrt{3}x\right)^2\right)^3$
+		\end{enumcols}
+	\end{aufgabe}
+\subsection{Graphen der Potenzfunktionen}
+	Die Graphen der Potenzfunktion und ihre charakteristischen Eigenschaften hängen, wie bereits bei der Definitionsmenge, von der Wahl des Exponentens $p$ ab. Betrachten wir also in der Folge alle sechs unterschiedlichen Fälle. Dabei untersuchen wir zuerst die ganzzahligen Exponenten. Benutze dazu das folgende \href{https://www.geogebra.org/m/ctbxhang}{Geogebra-Applet}\footnote{\url{https://www.geogebra.org/m/ctbxhang}}. Skizziere drei dieser Graphen mit unterschiedlichen Exponenten im folgenden Koordinatensystem und notiere daneben die Eigenschaften (Definitionsmenge, Wertemenge, Gemeinsame Punkte, Symmetrien, etc.).\newpage
+	\begin{enumerate}
+		\item Fall: $p\in\left\{2,4,6,8,\ldots\right\}$, also $p$ als eine positive gerade Zahl.\newline
+		\begin{minipage}{0.45\linewidth}
+			\centering
+			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+				>=latex,   %Voreinstellung für Pfeilspitzen
+				font= \footnotesize, scale=0.8]
+				%Raster zeichnen
+				\draw [color=gray!50]  [step=10mm] (-4.3,-4.3) grid (4.3,4.3);
+				% Achsen zeichnen
+				\draw[->,thick] (-4.5,0) -- (4.5,0) node[right, below] {\normalsize $x$};
+				\draw[->,thick] (0,-4.5) -- (0,4.5) node[above, left] {\normalsize $y$};
+				% Achsen beschriften
+				\foreach \x in {-4,...,-2,-1,1,2,...,4} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+				\foreach \y in {-4,...,-2,-1,1,2,...,4} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+				% Besserer Ursprung
+				\draw[color=black] (0pt,-7pt) node[right] {$0$};
+				%Funktionen zeichnen:
+				\clip(-4.3,-4.3) rectangle (3.5,4.5); %Bildbereich
+				%Beschriftung
+				%\node[blue]  at (11,5) {\normalsize$f$};
+			\end{tikzpicture}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.53\linewidth}
+			\karos{7}
+		\end{minipage}
+		\item Fall: $p\in\left\{1,3,5,7,\ldots\right\}$, also $p$ als eine positive ungerade Zahl.\newline
+		\begin{minipage}{0.45\linewidth}
+			\centering
+			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+				>=latex,   %Voreinstellung für Pfeilspitzen
+				font= \footnotesize, scale=0.8]
+				%Raster zeichnen
+				\draw [color=gray!50]  [step=10mm] (-4.3,-4.3) grid (4.3,4.3);
+				% Achsen zeichnen
+				\draw[->,thick] (-4.5,0) -- (4.5,0) node[right, below] {\normalsize $x$};
+				\draw[->,thick] (0,-4.5) -- (0,4.5) node[above, left] {\normalsize $y$};
+				% Achsen beschriften
+				\foreach \x in {-4,...,-2,-1,1,2,...,4} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+				\foreach \y in {-4,...,-2,-1,1,2,...,4} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+				% Besserer Ursprung
+				\draw[color=black] (0pt,-7pt) node[right] {$0$};
+				%Funktionen zeichnen:
+				\clip(-4.3,-4.3) rectangle (3.5,4.5); %Bildbereich
+				%Beschriftung
+				%\node[blue]  at (11,5) {\normalsize$f$};
+			\end{tikzpicture}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.53\linewidth}
+			\karos{7}
+		\end{minipage}
+		\item Fall: $p\in\left\{-2,-4,-6,\ldots\right\}$, also $p$ als eine negative gerade Zahl.\newline
+		\begin{minipage}{0.45\linewidth}
+			\centering
+			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+				>=latex,   %Voreinstellung für Pfeilspitzen
+				font= \footnotesize, scale=0.8]
+				%Raster zeichnen
+				\draw [color=gray!50]  [step=10mm] (-4.3,-4.3) grid (4.3,4.3);
+				% Achsen zeichnen
+				\draw[->,thick] (-4.5,0) -- (4.5,0) node[right, below] {\normalsize $x$};
+				\draw[->,thick] (0,-4.5) -- (0,4.5) node[above, left] {\normalsize $y$};
+				% Achsen beschriften
+				\foreach \x in {-4,...,-2,-1,1,2,...,4} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+				\foreach \y in {-4,...,-2,-1,1,2,...,4} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+				% Besserer Ursprung
+				\draw[color=black] (0pt,-7pt) node[right] {$0$};
+				%Funktionen zeichnen:
+				\clip(-4.3,-4.3) rectangle (3.5,4.5); %Bildbereich
+				%Beschriftung
+				%\node[blue]  at (11,5) {\normalsize$f$};
+			\end{tikzpicture}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.53\linewidth}
+			\karos{7}
+		\end{minipage}\newpage
+		\item Fall: $p\in\left\{-1,-3,-5,-7,\ldots\right\}$, also $p$ als eine negative ungerade Zahl.\newline
+		\begin{minipage}{0.45\linewidth}
+			\centering
+			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+				>=latex,   %Voreinstellung für Pfeilspitzen
+				font= \footnotesize, scale=0.8]
+				%Raster zeichnen
+				\draw [color=gray!50]  [step=10mm] (-4.3,-4.3) grid (4.3,4.3);
+				% Achsen zeichnen
+				\draw[->,thick] (-4.5,0) -- (4.5,0) node[right, below] {\normalsize $x$};
+				\draw[->,thick] (0,-4.5) -- (0,4.5) node[above, left] {\normalsize $y$};
+				% Achsen beschriften
+				\foreach \x in {-4,...,-2,-1,1,2,...,4} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+				\foreach \y in {-4,...,-2,-1,1,2,...,4} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+				% Besserer Ursprung
+				\draw[color=black] (0pt,-7pt) node[right] {$0$};
+				%Funktionen zeichnen:
+				\clip(-4.3,-4.3) rectangle (3.5,4.5); %Bildbereich
+				%Beschriftung
+				%\node[blue]  at (11,5) {\normalsize$f$};
+			\end{tikzpicture}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.53\linewidth}
+			\karos{7}
+		\end{minipage}
+	\end{enumerate}
+	Untersuchen wir als nächstes die beiden Fälle mit rationalen Exponenten. Dazu betrachte das folgende \href{https://www.geogebra.org/m/dkz88pz7}{Geogebra-Applet}\footnote{\url{https://www.geogebra.org/m/dkz88pz7}}. 
+	\begin{enumerate}
+		\setcounter{enumi}{4}
+		\item Fall: $p\in\left\{\frac{1}{2},\frac{1}{3},\frac{1}{4},\frac{1}{5},\ldots\right\}$\newline
+		\begin{minipage}{0.45\linewidth}
+			\centering
+			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+				>=latex,   %Voreinstellung für Pfeilspitzen
+				font= \footnotesize, scale=0.7]
+				%Raster zeichnen
+				\draw [color=gray!50]  [step=10mm] (-4.3,-4.3) grid (4.3,4.3);
+				% Achsen zeichnen
+				\draw[->,thick] (-4.5,0) -- (4.5,0) node[right, below] {\normalsize $x$};
+				\draw[->,thick] (0,-4.5) -- (0,4.5) node[above, left] {\normalsize $y$};
+				% Achsen beschriften
+				\foreach \x in {-4,...,-2,-1,1,2,...,4} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+				\foreach \y in {-4,...,-2,-1,1,2,...,4} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+				% Besserer Ursprung
+				\draw[color=black] (0pt,-7pt) node[right] {$0$};
+				%Funktionen zeichnen:
+				\clip(-4.3,-4.3) rectangle (3.5,4.5); %Bildbereich
+				%Beschriftung
+				%\node[blue]  at (11,5) {\normalsize$f$};
+			\end{tikzpicture}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.53\linewidth}
+			\karos{6}
+		\end{minipage}
+		\item Fall: $p\in\left\{-\frac{1}{2},-\frac{1}{3},-\frac{1}{4},-\frac{1}{5},\ldots\right\}$\newline
+		\begin{minipage}{0.45\linewidth}
+			\centering
+			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+				>=latex,   %Voreinstellung für Pfeilspitzen
+				font= \footnotesize, scale=0.7]
+				%Raster zeichnen
+				\draw [color=gray!50]  [step=10mm] (-4.3,-4.3) grid (4.3,4.3);
+				% Achsen zeichnen
+				\draw[->,thick] (-4.5,0) -- (4.5,0) node[right, below] {\normalsize $x$};
+				\draw[->,thick] (0,-4.5) -- (0,4.5) node[above, left] {\normalsize $y$};
+				% Achsen beschriften
+				\foreach \x in {-4,...,-2,-1,1,2,...,4} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+				\foreach \y in {-4,...,-2,-1,1,2,...,4} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+				% Besserer Ursprung
+				\draw[color=black] (0pt,-7pt) node[right] {$0$};
+				%Funktionen zeichnen:
+				\clip(-4.3,-4.3) rectangle (3.5,4.5); %Bildbereich
+				%Beschriftung
+				%\node[blue]  at (11,5) {\normalsize$f$};
+			\end{tikzpicture}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.53\linewidth}
+			\karos{6}
+		\end{minipage}
+	\end{enumerate}
+	
+	\begin{aufgabe}
+		\begin{enumerate}
+			\item Ordne die folgenden Graphen ihrer Funktionsgleichung zu.
+			
+			\item Gib die Funktionsgleichung für die folgenden Graphen an.
+			
+			\item Die Graphen der beiden Funktionen $f(x)=x^p+2.5$ und $g(x)=x^q-5$ schneiden sich im Punkt $(2,3)$. Bestimme aus diesen Angaben und ohne Einsatz von Technologie (TR oder Geogebra) die beiden Unbekannten $p$ und $q$?
+		\end{enumerate}
+	\end{aufgabe}
+	
 
 \newpage
 \subsection*{History}
@@ -177,7 +534,5 @@ Als zweites betrachten wir sogenannte Wurzelgleichungen. Diese zeichnen sich aus
 		$0.3$ & ToDo & Jonas Guler & Aufgaben hinzufügen und Rationale Exponenten \\\hline
 	\end{tabular}
 \end{table}
-
-
 
 \end{document}
