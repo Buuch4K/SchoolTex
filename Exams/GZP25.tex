@@ -76,11 +76,11 @@ Berechne die Lösungsmenge der folgenden Gleichungen für $x$.
 {\vspace{5pt}\antwort{9}\vfill}
 
 \question[2]
-Vereinfache und forme den Term so um, dass im Endergebnis keine negativen Exponenten vorhanden sind.
+Vereinfache den nachfolgenden Term so weit wie möglich. Im Endergebnis sollen keine negativen Exponenten vorhanden sein.
 \[\frac{x\*x^4\left(y^{-2}\*\sqrt{y^{16}}\right)}{x^{-2}\*x^7\*\sqrt{x^4}}\]
 \ifthenelse{\boolean{printanswers}}
 {\begin{solution}
-	\[\frac{x\*x^4\left(y^{-2}\*\sqrt{y^{16}}\right)}{x^{-2}\*x^7\*\sqrt{x^4}}=x^5\*y^{-2}\*y^3\*x^{-5}\*x^{-1}=y^1\*x^{-1}=\frac{y}{x}\]
+	\[\frac{x\*x^4\left(y^{-2}\*\sqrt{y^{16}}\right)}{x^{-2}\*x^7\*\sqrt{x^4}}=x^5\*y^{-2}\*y^8\*x^{-5}\*x^{-2}=y^6\*x^{-2}=\frac{y^6}{x^2}\]
 \end{solution}}
 {\vspace{5pt}\antwort{9}\newpage}
 
@@ -134,6 +134,24 @@ Berechne die fehlenden Grössen $w, x, y$ und $z$.
 		\end{table}
 \end{solution}}
 {\antwort{17}\newpage}
+
+
+%------------------------------------------------
+\question[3]
+Berechne die Lösungsmenge der folgenden Gleichung für $x$.
+\[\frac{x-1}{x+3}-\frac{x-4}{x+5}=\frac{7x+13}{x^2+8x+15}\]
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		Zuerst untersuchen wir den Hauptnenner: $(x+3)(x+5)$. Das bedeutet die Definitionsmenge dieser Gleichung ist: \[\Rightarrow D=\R\setminus\left\{-3,-5\right\}.\] Lasst uns als nächstes die Gleichung lösen:
+		\begin{align*}
+			\frac{(x-1)(x+5)}{(x+3)(x+5)}-\frac{(x-4)(x+3)}{(x+3)(x+5)}&=\frac{7x+13}{(x+3)(x+5)} &&\vert\*(x+3)(x+5)\\
+			(x^2+4x-5)-(x^2-x-12)&=7x+13 &&\vert TU\\
+			5x+7&=7x+13&& \vert-5x-13\\
+			-6&=2x &&\vert\div 2\\
+			x&=-3 \qquad\Rightarrow \mathbb{L}=\emptyset
+		\end{align*}
+\end{solution}}
+{\antwort{22}\newpage}
 
 
 %------------------------------------------------
@@ -200,7 +218,7 @@ Berechne die fehlenden Grössen $w, x, y$ und $z$.
 			\end{align*}
 		\end{parts}
 \end{solution}}
-{\vspace{5pt}\antwort{11.5}\newpage}
+{\vspace{5pt}\antwort{11.5}\newpage\antwort{25}\newpage}
 
 %------------------------------------------------
 \question[3]
@@ -293,24 +311,6 @@ Entscheide in der Tabelle unten, ob die Gleichungen richtig oder falsch sind. Di
 
 
 %------------------------------------------------
-\question[3]
-Berechne die Lösungsmenge der folgenden Gleichungen für $x$.
-\[\frac{x-1}{x+3}-\frac{x-4}{x+5}=\frac{7x+13}{x^2+8x+15}\]
-\ifthenelse{\boolean{printanswers}}
-{\begin{solution}
-		Zuerst untersuchen wir den Hauptnenner: $(x+3)(x+5)$. Das bedeutet die Definitionsmenge dieser Gleichung ist: \[\Rightarrow D=\R\setminus\left\{-3,-5\right\}.\] Lasst uns als nächstes die Gleichung lösen:
-		\begin{align*}
-			\frac{(x-1)(x+5)}{(x+3)(x+5)}-\frac{(x-4)(x+3)}{(x+3)(x+5)}&=\frac{7x+13}{(x+3)(x+5)} &&\vert\*(x+3)(x+5)\\
-			(x^2+4x-5)-(x^2-x-12)&=7x+13 &&\vert TU\\
-			5x+7&=7x+13&& \vert-5x-13\\
-			-6&=2x &&\vert\div 2\\
-			x&=-3 \qquad\Rightarrow \mathbb{L}=\emptyset
-		\end{align*}
-\end{solution}}
-{\antwort{22}\newpage}
-
-
-%------------------------------------------------
 \question[4]
 Löse das Gleichungssystem ohne Diskussion der Sonderfälle.
 \[\systeme[xy]{a\*x+2y=4,x+y=a}\]
@@ -379,7 +379,7 @@ Löse das Gleichungssystem ohne Diskussion der Sonderfälle.
 %=========================================================
 \question[3]
 \begin{parts}
-	\part Bestimme die Gleichung $f:y=ax^2+bx+c$ einer quadratischen Funktion mit den Nullstellen (zeros) $x_1=2$ und $x_2=4$ so, dass die Parabel durch den Punkt $P(-1/30)$ geht.
+	\part Bestimme die Gleichung $f:y=ax^2+bx+c$ einer quadratischen Funktion mit den Nullstellen (zeros) $x_1=2$ und $x_2=4$ so, dass die Parabel durch den Punkt $P(-1 \vert 30)$ geht.
 	\part Gib die Koordinaten des Scheitelpunktes (vertex) an.
 \end{parts}
 \ifthenelse{\boolean{printanswers}}
@@ -465,7 +465,7 @@ Berechne die Berghöhe $h$ aus den Angaben $\alpha=42^\circ$ und $\beta=59^\circ
 
 %------------------------------------------------
 \question[5]
-Die Parabel mit der Gleichung $f:y=ax^2+bx+c$ hat den Scheitelpunkt (vertex) $S(-1/5)$ und schneidet die Gerade $g:y=5x-43$ bei $x=3$. Berechne den zweiten Schnittpunkt (intersection) der Parabel mit der Geraden.
+Die Parabel mit der Gleichung $f:y=ax^2+bx+c$ hat den Scheitelpunkt (vertex) $S(-1 \vert 5)$ und schneidet die Gerade $g:y=5x-43$ bei $x=3$. Berechne den zweiten Schnittpunkt (intersection) der Parabel mit der Geraden.
 \ifthenelse{\boolean{printanswers}}
 {\begin{solution}
 		Die $y-$ Koordinate des Schnittpunktes ist: \[y=5\*3-43=-28 \Rightarrow S_1(3,-28).\] Daraus folgt mit der Scheitelpunktform die Funktionsgleichung der Parabel:
