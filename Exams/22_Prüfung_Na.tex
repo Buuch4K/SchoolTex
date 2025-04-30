@@ -49,7 +49,7 @@
 %-------------------TESTFRAGEN
 %=========================================================
 \question[2]
-Erkläre einem Laien in eigenen Worten den Unterschied zwischen dem Differenzenquotienten und dem Differentialquotienten. Mache dazu eine geeignete Skizze.   
+Erkläre einem Laien in eigenen Worten den Unterschied zwischen dem Differenzenquotienten und dem Differentialquotienten. Mache dazu eine geeignete Skizze.
 \vspace{5pt}\antwort{12}
 \vfill
 \question[2]
@@ -145,10 +145,8 @@ Die Länge des bis zum Zeitpunkt $t$ zurückgelegten Weges $s$ eines Objektes wi
 
 %---------------------------------------------------------
 \newpage
-\noaddpoints
-\question[\totalpoints]
-\addpoints
-Skizziere ins leere Koordinatensystem den Graphen der Ableitungsfunktion der gegebenen Funktion $f$ möglichst exakt. 
+\question[6]
+Skizziere ins leere Koordinatensystem den Graphen der Ableitungsfunktion der gegebenen Funktion $f$ möglichst exakt.
 \begin{figure}[H]
 	\centering
 	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
@@ -166,9 +164,9 @@ Skizziere ins leere Koordinatensystem den Graphen der Ableitungsfunktion der geg
 		\draw[color=black] (0pt,-7pt) node[right] {$0$};
 		%Funktionen zeichnen:
 		\clip(-4.3,-4.3) rectangle (4.3,4.3); %Bildbereich
-		\draw[color=plotblue,line width=1.2pt,domain=-4.3:4.3,samples=200] plot (\x, {(0.1*\x^4+0.4*\x^3-3*\x^2+2*\x+0.5)});
+		\draw[color=plotblue,line width=1.2pt,domain=-4.3:4.3,samples=200] plot (\x, {-(0.1*\x^4+0.4*\x^3-3*\x^2+2*\x+0.5)});
 		%Beschriftung
-		\node[color=plotblue]  at (3.3,3.5) {\normalsize\textbf{$f$}};
+		\node[color=plotblue]  at (3.8,-3.5) {\normalsize\textbf{$f$}};
 	\end{tikzpicture}
 \end{figure}
 \begin{figure}[H]
