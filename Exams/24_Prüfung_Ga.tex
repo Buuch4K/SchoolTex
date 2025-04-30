@@ -4,10 +4,10 @@
 \input{../Header/mathexpressions.sty}
 \input{../Header/headerExam.sty}
 %=========================================================
-\newcommand{\theme}{Potenzen, Wurzeln und Bruchterme}
+\newcommand{\theme}{Bruchterme und Gleichungen}
 \newcommand{\teacher}{Jonas Guler}
 \newcommand{\class}{1Ga}
-\renewcommand{\date}{22.03.25}
+\renewcommand{\date}{08.05.25}
 %=========================================================
 \begin{document}
 \fontsize{14}{14}\selectfont
@@ -49,94 +49,96 @@
 %=========================================================
 \question[4]
 Vereinfache den folgenden Ausdruck so weit wie möglich.
-\begin{parcols}[2]
-    \part $27ab^2\*\left(\frac{1}{3}a^3b\right)^2$
-    \part $\left(\frac{a}{2}\right)^3:\left(8a^2\right)$
-\end{parcols}
+\[\frac{\frac{(x+3y)^2}{6xy}}{\frac{6y+2x}{xy}}=\hspace{10cm}\]
 \vspace{5pt}
-\antwort{8}
-\vfill
-\question[4]
-Betrachte den folgenden Lösungsweg. Kennzeichne, wo einen Fehler gemacht wurde und korrigiere die Umformungen ab diesem Punkt.
-\begin{align*}
-    \left(4xy\right)^3\*\frac{\left(x^2y^3\right)^4}{16x^2y^2}&=4a^4b^4\*\frac{a^6b^7}{16a^2b^2}\\
-    &= 4a^4b^4\*\frac{1}{16}a^4b^5\\
-    &= \frac{1}{4}a^8b^9
-\end{align*}
-\antwort{6}
-
-%---------------------------------------------------------
-\newpage
-\question[4] % Wurzeln
-Schreibe die folgenden Terme ohne Wurzelzeichen.
-\begin{parcols}[2]
-    \part $\sqrt{(a-1)^2+4a}$
-    \part $\sqrt{\frac{64a^4b^2}{16c^2}}$
-\end{parcols}
-\vspace{5pt}
-\antwort{12}
+\antwort{11.5}
 \vfill
 \question[2]
 Entscheide in der Tabelle unten, ob die Aussagen wahr oder falsch sind. Die Antworten müssen nicht begründet werden.\newline
 \begin{small}
-    Bewertung: Für $0-2$ korrekte Antworten gibt es keine Punkte; $3$ korrekte Antworten einen Punkt und falls alle Antworten korrekt sind, gibt es $2$ Punkte.
+	Bewertung: Für $0-2$ korrekte Antworten gibt es keine Punkte; $3$ korrekte Antworten $1$ Punkt und falls alle Antworten korrekt sind, gibt es $2$ Punkte.
 \end{small}
 \begingroup
 \renewcommand{\arraystretch}{1.5}
-\begin{table}[h]
-    \centering
-    \begin{tabular}{|p{12cm}|c|c|}\hline
-         & wahr & falsch \\\hline
-        $\sqrt{a}$ hat zwei Lösungen, wobei eine positiv und eine negativ ist. & & \\\hline
-        $\displaystyle\sqrt{9x}:\sqrt{x}+\left(\sqrt{x-2}\right)^2=x+1$ & & \\\hline %Algebra 910 S132 A1c
-        In der Gleichung $2^\triangle=8^{3}$ muss das Symbol $\triangle$ mit der Zahl $9$ ersetzt werden, damit die Gleichheit stimmt. & & \\\hline
-        In der Gleichung $\square^{12}=16^3$ muss das Symbol $\square$ mit der Zahl $2$ ersetzt werden, damit die Gleichheit stimmt.  & & \\\hline
-    \end{tabular}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|p{12cm}|c|c|}\hline
+		 & wahr & falsch \\\hline
+		Eine lineare Gleichung, deren letzte Zeile im Lösungsweg $0=0$ lautet, hat die Lösungsmenge $\mathbb{L}=\left\{0\right\}$. & & \\\hline
+		$(4a-b)(4a+b)=16a^2-b^2$ ist eine Bestimmungsgleichung. & & \\\hline
+		Im Unterschied zu Identitäten sind Bestimmungsgleichungen für jede mögliche Belegung der Variablen wahr.  & & \\\hline
+		Eine lineare Gleichung hat immer mindestens eine Zahl als Lösung. & & \\\hline
+	\end{tabular}
 \end{table}
 \endgroup
 
 
 %---------------------------------------------------------
 \newpage
-\question[3] % Wurzeln
-Betrachte den folgenden Lösungsweg. Kennzeichne, wo einen Fehler gemacht wurde und korrigiere die Umformungen ab diesem Punkt.
-\begin{normalsize}
-    \begin{align*}
-        \left(\sqrt{r}-\sqrt{s}\right)^2-\left(\sqrt{r}+\sqrt{s}\right)^2 &= \left(\left(\sqrt{r}\right)^2-2\*\sqrt{r}\sqrt{s}+\left(\sqrt{s}\right)^2\right)-\left(\left(\sqrt{r}\right)^2+2\*\sqrt{r}\sqrt{s}+\left(\sqrt{s}\right)^2\right)\\
-        &= \left(r-2\*\sqrt{r}\sqrt{s}+s\right)-\left(r+2\*\sqrt{r}\sqrt{s}+s\right)\\
-        &= r-2\*\sqrt{r+s}+s-r-2\*\sqrt{r+s}-s\\
-        &=-4\*\sqrt{r+s}
-    \end{align*}
-\end{normalsize}
-\antwort{6}
+\question[4] %Lösungsmenge
+Betrachte die Gleichung
+\[2x-3(12-9x)=-36\textcolor{blue}{-18}x.\]
+\begin{parts}
+	\part Gib zuerst die Lösungsmenge der Gleichung an.
+\end{parts}
+\vspace{5pt}\antwort{10}
+\begin{parts}
+	\setcounter{partno}{1}
+	\part Verändere \textcolor{blue}{den Faktor vor dem $x$} auf der rechten Seite des Gleichheitszeichens so, dass die Gleichung unendlich viele Lösung besitzt.
+\end{parts}
+\vspace{5pt}\antwort{10}
+
+
+%---------------------------------------------------------
+\newpage
+\question[3]
+Löse die folgende Gleichung und gib die Lösungsmenge an. \[12+\sqrt{3}\*x=3+\sqrt{12}\*x\]
+\antwort{10}
 \vfill
-\question[4]
-Berechne das kleinste gemeinsame Vielfache und der grösste gemeinsame Teiler der folgenden Termen.
-\[2a+3b,\quad 2a-3b\quad\text{und}\quad 4a^2-9b^2\]
-\antwort{8}
+\question[3]
+Gib die Lösungsmenge der folgenden Gleichung an. \[x^2-7x+10=0\]
+\antwort{9.5}
 
 %---------------------------------------------------------
 \newpage
-\question[6] % Bruchterm Addition
-Erweitere die Brüche auf einen gemeinsamen Nenner und vereinfache dann den Term so weit wie möglich.
-\begin{parcols}[2]
-    \part $\displaystyle\frac{2}{5a}-\frac{3}{10a}+\frac{7}{15a}$ %KSWillisau A2b
-    \part $\displaystyle\frac{5w}{w-3}-\frac{3w}{w+2}-\frac{2w-1}{w^2-w-6}$ %KSWillisau A2f
-\end{parcols}
+\question[5] %Textaufgaben Barth S163 A9c
+Bei einer Treppe mit 22 Stufen könnten zwei Stufen eingespart werden, wenn jede Stufe $1.6$ cm erhöht würde.\newline
+Wie hoch ist eine Stufe und wie hoch ist die ganze Treppe?
 \vspace{5pt}
-\antwort{20}
-
-%---------------------------------------------------------
-\newpage
-\question[3] % Bruchterm Multiplication
-Multipliziere die Brüche und vereinfache den Term so weit wie möglich.
-\[\frac{15x^2}{2x^4-32}\*\frac{3x^2-12}{5x}=\hspace{10cm}\] %KSWillisau A3d
-\antwort{20}
+\antwort{23}
 
 
 %---------------------------------------------------------
 \newpage
-\
+\question[4] %Erkläraufgabe Barth S161 A3
+Untersuche den angegebenen korrekten Lösungsweg kritisch. Zeige, wie du die Gleichung effizienter und/oder einfacher lösen könntest?
+\begin{small}
+	\begin{align*}
+		\frac{x-5}{4}-\frac{2x+3}{6} &= 3x-1 &&\vert+\frac{2x+3}{6}\\
+		\frac{x-5}{4} &= 3x-1+\frac{2x+3}{6} &&\vert\*4 \\
+		x-5 &= 12x-4+\frac{8x+12}{6} &&\vert\*6 \\
+		6x-30 &= 62x-24+8x+12 &&\vert+24 \\
+		6x-6 &= 72x+8x+12 &&\vert -12 \\
+		6x-18 &= 80x &&\vert +18 \\
+		6x &= 80x+18 &&\vert -80x \\
+		-74x &= 18 &&\vert \div(-74) \\
+		x &= -\frac{18}{74}=-\frac{9}{37}
+	\end{align*}
+\end{small}
+\antwort{16}
+
+%---------------------------------------------------------
+\newpage
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+Gegeben ist die Gleichung \[\frac{2x+4}{3x-5}=\frac{5}{2}.\]
+\begin{parts}
+	\part[2] Gib die Definitionsmenge der obigen Bruchtermgleichung an.
+	\part[3] Löse die Bruchtermgleichung nach $x$ auf.
+\end{parts}
+\vspace{5pt}\antwort{21.5}
+
 
 \end{questions}
 \end{document}
