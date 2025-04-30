@@ -17,6 +17,11 @@
 %=========================================================
 %-------------------TESTFRAGEN
 %=========================================================
+\question[2]
+Jemand formuliert sehr ungenau: \[\text{\flqq Die 1. Ableitung einer Funktion ist die Tangente.\frqq}\] Erläutere, was daran falsch und formuliere einen korrekten Merksatz.
+\vspace{5pt}\antwort{8}
+
+%---------------------------------------------------------
 \noaddpoints
 \question[\totalpoints] %DMK Ana S112 A377
 \addpoints
@@ -81,6 +86,98 @@ Eine Eiche, die im Jahr  $2010$ eine Höhe von $10$ Metern hatte, erreichte im J
 \end{parts}
 
 %---------------------------------------------------------
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+Zeichne im unten abgebildeten Graphen die folgenden Stellen und Bereiche ein:
+\begin{parts}
+	\part[2] Alle Stellen, die Steigung gleich $0$ haben.
+	\part[2\half] Alle Bereiche, die positive bzw. negative Steigung haben.
+	\part[1\half] Alle Stellen, an denen die Steigung am grössten ist.
+\end{parts}
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+		>=latex,   %Voreinstellung für Pfeilspitzen
+		font= \footnotesize, scale=1.5]
+		%Raster zeichnen
+		\draw [color=gray!50]  [step=10mm] (-4.3,-4.3) grid (4.3,4.3);
+		% Achsen zeichnen
+		\draw[->,thick] (-4.5,0) -- (4.5,0) node[right, below] {\normalsize $x$};
+		\draw[->,thick] (0,-4.5) -- (0,4.5) node[above, left] {\normalsize $y$};
+		% Achsen beschriften
+		\foreach \x in {-4,...,-2,-1,1,2,...,4} \draw (\x,-.1) -- (\x,.1) node[below=7pt] {$\x$};
+		\foreach \y in {-4,...,-2,-1,1,2,...,4} \draw (-.1,\y) -- (.1,\y) node[left=7pt] {$\y$};
+		% Besserer Ursprung
+		\draw[color=black] (0pt,-7pt) node[right] {$0$};
+		%Funktionen zeichnen:
+		\clip(-4.3,-4.3) rectangle (4.3,4.3); %Bildbereich
+		\draw[color=plotblue,line width=2pt,domain=-4.3:4.3,samples=200] plot (\x, {(0.1*\x^4+0.4*\x^3-3*\x^2+2*\x+0.5)});
+		%Beschriftung
+		\node[color=plotblue]  at (3.4,3.5) {\normalsize\textbf{$f$}};
+	\end{tikzpicture}
+\end{figure}
+
+%---------------------------------------------------------
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+Skizziere ins leere Koordinatensystem den Graphen der Ableitungsfunktion der gegebenen Funktion $f$ möglichst exakt.
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+		>=latex,   %Voreinstellung für Pfeilspitzen
+		font= \footnotesize, scale=0.8]
+		%Raster zeichnen
+		\draw [color=gray!50]  [step=10mm] (-4.3,-4.3) grid (4.3,4.3);
+		% Achsen zeichnen
+		\draw[->,thick] (-4.5,0) -- (4.5,0) node[right, below] {\normalsize $x$};
+		\draw[->,thick] (0,-4.5) -- (0,4.5) node[above, left] {\normalsize $y$};
+		% Achsen beschriften
+		\foreach \x in {-4,...,-2,-1,1,2,...,4} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+		\foreach \y in {-4,...,-2,-1,1,2,...,4} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+		% Besserer Ursprung
+		\draw[color=black] (0pt,-7pt) node[right] {$0$};
+		%Funktionen zeichnen:
+		\clip(-4.3,-4.3) rectangle (4.3,4.3); %Bildbereich
+		\draw[color=plotblue,line width=1.2pt,domain=-4.3:4.3,samples=200] plot (\x, {(0.1*\x^4+0.4*\x^3-3*\x^2+2*\x+0.5)});
+		%Beschriftung
+		\node[color=plotblue]  at (3.3,3.5) {\normalsize\textbf{$f$}};
+	\end{tikzpicture}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+		>=latex,   %Voreinstellung für Pfeilspitzen
+		font= \footnotesize, scale=1.5]
+		%Raster zeichnen
+		\draw [color=gray!50]  [step=10mm] (-4.3,-4.3) grid (4.3,4.3);
+		% Achsen zeichnen
+		\draw[->,thick] (-4.5,0) -- (4.5,0) node[right, below] {\normalsize $x$};
+		\draw[->,thick] (0,-4.5) -- (0,4.5) node[above, left] {\normalsize $y$};
+		% Achsen beschriften
+		\foreach \x in {-4,...,-2,-1,1,2,...,4} \draw (\x,-.1) -- (\x,.1) node[below=7pt] {$\x$};
+		\foreach \y in {-4,...,-2,-1,1,2,...,4} \draw (-.1,\y) -- (.1,\y) node[left=7pt] {$\y$};
+		% Besserer Ursprung
+		\draw[color=black] (0pt,-7pt) node[right] {$0$};
+		%Funktionen zeichnen:
+		\clip(-4.3,-4.3) rectangle (4.3,4.3); %Bildbereich
+		%\draw[color=plotblue,line width=1.2pt,domain=-4.3:4.3,samples=200] plot (\x, {(0.1*\x^4+0.4*\x^3-3*\x^2+2*\x+0.5)});
+		%Beschriftung
+		%\node[color=plotblue]  at (3.3,3.5) {\normalsize\textbf{$f$}};
+	\end{tikzpicture}
+\end{figure}
+
+%---------------------------------------------------------
+\question[4]
+Berechne die allgemeine Ableitungsfunktion der Funktion $f:y=x^2+x$, in dem du den Differentialquotient an der Stelle $x_0$ bestimmst.
+
+
+%---------------------------------------------------------
+\question[4]
+Berechne die allgemeine Ableitungsfunktion der Funktion $f:y=2x^2+4$, in dem du den Differentialquotient an einer beliebigen Stelle $x_0$ bestimmst.
+
+%---------------------------------------------------------
 \question[6]
 Bestimme die Ableitungsfunktion $f'$ für folgende Funktionen.
 \begin{parts}
@@ -114,6 +211,27 @@ Unter welchem spitzen Winkel schneiden sich die Graphen der beiden Funktionen $f
 %---------------------------------------------------------
 \question[4]
 Unter welchem spitzen Winkel schneiden sich die Graphen der beiden Funktionen $f(x)=\frac{2}{x^3}$ und $g(x)=2x^3$?
+
+%---------------------------------------------------------
+\question[2]
+Entscheide in der Tabelle unten, ob die Aussagen wahr oder falsch sind. Die Antworten müssen nicht begründet werden.\newline
+\begin{small}
+	Bewertung: Für $0-2$ korrekte Antworten gibt es keine Punkte; $3$ korrekte Antworten $1$ Punkt und falls alle Antworten korrekt sind, gibt es $2$ Punkte.
+\end{small}
+\begingroup
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|p{12cm}|c|c|}\hline
+		& wahr & falsch \\\hline
+		Hat eine Funktion eine Definitionslücke, so kann die Funktion an dieser Stelle nicht stetig sein. & & \\\hline
+		Die Steigung einer linearen Funktion ist identisch mit dem Differenzenquotienten. & & \\\hline
+		Durch den Grenzwert im Differentialquotienten kann die durchschnittliche Steigung der Funktion genauer wie im Differenzenquotienten berechnet werden. & & \\\hline
+		Jede beliebige Funktion besitzt eine Ableitung, die die Steigung an dieser Stelle beschreibt. & & \\\hline
+	\end{tabular}
+\end{table}
+\endgroup
+
 
 \end{questions}
 \end{document}
