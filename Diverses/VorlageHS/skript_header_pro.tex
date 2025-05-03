@@ -1,0 +1,682 @@
+\usepackage[a4paper, right=4.5cm, bottom=2cm]{geometry}
+\usepackage{mathtools}
+\usepackage{wrapfig}
+\usepackage{framed}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{url}
+\usepackage{multirow}
+\usepackage{xcolor, colortbl}
+\usepackage[german,ruled,vlined,linesnumbered,algosection]{algorithm2e}
+\usepackage{enumerate}
+\usepackage{float} % Allows putting an [H] in \begin{figure} to specify the exact location of the figure
+\usepackage{wrapfig} % Allows in-line images such as the example fish picture
+\usepackage{amssymb}
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage[german]{babel}
+\usepackage{lmodern}
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{cancel}
+\usepackage{systeme}
+\usepackage{hhline}
+\usepackage{subfiles}
+\usepackage{stackengine}
+\usepackage{lipsum}
+\usepackage{MnSymbol}
+\usepackage[onehalfspacing]{setspace}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage[labelfont=sf]{caption}
+\usepackage{tikz}
+\usepackage{tcolorbox}
+\usepackage{listings}
+\tcbuselibrary{breakable,skins}
+
+\usetikzlibrary{mindmap,trees}
+\newlength\tindent
+\setlength{\tindent}{\parindent}
+\setlength{\parindent}{0pt}
+\renewcommand{\indent}{\hspace*{\tindent}}
+\makeatletter
+\let\org@subfile\subfile
+\renewcommand*{\subfile}[1]{%
+  \filename@parse{#1}% LaTeX's file name parser
+  \expandafter
+  \graphicspath\expandafter{\expandafter{\filename@area}}%
+  \org@subfile{#1}%
+}
+\makeatother
+
+\makeatletter
+  \g@addto@macro\Ginput@path{}%
+\makeatother
+
+
+
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+
+\addto\captionsgerman{\renewcommand{\figurename}{\textcolor{gray}{$\blacksquare$}\textbf{Abb.}}}
+\captionsetup[figure]{labelsep=space}
+\renewcommand{\thefigure}{\textbf{\arabic{figure} }}
+\usepackage{xparse}
+\usepackage[german]{algorithm2e}
+\usepackage{sectsty}
+\sectionfont{\underline}
+\chapterfont{\sffamily\hfill}
+\usepackage{enumerate}
+\usetikzlibrary{arrows,%
+                petri,%
+                topaths, graphs}%
+\usepackage{tkz-berge}
+\usepackage[position=top]{subfig}
+\usepackage{verbatim}
+\usepackage{tabularx}
+\newcommand\mrahmen[3][]{%
+\tikz[anchor=base,baseline]\node[inner sep=2pt, draw=#2,#1]{$\displaystyle#3\mathstrut$};}
+\newcommand{\re}[1]{\scriptscriptstyle \mathrm{#1}}
+
+
+\newcommand{\xfrac}[2]{%
+\mbox{\raisebox{0.4ex}{\ensuremath{\displaystyle #1}\hspace{0.2ex}}%
+{\raisebox{-0.1ex}{\Large /}}%
+\raisebox{-0.2ex}{\ensuremath{\displaystyle #2}}%
+}%
+}
+\usepackage{amsthm}
+\newtheorem{mytheorem}{Theorem}
+\linespread{1.4} % Line spacing
+
+\renewcommand{\thealgocf}{}
+
+% Angepasst
+
+\makeatletter 
+\def\ifEmpty#1{\def\@temp{#1}\ifx\@temp\@empty} 
+\makeatother
+
+
+%Aufgaben
+\newcounter{aufg}                           % this will create a new counter for auto numbering the exercises
+\makeatletter
+\@addtoreset{aufg}{chapter} % Setzt counter nach chapter wieder auf 0, alle Übungen werden innerhalb chapter nummeriert. 
+\makeatother
+
+\newtcolorbox{aufgabe}[1][]{                       % Hauptbox mit Aufgabe drin
+   enhanced,
+   overlay unbroken and first={\mytitle[#1]},   % Titelleiste mit Icons wird nicht über Seite gebrochen
+   colframe=black,
+   boxrule=0pt,
+   breakable,                               
+   top=15pt,
+   before=\vskip18pt,
+}
+
+\newcommand{\mytitle}[1][]{                     % Macht Titelbox und Icons
+   \node[fill=black!20,
+      rounded corners,
+      draw=black,
+      text=black,
+      line width=1pt,
+      inner sep=4pt,
+      anchor=west,
+      xshift=12pt]
+   at (frame.north west){\bfseries  Aufgabe  \thechapter.\stepcounter{aufg}\theaufg. \ifEmpty{#1}\else\emph{(#1)}\fi};  % Titel, letzter Teil mit ifx testet ob #1 leer und macht Klammern und Titel, falls Titelargument übergeben wird bzw.  falls #1 leer erscheint nichts - auch keine Klammern
+
+  % \node[ % Buchstabe für Typ
+%      rounded corners,
+%      draw=black,
+%      text=white,
+%      fill=black,
+%      line width=1pt,
+%      inner sep=4pt,
+%      anchor=west,
+%      xshift=5pt]
+%   at (frame.north east){\bfseries \Huge A};
+
+ \node[ % Icon
+      rounded corners,
+      text=black,
+      fill=black,
+      line width=0pt,
+      inner sep=3pt,
+      anchor=west,
+      xshift=5pt,
+    %  yshift=-35pt
+]
+   at (frame.north east){ \includegraphics[width=24pt]{\pfad Icons/aufgabeicon} };
+}
+
+%%%%%%%%%%%%%%%%%%
+
+
+%Beispiel
+\newcounter{bsp}                           % this will create a new counter for auto numbering the exercises
+\makeatletter
+\@addtoreset{bsp}{chapter} % Setzt counter nach chapter wieder auf 0, alle Übungen werden innerhalb chapter nummeriert. 
+\makeatother
+
+\newcommand{\Bsp}{                     % Macht Titelbox und Icons
+{\bfseries  Beispiel  \thechapter.\stepcounter{bsp}\thebsp. }}  % Titel, letzter Teil mit ifx testet ob #1 leer und macht Klammern und Titel, falls 
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%
+
+
+
+
+
+
+%Buchaufgaben, alles gleich wie bei Aufgaben nur anderes Symbol, selbe Nummerierung
+
+\newtcolorbox{buchaufgabe}[1][]{                       % Hauptbox mit Aufgabe drin
+   enhanced,
+   overlay unbroken and first={\mytitlebuch[#1]},   % Titelleiste mit Icons wird nicht über Seite gebrochen
+   colframe=black,
+   boxrule=0pt,
+   breakable,                               
+   top=15pt,
+   before=\vskip18pt,
+}
+
+\newcommand{\mytitlebuch}[1][]{                     % Macht Titelbox und Icons
+   \node[fill=black!20,
+      rounded corners,
+      draw=black,
+      text=black,
+      line width=1pt,
+      inner sep=4pt,
+      anchor=west,
+      xshift=12pt]
+   at (frame.north west){\bfseries  Aufgabe  \thechapter.\stepcounter{aufg}\theaufg. \ifEmpty{#1}\else\emph{(#1)}\fi};  % Titel, letzter Teil mit ifx testet ob #1 leer und macht Klammern und Titel, falls Titelargument übergeben wird bzw.  falls #1 leer erscheint nichts - auch keine Klammern
+
+%   \node[ % Buchstabe für Typ
+%      rounded corners,
+%      draw=black,
+%      text=white,
+%      fill=black,
+%      line width=1pt,
+%      inner sep=4pt,
+%      anchor=west,
+%      xshift=5pt]
+%   at (frame.north east){\bfseries \Huge A};
+
+ \node[ % Icon
+      rounded corners,
+      text=black,
+      fill=black,
+      line width=0pt,
+      inner sep=3pt,
+      anchor=west,
+      xshift=5pt
+]
+   at (frame.north east){ \includegraphics[width=24pt]{\pfad Icons/buchicon} };
+}
+
+% Satz
+
+\newcounter{satz}                           
+\makeatletter
+\@addtoreset{satz}{chapter} % Setzt counter nach chapter wieder auf 0
+\makeatother
+
+\newtcolorbox{satz}[1][]{                       % Hauptbox mit Satz drin
+   enhanced,
+   colback=red!5!white,
+   fuzzy halo=2mm with gray,
+   colframe=red!75!black,
+   overlay unbroken and first={\mytitlesatz[#1]},   % Titelleiste mit Icons wird nicht über Seite gebrochen
+   boxrule=2pt,
+   breakable,                               
+   top=15pt,
+   before=\vskip18pt,
+}
+
+\newcommand{\mytitlesatz}[1][]{                     % Macht Titelbox und Icons
+   \node[fill=red!90!white,,
+      draw=black,,
+      text=black,
+      line width=1pt,
+      inner sep=4pt,
+      anchor=west,
+      xshift=12pt]
+   at (frame.north west){\bfseries  Satz  \thechapter.\stepcounter{satz}\thesatz. \ifEmpty{#1}\else\emph{(#1)}\fi};  % Titel, letzter Teil mit ifx testet ob #1 leer und macht Klammern und Titel, falls Titelargument übergeben wird bzw.  falls #1 leer erscheint nichts - auch keine Klammern
+
+%   \node[ % Buchstabe für Typ
+%      rounded corners,
+%      draw=black,
+%      text=white,
+%      fill=black,
+%      line width=1pt,
+%      inner sep=4pt,
+%      anchor=west,
+%      xshift=5pt]
+%   at (frame.north east){\bfseries \hspace {3pt}\Huge {S}\hspace {3pt} };
+
+ \node[ % Icon
+      rounded corners,
+      text=black,
+      fill=black,
+      line width=0pt,
+      inner sep=3pt,
+      anchor=west,
+      xshift=5pt,
+%      yshift=-35pt
+]
+   at (frame.north east){ \includegraphics[width=24pt]{\pfad Icons/satzicon} };
+
+
+}
+
+
+
+% Definition 
+
+
+
+\newcounter{defin}                           
+\makeatletter
+\@addtoreset{defin}{chapter} % Setzt counter nach chapter wieder auf 0
+\makeatother
+
+
+
+
+\newtcolorbox{definition}[1][]{                       % Hauptbox mit Satz drin
+   enhanced,
+   drop shadow southeast,
+   colback=blue!5!white,
+   colframe=blue!75!black,
+   overlay unbroken and first={\mytitledef[#1]},   % Titelleiste mit Icons wird nicht über Seite gebrochen
+   boxrule=2pt,
+   breakable,                               
+   top=15pt,
+   before=\vskip18pt,
+}
+
+\newcommand{\mytitledef}[1][]{                     % Macht Titelbox und Icons
+   \node[fill=blue!40!white,
+      draw=black,
+      text=black,
+      line width=1pt,
+      inner sep=4pt,
+      anchor=west,
+      xshift=12pt]
+   at (frame.north west){\bfseries  Definition  \thechapter.\stepcounter{defin}\thedefin. \ifEmpty{#1}\else\emph{(#1)}\fi};  % Titel, letzter Teil mit ifx testet ob #1 leer und macht Klammern und Titel, falls Titelargument übergeben wird bzw.  falls #1 leer erscheint nichts - auch keine Klammern
+
+%   \node[ % Buchstabe für Typ
+%      rounded corners,
+%      draw=black,
+%      text=white,
+%      fill=black,
+%      line width=1pt,
+%      inner sep=4pt,
+%      anchor=west,
+%      xshift=5pt]
+%   at (frame.north west){\bfseries \Huge {D}} ;
+
+ \node[ % Icon
+      rounded corners,
+      text=black,
+      fill=black,
+      line width=0pt,
+      inner sep=3pt,
+      anchor=west,
+      xshift=5pt
+      ]
+   at (frame.north east){ \includegraphics[width=24pt]{\pfad Icons/definitionicon} };
+
+ \node[ % Icon
+      rounded corners,
+      text=black,
+      line width=0pt,
+      inner sep=3pt,
+      anchor=west,
+      xshift=5pt
+   %  yshift=-35pt
+      ]
+   at (frame.north east){\ifEmpty{#1}\else\raisebox{-4cm}{\begin{minipage}{\marginparwidth+25pt}\textsc{#1}\end{minipage}}\fi };
+}
+
+\newtcolorbox{howto}[1][]{                       % Hauptbox mit Satz drin
+   enhanced,
+   drop shadow southeast,
+   colback=yellow!5!white,
+   colframe=yellow!75!black,
+   overlay unbroken and first={\mytitlehowto[#1]},   % Titelleiste mit Icons wird nicht über Seite gebrochen
+   boxrule=2pt,
+   breakable,                               
+   top=15pt,
+   before=\vskip18pt,
+}
+
+\newcommand{\mytitlehowto}[1][]{                     % Macht Titelbox und Icons
+   \node[fill=yellow!40!white,
+      draw=black,
+      text=black,
+      line width=1pt,
+      inner sep=4pt,
+      anchor=west,
+      xshift=12pt]
+   at (frame.north west){\bfseries \ifEmpty{#1}{How to}\else#1\fi};  % Titel, letzter Teil mit ifx testet ob #1 leer und macht Klammern und Titel, falls Titelargument übergeben wird bzw.  falls #1 leer erscheint nichts - auch keine Klammern
+
+%   \node[ % Buchstabe für Typ
+%      rounded corners,
+%      draw=black,
+%      text=white,
+%      fill=black,
+%      line width=1pt,
+%      inner sep=4pt,
+%      anchor=west,
+%      xshift=5pt]
+%   at (frame.north west){\bfseries \Huge {D}} ;
+
+ \node[ % Icon
+      rounded corners,
+      text=black,
+      fill=black,
+      line width=0pt,
+      inner sep=3pt,
+      anchor=west,
+      xshift=5pt
+      % yshift=-35pt
+      ]
+   at (frame.north east){ \includegraphics[width=24pt]{\pfad Icons/algoicon} };
+}
+
+
+
+\newcommand{\ex}{\underline{\textbf{Beispiel:}} }% besser als bsp
+
+\newcommand*\circled[1]{\footnotesize\protect\tikz[baseline=(char.base)]{
+	\protect\node[shape=circle,draw,inner sep=2pt] (char) {#1};}\normalsize}
+
+\let\olddefinitionc\ex
+\renewcommand{\ex}{\olddefinitionc\normalfont}
+
+\usepackage{enumerate}
+
+
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{bbm}
+\usepackage{lmodern}
+\usepackage{enumitem}
+\usepackage{lscape}
+\usepackage{amsthm}
+\usepackage{fancyhdr}
+
+
+
+
+\linespread{1.2} % Line spacing
+
+\fancypagestyle{plain}{
+   \pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{\Autor}
+\cfoot{\Skriptname}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{}
+\lhead{}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+%\setlength\parindent{0pt} % Uncomment to remove all indentation from paragraphs
+\newcommand*\wid{~\tikz \draw[->,>=stealth] (0,0)--++(-0.25,-0.25)--++(0.25,0)--++(-0.25,-0.25);}
+
+\author{\Autor}
+\title{\Titel}
+\date{\today}
+
+
+\renewcommand*{\thesubsubsection}{\arabic{subsection}.\alpha{subsubsection}} 
+\usetikzlibrary{shapes,arrows}
+\tikzstyle{decision} = [diamond, draw, fill=blue!20, 
+    text width=6em, text badly centered, node distance=4cm, inner sep=0pt]
+\tikzstyle{block} = [rectangle, draw, fill=blue!20, 
+    text width=8em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{cloud} = [draw, ellipse,fill=red!20, node distance=2cm,
+    minimum height=2em]
+
+\newcommand*\rand[1]{%
+  \normalmarginpar\def\pointer{\filledmedtriangleright}%
+    \def\stackalignment{r}%
+ \marginpar{%
+   \topinset{%
+      \scalebox{1.5}{\textcolor{blue}{}}}{%
+      \belowbaseline[-20pt]{%
+        \stackengine%
+         {-5pt}%
+          {\fcolorbox{white}{white}{\parbox{2.5cm}%
+            {\vspace{3pt}\raggedright \textsc{#1}}}}%
+          {}%
+          {O}%
+          {l}%
+          {F}%
+          {F}%
+          {S}%
+        }%
+      }{%
+      3pt}{%
+      -2pt}%
+  }%
+}
+
+\newcommand*\hrand[1]{% Stichwort in Notiz hervorgehoben und am Rand.
+\emph{#1}
+  \normalmarginpar\def\pointer{\filledmedtriangleright}%
+    \def\stackalignment{r}%
+ \marginpar{%
+   \topinset{%
+      \scalebox{1.5}{\textcolor{blue}{}}}{%
+      \belowbaseline[-20pt]{%
+        \stackengine%
+         {-5pt}%
+          {\fcolorbox{white}{white}{\parbox{2.5cm}%
+            {\vspace{3pt}\raggedright \textsc{#1}}}}%
+          {}%
+          {O}%
+          {l}%
+          {F}%
+          {F}%
+          {S}%
+        }%
+      }{%
+      3pt}{%
+      -2pt}%
+  }%
+}
+
+\newcommand*\nrand[1]{% Stichwort in Notiz normal und am Rand.
+#1
+  \normalmarginpar\def\pointer{\filledmedtriangleright}%
+    \def\stackalignment{r}%
+ \marginpar{%
+   \topinset{%
+      \scalebox{1.5}{\textcolor{blue}{}}}{%
+      \belowbaseline[-20pt]{%
+        \stackengine%
+         {-5pt}%
+          {\fcolorbox{white}{white}{\parbox{2.5cm}%
+            {\vspace{3pt}\raggedright \textsc{#1}}}}%
+          {}%
+          {O}%
+          {l}%
+          {F}%
+          {F}%
+          {S}%
+        }%
+      }{%
+      3pt}{%
+      -2pt}%
+  }%
+}
+
+\newcommand{\same}{\ensuremath{\Leftrightarrow}}
+\newcommand{\qsame}{\quad\same\quad}
+\newcommand{\lsame}{\ensuremath{\Longleftrightarrow}}
+\newcommand{\qlsame}{\quad\lsame\quad}
+\newcommand{\dsame}{\ensuremath{:\Leftrightarrow}}
+\newcommand{\qdsame}{\quad\dsame\quad}
+\newcommand{\ldsame}{\ensuremath{:\Longleftrightarrow}}
+\newcommand{\qldsame}{\quad\ldsame\quad}
+\newcommand{\samedef}{\ensuremath{\us {\text{def}} \Leftrightarrow}}
+\newcommand{\qsamedef}{\quad\samedef\quad}
+\newcommand{\lsamedef}{\ensuremath{\us {\text{def}} \Longleftrightarrow}}
+\newcommand{\qlsamedef}{\quad\lsamedef\quad}
+\newcommand{\lto}{\longrightarrow}
+\newcommand{\qTo}{\quad\To\quad}
+\newcommand{\sTo}{\ \To\ }
+\newcommand{\To}{\ensuremath{\Rightarrow}}
+
+
+%%
+% Mengendefinien
+%%
+\newcommand{\M}{\ensuremath{\mathcal {M}}}
+\newcommand{\N}{\ensuremath{\mathbb {N}}}
+\newcommand{\Z}{\ensuremath{\mathbb {Z}}}
+\newcommand{\Q}{\ensuremath{\mathbb {Q}}}
+\newcommand{\R}{\ensuremath{\mathbb {R}}}
+\newcommand{\C}{\ensuremath{\mathbb {C}}}
+\renewcommand{\S}{\ensuremath{\mathbb {S}}}
+\newcommand{\Prim}{\ensuremath{{\mathbb P}}}
+\newcommand{\0}{\ensuremath{\emptyset}}
+\renewcommand{\Re}{\ensuremath{\operatorname{Re}}}
+\renewcommand{\Im}{\ensuremath{\operatorname{Im}}}
+
+
+\newcommand{\strich}{\ensuremath{\big \vert}}
+%%
+% Logisches Und und Oder
+%%
+
+\newcommand{\sand}{\ensuremath{\; \land \;}}
+\newcommand{\sor}{\ensuremath{\; \lor \;}}
+\renewcommand{\*}{\ensuremath{\cdot}}
+\newcommand{\od}{\vee}
+\newcommand{\n}{\neg}
+\newcommand{\un}{\wedge}
+
+%%
+% nicht Element von
+%%
+
+\renewcommand{\nin}{\not\in}
+
+
+
+%%
+% Bei Integral, Summe,... die Grenzen �ber bzw. 
+% unter das Zeichen
+%%
+
+\newcommand{\I}{\int\limits}
+\newcommand{\Sum}{\sum\limits}
+\newcommand{\Prod}{\prod\limits}
+\newcommand{\Min}{\min\limits}
+\newcommand{\Max}{\max\limits}
+\newcommand{\Lim}{\lim\limits}
+\newcommand{\Inf}{\inf\limits}
+\newcommand{\Sup}{\sup\limits}
+\newcommand{\Liminf}{\liminf\limits}
+\newcommand{\Limsup}{\limsup\limits}
+%\renewcommand{\Cup}{\bigcup\limits}
+%\renewcommand{\Cap}{\bigcap\limits}
+\newcommand{\Otimes}{\bigotimes\limits}
+\newcommand{\Oplus}{\bigoplus\limits}
+
+
+
+
+%%
+% den Beweis schick machen
+%%
+
+
+% Ende des Beweises
+
+
+
+
+\newcommand{\operp}{
+  \settowidth{\length}{\ensuremath{\bigcirc}}
+  \text{\makebox[\length]{
+      \makebox[0pt]{\ensuremath{\bigcirc}}
+      \makebox[0pt]{\ensuremath{\perp}}
+}}}
+
+
+
+
+%%
+% Arcus Cotangens, Logarithmus
+%%
+
+\newcommand{\arcsinh}{\operatorname{arcsinh}}
+\newcommand{\arccosh}{\operatorname{arccosh}}
+\newcommand{\arctanh}{\operatorname{arctanh}}
+\newcommand{\arccot}{\operatorname{arccot}}
+\newcommand{\arccoth}{\operatorname{arccoth}}
+\newcommand{\Log}{\operatorname{Log}}
+
+
+%%
+% Griechische Buchstaben
+%%
+
+\newcommand{\e}{\ensuremath{\varepsilon}}
+%\renewcommand{\phi}{\varphi}
+\renewcommand{\l}{\lambda}
+\renewcommand{\t}{\tau}
+
+
+
+%%
+% Bezeichnungen
+%%
+
+
+\newcommand{\Rgn}{\R_{>0}} % R gr��er Null
+\newcommand{\Rad}{\operatorname{Rad}}   % Radikal
+\newcommand{\KGV}{\operatorname{KGV}}   % Kleinster gemeinsame Vielfache
+\newcommand{\kgV}{\operatorname{kgV}}   % Kleinster gemeinsame Vielfache
+\newcommand{\GGT}{\operatorname{GGT}}   % Gr��ter gemeinsame Teiler
+\newcommand{\ggT}{\operatorname{ggT}}   % Gr��ter gemeinsame Teiler
+\newcommand{\winkel}{\sphericalangle}          % Winkelsymbol
+\newcommand{\vek}[1]{\overrightarrow{#1}}
+
+%%
+% Text
+%%
+\newcommand{\utext}[2]{$\underbrace{\textrm{#1}}_{\textrm{#2}}$}
+
+\newcommand{\otext}[2]{$\overbrace{\textrm{#1}}^{\textrm{#2}}$}
+\newcommand{\bd}[1][]{\begin{definition}[#1]}
+\newcommand{\ed}{\end{definition}}
+
+\newcommand{\ba}{\begin{align*}}
+\newcommand{\ea}{\end{align*}}
+
+
+\newcommand{\ip}{\textbf{Eingabe: }}
+\newcommand{\op}{\textbf{Ausgabe: }}
+\newcommand{\gdw}{ \Leftrightarrow}
+
+
+

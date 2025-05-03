@@ -1,0 +1,55 @@
+\documentclass[a4paper, 12pt]{report}   	
+\input{header.sty}
+
+% AdminCommands
+\newcommand{\name}{Jonas Guler}
+\newcommand{\Matrikelnummer}{Gu}
+\newcommand{\topic}{Algebra}
+\newcommand{\subtopic}{}
+\newcommand{\subject}{Mathematik}
+\newcommand{\semester}{Semester}
+
+\begin{document}
+\begin{titlepage}
+	\title{\textbf{.}\\[-2cm]\includegraphics[scale=1]{Data/uzh_logo_d.pdf}\textbf{.}\\[2cm]
+    \Huge\textbf{\topic} \\[1cm]}
+	\author{Author:\\ \name \\[12cm]}
+	\date{\normalsize {Version 0.1}\\ \datelong}
+	\maketitle
+	\thispagestyle{empty}
+\end{titlepage}
+
+\pagenumbering{roman}
+\tableofcontents
+\newpage
+
+\pagenumbering{arabic}
+\fancyhead[R]{\name}
+\fancyhead[L]{CHAPTER \leftmark}
+
+\chapter{Mengenlehre}
+
+
+\chapter{Terme}
+
+
+\section{Brüche}
+
+
+\section{Wurzeln}
+
+
+\section{Gleichungen}
+
+
+\section{Lineare Funktionen}
+
+
+\newpage
+\bibliographystyle{apalike}
+\bibliography{biblio.bib}
+
+\newpage
+\appendix
+\input{Appendix.tex}
+\end{document}

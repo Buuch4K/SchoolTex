@@ -1,0 +1,229 @@
+\documentclass[12pt]{exam}
+\printanswers
+%\noprintanswers
+\usepackage[T1]{fontenc}        
+\usepackage[utf8]{inputenc}   
+\usepackage[german]{babel}     
+\usepackage[top=2cm,left=2cm,right=2cm,bottom=2cm]{geometry}  
+\usepackage{amsmath,amssymb, esvect}
+\usepackage{mathtools}
+\RequirePackage{amssymb, amsfonts, amsmath, latexsym, verbatim, xspace, setspace}
+\usepackage{multicol}         
+\usepackage{multirow}     
+\usepackage{array}       
+\usepackage{ragged2e}    
+\usepackage{graphicx}     
+\usepackage{pdflscape}    
+\usepackage{epstopdf}       
+\usepackage{booktabs}       
+\usepackage{pdfpages}       
+\usepackage[colorlinks=true,urlcolor=magenta,citecolor=red,linkcolor=blue,bookmarks=true]{hyperref}%Links e citações
+\usepackage{enumerate}      
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{tikz} % tikz
+\colorgrids
+\definecolor{GridColor}{rgb}{0.45, 0.45, 0.45}
+
+
+\qformat{\textbf{Aufgabe \thequestion\hfill\thepoints}} %%%%%%%% ADDDEDDD %%%%%%
+
+
+\newlist{partes}{enumerate}{3}
+\setlist[partes]{label=(\alph*)}
+\newcommand{\parte}{\item}
+%---
+\newlist{subpartes}{enumerate}{3}
+\setlist[subpartes]{label=\roman*)}
+\newcommand{\subparte}{\item}
+\setlist[enumerate,1]{%(
+	leftmargin=*, itemsep=12pt, label={\textbf{\arabic*.)}}}
+\newcommand{\dis}{\displaystyle}
+\newcommand\answerbox{%%
+	\fbox{\rule{2in}{0pt}\rule[-0.1ex]{0pt}{4ex}}}
+\pointpoints{Punkt}{Punkte}
+\hqword{\textcolor{blue}{Frage:}}
+\hpword{Mögliche Punkte:}
+\hsword{Erreicht:}
+\htword{\textcolor{blue}{Total}}
+\renewcommand*\half{.5}
+\newcommand{\antwort}[1]{
+    {\setlength{\textwidth}{\textwidth}
+        \fillwithgrid{#1cm}}
+}
+\renewcommand{\solutiontitle}{\noindent\textbf{Lösung:}\par\noindent}
+
+% Graphed boxes
+\newcommand{\karos}[2]{
+  \begin{tikzpicture}
+    \draw[step=0.4cm,color=cyan,dotted] (0,0) grid (#1 cm ,#2 cm);
+  %  \draw((#1)/2 cm,0)--((#1)/2 cm,/#2)/2cm)
+  \end{tikzpicture}
+}
+%=========================================================
+\newcommand{\R}{\mathbb{R}}   
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\vvec}[2]{\left(\begin{array}{c} #1 \\ #2 \end{array}\right)}               % two dimensional vector
+\newcommand{\vvector}[3]{\left(\begin{array}{c} #1 \\ #2 \\ #3 \end{array}\right)}      % three dimensional vector
+
+\renewcommand{\*}{\ensuremath{\cdot}}
+\renewcommand{\d}[1]{\ensuremath{\operatorname{d}\!{#1}}}
+\newcommand{\I}{\int\limits}
+\newcommand{\Log}{\operatorname{Log}}
+\newcommand{\e}{\operatorname{e}}
+\renewcommand{\epsilon}{\ensuremath{\varepsilon}}
+\renewcommand{\phi}{\varphi}
+\renewcommand{\l}{\lambda}
+\renewcommand{\t}{\tau}
+\let\oldsin\sin
+\renewcommand{\sin}[1]{\oldsin{\left(#1\right)}}
+\let\oldarcsin\arcsin
+\renewcommand{\arcsin}[1]{\oldarcsin{\left(#1\right)}}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+\makeatother
+%=========================================================
+\newcommand{\thema}{Quadratische Funktionen}
+\newcommand{\lehrer}{Philipp Moor}
+\newcommand{\klasse}{4f}
+\newcommand{\data}{\today}
+\newcommand{\dauer}{45 Minuten}
+\newcommand{\name}{\bf Name:}
+\newcommand{\nota}{Note:}
+\newcommand{\datum}{02.12.22}
+%=========================================================
+
+%=========================================================
+\pagestyle{headandfoot}
+\firstpageheader{}{}{}
+\runningheader{\datum}{}{Name: \hspace{5cm}}
+\runningheadrule
+\firstpagefooter{}{}{}
+\runningfooter{}{Viel Erfolg!}{Seite \thepage\ von \numpages}
+\runningfootrule
+%========================================================
+\begin{document}
+\fontsize{14}{14}\selectfont
+\begin{questions}
+%=========================================================
+%-------------------TESTFRAGEN
+%=========================================================
+% ================== AUFGABE 1 ==================
+\question[6]
+Gegeben sind die Vektoren $\vv{a}=\vvector{x}{4}{8}$ und $\vv{b}=\vvector{8}{y}{1}$.
+\begin{parts}
+    \part Für welches $x$ und $y$ sind die Vektoren $\vv{a}$ und $\vv{b}$ kollinear?
+    \begin{solution}
+        $\vv{a}$ ist kollinear zu $\vv{b} \Leftrightarrow \vv{a}=k\*\vv{b}$ für $k\in\R$.
+        \begin{align*}
+            \vvector{x}{4}{8}&=k\*\vvector{8}{y}{1}\\
+            &\Leftrightarrow k=8 \Rightarrow x=1, y=\frac{1}{2}
+        \end{align*}
+    \end{solution}
+    \part Für welches $x$ und $y$ spannen die Vektoren $\vv{a}$ und $\vv{b}$ ein Quadrat auf?
+    \begin{solution}
+        \begin{align}
+            \vv{a}\*\vv{b}&=0\\
+            8x+4y+8&=0\nonumber\\
+            y&=-\frac{8}{4}x-\frac{8}{4}=-2x-2\nonumber\\
+            \abs{\vv{a}}&=\abs{\vv{b}}\\
+            \sqrt{x^2+80}&=\sqrt{y^2+65}\nonumber\\
+            x^2+80&=y^2+65\nonumber\\
+            x^2-y^2+15&=0\nonumber\\
+            x^2-(-2x-2)^2+15&=0\nonumber\\
+            -3x^2-8x+11&=0\nonumber\\
+            x_1=1,\quad&\quad x_2=-\frac{11}{3}\nonumber\\
+            \Rightarrow y_1=-4,\quad&\quad y_2=\frac{16}{3}\nonumber
+        \end{align}
+    \end{solution}
+\end{parts}
+\ifprintanswers\else
+    \vspace{5pt}
+    \antwort{11}
+\fi
+\newpage
+
+% ================== AUFGABE 2 ==================
+\question[5]
+\begin{minipage}{0.6\linewidth}
+    Von der rechteckigen Grundfläche $ABCD$ eines Zeltes sind die Eckpunkte $A(1,1,4)$, $B(13,17,4)$ und $C(21,11,4)$ gegeben. Vom First $\overline{EF}$, der parallel zu $\overline{AB}$ verläuft und gleich lang ist, kennt man den Punkt $F(17,14,10)$.
+\end{minipage}
+\hfill
+\begin{minipage}{0.375\linewidth}
+        \centering
+        \includegraphics[scale=0.05]{Vektorgeometrie/data-vektor/zelt.png}
+\end{minipage}
+\begin{parts}
+    \part Berechne die Koordinaten des Punktes $E$.
+    \begin{solution}
+        \[\vv{r_E}=\vv{r_A}+\vv{BF}=\vvector{1}{1}{4}+\vvector{4}{-3}{6}=\vvector{5}{-2}{10}\]
+    \end{solution}
+    \part Berechne die Koordinatengleichung der Ebene $K$ durch die Punkte $B$, $C$ und $F$.
+    \begin{solution}
+        \begin{align*}
+            \vv{BF}\times\vv{BC}&=\vvector{4}{-3}{6}\times\vvector{8}{-6}{0}=\vvector{36}{48}{0}\\
+            &\Rightarrow \vv{n_K}=\vvector{3}{4}{0}\\
+            &\Rightarrow K: 3x+4y+0z+d=0\\
+            \intertext{Wir wissen das der Punkt $F$ zur Ebene gehört:}
+            3\*17+4\*14+d&=0\\
+            57+56+d&=0\\
+            d&=-117\\
+            &\Rightarrow K: 3x+4y-117=0
+        \end{align*}
+    \end{solution}
+    \part $L$ sei die Ebene durch die Punkte $A$, $B$, $E$ und $F$ mit der Gleichung $24x-18y-25z+94=0$. Zeigen Sie, dass doe Ebenen $K$ und $L$ senkrecht aufeinander stehen.
+    \begin{solution}
+        Zwei Ebenen sind senkrecht, wenn ihre Normalvektoren senkrecht stehen.
+        \[\vv{n_K}\*\vv{n_L}=\vvector{3}{4}{0}\*\vvector{24}{-18}{-25}=0\]
+    \end{solution}
+    \part Berechne das Volumen des Zeltes.
+    \begin{solution}
+        \begin{align*}
+            A_{\triangle BCF}&=\frac{1}{2}\*\abs{\vv{BC}\times\vv{BF}}=\frac{1}{2}\*\abs{\vvector{36}{48}{0}}=\frac{1}{2}\*\sqrt{36^2+48^2}=30\\
+            h&=\abs{\vv{AB}}=\sqrt{12^2+16^2}=20\\
+            V_{Zelt}&=A_{\triangle BCF}\*h=30\*20=600
+        \end{align*}
+    \end{solution}
+\end{parts}
+\ifprintanswers\else
+    \vspace{5pt}
+    \antwort{11}
+\fi
+\newpage
+
+% ================== AUFGABE 3 ==================
+\question[4]
+Gegeben sind vier Punkte $A(1,2,0)$, $B(-3,2,8)$, $C(0,-2,-2)$ und $S(5,8,12)$. Eine dreiseitige Pyramide hat die Grundfläche $ABC$ und die Spitze $S$.
+\begin{parts}
+    \part Wie gross ist das Volumen der Pyramide?
+    \begin{solution}
+        \begin{align*}
+            \textrm{HNF:}\qquad\vv{AB}&=\vvector{-4}{0}{8}, \vv{AC}=\vvector{-1}{-4}{-2}\\
+            \vv{n_E}&=\vv{AB}\times\vv{AC}=\vvector{32}{-16}{16}\Rightarrow E: 2x-y+z=0\\
+            d&=\frac{E(S)}{\abs{\vv{n_E}}}=\frac{2\*5-1\*8+1\*12}{\sqrt{4+1+1}}=\frac{16}{\sqrt{6}}\\
+            A&=\frac{1}{2}\*\abs{\vv{AB}\times\vv{AC}}=16\*\sqrt{6}\\
+            V&=\frac{1}{3}\*A\*d=\frac{16\*14}{3}\approx74.6\\
+            \textrm{Spatprodukt:}\qquad V&=\frac{1}{3}\*\vv{AS}\*(\vv{AB}\times\vv{AC})
+        \end{align*}
+    \end{solution}
+    \part Berechne den Winkel zwischen der Grundfläche und der Kante $\overline{AS}$.
+    \begin{solution}
+        \begin{align*}
+            \sin{\phi}&= \abs{\frac{\vv{n_E}\*\vv{AS}}{\abs{\vv{n_E}}\*\abs{\vv{AS}}}}=\abs{\frac{2\*4-6+12}{\sqrt{6}\*\sqrt{16+36+144}}}=\frac{1}{\sqrt{6}}\\
+            \phi &= \arcsin{\frac{1}{\sqrt{6}}}\approx24.09^\circ
+        \end{align*}
+    \end{solution}
+\end{parts}
+\ifprintanswers\else
+    \vspace{5pt}
+    \antwort{11}
+\fi
+\newpage
+
+\end{questions}
+\end{document}

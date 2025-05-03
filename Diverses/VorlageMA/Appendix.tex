@@ -1,0 +1,114 @@
+\section{Appendix Title}
+	
+	\subsection{Struktur}
+	
+	Ein Latex Bericht wird mit den folgenden Befehlen strukturiert: \texttt{$\backslash$chapter}
+	\texttt{$\backslash$section\{\}}, \texttt{$\backslash$subsection\{\}}, und \texttt{$\backslash$subsubsection\{\}}.\\
+	
+	Weiter kann ein einzelnes Kapitel in einem eigenen Dokument verfasst werden, wobei das Kapitel dann mit \texttt{$\backslash$chapter\{Titel\}} beginnt und mit dem Befehl \texttt{$\backslash$include\{speicherpfad\}} in den gesamten Bericht eingefügt werden kann.
+	
+	Normalerweise werden Umschläge mit den folgenden zwei Befehlen eingeführt.
+	\texttt{$\backslash$$\backslash$} oder \texttt{$\backslash$newline}. \\
+	Um auf einer neuen Seite weiter zu fahren benutze \texttt{$\backslash$newpage}.
+	\texttt{$\backslash$clearpage} fügt eine leere Seite ein.
+	
+	
+	\subsection{Links}
+	
+	Folgendermassen werden URL Links oder Hyperlinks im Text eingebunden:
+	
+	Hyperlink: \href{https://de.overleaf.com/learn/latex/Hyperlinks}{Something Linky}\\
+	URL: \url{https://de.overleaf.com/learn/latex/Hyperlinks}\\
+	Link zu einem Dokument: \href{run:./Vorlage-Paper.tex}{File.tex}
+	
+	
+	\subsection{Nummerierung und Aufzählungen}
+	
+	Nummerierungen oder Aufzählungen können wie folgt eingefügt werden:
+	\begin{quote}
+		\begin{verbatim}
+			\begin{enumerate}
+				\item ...
+				\item ...
+			\end{enumerate}
+			
+			\begin{itemize}
+				\item ...
+				\item ...
+			\end{itemize}
+		\end{verbatim}
+	\end{quote}
+	
+	Für Beschreibungen sind die folgenden Befehle notwendig:
+	\begin{quote}
+		\begin{verbatim}
+			\begin{description}
+				\item[Term] Description
+				\item[Term] Description
+			\end{description}
+		\end{verbatim}
+	\end{quote}
+	
+	
+	\subsection{Bilder, Graphiken und Tabellen}
+	
+	Speicher immer \textbf{alle} Fotos als \texttt{.jpg} or \texttt{.png} einem Unterordner \texttt{data} des Berichts. 
+	Um Bilder einzufügen, verwende den folgenden Befehl:	
+	\begin{figure}[ht]
+	    \caption{Caption}
+		\label{fig:label}
+		\begin{center}
+			\includegraphics[scale=0.6]{uzh_logo_d.pdf}
+		\end{center}
+	\end{figure}
+	
+	Um Bilder auf die richtige Grösse zu skalieren, können anstatt \texttt{[scale=0.6]} folgende Befehle benutzt werden:  \texttt{[width=4cm]} oder
+	\texttt{[width=0.6$\backslash$textwidth]}.
+	
+	Unten ein Beispiel für eine Tabelle, wobei das \& die jeweiligen Zellen repräsentiert und jede Zeile im Text einer Zeile in der Tabelle.
+	Label ist für die Referenz in Text und Caption ist der Titel.
+	
+	 \begin{table}[ht]
+		\caption{Advantages and flaws of all indoor positioning systems}
+		\label{pro-con}
+		\begin{center}
+			\begin{tabular}{|c|c|c|} \hline
+				& Advantage & Disadvantage \\ \hline
+				WLAN & available in most buildings & Heterogeneity of device \\
+				& available in most devices & orientation of device \\
+				&  & signal attenuation by people \\
+				&  & selection and coverage of APs \\ \hline
+				BLE & very accurate in close proximity & need to be installed \\
+				& beacons are battery powered & coverage in large spaces \\
+				& channel hopping & \\
+				& low transmission power & \\ \hline
+				Magnetic field & field is everywhere & spatial ambiguity \\
+				& field is relatively stable & unreliable due to lack of parameter \\
+				& no pre installed APs required & \\ \hline
+			\end{tabular}
+		\end{center}
+	\end{table}
+
+	Alle Bilder und Tabellen sind mit einer \texttt{$\backslash$caption} beschriftet und werden im Text mit \texttt{$\backslash$ref\{label\}} referenziert.
+	Wichtig die Labels aller Bilder und Tabellen müssen eindeutig sein.
+	
+	
+	\subsection{Mathestuff}
+	
+	Verschiedene Möglichkeiten um mathematische Formeln einzubinden:
+	
+	Eine Matrix wird wie folgt definiert:
+	\[
+		M := \begin{pmatrix}
+			1 & 1 & 0 \\
+			0 & 0 & 1
+		\end{pmatrix}.
+	\] 
+	
+	\subsection{Literaturverzeichnis}
+	
+	Beispiel am Ende des Dokuments \cite{scriptEawag}.
+	Im Fliesstext wird wie folgt auf die Quellen verwiesen,  \texttt{$\backslash$cite\{label\}}.
+	
+	
+	

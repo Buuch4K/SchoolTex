@@ -1,0 +1,141 @@
+\documentclass[12pt]{exam}
+\input{Data/headerExam.sty}
+%=========================================================
+\newcommand{\theme}{Rationale Zahlen}
+\newcommand{\teacher}{Philipp Moor}
+\newcommand{\class}{2b}
+\newcommand{\serie}{A}
+\newcommand{\duration}{45 Minuten}
+\newcommand{\name}{\bf Name:}
+\newcommand{\grade}{Note:}
+\newcommand{\datum}{22.09.22}
+%=========================================================
+
+%=========================================================
+\pagestyle{headandfoot}
+\firstpageheader{}{}{}
+\runningheader{\datum}{}{Name: \hspace{5cm}}
+\runningheadrule
+\firstpagefooter{}{}{}
+\runningfooter{}{Viel Erfolg!}{Seite \thepage\ von \numpages}
+\runningfootrule
+%========================================================
+\begin{document}
+\fontsize{14}{14}\selectfont
+%========================================================
+
+%========================================================
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}}l @{\extracolsep{6pt}}l}
+\textbf{\theme} & \textbf{\grade} & {\answerbox}\\
+\textbf{Klasse \class} & & \\
+\textbf{\teacher}  & {\bf\name} &\textbf{\hrulefill}\\[8pt]
+%-------------------
+\end{tabular*}
+%--------------------
+\begin{center}
+\rule[1ex]{\textwidth}{1pt}
+Dauer: \duration \hspace{9cm}Datum: \datum\\
+\vspace{5pt}
+\rule[2ex]{\textwidth}{1pt}
+\end{center}
+%=========================================================
+
+%=========================================================
+\begin{center}
+\textbf{Bewertungstabelle}\\
+\small Wird von der Lehrperson ausgefüllt\\
+\vspace{5pt}
+\addpoints
+\gradetable[h][questions]\\
+\vspace{5pt}
+Taschenrechner und jegliche andere Hilfsmittel sind \textbf{nicht erlaubt}.\\
+Schreibe alle Blätter mit \textbf{Vor}-und \textbf{Nachnamen} an.
+\end{center}
+
+\noindent
+\rule[1ex]{\textwidth}{1pt}
+
+\vspace{10cm}
+\begin{center}
+    \Huge{Serie \serie}
+\end{center}
+
+\newpage
+
+\begin{questions}
+%=========================================================
+%-------------------TESTFRAGEN
+%=========================================================
+\question[3]
+Rechne aus, welchen Anteil des folgenden $7\times3$ - Rechtecks die rot eingefärbte Fläche ausmacht. Schreibe das Resultat als Bruch und kürze soweit wie möglich.
+
+\newpage
+%---------------------------------------------------------
+\question[6]
+Kürze die folgenden Brüche soweit wie möglich. Markiere bei deinen Schritten mittels durchstreichen welche Terme du miteinander gekürzt hast.
+\begin{parts}
+\setlength{\columnsep}{30pt}
+\begin{multicols}{3}
+\part $\frac{195}{-45}$
+\part $\frac{-24z^4}{-120x^2z^{8}}$
+%\part $\frac{12x^2y^4}{72x^2y^{12}}$
+\part $\frac{121x^6y}{77x^6}$
+\end{multicols}
+\end{parts}
+\vspace{15pt}
+\antwort{20}
+
+\newpage
+\question[6]
+Berechne jeweils für (a) und (b) die Lücken ($\triangle,\square,\bigcirc$):
+\begin{parts}
+\setlength{\columnsep}{30pt}
+\part $\frac{3}{7} = \frac{\triangle}{28} = \frac{3^2}{\square} = \frac{\bigcirc}{-42xy}$
+% = \frac{45z^4}{\star}$
+\vspace{5pt}
+\antwort{11}
+\part $6x = \frac{\triangle}{-2} = \frac{18x^2}{\square} = \frac{\bigcirc}{30x^3}$
+%= \frac{72xy^5}{\star}$
+\vspace{5pt}
+\antwort{9}
+\end{parts}
+\vspace{15pt}
+
+
+\newpage
+\question[6]
+Berechne die folgenden Summen und Differenzen und kürze das Resultat soweit wie möglich:
+\begin{parts}
+\setlength{\columnsep}{30pt}
+\part $\frac{1}{2}-\left[ \frac{3}{4}-\left( \frac{5}{8}+\frac{2}{10}\right)\right]$
+\part $\frac{15}{315}-\frac{x}{42x}-\frac{5}{30}+\frac{2}{14x}$
+\end{parts}
+\vspace{15pt}
+\antwort{20}
+
+\newpage
+\question[6]
+Berechne das Resultat und kürze es soweit wie möglich:
+\begin{parts}
+\setlength{\columnsep}{30pt}
+\part $\left(\frac{24xy}{33}:\frac{12x^2}{132}\right)-\frac{16y}{2x}$
+\part $ \left[3 - \left(\frac{12}{2x}\cdot\frac{4}{6}\right):\frac{4}{x}\right]:\frac{1}{4} $
+\end{parts}
+\vspace{15pt}
+\antwort{20}
+
+\newpage
+\question[6]
+Berechne x und kürze das Resultat so weit wie möglich:
+\begin{parts}
+\setlength{\columnsep}{30pt}
+\part $\frac{8}{20}\cdot x = 2$
+\part $x \cdot \frac{4}{3} = 10$
+\part $x \cdot \left(\frac{1}{2}\right)^2 = 1$
+\end{parts}
+\vspace{15pt}
+\antwort{20}
+
+\addpoints
+\end{questions}
+\end{document}

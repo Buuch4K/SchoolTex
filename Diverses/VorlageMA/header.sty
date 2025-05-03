@@ -1,0 +1,107 @@
+% add all packages
+\usepackage[a4paper,bottom=35mm]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{mdframed}
+\usepackage{textcomp} 
+\usepackage{siunitx}          		
+\usepackage[parfill]{parskip}    		
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage{bbm}	
+\usepackage{amssymb}
+\usepackage{paralist}
+\usepackage{color}
+\usepackage[utf8]{inputenc}
+\usepackage[english,german]{babel}
+\usepackage{mathtools}
+\usepackage{nicefrac}
+\usepackage{wrapfig}
+\usepackage[mathscr]{euscript}
+\usepackage{ytableau}
+\usepackage{mathtools}
+\usepackage{fancyhdr}
+\usepackage{url}
+\usepackage{hyperref}
+
+% definiert die Sprache
+\selectlanguage{German}
+\setlocalecaption{german}{figure}{Figur}
+\setlocalecaption{german}{table}{Tabelle}
+
+% add command for different dates in Swiss fashion
+\newcommand{\monthwordlong}[1]{\ifcase#1 \or January\or February\or March\or April\or May\or June\or July\or August\or September\or October\or November\or December\fi}
+\newcommand{\monthwordshort}[1]{\ifcase#1\or Jan\or Feb\or Mar\or Apr\or May\or Jun\or Jul\or Aug\or Sept\or Okt\or Nov\or Dez\fi} 
+\newcommand{\datelong}{\number\day. \monthwordlong{\the\month} \number\year}
+\newcommand{\dateshort}{\number\day. \monthwordshort{\the\month} \number\year}
+
+% capital roman numbers
+\newcommand{\uproman}[1]{\uppercase\expandafter{\romannumeral#1}}
+
+% define color of links inside a text
+\definecolor{myblue}{RGB}{0, 0, 80}
+\definecolor{plotblue}{RGB}{100, 100, 255}
+\hypersetup{
+	colorlinks=true, 
+	linkcolor=myblue,
+	filecolor=magenta,      
+	urlcolor=plotblue,
+	citecolor=myblue,
+	pdfpagemode=FullScreen,
+}
+
+% placing a figure at the top of clear page
+\makeatletter
+\setlength{\@fptop}{0pt}
+\makeatother
+
+% add single blankpage
+\def\blankpage{\clearpage\thispagestyle{empty}\addtocounter{page}{-1}\null\clearpage}
+
+% Lückentext erstellen
+\newcommand{\lineortext}[1]{\hspace{0,1cm}\underline{\hspace{0,25cm}\hphantom{#1}\hspace{0,25cm}}\hspace{0,1cm}}
+% \renewcommand{\lineortext}[1]{\hspace{0,1cm}\underline{\hspace{0,25cm}#1\hspace{0,25cm}}\hspace{0,1cm}}
+
+% math commands
+\theoremstyle{definition} % don't write everything in italic
+\newtheorem{myfact}{Fact}
+\newtheorem{mydef}{Definition}[section]
+\newenvironment{fdef}{\begin{mdframed}\begin{mydef}}{\end{mydef}\end{mdframed}}
+\newtheorem{mytheo}{Theorem}
+\newenvironment{ftheo}{\begin{mdframed}\begin{mytheo}}{\end{mytheo}\end{mdframed}}
+\newtheorem{myprop}{Proposition}
+\newtheorem{mylemma}{Lemma}[section]
+\newtheorem{myaux}{Auxiliary Lemma}
+\newtheorem{mycor}{Corollary}
+\newtheorem{myre}{Remark}[section]
+\newtheorem{myex}{Example}
+\newtheorem{mynot}{Notation}
+
+\newtheorem{satz}{Satz}[section]
+\newenvironment{fsatz}{\begin{mdframed}\begin{satz}}{\end{satz}\end{mdframed}}
+\newtheorem{aufg}{Aufgabe}
+\newtheorem{bsp}{Beispiel}
+
+\newcommand{\R}{\mathbb{R}}   
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Lim}[1]{\raisebox{0.5ex}{\scalebox{0.8}{$\displaystyle \lim_{#1}\;$}}}
+\newcommand{\vvec}[2]{\left(\begin{array}{c} #1 \\ #2 \end{array}\right)}               % two dimensional vector
+\newcommand{\vvector}[3]{\left(\begin{array}{c} #1 \\ #2 \\ #3 \end{array}\right)}      % three dimensional vector
+\newcommand{\irow}[1]{\begin{smallmatrix}(#1)\end{smallmatrix}}                         % inline row vector
+\newcommand{\icol}[1]{\left(\begin{smallmatrix}#1\end{smallmatrix}\right)}              % inline column vector
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}                                            % ceil- function
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}                                         % floor - function
+
+
+% header and footers
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{}
+% \fancyhead[C]{header}
+\fancyhead[R]{}
+\fancyfoot[R]{\thepage}
+% check for more information: https://de.overleaf.com/learn/latex/Headers_and_footers
