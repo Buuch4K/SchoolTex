@@ -1,0 +1,67 @@
+\documentclass[11pt,oneside]{article}
+\input{../../../Header/packages.sty}
+\input{../../../Header/styleScript.sty}
+\input{../../../Header/headerScript.sty}
+\input{../../../Header/mathexpressions.sty}
+
+
+\newcommand{\Skriptname}{Umkehrfunktion}
+\newcommand{\Autor}{Jonas Guler (Gu)}
+\newcommand{\version}{\textit{v}1.0}
+
+\begin{document}   %KSH-Gubser - LATEX/PDF
+\begin{titlepage}
+	\clearpage
+	\title{\Huge\textbf{\Skriptname} \\[1cm]}
+	\author{Autor:\\ \Autor}
+	\date{\normalsize {Version \version}\\ \datelong}
+	\maketitle
+	\thispagestyle{empty}
+	\vfill
+	\tableofcontents
+\end{titlepage}
+\pagenumbering{arabic}
+%############################################################################################
+\section{Umkehrfunktion}
+	Bildet Paare und wählt eine Funktion aus.
+	\begin{itemcols}[3]
+			\item $f_1(x)=2x-7$
+			\item $f_2(x)=x^4$
+			\item $f_3(x)=\sqrt{2x+1}$
+			\item $f_4(x)=x^2-3$
+			\item $f_5(x)=\frac{1}{x+5}$
+			\item $f_6(x)=\abs{x-7}$
+	\end{itemcols}
+	Wenn wir dich und dein Partner/deine Partnerin als A und B bezeichnen, geht folgendermassen vor:
+	\begin{enumerate}
+		\item A wählt einen beliebigen $x-$Wert, für den sich der Funktionswert leicht im Kopf rechnen lässt, behält den $x-$Wert aber für sich. A berechnet den Funktionswert und gibt diesen an B weiter.
+		\item B bekommt also einen $y-$Wert und hat nun die Aufgabe herauszufinden, welchen $x-$Wert sich A wohl gedacht hat. B kann dabei auf zwei Arten reagieren:
+		\begin{itemize}
+			\item B kann das Urbild nennen.
+			\item B kann gut begründet erläutern, weshalb die Bestimmung eines einzigen Urbilds nicht oder nur schwer möglich ist.
+		\end{itemize}
+	\end{enumerate}
+	Spielt die Schritte immer wieder in wechselnden Rollen und mit anderen Funktionen durch. Am Ende notiert eure Erkenntnisse in der Aufgabe \ref{aufg:Einführung}.
+	\begin{aufgabe}\label{aufg:Einführung}
+		\begin{enumerate}[label=\alph*)]
+			\item Wie sind Sie jeweils vorgegangen, um das Urbild zu finden?
+			\item Wie muss eine Funktion beschaffen sein, damit es Ihnen immer gelingt, das Urbild unzweideutig anzugeben?
+			\item Wenn das nicht gelang, woran genau lag das dann?
+		\end{enumerate}
+	\end{aufgabe}
+
+
+
+\newpage
+\subsection*{History}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|p{13mm}|p{20mm}|p{30mm}|p{70mm}|}\hline
+		%\multicolumn{4}{|l|}{History}\\\hline
+		Version & Datum & Person & Bemerkung \\\hline
+		$1.0$ & 02.06.2025 & Jonas Guler & Kapitel erstellt \\\hline
+		$1.1$ & toDo & Jonas Guler &  \\\hline
+	\end{tabular}
+\end{table}
+
+\end{document}
