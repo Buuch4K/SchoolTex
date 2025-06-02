@@ -274,6 +274,13 @@
 }
 
 
+% ================ Nummerierte Multicol ================
+\newenvironment{itemcols}[1][]{
+	\begin{itemize}\begin{multicols}{#1}
+		}{
+	\end{multicols}\end{itemize}
+}
+
 
 % =================================================
 \usetikzlibrary{shapes,arrows}
