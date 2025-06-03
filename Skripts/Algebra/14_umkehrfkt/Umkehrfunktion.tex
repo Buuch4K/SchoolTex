@@ -5,7 +5,7 @@
 \input{../../../Header/mathexpressions.sty}
 
 
-\newcommand{\Skriptname}{Umkehrfunktion}
+\newcommand{\Skriptname}{Umkehrfunktionen}
 \newcommand{\Autor}{Jonas Guler (Gu)}
 \newcommand{\version}{\textit{v}1.0}
 
@@ -22,35 +22,101 @@
 \end{titlepage}
 \pagenumbering{arabic}
 %############################################################################################
-\section{Umkehrfunktion}
+\section{Einstiegsaufgabe}
 	Bildet Paare und wählt eine Funktion aus.
 	\begin{itemcols}[3]
 			\item $f_1(x)=2x-7$
-			\item $f_2(x)=x^4$
-			\item $f_3(x)=\sqrt{2x+1}$
-			\item $f_4(x)=x^2-3$
+			\item $f_2(x)=\pi$
+			\item $f_3(x)=x^2-3$
+			\item $f_4(x)=\sqrt{2x+1}$
 			\item $f_5(x)=\frac{1}{x+5}$
 			\item $f_6(x)=\abs{x-7}$
 	\end{itemcols}
 	Wenn wir dich und dein Partner/deine Partnerin als A und B bezeichnen, geht folgendermassen vor:
 	\begin{enumerate}
-		\item A wählt einen beliebigen $x-$Wert, für den sich der Funktionswert leicht im Kopf rechnen lässt, behält den $x-$Wert aber für sich. A berechnet den Funktionswert und gibt diesen an B weiter.
-		\item B bekommt also einen $y-$Wert und hat nun die Aufgabe herauszufinden, welchen $x-$Wert sich A wohl gedacht hat. B kann dabei auf zwei Arten reagieren:
+		\item A wählt ein beliebiges Argument, für den sich das Bild leicht im Kopf berechnen lässt, behält das Argument aber für sich. A berechnet den Funktionswert und gibt diesen an B weiter.
+		\item B bekommt also ein Bild und hat nun die Aufgabe herauszufinden, welches Argument sich A wohl gedacht hat. B kann dabei auf zwei Arten reagieren:
 		\begin{itemize}
-			\item B kann das Urbild nennen.
-			\item B kann gut begründet erläutern, weshalb die Bestimmung eines einzigen Urbilds nicht oder nur schwer möglich ist.
+			\item B kann das zugeordnete Argument nennen.
+			\item B kann gut begründet erläutern, weshalb die Bestimmung eines einzigen Argumentes nicht oder nur schwer möglich ist.
 		\end{itemize}
 	\end{enumerate}
-	Spielt die Schritte immer wieder in wechselnden Rollen und mit anderen Funktionen durch. Am Ende notiert eure Erkenntnisse in der Aufgabe \ref{aufg:Einführung}.
-	\begin{aufgabe}\label{aufg:Einführung}
+	Spielt die Schritte immer wieder in wechselnden Rollen und mit anderen Funktionen durch. Am Ende notiert eure Erkenntnisse in der Aufgabe \ref{aufg:einführung}.
+	\begin{aufgabe}\label{aufg:einführung}
 		\begin{enumerate}[label=\alph*)]
 			\item Wie sind Sie jeweils vorgegangen, um das Urbild zu finden?
 			\item Wie muss eine Funktion beschaffen sein, damit es Ihnen immer gelingt, das Urbild unzweideutig anzugeben?
 			\item Wenn das nicht gelang, woran genau lag das dann?
 		\end{enumerate}
+		\karos{10}
+	\end{aufgabe}
+
+\newpage
+\section{Definition}
+	Betrachten wir eine Funktion, die einer Temperatur in Fahrenheit die entsprechende Temperatur in Grad Celsius zuordnet: \[f:y=\frac{5}{9}(x-32).\] Herrscht zum Beispiel die Temperatur $41^\circ$ F, so wertet man die Funktion an der Stelle $x=41$ aus und findet die entsprechende Celsiuszahl \[f(41)=\frac{5}{9}(41-32)=5.\] Dank dieser Funktion ist es also ein Leichtes, zu jeder beliebigen Fahrenheitzahl die entsprechende Celsiuszahl zu bestimmen.\newline
+	Nun kann es aber auch passieren, dass wir irgendwo eine Temperatur in Grad Celsius lesen und uns fragen, wie viele Fahrenheit das sind. Gibt es irgendeine Möglichkeit, die obige Funktion so \flqq umzukehren\frqq, dass sie zu jeder beliebigen Celsiuszahl die Berechnung der entsprechenden Fahrenheitzahl ermöglicht?
+
+	Die schnelle Antwort ist \flqq Ja\frqq. In diesem Kapitel wollen wir jedoch ein allgemeiner und detaillierter auf die möglichen Probleme eingehen und mögliche Lösungen aufzeigen.
+	\begin{definition}[Umkehrfunktion]
+		Falls zu einer Funktion  $f:\D\to\W$ eine Funktion $g:\W\to\D$ existiert, so dass  $g(f(x))=x$  gilt für alle $x\in\D$ und  $f(g(y))=y$  gilt für alle $y\in\W$, so nennt man $g$ die Umkehrfunktion oder die Inverse der Funktion $f$.\newline
+		Und man bezeichnet die Umkehrfunktion mit dem Symbol $f^{-1}$. \newline
+		Wenn eine solche Funktion existiert, nennt man $f$ invertierbar oder  umkehrbar.
+	\end{definition}
+	\begin{figure}[H]
+		\centering\includegraphics[scale=0.8]{images/def_inverse.png}
+	\end{figure}
+	In der Abbildung wird also deutlich, dass wir ein beliebiges Element $x\in\D$ auswählen und berechnen das zugeordnete Bild $y$ unter der Funktion $f$. Falls eine Umkehrfunktion $f^{-1}$ existiert, so muss diesem Element $y$ das ursprüngliche Element $x\in\D$ eindeutig zugeordnet werden. Dabei entsteht eine Art Kreislauf, der sich wie folgt formalisieren lässt: \[f^{-1}\left(f(x)\right)=x.\]
+	Die eingangs bearbeitete Aufgabe hat sicherlich bereits zu einer starken Vermutung geführt, dass nicht jede Funktion eine Umkehrfunktion besitzt.
+	\begin{beispiel}
+		 Lasst uns ein Beispiel einer Funktion angeben, die keine Umkehrfunktion besitzt:\\[2pt]\karos{6}
+	\end{beispiel}
+	\begin{aufgabe}
+		Beurteile für jede der sechs Funktionen aus der Einstiegsaufgabe, ob sie umkehrbar sind.
+		\begin{itemcols}[3]
+			\item $f_1(x)=2x-7$
+			\item $f_2(x)=\pi$
+			\item $f_3(x)=x^2-3$
+			\item $f_4(x)=\sqrt{2x+1}$
+			\item $f_5(x)=\frac{1}{x+5}$
+			\item $f_6(x)=\abs{x-7}$
+		\end{itemcols}
+	\end{aufgabe}
+	\begin{beispiel}\label{bsp:umkehrbar}
+		Für die Umformung von Grad Fahreinheit zu Grad Celsius hatten wir jedoch Glück, denn mit \[y=\frac{5}{9}(x-32)\] wird einer beliebigen Fahreinheitzahl $x$ einer die zugehörige Celsiuszahl $y$ zugeordnet. Lösen wir die obige Gleichung nach $x$ auf, so erhalten wir eine Formel, die das Umgekehrte leistet:\vspace*{5pt}\newline\karos{3.5}
+	\end{beispiel}
+	\begin{aufgabe}
+		Bestimme zu $f(x)$ die Funktionsgleichung der Umkehrfunktion $f^{-1}(x)$ wie im Beispiel \ref{bsp:umkehrbar}.
+		\begin{enumcols}[2]
+			\item $f_1(x)=\frac{1}{4}x$
+			\item $f_2(x)=x^3$
+			\item $f_3(x)=(x-2)^2$
+			\item $f_4(x)=\sqrt{x-4}$
+		\end{enumcols}
 	\end{aufgabe}
 
 
+\newpage
+\section{Bijektivität}
+	\begin{aufgabe}
+		Woran liegt es, dass einige Funktionen umkehrbar sind, während andere es nicht sind?\vspace*{5pt}\newline\karos{3.5}
+	\end{aufgabe}
+	Um diese Frage präzis zu beantworten, müssen wir drei zentrale Fachbegriffe einführen.
+
+
+\newpage
+\section{Hauptsatz}
+	Damit sind wir nun nicht nur in der Lage, die wesentliche Erkenntnis sehr präzise auszudrücken, sondern auch, sie zu beweisen.
+	\begin{satz}
+		Die Funktion $f$  besitzt eine Umkehrfunktion genau dann, wenn $f$  bijektiv ist.
+	\end{satz}
+
+\subsection{Wie berechnet man eine Umkehrfunktion?}
+
+
+\subsection{Was wenn $f$ nicht bijektiv ist?}
+
+
+\subsection{Graph von Funktion und Umkehrfunktion}
 
 \newpage
 \subsection*{History}
