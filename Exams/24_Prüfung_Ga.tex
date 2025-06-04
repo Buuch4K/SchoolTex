@@ -4,10 +4,11 @@
 \input{../Header/mathexpressions.sty}
 \input{../Header/headerExam.sty}
 %=========================================================
-\newcommand{\theme}{Bruchterme und Gleichungen}
+\newcommand{\theme}{Konzept der Funktion}
 \newcommand{\teacher}{Jonas Guler}
 \newcommand{\class}{1Ga}
-\renewcommand{\date}{20.05.25}
+\renewcommand{\date}{05.06.25}
+\graphicspath{{Algebra/data-algebra/}}
 %=========================================================
 \begin{document}
 \fontsize{14}{14}\selectfont
@@ -39,7 +40,7 @@
 
 \vspace{10cm}
 \begin{center}
-    \Huge{Repetitionsprüfung}
+    %\Huge{Repetitionsprüfung}
 \end{center}
 
 \newpage
@@ -48,15 +49,27 @@
 %---------------------TESTFRAGEN
 %=========================================================
 \question[4]
-Vereinfache den folgenden Ausdruck so weit wie möglich.
-\[\frac{c-5}{\frac{c^2-3x-10}{c^2-4}}=\hspace{10cm}\]
-\vspace{5pt}
-\antwort{11.5}
+Fülle die korrekten Begriffe in den Lückentext unten. Von der Auflistung bleiben zwei Begriffe übrig, die nicht passen.
+\begin{itemcols}[4]
+	\item demselben
+	\item genau
+	\item einem
+	\item jedem
+	\item alle
+	\item keinem
+	\item mehr
+	\item zwei
+\end{itemcols}\vspace*{14pt}
+{\bf Lückentext:}
+\begin{spacing}{1.5}
+	{\Large Bei einer Funktion wird \gap{3} Element des Definitionsbereichs\\ \gap{3} ein Element des Wertebereichs zugeordnet. Dabei kann es vorkommen, dass mehrere oder \gap{3} Argumente \gap{3} Bild zugeordnet werden. Umgekehrt dürfen aber einem Argument nie\\  \gap{3} oder \gap{3} Bilder zugeordnet sein.\vspace*{11pt}\newline
+	Die Funktion $f$ ordnet jeder reellen Zahl die fünfmal grössere reelle Zahl zu. Mit mathematischen Symbolen beschreibt man diesn Sachverhalt so: \gap{6}.}
+\end{spacing}
 \vfill
-\question[2]
+\question[3]
 Entscheide in der Tabelle unten, ob die Aussagen wahr oder falsch sind. Die Antworten müssen nicht begründet werden.\newline
 \begin{small}
-	Bewertung: Für $0-2$ korrekte Antworten gibt es keine Punkte; $3$ korrekte Antworten $1$ Punkt und falls alle Antworten korrekt sind, gibt es $2$ Punkte.
+	Bewertung: Für $0-2$ korrekte Antworten gibt es keine Punkte; $3$ korrekte Antworten $1.5$ Punkt und falls alle Antworten korrekt sind, gibt es $3$ Punkte.
 \end{small}
 \begingroup
 \renewcommand{\arraystretch}{1.5}
@@ -64,10 +77,10 @@ Entscheide in der Tabelle unten, ob die Aussagen wahr oder falsch sind. Die Antw
 	\centering
 	\begin{tabular}{|p{12cm}|c|c|}\hline
 		 & wahr & falsch \\\hline
-		Eine lineare Gleichung, deren letzte Zeile im Lösungsweg $3=0$ lautet, hat die Lösungsmenge $\mathbb{L}=\left\{0\right\}$. & & \\\hline
-		$(4a-b)(4a+b)=16a^2-b^2$ ist eine Bestimmungsgleichung. & & \\\hline
-		Im Unterschied zu Identitäten sind Bestimmungsgleichungen für jede mögliche Belegung der Variablen wahr.  & & \\\hline
-		Eine lineare Gleichung hat immer mindestens eine Zahl als Lösung. & & \\\hline
+		Die Wertetabelle ist eine Auflistung, die verschiedene Argumente und die zugeordneten Bilder enthält. & & \\\hline
+		Die Argumente gehören zum Definitionsbereich und die Funktionswerte zum Bildbereich. & & \\\hline
+		Im Unterschied zu den Bildern kann ein Argument zu mehrere Elemente zugeordnet werden.  & & \\\hline
+		 & & \\\hline
 	\end{tabular}
 \end{table}
 \endgroup
@@ -75,68 +88,113 @@ Entscheide in der Tabelle unten, ob die Aussagen wahr oder falsch sind. Die Antw
 
 %---------------------------------------------------------
 \newpage
-\question[4] %Lösungsmenge
-Betrachte die Gleichung
-\[-6x+2\*(1-7x)=9-(\textcolor{plotblue}{5}x+5).\]
+\question[5]
+Entscheide für die folgenden Zuordnungen, ob es sich dabei um eine Funktion handelt. Begründe deine Antwort.
 \begin{parts}
-	\part Gib zuerst die Lösungsmenge der Gleichung an.
+	\part
+	\begin{minipage}{0.2\linewidth}
+		\centering\includegraphics[scale=1]{Fkt1.png}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.7\linewidth}
+		\antwort{6}
+	\end{minipage}
+	\vspace{1cm}
+	\part
+	\begin{minipage}{0.2\linewidth}
+		\centering\includegraphics[scale=0.38]{Fkt6.png}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.7\linewidth}
+		\antwort{6}
+	\end{minipage}
+	\vspace{1cm}
+	\part  Die Körpergrösse einer Person wird dem Alter der Person zugeordnet.
+	\vspace*{5pt}\antwort{6}
 \end{parts}
-\vspace{5pt}\antwort{10}
+
+%---------------------------------------------------------
+\newpage
+\noaddpoints
+\question[\totalpoints] %DMK A910 - Anhang2 A9
+\addpoints
+Eine Funktion $f$ ist gegeben durch seine Funktionsgleichung
+\[f:y=\frac{x-1}{x}.\]
 \begin{parts}
-	\setcounter{partno}{1}
-	\part Verändere \textcolor{plotblue}{den Faktor vor dem $x$} auf der rechten Seite des Gleichheitszeichens so, dass die Gleichung unendlich viele Lösung besitzt.
+	\part[1] Gib den grösst möglichen Definitionsbereich $D_f$ an.
+	\part[1] Gib den Wertebereich $W_f$ an.
+	\part[2] Berechne die folgenden Funktionswerte: $f(-1)$, und $f(m+5)$.
+	\part[3] Liegen die folgenden Punkte auf dem Graph der Funktion $f$?
+	\[Q=\left(\frac{1}{3}\vert-1\right)\quad\text{und}\quad R=\left(t-1\vert\frac{t-2}{t-1}\right)\]
 \end{parts}
-\vspace{5pt}\antwort{10}
+\antwort{17.5}
+
+%---------------------------------------------------------
+\newpage
+\question[4\half]
+Skizziere den Graphen der Funktion \[f:y=(x-2)^2\] mit Hilfe einer Wertetabelle in untenstehende Koordinatensystem.
+\begingroup
+\renewcommand{\arraystretch}{2}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|}\hline
+		{\bf x} & -2 & -1 & 0 & 1 & 2 & 3 & 4 & 5 & 6 \\\hline
+		{\bf y} & & & & & & & & & \\\hline
+	\end{tabular}
+\end{table}
+\endgroup
+\vspace{2cm}
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=12mm, y=12mm,
+		>=latex,   %Voreinstellung für Pfeilspitzen
+		font=\footnotesize, scale=1]
+		%Raster zeichnen
+		\draw [color=gray!50]  [step=6mm] (-2.3,-1.3) grid (6.3,8.3);
+		% Achsen zeichnen
+		\draw[->,thick] (-2.5,0) -- (6.8,0) node[left, below] {\normalsize $x$};
+		\draw[->,thick] (0,-1.5) -- (0,8.8) node[above, left=4pt] {\normalsize $y$};
+		% Achsen beschriften
+		\foreach \x in {-2,-1,1,2,...,6} \draw (\x,-.1) -- (\x,.1) node[right=3pt,below=7pt] {$\x$};
+		\foreach \y in {-1,1,2,...,8} \draw (-.1,\y) -- (.1,\y) node[left=7pt] {$\y$};
+		% Besserer Ursprung
+		\draw[color=black] (0pt,-7pt) node[left] {$0$};
+		%Funktionen zeichnen:
+		\clip(-2.3,-1.3) rectangle (6.3,8.3); %Bildbereich
+		%Beschriftung
+		%\node[forestgreen]  at (3.2,1) {\normalsize$g$};
+	\end{tikzpicture}
+\end{figure}
 
 
 %---------------------------------------------------------
 \newpage
-\question[3]
-Löse die folgende Gleichung und gib die Lösungsmenge an. \[12+\sqrt{3}\*x=3+\sqrt{12}\*x\]
-\antwort{10}
+\question[4]
+Entscheide, ob der Punkt $P(7\vert -3)$ auf dem Graphen der folgenden Funktionen liegt. Begründe deine Antwort.
+\begin{parcols}[2]
+	\part $f:y=-\frac{2}{3}\*x+\frac{8}{3}$
+	\part $g:y=-x^2+8x-10$
+\end{parcols}
+\vspace{5pt}\antwort{5.5}
 \vfill
-\question[3]
-Gib die Lösungsmenge der folgenden Gleichung an ohne die Sonderfälle zu diskutieren. \[(x-4a)^2-x(x+b)=b(7x+16b)\]
-\antwort{9.5}
-
-%---------------------------------------------------------
-\newpage
-\question[5] %Textaufgaben Alg1 S69 A151
-Ein Athlet spaziert den ersten Kilometer, rennt den zweiten Kilometer und fährt den dritten Kilometer mit dem Rad. Er rennt zweimal so schnell wie er spaziert und er fährt eineinhalbmal so schnell Rad wie er rennt. Er braucht insgesamt 10 Minuten länger, als wenn er die drei Kilometer mit dem Rad fahren würde.Wie lange spaziert, rennt und fährt er?
-\vspace{5pt}
-\antwort{22}
-
-
-%---------------------------------------------------------
-\newpage
-\question[4] %Erkläraufgabe Barth S161 A3
-Untersuche den angegebenen korrekten Lösungsweg kritisch. Zeige, wie du die Gleichung effizienter und/oder einfacher lösen könntest?
-\begin{small}
-	\begin{align*}
-		\frac{x-5}{4}-\frac{2x+3}{6} &= 3x-1 &&\vert+\frac{2x+3}{6}\\
-		\frac{x-5}{4} &= 3x-1+\frac{2x+3}{6} &&\vert\*4 \\
-		x-5 &= 12x-4+\frac{8x+12}{6} &&\vert\*6 \\
-		6x-30 &= 72x-24+8x+12 &&\vert+24 \\
-		6x-6 &= 72x+8x+12 &&\vert -12 \\
-		6x-18 &= 80x &&\vert +18 \\
-		6x &= 80x+18 &&\vert -80x \\
-		-74x &= 18 &&\vert \div(-74) \\
-		x &= -\frac{18}{74}=-\frac{9}{37}
-	\end{align*}
-\end{small}
-\antwort{16}
+\question[4] %DMKA910 - Anhang2 A11
+Gegeben ist der Graph einer Funktion $f$.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.8]{GraphGaMa.png}
+\end{figure}
+Beantworte die folgenden Fragen, in dem du die entsprechenden Zahlen aus dem Graphen der Funktion abliest.
+\begin{parts}
+	\part Für welche Argumente $x$ ist $f(x)=3$?
+	\part Welchen Wert hat $f(0)$ und $f(2)$?
+\end{parts}
+\vspace*{7pt}\antwort{5.5}
 
 %---------------------------------------------------------
 \newpage
 \noaddpoints
 \question[\totalpoints]
 \addpoints
-Gegeben ist die Gleichung \[\frac{20x+2}{6x+6}-1=\frac{6x-4}{2x+2}\]
-\begin{parts}
-	\part[2] Gib die Definitionsmenge der obigen Bruchtermgleichung an.
-	\part[3] Löse die Bruchtermgleichung nach $x$ auf.
-\end{parts}
-\vspace{5pt}\antwort{21}
 
 
 \end{questions}

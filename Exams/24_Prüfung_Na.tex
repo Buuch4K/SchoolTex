@@ -4,10 +4,11 @@
 \input{../Header/mathexpressions.sty}
 \input{../Header/headerExam.sty}
 %=========================================================
-\newcommand{\theme}{Bruchterme und Gleichungen}
+\newcommand{\theme}{Konzept der Funktion}
 \newcommand{\teacher}{Jonas Guler}
 \newcommand{\class}{1Na}
-\renewcommand{\date}{05.05.25}
+\renewcommand{\date}{06.06.25}
+\graphicspath{{Algebra/data-algebra/}} % Setzt den Pfad zu den Bilder fest
 %=========================================================
 \begin{document}
 \fontsize{14}{14}\selectfont
@@ -48,84 +49,137 @@
 %---------------------TESTFRAGEN
 %=========================================================
 \question[4]
-Vereinfache den folgenden Ausdruck so weit wie möglich.
-\[\frac{4x^2-12x+9}{9x^2+6x+1}\div\frac{2ax-3a}{6x+2}\] % KS Willisau A4d
-\antwort{8}
-\vfill
-\question[4]
-Betrachte den folgenden Lösungsweg. Kennzeichne, wo einen Fehler gemacht wurde und korrigiere die Umformungen ab diesem Punkt.
-\begin{align*}
-	\frac{\frac{4x+12}{x-3}}{(x+3)(x-3)}&=\frac{4x+12}{x-3}\*\frac{(x+3)(x-3)}{1} &&\vert (x-3)\:\text{kürzen}\\
-	&=(4x+12)(x+3)
-\end{align*}
-\antwort{8}
-
-%---------------------------------------------------------
-\newpage
-\question[4] %Lösungsmenge
-Betrachte die Gleichung
-\[2x-3(12-9x)=11\textcolor{blue}{-18}x.\]
-\begin{parts}
-	\part Gib zuerst die Lösungsmenge der Gleichung an.
-\end{parts}
-\vspace{5pt}\antwort{10}
-\begin{parts}
-	\setcounter{partno}{1}
-	\part Verändere \textcolor{blue}{den Faktor vor dem $x$} auf der rechten Seite des Gleichheitszeichens so, dass die Gleichung keine Lösung besitzt.
-\end{parts}
-\vspace{5pt}
-\antwort{10}
-
-
-%---------------------------------------------------------
-\newpage
-\question[3] %Gleichungen lösen
-Löse die folgende Gleichung und gib die Lösungsmenge an. \[(x+5)\*(3x-7)\*\left(4x+\frac{1}{4}\right)=0\]
-\antwort{10}
+Die einzelnen Sätze einer Erklärung sind leider durcheinandergeraten. Stelle die ursprüngliche Reihenfolge wieder her.
+\begin{enumerate}
+	\item Diese Zuordnung ist sicher eine Funktion, und ihr Definitionsbereich ist die Menge aller Tage des betrachteten Jahres.
+	\item Und eine solche «mehrwertige» Zuordnung ist bei einer Funktion nicht zulassig.
+	\item Würde man dagegen umgekehrt einer gemessenen Temperatur den Tag zuordnen wollen, so wäre das sicherlich keine Funktion mehr.
+	\item Wir betrachten ein bestimmtes Jahr und ordnen jedem Tag dieses Jahres die höchste an diesem Tag gemessene Temperatur zu.
+	\item Denn es kann ja durchaus mehrere Tage geben, an denen dieselbe höchste
+	Temperatur gemessen wurde.
+	\item Die Bilder dieser Funktion können sowohl positive als auch negative Zahlen sein.
+\end{enumerate}
+\vspace{5pt}\antwort{4.5}
 \vfill
 \question[3]
-Löse die folgende Gleichung nach $x$ auf ohne die Sonderfälle zu diskutieren. \[4(ax-b)=2(ax+2a-bx)\]
-\antwort{9}
-
-%---------------------------------------------------------
-\newpage
-\question[5] %Textaufgabe Alg1 S69 A149
-Ein Pfosten ist $10.5$m lang. Von seiner Länge befindet sich viermal so viel im Wasser wie in der Erde und halb so viel über Wasser wie in diesem. Wie lang ist der aus dem Wasser herausragende Teil des Pfostens?
-\vspace{5pt}
-\antwort{23}
-
-%---------------------------------------------------------
-\newpage
-\question[4] %Erkläraufgabe Barth S161 A3
-Untersuche den angegebenen korrekten Lösungsweg kritisch. Zeige, wie du die Gleichung effizienter und/oder einfacher lösen könntest?
+Entscheide in der Tabelle unten, ob die Aussagen wahr oder falsch sind. Die Antworten müssen nicht begründet werden.\newline
 \begin{small}
-	\begin{align*}
-		\frac{x-5}{4}-\frac{2x+3}{6} &= 3x-1 &&\vert+\frac{2x+3}{6}\\
-		\frac{x-5}{4} &= 3x-1+\frac{2x+3}{6} &&\vert\*4 \\
-		x-5 &= 12x-4+\frac{8x+12}{6} &&\vert\*6 \\
-		6x-30 &= 62x-24+8x+12 &&\vert+24 \\
-		6x-6 &= 72x+8x+12 &&\vert -12 \\
-		6x-18 &= 80x &&\vert +18 \\
-		6x &= 80x+18 &&\vert -80x \\
-		-74x &= 18 &&\vert \div(-74) \\
-		x &= -\frac{18}{74}=-\frac{9}{37}
-	\end{align*}
+	Bewertung: Für $0-2$ korrekte Antworten gibt es keine Punkte; $3$ korrekte Antworten $1.5$ Punkt und falls alle Antworten korrekt sind, gibt es $3$ Punkte.
 \end{small}
-\antwort{16}
+\begingroup
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|p{12cm}|c|c|}\hline
+		& wahr & falsch \\\hline
+		Die Wertetabelle ist eine Auflistung, die verschiedene Argumente und die zugeordneten Bilder enthält. & & \\\hline
+		Die Argumente gehören zum Bildbereich und die Funktionswerte zum Definitionsbereich. & & \\\hline
+		Im Unterschied zu den Argumenten kann einem Bild mehrere Elemente zugeordnet werden.  & & \\\hline
+		 & & \\\hline
+	\end{tabular}
+\end{table}
+\endgroup
+
+
+%---------------------------------------------------------
+\newpage
+\question[5]
+Entscheide für die folgenden Zuordnungen, ob es sich dabei um eine Funktion handelt. Begründe deine Antwort.
+\begin{parts}
+	\part
+	\begin{minipage}{0.2\linewidth}
+		\centering\includegraphics[scale=0.75]{Fkt3.png}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.7\linewidth}
+		\antwort{6}
+	\end{minipage}
+	\vspace{1cm}
+	\part
+	\begin{minipage}{0.2\linewidth}
+		\centering\includegraphics[scale=1]{Fkt4.png}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.7\linewidth}
+		\antwort{6}
+	\end{minipage}
+	\vspace{1cm}
+	\part  Jeder Erwachsene mit Wohnort in der Schweiz wird seiner Handynummer zugeordnet.
+	\vspace*{5pt}\antwort{6}
+\end{parts}
 
 
 %---------------------------------------------------------
 \newpage
 \noaddpoints
-\question[\totalpoints]
+\question[\totalpoints] %
 \addpoints
-Gegeben ist die Gleichung \[\frac{3}{x-2}=\frac{12}{x+7}.\]
+Eine Funktion $f$ ist gegeben durch seine Funktionsgleichung
+\[f:y=\frac{x+2}{x}.\]
 \begin{parts}
-	\part[2] Gib die Definitionsmenge der obigen Bruchtermgleichung an.
-	\part[3] Löse die Bruchtermgleichung nach $x$ auf.
+	\part[1] Gib den grösst möglichen Definitionsbereich $D_f$ an.
+	\part[1] Gib den Wertebereich $W_f$ an.
+	\part[2] Berechne die Argumente der folgenden Bilder: $f(x)=3$ und $f(x)=\frac{3}{2}$.
+	\part[3] Liegen die folgenden Punkte auf dem Graph der Funktion $f$?
+	\[Q=\left(-2,-1\right)\quad\text{und}\quad R=\left(t-1,\frac{t+1}{t-1}\right)\]
 \end{parts}
-\vspace{5pt}
-\antwort{21}
+\vspace*{5pt}\antwort{17}
+%---------------------------------------------------------
+\newpage
+\question[4]
+Berechne die $x-$ resp. $y-$ Koordinate so, dass die Punkte $P(7\vert y)$ und $Q(x\vert 6)$ auf dem Graphen der folgenden Funktionen liegt.
+\begin{parcols}[2]
+	\part $f:y=-\frac{2}{3}\*x+\frac{5}{3}$
+	\part $g:y=-x^2+8x-10$
+\end{parcols}
+\vspace{5pt}\antwort{5.5}
+\vfill
+\question[4] %DMKA910 - Anhang2 A11
+Gegeben ist der Graph einer Funktion $f$.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.75]{GraphNa.png}
+\end{figure}
+Beantworte die folgenden Fragen, in dem du die entsprechenden Zahlen aus dem Graphen der Funktion abliest.
+\begin{parts}
+	\part Für welche Argumente $x$ ist $f(x)=3$?
+	\part Welchen Wert hat $f(0)$ und $f(1)$?
+\end{parts}
+\vspace*{7pt}\antwort{5.5}
+
+%---------------------------------------------------------
+\newpage
+\question[6]
+Gegeben ist die Funktion $f:y=1+x^2$ mit Definitionsbereich $\D=\R$. Nimm zu den folgenden Aussagen Stellung und argumentiere, inwiefern sie korrekt oder falsch sind.
+\begin{parts}
+	\part Die Funktion ist monoton wachsend.
+\end{parts}
+\vspace{5pt}\antwort{6.5}
+\begin{parts}
+	\setcounter{partno}{1}
+	\part Die Funktion hat keine Nullstelle.
+\end{parts}
+\vspace{5pt}\antwort{6.5}
+\begin{parts}
+	\setcounter{partno}{2}
+	\part Für jede reelle Zahl $x$ gilt: $f(x)=f(-x)$
+\end{parts}
+\vspace{5pt}\antwort{6.5}
+
+
+%---------------------------------------------------------
+\newpage
+\noaddpoints
+\question[\totalpoints] % Verkettung
+\addpoints
+Gegeben sind zwei Funktionen $f:y=2x+4$ und $g:y=\frac{1}{x^2}$.
+\begin{parts}
+	\part[1] Bestimme den folgenden Funktionswert: $f(g(0.5))$.
+	\part[1] Für welche Argumente $x$ ist $f(x)=4$?
+	\part[2] Gib die Funktionsgleichung der verketteten Funktion $g\circ f(x)$ an.
+\end{parts}
+\vspace{5pt}\antwort{21.5}
+
 
 \end{questions}
 \end{document}
