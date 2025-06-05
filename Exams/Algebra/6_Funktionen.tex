@@ -6,6 +6,7 @@
 %=========================================================
 \newcommand{\theme}{Einführung Funktion}
 \newcommand{\teacher}{Jonas Guler}
+\graphicspath{{data-algebra/}}
 %=========================================================
 \begin{document}
 \fontsize{14}{14}\selectfont
@@ -37,12 +38,26 @@ Fülle die korrekten Begriffe in den Lückentext unten. Von der Auflistung bleib
 
 
 %---------------------------------------------------------
+\question[4]
+Die einzelnen Sätze einer Erklärung sind leider durcheinandergeraten. Stelle die ursprüngliche Reihenfolge wieder her.
+\begin{enumerate}
+	\item Diese Zuordnung ist sicher eine Funktion, und ihr Definitionsbereich ist die Menge aller Tage des betrachteten Jahres.
+	\item Und eine solche «mehrwertige» Zuordnung ist bei einer Funktion nicht zulassig.
+	\item Würde man dagegen umgekehrt einer gemessenen Temperatur den Tag zuordnen wollen, so wäre das sicherlich keine Funktion mehr.
+	\item Wir betrachten ein bestimmtes Jahr und ordnen jedem Tag dieses Jahres die höchste an diesem Tag gemessene Temperatur zu.
+	\item Denn es kann ja durchaus mehrere Tage geben, an denen dieselbe höchste
+	Temperatur gemessen wurde.
+	\item Die Bilder dieser Funktion können sowohl positive als auch negative Zahlen sein.
+\end{enumerate}
+
+
+%---------------------------------------------------------
 \question[4] %DMKA910 - Anhang2 A1
 Begründe für die folgenden Abbildungen, ob es sich dabei um eine Funktion handelt.
 \begin{parts}
     \part
     \begin{minipage}{0.2\linewidth}
-        \centering\includegraphics[scale=1]{data-algebra/Fkt1.png}
+        \centering\includegraphics[scale=1]{Fkt1.png}
     \end{minipage}
     \hfill
     \begin{minipage}{0.7\linewidth}
@@ -50,7 +65,7 @@ Begründe für die folgenden Abbildungen, ob es sich dabei um eine Funktion hand
     \end{minipage}
     \vspace{1cm}\part
     \begin{minipage}{0.2\linewidth}
-        \centering\includegraphics[scale=1]{data-algebra/Fkt2.png}
+        \centering\includegraphics[scale=1]{Fkt2.png}
     \end{minipage}
     \hfill
     \begin{minipage}{0.7\linewidth}
@@ -58,7 +73,7 @@ Begründe für die folgenden Abbildungen, ob es sich dabei um eine Funktion hand
     \end{minipage}
     \vspace{1cm}\part
     \begin{minipage}{0.2\linewidth}
-        \centering\includegraphics[scale=0.75]{data-algebra/Fkt3.png}
+        \centering\includegraphics[scale=0.75]{Fkt3.png}
     \end{minipage}
     \hfill
     \begin{minipage}{0.7\linewidth}
@@ -66,7 +81,7 @@ Begründe für die folgenden Abbildungen, ob es sich dabei um eine Funktion hand
     \end{minipage}
     \vspace{1cm}\part
     \begin{minipage}{0.2\linewidth}
-        \centering\includegraphics[scale=1]{data-algebra/Fkt4.png}
+        \centering\includegraphics[scale=1]{Fkt4.png}
     \end{minipage}
     \hfill
     \begin{minipage}{0.7\linewidth}
@@ -74,7 +89,7 @@ Begründe für die folgenden Abbildungen, ob es sich dabei um eine Funktion hand
     \end{minipage}
     \vspace{1cm}\part
     \begin{minipage}{0.2\linewidth}
-        \centering\includegraphics[scale=1]{data-algebra/Fkt5.png}
+        \centering\includegraphics[scale=1]{Fkt5.png}
     \end{minipage}
     \hfill
     \begin{minipage}{0.7\linewidth}
@@ -83,7 +98,7 @@ Begründe für die folgenden Abbildungen, ob es sich dabei um eine Funktion hand
     \vspace{1cm}
     \part
     \begin{minipage}{0.2\linewidth}
-    	\centering\includegraphics[scale=0.38]{Algebra/data-algebra/Fkt6.png}
+    	\centering\includegraphics[scale=0.38]{Fkt6.png}
     \end{minipage}
     \hfill
     \begin{minipage}{0.7\linewidth}
@@ -91,7 +106,7 @@ Begründe für die folgenden Abbildungen, ob es sich dabei um eine Funktion hand
     \end{minipage}
     \vspace{1cm}
     \part  Die Körpergrösse einer Person wird dem Alter der Person zugeordnet.
-    \vspace*{5pt}\antwort{6}
+    \part  Jeder Erwachsene mit Wohnort in der Schweiz wird seiner Handynummer zugeordnet.
 \end{parts}
 
 %---------------------------------------------------------
@@ -110,26 +125,30 @@ Eine Funktion $f$ ist gegeben durch seine Funktionsgleichung
 \end{parts}
 
 %---------------------------------------------------------
-\question[7] %DMK A910 - Anhang2 A9
+\noaddpoints
+\question[\totalpoints] %DMK A910 - Anhang2 A9
+\addpoints
 Eine Funktion $f$ ist gegeben durch seine Funktionsgleichung
 \[f:y=\frac{x-1}{x}.\]
 \begin{parts}
-    \part Gib den grösst möglichen Definitionsbereich $D_f$ an.
-    \part Gib den Wertebereich $W_f$ an.
-    \part Berechne die folgenden Funktionswerte: $f(2)$, $f(-1)$ und $f(m)$.
-    \part Liegen die folgenden Punkte auf dem Graph der Funktion $f$?
+    \part[1] Gib den grösst möglichen Definitionsbereich $D_f$ an.
+    \part[1] Gib den Wertebereich $W_f$ an.
+    \part[2] Berechne die folgenden Funktionswerte: $f(-1)$ und $f(m+5)$.
+    \part[4] Liegen die folgenden Punkte auf dem Graph der Funktion $f$?
     \[P=(1,0), \quad Q=\left(\frac{1}{3},-2\right)\quad\text{und}\quad R=\left(t-1,\frac{t-2}{t-1}\right)\]
 \end{parts}
 
 %---------------------------------------------------------
-\question[8] %
+\noaddpoints
+\question[\totalpoints] %
+\addpoints
 Eine Funktion $f$ ist gebend durch seine Funktionsgleichung
 \[f:y\mapsto\frac{3x}{2x-1}.\]
 \begin{parts}
-    \part Gib den grösst möglichen Definitionsbereich $D_f$ und den Wertebereich $W_f$ an.
-    \part Berechne die folgenden Funktionswerte: $f(3)$, $f(-2)$ und $f(m-2)$.
-    \part Berechne das jeweilige Argument $x$, wenn $f(x)=\frac{1}{2}$.
-    \part Liegen die folgenden Punkte auf dem Graph der Funktion $f$?
+    \part[1] Gib den grösst möglichen Definitionsbereich $D_f$ und den Wertebereich $W_f$ an.
+    \part[1] Berechne die folgenden Funktionswerte: $f(3)$, $f(-2)$ und $f(m-2)$.
+    \part[2] Berechne das jeweilige Argument $x$, wenn $f(x)=\frac{1}{2}$.
+    \part[4] Liegen die folgenden Punkte auf dem Graph der Funktion $f$?
     \[P=\left(1,3\right), \quad Q=\left(\frac{1}{3},-1\right)\quad\text{und}\quad R=\left(t-1,\frac{3t-3}{2t-1}\right)\]
 \end{parts}
 
@@ -163,7 +182,7 @@ Entscheide, ob der Punkt $P(7\vert -3)$ auf dem Graphen der folgenden Funktionen
 \end{minipage}
 \hfill
 \begin{minipage}{0.45\linewidth}
-    \centering\includegraphics[scale=0.65]{data-algebra/GraphGaMa.png}
+    \centering\includegraphics[scale=0.65]{GraphGaMa.png}
 \end{minipage}
 
 
@@ -182,15 +201,15 @@ Beantworte die folgenden Fragen, in dem du die entsprechenden Zahlen aus dem Gra
 
 
 %---------------------------------------------------------
-\question[8]
+\question[5]
 Skizziere den Graphen der Funktion \[f:y=(x-2)^2\] mit Hilfe einer Wertetabelle in untenstehende Koordinatensystem.
 \begingroup
 \renewcommand{\arraystretch}{2}
 \begin{table}[H]
 	\centering
-	\begin{tabular}{|c|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|}\hline
-		{\bf x} & -2 & -1 & 0 & 1 & 2 & 3 & 4 & 5 \\\hline
-		{\bf y} & & & & & & & & \\\hline
+	\begin{tabular}{|c|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|}\hline
+		{\bf x} & -2 & -1 & 0 & 1 & 2 & 3 & 4 & 5 & 6 \\\hline
+		{\bf y} & & & & & & & & & \\\hline
 	\end{tabular}
 \end{table}
 \endgroup
@@ -217,6 +236,29 @@ Skizziere den Graphen der Funktion \[f:y=(x-2)^2\] mit Hilfe einer Wertetabelle 
 	\end{tikzpicture}
 \end{figure}
 
+
+
+%---------------------------------------------------------
+\question[6]
+Gegeben ist die Funktion $f:y=1+x^2$ mit Definitionsbereich $\D=\R$. Nimm zu den folgenden Aussagen Stellung und argumentiere, inwiefern sie korrekt oder falsch sind.
+\begin{parts}
+	\part Die Funktion ist monoton wachsend.
+	\part Die Funktion hat keine Nullstelle.
+	\part Für jede reelle Zahl $x$ gilt: $f(x)=f(-x)$
+\end{parts}
+
+
+
+%---------------------------------------------------------
+\noaddpoints
+\question[\totalpoints] % Verkettung
+\addpoints
+Gegeben sind zwei Funktionen $f:y=2x+4$ und $g:y=\frac{1}{x^2}$.
+\begin{parts}
+	\part[1] Bestimme den folgenden Funktionswert: $f(g(0.5))$.
+	\part[1] Für welche Argumente $x$ ist $f(x)=4$?
+	\part[2] Gib die Funktionsgleichung der verketteten Funktion $g\circ f(x)$ an.
+\end{parts}
 
 
 %---------------------------------------------------------
@@ -357,6 +399,10 @@ Entscheide in der Tabelle unten, ob die Aussagen wahr oder falsch sind. Die Antw
         In einer Funktion darf jedes Bild maximal ein Argument haben. & & \\\hline
         Das Produkt der Steigungen zweier senkrecht aufeinander stehender Geraden ist stets $-1$. & & \\\hline
         Alle linearen Gleichungssysteme haben mindestens eine Lösung. & & \\\hline
+        Die Wertetabelle ist eine Auflistung, die verschiedene Argumente und die zugeordneten Bilder enthält. & & \\\hline
+        Die Argumente gehören zum Bildbereich und die Funktionswerte zum Definitionsbereich. & & \\\hline
+        Im Unterschied zu den Argumenten kann einem Bild mehrere Elemente zugeordnet werden.  & & \\\hline
+        Falls sich das Argument verändert, ändert sich das Bild ebenfalls. & & \\\hline
     \end{tabular}
 \end{table}
 \endgroup
