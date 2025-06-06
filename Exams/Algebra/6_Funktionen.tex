@@ -201,6 +201,41 @@ Beantworte die folgenden Fragen, in dem du die entsprechenden Zahlen aus dem Gra
 
 
 %---------------------------------------------------------
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+Gegeben ist der Graph einer Funktion $f$.
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+		>=latex,   %Voreinstellung für Pfeilspitzen
+		font=\footnotesize, scale=0.7]
+		%Raster zeichnen
+		\draw [color=gray!50]  [step=10mm] (-4.3,-5.3) grid (7.3,2.3);
+		% Achsen zeichnen
+		\draw[->,thick] (-4.5,0) -- (7.8,0) node[left, below] {\normalsize $x$};
+		\draw[->,thick] (0,-5.5) -- (0,2.8) node[above, left=4pt] {\normalsize $y$};
+		% Achsen beschriften
+		\foreach \x in {-4,...,-2,-1,1,2,...,7} \draw (\x,-.1) -- (\x,.1) node[below=3pt] {$\x$};
+		\foreach \y in {-5,...,-2,-1,1,2} \draw (-.1,\y) -- (.1,\y) node[left=3pt] {$\y$};
+		% Besserer Ursprung
+		\draw[color=black] (0pt,-7pt) node[left] {$0$};
+		%Funktionen zeichnen:
+		\clip(-4.3,-5.3) rectangle (7.3,2.3); %Bildbereich
+		\draw[highdive,thick,domain=-4:7.2,samples=200] plot (\x, {-2/27*(\x)^3+4/9*(\x)^2+2/3*(\x)-4});
+		%Beschriftung
+		%\node[forestgreen]  at (3.2,1) {\normalsize$g$};
+	\end{tikzpicture}
+\end{figure}
+Beantworte die folgenden Fragen, in dem du die entsprechenden Zahlen aus dem Graphen der Funktion abliest.
+\begin{parts}
+	\part[2] Für welche Argumente $x$ ist $f(x)=-3$?
+	\part[2] Welchen Wert hat $f(1)$ und $f(4)$?
+	\part[1\half] Bestimme alle Nullstellen.
+\end{parts}
+
+
+%---------------------------------------------------------
 \question[5]
 Skizziere den Graphen der Funktion \[f:y=(x-2)^2\] mit Hilfe einer Wertetabelle in untenstehende Koordinatensystem.
 \begingroup
