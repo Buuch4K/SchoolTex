@@ -3,7 +3,7 @@
 \usetikzlibrary{backgrounds}
 \usepackage{xcolor}
 \definecolor{plotblue}{RGB}{100, 100, 255}
-\definecolor{myblue}{RGB}{8,164,214}
+%\definecolor{myblue}{RGB}{8,164,214}
 \definecolor{myred}{RGB}{143,42,41}
 \definecolor{forestgreen}{RGB}{34,139,34}
 \definecolor{highdive}{RGB}{10,169,194}
@@ -28,9 +28,9 @@
 		%Funktionen zeichnen:
 		\clip(-4.3,-4.3) rectangle (4.3,4.3); %Bildbereich
 		\draw[myred,thick,domain=-2:2,samples=200] plot (\x, {2*(\x)^5-6*(\x)^3+1.8*\x});
-		\draw[plotblue,domain=-2:2,samples=200] plot (\x, {(\x)^3-2*(\x)});
-		\draw[forestgreen,domain=-3:3,samples=200] plot (\x, {(\x)^4-3*(\x)^2-1});
-		\draw[myblue,domain=-2:2,samples=200] plot (\x, {(\x)^6-2*(\x)^4+0.5*(\x)^2+1});
+		\draw[plotblue,thick,domain=-2:2,samples=200] plot (\x, {(\x)^3-2*(\x)});
+		\draw[forestgreen,thick,domain=-3:3,samples=200] plot (\x, {(\x)^4-3*(\x)^2-1});
+		\draw[highdive,thick,domain=-2:2,samples=200] plot (\x, {(\x)^6-2*(\x)^4+0.5*(\x)^2+1});
 		%Beschriftung
 		%\node[myred]  at (3.1,-2.3) {$f:y=x^5-6x^3+1.8x$};
 	\end{tikzpicture}
