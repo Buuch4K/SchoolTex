@@ -4,10 +4,10 @@
 \input{../Header/mathexpressions.sty}
 \input{../Header/headerExam.sty}
 %=========================================================
-\newcommand{\theme}{Stetigkeit und Differentialrechnung}
+\newcommand{\theme}{Differentialrechnung}
 \newcommand{\teacher}{Jonas Guler}
 \newcommand{\class}{3Na}
-\renewcommand{\date}{06.05.25}
+\renewcommand{\date}{12.06.25}
 %=========================================================
 \begin{document}
 \fontsize{14}{14}\selectfont
@@ -18,7 +18,7 @@
 \begin{tabular*}{\textwidth}{l @{\extracolsep{6pt}}l @{\extracolsep{\fill}}l @{\extracolsep{6pt}}l}
 	\multicolumn{2}{l}{{\bf \theme}} & {\bf Note:} & {\answerbox}\\
 	\multicolumn{2}{l}{{\bf \teacher}} & & \\
-	{\bf Klasse:} & {\class} &  {\bf Name:} &\textbf{\hrulefill}\\
+	{\bf Klasse:} & {\class} &  {\bf Name:} &{\hrulefill}\\
 	{\bf Dauer:} & $45$ Minuten & {\bf Datum:} & {\date}\\[8pt]
 \end{tabular*}
 \endgroup
@@ -34,7 +34,7 @@
     Der Rechenweg muss \textbf{vollständig und nachvollziehbar} sein.\\
     Lösen Sie die Prüfung mit einen schwarzen oder blauen Kugelschreiber.\\
     Als Hilfsmittel ist nur der Taschenrechner erlaubt.\\
-    {\bf Beachte:} In den Aufgaben 3b, 6c und 8 werden Lösungswege mit Hilfe der CAS-Funktionen des Taschenrechners nicht bewertet.
+    In den {\bf Aufgaben 3, 4 und 7} werden Lösungswege mit Hilfe der CAS-Funktionen des Taschenrechners {\bf nicht} bewertet.
 \end{center}
 \rule[1ex]{\textwidth}{1pt}
 
@@ -49,160 +49,63 @@
 %-------------------TESTFRAGEN
 %=========================================================
 \question[2]
-Erkläre einem Laien in eigenen Worten den Unterschied zwischen dem Differenzenquotienten und dem Differentialquotienten. Mache dazu eine geeignete Skizze.
-\vspace{5pt}\antwort{12}
+Erkläre einem Laien in eigenen Worten die Begriffe \flqq konvex\frqq\: und \flqq konkav\frqq. Mache dazu eine Skizze.
+\vspace{5pt}\antwort{10}
 \vfill
-\question[2]
-Entscheide in der Tabelle unten, ob die Aussagen wahr oder falsch sind. Die Antworten müssen nicht begründet werden.\newline
-\begin{small}
-	Bewertung: Für $0-2$ korrekte Antworten gibt es keine Punkte; $3$ korrekte Antworten $1$ Punkt und falls alle Antworten korrekt sind, gibt es $2$ Punkte.
-\end{small}
-\begingroup
-\renewcommand{\arraystretch}{1.5}
-\begin{table}[H]
-	\centering
-	\begin{tabular}{|p{12cm}|c|c|}\hline
-		& wahr & falsch \\\hline
-		Eine Funktion mit Definitionslücke kann nie im gesamten Definitionsbereich stetig sein. & & \\\hline
-		Die Steigung einer linearen Funktion ist identisch mit dem Differentialquotienten. & & \\\hline
-		Durch den Grenzwert im Differentialquotienten kann die durchschnittliche Steigung der Funktion genauer wie im Differenzenquotienten berechnet werden. & & \\\hline
-		Jede beliebige Funktion besitzt eine Ableitung, die die Steigung an dieser Stelle beschreibt. & & \\\hline
-	\end{tabular}
-\end{table}
-\endgroup
+\question[2] %Barth3 Nachtest Kap. 3 A5a
+Nimm zur folgenden Aussage Stellung und beurteile, was an der Aussage wahr ist oder falsch.
+\[\text{\flqq Ist $f(x)=x^7$, so ist die 7. Ableitung dieser Funktion nach $x$ gleich 0.\frqq}\]
+\antwort{9.5}
 
+
+%---------------------------------------------------------
+\newpage
+\noaddpoints
+\question[\totalpoints] %Barth3 Nachtest Kap. 3 A4
+\addpoints
+Berechne die erste Ableitungsfunktion schrittweise von Hand, in dem du bei jeder Umformung deutlich machst, welche Regel (SR = Summenregel, FR = Faktorregel, PR = Potenzregel, AK = Ableitung einer Konstanten) verwendet wird.
+\begin{parts}
+	\part[2] $f(x)=x^7-5.7x^2+1$
+	\part[2] $g(x)=\frac{x^4+\sqrt{2}}{3}$
+	\part[2] $h(x)=\frac{1}{5}x^5+2x^4-\sqrt[3]{x}$
+\end{parts}
+\vspace{5pt}\antwort{20}
+
+%---------------------------------------------------------
+\newpage
+\question[4] %DMK Ana S114 A399b
+Gegeben ist die Funktion $f(x)=\frac{-1}{2}x^2-4x$. Bestimme die Gleichungen der Tangente $t$ im Punkt $x_0=6$.
+\vspace{5pt}\antwort{10.5}
+\vfill
+\question[4]
+Für welchen Wert des Parameters $a\in\R$ berührt der Graph der Funktion $f(x)=\frac{1}{2}x^3+ax^2+32x-48$ an der Stelle $x_0=4$ die x-Achse?
+\vspace{5pt}\antwort{10.5}
 
 %---------------------------------------------------------
 \newpage
 \noaddpoints
 \question[\totalpoints]
 \addpoints
-Gegeben ist die Funktion \[f(x)=\begin{cases} x^2, & x\leq 1 \\ \frac{x}{2}+1, & x> 1. \end{cases}\]
+Betrachten wir die folgende Funktion $f(x)=x^5-3x^4+5x^2+2$.
 \begin{parts}
-	\part[2] Skizziere die Funktion möglichst exakt ins abgebildete Koordinatensystem.
-	\begin{figure}[H]
-		\centering
-		\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=20mm, y=20mm,
-			>=latex,   %Voreinstellung für Pfeilspitzen
-			font= \footnotesize, scale=0.7]
-			%Raster zeichnen
-			\draw [color=gray!50]  [step=10mm] (-2.3,-1.3) grid (4.3,3.3);
-			% Achsen zeichnen
-			\draw[->,thick] (-2.5,0) -- (4.5,0) node[right, below] {\normalsize $x$};
-			\draw[->,thick] (0,-1.5) -- (0,3.5) node[above, left] {\normalsize $y$};
-			% Achsen beschriften
-			\foreach \x in {-2,-1,1,2,...,4} \draw (\x,-.05) -- (\x,.05) node[below=4pt] {$\x$};
-			\foreach \y in {-1,1,2,3} \draw (-.05,\y) -- (.05,\y) node[left=4pt] {$\y$};
-			% Besserer Ursprung
-			\draw[color=black] (0pt,-10pt) node[right] {$0$};
-			%Funktionen zeichnen:
-			\clip(-2.3,-1.3) rectangle (4.3,3.3); %Bildbereich
-			%Beschriftung
-			%\node[blue]  at (11,5) {\normalsize$f$};
-		\end{tikzpicture}
-	\end{figure}
-	\part[4] Ist die Funktion $f$ stetig in $x_0=1$? Begründe deine Antwort rechnerisch.
+	\part[4] Finde die Gleichung der Normalen an den Graphen von $f$ im Punkt $P(1\;\vert\; y)$.
+	\part[2] Unter welchem spitzen Winkel schneidet die Normale die $x-$Achse?
 \end{parts}
-\vspace{5pt}\antwort{11}
-
-%---------------------------------------------------------
-\newpage
-\question[2]
-Jemand formuliert sehr ungenau: \[\text{\flqq Die 1. Ableitung einer Funktion ist die Tangente.\frqq}\] Erläutere, was daran falsch und formuliere einen korrekten Merksatz.
-\vspace{5pt}\antwort{8}
-\vfill
-\question[4]
-Ein Pilz wird auf einem Nährboden beobachtet. Nach einer Stunde bedeckt er $34\%$ der Petrischale und nach $7$ Stunden bereits $82\%$. Es bezeichne $P(t)$ die  bedeckte Fläche der Petrischale und $t$ die verstrichene Zeit. Welche der folgenden Aussagen trifft sicherlich zu (\textbf{nur eine!})? Begründe deine Antwort.
-\begin{parts}
-	\part Von $t=1$ bis $t=7$ wuchs der Pilz stündlich um exakt $8\%$.
-	\part $P(2)=42\%$
-	\part Von $t=1$ bis $t=7$ wuchs der Pilz durchschnittlich um $8\%$ pro Stunde.
-	\part $P'(0)=8$
-\end{parts}
-\vspace{5pt}\antwort{7}
-
-%---------------------------------------------------------
-\newpage
-\noaddpoints
-\question[\totalpoints]
-\addpoints
-Die Länge des bis zum Zeitpunkt $t$ zurückgelegten Weges $s$ eines Objektes wird durch die Funktionsgleichung $s(t)=5t^2+2t+1$ beschrieben ($t$ in Sekunden und $s$ in Metern).
-\begin{parts}
-	\part[1] Welche Strecke hat das Objekt bis zur Zeit $t=5$ zurückgelegt?
-\end{parts}
-\vspace{5pt}\antwort{3.5}
-\begin{parts}
-\setcounter{partno}{1}
-	\part[2] Berechne den Differenzenquotienten im Intervall $\left[3,5\right]$. Welche Bedeutung hat dieser Zahlenwert im Zusammenhang mit der Bewegung des Objektes?
-\end{parts}
-\vspace{5pt}\antwort{6}
-\begin{parts}
-\setcounter{partno}{2}
-	\part[3] Berechne den Differentialquotient an der Stelle $x_0=3$. Was sagt dieser Wert aus?
-\end{parts}
-\vspace{5pt}\antwort{8.5}
+\vspace{5pt}\antwort{21.5}
 
 
 %---------------------------------------------------------
 \newpage
-\question[6]
-Skizziere ins leere Koordinatensystem den Graphen der Ableitungsfunktion der gegebenen Funktion $f$ möglichst exakt. Markiere in deiner Skizze zusätzlich folgende Stellen und Bereiche:
-\begin{parts}
-	\part Stellen mit Steigung Null,
-	\part Bereiche mit positiver, resp. negativer Steigung und
-	\part Stellen mit grösster Steigung.
-\end{parts}
-\begin{figure}[H]
-	\centering
-	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
-		>=latex,   %Voreinstellung für Pfeilspitzen
-		font= \footnotesize, scale=0.7]
-		%Raster zeichnen
-		\draw [color=gray!50]  [step=10mm] (-4.3,-4.3) grid (4.3,4.3);
-		% Achsen zeichnen
-		\draw[->,thick] (-4.5,0) -- (4.5,0) node[right, below] {\normalsize $x$};
-		\draw[->,thick] (0,-4.5) -- (0,4.5) node[above, left] {\normalsize $y$};
-		% Achsen beschriften
-		\foreach \x in {-4,...,-2,-1,1,2,...,4} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
-		\foreach \y in {-4,...,-2,-1,1,2,...,4} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
-		% Besserer Ursprung
-		\draw[color=black] (0pt,-7pt) node[right] {$0$};
-		%Funktionen zeichnen:
-		\clip(-4.3,-4.3) rectangle (4.3,4.3); %Bildbereich
-		\draw[color=plotblue,line width=1.2pt,domain=-4.3:4.3,samples=200] plot (\x, {-(0.1*\x^4+0.4*\x^3-3*\x^2+2*\x+0.5)});
-		%Beschriftung
-		\node[color=plotblue]  at (3.8,-3.5) {\normalsize\textbf{$f$}};
-	\end{tikzpicture}
-\end{figure}
-\begin{figure}[H]
-	\centering
-	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
-		>=latex,   %Voreinstellung für Pfeilspitzen
-		font= \footnotesize, scale=1.4]
-		%Raster zeichnen
-		\draw [color=gray!50]  [step=10mm] (-4.3,-4.3) grid (4.3,4.3);
-		% Achsen zeichnen
-		\draw[->,thick] (-4.5,0) -- (4.5,0) node[right, below] {\normalsize $x$};
-		\draw[->,thick] (0,-4.5) -- (0,4.5) node[above, left] {\normalsize $y$};
-		% Achsen beschriften
-		\foreach \x in {-4,...,-2,-1,1,2,...,4} \draw (\x,-.1) -- (\x,.1) node[below=7pt] {$\x$};
-		\foreach \y in {-4,...,-2,-1,1,2,...,4} \draw (-.1,\y) -- (.1,\y) node[left=7pt] {$\y$};
-		% Besserer Ursprung
-		\draw[color=black] (0pt,-7pt) node[right] {$0$};
-		%Funktionen zeichnen:
-		\clip(-4.3,-4.3) rectangle (4.3,4.3); %Bildbereich
-		%\draw[color=plotblue,line width=1.2pt,domain=-4.3:4.3,samples=200] plot (\x, {(0.1*\x^4+0.4*\x^3-3*\x^2+2*\x+0.5)});
-		%Beschriftung
-		%\node[color=plotblue]  at (3.3,3.5) {\normalsize\textbf{$f$}};
-	\end{tikzpicture}
-\end{figure}
+\question[4] %Rhyn Analysis S18 A11
+Welche Funktionsgleichung hat die Gerade, welche die Parabel $p(x)=2x^2-3x$ berührt und die Gerade $g(x)=-\frac{1}{5}x+1$ rechtwinklig schneidet?
+\vspace{5pt}\antwort{23.5}
 
 %---------------------------------------------------------
 \newpage
-\question[4]
-Berechne die allgemeine Ableitungsfunktion der Funktion $f:y=2x^2+4$, in dem du den Differentialquotient an einer beliebigen Stelle $x_0$ bestimmst.
-\vspace{5pt}
-\antwort{23.5}
+\question[6] %Barth3 Nachtest Kap. 3 A13d
+Untersuche die folgende Funktion \[f(x)=\frac{1}{4}x^5-x^3+x.\] und führe eine vollständige Kurvendiskussion durch.
+\vspace{5pt}\antwort{21.5}
+
 
 
 \end{questions}
