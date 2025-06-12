@@ -46,9 +46,8 @@
 		\begin{enumerate}[label=\alph*)]
 			\item Wie bist du jeweils vorgegangen, um das Argument zu finden?
 			\item Wie muss eine Funktion beschaffen sein, damit es dir immer gelingt, das Argument eindeutig anzugeben?
-			\item Wenn das nicht gelang, woran genau lag das dann?
 		\end{enumerate}
-		\karos{10}
+		\karos{11}
 	\end{aufgabe}
 
 \newpage
@@ -97,10 +96,339 @@
 
 \newpage
 \section{Bijektivität}
+	Aus den obigen Aufgaben soll nochmals präzis formuliert werden, worin das Problem besteht, dass einige Funktionen eine Umkehrfunktion besitzen und andere nicht. Denn unser Ziel wird sein, diese Problemstellen zu beseitigen und damit möglichst alle Funktionen umkehren zu können.
 	\begin{aufgabe}
 		Woran liegt es, dass einige Funktionen umkehrbar sind, während andere es nicht sind?\vspace*{5pt}\newline\karos{3.5}
 	\end{aufgabe}
 	Um diese Frage präzis zu beantworten, müssen wir drei zentrale Fachbegriffe einführen.
+	\begin{definition}
+		Erfüllt eine Funktion $f$ die Eigenschaft, dass zwei verschiedene Argumente des Definitionsbereichs immer verschiedenen Funktionswerten zugeordnet werden, nennt man sie \textbf{injektiv}. Formal lässt sich das so ausdrücken:
+		\[x_1\neq x_2 \quad\Rightarrow\quad f(x_1)\neq f(x_2).\]
+	\end{definition}
+	Damit können wir also garantieren, dass kein Argument zwei oder mehreren Bildern zugeordnet wird. Betrachten wir dazu die folgenden Beispiele:
+	\begin{beispiel}\ \\
+		\begin{minipage}{0.45\linewidth}
+			\centering
+			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+				>=latex,   %Voreinstellung für Pfeilspitzen
+				font= \footnotesize, scale=1]
+				%Raster zeichnen
+				\draw [color=gray!50]  [step=10mm] (-2.3,-2.3) grid (2.3,2.3);
+				% Achsen zeichnen
+				\draw[->,thick] (-2.3,0) -- (2.8,0) node[right, below] {\normalsize $x$};
+				\draw[->,thick] (0,-2.3) -- (0,2.8) node[above, left] {\normalsize $y$};
+				% Achsen beschriften
+				\foreach \x in {-2,-1,1,2} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+				\foreach \y in {-2,-1,1,2} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+				% Besserer Ursprung
+				\draw[color=black] (0pt,-7pt) node[right] {$0$};
+				%Funktionen zeichnen:
+				\clip(-2.3,-2.3) rectangle (2.3,2.3); %Bildbereich
+				\draw[plotblue,thick,domain=-2:2,samples=200] plot (\x, {1.5*\x});
+				%Beschriftung
+				\node[plotblue]  at (1.4,1.6) {$f$};
+			\end{tikzpicture}
+			\newline Die Funktion $f(x)=\frac{3}{2}x$ ist...$\qquad$
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.45\linewidth}
+			\centering
+			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+				>=latex,   %Voreinstellung für Pfeilspitzen
+				font= \footnotesize, scale=1]
+				%Raster zeichnen
+				\draw [color=gray!50]  [step=10mm] (-2.3,-2.3) grid (2.3,2.3);
+				% Achsen zeichnen
+				\draw[->,thick] (-2.3,0) -- (2.8,0) node[right, below] {\normalsize $x$};
+				\draw[->,thick] (0,-2.3) -- (0,2.8) node[above, left] {\normalsize $y$};
+				% Achsen beschriften
+				\foreach \x in {-2,-1,1,2} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+				\foreach \y in {-2,-1,1,2} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+				% Besserer Ursprung
+				\draw[color=black] (0pt,-7pt) node[right] {$0$};
+				%Funktionen zeichnen:
+				\clip(-2.3,-2.3) rectangle (2.3,2.3); %Bildbereich
+				\draw[plotblue,thick,domain=-2:2,samples=200] plot (\x, {\x^3-\x});
+				%Beschriftung
+				\node[plotblue]  at (1.7,1.6) {$g$};
+			\end{tikzpicture}
+			\newline Die Funktion $g(x)=x^3-x$ ist...
+		\end{minipage}
+		\vspace{7pt}\newline\karos{3.5}
+	\end{beispiel}
+\newpage
+	\begin{aufgabe}
+		Beurteile anhand der folgenden Graphen, ob die Funktion injektiv ist oder nicht.\newline
+		\begin{minipage}{0.45\linewidth}
+			\centering
+			\begin{enumerate}[label=\alph*)]
+				\item $f:y=x^2$
+			\end{enumerate}
+			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+				>=latex,   %Voreinstellung für Pfeilspitzen
+				font= \footnotesize, scale=0.8]
+				%Raster zeichnen
+				\draw [color=gray!50]  [step=10mm] (-2.3,-2.3) grid (2.3,2.3);
+				% Achsen zeichnen
+				\draw[->,thick] (-2.3,0) -- (2.8,0) node[right, below] {\normalsize $x$};
+				\draw[->,thick] (0,-2.3) -- (0,2.8) node[above, left] {\normalsize $y$};
+				% Achsen beschriften
+				\foreach \x in {-2,-1,1,2} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+				\foreach \y in {-2,-1,1,2} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+				% Besserer Ursprung
+				\draw[color=black] (0pt,-7pt) node[right] {$0$};
+				%Funktionen zeichnen:
+				\clip(-2.3,-2.3) rectangle (2.3,2.3); %Bildbereich
+				\draw[plotblue,thick,domain=-2.3:2.3,samples=200] plot (\x, {(\x)^2});
+				%Beschriftung
+				%\node[myred]  at (3.1,-2.3) {$f:y=x^5-6x^3+1.8x$};
+			\end{tikzpicture}
+			\begin{enumerate}[label=\alph*)]
+				\setcounter{enumi}{2}
+				\item $f:y=\sqrt{x}$
+			\end{enumerate}
+			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+				>=latex,   %Voreinstellung für Pfeilspitzen
+				font= \footnotesize, scale=0.8]
+				%Raster zeichnen
+				\draw [color=gray!50]  [step=10mm] (-1.3,-1.3) grid (3.3,3.3);
+				% Achsen zeichnen
+				\draw[->,thick] (-1.3,0) -- (3.8,0) node[right, below] {\normalsize $x$};
+				\draw[->,thick] (0,-1.3) -- (0,3.8) node[above, left] {\normalsize $y$};
+				% Achsen beschriften
+				\foreach \x in {-1,1,2,3} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+				\foreach \y in {-1,1,2,3} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+				% Besserer Ursprung
+				\draw[color=black] (0pt,-7pt) node[right] {$0$};
+				%Funktionen zeichnen:
+				\clip(-1.3,-1.3) rectangle (3.3,3.3); %Bildbereich
+				\draw[plotblue,thick,domain=0.001:3.3,samples=200] plot (\x, {(\x)^(0.5)});
+				%Beschriftung
+				%\node[myred]  at (3.1,-2.3) {$f:y=x^5-6x^3+1.8x$};
+			\end{tikzpicture}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.45\linewidth}
+			\centering
+			\begin{enumerate}[label=\alph*)]
+				\setcounter{enumi}{1}
+				\item $f:y=x^3$
+			\end{enumerate}
+			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+				>=latex,   %Voreinstellung für Pfeilspitzen
+				font= \footnotesize, scale=0.8]
+				%Raster zeichnen
+				\draw [color=gray!50]  [step=10mm] (-2.3,-2.3) grid (2.3,2.3);
+				% Achsen zeichnen
+				\draw[->,thick] (-2.3,0) -- (2.8,0) node[right, below] {\normalsize $x$};
+				\draw[->,thick] (0,-2.3) -- (0,2.8) node[above, left] {\normalsize $y$};
+				% Achsen beschriften
+				\foreach \x in {-2,-1,1,2} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+				\foreach \y in {-2,-1,1,2} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+				% Besserer Ursprung
+				\draw[color=black] (0pt,-7pt) node[right] {$0$};
+				%Funktionen zeichnen:
+				\clip(-2.3,-2.3) rectangle (2.3,2.3); %Bildbereich
+				\draw[plotblue,thick,domain=-2.3:2.3,samples=200] plot (\x, {\x^3});
+				%Beschriftung
+				%\node[myred]  at (3.1,-2.3) {$f:y=x^5-6x^3+1.8x$};
+			\end{tikzpicture}
+			\begin{enumerate}[label=\alph*)]
+				\setcounter{enumi}{3}
+				\item $f:y=\frac{1}{3x}$
+			\end{enumerate}
+			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+				>=latex,   %Voreinstellung für Pfeilspitzen
+				font= \footnotesize, scale=0.8]
+				%Raster zeichnen
+				\draw [color=gray!50]  [step=10mm] (-2.3,-2.3) grid (2.3,2.3);
+				% Achsen zeichnen
+				\draw[->,thick] (-2.3,0) -- (2.8,0) node[right, below] {\normalsize $x$};
+				\draw[->,thick] (0,-2.3) -- (0,2.8) node[above, left] {\normalsize $y$};
+				% Achsen beschriften
+				\foreach \x in {-2,-1,1,2} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+				\foreach \y in {-2,-1,1,2} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+				% Besserer Ursprung
+				\draw[color=black] (0pt,-7pt) node[right] {$0$};
+				%Funktionen zeichnen:
+				\clip(-2.3,-2.3) rectangle (2.3,2.3); %Bildbereich
+				\draw[plotblue,thick,domain=-2.3:-0.1,samples=100] plot (\x, {1/(3*\x)});
+				\draw[plotblue,thick,domain=0.1:2.3,samples=100] plot (\x, {1/(3*\x)});
+				%Beschriftung
+				%\node[myred]  at (3.1,-2.3) {$f:y=x^5-6x^3+1.8x$};
+			\end{tikzpicture}
+		\end{minipage}
+	\end{aufgabe}
+	Diese Eigenschaft alleine reicht jedoch noch nicht damit eine Funktion umkehrbar ist.
+	\begin{aufgabe}
+		Erkläre in eigenen Worten, warum eine injektive Funktion nicht umkehrbar ist. Mache dazu ein geeignetes Beispiel.
+		\vspace{5pt}\newline\karos{3.5}
+	\end{aufgabe}
+	\begin{definition}
+		Eine Funktion $f$ heisst surjektiv, wenn zu jedem $y\in\W$ ein $x\in\D$ existiert, sodass \[y=f(x).\]
+		In anderen Worten heisst das, jedes Bild besitzt mindestens ein zugeordnetes Argument.
+	\end{definition}
+	Bemerke, diese Bedingung ist vergleichbar mit der grundlegenden Zuordnungsvorschrift jeder Funktion. Mit dem einzigen Unterschied Argument und Bild sind vertauscht. Damit ist garantiert, dass die umgekehrte Zuordnung mindestens eine Funktion ist.
+\newpage
+	\begin{beispiel}
+		\ \\
+		\begin{minipage}{0.45\linewidth}
+			\centering
+			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+				>=latex,   %Voreinstellung für Pfeilspitzen
+				font= \footnotesize, scale=1]
+				%Raster zeichnen
+				\draw [color=gray!50]  [step=10mm] (-2.3,-2.3) grid (2.3,2.3);
+				% Achsen zeichnen
+				\draw[->,thick] (-2.3,0) -- (2.8,0) node[right, below] {\normalsize $x$};
+				\draw[->,thick] (0,-2.3) -- (0,2.8) node[above, left] {\normalsize $y$};
+				% Achsen beschriften
+				\foreach \x in {-2,-1,1,2} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+				\foreach \y in {-2,-1,1,2} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+				% Besserer Ursprung
+				\draw[color=black] (0pt,-7pt) node[right] {$0$};
+				%Funktionen zeichnen:
+				\clip(-2.3,-2.3) rectangle (2.3,2.3); %Bildbereich
+				\draw[plotblue,thick,domain=-2:2,samples=200] plot (\x, {1.5*\x});
+				%Beschriftung
+				\node[plotblue]  at (1.4,1.6) {$f$};
+			\end{tikzpicture}
+			\newline Die Funktion $f(x)=\frac{3}{2}x$ ist...$\qquad$
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.45\linewidth}
+			\centering
+			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+				>=latex,   %Voreinstellung für Pfeilspitzen
+				font= \footnotesize, scale=1]
+				%Raster zeichnen
+				\draw [color=gray!50]  [step=10mm] (-2.3,-2.3) grid (2.3,2.3);
+				% Achsen zeichnen
+				\draw[->,thick] (-2.3,0) -- (2.8,0) node[right, below] {\normalsize $x$};
+				\draw[->,thick] (0,-2.3) -- (0,2.8) node[above, left] {\normalsize $y$};
+				% Achsen beschriften
+				\foreach \x in {-2,-1,1,2} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+				\foreach \y in {-2,-1,1,2} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+				% Besserer Ursprung
+				\draw[color=black] (0pt,-7pt) node[right] {$0$};
+				%Funktionen zeichnen:
+				\clip(-2.3,-2.3) rectangle (2.3,2.3); %Bildbereich
+				\draw[plotblue,thick,domain=-2:2,samples=200] plot (\x, {\x^3-\x});
+				%Beschriftung
+				\node[plotblue]  at (1.7,1.6) {$g$};
+			\end{tikzpicture}
+			\newline Die Funktion $g(x)=x^3-x$ ist...
+		\end{minipage}
+		\vspace{7pt}\newline\karos{4.5}
+	\end{beispiel}
+	\begin{aufgabe}
+		Beurteile anhand der folgenden Graphen, ob die Funktion surjektiv ist oder nicht.\newline
+		\begin{minipage}{0.45\linewidth}
+			\centering
+			\begin{enumerate}[label=\alph*)]
+				\item $f:y=x^2$
+			\end{enumerate}
+			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+				>=latex,   %Voreinstellung für Pfeilspitzen
+				font= \footnotesize, scale=0.8]
+				%Raster zeichnen
+				\draw [color=gray!50]  [step=10mm] (-2.3,-2.3) grid (2.3,2.3);
+				% Achsen zeichnen
+				\draw[->,thick] (-2.3,0) -- (2.8,0) node[right, below] {\normalsize $x$};
+				\draw[->,thick] (0,-2.3) -- (0,2.8) node[above, left] {\normalsize $y$};
+				% Achsen beschriften
+				\foreach \x in {-2,-1,1,2} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+				\foreach \y in {-2,-1,1,2} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+				% Besserer Ursprung
+				\draw[color=black] (0pt,-7pt) node[right] {$0$};
+				%Funktionen zeichnen:
+				\clip(-2.3,-2.3) rectangle (2.3,2.3); %Bildbereich
+				\draw[plotblue,thick,domain=-2.3:2.3,samples=200] plot (\x, {(\x)^2});
+				%Beschriftung
+				%\node[myred]  at (3.1,-2.3) {$f:y=x^5-6x^3+1.8x$};
+			\end{tikzpicture}
+			\begin{enumerate}[label=\alph*)]
+				\setcounter{enumi}{2}
+				\item $f:y=\sqrt{x}$
+			\end{enumerate}
+			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+				>=latex,   %Voreinstellung für Pfeilspitzen
+				font= \footnotesize, scale=0.8]
+				%Raster zeichnen
+				\draw [color=gray!50]  [step=10mm] (-1.3,-1.3) grid (3.3,3.3);
+				% Achsen zeichnen
+				\draw[->,thick] (-1.3,0) -- (3.8,0) node[right, below] {\normalsize $x$};
+				\draw[->,thick] (0,-1.3) -- (0,3.8) node[above, left] {\normalsize $y$};
+				% Achsen beschriften
+				\foreach \x in {-1,1,2,3} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+				\foreach \y in {-1,1,2,3} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+				% Besserer Ursprung
+				\draw[color=black] (0pt,-7pt) node[right] {$0$};
+				%Funktionen zeichnen:
+				\clip(-1.3,-1.3) rectangle (3.3,3.3); %Bildbereich
+				\draw[plotblue,thick,domain=0.001:3.3,samples=200] plot (\x, {(\x)^(0.5)});
+				%Beschriftung
+				%\node[myred]  at (3.1,-2.3) {$f:y=x^5-6x^3+1.8x$};
+			\end{tikzpicture}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.45\linewidth}
+			\centering
+			\begin{enumerate}[label=\alph*)]
+				\setcounter{enumi}{1}
+				\item $f:y=x^3$
+			\end{enumerate}
+			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+				>=latex,   %Voreinstellung für Pfeilspitzen
+				font= \footnotesize, scale=0.8]
+				%Raster zeichnen
+				\draw [color=gray!50]  [step=10mm] (-2.3,-2.3) grid (2.3,2.3);
+				% Achsen zeichnen
+				\draw[->,thick] (-2.3,0) -- (2.8,0) node[right, below] {\normalsize $x$};
+				\draw[->,thick] (0,-2.3) -- (0,2.8) node[above, left] {\normalsize $y$};
+				% Achsen beschriften
+				\foreach \x in {-2,-1,1,2} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+				\foreach \y in {-2,-1,1,2} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+				% Besserer Ursprung
+				\draw[color=black] (0pt,-7pt) node[right] {$0$};
+				%Funktionen zeichnen:
+				\clip(-2.3,-2.3) rectangle (2.3,2.3); %Bildbereich
+				\draw[plotblue,thick,domain=-2.3:2.3,samples=200] plot (\x, {\x^3});
+				%Beschriftung
+				%\node[myred]  at (3.1,-2.3) {$f:y=x^5-6x^3+1.8x$};
+			\end{tikzpicture}
+			\begin{enumerate}[label=\alph*)]
+				\setcounter{enumi}{3}
+				\item $f:y=\frac{1}{3x}$
+			\end{enumerate}
+			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+				>=latex,   %Voreinstellung für Pfeilspitzen
+				font= \footnotesize, scale=0.8]
+				%Raster zeichnen
+				\draw [color=gray!50]  [step=10mm] (-2.3,-2.3) grid (2.3,2.3);
+				% Achsen zeichnen
+				\draw[->,thick] (-2.3,0) -- (2.8,0) node[right, below] {\normalsize $x$};
+				\draw[->,thick] (0,-2.3) -- (0,2.8) node[above, left] {\normalsize $y$};
+				% Achsen beschriften
+				\foreach \x in {-2,-1,1,2} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+				\foreach \y in {-2,-1,1,2} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+				% Besserer Ursprung
+				\draw[color=black] (0pt,-7pt) node[right] {$0$};
+				%Funktionen zeichnen:
+				\clip(-2.3,-2.3) rectangle (2.3,2.3); %Bildbereich
+				\draw[plotblue,thick,domain=-2.3:-0.1,samples=100] plot (\x, {1/(3*\x)});
+				\draw[plotblue,thick,domain=0.1:2.3,samples=100] plot (\x, {1/(3*\x)});
+				%Beschriftung
+				%\node[myred]  at (3.1,-2.3) {$f:y=x^5-6x^3+1.8x$};
+			\end{tikzpicture}
+		\end{minipage}
+	\end{aufgabe}
+	Zusammenfassend können wir also sagen:
+	\begin{definition}
+		Ist eine Funktion $f$ sowohl \textit{injektiv} als auch \textit{surjektiv}, nennen wir sie \textbf{bijektiv}.
+	\end{definition}
+
+
 
 
 \newpage
