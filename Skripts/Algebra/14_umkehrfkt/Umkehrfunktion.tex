@@ -270,8 +270,7 @@
 	\end{definition}
 	Bemerke, diese Bedingung ist vergleichbar mit der grundlegenden Zuordnungsvorschrift jeder Funktion. Mit dem einzigen Unterschied Argument und Bild sind vertauscht. Damit ist garantiert, dass die umgekehrte Zuordnung mindestens eine Funktion ist.
 \newpage
-	\begin{beispiel}
-		\ \\
+	\begin{beispiel}\ \\
 		\begin{minipage}{0.45\linewidth}
 			\centering
 			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
@@ -427,8 +426,40 @@
 	\begin{definition}
 		Ist eine Funktion $f$ sowohl \textit{injektiv} als auch \textit{surjektiv}, nennen wir sie \textbf{bijektiv}.
 	\end{definition}
-
-
+	\begin{aufgabe}
+		Entschiede, ob die folgenden Funktionen bijektiv sind oder nicht.\newline
+		\begin{minipage}{0.45\linewidth}
+			\begin{enumerate}[label=\alph*)]
+				\item $f(x)=\sqrt{9-x^2}$ für $\D=\left[-3,3\right]$ und $\W=\R^+_0$
+				\item $g(x)=x^2+2x$ für $\D=\left[-1,\infty\right]$ und $\W=\left[-1,\infty\right]$
+				\item $h(x)=\frac{2}{x}$ für $\D=\W=\R$
+				\item $j(x)=\frac{1}{5}\sqrt{2x+4}$ für $\D=\left[-2,\infty\right]$ und $\W=\R_0^+$
+			\end{enumerate}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.45\linewidth}
+			\centering
+			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+				>=latex,   %Voreinstellung für Pfeilspitzen
+				font= \footnotesize, scale=0.8]
+				%Raster zeichnen
+				\draw [color=gray!50]  [step=10mm] (-3.3,-3.3) grid (3.3,3.3);
+				% Achsen zeichnen
+				\draw[->,thick] (-3.3,0) -- (3.8,0) node[right, below] {\normalsize $x$};
+				\draw[->,thick] (0,-3.3) -- (0,3.8) node[above, left] {\normalsize $y$};
+				% Achsen beschriften
+				\foreach \x in {-3,-2,-1,1,2,3} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+				\foreach \y in {-3,-2,-1,1,2,3} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+				% Besserer Ursprung
+				\draw[color=black] (0pt,-7pt) node[right] {$0$};
+				%Funktionen zeichnen:
+				\clip(-3.3,-3.3) rectangle (3.3,3.3); %Bildbereich
+				%\draw[plotblue,thick,domain=-2:2,samples=200] plot (\x, {\x^3-\x});
+				%Beschriftung
+				%\node[plotblue]  at (1.7,1.6) {$g$};
+			\end{tikzpicture}
+		\end{minipage}
+	\end{aufgabe}
 
 
 \newpage
@@ -437,14 +468,42 @@
 	\begin{satz}
 		Die Funktion $f$  besitzt eine Umkehrfunktion genau dann, wenn $f$  bijektiv ist.
 	\end{satz}
+	\begin{beweis}
+		\karos{8.5}
+	\end{beweis}
 
 \subsection{Wie berechnet man eine Umkehrfunktion?}
+	Nun wissen wir also, welche Bedingung eine Funktion zu erfüllen hat, damit sie umkehrbar ist. Jedoch ist noch unklar, wie wir die Funktionsgleichung der Umkehrfunktion berechnen können. Genau diese Frage soll nun beantwortet werden. Dazu betrachten wir das folgende Beispiel:
+	\begin{beispiel}
+		Sei die lineare Funktion \[f:y=\frac{2x-5}{4}\] gegeben. Lasst uns zuerst überprüfen, ob die Funktion auch wirklich umkehrbar ist.\vspace{5pt}\newline\karos{5.5}
+
+		Die Funktionsgleichung zeigt uns, nach welcher Formel dem Argument $x$ einer Zahl  $y$ zugeordnet wird. Da die Umkehrfunktion gerade das Umgekehrte tut, also einem $y-$Wert sein eindeutiges Argument $x$ zuweist, müssen wir uns fragen, nach welcher Formel ein vorgegebenes $y$ in $x$ umgewandelt wird. Mit anderen Worten: Wir müssen die Funktionsgleichung einfach nach $x$ auflösen:\vspace{5pt}\newline\karos{4.5}
+	\end{beispiel}
+	\begin{aufgabe}
+		\begin{enumerate}
+			\item Berechne für die folgenden Funktionen $f$ ihre Umkehrfunktion $f^{-1}$, sofern diese existiert.
+			\begin{enumcols}[2]
+				\item $f_1:\R\to\R,\:y=\frac{1}{4}x$
+				\item $f_2:\R_0^+\to\R_0^+,\:y=x^3$
+				\item $f_3:\R\to\R,\:y=3x+2$
+				\item $f_4:\R\to\R,\:y=\frac{3x+7}{4}$
+				\item $f_5:\R_{\geq 3}\to\R_0^+,\:y=\sqrt{2x-6}$
+				\item $f_6:\R\to\R,\:y=4$
+			\end{enumcols}
+			\item Von welcher Funktion $f$ mit welcher maximalen Definitionsmenge sind die folgenden Funktionen $g$ die Umkehrfunktion?
+			\begin{enumcols}[2]
+				\item $g_1:\R_{\geq -5}\to\R_0^+,\:y=\sqrt{x+5}$
+				\item $g_2:\R\to\R,\:y=\frac{1}{3}x+8$
+				\item $g_3:\R_{\geq\frac{1}{4}}\to\R_0^+,\:y=\sqrt{4x-1}$
+				\item $g_4:\R\setminus\left\{2\right\}\to\R,\:y=\frac{3}{x-2}$
+			\end{enumcols}
+		\end{enumerate}
+	\end{aufgabe}
+
+\subsection{Was tun, wenn $f$ nicht bijektiv ist?}
 
 
-\subsection{Was wenn $f$ nicht bijektiv ist?}
-
-
-\subsection{Graph von Funktion und Umkehrfunktion}
+%\subsection{Graph von Funktion und Umkehrfunktion}
 
 \newpage
 \subsection*{History}
