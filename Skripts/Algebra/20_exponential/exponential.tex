@@ -7,7 +7,7 @@
 
 \newcommand{\Skriptname}{Wachstum und Zerfall}
 \newcommand{\Autor}{Jonas Guler (Gu)}
-\newcommand{\version}{\textit{v}1.0}
+\newcommand{\version}{\textit{v}1.1}
 
 \begin{document}
 \begin{titlepage}
@@ -117,7 +117,7 @@
 	\begin{definition}
 		Eine Exponentialfunktion ist eine Funktion der Form
 		\[f:y=b\cdot a^x\]
-		mit $b\in\R$ und $a\in\R^+\setminus\{1\}$.
+		mit $b\in\R\setminus\{0\}$ und $a\in\R^+\setminus\{1\}$.
 	\end{definition}
 	\begin{beispiel}
 		Als Beispiele soll nochmals auf die Einführungsbeispiele und dessen Funktionen hingewiesen werden.
@@ -266,7 +266,7 @@
 					\end{tabular}
 				\end{table}
 				\item Wie verändert sich der Funktionswert, wenn man das Argument $t$ um eins erhöht? Wie, wenn man $t$ um 6 erhöht?
-				\item Fülle den folgenden Lückentext aus:\newline Eine lineare Funktion der Form $f:y=b\cdot a^t$ hat den $y-$Achsenabschnitt \gap{2}. Wenn man das Argument um 1 erhöht, wird der Funktionswert ver-\gap{2}-facht. Wenn man das Argument um $\Delta t$ erhöht, wird der Funktionswert ver-\gap{2}-facht.
+				\item Fülle den folgenden Lückentext aus:\newline Eine Exponentialfunktion der Form $f:y=b\cdot a^t$ hat den $y-$Achsenabschnitt \gap{2}. Wenn man das Argument um 1 erhöht, wird der Funktionswert ver-\gap{2}-facht. Wenn man das Argument um $\Delta t$ erhöht, wird der Funktionswert ver-\gap{2}-facht.
 			\end{enumerate}
 		\end{enumerate}
 		\karos{4}
@@ -351,7 +351,7 @@
 				\item 1 Std \item 2 Std \item 4 Std \item 8 Std \item $x$ Std
 			\end{enumcols}
 			\item Die Population einer vom Aussterben bedrohten Tierart beträgt noch rund $1800$ Exemplare und nimmt jedes Jahr um ein Drittel ab. Bestimme für die Zeitspanne von einem Jahr den Zerfallsfaktor sowie die Zerfallsrate und stelle die Zerfallsfunktion auf. Nach wie vielen Jahren werden weniger als $500$ Exemplare vorhanden sein?
-			\item Eine IT-Firma macht einen Umsatz von 100 Millionen Euro. Für die Zukunft wird beim Umsatz eine Verdoppelungszeit von $5$ Jahren prognostiziert. Bestimme für die Zeitspanne von einem Jahr den Wachstumsfaktor, die Wachstumsrate und die Wachstumsfunktion.
+			\item Eine IT-Firma macht einen Umsatz von 100 Millionen Euro. Für die Zukunft wird beim Umsatz eine Verdoppelungszeit von $5$ Jahren prognostiziert. Bestimme für die Zeitspanne von einem Jahr den Wachstumsfaktor und die Wachstumsfunktion.
 			\item Bei einer Bakterienkultur ohne Raum- und Nahrungsmangel wächst die Bakterienzahl mit der Zeit exponentiell an. Um $8$ Uhr sind es $2300$ und um $12$ Uhr $36'200$ Bakterien. Wie viele Bakterien hat es um
 			\begin{enumcols}[4]
 				\item $9:00$? \item $10:00$? \item $11:00$? \item $13:30$?
@@ -369,7 +369,7 @@
 	\begin{aufgabe}
 		Elin erhält zur Geburt ein Sparbuch mit $1000$ CHF Guthaben. Der Jahreszins beträgt $2\%$. Wie entwickelt sich ihr Kapital, wenn sie die Zinsen stets auf das Konto einzahlen lässt und nie etwas davon abhebt?
 		\begin{enumerate}[label=\alph*)]
-			\item Berechnen Sie das Guthaben von Elin zum Zeitpunkt ihres zweiten Geburtstags.
+			\item Berechne das Guthaben von Elin zum Zeitpunkt ihres zweiten Geburtstags.
 			\item Wie viel Geld liegt nach $20$ Jahren auf Elins Konto? Wie viel nach $n$ Jahren?
 		\end{enumerate}
 		\karos{6}
@@ -480,8 +480,9 @@
 	\begin{tabular}{|p{13mm}|p{20mm}|p{30mm}|p{70mm}|}\hline
 		%\multicolumn{4}{|l|}{History}\\\hline
 		Version & Datum & Person & Bemerkung \\\hline
-		$0.1$ & 02.08.2024 & Jonas Guler & Kapitel erstellt \\\hline
-		$0.2$ & ToDo & Jonas Guler & Weitere Wachstumsmethoden \\\hline
+		$1.0$ & 02.08.2024 & Jonas Guler & Kapitel erstellt \\\hline
+		$1.1$ & 07.08.2025 & Jonas Guler & Fehler korrigiert \\\hline
+		$2.0$ & ToDo & Jonas Guler & Weitere Wachstumsmethoden \\\hline
 	\end{tabular}
 \end{table}
 
