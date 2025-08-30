@@ -38,7 +38,7 @@
 		\[\systeme*{a\*x + b\*y = n_1,c\*x + d\*y = n_2}\]
 		Die Parameter $a,b,c,d,n_1,n_2\in\R$ sind reele Zahlen und werden als \textbf{Koeffizienten} des Gleichungssystems bezeichnet. Die Lösung eines linearen $2\times2$ Gleichungssystems ist ein Zahlenpaar $\left(x_0|y_0\right)$, sodass beide Gleichungen erfüllt sind.
 	\end{definition}
-	Selbstverständlich gibt es auch lineare $3\times3,\:4\times4,\:\text{etc.}$ Gleichungssysteme. Ganz allgemein kann also auch von einem $m\times n$ Gleichungssystem gesprochen werden. Im folgenden werden wir uns zuerst auf lineare $2\times2$ Gleichungssysteme beschränken und uns mit verschiedenen Lösungsmethoden für solcher befassen. Bevor wir starten, sollen zwei Punkte festgehalten werden:
+	Selbstverständlich gibt es auch lineare $3\times3,\:4\times4,\:\text{etc.}$ Gleichungssysteme. Ganz allgemein kann also auch von einem $m\times n$ Gleichungssystem gesprochen werden. Mehr dazu werden wir zu einem späteren Zeitpunkt diskutieren. Für den Moment beschränken wir uns auf lineare $2\times2$ Gleichungssysteme und uns mit verschiedenen Lösungsmethoden für solcher befassen. Bevor wir starten, sollen zwei Punkte festgehalten werden:
 	\begin{itemize}
 		\item Eine Gleichung mit den Unbekannten $x$ und $y$, so wie wir sie erhalten haben, allgemein: eine Gleichung, die sich auf die Form $ax + by = c$ bringen lässt (mit reellen Zahlen $a,b,c\in\R$), heisst \textbf{linear}.
 		(Die Unbekannten kommen darin also weder quadratisch oder in höheren Potenzen noch miteinander multipliziert vor.)
@@ -176,7 +176,6 @@
 			\[\systeme*{2(5x-2)=\frac{2y+8}{3},10x-4=y+1}\hspace*{10.5cm}\]
 		\end{enumerate}
 	\end{aufgabe}
-	\newpage
 
 \subsection{Das Einsetzungsverfahren (auch Substitutionsverfahren)}
 	Bevor wir mit einem Beispiel starten, lasst uns direkt erste Lösungsversuche machen und die Methode selbstständig herleiten.
@@ -206,15 +205,13 @@
 		\[\systeme{2x-5y=7,3x+2y=1}\]
 		\karos{6.5}
 	\end{algo}
-	Du kannst lineare Gleichungssysteme auch mithilfe des Solvers des TI-Nspire lösen:\vspace{11pt}\newline
-	Der Taschenrechner ist zwar sehr bequem, wir wollen jedoch auch ein wenig Routine haben, Gleichungssysteme von Hand zu lösen. Obwohl es Autos, Bahnen und Flugzeuge gibt, sollte man doch auch zu Fuss gehen können.
 	\begin{aufgabe}
 		\begin{enumerate}
 			\item Löse die folgenden Gleichungssysteme mit Hilfe des Einsetzungsverfahren.
 			\begin{enumcols}[3]
 				\item $\displaystyle\systeme{x+y=11,-x+y=87}$
-				\item $\displaystyle\systeme{x_1+2x_2=5, 4x_1+6x_2=10}$
-				\item $\displaystyle\systeme{4u-5v=1, 5v-9u=1}$
+				\item $\displaystyle\systeme{x+2y=5, 4x+6y=10}$
+				\item $\displaystyle\systeme{4x-5y=1, 5y-9x=1}$
 				\item $\displaystyle\systeme{0.2x+0.6y=2, 0.3x+0.8y=1}$
 				\item $\displaystyle\systeme{8x-7y=9,-2x+3y=2}$
 				\item $\displaystyle\systeme{6x-y=12,3.8x+0.4y=1.4}$
@@ -230,8 +227,6 @@
 			\end{enumerate}
 		\end{enumerate}
 	\end{aufgabe}
-	\newpage
-
 
 \subsection{Das Additionsverfahren}
 	Betrachten wir schliesslich noch das sogenannte Additionsverfahren. Bei diesem Verfahren handelt es sich um das für uns wichtigste, wenn es darum geht, lineare Gleichungssysteme zu lösen. Hierbei müssen wir nicht nach einer Variable auflösen.
@@ -275,11 +270,11 @@
 	\begin{beispiel}
 		Lasst uns ein weiteres Gleichungssystem betrachten.
 		\[\systeme{5x+6y=10,3x-2y=-22}\hspace*{12cm}\]
-		Man kann hier das gleiche Verfahren anwenden, wenn man das Gleichungssystem vorher entsprechend \flqq präpariert\frqq: Wir multiplizieren die zweite Gleichung mit $3$, um auf $-6y$ zu kommen (entgegengesetzt gleich viele $y$ wie in der ersten Gleichung) und addieren diese mit $3$ multiplizierte Gleichung zur ersten Gleichung:\vspace*{5pt}\newline\karos{5.5}
+		Man kann hier das gleiche Verfahren anwenden, wenn man das Gleichungssystem vorher entsprechend \flqq präpariert\frqq: Wir multiplizieren die zweite Gleichung mit $3$, um auf $-6y$ zu kommen (entgegengesetzt gleich viele $y$ wie in der ersten Gleichung) und addieren diese mit $3$ multiplizierte Gleichung zur ersten Gleichung:\vspace*{5pt}\newline\karos{7.5}
 	\end{beispiel}
 	\begin{beispiel}
 		\[\systeme{2x+5y=7, 3x+3y=\frac{3}{2}}\hspace*{12cm}\]
-		\karos{9}
+		\karos{8.5}
 	\end{beispiel}
 	\begin{algo}[Additionsverfahren]
 		\begin{enumerate}[label=\Roman*)]
@@ -290,108 +285,192 @@
 		\end{enumerate}
 	\end{algo}
 	\begin{aufgabe}
-		blablabla
-		\vspace{6cm}
+		Löse die folgenden Gleichungssysteme mit Hilfe des Additionsverfahren.
+			\begin{enumcols}[3]
+				\item $\displaystyle\systeme{x+3y=9,-x+9y=15}$
+				\item $\displaystyle\systeme{2x+4y=5,6x-4y=-1}$
+				\item $\displaystyle\systeme{4x+7y=18,5x+7y=-23}$
+				\item $\displaystyle\systeme{3x+4y=24,-x+5y=11}$
+				\item $\displaystyle\systeme{8x+5y=7,4x+3y=11}$
+				\item $\displaystyle\systeme{-4x+6y=18,6x-9y=-27}$
+				\item $\displaystyle\systeme{27x+15y=18,19x+25y=34}$
+				\item $\displaystyle\systeme{\frac{3}{2}x-\frac{2}{3}y=6,\frac{1}{4}x+\frac{2}{3}y=8}$
+				\item $\displaystyle\systeme{\frac{1}{3}x+y=\frac{7}{8},\frac{1}{6}x+\frac{1}{5}y=\frac{1}{4}}$
+			\end{enumcols}
+	\end{aufgabe}
+
+\subsection{Zur Anwendung der verschiedenen Verfahren}
+	Du kannst lineare Gleichungssysteme auch mithilfe des Solvers des TI-Nspire lösen:\vspace{16pt}\newline
+	Der Taschenrechner ist zwar sehr bequem, wir wollen jedoch auch ein wenig Routine haben, Gleichungssysteme von Hand zu lösen. Obwohl es Autos, Bahnen und Flugzeuge gibt, sollte man doch auch zu Fuss gehen können.
+	\begin{satz}
+		Das Additionsverfahren ist das Verfahren zur Lösung \textbf{linearer} Gleichungssysteme, welches im Allgemeinen am wenigsten aufwendig ist.\vspace*{11pt}\newline
+		Das Einsetzungsverfahren ist wichtig für die Lösung \textbf{komplizierterer, nicht-linearer} Gleichungssysteme.
+	\end{satz}
+	\begin{aufgabe}
+		\begin{enumerate}
+			\item Wähle selbst ein geeignetes Verfahren zur Lösung der folgenden linearen Gleichungsystemen.
+			\begin{enumcols}[3]
+				\item $\displaystyle\systeme{5x+7y=31-4x,27y-9x=54}$
+				\item $\displaystyle\systeme{1.3x+1.2y=6.2,1.7x+0.8y=5.8}$
+				\item $\displaystyle\systeme{18x+23y=100,17x+22y=100}$
+			\end{enumcols}
+			\item Sowohl das Additions- wie auch das Einsetzungsverfahren haben Vor- und Nachteile.
+			\begin{enumerate}[label=\alph*)]
+				\item Erfinde selbst ein lineares $2\times2$ Gleichungssystem, das vorzugsweise mit dem \textbf{Additionsverfahren} gelöst werden sollte. Notiere dabei auch die Gründe, warum dieses Verfahren vorteilhaft ist.
+				\item Nun erfinde auch ein Gleichungssystem, das vorzugsweise mit dem \textbf{Einsetzungsverfahren} gelöst werden sollte. Notiere auch hier die Gründe.
+			\end{enumerate}
+		\end{enumerate}
 	\end{aufgabe}
 	\newpage
 
 \section{Weitere Gleichungssysteme}
-	Der Begriﬀ des Gleichungssystems ist ein sehr allgemeiner. Wir schauen uns in diesem Abschnitt zunächst ein Beispiel eines nicht-linearen Gleichungssystems an. Danach arbeiten wir mit linearen Gleichungssystemen mit Parametern.
-\subsection{Lineare Gleichungssysteme mit Parametern}
-	Kommen neben den Lösungsvariablen noch weitere Variablen vor, so nennt man diese Parameter. Wenn nichts anderes geschrieben ist, werden die Lösungsvariablen mit $x$,$y$, ($z$) bezeichnet; wohin gegeb die Parameter häufig mit $a$, $b$ usw. bezeichnet werden.\vspace{5mm}
+	Der Begriﬀ des Gleichungssystems ist ein sehr allgemeiner. Zu Beginn haben wir uns immer auf lineare $2\times2$ Gleichungssysteme eingeschrankt. Diese Einschränkung wollen wir an dieser Stelle öffnen und auch weitere Möglichkeiten diskutieren. Zuerst betrachten wir lineare $3\times3$ Gleichungssysteme. Danach arbeiten wir mit linearen Gleichungssystemen mit Parametern und zum Schluss  Wir schauen uns in diesem Abschnitt ein Beispiel eines nicht-linearen Gleichungssystems an.
 
+\subsection{Gleichungssysteme mit drei und mehr Unbekannten}
+	Ein lineares Gleichungssystem mit drei Variablen benötigt auch drei Gleichungen, um eindeutigt gelöst werden zu können. Wenn wir nun drei lineare Gleichungen in den drei Unbekannten $x,y$ und $z$ betrachten, versuchen wir die Lösung dieses Gleichungssystems auf die Lösung eines Gleichungssystems nur zweier linearer Gleichungen mit nur zwei Unbekannten zurückzuführen.\vspace{5pt}\newline
+	Dazu eliminieren wir eine der drei Unbekannten jeweils unter Verwendung von zwei der drei Gleichungen, indem wir diese, wie beim Additionsverfahren üblich, mit geeigneten Zahlen multiplizieren und dann zueinander addieren, bzw. voneinander subtrahieren.\vspace*{5pt}\newline
+	Wir führen dies im Folgenden an einem Beispiel vor, besprechen dann in zwei weiteren Beispielen zwei Arten von Spezialfällen und üben das Verfahren anschliessend in einigen Aufgaben.
+	\begin{beispiel}
+		Betrachten wir das Gleichungssystem: \[\systeme{2x-4y+3z=10,-4x+3y-5z=-3,3x-5y+2z=7}\]
+		Um mit dem Additionsverfahren jeweils die Unbekannte z zu eliminieren, addieren wir die Gleichungen auf folgende Weise:
+		\begin{alignat*}{2}
+			5\*\text{I}+3\*\text{II}:&\quad -2x-11y&&=41\\
+			3\*\text{III}-2\*\text{I}:&\qquad 5x-7y&&=1
+		\end{alignat*}
+		Damit haben wir das Problem auf ein uns bereits bekanntes Problem reduziert; nämlich auf ein Gleichungssystem mit zwei Gleichungen und zwei Unbekannten: \[\systeme{-2x-11y=41,5x-7y=1}\]
+		Im nächsten Schritt eliminieren wir die Unbekannte $x$. Dazu addieren wir das Fünffache der ersten Gleichung (I’) zum Zweifachen der zweiten Gleichung (II’):
+		\begin{alignat*}{2}
+			5\*\text{I'}:&\quad -10x-55y&&=205\\
+			2\*\text{II'}:&\quad \phantom{30}10x-14y&&=2\\
+			\cline{1-4}
+			5\*\text{I'}+2\*\text{II'}:&\quad\phantom{30000}-69y&&=207\\
+			&\quad\phantom{300000000} y&&=-3
+		\end{alignat*}
+		Durch Einsetzen in die Gleichung (I') oder (II’) erhalten wir $x=-4$. Schliesslich ermitteln wir $z$ durch Einsetzen von $x=-4$ und $y=-3$ in eine der ursprünglichen Gleichungen (I), (II) oder (III): $z=2$. Somit lautet die Lösung \[(x_0\:|\: y_0\:|\: z_0)=(-4\:|\:-3\:|\:2).\]
+	\end{beispiel}
+	\begin{beispiel}\ \\
+		\begin{enumcols}[2]
+			\item $\displaystyle\systeme{9x-6y+7z=4,4x+3y-5z=9,2x+3z=16}$
+			\item $\displaystyle\systeme{5x-8y=1,2x-3y=1,4x+7y-10z=1}$
+		\end{enumcols}
+		\karos{12.5}
+	\end{beispiel}
+	\begin{aufgabe}
+		Löse die folgenden linearen $3\times3$ Gleichungssysteme.
+		\begin{enumcols}[3]
+			\item $\displaystyle\systeme{9x+7y=13,2x-3y+4z=48,5x-8y+6z=85}$
+			\item $\displaystyle\systeme{x+y+z=33,3x-8y+7z=26,5y-3z=19}$
+			\item $\displaystyle\systeme{4x+7y=10,3x+8z=13,3y+5z=16}$
+			\item $\displaystyle\systeme{3x-2y+z=14,2x+y+3z=21,-x-3y+2z=-5}$
+			\item $\displaystyle\systeme{x-y+z+4=0,4x+y-z-9=0,5x-3y+2z+7=0}$
+			\item $\displaystyle\systeme{3x-2y+8z=-13,4x+3y-5z=14,-5x-y-7z=9}$
+		\end{enumcols}
+	\end{aufgabe}
+
+\subsection{Lineare Gleichungssysteme mit Parametern}
+	Kommen neben den Lösungsvariablen noch weitere Variablen vor, so nennt man diese \textbf{Parameter}. Wenn nichts anderes geschrieben ist, werden die Lösungsvariablen mit $x$,$y$, ($z$) bezeichnet; wohin gegeb die Parameter häufig mit $a$, $b$ usw. bezeichnet werden.\vspace{11pt}\newline
 	In den allermeisten Fällen eignet sich das Additionsverfahren am Besten zur Lösung.
 	\begin{beispiel}
-		\begin{align*}
-			ax + y &= b\\
-			bx - y &= c
-		\end{align*}
-		\vspace{3cm}
+		\[\left\{
+		\begin{matrix}
+			(p+1)x-p^2y=p+1\\
+			(p-1)x+py=p(p+1)
+		\end{matrix}\right.\]
+		Die zu bestimmenden Unbekannten sind $x$ und $y$; und $p$ ist hier ein Parameter (der für eine gegebene Grösse steht). Wir addieren die erste Gleichung mit dem $p$-fachen der zweiten:\vspace*{5pt}\newline\karos{3.5}
+		Die resultierende lineare Gleichung mit Parameter lösen wir mit Hilfe des bekannten Vorgehens: \vspace*{5pt}\newline\karos{6.5}
+		Die zweite Unbekannte $y$ erhält man, indem man \gap{3} in eine der gegebenen Gleichungen, z.B. Gleichung (I), einsetzt:\vspace*{5pt}\newline\karos{5.5}
 	\end{beispiel}
-	\begin{beispiel}[Beispiel (GZP 2015)]
-		\begin{align*}
-			a x + by &= 2\\
-			bx + ay &= -2
-		\end{align*}
-		\vspace{3cm}
+	\begin{beispiel}
+		\[\left\{
+		\begin{matrix}
+			(a-b)x+ay=a+b\\
+			ax+(a+b)y=a+2b
+		\end{matrix}\right.\]
+		Mit dem Additionsverfahren lässt sich $y$ eliminieren, in dem wir die Gleichung (I) mit $(a+b)$ und die Gleichung (II) mit $a$ multiplizieren:\vspace*{5pt}\newline\karos{6.5}
+		Durch Einsetzen in die Gleichung (I) erhalten wir die Lösung: \vspace*{5pt}\newline\karos{6.5}
 	\end{beispiel}
 	\begin{aufgabe}
-		Blablabla
-		\vspace{4cm}
+		Bestimme die Lösungen der folgenden linearen Gleichungssystemen mit Parametern.
+		\begin{enumcols}[3]
+			\item $\displaystyle\systeme{x-ay-b=0,x-by-a=0}$
+			\item $\displaystyle\left\{\begin{matrix}sx+s=1+x\\x+y=s\end{matrix}\right.$
+			\item $\displaystyle\left\{\begin{matrix}x-cy=1\\x+y=c^2\end{matrix}\right.$
+			\item $\displaystyle\left\{\begin{matrix}\frac{2}{a}x+\frac{4a}{3}y=-\frac{2}{3}\\-5x-2a^2y=3a\end{matrix}\right.$
+			\item $\displaystyle\systeme{a^2x-b^2y=a-b,2ax+b^2y=ax+b+1}$
+			\item $\displaystyle\left\{\begin{matrix}\frac{1}{a}x+\frac{1}{b}y=a\\x+y=b^2\end{matrix}\right.$
+		\end{enumcols}
 	\end{aufgabe}
-	\newpage
 
 \subsection{Nicht-lineare Gleichungssysteme}
-	Wir betrachten die zwei Gleichungssysteme:\\
-	\begin{minipage}{0.45\linewidth}
-		\begin{equation}
-			\label{eq:linSys}
-			\systeme{\frac{1}{4}x+y=7, x+y=10}\hspace{1.5cm}
-		\end{equation}
-	\end{minipage}
-	\hfill
-	\begin{minipage}{0.45\linewidth}
-		\begin{equation}
-			\label{eq:nonlinSys}
-			\systeme{\frac{1}{4}x\cdot y=12, y=\frac{3}{4}x}
-		\end{equation}
-	\end{minipage}
-	Das System \ref{eq:linSys} ist ein \emph{lineares Gleichungssystem}. In den Gleichungen werden die Unbekannten nur mit Zahlen multipliziert. Gleichungssystem \ref{eq:nonlinSys} ist nichtlinear, denn hier werden die zwei Unbekannten miteinander mulitpliziert.
-	\begin{definition}[LGS: Lineares Gleichungssystem]
-		Ein \emph{lineares Gleichungssystem} besteht ausschliesslich aus linearen Gleichungen, d.h. die Unbekannten werden nur mit Zahlen multipliziert.
-	\end{definition}
-	\begin{aufgabe}
-		Welches der folgenden Gleichungssysteme ist linear, welches nichtlinear?
-		\begin{enumerate}[label=\alph*)]\begin{multicols}{2}
-				\item \systeme{3x-2y=(-1)^2,x+y=4}
-				\item \systeme{(y-1)^2+x =7 x - y+y^2, \frac{x}{2}+\frac{y}{4}= -1}
-		\end{multicols}\end{enumerate}
-	\end{aufgabe}
-
-\subsection{Auf lineare zurückführbare Gleichungen}
-	Einige Gleichungen lassen sich durch Ausmultiplizieren auf lineare Gleichungen zurück-führen. Andere nichtlineare Gleichungen lassen sich durch eine geeignete Substitution (d.h. Ersetzen eines Ausdrucks durch einen neuen) auf lineare Gleichungen zurückführen. So können sie mit den bekannten Mitteln aufgelöst werden. Anschliessend muss die Substitution rückgängig gemacht werden.
-
-	Wir betrachten zu beiden Vorgehen je zwei Beispiele:
-\subsection*{Lösen durch Multiplikation}
+	Wie wir beim Eisetzungsverfahren gesehen haben, eignet sich dieses vor allem für kompliziertere, \textbf{nicht-lineare} Gleichungssysteme. Jedoch haben wir noch nicht diskutiert, wie ein solches Gleichungssystem aussehen wird. Deshalb starten wir hier mit einem Beispiel.
 	\begin{beispiel}
-		\begin{align*}
-			\frac{2x+5}{8x+y}&=\frac{1}{2}\\
-			\frac{5x-2y}{5x+2y}&=\frac{19}{11}
-		\end{align*}\vspace{3cm}
-		\begin{align*}
-			\frac{1}{x}+\frac{1}{y}&=\frac{1}{xy}\\
-			\frac{1}{x}-\frac{1}{y}&=\frac{2}{xy}
-		\end{align*}\vspace{4cm}
+		\[\left\{
+		\begin{matrix}
+			x^2+y^2=25\\
+			2x-y=5
+		\end{matrix}\right.\]
+		Eine Bemerkung, die aber für die Lösung nicht wichtig ist: Man kann auch dieses Gleichungssystem geometrisch interpretieren, nämlich als Aufgabe, die Schnittpunkte eines Kreises und einer Geraden zu berechnen. Denn wenn $x,y$ die Koordinaten eines Punktes sind, dann besagt die erste Gleichung: Der Punkt hat den Abstand  $\sqrt{x^2+y^2}=5$  vom Nullpunkt (Pythagoras!), er liegt also auf einem Kreis mit Radius $5$ um den Nullpunkt. Die zweite Gleichung ist linear und besagt daher: Der Punkt liegt auf einer Geraden.\vspace*{11pt}\newline
+		Um das Gleichungssystem zu lösen, löst man die einfachere, hier die zweite, lineare Gleichung etwa nach $y$ auf:\[\gap{6}\] und setzt für $y$ den Ausdruck in die andere Gleichung ein:\vspace*{5pt}\newline\karos{6.5}
+		Dies ist eine nichtlineare, quadratische Gleichung, die durch eine Faktorzerlegung gelöst werden kann (x ausklammern):\vspace*{5pt}\newline\karos{3.5}
+		Graphisch gesehen sind das die Koordinaten der Schnittpunkte der Geraden $y=2x-5$ mit dem Kreis $x^2+y^2=25$. Gerne könnt ihr das individuell im Geogebra überprüfen.
 	\end{beispiel}
 	\begin{aufgabe}
-		Blablabla
-		\vspace{2cm}
-	\end{aufgabe}
-\subsection*{Substitution}
-	\begin{align*}
-		\frac{1}{x}+\frac{1}{y}&=7\\
-		\frac{1}{x}-\frac{1}{y}&=1
-	\end{align*}\vspace{3cm}
-	\begin{align*}
-		\frac{5}{x+y}-\frac{3}{x-y}&=4\\
-		\frac{2}{x+y}+\frac{6}{x-y}&=4
-	\end{align*}\vspace{5cm}
-	\begin{aufgabe}
-		Blablabla
-		\vspace{2cm}
+		Welche der folgenden Gleichungssysteme sind linear, welche nicht-linear? Löse im Anschluss alle Gleichungssysteme.
+		\begin{enumcols}[3]
+				\item $\systeme{3x-2y=(-1)^2,x+y=4}$
+				\item $\systeme{(y-1)^2+x =7 x - y+y^2, \frac{1}{2}x+\frac{1}{4}y= -1}$
+				\item $\systeme{x^2-y=3,-4x+4y=3}$
+		\end{enumcols}
 	\end{aufgabe}
 	\newpage
-
-\section{Das Gauss-Verfahren}
-
-	\newpage
-
 
 
 \section{Textaufgaben}
+	Textaufgaben lassen sich vielfach mit Hilfe von Gleichungssystemen lösen. Dabei ist das Lösen des Systems nur ein Aspekt; fast noch wichtiger ist das Übersetzen des \flqq realen Sachverhalts\frqq\: in die Sprache der Mathematik. Grundsätzlich gilt es beim Lösen der Textaufgaben folgendes zu beachten:
+	\begin{enumerate}
+		\item Formalisierung = Variablen für die gesuchten Grössen einführen
+		\item Aufstellen der Gleichungen
+		\item Lösen des Gleichungssystems
+		\item Antwortsatz
+	\end{enumerate}
+	\begin{beispiel}
+		Sina ist eine begeisterte Joggerin. Jeden Morgen läuft sie entweder $6 km$ durch den Wald oder $5 km$ an der Strasse entlang. So legt sie in $18$ Tagen insgesamt $100 km$ zurück. Wie oft lief sie im Wald und wie oft an der Strasse?
+		\begin{enumerate}
+			\item \textbf{Variablen einführen}
+		\end{enumerate}
+		\karos{2.5}
+		\begin{enumerate}
+			\setcounter{enumi}{1}
+			\item \textbf{Aufstellen der Gleichungen}
+		\end{enumerate}
+		\karos{3.5}
+		\begin{enumerate}
+			\setcounter{enumi}{2}
+			\item \textbf{Lösen des Gleichungssystems}
+		\end{enumerate}
+		\karos{3.5}
+		\begin{enumerate}
+			\setcounter{enumi}{3}
+			\item \textbf{Antwortsatz}
+		\end{enumerate}
+		\karos{2.5}
+	\end{beispiel}
+	\begin{aufgabe}
+		\begin{enumerate}[label=\alph*)]
+			\item Vergrössert man den Zähler eines Bruchs um $1$, so erhält der Bruch den Wert $0.8$; den Wert $0.75$ erhält er, wenn man stattdessen den Nenner um $1$ vergrössert. Von welchem Bruch ist die Rede?
+			\item Herr Muster ist derzeit neunmal so alt wie sein Sohn Merlin. In sieben Jahren wird das Alter des Vaters um vier Jahre höher als das Dreifache Alter seines Sohnes sein. Wie alt sind Vater und Sohn heute?
+			\item Pascal ist ein aufstrebender Triathlet. Insgesamt schwimmt und rennt er jede Woche $67.2 km$ weit. Dabei rennt er 15-mal so weit wie er schwimmt. Wie viele km legt Pascal wöchentlich schwimmend, bzw. rennend zurück?
+			\item Addiert man zu Zähler und Nenner eines Bruchs je $3$, so erhält der Bruch den Wert $0.3$. Subtrahiert man stattdessen vom Zähler und Nenner je $2$, so erhält er den Wert $0.2$. Welches war der ursprüngliche Zähler, welches der ursprüngliche Nenner?
+			\item Vor fünf Jahren war der Vater $5-$mal so alt, wie der Sohn damals war. In drei Jahren wird er $3-$mal so alt sein, wie der Sohn dann sein wird. Wie alt sind beide heute?
+			\item Eine zweistellige natürliche Zahl ist viermal so gross wie ihre Quersumme und um $9$ kleiner als ihre Spiegelzahl. Bestimmen Sie diese zweistellige natürliche Zahl.
+			\item Bob hat seine Partnerin Alice mit einem unangebrachten Witz verärgert. Nun möchte er Alice Pralinen kaufen, um sich mit ihr zu versöhnen. Eine Pralinensorte kostet $14.40$ CHF. pro $250 g$, die andere kostet $18.40$ CHF pro $250 g$. Er kauft eine $250 g$ – Box, welche $17.00$ CHF
+			kostet. Wie viel Gramm jeder Sorte ist darin enthalten?
+			\item Von zwei Eisenbahnstationen, deren Entfernung $d$ Meter beträgt, fahren gleichzeitig zwei Züge $A,B$ ab. Jeder fährt mit konstanter Geschwindigkeit. Fahren sie einander entgegen, so treﬀen sie sich nach $4$ Minuten, fahren sie in dieselbe Richtung, so erst nach $20$ Minuten ($A$ ist
+			der schnellere Zug). Bestimme die Geschwindigkeit $v_A$ und $v_B$ der Züge.
+		\end{enumerate}
+	\end{aufgabe}
 
-
-\subsection{Mischaufgaben}
+\subsection{Vertiefung Mischaufgaben}
 	Zum Abschluss des Kapitels zu Linearen Gleichungssystemen betrachten wir Textaufgaben.\\
 	Im Skript wollen wir einen speziellen Aufgabentyp von Textaufgaben etwas genauer betrachten. Bei Mischaufgaben werden zwei Objekte (z.B. Flüssigkeiten, Metalle...)  mit unterschiedlicher Eigenschaft (z.B. Salzgehalt, Goldgehalt, Alkoholgehalt, Dichte...) miteinander vermischt.
 	\\
@@ -464,6 +543,11 @@
 			\item Verbinde die Grössen mit Gleichungen. D.h. schreibe vorkommende Grössen auf zwei unterschiedliche Arten auf.
 		\end{itemize}
 	\end{framed}
+	\newpage
+
+
+\section{Das Gauss-Verfahren}
+
 	\newpage
 
 
@@ -729,6 +813,40 @@
 	\subsubsection*{Anwendungsbeispiel: Bestimmen einer Funktionsgleichung}
 	Wir möchten zu zwei gegebenen Punkten die Funktionsgleichung der linearen Funktion bestimmen, welche durch die Punkte verläuft.\\
 	Betrachten wir das Beispiel mit den gegebenen Punkten $(1/4)$ und $(3/-2)$:\vspace{3.5cm}
+	\newpage
+
+\subsection*{Auf lineare zurückführbare Gleichungen}
+	Einige Gleichungen lassen sich durch Ausmultiplizieren auf lineare Gleichungen zurück-führen. Andere nichtlineare Gleichungen lassen sich durch eine geeignete Substitution (d.h. Ersetzen eines Ausdrucks durch einen neuen) auf lineare Gleichungen zurückführen. So können sie mit den bekannten Mitteln aufgelöst werden. Anschliessend muss die Substitution rückgängig gemacht werden.
+
+	Wir betrachten zu beiden Vorgehen je zwei Beispiele:
+	\subsection*{Lösen durch Multiplikation}
+	\begin{beispiel}
+		\begin{align*}
+			\frac{2x+5}{8x+y}&=\frac{1}{2}\\
+			\frac{5x-2y}{5x+2y}&=\frac{19}{11}
+		\end{align*}\vspace{3cm}
+		\begin{align*}
+			\frac{1}{x}+\frac{1}{y}&=\frac{1}{xy}\\
+			\frac{1}{x}-\frac{1}{y}&=\frac{2}{xy}
+		\end{align*}\vspace{4cm}
+	\end{beispiel}
+	\begin{aufgabe}
+		Blablabla
+		\vspace{2cm}
+	\end{aufgabe}
+	\subsection*{Substitution}
+	\begin{align*}
+		\frac{1}{x}+\frac{1}{y}&=7\\
+		\frac{1}{x}-\frac{1}{y}&=1
+	\end{align*}\vspace{3cm}
+	\begin{align*}
+		\frac{5}{x+y}-\frac{3}{x-y}&=4\\
+		\frac{2}{x+y}+\frac{6}{x-y}&=4
+	\end{align*}\vspace{5cm}
+	\begin{aufgabe}
+		Blablabla
+		\vspace{2cm}
+	\end{aufgabe}
 	\newpage
 
 \end{document}
