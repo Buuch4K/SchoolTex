@@ -1,0 +1,27 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{backgrounds}
+
+\begin{document}
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+		>=latex,   %Voreinstellung für Pfeilspitzen
+		font= \footnotesize, scale=1.4]
+		\begin{scope}[on background layer]
+			\fill[white] (-2.5,-2.5) rectangle (8,2.5);
+		\end{scope}
+		%Raster zeichnen
+		\draw [color=gray!50]  [step=10mm] (-1.8,-1.8) grid (7.3,1.8);
+		% Achsen zeichnen
+		\draw[->,thick] (-2,0) -- (7.5,0) node[right, below] {\normalsize $x$};
+		\draw[->,thick] (0,-2) -- (0,2) node[above, left] {\normalsize $y$};
+		% Achsen beschriften
+		\foreach \x in {-1,1,2,...,7} \draw (\x,-.05) -- (\x,.05) node[below=4pt] {$\x$};
+		\foreach \y in {-1,1} \draw (-.05,\y) -- (.05,\y) node[left=4pt] {$\y$};
+		% Besserer Ursprung
+		\draw[color=black] (0pt,-7pt) node[right] {$0$};
+		%Funktionen zeichnen:
+		\clip(-1.8,-1.8) rectangle (7.3,1.8); %Bildbereich
+		%Beschriftung
+		%\node[blue]  at (11,5) {\normalsize$f$};
+	\end{tikzpicture}
+\end{document}
