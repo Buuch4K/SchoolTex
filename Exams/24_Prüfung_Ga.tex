@@ -7,7 +7,7 @@
 \newcommand{\theme}{Lineare Funktionen}
 \newcommand{\teacher}{Jonas Guler}
 \newcommand{\class}{2Ga}
-\renewcommand{\date}{06.09.25}
+\renewcommand{\date}{12.09.25}
 \graphicspath{{Algebra/data-algebra/}} % Setzt den Pfad zu den Bilder fest
 %=========================================================
 \begin{document}
@@ -40,7 +40,7 @@
 
 \vspace{10cm}
 \begin{center}
-    %\Huge{Repetitionsprüfung}
+    \Huge{Repetitionsprüfung}
 \end{center}
 
 \newpage
@@ -75,47 +75,93 @@ Entscheide in der Tabelle unten, ob die Aussagen wahr oder falsch sind. Die Antw
 %---------------------------------------------------------
 \newpage
 \noaddpoints
-\question[\totalpoints] %KS Willisau A8
+\question[\totalpoints] %DMKA910 - S59 A21
 \addpoints
+Sind die folgenden Aussagen richtig oder falsch? Begründe deine Antwort.
 \begin{parts}
-	\part[4] Eine lineare Funktion geht durch die Punkte $P(-1\:|\:-2)$ und $Q(-3\:|\:1)$. Bestimme die Funktionsgleichung.
-	\part[2] Berechne die Stelle auf der $x-$Achse, in der der Graph der Funktion die Achse schneidet.
+	\part[2] Der Abstand von zwei parallelen Geraden ist der Unterschied der beiden y-Achsenabschnitte.
 \end{parts}
-\vspace{7pt}\antwort{21.5}
+\vspace*{5pt}\antwort{6.5}
+\begin{parts}
+	\setcounter{partno}{1}
+	\part[2] Die Steigung $m=-\frac{9}{27}$ gehört zu einer Gerade, die auf drei Einheiten in x-Richtung eine Einheit in y-Richtung fällt.
+\end{parts}
+\vspace*{5pt}\antwort{6.5}
+\begin{parts}
+	\setcounter{partno}{2}
+	\part[2] Jede Gerade durch zwei Punkte ist der Graph einer linearen Funktion.
+\end{parts}
+\vspace*{5pt}\antwort{6.5}
 
 
 %---------------------------------------------------------
 \newpage
+\question[2]
+Berechne die Funktionsgleichung einer linearen Funktion, die durch die beiden Punkte $P(-3\:|\:-1)$ und $Q(4\:|\:-2)$ verläuft.
+\vspace*{7pt}\antwort{4.5}
+\vfill
 \noaddpoints
-\question[\totalpoints] %Barth Band 1 KapTest A10ac
+\question[\totalpoints] %Funktiongleichung finden
 \addpoints
-Die Abbildung zeigt die Graphen von drei linearen Funktionen $f$, $g$ und $h$. Die Koordinaten der markierten Punkte sind ganzzahlig.
+\begin{parts}
+	\part[3] Gesucht ist die Funktionsgleichung der linearen Funktion $f$, die durch den Punkte $P(-2\:|\:1)$ verläuft und Steigung $m=-0.45$ hat.
+\end{parts}
+\vspace*{7pt}\antwort{5.5}
+\begin{parts}
+	\setcounter{partno}{1}
+	\part[2] Zeichne die Funktion $f$ ins Koordinatengitter rechts ein.
+\end{parts}
 \begin{figure}[H]
 	\centering
-	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
-		>=latex,   %Voreinstellung für Pfeilspitzen
-		font=\footnotesize, scale=0.8]
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,	>=latex,   %Voreinstellung für Pfeilspitzen
+		font=\footnotesize, scale=0.9]
 		%Raster zeichnen
-		\draw [color=gray!50]  [step=10mm] (-5.3,-3.3) grid (5.3,5.3);
+		\draw [color=gray!50]  [step=10mm] (-4.3,-4.3) grid (4.3,4.3);
 		% Achsen zeichnen
-		\draw[->,thick] (-5.5,0) -- (5.8,0) node[left, below] {\normalsize $x$};
-		\draw[->,thick] (0,-4.5) -- (0,5.8) node[above, left=4pt] {\normalsize $y$};
+		\draw[->,thick] (-4.3,0) -- (4.8,0) node[left, below] {\normalsize $x$};
+		\draw[->,thick] (0,-4.3) -- (0,4.8) node[above, left=4pt] {\normalsize $y$};
 		% Achsen beschriften
-		\foreach \x in {-5,...,-2,-1,1,2,...,5} \draw (\x,-.1) -- (\x,.1) node[right=3pt,below=7pt] {$\x$};
-		\foreach \y in {-3,...,-2,-1,1,2,...,5} \draw (-.1,\y) -- (.1,\y) node[left=7pt] {$\y$};
+		\foreach \x in {-4,...,-2,-1,1,2,...,4} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+		\foreach \y in {-4,...,-2,-1,1,2,...,4} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
 		% Besserer Ursprung
 		\draw[color=black] (0pt,-7pt) node[left] {$0$};
 		%Funktionen zeichnen:
-		\clip(-6.3,-3.3) rectangle (5.3,5.3); %Bildbereich
-		\draw[red,thick,domain=-6.3:5.3,samples=200] plot (\x, {-3/4*(\x)+1.5});
-		\draw[forestgreen,thick,domain=-6.3:5.3,samples=200] plot (\x, {2/3*(\x)+1});
-		\draw[plotblue,thick,domain=-6.3:5.3,samples=200] plot (\x, {-2});
+		\clip(-4.3,-4.3) rectangle (4.3,4.3); %Bildbereich
 		%Beschriftung
-		\node[red]  at (-3.2,4.5) {\normalsize$f$};
+		%\node[forestgreen]  at (3.2,1) {\normalsize$g$};
+	\end{tikzpicture}
+\end{figure}
+
+
+%---------------------------------------------------------
+\newpage
+\question[8]
+Die Abbildung zeigt die Graphen von drei linearen Funktionen $f$, $g$ und $h$. Die Koordinaten der markierten Punkte sind ganzzahlig. Berechne die Fläche des Dreiecks, das von diesen drei linearen Funktionen begrenzt wird.
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,>=latex,   %Voreinstellung für Pfeilspitzen
+		font=\footnotesize, scale=0.9]
+		%Raster zeichnen
+		\draw [color=gray!50]  [step=10mm] (-6.3,-3.3) grid (4.3,5.3);
+		% Achsen zeichnen
+		\draw[->,thick] (-6.5,0) -- (4.8,0) node[left, below] {\normalsize $x$};
+		\draw[->,thick] (0,-3.5) -- (0,5.8) node[above, left=4pt] {\normalsize $y$};
+		% Achsen beschriften
+		\foreach \x in {-6,...,-2,-1,1,2,...,4} \draw (\x,-.1) -- (\x,.1) node[right=3pt,below=7pt] {$\x$};
+		\foreach \y in {-3,-2,-1,1,2,...,5} \draw (-.1,\y) -- (.1,\y) node[left=7pt] {$\y$};
+		% Besserer Ursprung
+		\draw[color=black] (0pt,-7pt) node[left] {$0$};
+		%Funktionen zeichnen:
+		\clip(-6.3,-3.3) rectangle (4.3,5.3); %Bildbereich
+		\draw[red,thick,domain=-6.3:4.3,samples=200] plot (\x, {-5/2*(\x)+5});
+		\draw[forestgreen,thick,domain=-6.3:4.3,samples=200] plot (\x, {2/3*(\x)+1});
+		\draw[plotblue,thick,domain=-6.3:4.3,samples=200] plot (\x, {-2});
+		%Beschriftung
+		\node[red]  at (0.7,4.2) {\normalsize$f$};
 		\node[forestgreen]  at (-1.2,0.8) {\normalsize$g$};
 		\node[plotblue]  at (3.2,-1.8) {\normalsize$h$};
 		%Punkte
-		\draw[fill=red] (-2,3) circle (2.5pt);
+		\draw[fill=red] (0,5) circle (2.5pt);
 		\draw[fill=red] (2,0) circle (2.5pt);
 		\draw[fill=forestgreen] (3,3) circle (2.5pt);
 		\draw[fill=forestgreen] (-3,-1) circle (2.5pt);
@@ -123,35 +169,31 @@ Die Abbildung zeigt die Graphen von drei linearen Funktionen $f$, $g$ und $h$. D
 		\draw[fill=plotblue] (1,-2) circle (2.5pt);
 	\end{tikzpicture}
 \end{figure}
-\begin{parts}
-	\part[3] Welche Steigungen haben die drei Geraden?
-	\part[4] Berechne den Schnittpunkt von $f$ und $g$.
-\end{parts}
-\vspace*{7pt}\antwort{12.5}
+\vspace{5pt}\antwort{13.5}
 
-%---------------------------------------------------------
-\newpage
-\question[2] %KS Willisau A5
-Liegen die Punkte $P(2\:|\:-5)$ und $Q(-2\:|\:6)$ auf der Geraden $g:y=-3x+1$?
-\vspace*{7pt}\antwort{8.5}
-\question[4] %KS Willisau A9
-Eine Gerade $g$ verläuft durch den Punkt $P(-2\:|\:3)$ und besitzt den $y-$ Achsenabschnitt $q=\frac{9}{2}$. Wie lautet die Funktionsgleichung der Gerade?
-\vspace*{7pt}\antwort{12.5}
 
 %---------------------------------------------------------
 \newpage
 \noaddpoints
-\question[\totalpoints] %Anwendung mit Schnittpunkt DMKA910 - S58 A20
+\question[\totalpoints]
 \addpoints
-In einer Mathematikprüfung mit total $24$ Punkten ergeben $0$ Punkte die Note $1$ und $20$ Punkte die Note $6$. Es gibt nur ganze und halbe Punkte. Die Notenskala ist linear.
+Aus einem tropfenden Wasserhahn fällt alle $1.5$ Sekunden ein Tropfen in einen Messbecher. Momentan (zur Zeit $t=0$) sind darin $90$ ml enthalten.\newline ($20$ Tropfen $\hat{=}\:1$ ml)
 \begin{parts}
-	\part[3] Gib die Gleichung der Funktion an die jeder Punktzahl $P$ eine Note $N$ zuordnet.
-	\part[1] Welche Note erhält Alice für $15$ erreichte Punkte?
-	\part[1] Welche Punktzahl benötigt Leon mindestens, um eine Note $4$ zu erreichen?
-	\part[2] Am gleichen Tag schrieb die Klasse ein Deutschdiktat. Dabei wird pro zwei Fehler eine halbe Note abgezogen.  Mit zwei Fehlern bekommt man immer noch die Note $6$. Stelle eine zweite Funktionsgleichung auf, die jeder Anzahl Fehler die Note zuordnet.
-	\part[2] Wie viele Fehler dürfen im Diktat gemacht werden und wie viele Punkte müssen in der Mathematikprüfung erreicht werden, um in beiden Prüfungen die exakt gleiche Note zu erhalten?
+	\part[2] Fülle die Lücken dieser Wertetabelle aus.
+	\begingroup
+	\renewcommand{\arraystretch}{1.5}
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|c|p{12mm}|p{12mm}|p{12mm}|p{12mm}|p{12mm}|}\hline
+			Vergangene Zeit $t$ in Minuten & $0$ &  &  & $4$ & $80$ \\\hline
+			Wassermenge $f(t)$ im Becher in ml & $90$ & $180$ & $330$ & & \\\hline
+		\end{tabular}
+	\end{table}
+	\endgroup
+	\part[3] Gib die Funktionsgleichung an, mit der die Wassermenge aus der Zeit berechnet werden kann.
+	\part[2] Wie lange dauert es, bis einen Liter Wasser im Messbecher ist?
 \end{parts}
-\vspace*{7pt}\antwort{14.5}
+\vspace*{7pt}\antwort{17.5}
 
 
 %---------------------------------------------------------
