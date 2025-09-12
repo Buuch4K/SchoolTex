@@ -4,10 +4,11 @@
 \input{../Header/mathexpressions.sty}
 \input{../Header/headerExam.sty}
 %=========================================================
-\newcommand{\theme}{Trigonometrie}
+\newcommand{\theme}{Wachstum \& Zerfall}
 \newcommand{\teacher}{Jonas Guler}
 \newcommand{\class}{2NaPa}
-\renewcommand{\date}{30.04.25}
+\renewcommand{\date}{17.09.25}
+\graphicspath{{Algebra/data-algebra/}} % Setzt den Pfad zu den Bilder fest
 %=========================================================
 \begin{document}
 \fontsize{13}{13}\selectfont
@@ -39,7 +40,7 @@
 
 \vspace{11cm}
 \begin{center}
-    \Huge{Repetitionsprüfung}
+    %\Huge{Repetitionsprüfung}
 \end{center}
 
 \newpage
@@ -47,164 +48,129 @@
 %=========================================================
 %------------------------TESTFRAGEN
 %=========================================================
-\question[6] %Rhyn S2 A10f
-\begin{minipage}{0.6\linewidth}
-	Berechne alle fehlenden Seiten und Winkel, wenn
-	\[h_c=9.1\quad\text{ und }\quad p=6\]
-	gegeben sind.
-\end{minipage}
-\hfill
-\begin{minipage}{0.35\linewidth}
-	\centering\includegraphics[scale=0.6]{Trigonometrie/data-trigo/Dreieck-Trigo.png}
-\end{minipage}
+\question[2]
+Beschreibe in eigenen Worten, unter welcher Bedingung eine Funktion der Form $f(x)=b\*a^x$ wachsend bzw. fallend ist. Veranschauliche deine Aussage anhand zwei geeigneter Beispiele.
 \vspace{5pt}
 \antwort{9}
 \vfill
-\question[3]
+\question[2]
 Entscheide, ob die Aussagen in der Tabelle unten wahr oder falsch sind. Die Antworten müssen nicht begründet werden.\newline
 \begin{small}
-	Bewertung: Für $0-2$ richtige Antworten gibt es keine Punkte, $3$ richtige Antworten geben $1.5$ Punkte und falls alle Antworten richtig sind $3$ Punkte.
+	Bewertung: Für $0-2$ richtige Antworten gibt es keine Punkte, $3$ richtige Antworten geben $1$ Punkte und falls alle Antworten richtig sind $2$ Punkte.
 \end{small}
 \begingroup
 \renewcommand{\arraystretch}{1.5}
-\begin{table}[ht]
+\begin{table}[H]
 	\centering
-	\begin{tabular}{|l|c|c|}\hline
+	\begin{tabular}{|p{12cm}|c|c|}\hline
 		& wahr & falsch\\\hline
-		$\sin{\alpha}=\sin{\pi-\alpha}$ & & \\\hline
-		$\cos{\pi-\beta}=\cos{\pi+\beta}$ & & \\\hline
-		$\tan{\alpha}>0$ für $90^\circ<\alpha<180^\circ$ & & \\\hline
-		In einem Dreieck mit $\gamma=90^\circ$ gilt: $\sin{\alpha}=\cos{90^\circ-\alpha}$ & & \\\hline
+		Wenn eine Grösse jährlich um $7\%$ wächst, dann wächst sie in zwei Jahren um exakt 14\%. & & \\\hline
+		Eine Funktion $f(t)=200\*1.7^t$ beschreibt einen exponentiellen Prozess, bei dem eine Grösse pro Zeiteinheit um $170\%$ zunimmt. & & \\\hline
+		Eine Funktion $f(t)=200\*0.55^t$ beschreibt einen exponentiellen Prozess, bei dem eine Grösse pro Zeiteinheit um $55\%$ abnimmt. & & \\\hline
+		Eine Funktion $f(t)=200\*\left(\frac{1}{\sqrt{2}}\right)^t$ beschreibt einen exponentiellen Prozess, bei dem sich eine Grösse alle zwei Jahre halbiert. & & \\\hline
 	\end{tabular}
 \end{table}
 \endgroup
-\antwort{5}
+\antwort{3.5}
 
 
+
+%---------------------------------------------------------
+\newpage
+\question[3]
+Im folgenden sind drei Wertetabellen gegeben. Entscheide für jede Wertetabelle, ob es sich um eine Exponentialfunktion handelt. Wenn ja, gib die Funktionsgleichung an.
+\begin{parcols}[3]
+	\part \
+	\begin{table}[H]
+		\begin{tabular}{|c|c|c|c|c|}\hline
+			$x$ & 1 & 2 & 3 & 4 \\\hline
+			$f(x)$ & 4 & 16 & 64 & 256 \\\hline
+		\end{tabular}
+	\end{table}
+	\part \
+	\begin{table}[H]
+		\begin{tabular}{|c|c|c|c|c|}\hline
+			$x$ & 1 & 2 & 3 & 4 \\\hline
+			$f(x)$ & -6 & 2 & 10 & 10 \\\hline
+		\end{tabular}
+	\end{table}
+	\part\
+	\begin{table}[H]
+		\begin{tabular}{|c|c|c|c|c|}\hline
+			$x$ & 1 & 2 & 3 & 4 \\\hline
+			$f(x)$ & 20 & 5 & $\frac{5}{4}$ & $\frac{5}{16}$ \\\hline
+		\end{tabular}
+	\end{table}
+\end{parcols}
+\vspace*{5pt}\antwort{7.5}
+\vfill
+\question[6]
+Ordne die Graphen den Funktionsgleichungen zu. Beachte eine Funktionsgleichung bleibt übrig.\\
+\begin{minipage}{0.45\linewidth}
+	\centering\includegraphics[scale=3]{expGraph.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\linewidth}
+	\begin{parts}
+		\part $f_1(x)=2\*0.5^x$
+		\part $f_2(x)=-3^x$
+		\part $f_3(x)=\left(\frac{2}{3}\right)^x$
+		\part $f_4(x)=\frac{1}{3}\*1.5^x$
+		\part $f_5(x)=0.2^x$
+		\part $f_6(x)=2\*2^x$
+		\part $f_7(x)=-2^x$
+	\end{parts}
+\end{minipage}
+\vspace*{5pt}\antwort{3}
+
+
+%---------------------------------------------------------
+\newpage
+\question[4] %Ss
+Faltet man ein Stück Papier im DIN Format mehrfach längs der Mittellinie, so liegen erst zwei, dann vier Schichten,... übereinander. Es wird dabei immer kleiner und dicker. Wie oft müsste das Blatt gefaltet werden, um einen Turm, der bis zum Mond reicht, zu erhalten?\\
+(Entfernung zum Mond: $384'000\:km$, Papierdicke: $0.1\:mm$)
+\vspace{5pt}\antwort{8.5}
+\vfill
+\noaddpoints
+\question[\totalpoints] %Ss
+\addpoints
+Eine Pilzkultur an einer Kellerwand wird in einem Beobachtungszeitraum von drei Monaten chemisch so behandelt, dass ihre Fläche jede Woche um $11\%$ abnimmt. Zu Beginn des Zeitraums bedeckt sie eine Fläche von $2.4\:m^2$.
+\begin{parts}
+	\part[2] Welche Fläche bedeckt sie am Ende des Beobachtungszeitraums?
+	\part[2] Wie viele Tage muss die Behandlung insgesamt dauern, dass die Pilzkultur höchstens noch eine Fläche von $0.1\:m^2$ bedeckt?
+\end{parts}
+\vspace*{5pt}\antwort{8.5}
 
 %---------------------------------------------------------
 \newpage
 \noaddpoints
-\question[\totalpoints] % Funktionsgraphen
+\question[\totalpoints]
 \addpoints
-\textbf{Beachte:} Lösungswege mit Hilfe des Taschenrechners gibt keine Punkte!
+Eine Computeranlage mit Neuwert $2'056'900.-$ CHF wird nach $6.5$ Jahren für $400'000.-$ CHF verkauft.
 \begin{parts}
-	\part[3] Zeichne den Winkel $\alpha=135^\circ$ im Einheitskreis ein und schätze den Sinus-, Cosinus- und Tangenswert von $\alpha$ an.
+	\part[2] Wie viel Prozent beträgt die mittlere jährliche Wertabnahme?
+	\part[3] Nach $20$ Jahren möchten neue Investoren die Anlage wieder auf den neusten Stand bringen. Wie viel Geld müssten investiert werden, um wieder auf den Neuwert zu gelangen?
 \end{parts}
-\vspace{5pt}
-\begin{figure}[ht]
-	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
-		>=latex,   %Voreinstellung für Pfeilspitzen
-		font= \footnotesize, scale=2.8]
-		%Raster zeichnen
-		\draw [color=gray!50]  [step=2mm] (-1,-1) grid (1,1);
-		% Achsen zeichnen
-		\draw[->,thick] (-1.1,0) -- (1.3,0) node[right, below] {\normalsize $x$};
-		\draw[->,thick] (0,-1.1) -- (0,1.3) node[above, left] {\normalsize $y$};
-		% Achsen beschriften
-		\foreach \x in {-1,1} \draw (\x,-.03) -- (\x,.03);
-		\foreach \y in {-1,1} \draw (-.03,\y) -- (.03,\y);
-		\draw[color=black] (1.05,-.1) node {$1$};
-		\draw[color=black] (-.05,1.1) node {$1$};
-		\draw[color=black] (-1.1,-.1) node {$-1$};
-		\draw[color=black] (-.1,-1.1) node {$-1$};
-		% Besserer Ursprung
-		\draw[color=black] (0pt,-3pt) node[right] {$0$};
-		% Funktionen zeichnen:
-		\clip(-1.1,-1.1) rectangle (1.1,1.1); %Bildbereich
-		\draw circle [radius=1];
-	\end{tikzpicture}
-\end{figure}
+\vspace*{5pt}\antwort{21.5}
+
+%---------------------------------------------------------
+\newpage
+\noaddpoints
+\question[\totalpoints] %NeueWege
+\addpoints
+Im Jahr $1950$ lebten $2.5$ Milliarden Menschen auf der Erde, $1980$ waren es dann $4.5$ Milliarden.
 \begin{parts}
-	\setcounter{partno}{1}
-	\part[2] Berechne alle Winkel $\beta$ zwischen $0^\circ$ und $360^\circ$ für welche gilt: \[\sin{\beta}=-0.65\]
+	\part[2] Stelle eine Wachstumsfunktion auf, die das Bevölkerungswachstum oben beschreibt.
+	\part[2] Bestimme die Verdoppelungszeit
+	\part[2] Vergleiche dein Resultat mit den Daten von $2005$ ($6.4$ Milliarden) und $1920$ ($1.8$ Milliarden). Was fällt dir auf?
+	\part[2] $2005$ prognostizierten Experten der Vereinten Nationen bis zum Jahr $2050$
+	einen Anstieg auf $9.1$ Milliarden. Wie lautet deine Prognose?
 \end{parts}
-\begin{figure}[ht]
-	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
-		>=latex,   %Voreinstellung für Pfeilspitzen
-		font= \footnotesize, scale=2.8]
-		%Raster zeichnen
-		\draw [color=gray!50]  [step=2mm] (-1,-1) grid (1,1);
-		% Achsen zeichnen
-		\draw[->,thick] (-1.1,0) -- (1.3,0) node[right, below] {\normalsize $x$};
-		\draw[->,thick] (0,-1.1) -- (0,1.3) node[above, left] {\normalsize $y$};
-		% Achsen beschriften
-		\foreach \x in {-1,1} \draw (\x,-.03) -- (\x,.03);
-		\foreach \y in {-1,1} \draw (-.03,\y) -- (.03,\y);
-		\draw[color=black] (1.05,-.1) node {$1$};
-		\draw[color=black] (-.05,1.1) node {$1$};
-		\draw[color=black] (-1.1,-.1) node {$-1$};
-		\draw[color=black] (-.1,-1.1) node {$-1$};
-		% Besserer Ursprung
-		\draw[color=black] (0pt,-3pt) node[right] {$0$};
-		% Funktionen zeichnen:
-		\clip(-1.1,-1.1) rectangle (1.1,1.1); %Bildbereich
-		\draw circle [radius=1];
-	\end{tikzpicture}
-\end{figure}
-
+\vspace*{5pt}\antwort{19.5}
 
 %---------------------------------------------------------
 \newpage
-\question[4] % GZP 14 A17
-Im rechtwinkligen Dreieck $ABC$ mit Hypothenuse $c$ sind die Seite $a=6$ und die Seitenhalbierende $s_a=13$ gegeben. Berechne die Höhe $h_c$.
-\vspace{5pt}
-\antwort{23}
-
-
-
-%---------------------------------------------------------
-\newpage
-\question[4] % GZP 14 A9
-Es gilt: \[\sin{\alpha}=\frac{4}{5}.\]
-Berechne
-\begin{parcols}[2]
-	\part $\cos{\alpha}$ \part $\tan{\alpha}$
-\end{parcols}
-ohne den Winkel $\alpha$ explizit zu berechnen.
-\vspace{7pt}
-\antwort{20}
-
-%---------------------------------------------------------
-\newpage
-\question[3] % Barth Band 2 Kap. 5.7 A1d
-Berechne die fehlenden Seitenlängen und Winkel im Dreieck $ABC$, wenn gilt: \[a=6,\quad b=5\quad\text{und}\quad \alpha=40^\circ.\]
-\antwort{10}
-\vfill
-\question[3] %Rhyn S9 A58
-Von einem Parallelogramm $ABCD$ sind die Seiten $a=83$ und $b=109$ sowie die Diagonale $f=\overline{BD}=42$ gegeben. Berechne alle $4$ Innenwinkel dieses Paralellogramms?
-\vspace{5pt}
-\antwort{10}
-
-%---------------------------------------------------------
-\newpage
-\question[4] % NW1 S188 A8
-Welche der untenstehenden Winkel haben den gleichen Cosinuswert?
-\[\frac{\pi}{2},\quad-270^\circ, \quad-120^\circ, \quad-90^\circ, \quad\frac{5\pi}{4}, \quad120^\circ, \quad135^\circ,\quad\frac{2\pi}{3}\]
-Begründe mit Hilfe des Einheitskreises und ohne Verwendung des Taschenrechners.
-\begin{figure}[H]
-	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
-		>=latex,   %Voreinstellung für Pfeilspitzen
-		font= \footnotesize, scale=2.8]
-		%Raster zeichnen
-		%\draw [color=gray!50]  [step=2mm] (-1,-1) grid (1,1);
-		% Achsen zeichnen
-		\draw[->,thick] (-1.1,0) -- (1.3,0) node[right, below] {\normalsize $x$};
-		\draw[->,thick] (0,-1.1) -- (0,1.3) node[above, left] {\normalsize $y$};
-		% Achsen beschriften
-		\foreach \x in {-1,1} \draw (\x,-.03) -- (\x,.03);
-		\foreach \y in {-1,1} \draw (-.03,\y) -- (.03,\y);
-		\draw[color=black] (1.05,-.1) node {$1$};
-		\draw[color=black] (-.05,1.1) node {$1$};
-		\draw[color=black] (-1.1,-.1) node {$-1$};
-		\draw[color=black] (-.1,-1.1) node {$-1$};
-		% Besserer Ursprung
-		\draw[color=black] (0pt,-3pt) node[right] {$0$};
-		% Funktionen zeichnen:
-		\clip(-1.1,-1.1) rectangle (1.1,1.1); %Bildbereich
-		\draw circle [radius=1];
-	\end{tikzpicture}
-\end{figure}
+{\bf Reserve:}\newline\antwort{24.5}
 
 
 \end{questions}
