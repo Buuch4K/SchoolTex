@@ -7,7 +7,7 @@
 
 \newcommand{\Skriptname}{Folgen und Reihen}
 \newcommand{\Autor}{Jonas Guler (Gu)}
-\newcommand{\version}{\textit{v}1.0}
+\newcommand{\version}{\textit{v}1.1}
 
 \begin{document}
 \begin{titlepage}
@@ -26,17 +26,22 @@
 	\begin{aufgabe}
 		In IQ-Test wird häufig eine Abfolge aus Zahlen präsentiert, mit der Aufgabe ein bestimmtes Muster oder die Formel zu erkennen, mit der die Abfolge gebildet wurde. Hier sind einige Beispiele solcher Abfolgen von Zahlen. Versuche, die Muster/Formel zu erraten.
 		\begin{enumcols}[2]
-			\item $3,9,5,15,11,33,\ldots$
-			\item $1,2,4,7,11,16,\ldots$
-			\item $15,9,27,20,60,52,\ldots$
-			\item $2,6,18,54,162,486,\ldots$
+			\item $3,9,5,15,11,33,\ldots$\vspace*{11pt}\newline
+			\item $1,2,4,7,11,16,\ldots$\vspace*{11pt}\newline
+			\item $15,9,27,20,60,52,\ldots$\vspace*{11pt}\newline
+			\item $2,6,18,54,162,486,\ldots$\vspace*{11pt}\newline
 		\end{enumcols}
-		\karos{4}
 		Sind solche Abfolgen von Zahlen, bzw. ihre Fortsetzung eindeutig? Findest du für eine der obigen Abfolgen eine zweite mögliche Formel?\vspace{5pt}\newline\karos{2}
 	\end{aufgabe}
 	Zahlenfolgen sind oftmals darum wichtig, weil mit ihnen Prognosen über die zukünftige Entwicklung eines untersuchten Prozesses gemacht werden kann. Hier eine Beispielaufgabe dazu.
 	\begin{aufgabe}
-		neue Einsteigsaufgabe...
+		Eine Person muss heute früh ein einziges Mal eine Tablette einnehmen. Dabei wird dem Körper $100$mg eines Wirkstoffes zugeführt, wobei dieser innerhalb von $24$ Stunden zu $60\%$ vom Körper wieder abgebaut wird. Wir bezeichnen mit $a_n$ die Wirkstoffmenge in mg im Körper am Tag $n$ nach Beginn der Einnahme.\newline
+		Am Tag $1$ werden dem Körper also $100$mg zugeführt: $a_1=100$. (Auf die Einheit wird bewusst verzichtet, da es immer die gleiche ist.) Am zweiten Tag sind vom Körper $60\%$ der ersten Dosis abgebaut, das bedeutet: $a_2=0.4\*100=40.$
+		\begin{enumerate}[label=\alph*)]
+			\item Versuche, die Dosis der nächsten Tage $a_3, a_4$ und $a_5$ zu berechnen.
+			\item Finde eine allgemeine Berechnungsformel für den Tag $n$.
+		\end{enumerate}
+		\karos{5.5}
 	\end{aufgabe}
 
 	Ihr kennt das Wort \glqq Folge\grqq\:vermutlich ausschliesslich als Bestandteil einer Serie auf Netflix. In diesem Abschnitt lernen wir ihm aber als mathematischen Fachbegriff kennen. Dazu werden wir ihn zuerst eindeutig definieren und danach die Bedeutungen und Auswirkungen dieses Konzepts genauer untersuchen.\newline
@@ -48,6 +53,8 @@
 	Wir betrachten die folgenden Funktionen:\newline
 	\begin{minipage}{0.47\linewidth}
 		\[a:y=-x,\qquad x\in\left\{1,2,3,\ldots\right\}\]
+		\begingroup
+		\renewcommand{\arraystretch}{1.5}
 		\begin{table}[H]
 			\centering
 			\begin{tabular}{c|p{6mm}|p{6mm}|p{6mm}|p{6mm}|p{6mm}|p{6mm}}
@@ -55,7 +62,10 @@
 				$f(x)$ & & & & & &
 			\end{tabular}
 		\end{table}
+		\endgroup
 		\[b:y=\frac{6}{x+1},\qquad x\in\left\{1,2,3,\ldots\right\}\]
+		\begingroup
+		\renewcommand{\arraystretch}{1.5}
 		\begin{table}[H]
 			\centering
 			\begin{tabular}{c|p{6mm}|p{6mm}|p{6mm}|p{6mm}|p{6mm}|p{6mm}}
@@ -63,13 +73,14 @@
 				$g(x)$ & & & & & &
 			\end{tabular}
 		\end{table}
+		\endgroup
 	\end{minipage}
 	\hfill
 	\begin{minipage}{0.47\linewidth}
 		\centering
 		\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=1cm, y=1cm,
 			>=latex,   %Voreinstellung für Pfeilspitzen
-			font= \footnotesize, scale=0.8]
+			font= \footnotesize, scale=0.9]
 			%Raster zeichnen
 			\draw [color=gray!50]  [step=10mm] (-0.3,-1.3) grid (6.3,4.3);
 			% Achsen zeichnen
@@ -103,7 +114,7 @@
 		\begin{enumcols}[5]
 			\item $a_1=$ \item $a_2=$ \item $a_3=$ \item $a_4=$ \item $a_5=$
 		\end{enumcols}
-		Finde eine explizite Formel für die Beschreibung der Folge: $a_1=1, a_2=0, a_3=1, a_4=4, a_5=9$.\vspace{5pt}\newline\karos{1.5}
+		Finde eine explizite Formel für die Beschreibung der Folge: $a_1=1, a_2=0, a_3=1, a_4=4, a_5=9$.\vspace{5pt}\newline\karos{3.5}
 	\end{beispiel}\newpage
 	Im Unterschied dazu die rekursive Beschreibung.
 	\begin{notation}[rekursive Folge]
@@ -115,7 +126,7 @@
 		\begin{enumcols}[5]
 			\item $a_1=$ \item $a_2=$ \item $a_3=$ \item $a_4=$ \item $a_5=$
 		\end{enumcols}
-		Finde eine rekursive Beschreibung der Folge: $a_1=3,a_2=5, a_3=8, a_4=12, a_5=17$.\vspace{5pt}\newline\karos{1.5}
+		Finde eine rekursive Beschreibung der Folge: $a_1=3,a_2=5, a_3=8, a_4=12, a_5=17$.\vspace{5pt}\newline\karos{2.5}
 	\end{beispiel}
 	\begin{aufgabe} %DMK Ana S2 A3bcfgh,4acd,5,6,8,10,11ad
 		\begin{enumerate}
@@ -207,13 +218,13 @@
 	\vspace{7pt}
 	\begin{aufgabe}
 		In der Informatik erhalten wir das unterstehende Python-Code-Segment. Was genau leistet dieses Programm? Beschriebe es mit der Kenntnis über die Folgen und Reihen.
-		\begin{verbatim}
+		\begin{lstlisting}
 			n=100
 			s=0
 			for i in range(1,n):
-			s=s+i
+				s=s+i
 			print s
-		\end{verbatim}
+		\end{lstlisting}
 	\end{aufgabe}
 	Zur Abkürzung dieser lästigen Summen oder eines Produkts wurde ein neues Zeichen eingeführt. Dabei benutzt man das Summenzeichen $\displaystyle\sum$ und das Produktzeichen $\displaystyle\prod$.
 	\begin{beispiel}
@@ -298,6 +309,8 @@
 	\begin{definition}[Arithmetische Folge]
 		Eine Folge $\left(a_n\right)_{n\in\N}$ heisst arithmetisch, wenn die Differenz $d$ zweier aufeinander folgender Glieder konstant ist. \[d=a_{n+1}-a_n \quad\text{ für alle }\:n\in\N.\]
 	\end{definition}
+	\begingroup
+	\renewcommand{\arraystretch}{1.5}
 	\begin{table}[H]
 		\vspace{24pt}
 		\centering
@@ -307,6 +320,7 @@
 		\end{tabular}
 		\vspace{24pt}
 	\end{table}
+	\endgroup
 	Die einzelnen Glieder einer arithmetischen Folge sind durch das Anfangsglied $a_1$ und die Differenz $d$ definiert.
 	\begin{satz}
 		Das allgemeine Glied $a_n$ einer arithmetischen Folge ist gegeben durch:
@@ -331,7 +345,7 @@
 		\end{enumerate}
 	\end{aufgabe}
 	\begin{definition}[arithmetische Reihe]
-		Die zu einer arithmetischen Folge gehörende Partialsummenfolge $s_n$ mit \[s_n=a_1+a_2+\ldots+a_n=\sum_{i=1}^n a_n\] heisst \textbf{arithmetische Reihe}.
+		Die zu einer arithmetischen Folge gehörende Partialsummenfolge $s_n$ mit \[s_n=a_1+a_2+\ldots+a_n=\sum_{i=1}^n a_i\] heisst \textbf{arithmetische Reihe}.
 	\end{definition}
 	Für die Partialsumme einer arithmetischen Reihe ergibt sich:\vspace{5pt}\newline\karos{7}
 	\begin{satz}
@@ -363,7 +377,7 @@
 			\end{enumcols}
 			\item Die Summe des ersten, dritten und fünften Gliedes einer arithmetischen Folge ist $33$. Das Produkt der ersten drei Glieder ist $231$. Berechne $a_1$ und die Differenz $d$ der arithmetischen Folge.
 			\item Sabrina erhält von ihren Eltern ein zinsloses Darlehen von $120'000$ CHF, das sie wie folgt in Raten zurückzahlen soll: Ende des ersten Jahres muss sie $6'000$ CHF zurückzahlen, danach jedes Jahr $500$ CHF mehr als im Vorjahr. Nach wie vielen Jahren hat Sabrina das Darlehen zurückbezahlt? Wie hoch ist die letzte Rate, die sie bezahlen muss? %DMK Ana S7 A39
-			\item Auf einem Bahngeleise mit gleichmässigem Gefälle kommt ein Güterwagen ins Rollen. In der ersten Sekunde legt er $0.3$m zurück, in der zweiten $0.9$m, in der dritten $1.5$m und auch in jeder weiteren Sekunde legt er $0.6$m mehr zurück als in der vorhergehenden. Welche Strecke wird der Güterwagen in den ersten $30$ Sekunden zurgelegt haben? Wie viele Sekunden benötigt der Güterwagen für die ersten $120$m? %DMK Ana S7 A40
+			\item Auf einem Bahngeleise mit gleichmässigem Gefälle kommt ein Güterwagen ins Rollen. In der ersten Sekunde legt er $0.3$m zurück, in der zweiten $0.9$m, in der dritten $1.5$m und auch in jeder weiteren Sekunde legt er $0.6$m mehr zurück als in der vorhergehenden. Welche Strecke wird der Güterwagen in den ersten $30$ Sekunden zurückgelegt haben? Wie viele Sekunden benötigt der Güterwagen für die ersten $120$m? %DMK Ana S7 A40
 		\end{enumerate}
 	\end{aufgabe}
 
@@ -372,15 +386,18 @@
 	\begin{definition}[geometrishe Folge]
 		Eine Folge $\left(a_n\right)_{n\in\N}$ heisst geometrisch, wenn der Quotient $q$ zweier aufeinander folgender Glieder konstant ist. \[q=\frac{a_{n+1}}{a_n} \quad\text{ für alle }\:n\in\N.\]
 	\end{definition}
+	\begingroup
+	\renewcommand{\arraystretch}{1.5}
 	\begin{table}[H]
 		\vspace{24pt}
 		\centering
-		\begin{tabular}{c|p{8mm}|p{8mm}|p{8mm}|p{8mm}|p{8mm}|p{10mm}|p{10mm}|p{10mm}|p{10mm}}
+		\begin{tabular}{c|p{8mm}|p{8mm}|p{8mm}|p{8mm}|p{8mm}|p{10mm}|p{10mm}|p{15mm}|p{15mm}}
 			$n$ & 1 & 2 & 3 & 4 & 5 & 6 & 10 & 20 & 100\\\hline
 			$a_n$ & & & & & & & & &
 		\end{tabular}
 		\vspace{24pt}
 	\end{table}
+	\endgroup
 	Wiederum sind die einzelnen Glieder einer geometrischen Folge durch das Anfangsglied $a_1$ und den Quotient $q$ definiert.
 	\begin{satz}
 		Das allgemeine Glied $a_n$ einer geometrischen Folge ist gegeben durch:
@@ -479,16 +496,25 @@
 \section{Unendliche geometrische Folgen und Reihen}
 	Üblicherweise können Folgen unendliche viele Glieder haben. In diesem Abschnitt wollen wir vor allem die geometrischen Folgen in dieser Hinsicht untersuchen. Zuerst möchte ich aber anhand eines Beispiels zeigen, wieso diese Untersuchung für eine arithmetische Folge nicht interessant ist.
 	\begin{beispiel}\ \\
-		\begin{minipage}{0.5\linewidth}
-			Betrachten wir also die arithmetische Folge \[a_n=-1+(n-1)\*\frac{1}{2}.\]
-			\vspace{2.5cm}
+		\begin{minipage}{0.35\linewidth}
+			Betrachten wir die arithmetische Folge \[a_n=-1+(n-1)\*\frac{1}{2}.\]
+			\begingroup
+			\renewcommand{\arraystretch}{1.5}
+			\begin{table}[H]
+				\centering
+				\begin{tabular}{c|p{7mm}|p{7mm}|p{7mm}|p{7mm}|p{7mm}}
+					$n$ & $1$ & $2$ & $3$ & $4$ & $5$ \\\hline
+					$a_n$ & & & & &
+				\end{tabular}
+			\end{table}
+			\endgroup
 		\end{minipage}
 		\hfill
-		\begin{minipage}{0.45\linewidth}
+		\begin{minipage}{0.6\linewidth}
 			\centering
 			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=1cm, y=1cm,
 				>=latex,   %Voreinstellung für Pfeilspitzen
-				font= \footnotesize, scale=0.6]
+				font= \footnotesize, scale=0.7]
 				%Raster zeichnen
 				\draw [color=gray!50]  [step=10mm] (-0.3,-1.3) grid (10.3,5.3);
 				% Achsen zeichnen
@@ -511,6 +537,8 @@
 	\end{beispiel}
 	\begin{aufgabe}
 		Betrachte die geometrische Folge $1,2,4,8,16,\ldots$. Was können wir über ihre Partialsummen aussagen?
+		\begingroup
+		\renewcommand{\arraystretch}{1.5}
 		\begin{table}[H]
 			\centering
 			\begin{tabular}{c|p{8mm}|p{8mm}|p{8mm}|p{8mm}|p{8mm}|p{12mm}|p{12mm}}
@@ -518,7 +546,10 @@
 				$s_n$ & & & & & & &
 			\end{tabular}
 		\end{table}
+		\endgroup
 		Als Vergleich dazu betrachten wir die geometrische Folge $81,27,9,3,1,\ldots$.
+		\begingroup
+		\renewcommand{\arraystretch}{1.5}
 		\begin{table}[H]
 			\centering
 			\begin{tabular}{c|p{8mm}|p{8mm}|p{8mm}|p{8mm}|p{8mm}|p{12mm}|p{12mm}}
@@ -526,6 +557,7 @@
 				$s_n$ & & & & & & &
 			\end{tabular}
 		\end{table}
+		\endgroup
 		Was ist der Unterschied der beiden Folgen?\vspace{5pt}\newline\karos{5}
 	\end{aufgabe}
 	\begin{definition}
@@ -538,14 +570,14 @@
 	Dazu unterscheiden wir drei Fälle:
 	\begin{enumerate}[label=\arabic*. Fall:]
 		\item $\mathbf{\abs{q}>1}$\newline
-		Beispiel: $1+2+4+8+16\ldots \quad\Rightarrow\quad q=\gap{2}$\newline
+		Beispiel: $1+2+4+8+16\ldots \quad\Rightarrow\quad q=\gap{2}$\vspace*{11pt}\newline
 		\[s_n=a_1\*\frac{q^n-1}{q-1}\]
 		\item $\mathbf{\abs{q}=1}$\newline
 		Beispiel: $1+1+1+1+1+\ldots \quad\Rightarrow\quad q=\gap{2}$\newline
-		Beispiel: $1-1+1-1+1-\ldots \quad\Rightarrow\quad q=\gap{2}$\newline
+		Beispiel: $1-1+1-1+1-\ldots \quad\Rightarrow\quad q=\gap{2}$\vspace*{11pt}\newline
 		\[s_n=a_1\*\frac{q^n-1}{q-1}\]
 		\item $\mathbf{\abs{q}<1}$\newline
-		Beispiel: $81+27+9+3+1+\ldots \quad\Rightarrow\quad q=\gap{2}$\newline
+		Beispiel: $81+27+9+3+1+\ldots \quad\Rightarrow\quad q=\gap{2}$\vspace*{11pt}\newline
 		\[s_n=a_1\*\frac{q^n-1}{q-1}\]
 	\end{enumerate}
 	\begin{satz}[Grenzwert einer unendlichen geometrischen Reihe]
@@ -608,6 +640,7 @@
 		Version & Datum & Person & Bemerkung \\\hline
 		$0.1$ & 02.08.2024 & Jonas Guler & Kapitel erstellt \\\hline
 		$1.0$ & 01.04.2025 & Jonas Guler & Kapitel fertig \\\hline
+		$1.1$ & 29.09.2025 & Jonas Guler & Fehler überarbeitet \\\hline
 	\end{tabular}
 \end{table}
 
