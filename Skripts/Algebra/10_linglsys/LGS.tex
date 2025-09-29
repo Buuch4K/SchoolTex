@@ -112,6 +112,7 @@
 		Ist ein lineares $2\times2$ Gleichungssystem gegeben, können die Graphen der Geraden mit Hilfe der Funktionsgleichungen in ein Koordinatensystem gezeichnet werden. Die Lösung des Gleichungssystems können aus den Koordinaten \gap{5} abgelesen werden.
 	\end{satz}
 	Gemäss dem obigen Koordinatensystem ist die eindeutige Lösung des Gleichungssystems also \[\gap{5}.\]
+
 	\begin{aufgabe}
 		\begin{enumerate}
 			\item Löse die folgenden lineare $2\times2$ Gleichungssysteme, in dem du die zugehörigen Geraden in ein Koordinatensystem mit $-3\leq x\leq 5$ und $-4\leq y\leq 7$ einzeichnest.
@@ -126,7 +127,10 @@
 				\item $\displaystyle\systeme*{3x-5=7-2y,-y-3x=y-12}$
 				\item $\displaystyle\systeme*{5x-4=10-y,10x+2y=6}$
 			\end{enumcols}
-			\item Woran erkennst den Unterschied in den Lösungen auch rechnerisch?
+			\item \begin{enumerate}[label=\alph*)]
+				\item Betrachte zuerst das folgende lineare Gleichungssystem: \[\systeme{4x-3y=4,-x+\frac{3}{4}y=2}.\] Woran erkennst \textbf{rechnerisch}, dass dieses keine Lösung besitzt?
+				\item Betrachte nun das lineare Gleichungssystem: \[\systeme{5x-2y=10,-x+\frac{2}{5}y=-2}.\] Woran erkennst \textbf{rechnerisch}, dass dieses unendlich viele Lösung besitzt?
+			\end{enumerate}
 			\item Erfinde ein lineares $2\times2$ Gleichungssystem, das keine Lösung besitzt.
 			\item Erfinde ein lineares $2\times2$ Gleichungssystem, das unendlich viele Lösungen besitzt.
 		\end{enumerate}
@@ -141,7 +145,7 @@
 
 \subsection{Das Gleichsetzungsverfahren}
 	Dieses Verfahren kennen wir von der Berechnung des Schnittpunkts zweier Geraden (siehe wieder \flqq lineare Funktionen\frqq).
-	Wir betrachten nochmals das Beispiel aus der geometrsichen Betrachtung.
+	Wir betrachten nochmals das Beispiel aus der geometrischen Betrachtung.
 	\begin{align*}
 		\systeme{2x-3y=9,x+2y=8}
 	\end{align*}
@@ -237,33 +241,19 @@
 		\end{align*}
 		Beide Gleichungen: I: $x-4y=8$ und II: $3x+4y=12$ können wir als Waage veranschaulichen, welche im Gleichgewicht ist.\newline
 		\begin{minipage}{0.45\linewidth}
-			\centering\includegraphics[width=6cm]{images/waage_x-4y=8.png}
+			\centering\includegraphics[width=6.5cm]{images/waage_x-4y=8.png}
 		\end{minipage}
 		\hfill
 		\begin{minipage}{0.45\linewidth}
-			\centering\includegraphics[width=6cm]{images/waage_3x+4y=12.png}
+			\centering\includegraphics[width=6.5cm]{images/waage_3x+4y=12.png}
 		\end{minipage}
 		Legt man nun die Gegenstände der linken Waagschale und die Gegenstände der rechten Waagschale jeweils zusammen, so ergibt sich wieder ein Gleichgewicht.
 		\begin{figure}[H]
 			\centering
-			\includegraphics[width=6cm]{images/waage_beide.png}
+			\includegraphics[width=6.5cm]{images/waage_beide.png}
 		\end{figure}
-		Die beiden Summen sind also wieder gleich gross:
-		\begin{alignat*}{2}
-			\text{I}:&\quad\phantom{x-4y+3}x-4y&&=8\\
-			\text{II}:&\quad\phantom{x-4y+}3x+4y&&=12\\
-			\cline{1-4}
-			\text{I + II}: &\quad x-4y+3x+4y&&=8+12\\
-			&\quad\phantom{x-4y+3x+}4x&&=20\\
-			&\quad\phantom{x-4y+3x+4}x&&=5
-		\end{alignat*}
-		Wir bekommen also $x=5$.\\
-		Setzt man diesen Wert 5 für $x$ in Gleichung I ein, so erhält man:
-		\begin{align*}
-			5-4y&=8\\
-			y&=-\frac{3}{4}
-		\end{align*}
-		Die Lösung des Linearen Gleichungssystems lautet also:  $\underline{\underline{(5,-\frac{3}{4})}}$
+		Die beiden Summen sind also wieder gleich gross:\vspace*{7pt}\newline\karos{5.5}
+		Setzt man diesen Wert 5 für $x$ in Gleichung I ein, so erhält man:\vspace*{7pt}\newline\karos{2.5}
 	\end{beispiel}
 	Damit man durch Addition der beiden Gleichungen eine Gleichung erhält, in der eine der beiden Variablen nicht mehr vorkommt, müssen die Koeffizienten dieser Variable in beiden Gleichungen den gleichen Betrag, aber unterschiedliche Vorzeichen besitzen (im Beispiel oben $-4y$ und $+4y$).\\
 	Falls dies nicht der Fall ist, so muss man zuerst eine oder beide Gleichungen durch beidseitiges Multiplizieren mit geeigneten Zahlen umformen.
@@ -308,7 +298,7 @@
 	\end{satz}
 	\begin{aufgabe}
 		\begin{enumerate}
-			\item Wähle selbst ein geeignetes Verfahren zur Lösung der folgenden linearen Gleichungsystemen.
+			\item Wähle selbst ein geeignetes Verfahren zur Lösung der folgenden linearen Gleichungssystemen.
 			\begin{enumcols}[3]
 				\item $\displaystyle\systeme{5x+7y=31-4x,27y-9x=54}$
 				\item $\displaystyle\systeme{1.3x+1.2y=6.2,1.7x+0.8y=5.8}$
@@ -324,10 +314,10 @@
 	\newpage
 
 \section{Weitere Gleichungssysteme}
-	Der Begriﬀ des Gleichungssystems ist ein sehr allgemeiner. Zu Beginn haben wir uns immer auf lineare $2\times2$ Gleichungssysteme eingeschrankt. Diese Einschränkung wollen wir an dieser Stelle öffnen und auch weitere Möglichkeiten diskutieren. Zuerst betrachten wir lineare $3\times3$ Gleichungssysteme. Danach arbeiten wir mit linearen Gleichungssystemen mit Parametern und zum Schluss  Wir schauen uns in diesem Abschnitt ein Beispiel eines nicht-linearen Gleichungssystems an.
+	Der Begriff des Gleichungssystems ist ein sehr allgemeiner. Zu Beginn haben wir uns immer auf lineare $2\times2$ Gleichungssysteme eingeschränkt. Diese Einschränkung wollen wir an dieser Stelle öffnen und auch weitere Möglichkeiten diskutieren. Zuerst betrachten wir lineare $3\times3$ Gleichungssysteme. Danach arbeiten wir mit linearen Gleichungssystemen mit Parametern und zum Schluss  Wir schauen uns in diesem Abschnitt ein Beispiel eines nicht-linearen Gleichungssystems an.
 
-\subsection{Gleichungssysteme mit drei und mehr Unbekannten}
-	Ein lineares Gleichungssystem mit drei Variablen benötigt auch drei Gleichungen, um eindeutigt gelöst werden zu können. Wenn wir nun drei lineare Gleichungen in den drei Unbekannten $x,y$ und $z$ betrachten, versuchen wir die Lösung dieses Gleichungssystems auf die Lösung eines Gleichungssystems nur zweier linearer Gleichungen mit nur zwei Unbekannten zurückzuführen.\vspace{5pt}\newline
+\subsection{Lineare Gleichungssysteme mit drei und mehr Unbekannten}
+	Ein lineares Gleichungssystem mit drei Variablen benötigt auch drei Gleichungen, um eindeutig gelöst werden zu können. Wenn wir nun drei lineare Gleichungen in den drei Unbekannten $x,y$ und $z$ betrachten, versuchen wir die Lösung dieses Gleichungssystems auf die Lösung eines Gleichungssystems nur zweier linearer Gleichungen mit nur zwei Unbekannten zurückzuführen.\vspace{5pt}\newline
 	Dazu eliminieren wir eine der drei Unbekannten jeweils unter Verwendung von zwei der drei Gleichungen, indem wir diese, wie beim Additionsverfahren üblich, mit geeigneten Zahlen multiplizieren und dann zueinander addieren, bzw. voneinander subtrahieren.\vspace*{5pt}\newline
 	Wir führen dies im Folgenden an einem Beispiel vor, besprechen dann in zwei weiteren Beispielen zwei Arten von Spezialfällen und üben das Verfahren anschliessend in einigen Aufgaben.
 	\begin{beispiel}
@@ -368,7 +358,7 @@
 	\end{aufgabe}
 
 \subsection{Lineare Gleichungssysteme mit Parametern}
-	Kommen neben den Lösungsvariablen noch weitere Variablen vor, so nennt man diese \textbf{Parameter}. Wenn nichts anderes geschrieben ist, werden die Lösungsvariablen mit $x$,$y$, ($z$) bezeichnet; wohin gegeb die Parameter häufig mit $a$, $b$ usw. bezeichnet werden.\vspace{11pt}\newline
+	Kommen neben den Lösungsvariablen noch weitere Variablen vor, so nennt man diese \textbf{Parameter}. Wenn nichts anderes geschrieben ist, werden die Lösungsvariablen mit $x$,$y$, ($z$) bezeichnet; wohingegen die Parameter häufig mit $a$, $b$ usw. bezeichnet werden.\vspace{11pt}\newline
 	In den allermeisten Fällen eignet sich das Additionsverfahren am Besten zur Lösung.
 	\begin{beispiel}
 		\[\left\{
@@ -402,7 +392,7 @@
 	\end{aufgabe}
 
 \subsection{Nicht-lineare Gleichungssysteme}
-	Wie wir beim Eisetzungsverfahren gesehen haben, eignet sich dieses vor allem für kompliziertere, \textbf{nicht-lineare} Gleichungssysteme. Jedoch haben wir noch nicht diskutiert, wie ein solches Gleichungssystem aussehen wird. Deshalb starten wir hier mit einem Beispiel.
+	Wie wir beim Einsetzungsverfahren gesehen haben, eignet sich dieses vor allem für kompliziertere, \textbf{nicht-lineare} Gleichungssysteme. Jedoch haben wir noch nicht diskutiert, wie ein solches Gleichungssystem aussehen wird. Deshalb starten wir hier mit einem Beispiel.
 	\begin{beispiel}
 		\[\left\{
 		\begin{matrix}
@@ -434,7 +424,7 @@
 		\item Antwortsatz
 	\end{enumerate}
 	\begin{beispiel}
-		Sina ist eine begeisterte Joggerin. Jeden Morgen läuft sie entweder $6 km$ durch den Wald oder $5 km$ an der Strasse entlang. So legt sie in $18$ Tagen insgesamt $100 km$ zurück. Wie oft lief sie im Wald und wie oft an der Strasse?
+		Sina ist eine begeisterte Joggerin. Jeden Morgen läuft sie entweder $6$km durch den Wald oder $5$km an der Strasse entlang. So legt sie in $18$ Tagen insgesamt $100$km zurück. Wie oft lief sie im Wald und wie oft an der Strasse?
 		\begin{enumerate}
 			\item \textbf{Variablen einführen}
 		\end{enumerate}
@@ -459,94 +449,122 @@
 		\begin{enumerate}[label=\alph*)]
 			\item Vergrössert man den Zähler eines Bruchs um $1$, so erhält der Bruch den Wert $0.8$; den Wert $0.75$ erhält er, wenn man stattdessen den Nenner um $1$ vergrössert. Von welchem Bruch ist die Rede?
 			\item Herr Muster ist derzeit neunmal so alt wie sein Sohn Merlin. In sieben Jahren wird das Alter des Vaters um vier Jahre höher als das Dreifache Alter seines Sohnes sein. Wie alt sind Vater und Sohn heute?
-			\item Pascal ist ein aufstrebender Triathlet. Insgesamt schwimmt und rennt er jede Woche $67.2 km$ weit. Dabei rennt er 15-mal so weit wie er schwimmt. Wie viele km legt Pascal wöchentlich schwimmend, bzw. rennend zurück?
+			\item Pascal ist ein aufstrebender Triathlet. Insgesamt schwimmt und rennt er jede Woche $67.2$km weit. Dabei rennt er 15-mal so weit wie er schwimmt. Wie viele km legt Pascal wöchentlich schwimmend, bzw. rennend zurück?
 			\item Addiert man zu Zähler und Nenner eines Bruchs je $3$, so erhält der Bruch den Wert $0.3$. Subtrahiert man stattdessen vom Zähler und Nenner je $2$, so erhält er den Wert $0.2$. Welches war der ursprüngliche Zähler, welches der ursprüngliche Nenner?
 			\item Vor fünf Jahren war der Vater $5-$mal so alt, wie der Sohn damals war. In drei Jahren wird er $3-$mal so alt sein, wie der Sohn dann sein wird. Wie alt sind beide heute?
 			\item Eine zweistellige natürliche Zahl ist viermal so gross wie ihre Quersumme und um $9$ kleiner als ihre Spiegelzahl. Bestimmen Sie diese zweistellige natürliche Zahl.
-			\item Bob hat seine Partnerin Alice mit einem unangebrachten Witz verärgert. Nun möchte er Alice Pralinen kaufen, um sich mit ihr zu versöhnen. Eine Pralinensorte kostet $14.40$ CHF. pro $250 g$, die andere kostet $18.40$ CHF pro $250 g$. Er kauft eine $250 g$ – Box, welche $17.00$ CHF
+			\item Bob hat seine Partnerin Alice mit einem unangebrachten Witz verärgert. Nun möchte er Alice Pralinen kaufen, um sich mit ihr zu versöhnen. Eine Pralinensorte kostet $14.40$ CHF. pro $250$g, die andere kostet $18.40$ CHF pro $250$g. Er kauft eine $250$g – Box, welche $17.00$ CHF
 			kostet. Wie viel Gramm jeder Sorte ist darin enthalten?
-			\item Von zwei Eisenbahnstationen, deren Entfernung $d$ Meter beträgt, fahren gleichzeitig zwei Züge $A,B$ ab. Jeder fährt mit konstanter Geschwindigkeit. Fahren sie einander entgegen, so treﬀen sie sich nach $4$ Minuten, fahren sie in dieselbe Richtung, so erst nach $20$ Minuten ($A$ ist
-			der schnellere Zug). Bestimme die Geschwindigkeit $v_A$ und $v_B$ der Züge.
+			\item Von zwei Eisenbahnstationen, deren Entfernung $d$ Meter beträgt, fahren gleichzeitig zwei Züge $A,B$ ab. Jeder fährt mit konstanter Geschwindigkeit. Fahren sie einander entgegen, so treffen sie sich nach $4$ Minuten, fahren sie in dieselbe Richtung, so erst nach $20$ Minuten ($A$ ist der schnellere Zug). Bestimme die Geschwindigkeit $v_A$ und $v_B$ der Züge.
 		\end{enumerate}
 	\end{aufgabe}
-
-\subsection{Vertiefung Mischaufgaben}
-	Zum Abschluss des Kapitels zu Linearen Gleichungssystemen betrachten wir Textaufgaben.\\
-	Im Skript wollen wir einen speziellen Aufgabentyp von Textaufgaben etwas genauer betrachten. Bei Mischaufgaben werden zwei Objekte (z.B. Flüssigkeiten, Metalle...)  mit unterschiedlicher Eigenschaft (z.B. Salzgehalt, Goldgehalt, Alkoholgehalt, Dichte...) miteinander vermischt.
-	\\
-	Wir betrachten das Vorgehen zur Lösung an einem typischen Beispiel.\\
-	Die erste Aufgabe lässt sich noch direkt berechnen.
-	\begin{beispiel}
-		2 Liter 70\%-ige Salzlösung (Salzgehalt 70\%) werden mit 5 Liter Wasser verdünnt. Wie gross ist nun der Salzgehalt?\\
-		\textbf{Antwort: } In der Mischung sind $0.7\cdot 2$ Liter Salz, verteilt auf 7 Liter.
-		Der Salzanteil beträgt also $\frac{0.7\cdot 2}{7}=0.2=20\%$
-	\end{beispiel}
-	\noindent
-	In der nächsten Aufgabe brauchen wir eine Variable:
-	\begin{beispiel}
-		Mit wieviel Liter Wasser müssen 3 Liter 80\%-ige Salzlösung verdünnt werden, damit eine 30\%-ige Salzlösung entsteht?\\
-		\textbf{Antwort: } Die Menge Wasser bezeichnen wir mit $x$. In der Mischung sind somit $0.8\cdot 3$ Liter Salz, verteilt auf $3+x$ Liter. Somit muss gelten:
-		\begin{align*}
-			\dfrac{0.8\cdot 3}{3+x}&=0.3 \\
-			\Rightarrow& x=5
-		\end{align*}
-	\end{beispiel}
-	\noindent
-	Im nächsten Beispiel empfiehlt sich die Nutzung von zwei Variablen:
-	\begin{beispiel}
-		Wie müssen eine 30\%-ige und 80\%-ige Salzlösung gemischt werden, um 5 Liter einer 45\%-igen Salzlösung zu erhalten?\\
-		\textbf{Antwort: } In der Mischung von $x$ Litern 30\%-ige und $y$ Litern 80\%-ige Salzlösung sind $0.3x+0.8y$ Liter Salz. In den 5 Litern 45\%ige Salzlösung müssen $0.45\cdot 5$ Liter Salz enthalten sein. Zusammen mit der Bedingung, dass $x+y=5$ erhalten wir ein LGS:
-		\begin{center}
-			\systeme{x+y=5, 0.3x+0.8y=0.45\cdot 5}
-		\end{center}
-		Die Lösung lautet: $x=3.5$, $y=1.5$. Also müssen 3.5 Litern der 30\%-igen Salzlösung mit 1.5 Litern der 80\%-igen Salzlösung gemischt werden, um 5 Liter einer 45\%-igen Salzlösung zu erhalten.\\
-		\emph{(Bemerkung: Man könnte auch nur eine Variable $x$ verwenden und die Menge der zweiten Flüssigkeit als $5-x$ benutzen. )}
-	\end{beispiel}
-	\noindent Schauen wir uns die letzte Aufgabe tabellarisch nochmals an:\\
-	\begin{table}[h]
-		\centering
-		\begin{tabular}{ c|c|c|c}
-
-			& 30\%-ige Salzlösung & 80\%-ige Salzlösung & Mischung  \\ \hline
-			Menge (V)&	$V_1=x$ & $V_2=y$ & \color{lightgray} $V_3=5$\\
-			Gehalt (p)& $p_1=0.3$ & $p_2=0.8$ &\color{lightgray} $ p_3=0.45$ \\
-			Salzmenge & $p_1\cdot V_1=0.3x$ & $p_2\cdot V_2=0.8y$ & $p_3\cdot V_3=0.45\cdot 5$
-		\end{tabular}
-		\caption*{Typische Mischaufgabe}
-		\label{tab:TypischeMischaufgabe}
-	\end{table}
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.8\textwidth]{images/mischaufg.png}
-		\label{fig:mischaufg}
-	\end{figure}
-	Die Grafik veranschaulicht die Salzmenge. Die Volumen $V_1$, $V_2$ und $V_3$ stehen für die Mengen der einzelnen Salzlösungen. $p_1$, $p_2$ und $p_3$ stehen für den jeweiligen Gehalt. So hat beispielsweise in der ersten Flüssigkeit $ p_1\cdot V_1$ (bzw. $0.3x$) Salz.\\
-	Klar ist, dass beim Mischen keine Flüssigkeit verloren geht, also $V_1+V_2=V_3$.\\
-	Dann nützen wir aus (siehe Tabelle), dass die Salzmenge sich vor und nach dem Mischen nicht ändert (sie addieren sich nur):\vspace{-0.5cm}
-	\begin{align*}
-		p_1\cdot V_1 + p_2\cdot V_2&=p_3\cdot V_3\\
-		0.3x+0.8y&=0.45\cdot 5.
-	\end{align*}
-	Das ergab uns die zweite Gleichung. \\
-	Wir könnten auch den Gehalt der dritten Flüssigkeit $p_3$ durch die andern Grössen ausdrücken.
-	\begin{align*}
-		p_1\cdot V_1 + p_2\cdot V_2&=p_3\cdot V_3\\
-		\Rightarrow p_3&=\dfrac{p_1\cdot V_1 + p_2\cdot V_2}{V_3}\\
-		p_3&=\dfrac{p_1\cdot V_1 + p_2\cdot V_2}{V_1+V_2}\\
-		0.45&=\frac{0.3x+0.8y}{x+y}
-	\end{align*}
-	Statt die zweite Gleichung $0.3x+0.8y=0.45\cdot 5$ könnte man also auch $0.45=\dfrac{0.3x+0.8y}{x+y}$ im LGS benutzen.\\
-	Das obige Prinzip funktioniert für alle Mischaufgaben.
-	\begin{framed}
-		\begin{itemize}
-			\item Schreibe alle relevanten Grössen tabellarisch auf.
-			\item Verbinde die Grössen mit Gleichungen. D.h. schreibe vorkommende Grössen auf zwei unterschiedliche Arten auf.
-		\end{itemize}
-	\end{framed}
 	\newpage
 
 
 \section{Das Gauss-Verfahren}
+	Das Gauss-Verfahren ist eine effiziente Methode, um grössere Lineare Gleichungssysteme zu lösen. Durch geeignete Manipulation werden dabei sukzessive Variablen eliminiert. Allerdings funktioniert das Gauss-Verfahren für nicht-lineare Gleichungssysteme nicht mehr. Wir benutzen in diesem Abschnitt die schlankere \textbf{Matrixschreibweise}:\vspace*{11pt}\newline
+	\begin{minipage}{0.3\linewidth}
+		\[\systeme{-4x+27y-10z=-4,x-6y+3z=2,x+8z=13}\]
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.3\linewidth}
+		wird umgeschrieben zu
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.3\linewidth}
+		\begingroup
+		\renewcommand{\arraystretch}{1.2}
+			\[\begin{pmatrix}
+				-4 & 27 & -10 & -4\\
+				1 & -6 & 3 & 2\\
+				1 & 0 & 8 & 13
+			\end{pmatrix}\]
+		\endgroup
+	\end{minipage}\vspace*{14pt}\newline
+	Danach wird die Matrix geeignet umgeformt, um schlussendlich die Lösung der Gleichungen zu bestimmen. Das Ziel der Umformung ist, die Matrix mittels Äquivalenzumformungen in \textit{Dreiecksform} zu bringen:
+	\begingroup
+	\renewcommand{\arraystretch}{1.2}
+	\[\begin{pmatrix}
+		-4 & 27 & -10 & -4\\
+		1 & -6 & 3 & 2\\
+		1 & 0 & 8 & 13
+	\end{pmatrix}
+	\hspace*{2cm}\longrightarrow\hspace*{2cm}
+	\begin{pmatrix}
+		1 & -6 & 3 & 2\\
+		0 & 3 & 2 & 4\\
+		0 & 0 & 1 & 3
+	\end{pmatrix}\]
+	\endgroup
+	Denn in dieser Form entspricht die Matrix dem folgenden Gleichungssystem und wir können die Lösungen durch Rückwärtseinsetzen berechnen:\vspace*{11pt}\newline
+	\begin{minipage}{0.25\linewidth}
+		\begingroup
+		\renewcommand{\arraystretch}{1.2}
+		\[\begin{pmatrix}
+			1 & -6 & 3 & 2\\
+			0 & 3 & 2 & 4\\
+			0 & 0 & 1 & 3
+		\end{pmatrix}\]
+		\endgroup
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.4\linewidth}
+		entspricht dem Gleichungssystem
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.25\linewidth}
+		\[\systeme{x-6y+3z=2,3y+2z=4,z=3}\]
+	\end{minipage}\vspace*{14pt}\newline
+	Die Lösung des Gleichungssystem ist also \vspace*{7pt}\newline\karos{3.5}
+	Um das anfängliche lineare Gleichungssystem in Dreiecksform zu bringen, dürfen folgende Umformungen auf die Gleichungen angewendet werden:
+	\begin{itemize}
+		\item Eine Gleichung mit einem Term (verschieden von Null) multiplizieren.
+		\item Eine Gleichung oder ihr Vielfaches zu einer anderen Gleichung addieren.
+		\item Zwei Gleichungen vertauschen.
+	\end{itemize}
+	Damit können wir ein entsprechendes Beispiel durchgehen. Dazu möchte ich zuerst das Verfahren als rezeptartige Vorgehensweise formulieren:
+	\begin{algo}
+		Gegeben ist ein $3\times3$ lineares Gleichungssystem und als Resultat des Gauss-Verfahren werden die Lösungen des Gleichungssystems berechnet.
+		\begin{enumerate}
+			\item Wir wählen eine Gleichung für die erste Zeile aus. Das heisst, eventuell müssen wir zwei Gleichungen vertauschen. Der $x-$Koeffizient soll dabei möglichst einfach sein (z.B. = 1).
+			\item Wir eliminieren den $x-$Koeffizienten der $2.$ und $3.$ Gleichung, indem wir ein Vielfaches der $1.$ Gleichung zur jeweiligen Gleichung addieren.
+			\item Eventuell vereinfachen wir die $2.$ oder $3.$ Gleichung durch eine Multiplikation	(um Brüche loszuwerden) und/oder wir vertauschen die $2.$ und $3.$	Gleichung. Der $y-$Koeffizient soll dabei möglichst einfach werden.
+			\item Wir eliminieren den $y-$Koeffizienten der $3.$ Gleichung, indem wir ein Vielfaches der $2.$ Gleichung zu $3.$ addieren.
+			\item Wir berechnen die Lösung des linearen Gleichungssystems durch Rückwärtseinsetzen.
+		\end{enumerate}
+	\end{algo}
+	\begin{beispiel}
+		Betrachten wir nun das obige Beispiel und formen die Matrix gemeinsam entsprechen um:
+		\begin{figure}[H]
+			\begin{tikzpicture}[remember picture,overlay]
+				\draw[step=0.5cm,gray!50,thin] (0,0.5) grid (\linewidth,-14);
+			\end{tikzpicture}
+		\end{figure}
+		\:$\begin{pmatrix}
+			-4 & 27 & -10 & -4\\
+			1 & -6 & 3 & 2\\
+			1 & 0 & 8 & 13
+		\end{pmatrix}$
+	\end{beispiel}\newpage
+	\begin{aufgabe}
+		\begin{enumerate}
+			\item Notiere folgende $3\times3$ Gleichungssysteme in Matrixschreibweise und bringe sie in Dreiecksform. Berechne danach die Lösung.
+			\begin{enumcols}[3]
+				\item $\displaystyle\systeme{8x-7y+10z=9,5y-4z=16,6z=21}$
+				\item $\displaystyle\systeme{2x+5y+8z=20,3y+2z=19,6y-6z=15}$
+				\item $\displaystyle\systeme{5x-12y+4z=-12,6y-13z=16,8y-14z=20}$
+			\end{enumcols}
+			\item Löse die folgenden linearen Gleichungssysteme mit dem Gauss-Verfahren.
+			\begin{enumcols}[3]
+				\item $\displaystyle\systeme{x+2y+2z=-4,2x+4y+5z=-9,-3x-3y+6z=-9}$
+				\item $\displaystyle\systeme{x+y+z=60,x-3y+2z=-4,2x+5y-5z=68}$
+				\item $\displaystyle\systeme{3x-4y+z=15,6x+2y+5z=10,-6x+10y-4z=-24}$
+				\item $\displaystyle\systeme{4x-4y+12z=-3,2x-y+z=1,6x+5y-16z=-40}$
+				\item $\displaystyle\systeme{7x-6y+5z=18,5x+3y-4z=28,8x+2y+3z=26}$
+				\item $\displaystyle\systeme{2x+3y-4z=-5,3x-5y+2z=4,4x+y-2z=5}$
+			\end{enumcols}
+		\end{enumerate}
+	\end{aufgabe}
 
 	\newpage
 
@@ -559,6 +577,7 @@
 		Version & Datum & Person & Bemerkung \\\hline
 		$0.1$ & 02.08.2024 & Jonas Guler & Kapitel von Hs übernommen \\\hline
 		$1.0$ & 30.08.2025 & Jonas Guler & Überarbeitung aller Kapitel auf Basis von SOL Skript von Bunschoten und Skript von Gt\newline Alte Teile von Hs im Anhang \\\hline
+		$1.1$ & 29.09.2025 & Jonas Guler & Erstellung des Gauss-Verfahren vom Skript Gt \\\hline
 	\end{tabular}
 \end{table}
 
@@ -727,9 +746,9 @@
 	\newpage
 
 
-\subsection*{Das Gleichsetzungsverfahren}
+\section*{Das Gleichsetzungsverfahren}
 	Dieses Verfahren kennen wir von der Berechnung des Schnittpunkts zweier Geraden (siehe wieder \flqq lineare Funktionen\frqq).
-	Wir betrachten nochmals das Beispiel aus der geometrsichen Betrachtung.
+	Wir betrachten nochmals das Beispiel aus der geometrischen Betrachtung.
 	\begin{align*}
 		\systeme{3x-6y=18, 6x+4y=12}
 	\end{align*}
@@ -763,7 +782,7 @@
 	\end{beispiel}
 	\newpage
 
-\subsection*{Vertiefung Einsetzungsverfahren}
+\section*{Vertiefung Einsetzungsverfahren}
 	\begin{aufgabe}
 		Adaptiere den Lösungsvorgang mit zwei Gleichungen auf das untenstehende lineare Gleichungssystem mit 3 Gleichungen und 3 Unbekannten. Findest du die Lösungen?
 		\begin{equation*}
@@ -815,7 +834,7 @@
 	Betrachten wir das Beispiel mit den gegebenen Punkten $(1/4)$ und $(3/-2)$:\vspace{3.5cm}
 	\newpage
 
-\subsection*{Auf lineare zurückführbare Gleichungen}
+\section*{Auf lineare zurückführbare Gleichungen}
 	Einige Gleichungen lassen sich durch Ausmultiplizieren auf lineare Gleichungen zurück-führen. Andere nichtlineare Gleichungen lassen sich durch eine geeignete Substitution (d.h. Ersetzen eines Ausdrucks durch einen neuen) auf lineare Gleichungen zurückführen. So können sie mit den bekannten Mitteln aufgelöst werden. Anschliessend muss die Substitution rückgängig gemacht werden.
 
 	Wir betrachten zu beiden Vorgehen je zwei Beispiele:
@@ -848,5 +867,79 @@
 		\vspace{2cm}
 	\end{aufgabe}
 	\newpage
+
+\section*{Vertiefung Mischaufgaben}
+	Zum Abschluss des Kapitels zu Linearen Gleichungssystemen betrachten wir Textaufgaben.\\
+	Im Skript wollen wir einen speziellen Aufgabentyp von Textaufgaben etwas genauer betrachten. Bei Mischaufgaben werden zwei Objekte (z.B. Flüssigkeiten, Metalle...)  mit unterschiedlicher Eigenschaft (z.B. Salzgehalt, Goldgehalt, Alkoholgehalt, Dichte...) miteinander vermischt.
+	\\
+	Wir betrachten das Vorgehen zur Lösung an einem typischen Beispiel.\\
+	Die erste Aufgabe lässt sich noch direkt berechnen.
+	\begin{beispiel}
+		2 Liter 70\%-ige Salzlösung (Salzgehalt 70\%) werden mit 5 Liter Wasser verdünnt. Wie gross ist nun der Salzgehalt?\\
+		\textbf{Antwort: } In der Mischung sind $0.7\cdot 2$ Liter Salz, verteilt auf 7 Liter.
+		Der Salzanteil beträgt also $\frac{0.7\cdot 2}{7}=0.2=20\%$
+	\end{beispiel}
+	\noindent
+	In der nächsten Aufgabe brauchen wir eine Variable:
+	\begin{beispiel}
+		Mit wie viel Liter Wasser müssen 3 Liter 80\%-ige Salzlösung verdünnt werden, damit eine 30\%-ige Salzlösung entsteht?\\
+		\textbf{Antwort: } Die Menge Wasser bezeichnen wir mit $x$. In der Mischung sind somit $0.8\cdot 3$ Liter Salz, verteilt auf $3+x$ Liter. Somit muss gelten:
+		\begin{align*}
+			\dfrac{0.8\cdot 3}{3+x}&=0.3 \\
+			\Rightarrow& x=5
+		\end{align*}
+	\end{beispiel}
+	\noindent
+	Im nächsten Beispiel empfiehlt sich die Nutzung von zwei Variablen:
+	\begin{beispiel}
+		Wie müssen eine 30\%-ige und 80\%-ige Salzlösung gemischt werden, um 5 Liter einer 45\%-igen Salzlösung zu erhalten?\\
+		\textbf{Antwort: } In der Mischung von $x$ Litern 30\%-ige und $y$ Litern 80\%-ige Salzlösung sind $0.3x+0.8y$ Liter Salz. In den 5 Litern 45\%ige Salzlösung müssen $0.45\cdot 5$ Liter Salz enthalten sein. Zusammen mit der Bedingung, dass $x+y=5$ erhalten wir ein LGS:
+		\begin{center}
+			\systeme{x+y=5, 0.3x+0.8y=0.45\cdot 5}
+		\end{center}
+		Die Lösung lautet: $x=3.5$, $y=1.5$. Also müssen 3.5 Litern der 30\%-igen Salzlösung mit 1.5 Litern der 80\%-igen Salzlösung gemischt werden, um 5 Liter einer 45\%-igen Salzlösung zu erhalten.\\
+		\emph{(Bemerkung: Man könnte auch nur eine Variable $x$ verwenden und die Menge der zweiten Flüssigkeit als $5-x$ benutzen. )}
+	\end{beispiel}
+	\noindent Schauen wir uns die letzte Aufgabe tabellarisch nochmals an:\\
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{ c|c|c|c}
+
+			& 30\%-ige Salzlösung & 80\%-ige Salzlösung & Mischung  \\ \hline
+			Menge (V)&	$V_1=x$ & $V_2=y$ & \color{lightgray} $V_3=5$\\
+			Gehalt (p)& $p_1=0.3$ & $p_2=0.8$ &\color{lightgray} $ p_3=0.45$ \\
+			Salzmenge & $p_1\cdot V_1=0.3x$ & $p_2\cdot V_2=0.8y$ & $p_3\cdot V_3=0.45\cdot 5$
+		\end{tabular}
+		\caption*{Typische Mischaufgabe}
+		\label{tab:TypischeMischaufgabe}
+	\end{table}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\textwidth]{images/mischaufg.png}
+		\label{fig:mischaufg}
+	\end{figure}
+	Die Grafik veranschaulicht die Salzmenge. Die Volumen $V_1$, $V_2$ und $V_3$ stehen für die Mengen der einzelnen Salzlösungen. $p_1$, $p_2$ und $p_3$ stehen für den jeweiligen Gehalt. So hat beispielsweise in der ersten Flüssigkeit $ p_1\cdot V_1$ (bzw. $0.3x$) Salz.\\
+	Klar ist, dass beim Mischen keine Flüssigkeit verloren geht, also $V_1+V_2=V_3$.\\
+	Dann nützen wir aus (siehe Tabelle), dass die Salzmenge sich vor und nach dem Mischen nicht ändert (sie addieren sich nur):\vspace{-0.5cm}
+	\begin{align*}
+		p_1\cdot V_1 + p_2\cdot V_2&=p_3\cdot V_3\\
+		0.3x+0.8y&=0.45\cdot 5.
+	\end{align*}
+	Das ergab uns die zweite Gleichung. \\
+	Wir könnten auch den Gehalt der dritten Flüssigkeit $p_3$ durch die andern Grössen ausdrücken.
+	\begin{align*}
+		p_1\cdot V_1 + p_2\cdot V_2&=p_3\cdot V_3\\
+		\Rightarrow p_3&=\dfrac{p_1\cdot V_1 + p_2\cdot V_2}{V_3}\\
+		p_3&=\dfrac{p_1\cdot V_1 + p_2\cdot V_2}{V_1+V_2}\\
+		0.45&=\frac{0.3x+0.8y}{x+y}
+	\end{align*}
+	Statt die zweite Gleichung $0.3x+0.8y=0.45\cdot 5$ könnte man also auch $0.45=\dfrac{0.3x+0.8y}{x+y}$ im LGS benutzen.\\
+	Das obige Prinzip funktioniert für alle Mischaufgaben.
+	\begin{framed}
+		\begin{itemize}
+			\item Schreibe alle relevanten Grössen tabellarisch auf.
+			\item Verbinde die Grössen mit Gleichungen. D.h. schreibe vorkommende Grössen auf zwei unterschiedliche Arten auf.
+		\end{itemize}
+	\end{framed}
 
 \end{document}
