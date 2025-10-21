@@ -3,13 +3,13 @@
 \input{../../../Header/styleScript.sty}
 \input{../../../Header/headerScript.sty}
 \input{../../../Header/mathexpressions.sty}
-
+\graphicspath{{images/}}
 
 \newcommand{\Skriptname}{Logarithmus}
 \newcommand{\Autor}{Jonas Guler (Gu)}
-\newcommand{\version}{\textit{v}1.0}
+\newcommand{\version}{\textit{v}1.3}
 
-\begin{document}   %KSH-Gubser - LATEX/PDF
+\begin{document}
 \begin{titlepage}
 	\clearpage
 	\title{\Huge\textbf{\Skriptname} \\[1cm]}
@@ -43,7 +43,7 @@
 			\begin{minipage}[t]{0.3\linewidth}
 				\begin{enumerate}[label=\alph*)]
 					\setcounter{enumi}{1}
-					\item Schreibe $\log_5(625)=4$ in exponetieller Form.\newline\textit{Lösung:}\[\Log{5}{625}=4 \Leftrightarrow 5^4=625\]
+					\item Schreibe $\log_5(625)=4$ in exponentieller Form.\newline\textit{Lösung:}\[\Log{5}{625}=4 \Leftrightarrow 5^4=625\]
 				\end{enumerate}
 			\end{minipage}
 			\hfill
@@ -59,7 +59,7 @@
 		\end{figure}
 	\end{beispiel}
 	\begin{aufgabe}
-		Schreibe die Exponentialgleichung in logarithmischer Form, die Logaritmusgleichungen in exponetieller Form und löse die Gleichungen auf drei Nachkommastellen genau.
+		Schreibe die Exponentialgleichung in logarithmischer Form, die Logarithmusgleichungen in exponentieller Form und löse die Gleichungen auf drei Nachkommastellen genau.
 		\begin{enumcols}[3]
 				\item $3^4=81$ \item $25^\frac{1}{2}=5$ \item $\left(\frac{1}{6}\right)^{-2}=36$ \item $32^\frac{1}{5}=2$
 				\item $\Log{3}{9}=2$ \item $\Log{6}{216}=3$ \item $\Log{5}{0.2}=-1$ \item $\Log{0.5}{8}=-3$
@@ -67,16 +67,36 @@
 		\end{enumcols}
 	\end{aufgabe}
 	\begin{aufgabe}
-		Löse die Aufgaben $1-4$ auf Seite 183 im Buuch Algebra $9/10$
+		\begin{enumerate}
+			\item Schreibe den Exponenten $x$ als Logarithmus.
+			\begin{enumcols}[4]
+				\item $7^x=5$
+				\item $p^x=q$
+				\item $a^x=\frac{p}{q}$
+				\item $\left(\frac{a}{b}\right)^x=c$
+				\item $3^{2x}=5$
+				\item $4^{x/2}=3$
+				\item $\left(\frac{a}{b}\right)^{2x}=c$
+				\item $(2\*3)^{3x}=36$
+			\end{enumcols}
+			\item Notiere die Gleichung als Exponentialgleichung.
+			\begin{enumcols}[4]
+				\item $x=\Log{u}{v}$
+				\item $x=\Log{2}{12}$
+				\item $y=\Log{\sqrt{2}}{x}$
+				\item $z=\Log{c}{\frac{2}{d}}$
+			\end{enumcols}
+		\end{enumerate}
 	\end{aufgabe}
 	Wir sind nun also in der Lage, auch schwierigere Exponentialgleichungen zu lösen.
 	\begin{aufgabe}
-		Löse die folgenden Exponantialgleichungen und überprüfe deine Lösung mit dem Taschenrechner.
+		Löse die folgenden Exponentialgleichungen und überprüfe deine Lösung mit dem Taschenrechner.
 		\begin{enumcols}[2]
 				\item $10^{2x-3}=4$ \item $2^{x^2-1}=100$ \item $3^{4x-2}+100=0$ \item $\frac{1}{2}\*4^{x-2}=6$
 				\item $7^{4-x}=1000$ \item $4^{2x-5}=3$
 		\end{enumcols}
 	\end{aufgabe}
+	\newpage
 
 
 \section{Rechenregeln}
@@ -102,20 +122,20 @@
 		\begin{enumerate}[label=\alph*)]
 			\item Wie hängt der Wert des Terms $\log_2(u\*v)$ von $\log_2(u)$ und $\log_2(v)$ ab? Vergleiche dazu die folgenden Terme.\newline
 			$\log_2(2\*4)$ mit $\log_2(2)$ und $\log_2(4)$\vspace{5pt}\newline\karos{2}
-			$\log_2(2\*8)$ mit $\log_2(2)$ und $\log_2(8)$\vspace{5pt}\newline\karos{1}
-			$\log_2(4\*8)$ mit $\log_2(4)$ und $\log_2(8)$\vspace{5pt}\newline\karos{1}
-			$\log_2(8\*16)$ mit $\log_2(8)$ und $\log_2(16)$\vspace{5pt}\newline\karos{1}
+			$\log_2(2\*8)$ mit $\log_2(2)$ und $\log_2(8)$\vspace{5pt}\newline\karos{1.5}
+			$\log_2(4\*8)$ mit $\log_2(4)$ und $\log_2(8)$\vspace{5pt}\newline\karos{1.5}
+			$\log_2(8\*16)$ mit $\log_2(8)$ und $\log_2(16)$\vspace{5pt}\newline\karos{1.5}
 			Stelle eine Vermutung für eine Rechenregel auf und überprüfe sie an eigenen Beispielen.
 			\[\log_a(u\*v)=\lineortext{\qquad\log_a(u)+\log_a(v)\qquad}\]
 			\item Verfahre genauso wie in Teilaufgabe a) mit $\log_2\left(\frac{u}{v}\right)$.\newline
-			$\log_2\left(\frac{32}{4}\right)$ mit $\log_2(32)$ und $\log_2(4)$\vspace{5pt}\newline\karos{1}
-			$\log_2\left(\frac{64}{32}\right)$ mit $\log_2(64)$ und $\log_2(32)$\vspace{5pt}\newline\karos{1}
-			$\log_2\left(\frac{128}{16}\right)$ mit $\log_2(128)$ und $\log_2(16)$\vspace{5pt}\newline\karos{1}
-			$\log_2\left(\frac{8}{64}\right)$ mit $\log_2(8)$ und $\log_2(64)$\vspace{5pt}\newline\karos{1}
+			$\log_2\left(\frac{32}{4}\right)$ mit $\log_2(32)$ und $\log_2(4)$\vspace{5pt}\newline\karos{1.5}
+			$\log_2\left(\frac{64}{32}\right)$ mit $\log_2(64)$ und $\log_2(32)$\vspace{5pt}\newline\karos{1.5}
+			$\log_2\left(\frac{128}{16}\right)$ mit $\log_2(128)$ und $\log_2(16)$\vspace{5pt}\newline\karos{1.5}
+			$\log_2\left(\frac{8}{64}\right)$ mit $\log_2(8)$ und $\log_2(64)$\vspace{5pt}\newline\karos{1.5}
 			Stelle eine Vermutung für eine Rechenregel auf und überprüfe sie an eigenen Beispielen.
 			\[\log_a\left(\frac{u}{v}\right)=\lineortext{\qquad\log_a(u)-\log_a(v)\qquad}\]
 		\end{enumerate}
-	\end{aufgabe}\newpage
+	\end{aufgabe}
 	Wir können also die Regeln allgemein zusammenfassen und noch mit einer weiteren Regel, der Potenzregel, erweitern.
 	\begin{satz}
 		\label{satz:logarithmusgesetze}
@@ -129,14 +149,41 @@
 	\begin{aufgabe}
 		Vereinfache die folgenden Terme so weit wie möglich.
 		\begin{enumcols}[4]
-				\item $\log_{12}(144)$ \item $\log_{10}(0.001)$
+				\item $\Log{12}{144}$ \item $\Log{10}{0.001}$
 				\item $\log_a\left(\frac{1}{a^2}\right)$ \item $5^{\log_5(10)}$
 				\item $\log_5\left(25\sqrt{5}\right)$ \item $\log_x\left(x\sqrt{x}\right)$
 				\item $\log_a\left(\frac{1}{\sqrt{a}}\right)$ \item $\log_m\left(\sqrt{m^5}\right)$
 		\end{enumcols}
 	\end{aufgabe}
 	\begin{aufgabe}
-		Löse die Aufgaben $32-43$ auf Seite $187$ im Buch Algebra $9/10$.
+		\begin{enumerate}
+			\item Fasse die folgenden Terme zu einem einzigen Logarithmus zusammen und vereinfache so weit wie möglich.
+			\begin{enumcols}[2]
+				\item $\Log{a}{2}+\Log{a}{7}-\Log{a}{14}$
+				\item $\frac{1}{3}\*\Log{a}{8}-\Log{a}{2}$
+				\item $3\*\Log{a}{25}-2\*\Log{a}{125}$
+				\item $\Log{a}{3}-2\*\Log{a}{5}+\frac{1}{2}\*\Log{a}{4}$
+				\item $\Log{a}{m^2}-\Log{a}{m}$
+				\item $\Log{a}{x^3}-3\*\Log{a}{\frac{1}{x}}$
+				\item $\Log{a}{\frac{1}{y^3}}-\Log{a}{\frac{1}{y^4}}$
+				\item $\displaystyle\frac{\Log{a}{x^5}}{\Log{a}{x^4}}$
+				\item $\Log{a}{b}+\Log{a}{c}-\Log{a}{d}\Log{a}{e}$
+				\item $3\*\Log{a}{b}+2\*\Log{a}{c}-4\*\Log{a}{d}$
+				\item $-\Log{a}{x}-\Log{a}{y}-\Log{a}{z}$
+				\item $\frac{1}{4}\*\Log{a}{x^3}-\frac{1}{2}\*\Log{a}{y}+3\*\Log{a}{z}$
+				\item $2\*\Log{a}{x}-5\*\left(\Log{a}{u}+\Log{a}{v}\right)$
+				\item $\Log{a}{x^{\frac{1}{4}}}+\Log{a}{x^{\frac{3}{2}}}-\Log{a}{\sqrt{x}}$
+			\end{enumcols}
+			\item Ist die folgende Umformung richtig oder falsch? Begründe deine Antwort.
+			\begin{enumcols}[2]
+				\item $\Log{a}{u+2}=\Log{a}{u}+\Log{a}{2}$
+				\item $\Log{a}{u+u}=\Log{a}{2}+\Log{a}{u}$
+				\item $\Log{a}{3\*v}=3\*\Log{a}{v}$
+				\item $\Log{a}{u-4}=\frac{\Log{a}{u}}{\Log{a}{4}}$
+				\item $\Log{a}{\frac{2}{3}}=\frac{\Log{a}{2}}{\Log{a}{3}}$
+				\item $\Log{a}{3\*u}=3\*\Log{a}{u}$
+			\end{enumcols}
+		\end{enumerate}
 	\end{aufgabe}
 	\begin{aufgabe}
 		Forme die ausgeschriebenen Ausdrücke soweit um, bis nur noch ein Logarithmus übrig bleibt oder umgekehrt. \newline\footnotesize\textit{Tipp: Falls kein Logarithmusgesetz anwendbar scheint, versuche den Ausdruck in ein Produkt umzuwandeln.}\normalsize
@@ -209,12 +256,56 @@
 		Löse anschliessend die Aufgaben $53-55$ und $58$ auf Seite $189$ im Algebra $9/10$.
 	\end{aufgabe}
 	Mit Hilfe des Basiswechselsatz sind wir also in der Lage, auch ohne leistungsfähigen Taschenrechner einen Logarithmus mit komplizierter Basis zu vereinfachen. Insbesondere können wir so auch die Lösung einer Exponentialgleichung der Form $a^x=b$ mit Hilfe des Basiswechselsatz approximieren. Denn es gilt:
-	\[x=\Log{a}{b}=\frac{\log(b)}{\log(a)}=\frac{\ln(b)}{\ln(a)}\]
+	\[x=\Log{a}{b}=\frac{\Log{c}{b}}{\Log{c}{a}}=\frac{\ln{b}}{\ln{a}}\]
 	\begin{aufgabe}
-		Löse die Aufgaben $65-69$ auf Seite $190$ im Algebra $9/10$.
-	\end{aufgabe}\newpage
-	\subsection*{Vergleich von Zahlen}
-	In der folgenden Aufgabe sind zwei Potenzen gegeben, die für unseren einfachen Handy-Taschen- rechner leider nicht möglich sind zu berechnen. Also können wir auch nicht einen direkten Vergleich anstellen. Notiere dir hier deinen Tipp.
+		\begin{enumerate}
+			\item Schreibe die folgenden Logarithmen zur Basis $10$ um.
+			\begin{enumcols}[4]
+				\item $\Log{100}{1000}$
+				\item $\Log{0.1}{10}$
+				\item $\Log{2}{5}$
+				\item $\Log{3}{\abs{x}^{10}}$
+			\end{enumcols}
+			\item Vereinfache zu einen einzigen Logarithmus.
+			\begin{enumcols}[4]
+				\item $\displaystyle\frac{\Log{10}{2}}{\Log{10}{\e}}$
+				\item $\displaystyle\frac{\ln{7}}{\ln{10}}$
+				\item $\displaystyle\frac{\ln{64}}{\ln{\sqrt{3}}}$
+				\item $\displaystyle\frac{\ln{125}}{\ln{8}}$
+			\end{enumcols}
+			\item Vereinfache die folgenden Ausdrücke, in dem du die Logarithmen zu einer geeigneten Basis wechselst.
+			\begin{enumcols}[2]
+				\item $\Log{3}{4}\*\Log{4}{5}\*\Log{5}{9}$
+				\item $\displaystyle\frac{\Log{3}{13}\*\Log{5}{17}}{\Log{2}{289}\*\Log{5}{169}}$
+				\item $\displaystyle\frac{\Log{3}{125}\*\Log{2}{\sqrt[3]{3}}}{\Log{8}{5}}$
+			\end{enumcols}
+			\item Löse die folgende Logarithmusgleichungen nach $x$ auf.
+			\begin{enumcols}[2]
+				\item $\Log{4}{9=\Log{2}{x}}$
+				\item $\Log{3}{16}=\Log{x}{256}$
+				\item $\Log{4}{\Log{2}{x}-1}=\Log{16}{9}$
+			\end{enumcols}
+			\item Löse die folgenden Exponentialgleichungen auf 4 wesentliche Stellen.
+			\begin{enumcols}[3]
+				\item $2^x=11$
+				\item $3^x=0.052$
+				\item $0.8^x=0.005$
+				\item $\e^x=\pi$
+				\item $\e^{-x}=100$
+				\item $\e^{2x-5}=3$
+				\item $10^x=1968$
+				\item $8\*3^{-x}=5$
+				\item $10^6\*0.9^x=\e$
+				\item $5^{x-1}+6^x=6^{x+1}-5^x$
+				\item $2^{4x}+2^{4x+5}=99$
+				\item $5^{3x+1}-5^{3x-1}=48$
+				\item $3\*4^x+5=6\*4^x-19$
+				\item $9^{x+\frac{1}{2}}-9^x=9^{x-\frac{1}{2}}+135$
+			\end{enumcols}
+		\end{enumerate}
+	\end{aufgabe}
+	\subsection{Vergleich von Zahlen}
+	In der folgenden Aufgabe sind zwei Potenzen gegeben, die für unseren einfachen Handy-Taschenrechner leider nicht möglich sind zu berechnen. Also können wir auch nicht einen direkten Vergleich anstellen. Notiere dir hier deinen Tipp.
 	\begin{aufgabe}
 		Welche Zahl ist grösser? \[2^{2000}\qquad\text{ oder }\qquad 3^{630}\]
 	\end{aufgabe}
@@ -351,8 +442,8 @@
 			\end{tikzpicture}
 		\end{minipage}
 	\end{beispiel}
-	\begin{satz}[Wachtumsverhalten]
-		Eine Funktion der Form $h(x)=\Log{a}{x}$ zeigt folgendes Wachtumsverhalten in Abhängigkeit der Basis $a$:
+	\begin{satz}[Wachstumsverhalten]
+		Eine Funktion der Form $h(x)=\Log{a}{x}$ zeigt folgendes Wachstumsverhalten in Abhängigkeit der Basis $a$:
 		\begin{itemize}
 			\item \rule{10cm}{1pt}
 			\item \rule{10cm}{1pt}
@@ -372,9 +463,71 @@
 		\end{itemize}
 	\end{satz}
 	\begin{aufgabe}
-		\begin{enumerate}[label=\alph*)]
-			\item Löse die Aufgaben $22-24$ und $27$ auf Seite $185$ im Algebra $9/10$.\vspace{6pt}
-			\item\begin{minipage}{0.57\linewidth}
+		\begin{enumerate}
+			\item Zeichne die Logarithmusfunktionen von $f:y=\Log{a}{x}$ für $a=2,3,\frac{1}{2},\frac{1}{4}$ im gleichen Koordinatensystem unten.
+			\begin{figure}[H]
+				\centering
+				\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+					>=latex,   %Voreinstellung für Pfeilspitzen
+					font=\footnotesize, scale=0.9]
+					\begin{scope}[on background layer]
+						\fill[white] (-1,-4.5) rectangle (9,5);
+					\end{scope}
+					%Raster zeichnen
+					\draw [color=gray!50]  [step=10mm] (-0.2,-4.2) grid (8.2,4.2);
+					% Achsen zeichnen
+					\draw[->,thick] (-0.7,0) -- (8.7,0) node[left, below] {\normalsize $x$};
+					\draw[->,thick] (0,-4.3) -- (0,4.5) node[above, left=4pt] {\normalsize $y$};
+					% Achsen beschriften
+					\foreach \x in {1,2,...,8} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+					\foreach \y in {-4,...,-2,-1,1,2,...,4} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+					% Besserer Ursprung
+					\draw[color=black] (0pt,-7pt) node[left] {$0$};
+					%Funktionen zeichnen:
+					\clip(0,-4.2) rectangle (8.2,4.2); %Bildbereich
+					%Beschriftung
+					%\node[blue]  at (11,5) {\normalsize$f$};
+				\end{tikzpicture}
+			\end{figure}
+			\item Der Punkt $P$ liegt auf der Funktion der Form $f:y=\Log{a}{x}$. Berechne $a$.
+			\begin{enumcols}[4]
+				\item $P\left(9\:\vert\:2\right)$
+				\item $P\left(4\:\vert\:\frac{1}{2}\right)$
+				\item $P\left(\frac{1}{8}\:\vert\:-\frac{3}{4}\right)$
+				\item $P\left(2\:\vert\:-5\right)$
+			\end{enumcols}
+			\item Gib die Funktionsgleichung der Umkehrfunktion an.
+			\begin{enumcols}[4]
+				\item $f:y=10^x$
+				\item $f:y=\left(\frac{1}{3}\right)^x$
+				\item $f:y=2^{3x}$
+				\item $f:y=\Log{5}{\sqrt{x}}$
+			\end{enumcols}
+			\item Jede Wertetabelle gehört zu einer Logarithmusfunktion der Form $f:y=\Log{a}{x}+c$. Wie lautet die Funktionsgleichung?\vspace*{7pt}\newline
+			\begin{minipage}{0.3\linewidth}
+				\begin{tabular}{c|c|c|c|c}
+					$x$ & $1$ & $3$ & $9$ & $243$ \\\hline
+					$f(x)$ & $0$ & $1$ & $2$ & $5$ \\
+				\end{tabular}
+			\end{minipage}
+			\hfill
+			\begin{minipage}{0.3\linewidth}
+				\begin{tabular}{c|c|c|c|c}
+					$x$ & $\frac{1}{8}$ & $2$ & $16$ & $32$ \\\hline
+					$f(x)$ & $3$ & $-1$ & $-4$ & $-5$ \\
+				\end{tabular}
+			\end{minipage}
+			\hfill
+			\begin{minipage}{0.3\linewidth}
+				\begin{tabular}{c|c|c|c|c}
+					$x$ & $2$ & $12$ & $72$ & $432$ \\\hline
+					$f(x)$ & $1$ & $2$ & $3$ & $4$ \\
+				\end{tabular}
+			\end{minipage}
+		\end{enumerate}
+	\end{aufgabe}
+	\begin{aufgabe}
+			\begin{minipage}{0.57\linewidth}
 				Ordne zuerst die Funktionsgleichungen den Graphen zu.
 				\begin{align*}
 					f(x)&=\Log{2}{x}\\
@@ -384,12 +537,18 @@
 			\end{minipage}
 			\hfill
 			\begin{minipage}{0.4\linewidth}
-				\centering\includegraphics[scale=0.15]{images/shiftedLog1.png}
-			\end{minipage}
-			\item Beschreibe danach den Einfluss der beiden verschiedenen Parameter $b$ und $c$ der allgemeinen Funktion \[f(x)=\Log{a}{x-b}+c.\] Vergleiche dazu das \href{https://www.geogebra.org/m/qungkacj}{Geogebra-Applet}.
-			\item Löse zum Schluss die Aufgabe $28$ auf Seite $186$ im Algebra $9/10$.
-		\end{enumerate}
+				\centering\includegraphics[scale=0.18]{images/shiftedLog1.png}
+			\end{minipage}\vspace{22pt}
+			Beschreibe danach den Einfluss der beiden verschiedenen Parameter $b$ und $c$ der allgemeinen Funktion \[f(x)=\Log{a}{x-b}+c.\] Vergleiche dazu das \href{https://www.geogebra.org/m/qungkacj}{Geogebra-Applet}\footnotemark.
 	\end{aufgabe}
+	\begin{aufgabe}
+		Gib die Gleichung der Logarithmusfunktion an. Die gestrichelten Geraden sind Asymptoten.
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.6]{aufgloggraph.png}
+		\end{figure}
+	\end{aufgabe}
+	\footnotetext{\url{https://www.geogebra.org/m/qungkacj}}
 
 
 \newpage
@@ -398,28 +557,29 @@
 	\begin{figure}[ht]
 		\centering
 		\textbf{Empfinden wir zwei schreiende Kinder doppelt so laut wie eines?}
-		\includegraphics[scale=0.75]{images/Schreihals.png}
+		\includegraphics[scale=0.9]{Schreihals.png}
 	\end{figure}
 	\begin{wrapfigure}{r}{0.3\textwidth}
-		\center{\includegraphics[scale=0.75]{images/SoundIntensity.png}}
+		\center{\includegraphics[scale=0.8]{SoundIntensity.png}}
 	\end{wrapfigure}
 	Wie ihr vielleicht wisst, breitet sich der Schall mittels Kompression und Dekompression der Luft aus. Das heisst, wir einen Ton hören, wenn in der Luft gewisse Energie vorhanden ist, die Schallwellen erzeugen. Je weiter weg wir vom Ursprung der Schallquelle sind, desto leiser nehmen wir den Ton wahr. Nehmen wir die Frage zu Beginn nochmals auf: Empfinden wir zwei schreiende Kinder als doppelt so laut wie eines? Intuitiv würde ich diese Frage mit \flqq Nein\frqq\:beantworten. Dies kann auch genau erklärt werden, denn unser Gehör funktioniert mit einer logarithmischen Skala. Aus diesem Grund wird die Schallenergie eines Geräusches mit dem leisest hörbaren verglichen. Daraus lässt sich die Lautstärke wie folgt definieren:
+
 	\begin{definition}
 		\[\text{Lautstärke [in dB (Dezibel)]}=10\*\Log{10}{\frac{\textcolor{red}{I}}{I_0}},\]
 		wobei $I_0=\left(10^{-12}\frac{W}{m^2}\right)$ die Hörschwelle und $\textcolor{red}{I}$ die gemessene Schallenergie sind.
 	\end{definition}
 	In der Graphik unten sind einerseits einige Lautstärken abgebildet. $0$dB ist das leiseste, was ein menschliches Gehör feststellen kann und interessanterweise ist die Schmerzgrenze bei $130$dB. Lärm der lauter ist als die Schmerzgrenze kann zu abruptem Hörverlust führen. Betrachten wir den Graphen auf der Mitte, so sehen wir die Ähnlichkeit zur klassischen Logarithmusfunktion. Vergleicht man die Werte, so führt eine Verdoppelung der Schallenergie zu einem Anstieg um lediglich $3$ Dezibel.\newline
 	\begin{minipage}{0.3\linewidth}
-		\centering\includegraphics[scale=0.4]{images/DezibelSkala.png}
+		\centering\includegraphics[scale=0.4]{DezibelSkala.png}
 	\end{minipage}
 	\hfill
 	\begin{minipage}{0.3\linewidth}
-		\centering\includegraphics[scale=0.4]{images/DezibelGraph.png}
+		\centering\includegraphics[scale=0.4]{DezibelGraph.png}
 	\end{minipage}
 	\hfill
 	\begin{minipage}{0.3\linewidth}
-		\centering\includegraphics[scale=0.6]{images/ExposureTime.png}
-	\end{minipage}
+		\centering\includegraphics[scale=0.6]{ExposureTime.png}
+	\end{minipage}\newline
 	Falls das Gehör zu lange grossem Lärm ausgesetzt ist, kann dies zu Gehörverlust führen. Wird die Schallenergie verdoppelt, also $+3$dB, so halbiert sich die Belastungszeit für diese Lautstärke. Eine Aufstellung für die Belastungszeiten kann in der Abbildung auf der rechten Seite abgelesen werden.
 	\begin{aufgabe}
 		Wähle aus den folgenden Anwendungen eine aus, die dich interessiert.
@@ -434,29 +594,30 @@
 			\item Suche ein Beispiel, welches die Anwendung zeigt.
 			\item Ergänze allfällige \flqq Fun Facts\frqq.
 		\end{enumerate}
-		Abgabe: Ende der Doppellektion per \href{mailto://jonas.guler@ksh.edu}{Mail} an jonas.guler@ksh.edu. Die besten Arbeiten pro Anwendung werde ich euch in der Inhaltsbibliothek zur Verfügung stellen.
 	\end{aufgabe}
+	\newpage
 
 
-\newpage
-\subsection*{Richterskala}
-\subsection*{pH-Werte}
-\subsection*{C-14 Methode}
-\subsection*{Stetige Rendite}
-\subsection*{Logarithmus im Tennis}
-\subsection*{Widerspenstige Zähmung}
 
-
-\newpage
 \subsection*{History}
 \begin{table}[H]
 	\centering
 	\begin{tabular}{|p{13mm}|p{20mm}|p{30mm}|p{70mm}|}\hline
 		%\multicolumn{4}{|l|}{History}\\\hline
 		Version & Datum & Person & Bemerkung \\\hline
-		$0.1$ & 22.12.2023 & Jonas Guler & Kapitel erstellt \\\hline
-		$0.2$ & ToDo & Jonas Guler & Anwendungen ergänzen \\\hline
+		$1.1$ & 22.12.2023 & Jonas Guler & Kapitel erstellt \\\hline
+		$1.2$ & 12.10.2024 & Jonas Guler & Anwendungen ergänzen \\\hline
+		$1.3$ & 21.10.2025 & Jonas Guler & Korrekturen einpflegen und Aufgaben ergänzen \\\hline
 	\end{tabular}
 \end{table}
+\newpage
+
+\appendix
+\subsection*{Richterskala}
+\subsection*{pH-Werte}
+\subsection*{C-14 Methode}
+\subsection*{Stetige Rendite}
+\subsection*{Logarithmus im Tennis}
+\subsection*{Widerspenstige Zähmung}
 
 \end{document}
