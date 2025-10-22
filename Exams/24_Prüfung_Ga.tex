@@ -4,11 +4,11 @@
 \input{../Header/mathexpressions.sty}
 \input{../Header/headerExam.sty}
 %=========================================================
-\newcommand{\theme}{Lineare Funktionen}
+\newcommand{\theme}{Ähnlichkeit und Strahlensätze}
 \newcommand{\teacher}{Jonas Guler}
 \newcommand{\class}{2Ga}
-\renewcommand{\date}{12.09.25}
-\graphicspath{{Algebra/data-algebra/}} % Setzt den Pfad zu den Bilder fest
+\renewcommand{\date}{03.11.25}
+\graphicspath{{Algebra/data-algebra/},{Geometrie/data-geometrie}} % Setzt den Pfad zu den Bilder fest
 %=========================================================
 \begin{document}
 \fontsize{14}{14}\selectfont
@@ -40,7 +40,7 @@
 
 \vspace{10cm}
 \begin{center}
-    \Huge{Repetitionsprüfung}
+    %\Huge{Repetitionsprüfung}
 \end{center}
 
 \newpage
@@ -48,152 +48,80 @@
 %=========================================================
 %---------------------TESTFRAGEN
 %=========================================================
-\question[3]
-Erkläre in eigenen Worten und mit Hilfe einer Skizze, was unter der Steigung einer linearen Funktion verstanden wird.
-\vspace{5pt}\antwort{14.5}
-\vfill
-\question[2]
-Entscheide in der Tabelle unten, ob die Aussagen wahr oder falsch sind. Die Antworten müssen nicht begründet werden.\newline
-\begin{small}
-	Bewertung: Für $0-2$ korrekte Antworten gibt es keine Punkte; $3$ korrekte Antworten $1$ Punkt und falls alle Antworten korrekt sind, gibt es $2$ Punkte.
-\end{small}
-\begingroup
-\renewcommand{\arraystretch}{1.5}
-\begin{table}[H]
-	\centering
-	\begin{tabular}{|p{12cm}|c|c|}\hline
-		& wahr & falsch \\\hline
-		Jede Gerade durch zwei Punkte ist der Graph einer linearen Funktion. & & \\\hline
-		Eine Gerade, die auf $5$ Einheiten in $x-$Richtung $15$ Einheiten in $y-$Richtung ansteigt, hat die Steigung $\frac{1}{3}$. & & \\\hline
-		Eine lineare Funktion kann keinen höchsten Punkt im Definitionsbereich besitzen.  & & \\\hline
-		Der $y-$Achsenabschnitt ist immer kleiner als das Bild der Zahl $0$. & & \\\hline
-	\end{tabular}
-\end{table}
-\endgroup
-
-
-%---------------------------------------------------------
-\newpage
-\noaddpoints
-\question[\totalpoints] %DMKA910 - S59 A21
-\addpoints
-Sind die folgenden Aussagen richtig oder falsch? Begründe deine Antwort.
-\begin{parts}
-	\part[2] Der Abstand von zwei parallelen Geraden ist der Unterschied der beiden y-Achsenabschnitte.
-\end{parts}
-\vspace*{5pt}\antwort{6.5}
-\begin{parts}
-	\setcounter{partno}{1}
-	\part[2] Die Steigung $m=-\frac{9}{27}$ gehört zu einer Gerade, die auf drei Einheiten in x-Richtung eine Einheit in y-Richtung fällt.
-\end{parts}
-\vspace*{5pt}\antwort{6.5}
-\begin{parts}
-	\setcounter{partno}{2}
-	\part[2] Jede Gerade durch zwei Punkte ist der Graph einer linearen Funktion.
-\end{parts}
-\vspace*{5pt}\antwort{6.5}
-
-
-%---------------------------------------------------------
-\newpage
-\question[2]
-Berechne die Funktionsgleichung einer linearen Funktion, die durch die beiden Punkte $P(-3\:|\:-1)$ und $Q(4\:|\:-2)$ verläuft.
-\vspace*{7pt}\antwort{4.5}
-\vfill
-\noaddpoints
-\question[\totalpoints] %Funktiongleichung finden
-\addpoints
-\begin{parts}
-	\part[3] Gesucht ist die Funktionsgleichung der linearen Funktion $f$, die durch den Punkte $P(-2\:|\:1)$ verläuft und Steigung $m=-0.45$ hat.
-\end{parts}
-\vspace*{7pt}\antwort{5.5}
-\begin{parts}
-	\setcounter{partno}{1}
-	\part[2] Zeichne die Funktion $f$ ins Koordinatengitter rechts ein.
-\end{parts}
-\begin{figure}[H]
-	\centering
-	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,	>=latex,   %Voreinstellung für Pfeilspitzen
-		font=\footnotesize, scale=0.9]
-		%Raster zeichnen
-		\draw [color=gray!50]  [step=10mm] (-4.3,-4.3) grid (4.3,4.3);
-		% Achsen zeichnen
-		\draw[->,thick] (-4.3,0) -- (4.8,0) node[left, below] {\normalsize $x$};
-		\draw[->,thick] (0,-4.3) -- (0,4.8) node[above, left=4pt] {\normalsize $y$};
-		% Achsen beschriften
-		\foreach \x in {-4,...,-2,-1,1,2,...,4} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
-		\foreach \y in {-4,...,-2,-1,1,2,...,4} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
-		% Besserer Ursprung
-		\draw[color=black] (0pt,-7pt) node[left] {$0$};
-		%Funktionen zeichnen:
-		\clip(-4.3,-4.3) rectangle (4.3,4.3); %Bildbereich
-		%Beschriftung
-		%\node[forestgreen]  at (3.2,1) {\normalsize$g$};
-	\end{tikzpicture}
-\end{figure}
-
-
-%---------------------------------------------------------
-\newpage
-\question[8]
-Die Abbildung zeigt die Graphen von drei linearen Funktionen $f$, $g$ und $h$. Die Koordinaten der markierten Punkte sind ganzzahlig. Berechne die Fläche des Dreiecks, das von diesen drei linearen Funktionen begrenzt wird.
-\begin{figure}[H]
-	\centering
-	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,>=latex,   %Voreinstellung für Pfeilspitzen
-		font=\footnotesize, scale=0.9]
-		%Raster zeichnen
-		\draw [color=gray!50]  [step=10mm] (-6.3,-3.3) grid (4.3,5.3);
-		% Achsen zeichnen
-		\draw[->,thick] (-6.5,0) -- (4.8,0) node[left, below] {\normalsize $x$};
-		\draw[->,thick] (0,-3.5) -- (0,5.8) node[above, left=4pt] {\normalsize $y$};
-		% Achsen beschriften
-		\foreach \x in {-6,...,-2,-1,1,2,...,4} \draw (\x,-.1) -- (\x,.1) node[right=3pt,below=7pt] {$\x$};
-		\foreach \y in {-3,-2,-1,1,2,...,5} \draw (-.1,\y) -- (.1,\y) node[left=7pt] {$\y$};
-		% Besserer Ursprung
-		\draw[color=black] (0pt,-7pt) node[left] {$0$};
-		%Funktionen zeichnen:
-		\clip(-6.3,-3.3) rectangle (4.3,5.3); %Bildbereich
-		\draw[red,thick,domain=-6.3:4.3,samples=200] plot (\x, {-5/2*(\x)+5});
-		\draw[forestgreen,thick,domain=-6.3:4.3,samples=200] plot (\x, {2/3*(\x)+1});
-		\draw[plotblue,thick,domain=-6.3:4.3,samples=200] plot (\x, {-2});
-		%Beschriftung
-		\node[red]  at (0.7,4.2) {\normalsize$f$};
-		\node[forestgreen]  at (-1.2,0.8) {\normalsize$g$};
-		\node[plotblue]  at (3.2,-1.8) {\normalsize$h$};
-		%Punkte
-		\draw[fill=red] (0,5) circle (2.5pt);
-		\draw[fill=red] (2,0) circle (2.5pt);
-		\draw[fill=forestgreen] (3,3) circle (2.5pt);
-		\draw[fill=forestgreen] (-3,-1) circle (2.5pt);
-		\draw[fill=plotblue] (-4,-2) circle (2.5pt);
-		\draw[fill=plotblue] (1,-2) circle (2.5pt);
-	\end{tikzpicture}
-\end{figure}
-\vspace{5pt}\antwort{13.5}
-
-
-%---------------------------------------------------------
-\newpage
 \noaddpoints
 \question[\totalpoints]
 \addpoints
-Aus einem tropfenden Wasserhahn fällt alle $1.5$ Sekunden ein Tropfen in einen Messbecher. Momentan (zur Zeit $t=0$) sind darin $90$ ml enthalten.\newline ($20$ Tropfen $\hat{=}\:1$ ml)
-\begin{parts}
-	\part[2] Fülle die Lücken dieser Wertetabelle aus.
-	\begingroup
-	\renewcommand{\arraystretch}{1.5}
-	\begin{table}[H]
-		\centering
-		\begin{tabular}{|c|p{12mm}|p{12mm}|p{12mm}|p{12mm}|p{12mm}|}\hline
-			Vergangene Zeit $t$ in Minuten & $0$ &  &  & $4$ & $80$ \\\hline
-			Wassermenge $f(t)$ im Becher in ml & $90$ & $180$ & $330$ & & \\\hline
-		\end{tabular}
-	\end{table}
-	\endgroup
-	\part[3] Gib die Funktionsgleichung an, mit der die Wassermenge aus der Zeit berechnet werden kann.
-	\part[2] Wie lange dauert es, bis einen Liter Wasser im Messbecher ist?
-\end{parts}
-\vspace*{7pt}\antwort{17.5}
+Formuliere je einen 1. und einen 2. Strahlensatz aus der folgenden Figur (als Formeln).\newline
+\begin{minipage}{0.35\linewidth}
+	\centering\includegraphics[scale=1]{strahlensatzfigurkomplex.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.6\linewidth}
+	\begin{parts}
+		\part[1] 1. Strahlensatz\vspace{2cm}
+		\part[1] 2. Strahlensatz\vspace{2cm}
+	\end{parts}
+\end{minipage}
+\vfill
+\question[4]
+Bestimme die unbekannten Seiten $a,b,c,d$ in der Figur unten.
+\begin{figure}[H]
+	\centering\includegraphics[scale=0.8]{strahlensatz2.png}
+\end{figure}
+\antwort{5.5}
+
+
+%---------------------------------------------------------
+\newpage
+\question[5]
+Begründe mit Hilfe der Strahlensätze, ob alle drei, nur zwei oder keine der Geraden $a,b,c$ parallel sind.
+\begin{figure}[H]
+	\centering\includegraphics[width=0.4\linewidth]{parallelität_wahr.png}
+\end{figure}
+\antwort{5.5}
+\vfill
+\question[4]
+Berechne die Länge der unbekannten Strecken $w,x,y$ und $z$.
+\begin{figure}[H]
+	\centering\includegraphics[width=0.45\linewidth]{strahlensatz4.png}
+\end{figure}
+\antwort{5.5}
+
+
+%---------------------------------------------------------
+\newpage
+\question[4]
+\begin{minipage}{0.45\linewidth}
+	Unter einer Treppe soll ein $78$cm breiter Schrank eingebaut werden. Wie hoch kann der Schrank maximal sein?
+\end{minipage}
+\hfill
+\begin{minipage}{0.53\linewidth}
+	\centering\includegraphics[scale=0.4]{schrankuntertreppe.png}
+\end{minipage}
+\vspace*{7pt}\antwort{20.5}
+
+
+%---------------------------------------------------------
+\newpage
+\question[5]
+Frau Kurz (Augenhöhe $1.7$m) bestimmt die Höhe einer Tanne. Von ihrem Balkon aus peilt sie über einen Telefonmast die Tannenspitze an. In der Zeichnung unten sind die gemessenen Stecken und Längen eingezeichnet. Wie hoch ist die Tanne?
+\begin{figure}[H]
+	\centering\includegraphics[width=0.5\linewidth]{baumhöhe.png}
+\end{figure}
+\vspace{5pt}\antwort{17.5}
+
+
+%---------------------------------------------------------
+\newpage
+\question[3]
+\begin{minipage}{0.6\linewidth}
+	Die Fläche des kleineren Dreiecks beträgt $36\%$ des grösseren. Berechne $x$.
+\end{minipage}
+\hfill
+\begin{minipage}{0.35\linewidth}
+	\centering\includegraphics[scale=0.4]{ähnlicheflächen.png}
+\end{minipage}
+\vspace*{7pt}\antwort{19.5}
 
 
 %---------------------------------------------------------

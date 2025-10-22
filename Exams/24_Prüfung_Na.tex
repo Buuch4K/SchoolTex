@@ -4,11 +4,11 @@
 \input{../Header/mathexpressions.sty}
 \input{../Header/headerExam.sty}
 %=========================================================
-\newcommand{\theme}{Lineare Funktionen}
+\newcommand{\theme}{Ähnlichkeit und Strahlensätze}
 \newcommand{\teacher}{Jonas Guler}
 \newcommand{\class}{2Na}
-\renewcommand{\date}{12.09.25}
-\graphicspath{{Algebra/data-algebra/}} % Setzt den Pfad zu den Bilder fest
+\renewcommand{\date}{03.11.25}
+\graphicspath{{Algebra/data-algebra/},{Geometrie/data-geometrie}} % Setzt den Pfad zu den Bilder fest
 %=========================================================
 \begin{document}
 \fontsize{14}{14}\selectfont
@@ -40,7 +40,7 @@
 
 \vspace{10cm}
 \begin{center}
-	\Huge{Repetitionsprüfung}
+	%\Huge{Repetitionsprüfung}
 \end{center}
 
 \newpage
@@ -48,110 +48,78 @@
 %=========================================================
 %---------------------TESTFRAGEN
 %=========================================================
-\question[3]
-Erkläre in eigenen Worten und mit Hilfe einer Skizze, was unter der Steigung einer linearen Funktion verstanden wird.
-\vspace{5pt}\antwort{14.5}
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+Formuliere je einen 1. und einen 2. Strahlensatz aus der folgenden Figur (als Formeln).\newline
+\begin{minipage}{0.35\linewidth}
+	\centering\includegraphics[scale=1]{strahlensatzfigurkomplex.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.6\linewidth}
+	\begin{parts}
+		\part[1] 1. Strahlensatz\vspace{2cm}
+		\part[1] 2. Strahlensatz\vspace{2cm}
+	\end{parts}
+\end{minipage}
 \vfill
-\question[2]
-Entscheide in der Tabelle unten, ob die Aussagen wahr oder falsch sind. Die Antworten müssen nicht begründet werden.\newline
-\begin{small}
-	Bewertung: Für $0-2$ korrekte Antworten gibt es keine Punkte; $3$ korrekte Antworten $1$ Punkt und falls alle Antworten korrekt sind, gibt es $2$ Punkte.
-\end{small}
-\begingroup
-\renewcommand{\arraystretch}{1.5}
-\begin{table}[H]
-	\centering
-	\begin{tabular}{|p{12cm}|c|c|}\hline
-		& wahr & falsch \\\hline
-		Jede Gerade durch zwei Punkte ist der Graph einer linearen Funktion. & & \\\hline
-		Eine Gerade, die auf $5$ Einheiten in $x-$Richtung $15$ Einheiten in $y-$Richtung ansteigt, hat die Steigung $\frac{1}{3}$. & & \\\hline
-		Eine lineare Funktion kann keinen höchsten Punkt im Definitionsbereich besitzen.  & & \\\hline
-		Der $y-$Achsenabschnitt ist immer kleiner als das Bild der Zahl $0$. & & \\\hline
-	\end{tabular}
-\end{table}
-\endgroup
-
-
-%---------------------------------------------------------
-\newpage
-\noaddpoints
-\question[\totalpoints] %KS Willisau A8
-\addpoints
-\begin{parts}
-	\part[4] Eine lineare Funktion geht durch die Punkte $P(-1\:|\:-2)$ und $Q(-3\:|\:1)$. Bestimme die Funktionsgleichung.
-	\part[2] Berechne die Stelle auf der $x-$Achse, in der der Graph der Funktion die Achse schneidet.
-\end{parts}
-\vspace{7pt}\antwort{21.5}
-
-
-%---------------------------------------------------------
-\newpage
-\noaddpoints
-\question[\totalpoints] %Barth Band 1 KapTest A10ac
-\addpoints
-Die Abbildung zeigt die Graphen von drei linearen Funktionen $f$, $g$ und $h$. Die Koordinaten der markierten Punkte sind ganzzahlig.
+\question[4]
+Bestimme die unbekannten Seiten $a,b,c,d$ in der Figur unten.
 \begin{figure}[H]
-	\centering
-	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
-		>=latex,   %Voreinstellung für Pfeilspitzen
-		font=\footnotesize, scale=0.8]
-		%Raster zeichnen
-		\draw [color=gray!50]  [step=10mm] (-5.3,-3.3) grid (5.3,5.3);
-		% Achsen zeichnen
-		\draw[->,thick] (-5.5,0) -- (5.8,0) node[left, below] {\normalsize $x$};
-		\draw[->,thick] (0,-4.5) -- (0,5.8) node[above, left=4pt] {\normalsize $y$};
-		% Achsen beschriften
-		\foreach \x in {-5,...,-2,-1,1,2,...,5} \draw (\x,-.1) -- (\x,.1) node[right=3pt,below=7pt] {$\x$};
-		\foreach \y in {-3,...,-2,-1,1,2,...,5} \draw (-.1,\y) -- (.1,\y) node[left=7pt] {$\y$};
-		% Besserer Ursprung
-		\draw[color=black] (0pt,-7pt) node[left] {$0$};
-		%Funktionen zeichnen:
-		\clip(-6.3,-3.3) rectangle (5.3,5.3); %Bildbereich
-		\draw[red,thick,domain=-6.3:5.3,samples=200] plot (\x, {-3/4*(\x)+1.5});
-		\draw[forestgreen,thick,domain=-6.3:5.3,samples=200] plot (\x, {2/3*(\x)+1});
-		\draw[plotblue,thick,domain=-6.3:5.3,samples=200] plot (\x, {-2});
-		%Beschriftung
-		\node[red]  at (-3.2,4.5) {\normalsize$f$};
-		\node[forestgreen]  at (-1.2,0.8) {\normalsize$g$};
-		\node[plotblue]  at (3.2,-1.8) {\normalsize$h$};
-		%Punkte
-		\draw[fill=red] (-2,3) circle (2.5pt);
-		\draw[fill=red] (2,0) circle (2.5pt);
-		\draw[fill=forestgreen] (3,3) circle (2.5pt);
-		\draw[fill=forestgreen] (-3,-1) circle (2.5pt);
-		\draw[fill=plotblue] (-4,-2) circle (2.5pt);
-		\draw[fill=plotblue] (1,-2) circle (2.5pt);
-	\end{tikzpicture}
+	\centering\includegraphics[scale=0.8]{strahlensatz3.png}
 \end{figure}
-\begin{parts}
-	\part[3] Welche Steigungen haben die drei Geraden?
-	\part[4] Berechne den Schnittpunkt von $f$ und $g$.
-\end{parts}
-\vspace*{7pt}\antwort{12.5}
+\antwort{5.5}
+
 
 %---------------------------------------------------------
 \newpage
-\question[2] %KS Willisau A5
-Liegen die Punkte $P(2\:|\:-5)$ und $Q(-2\:|\:6)$ auf der Geraden $g:y=-3x+1$?
-\vspace*{7pt}\antwort{8.5}
-\question[4] %KS Willisau A19
-Gegeben ist das Viereck $ABCD$ mit en Eckpunkten $A(6\:|\:2), B(1\:|\:7), C(-3\:|\:-1)$ und $D(4\:|\:-2)$. Berechne den Schnittpunkt der Diagonalen $AC$ und $BD$.
-\vspace*{7pt}\antwort{12.5}
+\question[5]
+Begründe mit Hilfe der Strahlensätze, ob alle drei, nur zwei oder keine der Geraden $a,b,c$ parallel sind.
+\begin{figure}[H]
+	\centering\includegraphics[width=0.4\linewidth]{parallelität_falsch.png}
+\end{figure}
+\antwort{5.5}
+\vfill
+\question[4]
+Berechne die Länge der unbekannten Strecken $w,x,y$ und $z$.
+\begin{figure}[H]
+	\centering\includegraphics[width=0.45\linewidth]{strahlensatz5.png}
+\end{figure}
+\antwort{5.5}
+
 
 %---------------------------------------------------------
 \newpage
-\noaddpoints
-\question[\totalpoints] %Anwendung mit Schnittpunkt DMKA910 - S58 A20
-\addpoints
-In einer Mathematikprüfung mit total $24$ Punkten ergeben $0$ Punkte die Note $1$ und $20$ Punkte die Note $6$. Es gibt nur ganze und halbe Punkte. Die Notenskala ist linear.
-\begin{parts}
-	\part[3] Gib die Gleichung der Funktion an die jeder Punktzahl $P$ eine Note $N$ zuordnet.
-	\part[1] Welche Note erhält Alice für $15$ erreichte Punkte?
-	\part[1] Welche Punktzahl benötigt Leon mindestens, um eine Note $4$ zu erreichen?
-	\part[2] Am gleichen Tag schrieb die Klasse ein Deutschdiktat. Dabei wird pro zwei Fehler eine halbe Note abgezogen.  Mit zwei Fehlern bekommt man immer noch die Note $6$. Stelle eine zweite Funktionsgleichung auf, die jeder Anzahl Fehler die Note zuordnet.
-	\part[2] Wie viele Fehler dürfen im Diktat gemacht werden und wie viele Punkte müssen in der Mathematikprüfung erreicht werden, um in beiden Prüfungen die exakt gleiche Note zu erhalten?
-\end{parts}
-\vspace*{7pt}\antwort{14.5}
+\question[5]
+\begin{minipage}{0.6\linewidth}
+	Von der nebenstehenden Figur wissen wir, dass $\overline{BC}$ parallel zu $\overline{DE}$ und $\overline{CD}$ parallel zu $\overline{EF}$ sind. Weiter sind $\overline{AF}=4$ und $\overline{DF}=3$ lang. Wie lang ist die Strecke $\overline{BD}$?
+\end{minipage}
+\hfill
+\begin{minipage}{0.38\linewidth}
+	\centering\includegraphics[scale=0.65]{doppelterstrahlensatz.png}
+\end{minipage}
+\vspace*{7pt}\antwort{19.5}
+
+%---------------------------------------------------------
+\newpage
+\question[4]
+Gegeben ist ein gleichschenkliges Dreieck $\triangle ABC$ mit Höhe $h_a=36$cm und Basis $a=12$cm. Das einbeschriebene Rechteck $DEFG$ hat einen Umfang von $30$cm. Berechne die Länge und Breite des Rechtecks.
+\begin{figure}[H]
+	\centering\includegraphics[scale=0.8]{rechteckstrahlensatz.png}
+\end{figure}
+\vspace{5pt}\antwort{17.5}
+
+%---------------------------------------------------------
+\newpage
+\question[3]
+\begin{minipage}{0.6\linewidth}
+	Die Fläche des kleineren Dreiecks beträgt $36\%$ des grösseren. Berechne $x$.
+\end{minipage}
+\hfill
+\begin{minipage}{0.35\linewidth}
+	\centering\includegraphics[scale=0.4]{ähnlicheflächen.png}
+\end{minipage}
+\vspace*{7pt}\antwort{19.5}
 
 
 %---------------------------------------------------------
