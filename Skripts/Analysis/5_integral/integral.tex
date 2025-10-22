@@ -3,11 +3,11 @@
 \input{../../../Header/styleScript.sty}
 \input{../../../Header/headerScript.sty}
 \input{../../../Header/mathexpressions.sty}
-
+\graphicspath{{images/}}
 
 \newcommand{\Skriptname}{Integralrechnung}
 \newcommand{\Autor}{Jonas Guler (Gu)}
-\newcommand{\version}{\textit{v}1.0}
+\newcommand{\version}{\textit{v}1.1}
 
 \begin{document}
 \begin{titlepage}
@@ -56,16 +56,17 @@
 		\end{minipage}
 	\end{aufgabe}
 	Aus diesen beiden Beispielen wird also klar, die Berechnung der Fläche unter einem Graphen enthält wertvolle Informationen und ist deshalb eines der zentralen Gebieten der Mathematik. In den obigen beiden Beispielen sind wir mit den Mitteln aus der Geometrie (Flächenformel eines Rechtecks bzw. Trapez) in der Lage die Flächen zu berechnen. Sobald jedoch die Funktionen nicht mehr gerade sondern gebogen sind. Reichen diese Mittel nicht mehr aus. Wie diese Berechnung aussieht wird im nächsten Abschnitt erläutert.
+	\newpage
 
 
 \section{Der Weg zum bestimmten Integral}
 	\begin{wrapfigure}{r}{0.4\textwidth}
-		\center{\includegraphics[width=0.3\textwidth]{images/x2_ausgang.png}}
+		\center{\includegraphics[width=0.3\textwidth]{x2_ausgang.png}}
 	\end{wrapfigure}
 	Wir möchten also die Fläche unter einer Kurve berechnen. Dazu betrachten wir die Funktion $f(x)=x^2$ und möchten dabei die eingeschlossene Fläche zwischen $a=0$ und $b=2$. Die Situation ist nebenan dargestellt. Weil die blau markierte Figur auf der einen Seite mit durch den Parabelbogen begrenzt ist, können wir ihren Flächeninhalt mit unseren bisherigen geometrischem Mittel nicht exakt berechnen. Daher möchten wir den Flächeninhalt näherungsweise berechnen und schrittweise verbessern. Die Idee, die wir verfolgen wollen, ist die Fläche in $n=4$ gleich breite, senkrechte Streifen zu zerlegen. Jeder dieser Streifen hat auf der $x$-Achse eine Breite von $\frac{1}{2}$. Die Höhe der Streifen wird in zwei verschiedenen Varianten berechnet.\vspace{10pt}\newline
 	\begin{minipage}{0.8\linewidth}
 		\textbf{Untersumme:}
-		\center{\includegraphics[width=0.7\textwidth]{images/x2_USumme4.png}}\newline
+		\center{\includegraphics[width=0.7\textwidth]{x2_USumme4.png}}\newline
 		Die Höhe jedes Rechtecks ist gleich dem \textbf{kleinstmöglichen} Funktionswert $f(x)$ in jedem Streifen. Berechnen wir also die Höhen der Rechtecke abhängig von der Funktion $f$:
 		\begin{enumerate}[label=\ ]\begin{multicols}{2}
 				\item $f(0)=$ \newline
@@ -77,7 +78,7 @@
 	\hfill
 	\begin{minipage}{0.8\linewidth}
 		\textbf{Obersumme:}
-		\center{\includegraphics[width=0.7\textwidth]{images/x2_OSumme4.png}}\newline
+		\center{\includegraphics[width=0.7\textwidth]{x2_OSumme4.png}}\newline
 		Die Höhe jedes Rechtecks ist gleich dem \textbf{grösstmöglichen} Funktionswert $f(x)$ in jedem Streifen. Im Unterschied zum ersten befinden sich die Höhen hier auf der rechten Seite.
 		\begin{enumerate}[label=\ ]\begin{multicols}{2}
 				\item $f(0.5)=$ \newline
@@ -104,7 +105,7 @@
 	Zusammenfassend können wir also sagen, dass die blau eingefärbte Fläche mit den folgenden Ungleichungen angenähert werden kann. \[\lineortext{1.75} < A < \lineortext{3.75}\] Wir stellen aber auch fest, dass die Genauigkeit für diese Fläche noch sehr ungenau ist. Wir könnten versuchen, dies mit dem Durchschnitt beider Resultate schätzungsweise verbessern aber auch dies bietet nicht die zum Ziel gesetzte exakte Berechnung der Fläche.\newline
 	Wir können aber ähnlich wie wir dies bereits bei mehreren Stellen schon gemacht haben die Anzahl der Rechtecke verdoppeln. Dabei wird die Breite der Rechtecke halbiert und und somit wird auch die Annäherung besser sein. Damit haben wir eine Breite der Rechtecke von $\frac{1}{4}$.
 	\begin{minipage}{0.8\linewidth}
-		\center{\includegraphics[width=0.7\textwidth]{images/x2_USumme8.png}}\newline
+		\center{\includegraphics[width=0.7\textwidth]{x2_USumme8.png}}\newline
 		Die Höhe der Rechtecke ist also:
 		\begin{enumerate}[label=\ ]\begin{multicols}{2}
 				\item $f(0)=0$
@@ -124,7 +125,7 @@
 	\end{minipage}
 	\hfill
 	\begin{minipage}{0.8\linewidth}
-		\center{\includegraphics[width=0.7\textwidth]{images/x2_OSumme8.png}}\newline
+		\center{\includegraphics[width=0.7\textwidth]{x2_OSumme8.png}}\newline
 		Die Höhe der Rechtecke ist also:
 		\begin{enumerate}[label=\ ]\begin{multicols}{2}
 				\item $f(\frac{1}{4})=\frac{1}{16}$
@@ -166,33 +167,31 @@
 	Um das Konzept zu festigen, folgen einige in Schwierigkeit aufbauende Aufgaben.
 
 	\begin{aufgabe}
-		Betrachte die Funktion $f(x)=x$ im Bereich $a=0$ und $b=1$.
-		\begin{enumerate}[label=\alph*)]
-			\item Teile das Intervall in $5$ gleich breite Teile und berechne die Fläche unter $f$ mithilfe der Ober- und Untersumme.
-			\item Da $f$ eine lineare Funktion ist, sind wir in der Lage, die Fläche exakt berechnen. Vergleiche deine Lösung mit den Annäherungen aus $a)$.
-		\end{enumerate}
-	\end{aufgabe}
-	\begin{aufgabe}
-		Betrachte die Funktion $f(x)=\frac{1}{2}x+2$ im Bereich $a=1$ und $b=4$.
-		\begin{enumerate}[label=\alph*)]
-			\item Teile das Intervall in $5$ gleich breite Teile und berechne die Fläche unter $f$ mithilfe der Ober- und Untersumme.
-			\item Die Anzahl der Rechtecke wurde bewusst mühsam gewählt, um dich zu zwingen, genau zu überlegen, wie breit ein Rechteck ist. Wie breit ist ein Rechteck, wenn wir die Breite abhängig von der Anzahl Rechtecke $n$ beschreiben wollen.
-			\item Da $f$ eine lineare Funktion ist, sind wir in der Lage, die Fläche exakt berechnen. Vergleiche deine Lösung mit den Annäherungen aus $a)$.
-		\end{enumerate}
-	\end{aufgabe}
-	\begin{aufgabe}
-		Betrachte die Funktion $f(x)=\frac{1}{x}$ im Bereich $a=2$ und $b=4$.\newline
-		\begin{minipage}{0.55\linewidth}
+		\begin{enumerate}
+			\item Betrachte die Funktion $f(x)=x$ im Bereich $a=0$ und $b=1$.
 			\begin{enumerate}[label=\alph*)]
-				\item Der Graph der Funktion fällt, deshalb überlege dir gut, was die Höhe der Rechtecke ist.
-				\item Benutze $6$ Rechtecke, um die Ober- und Untersumme zu berechnen.
-				\item Benutze das folgende \href{https://www.geogebra.org/m/vzjzrfdj}{Geogebra-Applet}\footnotemark, um deine Berechnungen zu überprüfen.
+				\item Teile das Intervall in $5$ gleich breite Teile und berechne die Fläche unter $f$ mithilfe der Ober- und Untersumme.
+				\item Da $f$ eine lineare Funktion ist, sind wir in der Lage, die Fläche exakt berechnen. Vergleiche deine Lösung mit den Annäherungen aus $a)$.
 			\end{enumerate}
-		\end{minipage}
-		\hfill
-		\begin{minipage}{0.4\linewidth}
-			\centering\includegraphics[scale=0.25]{images/aufg_OberUnter.png}
-		\end{minipage}
+			\item Betrachte die Funktion $f(x)=\frac{1}{2}x+2$ im Bereich $a=1$ und $b=4$.
+			\begin{enumerate}[label=\alph*)]
+				\item Teile das Intervall in $5$ gleich breite Teile und berechne die Fläche unter $f$ mithilfe der Ober- und Untersumme.
+				\item Die Anzahl der Rechtecke wurde bewusst mühsam gewählt, um dich zu zwingen, genau zu überlegen, wie breit ein Rechteck ist. Wie breit ist ein Rechteck, wenn wir die Breite abhängig von der Anzahl Rechtecke $n$ beschreiben wollen.
+				\item Da $f$ eine lineare Funktion ist, sind wir in der Lage, die Fläche exakt berechnen. Vergleiche deine Lösung mit den Annäherungen aus $a)$.
+			\end{enumerate}
+			\item Betrachte die Funktion $f(x)=\frac{1}{x}$ im Bereich $a=2$ und $b=4$.\vspace*{11pt}\newline
+			\begin{minipage}{0.55\linewidth}
+				\begin{enumerate}[label=\alph*)]
+					\item Der Graph der Funktion fällt, deshalb überlege dir gut, was die Höhe der Rechtecke ist.
+					\item Benutze $6$ Rechtecke, um die Ober- und Untersumme zu berechnen.
+					\item Benutze das folgende \href{https://www.geogebra.org/m/vzjzrfdj}{Geogebra-Applet}\footnotemark, um deine Berechnungen zu überprüfen.
+				\end{enumerate}
+			\end{minipage}
+			\hfill
+			\begin{minipage}{0.4\linewidth}
+				\centering\includegraphics[scale=0.25]{aufg_OberUnter.png}
+			\end{minipage}
+		\end{enumerate}
 	\end{aufgabe}
 	\footnotetext{\url{https://www.geogebra.org/m/vzjzrfdj}}
 	\begin{definition}[bestimmtes Integral]
@@ -200,12 +199,12 @@
 		\[\int_a^b f(x)\:\d{x}=\lim_{n\to\infty}U_n=\lim_{n\to\infty}O_n\]
 
 		\textit{Sprich:} Integral $f(x)$ für $x$ von $a$ bis $b$\newline
-		\textbf{TR:} menu $\to\:4\:\to\:3$
+		\textbf{TR:} Menü $\to\:4\:\to\:3$
 	\end{definition}
+	Dabei müssen wir aber folgende Spezialfälle sauber auseinanderhalten:
 	\begin{enumerate}[label=\Alph*)]
-		\item Spezialfall $a=b$:\newline Falls die beiden Grenze zusammenfallen, so ist die Breite der Rechtecke $\lineortext{\frac{b-a}{n}=0}$ und damit sind sowohl die Ober- als auch die Untersumme ebenfalls gleich $0$. Das heisst: \[\lineortext{\int_a^af(x)\:\d{x}=0}.\]
-		\item Spezialfall $a>b$:\newline Falls $a$ grösser ist als $b$, so gilt für die Breite der Rechtecke $\lineortext{\frac{b-a}{n}<0}$ und damit ändert sich auch das Vorzeichen des Integrals
-		\[\lineortext{\I_a^b f(x)\:\d{x} = -\int_b^a f(x)\:\d{x}}.\]
+		\item Spezialfall $a=b$:\newline Falls die beiden Grenze zusammenfallen, so ist die Breite der Rechtecke $\gap{2}$ und damit sind sowohl die Ober- als auch die Untersumme ebenfalls gleich $0$. Das heisst: \[\gap{5}.\]
+		\item Spezialfall $a>b$:\newline Falls $a$ grösser ist als $b$, so gilt für die Breite der Rechtecke $\gap{2}$ und damit ändert sich auch das Vorzeichen des Integrals \[\gap{5}.\]
 	\end{enumerate}
 	\begin{aufgabe}
 		Skizziere für die folgenden Funktionen den Graphen und markiere darin die gesuchte Fläche.
@@ -220,47 +219,45 @@
 				\item $\displaystyle\int_1^\pi\sin{x}\:\d{x}$
 		\end{multicols}\end{enumerate}
 	\end{aufgabe}
+	\newpage
 
 
-\newpage
 \section{Die Stammfunktion}
 	\begin{definition}[Stammfunktion]
 		Eine Funktion $F$ heisst Stammfunktion zu $f$, falls $F'=f$ gilt.
 	\end{definition}
 	Das heisst, die Ableitung der Stammfunktion ist die gegebene Funktion. Aus diesem Grund reduziert sich die Suche nach einer Stammfunktion auf das Problem der Umkehrung des Ableitens. Versuchen wir also einige Ableitungen umzudrehen.
 	\begin{aufgabe}
-		Suche für die folgenden Polynome $f$ eine Funktion $F$, deren Ableitung $F'=f$ ist.
-		\begin{enumerate}[label=\alph*)]\begin{multicols}{3}
+		\begin{enumerate}
+			\item Suche für die folgenden Polynome $f$ eine Funktion $F$, deren Ableitung $F'=f$ ist.
+			\begin{enumcols}[3]
 				\item $f(x)=x$
 				\item $f(x)=x^2$
 				\item $f(x)=x^3$
 				\item $f(x)=x^n$
 				\item $f(x)=3x^4+x^2$
 				\item $f(x)=4x^5-6x^2$
-		\end{multicols}\end{enumerate}
-		Wir haben also bei $d)$ eine allgemeine Form für ein Polynom gefunden und gleich wie beim Ableiten kann auch hier summandenweise vorgegangen werden.
-	\end{aufgabe}
-	\begin{aufgabe}
-		Suche auch für die folgenden speziellen Funktionen eine Stammfunktion zu finden.
-		\begin{enumerate}[label=\alph*)]\begin{multicols}{3}
+			\end{enumcols}
+			Wir haben also bei $d)$ eine allgemeine Form für ein Polynom gefunden und gleich wie beim Ableiten kann auch hier summandenweise vorgegangen werden.
+			\item Suche auch für die folgenden speziellen Funktionen eine Stammfunktion zu finden.
+			\begin{enumcols}[3]
 				\item $f(x)=\e^x$
 				\item $f(x)=\sqrt{x}$
 				\item $f(x)=\frac{1}{x}$
 				\item $f(x)=\sin{x}$
 				\item $f(x)=\cos{x}$
-		\end{multicols}\end{enumerate}
-	\end{aufgabe}
-	\begin{aufgabe}
-		\begin{enumerate}[label=\alph*)]
-			\item Betrachte die Funktion $F_1(x)=4x^2+3$. Ist $F_1$ eine Stammfunktion von $f(x)=8x$?
-			\item Betrachte die Funktion $F_2(x)=4x^2+12$. Ist $F_2$ eine Stammfunktion von $f(x)=8x$?
-			\item Betrachte die Funktion $F_3(x)=4x^2+c$ für $c\in\R$. Ist $F_3$ eine Stammfunktion von $f(x)=8x$?
-			\item Welches der obigen Funktionen ist nun die korrekte Lösung?
+			\end{enumcols}
+			\item \begin{enumerate}[label=\alph*)]
+				\item Betrachte die Funktion $F_1(x)=4x^2+3$. Ist $F_1$ eine Stammfunktion von $f(x)=8x$?
+				\item Betrachte die Funktion $F_2(x)=4x^2+12$. Ist $F_2$ eine Stammfunktion von $f(x)=8x$?
+				\item Betrachte die Funktion $F_3(x)=4x^2+c$ für $c\in\R$. Ist $F_3$ eine Stammfunktion von $f(x)=8x$?
+				\item Welches der obigen Funktionen ist nun die korrekte Lösung?
+			\end{enumerate}
 		\end{enumerate}
 	\end{aufgabe}
 	\begin{satz}
 		Falls $F$ eine beliebige Stammfunktion von $f$ ist und $c\in\R$ eine konstante Zahl, dann ist jede Funktion der Form $F(x)+c$ eine Stammfunktion von $f$.
-	\end{satz}\newpage
+	\end{satz}
 	\begin{notation}
 		Das unbestimmte Integral einer Funktion $f$ ist die Menge aller Stammfunktionen $F$.\\ Schreibweisen:
 		\[\int f(x)\:\d x \text{ oder } F(x)+c\]
@@ -301,16 +298,18 @@
 		\begin{tabular}{p{2cm}|p{2cm}|p{3cm}|c}
 			$f'$ & $f=F'$ & $F$ & Bedingung \\\hline
 			$n\*x^{n-1}$ & $x^n$ & $\frac{1}{n+1}\* x^{n+1}+c$ & $n\in\Z\:\backslash\:\{-1\}$ \\
-			$\frac{1}{2\sqrt{x}}$ & $\sqrt{x}$ & $\lineortext{\frac{2}{3}x^\frac{3}{2}+c}$ & \\
-			$\exp{x}$ & $\exp{x}$ & $\lineortext{\exp{x}+c}$ & \\
-			$\frac{1}{x}$ & $\ln{x}$ & $\lineortext{x\*\log{x}-x+c}$ & \\
-			$\cos{x}$ & $\sin{x}$ & $\lineortext{-\cos{x}+c}$ & \\
-			$-\sin{x}$ & $\cos{x}$ & $\lineortext{\sin{x}+c}$ & \\
+			$\frac{1}{2\sqrt{x}}$ & $\sqrt{x}$ & $\gap{2.9}$ & \\
+			$\exp{x}$ & $\exp{x}$ & $\gap{2.9}$ & \\
+			$\frac{1}{x}$ & $\ln{x}$ & $\gap{2.9}$ & \\
+			$\cos{x}$ & $\sin{x}$ & $\gap{2.9}$ & \\
+			$-\sin{x}$ & $\cos{x}$ & $\gap{2.9}$ & \\
 			$\frac{1}{\cos{x}^2}$ & $\tan{x}$ & $-\ln{\cos{x}}+c$ & \\
 			$\frac{a}{2\sqrt{a\*x}}$ & $\sqrt{a\*x}$ & $\frac{2}{3}\sqrt{a}\*x^\frac{3}{2}+c$ & $a>0$ \\
 		\end{tabular}
 	\end{table}
 	\endgroup\newpage
+
+
 
 \section{Der Hauptsatz der Differential und Integralrechnung}
 	Wir stehen also vor einem Problem. Wir wissen, dass die Fläche unter einer Kurve mit Hilfe von Rechtecken angenähert werden kann. Leider ist dies aber extrem zeitaufwändig und oftmals auch algebraisch schwierig zu berechnen. Erstaunlicherweise ist die Lösung dieses Problems sehr einfach.
@@ -320,7 +319,7 @@
 	\end{satz}
 	\begin{beweis}
 		\begin{wrapfigure}{r}{0.4\textwidth}
-			\center{\includegraphics[width=0.3\textwidth]{images/flächenfunktion.png}}
+			\center{\includegraphics[width=0.3\textwidth]{flächenfunktion.png}}
 		\end{wrapfigure}
 		Die Funktion \[A(x)=\int_a^x f(t)\d{t}\] beschreibt die Fläche unter dem Graph von $f$ zwischen $a$ und $x$. Im ersten Schritt müssen wir jedoch überprüfen, ob $A(x)$ eine Stammfunktion von $f$ ist. Dabei genügt es zu zeigen, dass $A(x)$ abgeleitet gleich $f$ ist.
 		\vspace{6cm}\newline
@@ -348,9 +347,10 @@
 			\item $\int_1^2\left(\e^x+\frac{1}{x}\right)\d{x}$
 		\end{enumcols}
 	\end{aufgabe}
+	\newpage
 
 
-\newpage
+
 \section{Anwendungen des Integrals}
 	Im Folgenden werden wir einige Eigenschaften des Integrals im Zusammenhang mit Flächenberechnungen kennenlernen.
 \subsection{Fläche zwischen Graph und $x$-Achse}
@@ -360,8 +360,8 @@
 		\begin{table}[H]
 			\centering
 			\begin{tabular}{p{7cm} c}
-				\includegraphics[scale=0.3]{images/flächePosNeg1.png} & \includegraphics[scale=0.3]{images/flächePosNeg2.png} \\
-				\includegraphics[scale=0.3]{images/flächePosNeg3.png} & \includegraphics[scale=0.3]{images/flächePosNeg4.png}
+				\includegraphics[scale=0.3]{flächePosNeg1.png} & \includegraphics[scale=0.3]{flächePosNeg2.png} \\
+				\includegraphics[scale=0.3]{flächePosNeg3.png} & \includegraphics[scale=0.3]{flächePosNeg4.png}
 			\end{tabular}
 		\end{table}
 		\begin{enumerate}[label=\alph*)]
@@ -373,9 +373,9 @@
 	\begin{algo}
 		Das Verfahren zur Berechnung des Flächeninhalts $A$ zwischen dem Graphen einer Funktion und der $x$-Achse kann in folgende $3$ Schritte aufgeteilt werden.
 		\begin{enumerate}
-			\item \lineortext{Berechne alle Nullstellen $x_1,\ldots,x_n$ von $f$ im Intervall $\left[a,b\right]$}
-			\item \lineortext{Berechne die Beträge aller Integrale zwischen den Nullstellen}
-			\item \lineortext{Summiere alle Teilresultate:}\[\lineortext{A=\abs*{\int_a^{x_1}f(x)\d{x}}+\ldots+\abs*{\int_{x_n}^b f(x)\d{x}}}\]
+			\item \gap{14}
+			\item \gap{14}
+			\item \gap{14}\vspace{7pt}\newline\gap{14}
 		\end{enumerate}
 	\end{algo}
 	\begin{aufgabe}
@@ -414,9 +414,9 @@
 	\begin{algo}
 		Das Verfahren zur Berechnung der Fläche zwischen zwei Graphen kann ebenfalls in $3$ Schritte beschrieben werden:
 		\begin{enumerate}
-			\item \lineortext{Berechne alle Schnittstellen von $f$ und $g$ im Intervall}
-			\item \lineortext{Berechne die Beträge aller Teilintegrale der Differenzfunktion}
-			\item \lineortext{Summiere die Teilresultate:}\[\lineortext{A=\abs*{\int_a^{s_1}\left(f(x)-g(x)\right)\d{x}}+\ldots+\abs*{\int_{s_n}^b \left(f(x)-g(x)\right)\d{x}}}\]
+			\item \gap{14}
+			\item \gap{14}
+			\item \gap{14}\vspace{7pt}\newline\gap{14}
 		\end{enumerate}
 	\end{algo}
 	\begin{aufgabe}
@@ -440,7 +440,7 @@
 		\begin{enumerate}[label=\alph*)]
 			\item Berechnen Sie das Volumen des abgebildeten Zylinders.
 			\begin{figure}[H]
-				\includegraphics[scale=0.1]{images/zylinder.jpeg}
+				\includegraphics[scale=0.1]{zylinder.jpeg}
 			\end{figure}
 			\item Wir sehen also, dass ein Zylinder als Rotationskörper einer konstanten Funktion aufgefasst werden kann. Drücken Sie das Volumen des Zylinders in Abhängigkeit einer konstanten Funktion $f(x)$ aus.
 		\end{enumerate}
@@ -553,7 +553,7 @@
 		\hfill
 		\begin{minipage}{0.35\linewidth}
 			\begin{figure}[H]
-				\centering\includegraphics[scale=0.5]{images/keplerfass.jpeg}
+				\centering\includegraphics[scale=0.5]{keplerfass.jpeg}
 			\end{figure}
 		\end{minipage}
 	\end{aufgabe}\newpage
