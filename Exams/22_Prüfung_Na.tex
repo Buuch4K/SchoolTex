@@ -3,11 +3,12 @@
 \input{../Header/styleExam.sty}
 \input{../Header/mathexpressions.sty}
 \input{../Header/headerExam.sty}
+\graphicspath{{Analysis/data-analysis/},{Algebra/data-algebra/},{Geometrie/data-geometrie/}}
 %=========================================================
 \newcommand{\theme}{Differentialrechnung}
 \newcommand{\teacher}{Jonas Guler}
-\newcommand{\class}{3Na}
-\renewcommand{\date}{12.06.25}
+\newcommand{\class}{4Na}
+\renewcommand{\date}{03.11.25}
 %=========================================================
 \begin{document}
 \fontsize{14}{14}\selectfont
@@ -33,8 +34,8 @@
     \vspace{5pt}
     Der Rechenweg muss \textbf{vollständig und nachvollziehbar} sein.\\
     Lösen Sie die Prüfung mit einen schwarzen oder blauen Kugelschreiber.\\
-    Als Hilfsmittel ist nur der Taschenrechner erlaubt.\\
-    In den {\bf Aufgaben 3, 4 und 7} werden Lösungswege mit Hilfe der CAS-Funktionen des Taschenrechners {\bf nicht} bewertet.
+    Als Hilfsmittel ist der Taschenrechner und das Formelbüchlein erlaubt.\\
+    In den {\bf Aufgaben 1 bis 3} werden Lösungswege mit Hilfe des Taschenrechners {\bf nicht} bewertet.
 \end{center}
 \rule[1ex]{\textwidth}{1pt}
 
@@ -48,63 +49,62 @@
 %=========================================================
 %-------------------TESTFRAGEN
 %=========================================================
-\question[2]
-Erkläre einem Laien in eigenen Worten die Begriffe \flqq konvex\frqq\: und \flqq konkav\frqq. Mache dazu eine Skizze.
-\vspace{5pt}\antwort{10}
-\vfill
-\question[2] %Barth3 Nachtest Kap. 3 A5a
-Nimm zur folgenden Aussage Stellung und beurteile, was an der Aussage wahr ist oder falsch.
-\[\text{\flqq Ist $f(x)=x^7$, so ist die 7. Ableitung dieser Funktion nach $x$ gleich 0.\frqq}\]
-\antwort{9.5}
-
-
-%---------------------------------------------------------
-\newpage
-\noaddpoints
-\question[\totalpoints] %Barth3 Nachtest Kap. 3 A4
-\addpoints
-Berechne die erste Ableitungsfunktion schrittweise von Hand, in dem du bei jeder Umformung deutlich machst, welche Regel (SR = Summenregel, FR = Faktorregel, PR = Potenzregel, AK = Ableitung einer Konstanten) verwendet wird.
-\begin{parts}
-	\part[2] $f(x)=x^7-5.7x^2+1$
-	\part[2] $g(x)=\frac{x^4+\sqrt{2}}{3}$
-	\part[2] $h(x)=\frac{1}{5}x^5+2x^4-\sqrt[3]{x}$
-\end{parts}
-\vspace{5pt}\antwort{20}
-
-%---------------------------------------------------------
-\newpage
-\question[4] %DMK Ana S114 A399b
-Gegeben ist die Funktion $f(x)=\frac{-1}{2}x^2-4x$. Bestimme die Gleichungen der Tangente $t$ im Punkt $x_0=6$.
-\vspace{5pt}\antwort{10.5}
-\vfill
-\question[4]
-Für welchen Wert des Parameters $a\in\R$ berührt der Graph der Funktion $f(x)=\frac{1}{2}x^3+ax^2+32x-48$ an der Stelle $x_0=4$ die x-Achse?
-\vspace{5pt}\antwort{10.5}
-
-%---------------------------------------------------------
-\newpage
 \noaddpoints
 \question[\totalpoints]
 \addpoints
-Betrachten wir die folgende Funktion $f(x)=x^5-3x^4+5x^2+2$.
+Bestimme die erste Ableitung der folgenden Funktionen schrittweise von Hand. Gib in deinem Lösungsweg an, welche der folgenden Ableitungsregeln (PR = Produktregel, QR = Quotientenregel, KR = Kettenregel) verwendet wird. Die Resultate müssen \textbf{nicht} vereinfacht werden.
 \begin{parts}
-	\part[4] Finde die Gleichung der Normalen an den Graphen von $f$ im Punkt $P(1\;\vert\; y)$.
-	\part[2] Unter welchem spitzen Winkel schneidet die Normale die $x-$Achse?
+	\part[2] $\displaystyle f(x)=(4x^2-3x+2)\*(x^5+3x^3)$
+	\part[2] $\displaystyle f(x)=\frac{2x^2+3}{4x-2+\exp{x}}$
+	\part[2] $\displaystyle f(x)=\exp{\frac{1}{2}x^2+6x-1}$
+	\part[2] $\displaystyle f(x)=\sqrt{\frac{2(x^6-x^3)}{x^2}}$
 \end{parts}
-\vspace{5pt}\antwort{21.5}
+\vspace{7pt}\antwort{18.5}
 
 
 %---------------------------------------------------------
 \newpage
-\question[4] %Rhyn Analysis S18 A11
-Welche Funktionsgleichung hat die Gerade, welche die Parabel $p(x)=2x^2-3x$ berührt und die Gerade $g(x)=-\frac{1}{5}x+1$ rechtwinklig schneidet?
-\vspace{5pt}\antwort{23.5}
+\question[3]
+Berechne $a$ so, dass die Kurve $\displaystyle f(x)=\frac{a\*x+4}{x^3}$ an der Stelle $x_0=2$ ein Extremum besitzt. Die Art des Extremum muss \textbf{nicht} bestimmt werden.
+\vspace{7pt}\antwort{10}
+\vfill
+\question[3]
+Gegeben ist die Funktion $\displaystyle f(x)=\frac{x}{x^2-3x}$. Bestimme die Gleichung der Normalen an den Graphen im Punkt $P(1\:\vert\:y_p)$.
+\vspace{7pt}\antwort{10}
+
 
 %---------------------------------------------------------
 \newpage
-\question[6] %Barth3 Nachtest Kap. 3 A13d
-Untersuche die folgende Funktion \[f(x)=\frac{1}{4}x^5-x^3+x.\] und führe eine vollständige Kurvendiskussion durch.
-\vspace{5pt}\antwort{21.5}
+\question[4] %DMK Ana S116 A420
+Eine zur $y-$Achse symmetrische Polynomfunktion $4.$ Grades geht durch den Punkt $P(-1\:\vert\:9)$ und besitzt beim Punkt $Q(2\:\vert\:3)$ die Steigung $m=4$. Wie lautet die Funktionsgleichung?
+\vspace{5pt}\antwort{9.5}
+\vfill
+\question[4] %DMK Ana S115 A410
+Gegeben ist die Funktion $f(x)=x+\frac{1}{1+x}$. Finde alle Hoch und Tiefpunkte der Funktionsgraphen.
+\vspace{5pt}\antwort{9.5}
+
+%---------------------------------------------------------
+\newpage
+\question[4] % Barth3 Nachtest Kap. 3 A18
+Betrachten Sie die beiden abgebildeten Graphenabschnitte. In der Abbildung ist angegeben, um welche Funktionen es sich dabei handelt. Jemand wählt eine beliebige Stelle $u$ im Intervall $\left[0,\frac{\pi}{2}\right]$und zeichnet ein Rechteck wie in der Abbildung ein. Für welches $u$ aus diesem Intervall wird der Flächeninhalt des Rechteckes maximal sein?
+\begin{figure}[H]
+	\centering\includegraphics[width=0.5\linewidth]{extremal10.png}
+\end{figure}
+\vspace{5pt}\antwort{16}
+
+
+%---------------------------------------------------------
+\newpage
+\question[4]
+Einer Halbkugel mit Radius $R=5$ soll ein stehender Zylinder mit maximalen Volumen einbeschrieben werden. Welche Abmessungen muss dieser Zylinder haben? Das Maximum muss \textbf{nicht} überprüft werden.
+\begin{figure}[H]
+	\centering\includegraphics[width=0.4\linewidth]{zylinkugel.png}
+\end{figure}
+\vspace{5pt}\antwort{18}
+
+%---------------------------------------------------------
+\newpage
+{\bf Reserve:}\newline\antwort{24.5}
 
 
 
