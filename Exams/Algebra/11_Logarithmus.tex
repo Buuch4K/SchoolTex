@@ -3,6 +3,7 @@
 \input{../../Header/styleExam.sty}
 \input{../../Header/headerQuestion.sty}
 \input{../../Header/mathexpressions.sty}
+\graphicspath{{data-algebra/}}
 %=========================================================
 \newcommand{\theme}{Logarithmus}
 \newcommand{\teacher}{Jonas Guler}
@@ -28,13 +29,13 @@
     \setcounter{partno}{2}
     \part[2] Welcher der folgenden Ausdrücke passt nicht dazu? Begründe deine Antwort.
     \[\Log{4}{2}\quad\Log{4}{\frac{1}{16}}\quad\Log{2}{0.125}\quad\Log{3}{\frac{1}{81}}\]
-    \part Welcher der folgenden Ausdrücke passt nicht dazu? Begründe deine Antwort.
+    \part[2] Welcher der folgenden Ausdrücke passt nicht dazu? Begründe deine Antwort.
     \[\Log{4}{2}\quad\Log{7}{49}\quad\Log{2}{8}\quad\Log{3}{81}\]
 \end{parts}
 
 \begin{parts}
     \setcounter{partno}{4}
-    \part[4] Löse die folgende Exponantialgleichung ohne Verwendung des Taschenrechners nach $x$ auf.
+    \part[4] Löse die folgende Exponentialgleichung ohne Verwendung des Taschenrechners nach $x$ auf.
     \[7^{2x-1}\*343^{3x+5}=49^{2x-1}\]
     \begin{small}
         Bewertung: Lösungen ohne Lösungsweg ergeben keine Punkte.
@@ -42,10 +43,24 @@
 \end{parts}
 \begin{parts}
     \setcounter{partno}{5}
-    \part[4] Löse die folgende Exponantialgleichung ohne Verwendung von \flqq solve\frqq\: nach $x$ auf. \[5^{x+2}\*125^{2-x}=25^x\]
+    \part[4] Löse die folgende Exponentialgleichung ohne Verwendung von \flqq solve\frqq\: nach $x$ auf. \[5^{x+2}\*125^{2-x}=25^x\]
     \begin{small}
         Bewertung: Lösungen ohne Lösungsweg ergeben keine Punkte.
     \end{small}
+\end{parts}
+\begin{parts}
+	\setcounter{partno}{6}
+	\part[4] Löse die folgende Exponentialgleichung ohne Verwendung von \flqq solve\frqq\: nach $x$ auf. \[4^{x-7}\*16^{2x+1}=64^{x+2}\]
+	\begin{small}
+		Bewertung: Lösungen ohne Lösungsweg ergeben keine Punkte.
+	\end{small}
+\end{parts}
+\begin{parts}
+	\setcounter{partno}{7}
+	\part[4] Löse die folgende Exponentialgleichung ohne Verwendung von \flqq solve\frqq\: nach $x$ auf. \[3^{2x-1}\*\left(\frac{1}{9}\right)^{7-x}=\left(\sqrt[4]{3}\right)^x\]
+	\begin{small}
+		Bewertung: Lösungen ohne Lösungsweg ergeben keine Punkte.
+	\end{small}
 \end{parts}
 
 
@@ -58,6 +73,7 @@ Welche der folgenden Ausdrücke ist wahr? Begründe deine Antwort.
     \part $\Log{a}{b}=\frac{\ln{a}}{\ln{b}}$
     \part $\Log{2}{x}+\Log{3}{y}=\Log{2}{x\*y}$
 \end{parcols}
+
 \question[4]
 Begründe, welche der folgenden Ausdrücke wahr sind und korrigiere die falschen Aussagen.
 \begin{parcols}[2]
@@ -66,6 +82,7 @@ Begründe, welche der folgenden Ausdrücke wahr sind und korrigiere die falschen
     \part $\Log{2}{x}+\Log{3}{y}=\Log{2}{xy}$
     \part $\Log{a}{b}=\frac{\ln{a}}{\ln{b}}$
 \end{parcols}
+
 \question[4]
 Begründe, welche der folgenden Ausdrücke wahr sind und korrigiere die falschen Aussagen.
 \begin{parcols}[2]
@@ -74,6 +91,15 @@ Begründe, welche der folgenden Ausdrücke wahr sind und korrigiere die falschen
     \part $\Log{2}{x}+\Log{3}{y}=\Log{2}{xy}$
     \part $\Log{a}{c\*u}=c\*\Log{a}{u}$
 \end{parcols}
+
+\question[4]
+In das leere Feld ist jeweils ein Ausdruck so einzufüllen, dass insgesamt eine gültige Aussage entsteht.
+\begin{parts}
+	\part $\displaystyle\Log{a}{\gap{3}}=2\*\Log{a}{p}-3\*\Log{a}{q}-4\*\Log{a}{r}$\newline
+	\part $\displaystyle\Log{a}{\sqrt[3]{q^4}}=\gap{3}\*\Log{a}{q}$\newline
+	\part $\displaystyle\Log{a}{a^{-\frac{9}{13}}}=\gap{3}$\newline
+	\part $\displaystyle\gap{3}=\frac{3\*\ln{x}}{\ln{4}}$\newline
+\end{parts}
 
 
 %---------------------------------------------------------
@@ -127,6 +153,14 @@ Fasse den Term zu einem Logarithmus zusammen und vereinfache so weit wie möglic
 \question[4]
 Löse die folgende Gleichung nach $x$ auf. \[\log{x^3}+2\log{x^2}=7\]
 
+
+%---------------------------------------------------------
+\question[4]
+Claudia will diese Gleichung lösen: \[5^x=0.2^{3x}\*\exp{x-1}.\] Sie wendet den natürlichen Logarithmus auf beiden Seiten an und erhält \[x\*\ln{5}=3x\*\ln{0.2}\*(x-1).\] Hat sie alles richtig gemacht?
+\begin{itemize}
+	\item Falls JA, löse die Gleichung fertig.
+	\item Falls NEIN, erkläre den Fehler und löse die Gleichung vollständig korrekt.
+\end{itemize}
 
 
 %---------------------------------------------------------

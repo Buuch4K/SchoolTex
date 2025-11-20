@@ -3,12 +3,12 @@
 \input{../Header/styleExam.sty}
 \input{../Header/mathexpressions.sty}
 \input{../Header/headerExam.sty}
+\graphicspath{{Algebra/data-algebra/},{Geometrie/data-geometrie/},{Analysis/data-analysis/}} % Setzt den Pfad zu den Bilder fest
 %=========================================================
-\newcommand{\theme}{Wachstum \& Zerfall}
+\newcommand{\theme}{Logarithmus}
 \newcommand{\teacher}{Jonas Guler}
 \newcommand{\class}{3NaPa}
-\renewcommand{\date}{17.09.25}
-\graphicspath{{Algebra/data-algebra/}} % Setzt den Pfad zu den Bilder fest
+\renewcommand{\date}{19.11.25}
 %=========================================================
 \begin{document}
 \fontsize{13}{13}\selectfont
@@ -34,7 +34,7 @@
     \vspace{5pt}
     Der Rechenweg muss \textbf{vollständig und nachvollziehbar} sein.\\
     Lösen Sie die Prüfung mit einen schwarzen oder blauen Kugelschreiber.\\
-    Als Hilfsmittel sind der Taschenrechner und ein Geodreieck erlaubt.
+    Es sind \textbf{keine} Hilfsmittel zugelassen.
 \end{center}
 \rule[1ex]{\textwidth}{1pt}
 
@@ -48,125 +48,91 @@
 %=========================================================
 %------------------------TESTFRAGEN
 %=========================================================
-\question[2]
-Beschreibe in eigenen Worten, unter welcher Bedingung eine Funktion der Form $f(x)=b\*a^x$ wachsend bzw. fallend ist. Veranschauliche deine Aussage anhand zwei geeigneter Beispiele.
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+\begin{parts}
+	\part[2] Beschreibe in eigenen Worten, was ein Logarithmus ist und inwiefern er mit der Exponentialfunktion verbunden ist.
+\end{parts}
 \vspace{5pt}
-\antwort{9}
-\vfill
-\question[2]
-Entscheide, ob die Aussagen in der Tabelle unten wahr oder falsch sind. Die Antworten müssen nicht begründet werden.\newline
-\begin{small}
-	Bewertung: Für $0-2$ richtige Antworten gibt es keine Punkte, $3$ richtige Antworten geben $1$ Punkte und falls alle Antworten richtig sind $2$ Punkte.
-\end{small}
-\begingroup
-\renewcommand{\arraystretch}{1.5}
-\begin{table}[H]
-	\centering
-	\begin{tabular}{|p{12cm}|c|c|}\hline
-		& wahr & falsch\\\hline
-		Wenn eine Grösse jährlich um $7\%$ wächst, dann wächst sie in zwei Jahren um exakt 14\%. & & \\\hline
-		Eine Funktion $f(t)=200\*1.7^t$ beschreibt einen exponentiellen Prozess, bei dem eine Grösse pro Zeiteinheit um $170\%$ zunimmt. & & \\\hline
-		Eine Funktion $f(t)=200\*0.55^t$ beschreibt einen exponentiellen Prozess, bei dem eine Grösse pro Zeiteinheit um $55\%$ abnimmt. & & \\\hline
-		Eine Funktion $f(t)=200\*\left(\frac{1}{\sqrt{2}}\right)^t$ beschreibt einen exponentiellen Prozess, bei dem sich eine Grösse alle zwei Jahre halbiert. & & \\\hline
-	\end{tabular}
-\end{table}
-\endgroup
-\antwort{3.5}
-
+\antwort{10.5}
+\begin{parts}
+	\setcounter{partno}{1}
+	\part[1] Welcher der folgenden Ausdrücke passt nicht dazu? Begründe deine Antwort.
+	\[\Log{4}{2}\quad\Log{4}{\frac{1}{16}}\quad\Log{2}{0.125}\quad\Log{3}{\frac{1}{81}}\]
+\end{parts}
+\vspace{5pt}
+\antwort{10.5}
 
 
 %---------------------------------------------------------
 \newpage
-\question[3]
-Im folgenden sind drei Wertetabellen gegeben. Entscheide für jede Wertetabelle, ob es sich um eine Exponentialfunktion handelt. Wenn ja, gib die Funktionsgleichung an.
-\begin{parcols}[3]
-	\part \
-	\begin{table}[H]
-		\begin{tabular}{|c|c|c|c|c|}\hline
-			$x$ & 1 & 2 & 3 & 4 \\\hline
-			$f(x)$ & 4 & 16 & 64 & 256 \\\hline
-		\end{tabular}
-	\end{table}
-	\part \
-	\begin{table}[H]
-		\begin{tabular}{|c|c|c|c|c|}\hline
-			$x$ & 1 & 2 & 3 & 4 \\\hline
-			$f(x)$ & -6 & 2 & 10 & 10 \\\hline
-		\end{tabular}
-	\end{table}
-	\part\
-	\begin{table}[H]
-		\begin{tabular}{|c|c|c|c|c|}\hline
-			$x$ & 1 & 2 & 3 & 4 \\\hline
-			$f(x)$ & 20 & 5 & $\frac{5}{4}$ & $\frac{5}{16}$ \\\hline
-		\end{tabular}
-	\end{table}
-\end{parcols}
-\vspace*{5pt}\antwort{7.5}
-\vfill
-\question[6]
-Ordne die Graphen den Funktionsgleichungen zu. Beachte eine Funktionsgleichung bleibt übrig.\\
-\begin{minipage}{0.45\linewidth}
-	\centering\includegraphics[scale=3]{expGraph.png}
-\end{minipage}
-\hfill
-\begin{minipage}{0.45\linewidth}
-	\begin{parts}
-		\part $f_1(x)=2\*0.5^x$
-		\part $f_2(x)=-3^x$
-		\part $f_3(x)=\left(\frac{2}{3}\right)^x$
-		\part $f_4(x)=\frac{1}{3}\*1.5^x$
-		\part $f_5(x)=0.2^x$
-		\part $f_6(x)=2\*2^x$
-		\part $f_7(x)=-2^x$
-	\end{parts}
-\end{minipage}
-\vspace*{5pt}\antwort{3}
+\question[4]
+In das leere Feld ist jeweils ein Ausdruck so einzufüllen, dass insgesamt eine gültige Aussage entsteht.
+\begin{parts}
+	\part $\displaystyle\Log{a}{\gap{3}}=2\*\Log{a}{p}-3\*\Log{a}{q}-4\*\Log{a}{r}$\newline
+	\part $\displaystyle\Log{a}{\sqrt[3]{q^4}}=\gap{3}\*\Log{a}{q}$\newline
+	\part $\displaystyle\Log{a}{a^{-\frac{9}{13}}}=\gap{3}$\newline
+	\part $\displaystyle\gap{3}=\frac{3\*\ln{x}}{\ln{4}}$\newline
+\end{parts}
+\vspace*{7pt}\antwort{5.5}
+
+\question[4]
+Löse die folgende Exponentialgleichung nach $x$ auf. \[4^{x-7}\*16^{2x+1}=64^{x+2}\]
+\antwort{10.5}
 
 
 %---------------------------------------------------------
 \newpage
-\question[4] %Ss
-Faltet man ein Stück Papier im DIN Format mehrfach längs der Mittellinie, so liegen erst zwei, dann vier Schichten,... übereinander. Es wird dabei immer kleiner und dicker. Wie oft müsste das Blatt gefaltet werden, um einen Turm, der bis zum Mond reicht, zu erhalten?\\
-(Entfernung zum Mond: $384'000\:km$, Papierdicke: $0.1\:mm$)
+\question[4]
+Claudia will diese Gleichung lösen: \[5^x=0.2^{3x}\*\exp{x-1}.\] Sie wendet den natürlichen Logarithmus auf beiden Seiten an und erhält \[x\*\ln{5}=3x\*\ln{0.2}\*(x-1).\] Hat sie alles richtig gemacht?
+\begin{itemize}
+	\item Falls JA, löse die Gleichung fertig.
+	\item Falls NEIN, erkläre den Fehler und löse die Gleichung vollständig korrekt.
+\end{itemize}
 \vspace{5pt}\antwort{8.5}
 \vfill
 \noaddpoints
-\question[\totalpoints] %Ss
+\question[\totalpoints]
 \addpoints
-Eine Pilzkultur an einer Kellerwand wird in einem Beobachtungszeitraum von drei Monaten chemisch so behandelt, dass ihre Fläche jede Woche um $11\%$ abnimmt. Zu Beginn des Zeitraums bedeckt sie eine Fläche von $2.4\:m^2$.
-\begin{parts}
-	\part[2] Welche Fläche bedeckt sie am Ende des Beobachtungszeitraums?
-	\part[2] Wie viele Tage muss die Behandlung insgesamt dauern, dass die Pilzkultur höchstens noch eine Fläche von $0.1\:m^2$ bedeckt?
-\end{parts}
-\vspace*{5pt}\antwort{8.5}
+\begin{minipage}{0.6\linewidth}
+	\begin{parts}
+		\part[2] Gezeichnet sind drei Graphen von Funktionen der Form $y=\Log{b}{x}$. Gib an welcher zur Funktion mit der kleinsten und welcher zur Funktion mit der grössten Basis $b$ gehört.
+		\part[1] Gib die Basis der Funktion des Graphen $\textcolor{red}{B}$ an.
+	\end{parts}
+\end{minipage}
+\hfill
+\begin{minipage}{0.35\linewidth}
+	\centering\includegraphics[scale=0.08]{LogGraph.png}
+\end{minipage}
+\vspace*{5pt}\antwort{4.5}
+
+%---------------------------------------------------------
+\newpage
+\question[2]
+Fasse den Term zu einem Logarithmus zusammen und vereinfache so weit wie möglich.
+\[\ln{x+1}+\ln{x-1}-\ln{x^2-1}\]
+\antwort{9.5}
+
+\question[2]
+Schreibe den folgenden Logarithmus in möglichst viele Summanden aus.
+\[\Log{m}{\frac{m^2\sqrt[3]{m^2\*\sqrt{n^3}}}{m\*\sqrt[6]{n}}}\]
+\antwort{9.5}
+
 
 %---------------------------------------------------------
 \newpage
 \noaddpoints
 \question[\totalpoints]
 \addpoints
-Eine Computeranlage mit Neuwert $2'056'900.-$ CHF wird nach $6.5$ Jahren für $400'000.-$ CHF verkauft.
+Salmonellen sind Bakterien, die schwere Magen-Darm Erkrankungen auslösen. Bei Temperaturen von über $8^\circ$C vermehren sich Salmonellen exponentiell. Die infektiöse Dosis beträgt ca. zehn Million Keime.\newline Bei einem infizierten Ei werden um 10:00 Uhr $1000$ Keime gezählt, um 12:00 Uhr sind es bereits $16000$.
 \begin{parts}
-	\part[2] Wie viel Prozent beträgt die mittlere jährliche Wertabnahme?
-	\part[3] Nach $20$ Jahren möchten neue Investoren die Anlage wieder auf den neusten Stand bringen. Wie viel Geld müssten investiert werden, um wieder auf den Neuwert zu gelangen?
+	\part[1] Gib eine Funktion an, mit welcher sich die Anzahl Keime nach $t$ Stunden ausgehend von 10:00 Uhr berechnen lässt.
+	\part[1] Bestimme die Zeit, in der sich die Keimzahl verdoppelt?
+	\part[3] Um 16:00 Uhr wird das Ei in ein Kühlfach mit $12^\circ$C gelegt. Das bewirkt, dass sich die Verdopplungszeit\footnote{Die Verdopplungszeit bezeichnet die Zeitspanne, nach der sich der Bestand einer exponentiell wachsende Grösse verdoppelt hat.} vervierfacht. Berechne, um welche Uhrzeit die infektiöse Dosis an Keimen erreicht ist.
 \end{parts}
-\vspace*{5pt}\antwort{21.5}
+\vspace*{7pt}\antwort{17.5}
 
-%---------------------------------------------------------
-\newpage
-\noaddpoints
-\question[\totalpoints] %NeueWege
-\addpoints
-Im Jahr $1950$ lebten $2.5$ Milliarden Menschen auf der Erde, $1980$ waren es dann $4.5$ Milliarden.
-\begin{parts}
-	\part[2] Stelle eine Wachstumsfunktion auf, die das Bevölkerungswachstum oben beschreibt.
-	\part[2] Bestimme die Verdoppelungszeit
-	\part[2] Vergleiche dein Resultat mit den Daten von $2005$ ($6.4$ Milliarden) und $1920$ ($1.8$ Milliarden). Was fällt dir auf?
-	\part[2] $2005$ prognostizierten Experten der Vereinten Nationen bis zum Jahr $2050$
-	einen Anstieg auf $9.1$ Milliarden. Wie lautet deine Prognose?
-\end{parts}
-\vspace*{5pt}\antwort{19.5}
 
 %---------------------------------------------------------
 \newpage
