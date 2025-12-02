@@ -206,6 +206,9 @@
 		\item Spezialfall $a=b$:\newline Falls die beiden Grenze zusammenfallen, so ist die Breite der Rechtecke $\gap{2}$ und damit sind sowohl die Ober- als auch die Untersumme ebenfalls gleich $0$. Das heisst: \[\gap{5}.\]
 		\item Spezialfall $a>b$:\newline Falls $a$ grösser ist als $b$, so gilt für die Breite der Rechtecke $\gap{2}$ und damit ändert sich auch das Vorzeichen des Integrals \[\gap{5}.\]
 	\end{enumerate}
+	\begin{satz}
+		Satz vertauschen der Integrationsgrenzen und aufteilen der Integrationsgrenzen...
+	\end{satz}
 	\begin{aufgabe}
 		Skizziere für die folgenden Funktionen den Graphen und markiere darin die gesuchte Fläche.
 		\begin{enumerate}[label=\alph*)]\begin{multicols}{4}
@@ -262,7 +265,7 @@
 		Das unbestimmte Integral einer Funktion $f$ ist die Menge aller Stammfunktionen $F$.\\ Schreibweisen:
 		\[\int f(x)\:\d x \text{ oder } F(x)+c\]
 	\end{notation}
-	Die Rechenregeln für die Integrale sind im Grunde die gleichen wie fürs differenzieren. Ausgenommen davon sind die Produkt- und Quotientenregel.
+	Die Rechenregeln für die Integrale sind im Grunde die gleichen wie fürs Ableiten. Ausgenommen davon sind die Produkt-, Quotienten- und Kettenregel.
 	\begin{satz}[Rechenregeln]
 		\begin{minipage}{0.4\linewidth}
 			\begin{enumerate}
@@ -281,33 +284,50 @@
 		\end{minipage}
 	\end{satz}
 	\begin{aufgabe}
-		Bestimme die folgenden unbestimmten Integrale:
-		\begin{enumerate}[label=\alph*)]\begin{multicols}{2}
-				\item $\int(x^4+x^3+x^2+x+1)\d{x}$
-				\item $\int 7\*\e^x\d{x}$
-				\item $\int(4\*\sin{x}-3\*\cos{x})\d{x}$
-		\end{multicols}\end{enumerate}
+		Bestimme im folgenden alle unbestimmten Integrale.
+		\begin{enumerate}
+			\item Polynomfunktionen
+			\begin{enumcols}[2]
+				\item $\displaystyle\int4x\d{x}$
+				\item $\displaystyle\int1\d{x}$
+				\item $\displaystyle\int(3x^2-1)\d{x}$
+				\item $\displaystyle\int(x^4+x^3+x^2+x+1)\d{x}$
+				\item $\displaystyle\int\left(5x^4+\frac{1}{2}x^3-\frac{7}{3}x^2\right)\d{x}$
+				\item $\displaystyle\int(3x+4)(x^2-1)\d{x}$
+				\item $\displaystyle\int(3x^2-1)^2\d{x}$
+				\item $\displaystyle\int\left(\frac{3}{x^3}+\frac{5}{x^2}-\frac{1}{4}\right)\d{x}$
+			\end{enumcols}
+			\item Wurzelfunktionen
+			\begin{enumcols}[2]
+				\item $\displaystyle\int\sqrt{x}\d{x}$
+				\item $\displaystyle\int\sqrt{x}\*(x+5)\d{x}$
+				\item $\displaystyle\int\left(x+\sqrt[4]{x}\right)\d{x}$
+				\item $\displaystyle\int\left(\sqrt[4]{x^6}+x^3-2\right)\d{x}$
+			\end{enumcols}
+			\item Winkelfunktionen
+			\begin{enumcols}[2]
+				\item $\displaystyle\int\cos{x}\d{x}$
+				\item $\displaystyle\int\left(2\*\sin{x}-3\*\cos{x}\right)\d{x}$
+				\item $\displaystyle\int\left(x-\cos{x}\right)\d{x}$
+				\item $\displaystyle\int\left(4\*\sin{x}-7\*\cos{x}\right)\d{x}$
+				\item $\displaystyle\int\left(1+(\tan{x})^2\right)\d{x}$
+				\item $\displaystyle\int\left(\exp{x}+\sin{x}\right)\d{x}$
+			\end{enumcols}
+			\item Exponential- und Logarithmusfunktionen
+			\begin{enumcols}[2]
+				\item $\displaystyle\int 7\*\e^x\d{x}$
+				\item $\displaystyle\int5^x\d{x}$
+				\item $\displaystyle\int\frac{1}{x}\*\sqrt{x}\d{x}$
+				\item $\displaystyle\int\pi\*\ln{x}\d{x}$
+				\item $\displaystyle\int\left(\frac{1}{3}\*\exp{x}+\frac{1}{x}\right)\d{x}$
+				\item $\displaystyle\int\left(\frac{3}{x}-\frac{4}{x^2}\right)\d{x}$
+			\end{enumcols}
+		\end{enumerate}
 	\end{aufgabe}
 
 \subsection*{Zusammenfassung}
-	Fassen wir die gefundenen Stammfunktionen in einer übersichtlichen Tabelle zusammen. Wir gehen hier immer von der mittleren Spalte aus. Der Vorgang nach links heisst \glqq ableiten\grqq\: und nach rechts heisst \glqq integrieren\grqq. (vlg. Formelsammlung Seite $29-30$)
-	\begingroup
-	\renewcommand{\arraystretch}{1.5}
-	\begin{table}[ht]
-		\centering
-		\begin{tabular}{p{2cm}|p{2cm}|p{3cm}|c}
-			$f'$ & $f=F'$ & $F$ & Bedingung \\\hline
-			$n\*x^{n-1}$ & $x^n$ & $\frac{1}{n+1}\* x^{n+1}+c$ & $n\in\Z\:\backslash\:\{-1\}$ \\
-			$\frac{1}{2\sqrt{x}}$ & $\sqrt{x}$ & $\gap{2.9}$ & \\
-			$\exp{x}$ & $\exp{x}$ & $\gap{2.9}$ & \\
-			$\frac{1}{x}$ & $\ln{x}$ & $\gap{2.9}$ & \\
-			$\cos{x}$ & $\sin{x}$ & $\gap{2.9}$ & \\
-			$-\sin{x}$ & $\cos{x}$ & $\gap{2.9}$ & \\
-			$\frac{1}{\cos{x}^2}$ & $\tan{x}$ & $-\ln{\cos{x}}+c$ & \\
-			$\frac{a}{2\sqrt{a\*x}}$ & $\sqrt{a\*x}$ & $\frac{2}{3}\sqrt{a}\*x^\frac{3}{2}+c$ & $a>0$ \\
-		\end{tabular}
-	\end{table}
-	\endgroup\newpage
+	Alle Regeln zur Bildung einer Stammfunktion sind in einer übersichtlichen Tabelle in der Formelsammlung zusammengestellt. Der Vorgang um eine Spalte nach rechts heisst \glqq ableiten\grqq\: und in die Gegenrichtung, also nach links, heisst \glqq integrieren\grqq. (vlg. Formelsammlung Seite $29-30$)
+	\newpage
 
 
 
@@ -321,10 +341,11 @@
 		\begin{wrapfigure}{r}{0.4\textwidth}
 			\center{\includegraphics[width=0.3\textwidth]{flächenfunktion.png}}
 		\end{wrapfigure}
-		Die Funktion \[A(x)=\int_a^x f(t)\d{t}\] beschreibt die Fläche unter dem Graph von $f$ zwischen $a$ und $x$. Im ersten Schritt müssen wir jedoch überprüfen, ob $A(x)$ eine Stammfunktion von $f$ ist. Dabei genügt es zu zeigen, dass $A(x)$ abgeleitet gleich $f$ ist.
-		\vspace{6cm}\newline
+		Die Funktion \[A(x)=\int_a^x f(t)\d{t}\] beschreibt die Fläche unter dem Graph von $f$ zwischen $a$ und $x$. Im ersten Schritt müssen wir jedoch überprüfen, ob $A(x)$ eine Stammfunktion von $f$ ist. Dabei genügt es zu zeigen, dass $A(x)$ abgeleitet gleich $f$ ist.\newline
+
+		\karos{6.5}\newline
 		Das heisst also, $A(x)$ ist eine Stammfunktion von $f$ und es gilt: \[A(x)=\int_a^x f(t)\d{t} = F(x)+c.\] Zum Schluss wäre es jedoch schön, wenn wir herausfinden, welchen Wert der Parameter $c$ erhält. Dazu nutzen wir den Spezialfall $a=b$, in dem die Grenzen aufeinander fallen.
-		\vspace{4cm}\newline
+		\vspace{5pt}\newline\karos{4.5}\newline
 		Damit folgt also die Behauptung \[\int_a^b f(x)\d{x}=F(b)-F(a).\]\flushright{$\blacksquare$}
 	\end{beweis}
 	\begin{beispiel}
@@ -332,19 +353,20 @@
 		\vspace{5pt}\newline\karos{6}
 	\end{beispiel}
 	\begin{aufgabe}
+		Berechne die folgenden bestimmten Integrale mit Hilfe des Hauptsatzes von Hand.
 		\begin{enumcols}[4]
-			\item $\int_0^2 3\*x^3\d{x}$
-			\item $\int_1^3 x^3\d{x}$
-			\item $\int_2^4\left(x^2+3\right)\d{x}$
-			\item $\int_1^3\left(x^2-4x\right)\d{x}$
-			\item $\int_0^4\sqrt{x}\d{x}$
-			\item $\int_0^1 5x\*\sqrt{x}\d{x}$
-			\item $\int_0^{\frac{\pi}{2}}\cos{x}\d{x}$
-			\item $\int_0^\pi\sin{x}\d{x}$
-			\item $\int_1^2\left(2x-\frac{2}{x}\right)\d{x}$
-			\item $\int_1^3\left(4x-\frac{3}{x}+\frac{2}{x^2}\right)\d{x}$
-			\item $\int_1^2\left(\frac{4}{x}+\frac{5}{x^2}+\frac{6}{x^3}\right)\d{x}$
-			\item $\int_1^2\left(\e^x+\frac{1}{x}\right)\d{x}$
+			\item $\displaystyle\int_0^2 3\*x^3\d{x}$
+			\item $\displaystyle\int_1^3 x^3\d{x}$
+			\item $\displaystyle\int_2^4\left(x^2+3\right)\d{x}$
+			\item $\displaystyle\int_1^3\left(x^2-4x\right)\d{x}$
+			\item $\displaystyle\int_0^4\sqrt{x}\d{x}$
+			\item $\displaystyle\int_0^1 5x\*\sqrt{x}\d{x}$
+			\item $\displaystyle\int_0^{\frac{\pi}{2}}\cos{x}\d{x}$
+			\item $\displaystyle\int_0^\pi\sin{x}\d{x}$
+			\item $\displaystyle\int_1^2\left(2x-\frac{2}{x}\right)\d{x}$
+			\item $\displaystyle\int_1^3\left(4x-\frac{3}{x}+\frac{2}{x^2}\right)\d{x}$
+			\item $\displaystyle\int_1^2\left(\frac{4}{x}+\frac{5}{x^2}+\frac{6}{x^3}\right)\d{x}$
+			\item $\displaystyle\int_1^2\left(\e^x+\frac{1}{x}\right)\d{x}$
 		\end{enumcols}
 	\end{aufgabe}
 	\newpage
@@ -406,7 +428,7 @@
 		\begin{enumerate}[label=\alph*)]
 			\item Wie lässt sich die Länge der senkrechten orangen Strecken mathematisch beschrieben.\vspace{5pt}\newline\karos{1}
 			\item Verschiebe nun die Fläche, sodass sie direkt über der $x-$Achse liegt. Was beschreibt diese Funktion?\vspace{5pt}\newline\karos{1}
-			\item Wir definieren die Differenzfunktion $f(x)-g(x)$. Welche Fläche wir nun von dieser Differenzfunktion und der $x-$Achse eingeschlossen?\vspace{5pt}\newline\karos{1}
+			\item Wir definieren die Differenzfunktion $f(x)-g(x)$. Welche Fläche wird nun von dieser Differenzfunktion und der $x-$Achse eingeschlossen?\vspace{5pt}\newline\karos{1}
 			\item Schliesse daraus eine Formel zur Berechnung der Fläche zwischen den beiden Graphen und wende sie auf dieses Beispiel an.\vspace{5pt}\newline\karos{5}
 		\end{enumerate}
 	\end{aufgabe}
@@ -572,8 +594,8 @@
 	\begin{tabular}{|p{13mm}|p{20mm}|p{30mm}|p{70mm}|}\hline
 		%\multicolumn{4}{|l|}{History}\\\hline
 		Version & Datum & Person & Bemerkung \\\hline
-		$1.0$ & 02.04.2025 & Jonas Guler & Kapitel erstellt \\\hline
-		$1.1$ & ToDo & Jonas Guler & Rotationsvolumen überarbeiten, uneigentliche Integrale hinzufügen \\\hline
+		$1.0$ & 02.04.25 & Jonas Guler & Kapitel erstellt \\\hline
+		$1.1$ & 20.11.25 & Jonas Guler & Fehler verbessert \\\hline
 	\end{tabular}
 \end{table}
 
