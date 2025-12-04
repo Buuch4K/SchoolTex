@@ -4,11 +4,11 @@
 \input{../Header/mathexpressions.sty}
 \input{../Header/headerExam.sty}
 %=========================================================
-\newcommand{\theme}{Ähnlichkeit und Strahlensätze}
+\newcommand{\theme}{Lineare Gleichungssysteme}
 \newcommand{\teacher}{Jonas Guler}
 \newcommand{\class}{2Na}
-\renewcommand{\date}{06.11.25}
-\graphicspath{{Algebra/data-algebra/},{Geometrie/data-geometrie}} % Setzt den Pfad zu den Bilder fest
+\renewcommand{\date}{09.12.25}
+\graphicspath{{Algebra/data-algebra/},{Geometrie/data-geometrie},{Analysis/data-analysis}} % Setzt den Pfad zu den Bilder fest
 %=========================================================
 \begin{document}
 \fontsize{14}{14}\selectfont
@@ -49,76 +49,44 @@
 %---------------------TESTFRAGEN
 %=========================================================
 \noaddpoints
-\question[\totalpoints]
+\question[\totalpoints] % Definition LGS
 \addpoints
-Formuliere je einen 1. und einen 2. Strahlensatz aus der folgenden Figur (als Formeln).\newline
-\begin{minipage}{0.35\linewidth}
-	\centering\includegraphics[scale=1]{strahlensatzfigurkomplex.png}
-\end{minipage}
-\hfill
-\begin{minipage}{0.6\linewidth}
-	\begin{parts}
-		\part[1] 1. Strahlensatz\vspace{2cm}
-		\part[1] 2. Strahlensatz\vspace{2cm}
-	\end{parts}
-\end{minipage}
+
 \vfill
-\question[4]
-Bestimme die unbekannten Seiten $a,b,c,d$ in der Figur unten.
-\begin{figure}[H]
-	\centering\includegraphics[scale=0.8]{strahlensatz3.png}
-\end{figure}
+\question[4] % Was heisst linear?
+Bestimme im folgenden linearen Gleichungssystem den Parameter $b$ so, dass das System unendlich viele Lösungen besitzt.
+\[\left\{\begin{matrix}b\*x+6y=1\\6x-9y=\frac{-3}{2}\end{matrix}\right.\]
 \antwort{5.5}
 
 
 %---------------------------------------------------------
 \newpage
-\question[5]
-Begründe mit Hilfe der Strahlensätze, ob alle drei, nur zwei oder keine der Geraden $a,b,c$ parallel sind.
-\begin{figure}[H]
-	\centering\includegraphics[width=0.4\linewidth]{parallelität_falsch.png}
-\end{figure}
+\question[5] % Lösungsmethoden
+
 \antwort{5.5}
 \vfill
 \question[4]
-Berechne die Länge der unbekannten Strecken $w,x,y$ und $z$.
-\begin{figure}[H]
-	\centering\includegraphics[width=0.45\linewidth]{strahlensatz5.png}
-\end{figure}
+Angenommen es liegt ein konkretes lineares $2\times2$ Gleichungssystem in den Variablen $x$ und $y$ vor. Vervollständige den folgenden Satz:\newline\flqq Unter der Lösungsmenge des linearen Gleichungssystems versteht man die Menge aller\ldots\frqq
 \antwort{5.5}
 
 
 %---------------------------------------------------------
 \newpage
-\question[5]
-\begin{minipage}{0.6\linewidth}
-	Von der nebenstehenden Figur wissen wir, dass $\overline{BC}$ parallel zu $\overline{DE}$ und $\overline{CD}$ parallel zu $\overline{EF}$ sind. Weiter sind $\overline{AF}=4$ und $\overline{DF}=3$ lang. Wie lang ist die Strecke $\overline{BD}$?
-\end{minipage}
-\hfill
-\begin{minipage}{0.38\linewidth}
-	\centering\includegraphics[scale=0.65]{doppelterstrahlensatz.png}
-\end{minipage}
+\question[5] % 3x3 LGS
+Vereinfache das folgende lineare $3\times3$ Gleichungssystem auf ein einfacheres $2\times2$ System, in dem du die Gleichungen geeignet umformst. Du musst das Gleichungssystem nicht komplett auflösen.
+\[\left\{\begin{matrix}5x-2y=8+2z\\z+2x=11-7y\\y=2.5x-z-4\end{matrix}\right.\]
 \vspace*{7pt}\antwort{19.5}
 
 %---------------------------------------------------------
 \newpage
-\question[4]
-Gegeben ist ein gleichschenkliges Dreieck $\triangle ABC$ mit Höhe $h_a=36$cm und Basis $a=12$cm. Das einbeschriebene Rechteck $DEFG$ hat einen Umfang von $30$cm. Berechne die Länge und Breite des Rechtecks.
-\begin{figure}[H]
-	\centering\includegraphics[scale=0.8]{rechteckstrahlensatz.png}
-\end{figure}
+\question[4] % LGS mit Para
+
 \vspace{5pt}\antwort{17.5}
 
 %---------------------------------------------------------
 \newpage
-\question[3]
-\begin{minipage}{0.6\linewidth}
-	Die Fläche des kleineren Dreiecks beträgt $36\%$ des grösseren. Berechne $x$.
-\end{minipage}
-\hfill
-\begin{minipage}{0.35\linewidth}
-	\centering\includegraphics[scale=0.4]{ähnlicheflächen.png}
-\end{minipage}
+\question[3] % Textaufgabe
+
 \vspace*{7pt}\antwort{19.5}
 
 
