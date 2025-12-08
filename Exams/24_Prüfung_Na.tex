@@ -48,27 +48,59 @@
 %=========================================================
 %---------------------TESTFRAGEN
 %=========================================================
-\noaddpoints
-\question[\totalpoints]
-\addpoints
-
-
+\question[2]
+Notiere je einen sinnvollen Vor- und Nachteil im Vergleich des Additions- mit dem Einsetzungsverfahren.
+\vspace{7pt}\antwort{9.5}
 \vfill
 \question[4] % Was heisst linear?
 Bestimme im folgenden linearen Gleichungssystem den Parameter $b$ so, dass das System unendlich viele Lösungen besitzt.
 \[\left\{\begin{matrix}b\*x+6y=1\\6x-9y=\frac{-3}{2}\end{matrix}\right.\]
-\antwort{5.5}
+\antwort{9.5}
 
 
 %---------------------------------------------------------
 \newpage
-\question[5] % Lösungsmethoden
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+\begin{parts}
+	\part[3] Löse das folgende lineare Gleichungssystem graphisch in abgebildeten Koordinatensystem. \[\left\{\begin{matrix}x-2y-2=0\\y-2-\frac{1}{2}x=0\end{matrix}\right.\]
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=5mm, y=5mm,
+			>=latex,   %Voreinstellung für Pfeilspitzen
+			font=\footnotesize, scale=1]
+			%Raster zeichnen
+			\draw[step=5mm,gray!50,thin] (-6,9) grid (24,-10);
+			% Achsen zeichnen
+			\draw[->,thick] (-5.3,0) -- (5.7,0) node[right, below] {\normalsize $x$};
+			\draw[->,thick] (0,-5.3) -- (0,7.7) node[above, left] {\normalsize $y$};
+			% Achsen beschriften
+			\foreach \x in {-4,-2,1,2,...,4} \draw (\x,-.1) -- (\x,.1) node[below=5pt, xshift=4pt] {$\x$};
+			\foreach \y in {-4,-2,1,2,...,6} \draw (-.1,\y) -- (.1,\y) node[left=5pt, yshift=2pt] {$\y$};
+			% Besserer Ursprung
+			\draw[color=black] (0.3,-0.7) node {$0$};
+			%Funktionen zeichnen:
+			\clip(-5.3,-5.3) rectangle (5.3,7.3); %Bildbereich
+			%Beschriftung
+			%\node[blue]  at (11,5) {\normalsize$f$};
+		\end{tikzpicture}
+	\end{figure}
+	\part[3] Überprüfe deine Lösungen auch rechnerisch. Dazu darfst du ein Verfahren deiner Wahl verwenden.
+\end{parts}
+\vspace{7pt}\antwort{9.5}
 
-\antwort{5.5}
+
+%---------------------------------------------------------
+\newpage
+\question[6]
+Löse das folgende Gleichungssystem unter Verwendung des Einsetzungsverfahren.
+\[\systeme{\frac{2}{3}x-y=1,3x+6y=8}\]
+\vspace{7pt}\antwort{12.5}
 \vfill
-\question[4]
+\question[2]
 Angenommen es liegt ein konkretes lineares $2\times2$ Gleichungssystem in den Variablen $x$ und $y$ vor. Vervollständige den folgenden Satz:\newline\flqq Unter der Lösungsmenge des linearen Gleichungssystems versteht man die Menge aller\ldots\frqq
-\antwort{5.5}
+\vspace{7pt}\antwort{5.5}
 
 
 %---------------------------------------------------------
@@ -81,19 +113,15 @@ Vereinfache das folgende lineare $3\times3$ Gleichungssystem auf ein einfacheres
 %---------------------------------------------------------
 \newpage
 \question[4] % LGS mit Para
+Löse das folgende lineare Gleichungssystem unter Verwendung eines geeigneten Verfahrens. Bemerke, $p$ ist hier ein Parameter. \[\left\{\begin{matrix}5x-3y=14p\\-x+5y=6p\end{matrix}\right.\]
 
-\vspace{5pt}\antwort{17.5}
-
-%---------------------------------------------------------
-\newpage
-\question[3] % Textaufgabe
-
-\vspace*{7pt}\antwort{19.5}
-
+\vspace{5pt}\antwort{21.5}
 
 %---------------------------------------------------------
 \newpage
-{\bf Reserve:}\newline\antwort{24.5}
+\question[5] % Textaufgabe
+Das Verkehrshaus in Luzern hat unterschiedliche Eintrittspreise für Erwachsene und Kinder. Herr und Frau Schmidiger zahlen mit ihren vier Kindern $36$ CHF Eintritt. Frau Vetter und ihre drei Kinder zahlen $23$ CHF. Was kostet der Eintritt für Erwachsene und Kinder?
+\vspace*{7pt}\antwort{21.5}
 
 
 \end{questions}

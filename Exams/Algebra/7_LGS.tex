@@ -6,6 +6,7 @@
 %=========================================================
 \newcommand{\theme}{Lineare Gleichungssysteme}
 \newcommand{\teacher}{Jonas Guler}
+\graphicspath{{data-algebra/}}
 %=========================================================
 \begin{document}
 \fontsize{14}{14}\selectfont
@@ -22,6 +23,11 @@ Angenommen es liegt ein konkretes lineares $2\times2$ Gleichungssystem in den Va
 
 
 %---------------------------------------------------------
+\question[2]
+Notiere je einen sinnvollen Vor- und Nachteil im Vergleich des Additions- mit dem Einsetzungsverfahren.
+
+
+%---------------------------------------------------------
 \question[4]
 Erkläre einem Laien in eigenen Worten, wann ein Gleichungssystem linear ist.
 
@@ -31,6 +37,68 @@ Erkläre einem Laien in eigenen Worten, wann ein Gleichungssystem linear ist.
 Bestimme im folgenden linearen Gleichungssystem den Parameter $b$ so, dass das System unendlich viele Lösungen besitzt.
 \[\left\{\begin{matrix}b\*x+6y=1\\6x-9y=\frac{-3}{2}\end{matrix}\right.\]
 
+
+%---------------------------------------------------------
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+\begin{parts}
+	\part[3] Löse das folgende lineare Gleichungssystem graphisch in abgebildeten Koordinatensystem. \[\left\{\begin{matrix}x-2y-2=0\\y-2-\frac{1}{2}x=0\end{matrix}\right.\]
+\end{parts}
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+		>=latex,   %Voreinstellung für Pfeilspitzen
+		font=\footnotesize, scale=1]
+		%Raster zeichnen
+		\draw[step=5mm,gray!50,thin] (-6,8) grid (11,-6);
+		% Achsen zeichnen
+		\draw[->,thick] (-5.3,0) -- (5.7,0) node[right, below] {\normalsize $x$};
+		\draw[->,thick] (0,-5.3) -- (0,7.7) node[above, left] {\normalsize $y$};
+		% Achsen beschriften
+		\foreach \x in {-5,...,-2,-1,1,2,...,5} \draw (\x,-.1) -- (\x,.1) node[below=5pt, xshift=4pt] {$\x$};
+		\foreach \y in {-5,...,-2,-1,1,2,...,7} \draw (-.1,\y) -- (.1,\y) node[left=5pt, yshift=2pt] {$\y$};
+		% Besserer Ursprung
+		\draw[color=black] (0.2,-0.2) node {$0$};
+		%Funktionen zeichnen:
+		\clip(-5.3,-5.3) rectangle (5.3,7.3); %Bildbereich
+		%Beschriftung
+		%\node[blue]  at (11,5) {\normalsize$f$};
+	\end{tikzpicture}
+\end{figure}
+\begin{parts}
+	\setcounter{partno}{1}
+	\part[3] Überprüfe deine Lösungen auch rechnerisch. Dazu darfst du ein Verfahren deiner Wahl verwenden.
+\end{parts}
+
+
+%---------------------------------------------------------
+\question[4]
+Welches Gleichungssystem wird hier graphisch gelöst? Erkläre deine Vorgehensweise auch in Worten.
+\begin{figure}[H]
+	\centering\includegraphics[scale=0.5]{LGS-graphische-lösung.png}
+\end{figure}
+
+
+%---------------------------------------------------------
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+Céline muss das folgende Gleichungssystem lösen: \[\systeme{x+5y=3,x-3y=2}\]
+\begin{parts}
+	\part[1] Sie beschliesst, dass Additionsverfahren zu verwenden, weil sie beobachtet, dass $x$ in beiden Gleichungen den Koeffizient 1 hat. Sie fasst also den Plan die zweite Gleichung mit $-1$ zu multiplizieren und anschliessend beide Gleichungen zu addieren. Was genau wird sie dann erhalten?
+	\part[3] Wie müsste Céline vorgehen, um im Additionsschritt die Variable $y$ zu eliminieren? Erkläre in Worten \textbf{und} berechne die Lösung des Gleichungssystems\footnote{Lösungen ohne Additionsverfahren haben einen Punkteabzug zur Folge.}.
+\end{parts}
+
+%---------------------------------------------------------
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+Max muss das folgende Gleichungssystem lösen: \[\systeme{2x+y=1,7x-y=2}\]
+\begin{parts}
+	\part[2] Er möchte sich in der Additionsmethode üben und fasst folgenden Plan: Er möchte die erste Gleichung mit 7 und die zweite Gleichung mit  2  multiplizieren. Danach will er die beiden Gleichungen addieren und damit die Variable x eliminieren. Funktioniert das? Begründe deine Antwort.
+	\part[2] Löse das Gleichungssystem vollständig mit Hilfe des Additionsverfahren.
+\end{parts}
 
 
 %---------------------------------------------------------
@@ -42,6 +110,41 @@ Löse das folgende lineare Gleichungssystem mit einem Verfahren deiner Wahl.
 \question[5] % 3x3 LGS
 Vereinfache das folgende lineare $3\times3$ Gleichungssystem auf ein einfacheres $2\times2$ System, in dem du die Gleichungen geeignet umformst. Du musst das Gleichungssystem nicht komplett auflösen.
 \[\left\{\begin{matrix}5x-2y=8+2z\\z+2x=11-7y\\y=2.5x-z-4\end{matrix}\right.\]
+
+
+%---------------------------------------------------------
+\question[5] % DMK Algebra 9/10 S84 A17c
+Vereinfache das folgende lineare $3\times3$ Gleichungssystem auf ein einfacheres $2\times2$ System, in dem du die Gleichungen geeignet umformst und addierst. Du musst das Gleichungssystem nicht komplett lösen.
+\[\systeme{7x-6y+5z=18,5x+3y-4z=28,8x+2y+3z=26}\]
+
+
+%---------------------------------------------------------
+\question[4]
+Löse das folgende lineare $3\times3$ Gleichungssystem unter Verwendung eines geeigneten Verfahrens. \[\systeme{6x-y+z=12,-6y+z=1,x+3y+z=-3}\]
+
+
+%---------------------------------------------------------
+\question[4]
+Löse das folgende lineare $3\times3$ Gleichungssystem unter Verwendung eines geeigneten Verfahrens. \[\systeme{2x-y+z=1,-x+2y=1,x+2y+z=5}\]
+
+%---------------------------------------------------------
+\question[4] %Barth Nachtest A4c
+Löse das folgende lineare Gleichungssystem unter Verwendung eines geeigneten Verfahrens. Bemerke, $p$ ist hier ein Parameter. \[\left\{\begin{matrix}5x-3y=14p\\-x+5y=6p\end{matrix}\right.\]
+
+
+%---------------------------------------------------------
+\question[4] % DMK Algebra A15a S84
+Bestimme die Lösungsmenge des folgenden linearen Gleichungssystems. Bemerke, $d$ ist hier ein Parameter.
+\[\left\{\begin{matrix}x-y=d\\\frac{x-y}{2}+dx=d\end{matrix}\right.\]
+
+%---------------------------------------------------------
+\question[6] % KSWilli A15
+Bauer Heiniger aus dem Toggenburg hält Schweine und Hühner. Insgesamt haben seine Tiere $594$ Beine. Die Anzahl der Hühner ist um $9$ grösser als die doppelte Anzahl Schweine. Wie viele Schweine und wie viele Hühner hält Bauer Heiniger?
+
+
+%---------------------------------------------------------
+\question[5] %KSWilli A16
+Das Verkehrshaus in Luzern hat unterschiedliche Eintrittspreise für Erwachsene und Kinder. Herr und Frau Schmidiger zahlen mit ihren vier Kindern $36$ CHF Eintritt. Frau Vetter und ihre drei Kinder zahlen $23$ CHF. Was kostet der Eintritt für Erwachsene und Kinder?
 
 %---------------------------------------------------------
 \question[5] % Gauss-Verfahren

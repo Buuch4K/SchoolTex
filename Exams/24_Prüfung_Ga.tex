@@ -4,10 +4,10 @@
 \input{../Header/mathexpressions.sty}
 \input{../Header/headerExam.sty}
 %=========================================================
-\newcommand{\theme}{Ähnlichkeit und Strahlensätze}
+\newcommand{\theme}{lineare Gleichungssysteme}
 \newcommand{\teacher}{Jonas Guler}
 \newcommand{\class}{2Ga}
-\renewcommand{\date}{03.11.25}
+\renewcommand{\date}{17.12.25}
 \graphicspath{{Algebra/data-algebra/},{Geometrie/data-geometrie}} % Setzt den Pfad zu den Bilder fest
 %=========================================================
 \begin{document}
@@ -48,86 +48,71 @@
 %=========================================================
 %---------------------TESTFRAGEN
 %=========================================================
+\question[2]
+Erkläre einem Laien in eigenen Worten, wann ein Gleichungssystem linear ist.
+\vspace*{7pt}
+\antwort{9.5}
+\vfill
+\question[4] % Was heisst linear?
+Bestimme im folgenden linearen Gleichungssystem den Parameter $b$ so, dass das System keine Lösungen besitzt.
+\[\systeme{4x+6y=1,6x-9y=b}\]
+\antwort{9.5}
+
+
+%---------------------------------------------------------
+\newpage
+\question[4]
+Welches Gleichungssystem wird hier graphisch gelöst? Erkläre deine Vorgehensweise auch in Worten.\vspace*{5pt}\newline
+\begin{minipage}{0.47\linewidth}
+	\includegraphics[scale=0.5]{LGS-graphische-lösung.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.47\linewidth}
+	\begin{tikzpicture}
+		\draw[step=5mm,gray!50,thin] (0,0.5) grid (7.5,-7);
+	\end{tikzpicture}
+\end{minipage}
+\vfill
+\question[4] % Algebra 9/10 S84 A12a
+Löse das folgende lineare Gleichungssystem mit einem Verfahren deiner Wahl.
+\[\systeme{-2x+4y=4,-x+3y=4}\]
+\antwort{11.5}
+
+
+%---------------------------------------------------------
+\newpage
 \noaddpoints
 \question[\totalpoints]
 \addpoints
-Formuliere je einen 1. und einen 2. Strahlensatz aus der folgenden Figur (als Formeln).\newline
-\begin{minipage}{0.35\linewidth}
-	\centering\includegraphics[scale=1]{strahlensatzfigurkomplex.png}
-\end{minipage}
-\hfill
-\begin{minipage}{0.6\linewidth}
-	\begin{parts}
-		\part[1] 1. Strahlensatz\vspace{2cm}
-		\part[1] 2. Strahlensatz\vspace{2cm}
-	\end{parts}
-\end{minipage}
-\vfill
+Max muss das folgende Gleichungssystem lösen: \[\systeme{2x+y=1,7x-y=2}\]
+\begin{parts}
+	\part[2] Er möchte sich im Additionsverfahren üben und fasst folgenden Plan: Er möchte die erste Gleichung mit 7 und die zweite Gleichung mit  2  multiplizieren. Danach will er die beiden Gleichungen addieren und damit die Variable x eliminieren. Funktioniert das? Begründe deine Antwort.
+	\part[4] Löse das Gleichungssystem vollständig mit Hilfe des Additionsverfahren.
+\end{parts}
+\vspace*{7pt}\antwort{17.5}
+
+
+%---------------------------------------------------------
+\newpage
+\question[5] % DMK Algebra 9/10 S84 A17c
+Vereinfache das folgende lineare $3\times3$ Gleichungssystem auf ein einfacheres $2\times2$ System, in dem du die Gleichungen geeignet umformst und addierst. Du musst das Gleichungssystem nicht komplett lösen.
+\[\systeme{7x-6y+5z=18,5x+3y-4z=28,8x+2y+3z=26}\]
+\vspace{5pt}\antwort{19.5}
+
+
+%---------------------------------------------------------
+\newpage
 \question[4]
-Bestimme die unbekannten Seiten $a,b,c,d$ in der Figur unten.
-\begin{figure}[H]
-	\centering\includegraphics[scale=0.8]{strahlensatz2.png}
-\end{figure}
-\antwort{5.5}
+Bestimme die Lösungsmenge des folgenden linearen Gleichungssystems. Bemerke, $d$ ist hier ein Parameter.
+\[\left\{\begin{matrix}x-y=d\\\frac{x-y}{2}+dx=d\end{matrix}\right.\]
+\vspace*{7pt}\antwort{21}
 
 
 %---------------------------------------------------------
 \newpage
 \question[5]
-Begründe mit Hilfe der Strahlensätze, ob alle drei, nur zwei oder keine der Geraden $a,b,c$ parallel sind.
-\begin{figure}[H]
-	\centering\includegraphics[width=0.4\linewidth]{parallelität_wahr.png}
-\end{figure}
-\antwort{5.5}
-\vfill
-\question[4]
-Berechne die Länge der unbekannten Strecken $w,x,y$ und $z$.
-\begin{figure}[H]
-	\centering\includegraphics[width=0.45\linewidth]{strahlensatz4.png}
-\end{figure}
-\antwort{5.5}
-
-
-%---------------------------------------------------------
-\newpage
-\question[4]
-\begin{minipage}{0.45\linewidth}
-	Unter einer Treppe soll ein $78$cm breiter Schrank eingebaut werden. Wie hoch kann der Schrank maximal sein?
-\end{minipage}
-\hfill
-\begin{minipage}{0.53\linewidth}
-	\centering\includegraphics[scale=0.4]{schrankuntertreppe.png}
-\end{minipage}
-\vspace*{7pt}\antwort{20.5}
-
-
-%---------------------------------------------------------
-\newpage
-\question[5]
-Frau Kurz (Augenhöhe $1.7$m) bestimmt die Höhe einer Tanne. Von ihrem Balkon aus peilt sie über einen Telefonmast die Tannenspitze an. In der Zeichnung unten sind die gemessenen Stecken und Längen eingezeichnet. Wie hoch ist die Tanne?
-\begin{figure}[H]
-	\centering\includegraphics[width=0.5\linewidth]{baumhöhe.png}
-\end{figure}
-\vspace{5pt}\antwort{17.5}
-
-
-%---------------------------------------------------------
-\newpage
-\question[3]
-\begin{minipage}{0.6\linewidth}
-	Die Fläche des kleineren Dreiecks beträgt $36\%$ des grösseren. Berechne $x$.
-\end{minipage}
-\hfill
-\begin{minipage}{0.35\linewidth}
-	\centering\includegraphics[scale=0.4]{ähnlicheflächen.png}
-\end{minipage}
-\vspace*{7pt}\antwort{19.5}
-
-
-%---------------------------------------------------------
-\newpage
-{\bf Reserve:}\newline\antwort{24.5}
-
+Bauer Heiniger aus dem Toggenburg hält Schweine und Hühner. Insgesamt haben seine Tiere $594$ Beine. Die Anzahl der Hühner ist um $9$ grösser als die doppelte Anzahl Schweine. Wie viele Schweine und wie viele Hühner hält Bauer Heiniger?
+\vspace{7pt}\antwort{22.5}
 
 \end{questions}
 \end{document}
