@@ -33,14 +33,37 @@ Erkläre einem Laien in eigenen Worten, wann ein Gleichungssystem linear ist.
 
 
 %---------------------------------------------------------
+\question[5] % Barth SE K4.3 A9
+Der folgende Text erklärt, warum ein lineares $n\times n$ Gleichungssystem üblicherweise genau eine Lösung für jede Variable hat. Leider sind die einzelnen Sätze durcheinandergeraten. Stelle die richtige Reihenfolge wieder her.
+\begin{enumerate}
+	\item Mit diesem verkleinerten System arbeiten wir in analoger Weise weiter. Wir lösen also erneut eine Gleichung nach einer Unbekannten auf und setzen das Erhaltene in allen restlichen Gleichungen ein.
+	\item Angenommen, es ist ein lineares $n\times n$ Gleichungssystem zu lösen.
+	\item Durch Rückwärtseinsetzen lassen sich nun auch alle restlichen Unbekannten bestimmen.
+	\item Das lineare $1\times1$ Gleichungssystem ist eine Gleichung in einer Unbekannten.
+	\item Auf diese Weise entsteht ein lineares $(n-1)\times(n-1)$ Gleichungssystem.
+	\item Wir erhalten am Ende also genau eine Lösung für jede Variable.
+	\item Wir wenden das Einsetzungsverfahren an, lösen also die erste Gleichung nach der ersten Unbekannten auf und setzen das Erhaltenen in allen restlichen Gleichungen ein.
+	\item Wir können diese Unbekannte folglich bestimmen.
+	\item Wenn alles normal läuft, landen wir schliesslich bei einem linearen $2\times2$ und dann bei einem linearen $1\times1$ Gleichungssystem.
+	\item So wird das Format des Systems mit jedem Schritt um eine Gleichung und eine Unbekannte verkleinert.
+\end{enumerate}
+
+
+%---------------------------------------------------------
 \question[4]
 Bestimme im folgenden linearen Gleichungssystem den Parameter $b$ so, dass das System unendlich viele Lösungen besitzt.
 \[\left\{\begin{matrix}b\*x+6y=1\\6x-9y=\frac{-3}{2}\end{matrix}\right.\]
 
 
 %---------------------------------------------------------
+\question[4] % Barth Ü&A K4.3 A5b
+Bestimme im folgenden linearen Gleichungssystem die Parameter $a$ und $c$ so, dass das System eine leere Lösungsmenge besitzt.
+\[\left\{\begin{matrix}1.5x-1.2y=c\\a\*x+0.9y=-1.2\end{matrix}\right.\]
+
+
+%---------------------------------------------------------
 \noaddpoints
-\question[\totalpoints]
+\question[\totalpoints] % Barth Nachtest A5
 \addpoints
 \begin{parts}
 	\part[3] Löse das folgende lineare Gleichungssystem graphisch in abgebildeten Koordinatensystem. \[\left\{\begin{matrix}x-2y-2=0\\y-2-\frac{1}{2}x=0\end{matrix}\right.\]
@@ -73,7 +96,7 @@ Bestimme im folgenden linearen Gleichungssystem den Parameter $b$ so, dass das S
 
 
 %---------------------------------------------------------
-\question[4]
+\question[4] %Barth Nachtest A6
 Welches Gleichungssystem wird hier graphisch gelöst? Erkläre deine Vorgehensweise auch in Worten.
 \begin{figure}[H]
 	\centering\includegraphics[scale=0.5]{LGS-graphische-lösung.png}
@@ -82,7 +105,7 @@ Welches Gleichungssystem wird hier graphisch gelöst? Erkläre deine Vorgehenswe
 
 %---------------------------------------------------------
 \noaddpoints
-\question[\totalpoints]
+\question[\totalpoints] % Barth SE K4.2 A3
 \addpoints
 Céline muss das folgende Gleichungssystem lösen: \[\systeme{x+5y=3,x-3y=2}\]
 \begin{parts}
@@ -92,7 +115,7 @@ Céline muss das folgende Gleichungssystem lösen: \[\systeme{x+5y=3,x-3y=2}\]
 
 %---------------------------------------------------------
 \noaddpoints
-\question[\totalpoints]
+\question[\totalpoints] % Barth SE K4.2 A4
 \addpoints
 Max muss das folgende Gleichungssystem lösen: \[\systeme{2x+y=1,7x-y=2}\]
 \begin{parts}
@@ -106,8 +129,15 @@ Max muss das folgende Gleichungssystem lösen: \[\systeme{2x+y=1,7x-y=2}\]
 Löse das folgende lineare Gleichungssystem mit einem Verfahren deiner Wahl.
 \[\systeme{-2x+4y=4,-x+3y=4}\]
 
+
 %---------------------------------------------------------
-\question[5] % 3x3 LGS
+\question[4] %DMK Algebra A16e S67
+Löse das folgende Gleichungssystem unter Verwendung des Einsetzungsverfahren.
+\[\systeme{\frac{1}{4}x-\frac{5}{6}y=5,\frac{4}{5}x-y=11}\]
+{\small\textbf{Bewertung:} Wird nicht das erwähnte Verfahren verwendet, wird die Aufgabe mit 0 Punkte bewertet.}
+
+%---------------------------------------------------------
+\question[5] % Barth Ü&A K4.3 A4a
 Vereinfache das folgende lineare $3\times3$ Gleichungssystem auf ein einfacheres $2\times2$ System, in dem du die Gleichungen geeignet umformst. Du musst das Gleichungssystem nicht komplett auflösen.
 \[\left\{\begin{matrix}5x-2y=8+2z\\z+2x=11-7y\\y=2.5x-z-4\end{matrix}\right.\]
 
@@ -127,6 +157,7 @@ Löse das folgende lineare $3\times3$ Gleichungssystem unter Verwendung eines ge
 \question[4]
 Löse das folgende lineare $3\times3$ Gleichungssystem unter Verwendung eines geeigneten Verfahrens. \[\systeme{2x-y+z=1,-x+2y=1,x+2y+z=5}\]
 
+
 %---------------------------------------------------------
 \question[4] %Barth Nachtest A4c
 Löse das folgende lineare Gleichungssystem unter Verwendung eines geeigneten Verfahrens. Bemerke, $p$ ist hier ein Parameter. \[\left\{\begin{matrix}5x-3y=14p\\-x+5y=6p\end{matrix}\right.\]
@@ -136,6 +167,12 @@ Löse das folgende lineare Gleichungssystem unter Verwendung eines geeigneten Ve
 \question[4] % DMK Algebra A15a S84
 Bestimme die Lösungsmenge des folgenden linearen Gleichungssystems. Bemerke, $d$ ist hier ein Parameter.
 \[\left\{\begin{matrix}x-y=d\\\frac{x-y}{2}+dx=d\end{matrix}\right.\]
+
+
+%---------------------------------------------------------
+\question[4] %DMK Algebra A9c S69
+Löse das folgende lineare Gleichungssystem unter Verwendung eines geeigneten Verfahrens. Bemerke, $r$ ist hier ein Parameter. \[\left\{\begin{matrix}(r-1)x=r(1-x)\\r(r-x-y)=2x\end{matrix}\right.\]
+
 
 %---------------------------------------------------------
 \question[6] % KSWilli A15
@@ -150,7 +187,7 @@ Das Verkehrshaus in Luzern hat unterschiedliche Eintrittspreise für Erwachsene 
 \question[5] % Gauss-Verfahren
 Löse das folgende lineare Gleichungssystem mit Hilfe des Gauss-Verfahrens.
 \[\systeme{x-2y+5z=0,4x-4y+16z=6,-3x+8y-18z=-3}\]
-\textit{Wird nicht das erwähnte Verfahren verwendet, werden Punkte abgezogen.}
+{\small\textbf{Bewertung:} Wird nicht das erwähnte Verfahren verwendet, wird die Aufgabe mit 0 Punkte bewertet.}
 
 
 \end{questions}
