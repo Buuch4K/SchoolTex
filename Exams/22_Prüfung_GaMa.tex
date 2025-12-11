@@ -5,10 +5,10 @@
 \input{../Header/headerExam.sty}
 \graphicspath{{Analysis/data-analysis/},{Algebra/data-algebra/},{Geometrie/data-geometrie/}}
 %=========================================================
-\newcommand{\theme}{Differentialrechnung}
+\newcommand{\theme}{Integralrechnung}
 \newcommand{\teacher}{Jonas Guler}
 \newcommand{\class}{4GaMa}
-\renewcommand{\date}{04.11.25}
+\renewcommand{\date}{16.12.25}
 %=========================================================
 \begin{document}
 \fontsize{14}{14}\selectfont
@@ -34,8 +34,7 @@
     \vspace{5pt}
     Der Rechenweg muss \textbf{vollständig und nachvollziehbar} sein.\\
     Lösen Sie die Prüfung mit einen schwarzen oder blauen Kugelschreiber.\\
-    Als Hilfsmittel sind der Taschenrechner und das Formelbüchlein erlaubt.\\
-    In den {\bf Aufgaben 1 bis 3} werden Lösungswege mit Hilfe des Taschenrechners {\bf nicht} bewertet.
+    Als Hilfsmittel sind der Taschenrechner und das Formelbüchlein erlaubt.
 \end{center}
 \rule[1ex]{\textwidth}{1pt}
 
@@ -52,78 +51,120 @@
 \noaddpoints
 \question[\totalpoints]
 \addpoints
-Bestimme die erste Ableitung der folgenden Funktionen schrittweise von Hand. Gib in deinem Lösungsweg an, welche der folgenden Ableitungsregeln (PR = Produktregel, QR = Quotientenregel, KR = Kettenregel) verwendet wird. Die Resultate müssen \textbf{nicht} vereinfacht werden.
 \begin{parts}
-	\part[2] $\displaystyle f(x)=p\*\sin{x}-\cos{p\*x}$
-	\part[2] $\displaystyle f(x)=\frac{4x-2+\ln{x}}{2x^2+\exp{x}}$
-	\part[2] $\displaystyle f(x)=\exp{\frac{x^2+3x-1}{2}}$
-	\part[2] $\displaystyle f(x)=\sqrt{\frac{2(x^6-x^3)}{x^2}}$
+	\part[3] Für welche zwei Werte der oberen Grenze $a$ gilt \[\int_{-1}^{a}(x^2-2x)\d{x}=0?\]
+	\part[3] Erkläre anhand einer sinnvollen Skizze des Graphen, warum es zwei Lösungen möglich sind.
 \end{parts}
-\vspace{7pt}\antwort{18}
+\vspace{7pt}\antwort{21}
 
 
 %---------------------------------------------------------
 \newpage
-\question[3]
-Berechne $a$ so, dass die Kurve $\displaystyle f(x)=\frac{a\*x^2+4x-6}{x^3}$ an der Stelle $x_0=2$ ein Extremum besitzt. Die Art des Extremum muss \textbf{nicht} bestimmt werden.
-\vspace{7pt}\antwort{10}
-\vfill
 \noaddpoints
 \question[\totalpoints]
 \addpoints
-Gegeben ist eine beliebige Funktion $f(x)$ und eine reelle Zahl $z\in\R$. Begründe mit Hilfe der Ableitungsregeln, welche der folgenden Gleichungen korrekt sind.
+Berechne die folgenden unbestimmten Integrale.
 \begin{parts}
-	\part[1] $\displaystyle\frac{\d{\ }}{\d{x}}\left(z\*f(x)\right)=z\*\left(\frac{\d{\ }}{\d{x}}f(x)\right)+f(x)\*\left(\frac{\d{\ }}{\d{x}}z\right)$
-	\part[1] $\displaystyle\frac{\d{\ }}{\d{x}}\left(z\*f(x)\right)=\left(\frac{\d{\ }}{\d{x}}z\right)\*\left(\frac{\d{\ }}{\d{x}}f(x)\right)$
-	\part[1] $\displaystyle\frac{\d{\ }}{\d{x}}\left(z\*f(x)\right)=z\*\left(\frac{\d{\ }}{\d{x}}f(x)\right)$
+	\part[2] $\displaystyle\int\left(\frac{2}{x^3}\*\sqrt[3]{x}\right)\d{x}$
+	\part[2] $\displaystyle\int\left(2\cos{x}+\frac{4x}{x^2}-6e^x\right)\d{x}$
 \end{parts}
-\vspace{7pt}\antwort{6.5}
+\vspace{7pt}\antwort{21.5}
 
 
 %---------------------------------------------------------
 \newpage
-\noaddpoints
-\question[\totalpoints] %Barth3 Nachtest Kap. 3 A14
-\addpoints
-Betrachten wir die folgende Funktion $f(x)=\frac{1}{2x+1}$.
-\begin{parts}
-	\part[1] Was ist der maximale Definitionsbereich dieser Funktion?
-	\part[3] Finde die Gleichung der Normale an den Graphen von $f$ im Punkt $P(3\;\vert\; y_P)$.
-\end{parts}
-\vspace{5pt}\antwort{9.5}
-\vfill
-\question[4] %Barth3 Nachtest Kap. 3 A22e
-Gegeben ist die Funktion $\displaystyle f(x)=\frac{3}{2\*(x+1)^2}$. Für welchen Punkt des Graphen gilt, dass die Tangente an den Graphen durch den Nullpunkt $(0\:\vert\:0)$ führt?
-\vspace{5pt}\antwort{9.5}
-
-%---------------------------------------------------------
-\newpage
-\question[4] % Matura2020 - A11
-\begin{minipage}{0.4\linewidth}
-	\centering\includegraphics[width=\linewidth]{maxidreieck.png}
+\question[6]
+\begin{minipage}{0.6\linewidth}
+	Gegeben sind die beiden Funktionen \[f:y=\sin{x} \text{ und } g:y=mx+q.\] Die drei Schnittpunkte des Graphen sind $S_1\left(-\frac{5\pi}{6},-\frac{1}{2}\right)$, $S_2(0,0)$ und $S_3\left(5\frac{\pi}{6},\frac{1}{2}\right)$.\vspace{5pt}
+	\begin{parts}
+		\part Ermittle die Gleichung der Gerade $g$.
+		\part Welchen Inhalt hat die Fläche, die von den beiden Graphen begrenzt wird?
+	\end{parts}
 \end{minipage}
 \hfill
-\begin{minipage}{0.55\linewidth}
-	In der Figur siehst du den Graphen von \[f(x)=-\frac{1}{4}x^4+20\] Bestimme den maximalen Flächeninhalt des grau unterlegten Dreiecks, dessen eine Ecke im Ursprung liegt und die anderen Ecken auf dem Graphen liegen.
+\begin{minipage}{0.375\linewidth}
+	\centering
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=15mm,
+		>=latex,   %Voreinstellung für Pfeilspitzen
+		font= \footnotesize, scale=0.9]
+		%Raster zeichnen
+		\draw [color=gray!50]  [step=5mm] (-3.7,-1.45) grid (3.7,1.45);
+		% Achsen zeichnen
+		\draw[->,thick] (-3.8,0) -- (3.8,0) node[right, below] {\normalsize $x$};
+		\draw[->,thick] (0,-1.8) -- (0,1.8) node[above, left] {\normalsize $y$};
+		% Achsen beschriften
+		%\foreach \x in {-3,-2,-1,1,2,...,3} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+		%\foreach \y in {-2,-1,1,2} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+		% Besserer Ursprung
+		%\draw[color=black] (0pt,-7pt) node[right] {$0$};
+		%Funktionen zeichnen:
+		\clip(-3.6,-2.1) rectangle (3.6,2.1); %Bildbereich
+		\draw[blue,samples=100] plot (\x,{sin(\x r)});
+		\draw[blue,samples=100] plot (\x,{0.190986*\x});
+		% Bereich unter Funktionen einfärben
+		\fill[blue, domain=0:5*pi/6, variable=\x, fill opacity=0.3] (0, 0) -- plot(\x, {sin(\x r)}) -- (5*pi/6,0.5) -- plot(\x, {0.190986*\x}) -- cycle;
+		\fill[blue, domain=-5*pi/6:0, variable=\x, fill opacity=0.3] (-5*pi/6, -0.5) -- plot(\x, {0.190986*\x}) -- (0,0) -- plot(\x, {sin(\x r)}) -- cycle;
+		%Beschriftung
+		\node[blue]  at (3.3,-0.5) {\normalsize$f$};
+		\node[blue]  at (3.3,0.45) {\normalsize$g$};
+		\draw[fill=black] (-5*pi/6,-0.5) circle (1pt);
+		\node[black] at (-2.6,-0.8) {\normalsize$S_1$};
+		\draw[fill=black] (0,0) circle (1pt);
+		\node[black] at (0.3,-0.3) {\normalsize$S_2$};
+		\draw[fill=black] (5*pi/6,0.5) circle (1pt);
+		\node[black] at (2.7,0.8) {\normalsize$S_3$};
+	\end{tikzpicture}
 \end{minipage}
-\vspace{5pt}\antwort{18.5}
+\vspace{5pt}\antwort{19}
+
+
+%=========================================================
+%--------------START ZWEITER TEIL (mit TR)
+%=========================================================
+\newpage
+\noaddpoints
+\question[\totalpoints] % MA 03 A4
+\addpoints
+\begin{minipage}{0.525\linewidth}
+	\begin{parts}
+		\part[3] Berechne $u$.
+		\part[3] Berechne das Volumen $V$ des Körpers, der bei einer Rotation um die $x-$Achse in den Grenzen aus a) entsteht.\newline(Falls keine Lösung bei a), verwende $u=3$.)
+	\end{parts}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\linewidth}
+	\centering\includegraphics[scale=0.7]{logrotvol.png}
+\end{minipage}
+\vspace{5pt}\antwort{20.5}
 
 
 %---------------------------------------------------------
 \newpage
-\question[4] % Matura2024 - A11
-Die Figur zeigt drei Kreise mit Radius $r=1$ und den Graphen eines Polynoms 4. Grades. Bestimme die Funktionsgleichung des Polynoms $f$.
-\begin{figure}[H]
-	\centering\includegraphics[width=0.75\linewidth]{FktGlbestimmen.png}
-\end{figure}
-\vspace{5pt}\antwort{18.5}
+\question[4] % MA 10 A7
+\begin{minipage}{0.525\linewidth}
+	In der nebenstehenden Figur sind die Graphen der Funktionen $f:y=x^3$,\newline $g:y=x^2$ und $h:y=a\*x$ abgebildet. Wie gross muss $a$ gewählt werden, dass die beiden hervorgehobenen Flächen gleich gross sind?
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\linewidth}
+	\centering\includegraphics[scale=0.75]{x3x2ax.png}
+\end{minipage}
+\vspace{5pt}\antwort{19.5}
+
+%---------------------------------------------------------
+\newpage
+\question[6] % MA 03 A3
+\begin{minipage}{0.525\linewidth}
+	Eine Parabel (2. Ordnung) mit Scheitelpunkt $S(0\:\vert\:2)$ zerlegt das abgebildete Quadrat in drei flächengleiche Teile $A=B=C$. Bestimme die Parabelgleichung.
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\linewidth}
+	\centering\includegraphics[scale=1]{Parabelfinden.png}
+\end{minipage}
+\vspace{7pt}\antwort{18.5}
 
 %---------------------------------------------------------
 \newpage
 {\bf Reserve:}\newline\antwort{24.5}
-
-
-
 
 \end{questions}
 \end{document}

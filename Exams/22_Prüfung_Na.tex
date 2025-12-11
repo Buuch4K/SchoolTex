@@ -5,10 +5,10 @@
 \input{../Header/headerExam.sty}
 \graphicspath{{Analysis/data-analysis/},{Algebra/data-algebra/},{Geometrie/data-geometrie/}}
 %=========================================================
-\newcommand{\theme}{Differentialrechnung}
+\newcommand{\theme}{Integralrechnung}
 \newcommand{\teacher}{Jonas Guler}
 \newcommand{\class}{4Na}
-\renewcommand{\date}{03.11.25}
+\renewcommand{\date}{15.12.25}
 %=========================================================
 \begin{document}
 \fontsize{14}{14}\selectfont
@@ -35,7 +35,6 @@
     Der Rechenweg muss \textbf{vollständig und nachvollziehbar} sein.\\
     Lösen Sie die Prüfung mit einen schwarzen oder blauen Kugelschreiber.\\
     Als Hilfsmittel ist der Taschenrechner und das Formelbüchlein erlaubt.\\
-    In den {\bf Aufgaben 1 bis 3} werden Lösungswege mit Hilfe des Taschenrechners {\bf nicht} bewertet.
 \end{center}
 \rule[1ex]{\textwidth}{1pt}
 
@@ -52,61 +51,165 @@
 \noaddpoints
 \question[\totalpoints]
 \addpoints
-Bestimme die erste Ableitung der folgenden Funktionen schrittweise von Hand. Gib in deinem Lösungsweg an, welche der folgenden Ableitungsregeln (PR = Produktregel, QR = Quotientenregel, KR = Kettenregel) verwendet wird. Die Resultate müssen \textbf{nicht} vereinfacht werden.
 \begin{parts}
-	\part[2] $\displaystyle f(x)=(4x^2-3x+2)\*(x^5+3x^3)$
-	\part[2] $\displaystyle f(x)=\frac{2x^2+3}{4x-2+\exp{x}}$
-	\part[2] $\displaystyle f(x)=\exp{\frac{1}{2}x^2+6x-1}$
-	\part[2] $\displaystyle f(x)=\sqrt{\frac{2(x^6-x^3)}{x^2}}$
+	\part[3] Für welche zwei Werte der oberen Grenze $a$ gilt \[\int_{0}^{a}(x+1)\d{x}=12?\]
+	\part[3] Erkläre anhand einer sinnvollen Skizze des Graphen, warum es zwei Lösungen möglich sind.
 \end{parts}
-\vspace{7pt}\antwort{18.5}
+\vspace{7pt}\antwort{20.5}
 
 
 %---------------------------------------------------------
 \newpage
-\question[3]
-Berechne $a$ so, dass die Kurve $\displaystyle f(x)=\frac{a\*x+4}{x^3}$ an der Stelle $x_0=2$ ein Extremum besitzt. Die Art des Extremum muss \textbf{nicht} bestimmt werden.
-\vspace{7pt}\antwort{10}
-\vfill
-\question[3]
-Gegeben ist die Funktion $\displaystyle f(x)=\frac{x}{x^2-3x}$. Bestimme die Gleichung der Normalen an den Graphen im Punkt $P(1\:\vert\:y_p)$.
-\vspace{7pt}\antwort{10}
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+Berechne die folgenden unbestimmten Integrale.
+\begin{parts}
+	\part[2] $\displaystyle\int ax\*\left(4x-2\right)\d{x}$
+	\part[2] $\displaystyle\int\left(\frac{4}{x}+4\sin{x}-6e^x\right)\d{x}$
+\end{parts}
+\vspace{7pt}\antwort{21}
 
 
 %---------------------------------------------------------
 \newpage
-\question[4] %DMK Ana S116 A420
-Eine zur $y-$Achse symmetrische Polynomfunktion $4.$ Grades geht durch den Punkt $P(-1\:\vert\:9)$ und besitzt beim Punkt $Q(2\:\vert\:3)$ die Steigung $m=4$. Wie lautet die Funktionsgleichung?
-\vspace{5pt}\antwort{9.5}
-\vfill
-\question[4] %DMK Ana S115 A410
-Gegeben ist die Funktion $f(x)=x+\frac{1}{1+x}$. Finde alle Hoch und Tiefpunkte der Funktionsgraphen.
-\vspace{5pt}\antwort{9.5}
-
-%---------------------------------------------------------
-\newpage
-\question[4] % Barth3 Nachtest Kap. 3 A18
-Betrachten Sie die beiden abgebildeten Graphenabschnitte. In der Abbildung ist angegeben, um welche Funktionen es sich dabei handelt. Jemand wählt eine beliebige Stelle $u$ im Intervall $\left[0,\frac{\pi}{2}\right]$und zeichnet ein Rechteck wie in der Abbildung ein. Für welches $u$ aus diesem Intervall wird der Flächeninhalt des Rechteckes maximal sein?
+\question[6]
+Welchen Inhalt hat die Fläche, die begrenzt wird von der x-Achse, der Kurve $f(x)=\sqrt{x}$ und der Normalen $n$ im Kurvenpunkt $P(1\:\vert\:y_P)$?
 \begin{figure}[H]
-	\centering\includegraphics[width=0.5\linewidth]{extremal10.png}
+	\centering
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+		>=latex,   %Voreinstellung für Pfeilspitzen
+		font=\footnotesize, scale=1.5]
+		%Raster zeichnen
+		\draw[step=5mm,gray!50,thin] (-1.3,-1.3) grid (2.3,2.3);
+		% Achsen zeichnen
+		\draw[->,thick] (-1.3,0) -- (2.7,0) node[right, below] {\normalsize $x$};
+		\draw[->,thick] (0,-1.3) -- (0,2.5) node[above, left] {\normalsize $y$};
+		% Achsen beschriften
+		\foreach \x in {-1,1,2} \draw (\x,-.1) -- (\x,.1) node[below=5pt, xshift=4pt] {$\x$};
+		\foreach \y in {-1,1,2} \draw (-.1,\y) -- (.1,\y) node[left=5pt, yshift=2pt] {$\y$};
+		% Besserer Ursprung
+		\draw[color=black] (0.2,-0.2) node {$0$};
+		% Funktionen zeichnen
+		\clip(-1.3,-1.3) rectangle (2.6,2.6); %Bildbereich
+		\draw[forestgreen,domain=0:2.3,samples=100] plot (\x, {\x^0.5});
+		\draw[forestgreen,domain=0.5:1.7,samples=100] plot (\x, {-2*\x+3});
+		% Bereich unter Funktionen einfärben
+		\fill [forestgreen, domain=0:1, variable=\x,fill opacity=0.3] (0, 0) -- plot ({\x}, {\x^0.5}) -- (1, 0) -- cycle;
+		\fill [forestgreen, domain=1:1.5, variable=\x,fill opacity=0.3] (1, 0) -- plot ({\x}, {-2*\x+3}) -- (1.5, 0) -- cycle;
+		% Beschriftung
+		\node[forestgreen]  at (2.4,1.6) {\normalsize$f$};
+		\node[forestgreen]  at (0.3,2.1) {\normalsize$n$};
+		\draw[fill=black] (1,1) circle (1pt);
+		\node[black] at (1.1,1.2) {\normalsize$P$};
+	\end{tikzpicture}
 \end{figure}
-\vspace{5pt}\antwort{16}
+\vspace*{7pt}\antwort{16.5}
+
+
+%=========================================================
+%--------------START ZWEITER TEIL (mit TR)
+%=========================================================
+\newpage
+\noaddpoints
+\question[\totalpoints] % DMK Ana23 S168 A239
+\addpoints
+\begin{minipage}{0.6\linewidth}
+	Gegeben sind die beiden Funktionen \[f:y=\frac{-3}{16}x^3+\frac{3}{8}x^2+2x \text{ und } g:y=mx+q.\] Die drei Schnittpunkte der Graphen sind ${S_1(-2\:\vert\:-1)}$, $S_2(0\:\vert\:0)$ und $S_3(4\:\vert\:2)$.\vspace{5pt}
+	\begin{parts}
+		\part[1] Ermittle die Gleichung der Geraden $g$.
+		\part[5] Welchen Inhalt hat die Fläche, die von den beiden Graphen begrenzt wird?
+	\end{parts}
+\end{minipage}
+\hfill
+\begin{minipage}{0.35\linewidth}
+	\centering
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+		>=latex,   %Voreinstellung für Pfeilspitzen
+		font=\footnotesize, scale=0.8]
+		%Raster zeichnen
+		\draw[step=5mm,gray!50,thin] (-2.3,-2.3) grid (4.3,5.3);
+		% Achsen zeichnen
+		\draw[->,thick] (-2.3,0) -- (4.7,0) node[right, below] {\normalsize $x$};
+		\draw[->,thick] (0,-2.3) -- (0,5.7) node[above, left] {\normalsize $y$};
+		% Achsen beschriften
+		%\foreach \x in {-2,-1,1,2,...,4} \draw (\x,-.1) -- (\x,.1) node[below=5pt, xshift=4pt] {$\x$};
+		%\foreach \y in {-2,-1,1,2,...,5} \draw (-.1,\y) -- (.1,\y) node[left=5pt, yshift=2pt] {$\y$};
+		% Besserer Ursprung
+		%\draw[color=black] (0.2,-0.2) node {$0$};
+		% Funktionen zeichnen
+		\clip(-2.3,-2.3) rectangle (4.6,5.6); %Bildbereich
+		\draw[forestgreen,domain=-2.3:4.3,samples=100] plot (\x, {0.375*(\x)^2+2*\x-0.1875*(\x)^3});
+		\draw[forestgreen,domain=-2.3:4.3,samples=100] plot (\x, {0.5*\x});
+		% Bereich unter Funktionen einfärben
+		\fill[forestgreen, domain=0:4, variable=\x, fill opacity=0.3] (0, 0) -- plot(\x, {-3/16*(\x)^3+3/8*(\x)^2+2*\x}) -- (4,2) -- plot(\x, {0.5*\x}) -- cycle;
+		\fill[forestgreen, domain=-2:0, variable=\x, fill opacity=0.3] (-2, -1) -- plot(\x, {0.5*\x}) -- (0,0) -- plot(\x, {-3/16*(\x)^3+3/8*(\x)^2+2*\x}) -- cycle;
+		% Beschriftung
+		\node[forestgreen]  at (3.7,4) {\normalsize$f$};
+		\node[forestgreen]  at (3.4,1.4) {\normalsize$g$};
+		\draw[fill=black] (-2,-1) circle (1pt);
+		\node[black] at (-2.1,-1.4) {\normalsize$S_1$};
+		\draw[fill=black] (0,0) circle (1pt);
+		\node[black] at (0.3,-0.3) {\normalsize$S_2$};
+		\draw[fill=black] (4,2) circle (1pt);
+		\node[black] at (4.3,2.3) {\normalsize$S_3$};
+	\end{tikzpicture}
+\end{minipage}
+\vspace{7pt}\antwort{18}
 
 
 %---------------------------------------------------------
 \newpage
-\question[4]
-Einer Halbkugel mit Radius $R=5$ soll ein stehender Zylinder mit maximalen Volumen einbeschrieben werden. Welche Abmessungen muss dieser Zylinder haben? Das Maximum muss \textbf{nicht} überprüft werden.
+\question[4] % MA 13 A3
+\begin{minipage}{0.525\linewidth}
+	Die Kurve $f(x)=\sqrt{3x^2+p^2}$ wird wie abgebildet um die $x-$Achse rotiert. Berechne das Volumen des Rotationskörpers.
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\linewidth}
+	\centering\includegraphics[scale=0.5]{rotSanduhr.png}
+\end{minipage}
+\vspace{5pt}\antwort{19.5}
+
+%---------------------------------------------------------
+\newpage
+\noaddpoints
+\question[\totalpoints] % Matura 2019 T2 A15 ähnlich
+\addpoints
+Gegeben ist die vom Parameter $a$ abhängige Funktion \[f(x)=-a\*\sqrt{x}+3\*\ln{x}+a\*x.\]
+Die Einheiten sind cm.
 \begin{figure}[H]
-	\centering\includegraphics[width=0.4\linewidth]{zylinkugel.png}
+	\centering
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=1mm, y=1mm,
+		>=latex,   %Voreinstellung für Pfeilspitzen
+		font= \footnotesize, scale=1.3]
+		%Raster zeichnen
+		\draw [color=gray!50]  [step=5mm] (-3,-8) grid (103,13);
+		% Achsen zeichnen
+		\draw[->,thick] (-5,0) -- (108,0) node[right, below] {\normalsize $x$};
+		\draw[->,thick] (0,-9) -- (0,15) node[above, left] {\normalsize $y$};
+		% Achsen beschriften
+		%\foreach \x in {-3,-2,-1,1,2,...,3} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+		%\foreach \y in {-2,-1,1,2} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+		% Besserer Ursprung
+		%\draw[color=black] (0pt,-7pt) node[right] {$0$};
+		%Funktionen zeichnen:
+		\clip(-3,-8) rectangle (103,10); %Bildbereich
+		\draw[forestgreen,thick,domain=0.1:103,samples=1000] plot (\x,{0.19969*(\x)^0.5 + 3*ln(\x) - 0.19969*(\x)});
+		\draw[forestgreen,thick,domain=1:73,samples=10] plot (\x,{0});
+		\fill[forestgreen, domain=1:73,samples=1000, variable=\x, fill opacity=0.3] (1, 0) -- plot(\x, {0.19969*(\x)^0.5 + 3*ln(\x) - 0.19969*(\x)}) -- (73,0) -- plot(\x, {0}) -- cycle;
+	\end{tikzpicture}
 \end{figure}
-\vspace{5pt}\antwort{18}
+\begin{parts}
+	\part[2] Zeige rechnerisch, dass diese Funktion für alle möglichen Werte von $a$ immer eine Nullstelle bei $x=1$ besitzt.
+	\part[2] Wie gross muss der Parameter $a$ sein, damit die Funktion eine weitere Nullstelle bei $x=73$ hat?
+	\part[3] Diese Funktion wird verwendet, um das Flügelprofil eines Passagierflugzeugs zu modellieren. Dabei ist die Fläche zwischen x-Achse und Funktion entscheidend. Berechne sie.
+\end{parts}
+\vspace{7pt}\antwort{13.5}
+
 
 %---------------------------------------------------------
 \newpage
 {\bf Reserve:}\newline\antwort{24.5}
-
-
 
 \end{questions}
 \end{document}
