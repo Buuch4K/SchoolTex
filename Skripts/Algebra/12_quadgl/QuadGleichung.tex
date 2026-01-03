@@ -7,7 +7,7 @@
 
 \newcommand{\Skriptname}{Quadratische Gleichung}
 \newcommand{\Autor}{Jonas Guler (Gu)}
-\newcommand{\version}{\textit{v}1.0}
+\newcommand{\version}{\textit{v}1.1}
 
 \begin{document}   %KSH-Gubser - LATEX/PDF
 \begin{titlepage}
@@ -22,34 +22,8 @@
 \end{titlepage}
 \pagenumbering{arabic}
 %############################################################################################
-\subsection*{Worum geht es?}
-	In diesem Kapitel lernst du eine neue Sorte von Gleichungen kennen: die \textit{quadratischen Gleichungen}.
-	Stell dir vor, du stehst auf einer 25 Meter hohen Brücke und wirfst einen Stein in den Fluss. Wie lange dauert es, bis er unten ankommt. Aus der Physik ist dir unter Umständen schon das Fallgesetz bekannt. Es besagt, dass sich die Geschwindigkeit des fallenden Körpers nach folgendem Gesetz verhält:
-	\begin{align*}
-		v(t)=g\cdot t
-	\end{align*}
-	wobei $g$ eine Konstante ist. Der zurückgelegte Weg nach Zeit t ist:
-	\begin{align*}
-		s(t)=\frac{1}{2}\cdot g\cdot t^2
-	\end{align*}
-	Wir interessieren uns an dieser Stelle nicht so sehr für die physikalischen Details. Wir nähern die Konstante der Erdbeschleunigung $g$ mit 10 an und erhalten so die Gleichung für den 25 Meter frei gefallenen Stein:
-	\begin{align*}
-		25=5\cdot t^2
-	\end{align*}
-	Wollen wir also wissen, wie viel Zeit verstrichen ist, so müssen wir die Gleichung nach $t$ auflösen.
-	Diese Gleichung ist \emph{nicht linear}. Die Unbekannte $t$ kommt als Quadrat vor. Aus diesem Grund nennt man diese Gleichungen \textbf{quadratisch}.
-\subsection*{Was lernst du in diesem Kapitel?}
-	Quadratische Gleichungen können auch einiges komplizierter sein. Zum Beispiel:
-	\begin{align*}
-		5\cdot (x-7)=2\cdot x^2 -x +1
-	\end{align*}
-	Nach diesem Kapitel wirst du mühelos in der Lage sein, solch eine Gleichung aufzulösen. Wir werden sogar eine Lösungsformel entwickeln, womit die Lösungen fast schon automatisch berechnet werden können.
-\subsection*{Wieso lernst du das?}
-	In vielen Anwendungen (u.a. Physik, Wirtschaft, Informatik...) der Mathematik müssen Gleichungen und Gleichungssysteme gelöst werden. Dies können lineare, häufig aber auch nichtlineare Gleichungen sein. Lineare Gleichungen hast du schon kennengelernt.  Alle anderen sind dir noch fremd, deshalb betrachten wir an dieser Stelle ein erstes Beispiel einer Sorte nichtlinearer Gleichungen.
-
-\newpage
 \section{Einführung}
-	Eine lineare Gleichung kann immer in die Form \[ax+b=0 \qquad\vert\:a,b\in\R\] gebracht werden. Entscheidend dabei ist, dass die Unbekannte $x$ nur als Faktor eines Parameters auftaucht. Wir wissen bereits wie solche Gleichungen gelöst werden können. In diesem Abschnitt lernen wir eine weitere Familie von Gleichungen kennen.
+	Eine lineare Gleichung mit einer Unbekannten kann immer in die Form \[ax+b=0 \qquad\vert\:a,b\in\R\] gebracht werden. Entscheidend dabei ist, dass die Unbekannte $x$ nur als Faktor eines Parameters auftaucht. Wir wissen bereits wie solche Gleichungen gelöst werden können. In diesem Abschnitt lernen wir eine weitere Familie von Gleichungen kennen, die offensichtlich nicht mehr linear ist aber weiterhin nur eine Unbekannte besitzt.
 	\begin{aufgabe}
 		Verlängert man bei einem Quadrat die eine Seite um $5$cm und kürzt die zweite um $3$cm, so hat das resultierende Rechteck einen Flächeninhalt von $120$cm$^2$. Stelle eine Gleichung für die Seitenlänge $s$ des Quadrats auf und löse sie mithilfe des Taschenrechners. Überprüfe anschliessend die Lösungen durch Einsetzen.\vspace{5pt}\newline
 		\karos{4}
@@ -144,7 +118,7 @@
 				\item $3x^2+48=-24x$
 				\item $x^3=10x$
 				\item $16+5x=5x-x^2$
-				\item $5z^2+10=20$
+				\item $5z^2+15z=20$
 				\item $(x+5)^2-4=0$
 				\item $(x+5)^2-3=0$
 				\item $3z^2-\frac{2}{5}z-\frac{1}{5}=0$
@@ -166,15 +140,15 @@
 		Wir betrachten jeweils eine quadratische Gleichung der Form $ax^2+bx+c=0$. Unser Ziel ist es, die linke Seite auf die Form $a(x-u)^2+v$ zu bringen.
 		\begin{enumerate}[label=\alph*)]
 			\item $x^2-6x=0$
-		\end{enumerate}\karos{6}
+		\end{enumerate}\karos{7.5}
 		\begin{enumerate}[label=\alph*)]
 			\setcounter{enumi}{1}
 			\item $x^2-8x+10=0$
-		\end{enumerate}\karos{6}
+		\end{enumerate}\karos{7.5}
 		\begin{enumerate}[label=\alph*)]
 			\setcounter{enumi}{2}
 			\item $4x^2-x+3=0$
-		\end{enumerate}\karos{6}
+		\end{enumerate}\karos{7.5}
 	\end{beispiel}
 	\begin{aufgabe}
 		Löse die folgenden quadratischen Gleichungen, indem du die linke Seite mit geeignetem quadratischen Ergänzen faktorisierst.
@@ -254,16 +228,16 @@
 
 	Dazu betrachten wir die folgende Aufgabe:
 	\begin{aufgabe}
-		Löse die folgenden quadratischen Gleichungen mithilfe der binomischen Formeln bzw. dem Klammeransatz für geeignete Trinome.
-		\begin{enumerate}[label=\alph*)]\begin{multicols}{2}
-				\item $x^2+10x+24=0$
-				\item $x^2-14x+49=0$
-		\end{multicols}\end{enumerate}
-		Vergleiche die Anzahl Lösungen. Was fällt dir dabei auf?\vspace{5pt}\newline\karos{6}
-	\end{aufgabe}
-	\begin{aufgabe}
-		Löse die beiden quadratischen Gleichungen aus obigen Aufgabe nochmals mithilfe der Lösungsformel. Beschreibe den Unterschied zwischen a) und b).\vspace{11pt}\newline
-		Beschreibe in eigenen Worten, wie du erkennen kannst, ob eine quadratische Gleichung eine oder zwei Lösungen besitzt.\vspace{5pt}\newline\karos{2}
+		\begin{enumerate}
+			\item Löse die folgenden quadratischen Gleichungen mithilfe der binomischen Formeln bzw. dem Klammeransatz für geeignete Trinome.
+			\begin{enumerate}[label=\alph*)]\begin{multicols}{2}
+					\item $x^2+10x+24=0$
+					\item $x^2-14x+49=0$
+			\end{multicols}\end{enumerate}
+			Vergleiche die Anzahl Lösungen. Was fällt dir dabei auf?\vspace{5pt}\newline\karos{6}
+			\item Löse die beiden quadratischen Gleichungen aus obigen Aufgabe nochmals mithilfe der Lösungsformel. Beschreibe den Unterschied zwischen a) und b).\vspace{22pt}\newline
+			Beschreibe in eigenen Worten, wie du erkennen kannst, ob eine quadratische Gleichung eine oder zwei Lösungen besitzt.\vspace{5pt}\newline\karos{3.5}
+		\end{enumerate}
 	\end{aufgabe}
 	\begin{aufgabe}
 		\begin{align*}
@@ -272,7 +246,7 @@
 			(x-4)^2&=-9
 		\end{align*}
 		Betrachte die Umformungen und beschreibe in eigenen Worten, wieso diese Gleichung nicht weiter gelöst werden kann.\vspace{11pt}\newline
-		Was bedeutet dies für die Anzahl der Lösungen dieser Gleichung?\vspace{5pt}\newline\karos{4}
+		Was bedeutet dies für die Anzahl der Lösungen dieser Gleichung?\vspace{5pt}\newline\karos{2.5}
 	\end{aufgabe}
 	\begin{aufgabe}
 		Löse nun die obige Gleichung ($x^2-8x+25=0$) nochmals mithilfe der Lösungsformel. Beschreibe den Unterschied zu den Gleichungen aus vorherigen Aufgaben.\vspace{5pt}\newline\karos{2}
@@ -280,6 +254,8 @@
 	Wir können also unsere Erkenntnisse aus dieser Aufgabenkette im folgenden Satz zusammenfassen und haben damit eine eindeutige Bedingung gefunden, die uns hilft, zu entscheiden, wie viele Lösungen eine quadratische Gleichung besitzt.
 	\begin{satz}
 		Eine quadratische Gleichung der Form $ax^2+bx+c=0$ kann entweder unterschiedlich viele Lösungen haben. Dafür definieren wir die Diskriminante \[D:=b^2-4ac.\] Für die Anzahl Lösungen gilt also:
+		\begingroup
+		\renewcommand{\arraystretch}{1.5}
 		\begin{table}[H]
 			\centering
 			\begin{tabular}{c|p{4cm}|p{6cm}}
@@ -289,38 +265,44 @@
 				keine &  &  \\
 			\end{tabular}
 		\end{table}
+		\endgroup
 	\end{satz}
 	\begin{aufgabe}
-		Entscheide für die folgenden quadratischen Gleichungen, wie viele Lösungen sie haben. Begründe deine Antwort.
-		\begin{enumerate}[label=\alph*)]\begin{multicols}{3}
-				\item $x^2+100x+1=0$
-				\item $2x^2-x+3=0$
-				\item $0.3x^2-2.4x+4.8=0$
-				\item $4x^2+12x+9=0$
-				\item $16x^2+25x+10=0$
-				\item $6x^2-19x+15=0$
-		\end{multicols}\end{enumerate}
-	\end{aufgabe}
-	\begin{aufgabe}
-		Löse die folgenden quadratischen Gleichungen mithilfe der Lösungsformel.
-		\begin{enumerate}[label=\alph*)]\begin{multicols}{3}
-				\item $2x^2-7x+3=0$
-				\item $4x^2-4x+7=0$
-				\item $16-50x+25x^2=0$
-				\item $x^2-17x+1650=0$
-				\item $(x+3)(2x+1)=9$
-				\item $(3x+1)^2=-2x$
-				\item $\frac{1}{2}x^2+\frac{1}{3}x-\frac{1}{6}=0$
-				\item $\frac{1}{6}x^2-\frac{5}{4}x+\frac{2}{3}=0$
-				\item $12x^2-7x=9x^2-2$
-				\item $9(x-10)-x(x-15)=x$
-				\item $3\left(x^2+2\right)-x(x+9)=11$
-				\item $17x^2-2x+7=8x^2-14x+3$
-		\end{multicols}\end{enumerate}
+		\begin{enumerate}
+			\item Entscheide für die folgenden quadratischen Gleichungen, wie viele Lösungen sie haben. Begründe deine Antwort.
+			\begin{enumcols}[3]
+					\item $x^2+100x+1=0$
+					\item $2x^2-x+3=0$
+					\item $0.3x^2-2.4x+4.8=0$
+					\item $4x^2+12x+9=0$
+					\item $16x^2+25x+10=0$
+					\item $6x^2-19x+15=0$
+			\end{enumcols}
+			\item Löse die folgenden quadratischen Gleichungen mithilfe der Lösungsformel.
+			\begin{enumcols}[3]
+					\item $2x^2-7x+3=0$
+					\item $4x^2-4x+7=0$
+					\item $16-50x+25x^2=0$
+					\item $x^2-17x+1650=0$
+					\item $(x+3)(2x+1)=9$
+					\item $(3x+1)^2=-2x$
+					\item $\frac{1}{2}x^2+\frac{1}{3}x-\frac{1}{6}=0$
+					\item $\frac{1}{6}x^2-\frac{5}{4}x+\frac{2}{3}=0$
+					\item $12x^2-7x=9x^2-2$
+					\item $9(x-10)-x(x-15)=x$
+					\item $3\left(x^2+2\right)-x(x+9)=11$
+					\item $17x^2-2x+7=8x^2-14x+3$
+			\end{enumcols}
+		\end{enumerate}
 	\end{aufgabe}
 	\begin{aufgabe}
 		\begin{enumerate}[label=\alph*)]
 			\item Das Produkt der beiden kleinsten von sechs aufeinanderfolgenden Zahlen ist dreimal so gross wie die Summe der vier übrigen Zahlen. Bestimme die kleinste Zahl.
+			\item Drei natürliche Zahlen $x,y$ und $z$ heissen \textit{pythagoräische Zahlentripel}, falls $x^2+y^2=z^2$ gilt.
+			\begin{enumerate}
+				\item Beweise, dass es genau ein einziges \textit{pythagoräisches Zahlentripel} aus drei aufeinanderfolgenden Zahlen gibt. Wie lautet es?
+				\item Beweise, dass es kein pythagoräisches Zahlenquadrupel $x^2+y^2+z^2=w^2$ gibt, dass aus vier auffeinanderfolgenden natürlichen Zahlen besteht.
+			\end{enumerate}
 			\item An einer Silvesterparty wird um Mitternacht angestossen. Dabei stösst jeder Gast mir jedem anderen Gast genau einmal an. Die Gläser erklingen insgesamt $300$ mal. Wie viele Gäste sind auf der Party?
 		\end{enumerate}
 	\end{aufgabe}
