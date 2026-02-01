@@ -1,0 +1,161 @@
+\documentclass[11pt]{exam}
+\input{../Header/packages.sty}
+\input{../Header/styleExam.sty}
+\input{../Header/mathexpressions.sty}
+\input{../Header/headerExam.sty}
+\graphicspath{{images/}}
+%=========================================================
+\printanswers % falls kommentiert werden die Antwortenfelder angezeigt
+\newcommand{\theme}{Integralrechnung}
+\newcommand{\teacher}{Jonas Guler}
+\newcommand{\class}{4GaMa}
+\renewcommand{\date}{16.12.25}
+%=========================================================
+\begin{document}
+\fontsize{14}{14}\selectfont
+\begin{questions}
+%=========================================================
+%-------------------TESTFRAGEN
+%=========================================================
+\section{Wachstum (ohne TR)}
+	\noaddpoints
+	\question[\totalpoints]
+	\addpoints
+	Salmonellen sind Bakterien, die schwere Magen-Darm Erkrankungen auslösen. Bei Temperaturen von über $8^\circ$C vermehren sich Salmonellen exponentiell. Die infektiöse Dosis beträgt ca. eine Million Keime.\newline Bei einem infizierten Ei werden um 10:00 Uhr $1000$ Keime gezählt, um 12:00 Uhr sind es bereits $16000$.
+	\begin{parts}
+		\part[1] Gib eine Funktion an, mit welcher sich die Anzahl Keime nach $t$ Stunden ausgehend von 10:00 Uhr berechnen lässt.
+		\part[1] Bestimme die Zeit, in der sich die Keimzahl verdoppelt?
+		\part[3] Um 13:00 Uhr wird das Ei in ein Kühlfach mit $12^\circ$C gelegt. Das bewirkt, dass die Verdopplungszeit\footnote{Die Verdopplungszeit bezeichnet die Zeitspanne, nach der sich der Bestand einer exponentiell wachsende Grösse verdoppelt hat.} doppelt so lange wie bei Raumtemperatur dauert. Berechne, wie lange es geht, bis die infektiöse Dosis an Keimen erreicht ist.
+	\end{parts}
+
+	\ifthenelse{\boolean{printanswers}}
+	{\begin{solution}
+		\begin{parts}
+			\part $f(t)=1000\*4^t$
+			\part Verdoppelungszeit $\tau=30$ Minuten
+			\part $t=\Log{2}{\frac{10^3}{64}}\approx 3.966$ Stunden
+		\end{parts}
+	\end{solution}}
+	{\vspace{5pt}\antwort{2.5}}
+
+%---------------------------------------------------------
+\section{Wachstum (mit TR)}
+	\noaddpoints
+	\question[\totalpoints]
+	\addpoints
+	Ein durch $10$t chemische Schadstoffe verunreinigter See kann jährlich $10$\% des noch vorhandenen Schadstoffes abbauen.
+	\begin{parts}
+		\part[1] Stelle eine Formel für die vorhandene Schadstoffmenge $s(x)$ nach $x$ Jahren auf.
+		\part[1] Welche Menge Schadstoff wird nach $10$ Jahren im See noch vorhanden sein?
+		\part[1] Wenn die Schadstoffmenge im See noch $1$ Prozent des Anfangswertes beträgt,
+		dann wird der See wieder zum Baden frei gegeben. Wann wird dies der Fall
+		sein?
+		\part[1] Bei einer Messung nach $10$ Jahren wird der berechnete Wert von $b)$ um $20$\%
+		überschritten. Aufgrund eines Fischsterbens $2$ Jahre zuvor vermutet man, dass
+		jemand erneut Chemikalien in den See gegossen hat. Wie viele Tonnen wären
+		dies gewesen?
+	\end{parts}
+
+	\ifthenelse{\boolean{printanswers}}
+	{\begin{solution}
+		tba
+	\end{solution}}
+	{\vspace{5pt}\antwort{2.5}}
+
+%---------------------------------------------------------
+	\noaddpoints
+	\question[\totalpoints]
+	\addpoints
+	Wir nehmen an, jemand schluckt eine Tablette Aspirin mit $500$mg Wirkstoff pro Tag. Nach etwa einer Stunde ist die volle Dosis im Blut und entfaltet ihre Wirkung. Die Wirkstoffkonzentration im Blut nimmt pro Stunde um $16\%$ ab. Beträgt die Wirkstoffkonzentration im Blut weniger als die Hälfte des Initialwertes, so wirkt es im Körper nicht mehr schmerzlindernd.
+	\begin{parts}
+		\part[1] Stelle den zeitlichen Verlauf der Konzeptration im Blut graphisch dar, wenn unsere Versuchsperson genau eine solche Tablette pro Tag nimmt.
+		\part[1] Wie viele Stunden wirkt eine einzige Tablette?
+		\part[2] Nehmen wir an, bei einer Tablette Aspririn mit doppelter Menge Wirkstoff wird die Halbwertszeit der Wirkstoffkonzentration im Blut vervierfacht und es reicht einen Viertel der Initialkonzentration damit sie schmerzlindernd wirkt. Kann diese Tablette einen gesamten Arbeitstag ($8$ Stunden) schmerzlindernd wirken?
+	\end{parts}
+
+	\ifthenelse{\boolean{printanswers}}
+	{\begin{solution}
+			tba
+	\end{solution}}
+	{\vspace{5pt}\antwort{2.5}}
+
+%=========================================================
+\newpage
+\section{Folgen und Reihen (ohne TR)}
+	\noaddpoints
+	\question[\totalpoints]
+	\addpoints
+	Gegeben ist die folgende Zahlenpyramide.
+	\begin{figure}[H]
+		\centering\includegraphics[scale=0.65]{zahlenpyramide.png}
+	\end{figure}
+	\begin{parts}
+		\part[1\half] Berechne die Summe aller notierten Zahlen.
+		\part[2\half] Die Zahlen $a_1=2, a_2=4, a_3=8,\ldots$ am linken Rand der Zahlenpyramide können durch $a_n=p\*n^2+q\*n+r$ beschrieben werden.\\ Berechne $p,q,r$.
+		\part[2] $b_1,b_2,b_3,\ldots b_{100}$ sind von links nach rechts die Zahlen in der $100.$ Zeile des Dreiecks. Berechne die Summe $b_1+b_2+\ldots+b_{99}$.
+	\end{parts}
+
+	\ifthenelse{\boolean{printanswers}}
+	{\begin{solution}
+		\begin{parts}
+			\part Summe$=1332$
+			\part $p=1,q=-1,r=2$
+			\part $b_1+b_2+\ldots+b_{99}=500'000$
+		\end{parts}
+	\end{solution}}
+	{\vspace{5pt}\antwort{2.5}}
+
+%---------------------------------------------------------
+\section{Folgen und Reihen (mit TR)}
+	\noaddpoints
+	\question[\totalpoints]
+	\addpoints
+	In der nachfolgenden Figur hat der grösste Halbkreis den Radius $r_1=1$, der zweitgrösste Halbkreis hat den Radius $r_2$.
+	\begin{parts}
+		\part[1] Zeige, dass $r_s=\frac{1}{\sqrt{2}}$.
+		\part[2] Berechne die Summe des Flächeninhalts der farbig hervorgehobenen Flächen ($5$ kleiner
+		werdende \flqq Brücken\frqq).
+		\part[1] Der Prozess der kleiner werdenden \flqq Brücken\frqq\:kann fortgesetzt werden, sodass unendlich viele \flqq Brücken\frqq\:entstehen. Wie gross ist die Summe des Flächeninhalts der unendlich vielen \flqq Brücken\frqq?
+		\part[1] Wie viele \flqq Brücken\frqq\:müssten mindestens gezeichnet werden, bis die kleinste \flqq Brücke\frqq\:weniger als $1$ Promille des Flächeninhaltes der grössten beträgt?
+	\end{parts}
+	\begin{figure}[H]
+		\centering\includegraphics[scale=0.8]{unendliche-brücken.png}
+	\end{figure}
+
+	\ifthenelse{\boolean{printanswers}}
+	{\begin{solution}
+		\begin{parts}
+			\part $r_2$ ist die Kathete im gleichschenkligen, rechtwinkligen Dreieck mit Hypothenuse $1$.
+			\part Flächeninhalt bildet eine geometrische Folge mit $A_1=2-\frac{\pi}{2}$ und $q=\frac{1}{2}$. Also $s_5=0.8316$.
+			\part $s=2\*A_1\approx 0.8584$
+			\part $A_n<\frac{1}{1000}\*A_1 \Leftarrow n=11$
+		\end{parts}
+	\end{solution}}
+	{\vspace{5pt}\antwort{2.5}}
+
+%---------------------------------------------------------
+	\noaddpoints
+	\question[\totalpoints]
+	\addpoints
+	Das Dreieck $ABC$ und alle unendlich vielen grauen Dreiecke sind gleichschenklig. Wir nehmen an, die Grundlinien und Höhen aller Dreiecke bilden eine unendliche geometrische Folge.
+	\begin{parts}
+		\part[1] Berechne $\overline{DE}$.
+		\part[2] Wie gross ist die Summe der Umfänge aller grauen Dreiecke?
+		\part[2] Welchen Bruchteil macht der Flächeninhalt aller grauen Dreiecke von der Dreiecksfläche $ABC$ aus?
+	\end{parts}
+	\begin{figure}[H]
+		\centering\includegraphics[scale=0.8]{verschachtelte-dreiecke.png}
+	\end{figure}
+
+	\ifthenelse{\boolean{printanswers}}
+	{\begin{solution}
+			\begin{parts}
+				\part $\overline{DE}=5$
+				\part $U=68.418$
+				\part $\frac{A}{A_{\triangle ABC}}=\frac{\frac{5}{1-\frac{25}{36}}}{36}=\frac{5}{11}$
+			\end{parts}
+	\end{solution}}
+	{\vspace{5pt}\antwort{2.5}}
+
+\end{questions}
+\end{document}
