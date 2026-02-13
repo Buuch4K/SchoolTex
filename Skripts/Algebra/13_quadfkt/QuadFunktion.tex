@@ -3,6 +3,7 @@
 \input{../../../Header/styleScript.sty}
 \input{../../../Header/headerScript.sty}
 \input{../../../Header/mathexpressions.sty}
+\graphicspath{{images/}}
 
 
 \newcommand{\Skriptname}{Quadratische Funktionen}
@@ -34,7 +35,7 @@
 	\begin{definition}
 		Unter einer Funktion $f$ versteht man eine eindeutige Zuordnung. Dabei wird jeder Zahl $x$ aus der Definitionsmenge genau einen Wert $y$ aus der Wertemenge zugeordnet.
 		\begin{figure}[H]
-			\centering\includegraphics[scale=0.6]{images/RepFunktion.png}
+			\centering\includegraphics[scale=0.6]{RepFunktion.png}
 		\end{figure}
 	\end{definition}
 	Eine Funktion war meistens gegeben durch eine \textbf{Funktionsgleichung} $f(x)=\ldots$ oder $f:y=\ldots$, welche diese Zuordnungsbeziehung beschreibt. Unterscheide dabei zwischen der Funktion $f$ als Zuordnungsvorschrift und den Funktionswerten $f(x)$ , die den einzelnen $x-$Werten zugeordnet werden. Systematisch besprochen haben wir bisher vor allem \textbf{lineare Funktionen}, das heisst Funktionen der Form $f(x)=mx+q$. Der Graph einer solchen linearen Funktion ist eine \textbf{Gerade} mit der Steigung $m$ und dem $y-$Achsenabschnitt $q$.
@@ -44,15 +45,15 @@
 	Der Flug eines Freestyle-Snowboarders, Wasserstrahl von Brunnen aber auch die Form vieler Brücken haben ähnliches bogenförmiges Aussehen. Zu solchen Formen passen Geraden, also lineare Funktionen, nicht, sondern neue Funktionen müssen zu ihrer Beschreibung eingeführt werden. Mit Hilfe von quadratischen Funktionen gelingen häufig sehr gute Beschreibungen.
 	\begin{figure}[h]
 		\begin{minipage}{0.3\linewidth}
-			\centering\includegraphics[width=4cm]{images/brunnen.png}
+			\centering\includegraphics[width=4cm]{brunnen.png}
 		\end{minipage}
 		\hfill
 		\begin{minipage}{0.3\linewidth}
-			\centering\includegraphics[width=4cm]{images/gatewayarch.png}
+			\centering\includegraphics[width=4cm]{gatewayarch.png}
 		\end{minipage}
 		\hfill
 		\begin{minipage}{0.3\linewidth}
-			\centering\includegraphics[width=4cm]{images/brücke.png}
+			\centering\includegraphics[width=4cm]{brücke.png}
 		\end{minipage}
 	\end{figure}
 
@@ -92,6 +93,8 @@
 	\begin{aufgabe}
 		\begin{enumerate}[label=\alph*)]
 			\item Zeichne die Graphen der Funktionen $f:y=x^2$ und $g:y=2x+2$.\\ \emph{Erstelle zuerst eine Wertetabelle mit $-3\leq x\leq 3$, Schrittweite 0.5 und zeichne dann.}
+			\begingroup
+			\renewcommand{\arraystretch}{1.5}
 			\begin{table}[H]
 				\centering
 				\begin{tabular}{|p{0.6cm}|p{0.6cm}|p{0.6cm}|p{0.6cm}|p{0.6cm}|p{0.6cm}|p{0.6cm}|p{0.6cm}|p{0.6cm}|p{0.6cm}|p{0.6cm}|p{0.6cm}|p{0.6cm}|p{0.6cm}|} \hline
@@ -100,6 +103,7 @@
 					$g(x)$  & & & & & & & & & & & & & \\\hline
 				\end{tabular}
 			\end{table}
+			\endgroup
 			\begin{minipage}{0.475\linewidth}
 				\centering
 				\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
@@ -200,17 +204,19 @@
 		Falls die quadratische Funktion in Scheitelpunktform gegeben ist, so besitzt $S$ die Koordinaten $(u,v)$.
 	\end{definition}
 	\begin{beispiel}[Golden Gate Bridge]
-		Die Seilkurve der Brücke bildet eine Parabel und kann deshalb mittels einer quadratischen Funktion beschrieben werden. Wir legen dazu die Brücke in ein Koordinatensystem hinein, wobei der Ursprung genau im Mittelpunkt der Fahrbahn liegt.\newline
+		Die Seilkurve der Brücke bildet eine Parabel und kann deshalb mittels einer quadratischen Funktion beschrieben werden. Wir legen dazu die Brücke in ein Koordinatensystem hinein, wobei der Ursprung $O$ genau im Mittelpunkt der Fahrbahn liegt.\newline
 		Die Funktionsgleichung lautet wie folgt:
-		\[f(x)=\frac{1}{2400}x^2.\]
-		\textit{Bemerkung: Die aus statischen Gründen leichte Krümmung der Fahrbahn nach oben wird vernachlässigt, ebenso die Tatsache, dass das Tragseil beim Punkt O nicht unmittelbar an der Fahrbahn befestigt ist, sondern auch an vertikalen Stahlseilen aufgehängt ist.}
+		\[f(x)=\frac{1}{2400}x^2-6.\]
+		\textit{Bemerkung: Die aus statischen Gründen leichte Krümmung der Fahrbahn nach oben wird vernachlässigt. Zudem nehmen wir an, dass das Tragseil um den Mittelpunkt leicht unterhalb der Fahrbahn liegt.}
 		\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.6]{images/goldengatebridge.png}
+			\includegraphics[scale=0.1]{parabelbrücke.png}
 		\end{figure}
 		\begin{enumerate}[label=\alph*)]
-			\item Gib die Koordinaten des Scheitelpunktes und die Nullstellen an.\vspace{5pt}\newline\karos{2}
+			\item Gib die Koordinaten des Scheitelpunktes und die Nullstellen an.\vspace{5pt}\newline\karos{3.5}
 			\item Welche Länge haben die vertikalen Stahlseile, wenn diese in einem Abstand von $60$ m befestigt sind?
+			\begingroup
+			\renewcommand{\arraystretch}{2}
 			\begin{table}[H]
 				\centering
 				\begin{tabular}{|p{1.6cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|} \hline
@@ -218,7 +224,8 @@
 					Länge  & & & & & & & & & \\\hline
 				\end{tabular}
 			\end{table}
-			\item Welche Länge hat die Fahrbahn vom linken bis zum rechten Pfeiler, wenn sich die Pfeilerspitze $P$ $170$ m über der Fahrbahn befindet?\vspace{5pt}\newline\karos{3}
+			\endgroup
+			\item Welche Länge hat die Fahrbahn vom linken bis zum rechten Pfeiler, wenn sich die Pfeilerspitze $P$ $170$ m über der Fahrbahn befindet?\vspace{5pt}\newline\karos{3.5}
 		\end{enumerate}
 	\end{beispiel}
 
@@ -226,14 +233,16 @@
 \subsection{Einfluss des Parameters $a$}
 	In dieser Lernaufgabe studieren wir eingehend den Einfluss des Parameters $a$ in der Scheitelpunktform einer quadratischen Funktion $\mathbf{f(x)=a(x-u)^2+v}$ auf das Aussehen des Funktionsgraphen.
 	\begin{aufgabe}
-		Öffne den Link \url{https://www.geogebra.org/m/yaknzg2e} und bearbeite die Teilaufgaben.
+		Öffne das folgende \href{https://www.geogebra.org/m/yaknzg2e}{Geogebra-Applet}\footnotemark\:und bearbeite die Teilaufgaben.
 		\begin{enumerate}[label=\alph*)]
 			\item Skizziere im Skript die Parabeln zu den Funktionen $f_1(x)=2x^2$, $f_2(x)=-2x^2$ und $f_3(x)=\frac{1}{2}x^2$ und ergänzen Sie die Wertetabelle, indem Sie den Wert des Schiebereglers $a$ verändern.
 			\item Spiele etwas mit $a$ und studiere dabei, wie sich der Graphen der Funktion $f(x)=a\cdot x^2$ im Vergleich zur Normalparabel verändert und halte deine Erkenntnisse fest.
 		\end{enumerate}
 	\end{aufgabe}
-	\vspace{0.5cm}
+	\footnotetext{\url{https://www.geogebra.org/m/yaknzg2e}}\vspace{0.5cm}
 	\begin{minipage}{0.6\linewidth}
+		\begingroup
+		\renewcommand{\arraystretch}{1.5}
 		\begin{tabular}{c||c|c|c}
 			$x$ & $f_1(x)$& $f_2(x)$ & $f_3(x)$\\ \hline\hline
 			$-3$ & & & \\ \hline
@@ -244,6 +253,7 @@
 			$2$ & & & \\ \hline
 			$3$ & & & \\
 		\end{tabular}
+		\endgroup
 		\vspace{0.5cm}
 	\subsubsection*{Veränderung gegenüber der Normalparabel:}
 		\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\\
@@ -254,7 +264,7 @@
 	\begin{minipage}{0.4\linewidth}
 		\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=1cm, y=1cm,
 			>=latex,   %Voreinstellung für Pfeilspitzen
-			font= \footnotesize, scale=0.8]
+			font= \footnotesize, scale=0.9]
 			%Raster zeichnen
 			\draw [color=gray!50]  [step=5mm] (-3.3,-5.3) grid (3.8,7.8);
 			% Achsen zeichnen
@@ -280,24 +290,31 @@
 \subsection{Einfluss des Parameters $v$}
 	In dieser Lernaufgabe studieren wir eingehend den Einfluss des Parameters $a$ in der Scheitelpunktform einer quadratischen Funktion $\mathbf{f(x)=a(x-u)^2+v}$ auf das Aussehen des Funktionsgraphen.
 	\begin{aufgabe}
-		Öffne den Link \url{https://www.geogebra.org/m/vtjaqq6u} und bearbeite die Teilaufgaben.
+		Öffne das folgende \href{https://www.geogebra.org/m/vtjaqq6u}{Geogebra-Applet}\footnotemark\:und bearbeite die Teilaufgaben.
 		\begin{enumerate}[label=\alph*)]
 			\item Erstelle zwei Screenshots der Funktionsgraphen von $f_1(x)=x^2-2$ und $f_2(x)=x^2+3$, indem du den Wert des Parameters $v$ veränderst. Füge die Screenshots hier im Skript ein.
 			\item Spiele mit den Parameters $a$ und $v$ und studiere dabei, wie sich der Graph der Funktion $f(x)=a\cdot x^2+v$ in Vergleich zur Normalparabel in Abhängigkeit von $v$ veränder. Halte deine Erkenntnisse unten fest.
 		\end{enumerate}
 	\end{aufgabe}
-	\vspace{0.5cm}
-	\begin{tabular}{|p{6.8cm}|p{6.8cm}|}\hline
-		Screenshot 1& Screenshot 2\\
-		& \\
-		& \\
-		& \\
-		& \\
-		& \\
-		& \\
-		& \\
-		& \\ \hline
-	\end{tabular}
+	\footnotetext{\url{https://www.geogebra.org/m/vtjaqq6u}}\vspace{0.5cm}
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|p{7.8cm}|p{7.8cm}|}\hline
+			Screenshot 1& Screenshot 2\\
+			& \\
+			& \\
+			& \\
+			& \\
+			& \\
+			& \\
+			& \\
+			& \\
+			& \\
+			& \\
+			& \\
+			& \\ \hline
+		\end{tabular}
+	\end{table}
 	\vspace{0.5cm}
 
 \subsubsection*{Veränderung gegenüber der Normalparabel:}
@@ -309,22 +326,29 @@
 	\subsection{Einfluss des Parameters $u$}
 	Du weisst nun bereits, wie sich der Graph einer Normalparabel verändert, wenn der Funktionswert mit einem Parameter $a$ multipliziert wird und ein Parameter $v$ addiert wird. Was passiert nun, wenn man in der Funktionsgleichung $f(x)=a\cdot x^2+v$ vom Funktionsargument $u$ subtrahiert, d.h. $x$ durch $(x-u)$ ersetzt?
 	\begin{aufgabe}
-		Öffne den Link \url{https://www.geogebra.org/m/d7xzng3p} und bearbeite die folgenden Teilaufgaben.
+		Öffne das folgende \href{https://www.geogebra.org/m/d7xzng3p}{Geogebra-Applet}\footnotemark\:und bearbeite die folgenden Teilaufgaben.
 		\begin{enumerate}[label=\alph*)]
 			\item Untersuche, wie sich der Graph der Funktion $f(x)$ im Vergleich zur Normalparabel in Abhängigkeit von $u$ verändert.
 			\item Halte deine Erkenntnisse unten fest und ergänze diese mit einem aussagekräftigen Screenshot.
 		\end{enumerate}
 	\end{aufgabe}
-	\vspace{0.5cm}
-	\begin{tabular}{|p{13.6cm}|}\hline
-		Screenshot\\
-		\\
-		\\
-		\\
-		\\
-		\\
-		\\ \hline
-	\end{tabular}
+	\footnotetext{\url{https://www.geogebra.org/m/d7xzng3p}}\vspace{0.5cm}
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|p{15.6cm}|}\hline
+			Screenshot\\
+			\\
+			\\
+			\\
+			\\
+			\\
+			\\
+			\\
+			\\
+			\\
+			\\ \hline
+		\end{tabular}
+	\end{table}
 	\vspace{0.5cm}
 
 \subsubsection*{Veränderung gegenüber der Normalparabel:}
@@ -337,6 +361,8 @@
 	Auf dieser Seite wollen wir die vorherigen Erkenntnisse zu den Transformationen am Graphen der Quadratischen Funktion zusammenfassen.
 	%Streckung
 \subsubsection*{$f(x)=\mathbf{a}\*x^2$}
+	\begingroup
+	\renewcommand{\arraystretch}{1.5}
 	\begin{table}[ht]
 		\centering
 		\begin{tabular}{cll}
@@ -368,6 +394,7 @@
 			& $u<0$: & \gap{7.5}
 		\end{tabular}
 	\end{table}
+	\endgroup
 	\newpage
 	\begin{aufgabe}
 		Beschreibe in Worten, wie die Parabel aus der Normalparabel entstanden ist.
@@ -533,7 +560,7 @@
 \newpage
 \section{Typische Fragestellungen bei quadratischen Funktionen}
 	Typische Fragen beim Bearbeiten von Problemen mit quadratischen Funktionen sind unter anderem diese:
-	\begin{enumerate}[label=\alph*)]
+	\begin{enumerate}
 		\item Wo schneidet der Graph die $x$-Achse?
 		\item Wo ist der höchste/niedrigste Punkt des Graphen?
 		\item Welchen $y$-Wert erhält man für einen bestimmten $x$-Wert?
@@ -545,6 +572,8 @@
 	Nach dem Abschuss einer Rakete kann man jedem Zeitpunkt $t$ die aktuelle Höhe $h(t)$ der Rakete zuordnen. Man kann diese Zuordnung bei allen Raketen gut mit einer quadratischen Funktion modellieren.\newline
 	\textbf{Funktionsgleichung:} \[h(t)=-5t^2+45t+50\]
 	Vervollständige die Wertetabelle und zeichne den Graphen:
+	\begingroup
+	\renewcommand{\arraystretch}{1.5}
 	\begin{table}[ht]
 		\centering
 		\begin{tabular}{|p{2cm}|p{0.6cm}|p{0.6cm}|p{0.6cm}|p{0.6cm}|p{0.6cm}|p{0.6cm}|p{0.6cm}|p{0.6cm}|p{0.6cm}|p{0.6cm}|}\hline
@@ -552,6 +581,7 @@
 			$h(t)$ (in m) & $90$ & $120$ & & & & & & & & \\ \hline
 		\end{tabular}
 	\end{table}
+	\endgroup
 	\begin{figure}[ht]
 		\centering
 		\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=1cm, y=1mm,
@@ -582,7 +612,15 @@
 			\item Nach welcher Zeit hat die Rakete eine Höhe von $90$m?
 			\item Wie hoch fliegt die Rakete nach $3$s?
 		\end{enumerate}
-		Ordne die Fragen 1-4 den Buchstaben $a$ - $d$ zu.
+		Ordne die Fragen $a$ - $d$ den Buchstaben $1-4$ zu.
+	\end{aufgabe}
+	\begin{aufgabe}[Weitere Beispiele]
+		\begin{enumerate}
+			\item BlaBlaBla
+			\item BleBleBle
+			\item BloBloBlo
+			\item BluBluBlu
+		\end{enumerate}
 	\end{aufgabe}
 
 
@@ -724,6 +762,7 @@
 			\vspace{5cm}
 		\end{minipage}\vspace{3cm}
 	\end{beispiel}
+
 	\begin{aufgabe}
 		Berechne die Schnittpunkte der beiden Parabeln.
 		\begin{enumerate}[label=\alph*)]
