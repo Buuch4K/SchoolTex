@@ -8,7 +8,7 @@
 
 \newcommand{\Skriptname}{Quadratische Funktionen}
 \newcommand{\Autor}{Jonas Guler (Gu)}
-\newcommand{\version}{\textit{v}1.0}
+\newcommand{\version}{\textit{v}1.1}
 
 \begin{document}
 \begin{titlepage}
@@ -59,7 +59,7 @@
 
 	Diese Funktionen treten auch in ganz anderen Zusammenhängen auf, etwa bei der Modellierung des Anhaltewegs, bei der Kalkulation von Theateraufführungen, oder der Untersuchung von Gewinnen in der Skiproduktion. Zur genaueren Berechnung von gewünschten Werten werden uns die Lösungsstrategien von quadratische Gleichungen vermehrt helfen. Bevor wir aber zu sehr ins Detail gehen, lasst uns die quadratische Gleichung zuerst mal definieren.
 	\begin{definition}[Quadratische Funktionen]
-		Eine Funktion, deren Funktionsgleichung in die Form \[\mathbf{f:y=ax^2+bx+c,}\] gebracht werden kann, wobei $a,b,c\in\R$ und $a\neq0$ gilt, heisst \textbf{quadratische Funktion}.\newline
+		Eine Funktion, deren Funktionsgleichung in die Form \[\mathbf{f:y=a\*x^2+b\*x+c,}\] gebracht werden kann, wobei $a,b,c\in\R$ und $a\neq0$ gilt, heisst \textbf{quadratische Funktion}.\newline
 		Den zugehörigen Graphen der Funktion nennt man \textbf{Parabel}.
 	\end{definition}
 	Ihr seht, die Ähnlichkeit zur Definition einer quadratischen Gleichung ist deutlich erkennbar. Es gibt verschiedene Formen, welche bei der Angabe einer quadratischen Funktion verwendet werden. Je nach Aufgabe bzw. Anwendung ist die eine oder andere Form sinnvoller.
@@ -87,9 +87,6 @@
 \newpage
 \section{Die Parabel}
 	Bevor wir uns mit dem Graph einer quadratischen Funktion auseinandersetzen und dessen Eigenschaften studieren, vergleichen wir den Graph mit dem einer linearen Funktion.
-	\begin{definition}
-		Der Graph einer quadratischen Funktion heisst \textbf{Parabel}. Als einfachste Form nennt man den Graph von $f:y=x^2$ Normalparabel.
-	\end{definition}
 	\begin{aufgabe}
 		\begin{enumerate}[label=\alph*)]
 			\item Zeichne die Graphen der Funktionen $f:y=x^2$ und $g:y=2x+2$.\\ \emph{Erstelle zuerst eine Wertetabelle mit $-3\leq x\leq 3$, Schrittweite 0.5 und zeichne dann.}
@@ -104,6 +101,7 @@
 				\end{tabular}
 			\end{table}
 			\endgroup
+
 			\begin{minipage}{0.475\linewidth}
 				\centering
 				\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
@@ -149,9 +147,12 @@
 					%\node[forestgreen]  at (2.8,6.8) {\normalsize$f$};
 				\end{tikzpicture}
 			\end{minipage}
-			\item Vergleiche die beiden Graphen und Tabellen und notiere die Gemeinsamkeiten und Unterschiede in einer Tabelle.\vspace{5pt}\newline\karos{4.5}
+			\item Vergleiche die beiden Graphen und Tabellen und notiere die Gemeinsamkeiten und Unterschiede in einer Tabelle.\vspace{5pt}\newline\karos{2.5}
 		\end{enumerate}
 	\end{aufgabe}
+	\begin{definition}
+		Der Graph einer quadratischen Funktion heisst \textbf{Parabel}. Die Funktionsgleichung hat dabei immer die Form \[f:y=a\*x^2+b\*x+c\quad(a\neq0).\] In seiner einfachsten Form $f:y=x^2$  nennt man den Graph \textbf{Normalparabel}.
+	\end{definition}
 
 \subsection{Eigenschaften der Parabel}
 	In diesem Abschnitt wollen wir die Eigenschaften des Graphen der Normalparabel $f(x)=x^2$ genauer beschreiben. Dazu betrachten wir ihren Graphen.\newline
@@ -213,7 +214,7 @@
 			\includegraphics[scale=0.1]{parabelbrücke.png}
 		\end{figure}
 		\begin{enumerate}[label=\alph*)]
-			\item Gib die Koordinaten des Scheitelpunktes und die Nullstellen an.\vspace{5pt}\newline\karos{3.5}
+			\item Gib die Koordinaten des Scheitelpunktes und die Nullstellen an.\vspace{5pt}\newline\karos{2.5}
 			\item Welche Länge haben die vertikalen Stahlseile, wenn diese in einem Abstand von $60$ m befestigt sind?
 			\begingroup
 			\renewcommand{\arraystretch}{2}
@@ -277,9 +278,7 @@
 			\draw[color=black] (0pt,-7pt) node[right] {$0$};
 			%Funktionen zeichnen:
 			%\clip(-3.3,-5.3) rectangle (3.3,7.3); %Bildbereich
-			%\draw[blue, smooth, domain=-9:9] plot (\x, {-1*pow(\x-3,2)+1}) node[yshift=13cm] {$$};
-			%\draw[green, smooth, domain=-9:9] plot (\x, {2*pow(\x-3,2)-3}) node[] {$$};
-			%\draw[red, smooth, domain=-9:9] plot (\x, {-0.4*pow(\x+3,2)+1}) node[right] {$$};
+			%\draw[forestgreen,samples=100] plot (\x, \x*\x);
 			%Beschriftung
 			%\node[blue]  at (1,-5) {$p_2$};
 		\end{tikzpicture}
@@ -439,9 +438,7 @@
 				\draw[color=black] (0pt,-14pt) node[right] {$0$};
 				%Funktionen zeichnen:
 				%\clip(-3.3,-5.3) rectangle (3.3,7.3); %Bildbereich
-				%\draw[blue, smooth, domain=-9:9] plot (\x, {-1*pow(\x-3,2)+1}) node[yshift=13cm] {$$};
-				%\draw[green, smooth, domain=-9:9] plot (\x, {2*pow(\x-3,2)-3}) node[] {$$};
-				%\draw[red, smooth, domain=-9:9] plot (\x, {-0.4*pow(\x+3,2)+1}) node[right] {$$};
+				%\draw[forestgreen,samples=100] plot (\x, \x*\x);
 				%Beschriftung
 				%\node[blue]  at (1,-5) {$p_2$};
 			\end{tikzpicture}
@@ -487,15 +484,15 @@
 			\centering
 			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=1cm, y=1cm,
 				>=latex,   %Voreinstellung für Pfeilspitzen
-				font= \footnotesize, scale=0.25]
+				font= \footnotesize, scale=0.3]
 				%Raster zeichnen
 				\draw [color=gray!50]  [step=10mm] (-20.3,-20.3) grid (20.3,20.3);
 				% Achsen zeichnen
 				\draw[->,thick] (-20.3,0) -- (21.3,0) node[right, below] {\normalsize $x$};
 				\draw[->,thick] (0,-20.3) -- (0,21.3) node[above, left] {\normalsize $y$};
 				% Achsen beschriften
-				\foreach \x in {-20,-15,-10,-5,5,10,15,20} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
-				\foreach \y in {-20,-15,-10,-5,5,10,15,20} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+				\foreach \x in {-20,-15,-10,-5,5,10,15,20} \draw (\x,-.2) -- (\x,.2) node[below=4pt] {$\x$};
+				\foreach \y in {-20,-15,-10,-5,5,10,15,20} \draw (-.2,\y) -- (.2,\y) node[left=4pt] {$\y$};
 				% Besserer Ursprung
 				\draw[color=black] (0pt,-20pt) node[right] {$0$};
 				%Funktionen zeichnen:
@@ -525,34 +522,29 @@
 		\end{enumcols}
 	\end{aufgabe}
 	\begin{aufgabe}
-		\begin{minipage}{0.575\linewidth}
-			Betrachte den folgenden Graphen und notiere die Funktionsgleichungen der abgebildeten Parabeln in Normalform.\vspace{5pt}\newline\karos{4.5}
-		\end{minipage}
-		\hfill
-		\begin{minipage}{0.4\linewidth}
-			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=1cm, y=1cm,
-				>=latex,   %Voreinstellung für Pfeilspitzen
-				font= \footnotesize, scale=0.5]
-				%Raster zeichnen
-				\draw [color=gray!50]  [step=10mm] (-5.3,-5.3) grid (5.3,5.3);
-				% Achsen zeichnen
-				\draw[->,thick] (-5.3,0) -- (5.8,0) node[right, below] {\normalsize $x$};
-				\draw[->,thick] (0,-5.3) -- (0,5.8) node[above, left] {\normalsize $y$};
-				% Achsen beschriften
-				\foreach \x in {-5,-4,...,-1,1,2,...,5} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
-				\foreach \y in {-5,-4,...,-1,1,2,...,5} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
-				% Besserer Ursprung
-				\draw[color=black] (0pt,-20pt) node[right] {$0$};
-				%Funktionen zeichnen:
-				\clip(-5.3,-5.3) rectangle (5.5,5.5); %Bildbereich
-				\draw[highdive,samples=100] plot (\x, {2*pow(\x-3,2)-2});
-				\draw[forestgreen,samples=100] plot (\x, {-1*pow(\x+2,2)+4});
-				\draw[plotblue,samples=100] plot (\x, {pow(\x-2,2)+2});
-				\draw[red,samples=100] plot (\x, {-0.5*pow(\x,2)+1});
-				%Beschriftung
-				%\node[highdive]  at (4.5,1.5) {$f$};
-			\end{tikzpicture}
-		\end{minipage}
+		Betrachte den folgenden Graphen und notiere die Funktionsgleichungen der abgebildeten Parabeln in Normalform.\vspace{5pt}\newline
+		\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=1cm, y=1cm,
+			>=latex,   %Voreinstellung für Pfeilspitzen
+			font= \footnotesize, scale=0.5]
+			%Raster zeichnen
+			\draw [color=gray]  [step=10mm] (-25,-6) grid (7,7);
+			% Achsen zeichnen
+			\draw[->,thick] (-5.3,0) -- (5.8,0) node[right, below] {\normalsize $x$};
+			\draw[->,thick] (0,-5.3) -- (0,5.8) node[above, left] {\normalsize $y$};
+			% Achsen beschriften
+			\foreach \x in {-5,-4,...,-1,1,2,...,5} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+			\foreach \y in {-5,-4,...,-1,1,2,...,5} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+			% Besserer Ursprung
+			\draw[color=black] (0pt,-20pt) node[right] {$0$};
+			%Funktionen zeichnen:
+			\clip(-5.3,-5.3) rectangle (5.5,5.5); %Bildbereich
+			\draw[highdive,samples=100] plot (\x, {2*pow(\x-3,2)-2});
+			\draw[forestgreen,samples=100] plot (\x, {-1*pow(\x+2,2)+4});
+			\draw[plotblue,samples=100] plot (\x, {pow(\x-2,2)+2});
+			\draw[red,samples=100] plot (\x, {-0.5*pow(\x,2)+1});
+			%Beschriftung
+			%\node[highdive]  at (4.5,1.5) {$f$};
+		\end{tikzpicture}
 	\end{aufgabe}
 
 
@@ -616,10 +608,17 @@
 	\end{aufgabe}
 	\begin{aufgabe}[Weitere Beispiele]
 		\begin{enumerate}
-			\item BlaBlaBla
-			\item BleBleBle
-			\item BloBloBlo
-			\item BluBluBlu
+			\item Die Leistung $P$ einer Schiﬀsturbine hängt von der Anzahl $n$ der Umdrehungen pro Minute ab. Die Funktion mit der Gleichung $P(n)=-0.75n^2+330n$ gibt die Leistung in Watt an.
+			\begin{enumerate}[label=\alph*)]
+				\item Berechne die folgenden Leistungen der Turbine: $P(100), P(150), P(300), P(340)$.
+				\item Für welches n ist die Turbinenleistung maximal? Wie gross ist sie?
+			\end{enumerate}
+			\item  Noel springt im Freibad vom Sprungbrett. Seine Flugbahn entspricht ungefähr einer Parabel mit der Funktionsgleichung $h(x)=-5x^2+2x+3$. Hierbei ist $h$ die Höhe über dem Wasser (in $m$) und $x$ die horizontale Entfernung vom Absprungpunkt (in $m$).
+			\begin{enumerate}[label=\alph*)]
+				\item Von welcher Höhe ist Noel abgesprungen?
+				\item Was ist Noels grösste Höhe während des Fluges?
+				\item Gib eine Funktionsgleichung für einen Sprung aus einer anderen Höhe an.
+			\end{enumerate}
 		\end{enumerate}
 	\end{aufgabe}
 
@@ -764,10 +763,18 @@
 	\end{beispiel}
 
 	\begin{aufgabe}
-		Berechne die Schnittpunkte der beiden Parabeln.
-		\begin{enumerate}[label=\alph*)]
-			\item $p_1:y=x^2-7$ und $p_2:y=\frac{1}{3}x^2-1$
-			\item $p_1:y=\frac{1}{2}x^2-5x+\frac{19}{2}$ und $p_2:y=-\frac{1}{6}x^2+\frac{1}{3}x+\frac{29}{6}$
+		\begin{enumerate}
+			\item Berechne die Schnittpunkte der beiden Parabeln.
+			\begin{enumerate}[label=\alph*)]
+				\item $p_1:y=x^2-7$ und $p_2:y=\frac{1}{3}x^2-1$
+				\item $p_1:y=\frac{1}{2}x^2-5x+\frac{19}{2}$ und $p_2:y=-\frac{1}{6}x^2+\frac{1}{3}x+\frac{29}{6}$
+			\end{enumerate}
+			\item Bestimme den Wert des Parameters so, dass die Gerade $g$ Tangente an die Parabel mit der Gleichung $p:y=x^2-3$ ist. Berechne die Koordinaten des Berührungspunktes.
+			\begin{enumcols}[3]
+				\item $\displaystyle g:y=q$
+				\item $\displaystyle g:y=2x+q$
+				\item $\displaystyle g:y=mx-9.25$
+			\end{enumcols}
 		\end{enumerate}
 	\end{aufgabe}
 
@@ -780,29 +787,122 @@
 	\begin{beispiel}
 		Bestimme die Funktionsgleichung der Parabel, die durch die Punkte $P=(1,0)$, $Q=(0,-1)$ und $R=(-1,-6)$ verläuft.
 	\end{beispiel}
-	\subsection*{Von Hand}
-	\vspace{8cm}
-	\subsection*{Mit Taschenrechner}
-	Menu $->$ 2 $->$ 3 $->$ 1
+	\subsection*{Von Hand:}
+	\karos{8.5}
+	\subsection*{Mit Taschenrechner:}
+	Wir stelle die drei Gleichungen auf und löse anschliessend dieses Gleichungssystem mithilfe des Taschenrechners. Dazu verwenden wir folgende Tasten:\newline
+	{\bf Menu $->$ 3 $->$ 7 $->$ 1}\vspace*{5pt}\newline\karos{4.5}
 	\newpage
 	\begin{aufgabe}
-		Finde die Funktionsgleichung der Parabel, die durch die gegebenen Punkte verläuft.
-		\begin{enumcols}[2]
-			\item blablabla
-			\item blublublu
-		\end{enumcols}
+		Bestimme die Gleichung der beschriebenen Parabel in der Form $f:y = ax^2 + bx + c$. Berechne auch die Koordinaten des Scheitels $S$.
+		\begin{enumerate}[label=\alph*)]
+			\item Eine nach oben geöﬀnete Normalparabel, die durch die Punkte $A(0\:\mid\:4)$ und $B(9\:\mid\:31)$ geht.
+			\item Eine nach unten geöﬀnete Normalparabel mit den Nullstellen $x_1 = 4$ und $x_2 =-2$.
+			\item Eine Parabel mit dem Scheitelpunkt $S(5\:\mid\:1)$, die den Punkt $R(-10\:\mid\:136)$ enthält.
+			\item Eine Parabel, auf der die Punkte $A(4\:\mid\:0)$, $B(6\:\mid\:-9)$ und $C(-4\:\mid\:-24)$ liegen.
+			\item Eine Parabel mit dem Scheitel $S(3\:\mid\:-5)$, die den y-Achsenabschnitt $-\frac{1}{2}$ besitzt.
+		\end{enumerate}
 	\end{aufgabe}
-
+	\begin{aufgabe}
+		Betrachten den folgenden Graphen und bestimme darin alle Funktionsgleichungen der abgebildeten Parabeln.
+		\begin{figure}[H]
+			\centering
+			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=1cm, y=1cm,
+				>=latex,   %Voreinstellung für Pfeilspitzen
+				font=\footnotesize, scale=0.5]
+				%Raster zeichnen
+				\draw [color=gray]  [step=10mm] (-6,-13) grid (26,8);
+				% Achsen zeichnen
+				\draw[->,thick] (-5.3,0) -- (5.8,0) node[right, below] {\normalsize $x$};
+				\draw[->,thick] (0,-3.3) -- (0,6.8) node[above, left] {\normalsize $y$};
+				% Achsen beschriften
+				\foreach \x in {-5,...,-2,-1,1,2,...,5} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+				\foreach \y in {-3,-2,-1,1,2,...,6} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+				% Besserer Ursprung
+				\draw[color=black] (0pt,-2pt) node[right] {$0$};
+				%Funktionen zeichnen:
+				\clip(-6,-3.3) rectangle (6,6.3); %Bildbereich
+				\draw[forestgreen,thick,domain=-5.3:5.3,samples=100] plot (\x, {(\x)^2-4*\x+5});
+				\draw[highdive,thick,domain=-5.3:5.3,samples=100] plot (\x, {2*(\x)^2-16*\x+29});
+				\draw[myred,thick,domain=-5.3:5.3,samples=100] plot (\x, {-0.5*(\x)^2-3*\x-2.5});
+				%Beschriftung
+				\node[forestgreen]  at (4.7,5.5) {$f$};
+				\node[highdive]  at (5.3,-1.5) {$g$};
+				\node[myred]  at (-4.5,1.5) {$h$};
+			\end{tikzpicture}
+		\end{figure}
+	\end{aufgabe}
 
 
 \newpage
 \section{Modellieren}
 
-
+	\begin{aufgabe}
+		\begin{enumerate}
+			\item Ein Brückenbogen hat die Form einer Parabel. Die Scheitelhöhe des Bogens beträgt $4.5$m, seine Spannweite $10$m.
+			\begin{enumerate}[label=\alph*)]
+				\item Die Schweizer Normen für Fahrzeuge sehen eine maximale Breite von $2.55$m und eine
+				maximale Höhe von $4$m vor. Kann ein Sattelschlepper mit diesen Massen unter dem
+				Brückenbogen hindurchfahren?
+				\item Welche maximale Breite könnte ein $4$m hohes Fahrzeug haben?
+				\item Kann der Sattelschlepper aus a) einen $2.14$m breiten und $1.65$m hohen Jeep unter
+				dieser Brücke kreuzen, wenn die beiden seitlich $1$m Abstand haben sollen?
+			\end{enumerate}
+			\item Der Wasserstrahl aus einem Gartenschlauch hat etwa die Form einer Parabel mit der Gleichung $p(x)=a\*x^2$. Wir wissen, dass der Strahl nach $1.5$m um $7.5$m gefallen ist.
+			\begin{enumerate}[label=\alph*)]
+				\item Der Strahl trifft $6$m vor den Füssen der Person, die den Schlauch hält, entfernt auf den Boden. Wie hoch wird die Schlauchspitze gehalten?
+				\item Wie hoch muss der Schlauch gehalten werden, damit der Wasserstrahl $7.5$m weit reicht?
+				\item Wie weit reicht der Strahl, wenn die Person zusätzlich auf einer $3$m hohen Leiter steht?
+			\end{enumerate}
+		\end{enumerate}
+	\end{aufgabe}
 
 \newpage
 \section{Extremwertaufgaben}
-
+	\begin{minipage}{0.4\linewidth}
+		Parabeln haben entweder ein Minimum oder ein Maximum. Das Min./Max. ist die y-Koordinate des Scheitelpunktes. Macht eine quadratische Funktion eine Aussageüber einen Sachverhalt, ist oft das Minimum und Maximum von besonderem Interesse!
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.28\linewidth}
+		\centering
+		\includegraphics[width=4cm]{minimum.png}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.28\linewidth}
+		\centering
+		\includegraphics[width=4cm]{maximum.png}
+	\end{minipage}
+	\begin{beispiel}
+		Mit einem $12$m langen Zaun soll an einer Hauswand ein Rechteck eingezäunt werden. Wie lang müssen die Seiten des Rechtecks sein, damit sein Flächeninhalt möglichst gross wird?\vspace{11pt}\newline
+		\begin{minipage}{0.68\linewidth}
+			\begin{enumerate}
+				\item Variablen einführen:\newline \[x=\gap{3}\text{ und } z=\gap{3}\]
+				\item Definitionsbereich angeben:\newline \[\D_x=\gap{3}\text{ und } \D_z=\gap{3}\]
+				\item Zusammenhang zwischen Variablen finden/ Gleichung aufstellen:\newline Nebenbedingung: \gap{7.4}
+				\item Zu maximierende (oder minimierende) Grösse in Abhängigkeit einer Variable formulieren:\newline Zielfunktion: \gap{8.2}\vspace{1.5cm}
+				\item Scheitelpunkt der Zielfunktion berechnen:
+			\end{enumerate}\karos{2.5}
+			\begin{enumerate}
+				\setcounter{enumi}{5}
+				\item Überprüfen, ob der Extremalwert innerhalb des Definitionsbereichs liegt und Fragestellung beantworten:
+			\end{enumerate}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.28\linewidth}
+			{\bf Skizze der Situation}\newline
+			\includegraphics[width=3.5cm]{extrem-zaun.png}
+			\vspace*{1cm}\newline
+			{\bf Graph der Zielfunktion}\newline
+			\includegraphics[width=4.5cm]{extrem-zaun-graph.png}
+			\vspace*{1.5cm}
+		\end{minipage}
+		\vspace{5pt}\newline\karos{3}
+	\end{beispiel}
+	\begin{aufgabe}
+		\begin{enumerate}[label=\alph*)]
+			\item BlaBlaBla
+		\end{enumerate}
+	\end{aufgabe}
 
 \newpage
 \subsection*{History}
@@ -813,7 +913,7 @@
 		Version & Datum & Person & Bemerkung \\\hline
 		$0.1$ & 22.12.2023 & Jonas Guler & Kapitel erstellt \\\hline
 		$0.2$ & 09.12.2024 & Jonas Guler & Korrekturen \\\hline
-		& ToDo & Jonas Guler & Funktionsgleichung bestimmen, Modellieren und Extremwertaufgaben fehlen \\\hline
+		$1.1$ & 15.02.2026 & Jonas Guler & Fktgl bestimmen und Extremal Theorieinputs ergänzt - Aufgaben und Modellieren fehlen  \\\hline
 	\end{tabular}
 \end{table}
 
