@@ -4,10 +4,10 @@
 \input{../Header/mathexpressions.sty}
 \input{../Header/headerExam.sty}
 %=========================================================
-\newcommand{\theme}{Lineare Gleichungssysteme}
+\newcommand{\theme}{Quadratische Gleichung}
 \newcommand{\teacher}{Jonas Guler}
 \newcommand{\class}{2Na}
-\renewcommand{\date}{15.12.25}
+\renewcommand{\date}{17.02.26}
 \graphicspath{{Algebra/data-algebra/},{Geometrie/data-geometrie},{Analysis/data-analysis}} % Setzt den Pfad zu den Bilder fest
 %=========================================================
 \begin{document}
@@ -40,7 +40,7 @@
 
 \vspace{10cm}
 \begin{center}
-	\Huge{Repetitionsprüfung}
+	%\Huge{Repetitionsprüfung}
 \end{center}
 
 \newpage
@@ -48,75 +48,82 @@
 %=========================================================
 %---------------------TESTFRAGEN
 %=========================================================
-\question[5] % Barth SE K4.3 A9
-Der folgende Text erklärt, warum ein lineares $n\times n$ Gleichungssystem üblicherweise genau eine Lösung für jede Variable hat. Leider sind die einzelnen Sätze durcheinandergeraten. Stelle die richtige Reihenfolge wieder her.
-\begin{enumerate}
-	\item Mit diesem verkleinerten System arbeiten wir in analoger Weise weiter. Wir lösen also erneut eine Gleichung nach einer Unbekannten auf und setzen das Erhaltene in allen restlichen Gleichungen ein.
-	\item Angenommen, es ist ein lineares $n\times n$ Gleichungssystem zu lösen.
-	\item Durch Rückwärtseinsetzen lassen sich nun auch alle restlichen Unbekannten bestimmen.
-	\item Das lineare $1\times1$ Gleichungssystem ist eine Gleichung in einer Unbekannten.
-	\item Auf diese Weise entsteht ein lineares $(n-1)\times(n-1)$ Gleichungssystem.
-	\item Wir erhalten am Ende also genau eine Lösung für jede Variable.
-	\item Wir wenden das Einsetzungsverfahren an, lösen also die erste Gleichung nach der ersten Unbekannten auf und setzen das Erhaltenen in allen restlichen Gleichungen ein.
-	\item Wir können diese Unbekannte folglich bestimmen.
-	\item Wenn alles normal läuft, landen wir schliesslich bei einem linearen $2\times2$ und dann bei einem linearen $1\times1$ Gleichungssystem.
-	\item So wird das Format des Systems mit jedem Schritt um eine Gleichung und eine Unbekannte verkleinert.
-\end{enumerate}
-\vspace{7pt}\antwort{7.5}
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+\begin{parts}
+	\part[1\half] Argumentiere, ob die folgende Aussage wahr oder falsch ist:\newline\flqq Nach quadratischem Ergänzen wird die Gleichung $x^2-8x=0$ die Form $(x-4)^2=20$ haben.\frqq %Barth SE K5.4 A10a
+\end{parts}
+\vspace{5pt}\antwort{9.5}
+\begin{parts}
+	\setcounter{partno}{1}
+	\part[1\half] Gib eine quadratische Gleichung in Normalform\footnote{Die Normalform einer quadratischen Gleichung lautet $ax^2+bx+c=0$.} an, die die beiden Lösungen $x_1=2$ und $x_2=-3$ hat. %Barth NAchtest K5 A11a
+\end{parts}
+\vspace{5pt}\antwort{9.5}
 
 
 %---------------------------------------------------------
 \newpage
 \noaddpoints
-\question[\totalpoints]
+\question[\totalpoints]  %Barth SE K5.3 A2
 \addpoints
-Max muss das folgende Gleichungssystem lösen: \[\systeme{2x+y=1,7x-y=2}\]
+\begin{align*}
+	5x^2-8x&=0 && \vert\div x\\
+	5x-8&=0 &&\vert+8\:\vert\div 5\\
+	x&=\frac{8}{5}
+\end{align*}
 \begin{parts}
-	\part[2] Er möchte sich in der Additionsmethode üben und fasst folgenden Plan: Er möchte die erste Gleichung mit $7$ und die zweite Gleichung mit  $2$  multiplizieren. Danach will er die beiden Gleichungen addieren und damit die Variable x eliminieren. Funktioniert das? Begründe deine Antwort.
+	\part[1] Kennzeichne alle Fehler im obigen Lösungsweg.
+	\part[2] Löse die Gleichung korrekt.
 \end{parts}
-\vspace*{7pt}\antwort{7.5}
-\begin{parts}
-	\setcounter{partno}{1}
-	\part[4] Löse das Gleichungssystem vollständig mit Hilfe des Additionsverfahren.
-\end{parts}
-\vspace{7pt}\antwort{9.5}
+\vspace*{7pt}\antwort{19.5}
 
 
 %---------------------------------------------------------
 \newpage
-\question[4] %DMK Algebra A16e S67
-Löse das folgende Gleichungssystem unter Verwendung des Einsetzungsverfahren.
-\[\systeme{\frac{1}{4}x-\frac{5}{6}y=5,\frac{4}{5}x-y=11}\]
-{\small\textbf{Bewertung:} Wird nicht das erwähnte Verfahren verwendet, wird die Aufgabe mit 0 Punkte bewertet.}
-\vspace{7pt}\antwort{8.5}
+\question[4]
+Löse die folgende Gleichung mithilfe des quadratischen Ergänzens nach $x$ auf. \[\frac{1}{6}x^2-\frac{5}{4}x+\frac{3}{2}=0\]
+\begin{small}
+	Bewertung: Wird nicht das erwähnte Verfahren verwendet, werden Punkte abgezogen.
+\end{small}
+\vspace{5pt}\antwort{9}
 \vfill
-\question[5] % Barth Ü&A K4.3 A5b
-Bestimme im folgenden linearen Gleichungssystem die Parameter $a$ und $c$ so, dass das System eine leere Lösungsmenge besitzt.
-\[\left\{\begin{matrix}1.5x-1.2y=c\\a\*x+0.9y=-1.2\end{matrix}\right.\]
-\antwort{8.5}
+\question[4] %KSWilli A4
+Löse die folgende Gleichung mithilfe der Lösungsformel für quadratische Gleichungen nach $x$ auf. \[9x^2+54x+63=0\]
+\begin{small}
+	Bewertung: Wird nicht das erwähnte Verfahren verwendet, werden Punkte abgezogen.
+\end{small}
+\vspace{5pt}\antwort{9}
 
 
 %---------------------------------------------------------
 \newpage
-\question[5] % KSWilli A12b
-Löse das folgende lineare $3\times3$ Gleichungssystem nach den Unbekannten auf. Du kannst dabei ein Verfahren deiner Wahl nutzen.
-\[\left\{\begin{matrix}x=-y-z\\2x-4z=3+y\\2z=6+x+2y\end{matrix}\right.\]
-\vspace*{7pt}\antwort{21}
+\noaddpoints
+\question[\totalpoints] %KSWilli A10
+\addpoints
+Gegeben ist die folgende quadratische Gleichung
+\[x^2+2ux+4=0.\]
+\begin{parts}
+	\part[4] Bestimme den Wert des Parameters $u$ so, dass die quadratische Gleichung genau eine Lösung besitzt.
+	\part[1] Bestimme diese eine Lösung der Gleichung.
+\end{parts}
+\vspace*{7pt}\antwort{20.5}
 
 %---------------------------------------------------------
 \newpage
-\question[4] %DMK Algebra A9c S69
-Löse das folgende lineare Gleichungssystem unter Verwendung eines geeigneten Verfahrens. Bemerke, $r$ ist hier ein Parameter. \[\left\{\begin{matrix}(r-1)x=r(1-x)\\r(r-x-y)=2x\end{matrix}\right.\]
-\vspace{5pt}\antwort{21.5}
+\question[4] %DMK Algebra9/10 S137 A35j
+Löse die folgende Wurzelgleichung nach der $x$ auf. \[\sqrt{x+2}+\sqrt{x-3}=\sqrt{3x+4}\]
+\antwort{22.5}
 
 %---------------------------------------------------------
 \newpage
-\question[5] % KSWilli A20
-Um eine Grünfläche von $500$m$^2$ zu mähen und einen Parkplatz mit einer Fläche von $150$m$^2$ zu
-reinigen, braucht eine Firma $5$ Stunden. Andererseits dauert es $9$ Stunden, bis eine Grünfläche
-von $750$m$^2$ gemäht und ein Parkplatz von $300$m$^2$ gereinigt ist. Wie viele m$^2$ Gras mähen die
-Mitarbeiter der Firma, resp. wie viele m$^2$ Parkplatz reinigen sie in einer Stunde?
-\vspace*{7pt}\antwort{21.5}
+\question[5]
+Berechne die Länge des Radius des kleinen Kreises.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{quadGl-text-1.png}
+\end{figure}
+\antwort{18.5}
 
 
 \end{questions}
