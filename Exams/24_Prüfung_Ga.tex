@@ -4,10 +4,10 @@
 \input{../Header/mathexpressions.sty}
 \input{../Header/headerExam.sty}
 %=========================================================
-\newcommand{\theme}{lineare Gleichungssysteme}
+\newcommand{\theme}{Quadratische Gleichung}
 \newcommand{\teacher}{Jonas Guler}
 \newcommand{\class}{2Ga}
-\renewcommand{\date}{17.12.25}
+\renewcommand{\date}{18.02.26}
 \graphicspath{{Algebra/data-algebra/},{Geometrie/data-geometrie}} % Setzt den Pfad zu den Bilder fest
 %=========================================================
 \begin{document}
@@ -48,35 +48,32 @@
 %=========================================================
 %---------------------TESTFRAGEN
 %=========================================================
-\question[2]
-Erkläre einem Laien in eigenen Worten, wann ein Gleichungssystem linear ist.
-\vspace*{7pt}
-\antwort{9.5}
-\vfill
-\question[4] % Was heisst linear?
-Bestimme im folgenden linearen Gleichungssystem den Parameter $b$ so, dass das System keine Lösungen besitzt.
-\[\systeme{4x+6y=1,6x-9y=b}\]
-\antwort{9.5}
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+\begin{parts} % Barth SE K5.3 A2
+	\part[1\half] Max soll die Gleichung $x^2+c=0$ lösen, in der $c$ eine reelle Zahl ist. Er argumentiert so: \flqq Die Zahl $x^2$ ist schon mal sicher grösser oder gleich $0$. Wenn man dazu noch eine weitere Zahl addiert, kann man nie im Leben bei $0$ landen. Die Gleichung besitzt also sicherlich keine Lösung.\frqq\:Erkläre Max, was an diesem Argument falsch ist und worauf er folglich gut achten muss.
+\end{parts}
+\vspace{5pt}\antwort{9.5}
+\begin{parts} %Barth SE K5.4 A10b
+	\setcounter{partno}{1}
+	\part[1\half] Argumentiere, ob die folgende Aussage wahr oder falsch ist:\newline \flqq Nach quadratischem Ergänzen wird die Gleichung $2x^2+4x=1$ die Form $2(x+2)^2=5$ haben.\frqq
+\end{parts}
+\vspace{5pt}\antwort{9.5}
 
 
 %---------------------------------------------------------
 \newpage
-\question[4]
-Welches Gleichungssystem wird hier graphisch gelöst? Erkläre deine Vorgehensweise auch in Worten.\vspace*{5pt}\newline
-\begin{minipage}{0.47\linewidth}
-	\includegraphics[scale=0.5]{LGS-graphische-lösung.png}
-\end{minipage}
-\hfill
-\begin{minipage}{0.47\linewidth}
-	\begin{tikzpicture}
-		\draw[step=5mm,gray!50,thin] (0,0.5) grid (7.5,-7);
-	\end{tikzpicture}
-\end{minipage}
-\vfill
-\question[4] % Algebra 9/10 S84 A12a
-Löse das folgende lineare Gleichungssystem mit einem Verfahren deiner Wahl.
-\[\systeme{-2x+4y=4,-x+3y=4}\]
-\antwort{11.5}
+\noaddpoints
+\question[\totalpoints] %Barth ÜA K5.4 A5f
+\addpoints
+Gegeben ist die folgende quadratische Gleichung
+\[(x-p)^2=9x.\]
+\begin{parts}
+	\part[4] Bestimme den Wert des Parameters $p$ so, dass die quadratische Gleichung genau eine Lösung besitzt.
+	\part[1] Bestimme diese eine Lösung der Gleichung.
+\end{parts}
+\vspace*{7pt}\antwort{20.5}
 
 
 %---------------------------------------------------------
@@ -84,35 +81,44 @@ Löse das folgende lineare Gleichungssystem mit einem Verfahren deiner Wahl.
 \noaddpoints
 \question[\totalpoints]
 \addpoints
-Max muss das folgende Gleichungssystem lösen: \[\systeme{2x+y=1,7x-y=2}\]
+Tina soll die Gleichung $5x^2-8x=0$ lösen. Sie dividiert durch $x$ und findet die lineare Gleichung $5x-8=0$. Sie löst diese und gibt als Lösungsmenge für die ursprüngliche Gleichung  $\L=\left\{\frac{8}{5}\right\}$ an.
 \begin{parts}
-	\part[2] Er möchte sich im Additionsverfahren üben und fasst folgenden Plan: Er möchte die erste Gleichung mit 7 und die zweite Gleichung mit  2  multiplizieren. Danach will er die beiden Gleichungen addieren und damit die Variable x eliminieren. Funktioniert das? Begründe deine Antwort.
-	\part[4] Löse das Gleichungssystem vollständig mit Hilfe des Additionsverfahren.
+	\part[1] Erkläre Tina, warum diese Lösungsmenge unvollständig ist.
+	\part[2] Löse die Gleichung vollständig und korrekt.
 \end{parts}
-\vspace*{7pt}\antwort{17.5}
-
-
-%---------------------------------------------------------
-\newpage
-\question[5] % DMK Algebra 9/10 S84 A17c
-Vereinfache das folgende lineare $3\times3$ Gleichungssystem auf ein einfacheres $2\times2$ System, in dem du die Gleichungen geeignet umformst und addierst. Du musst das Gleichungssystem nicht komplett lösen.
-\[\systeme{7x-6y+5z=18,5x+3y-4z=28,8x+2y+3z=26}\]
-\vspace{5pt}\antwort{19.5}
+\vspace*{7pt}\antwort{21.5}
 
 
 %---------------------------------------------------------
 \newpage
 \question[4]
-Bestimme die Lösungsmenge des folgenden linearen Gleichungssystems. Bemerke, $d$ ist hier ein Parameter.
-\[\left\{\begin{matrix}x-y=d\\\frac{x-y}{2}+dx=d\end{matrix}\right.\]
-\vspace*{7pt}\antwort{21}
+Löse die folgende Gleichung mithilfe des quadratischen Ergänzens nach $x$ auf. \[2x^2-8x-5=0\]
+\begin{small}
+	Bewertung: Wird nicht das erwähnte Verfahren verwendet, werden Punkte abgezogen.
+\end{small}
+\vspace{5pt}\antwort{8.5}
+\vfill
+\question[4] %KSWilli A4
+Löse die folgende Gleichung mithilfe der Lösungsformel für allgemeine quadratische Gleichungen nach $x$ auf. \[-9x^2-54x-63=0\]
+\begin{small}
+	Bewertung: Wird nicht das erwähnte Verfahren verwendet, werden Punkte abgezogen.
+\end{small}
+\vspace{5pt}\antwort{8.5}
 
 
 %---------------------------------------------------------
 \newpage
-\question[5]
-Bauer Heiniger aus dem Toggenburg hält Schweine und Hühner. Insgesamt haben seine Tiere $594$ Beine. Die Anzahl der Hühner ist um $9$ grösser als die doppelte Anzahl Schweine. Wie viele Schweine und wie viele Hühner hält Bauer Heiniger?
-\vspace{7pt}\antwort{22.5}
+\question[4] %DMK Algebra 9/10 S137 A35m
+Löse die folgende Bruchtermgleichung nach der $x$ auf. \[\frac{4x-1}{x+6}-\frac{2}{x-6}=\frac{4x^2-27x-6}{x^2-36}\]
+\antwort{22.5}
+
+
+%---------------------------------------------------------
+\newpage
+\question[5] % KSWilli A24
+Die Grundlinie eines Dreiecks von $3.6$m$^2$ Flächeninhalt ist um $11.4$m länger als die
+zugehörige Höhe. Berechne die Grundlinie.
+\vspace*{7pt}\antwort{23.5}
 
 \end{questions}
 \end{document}
