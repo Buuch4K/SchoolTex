@@ -58,7 +58,12 @@
 
 	\ifthenelse{\boolean{printanswers}}
 	{\begin{solution}
-		tba
+		\begin{parts}
+			\part $s(x)=10\*0.9^x$
+			\part $s(10)=10\*0.9^{10}\approx 3.487$t
+			\part $s(x)=10\*0.9^x=0.1 \quad\Rightarrow\quad x\approx 43.71$y
+			\part neuer Wert nach 10 y: $s_n(10)=s(10)\*1.2=4.18$t \newline neuer Wert nach 8 y: $s_n(8)=s_n(10)*0.9^{-2}=5.17$t \newline Vergleich mit Wert nach 8 y: $s_n(8)-s(8)=860.93$kg
+		\end{parts}
 	\end{solution}}
 	{\vspace{5pt}\antwort{2.5}}
 
@@ -68,14 +73,18 @@
 	\addpoints
 	Wir nehmen an, jemand schluckt eine Tablette Aspirin mit $500$mg Wirkstoff pro Tag. Nach etwa einer Stunde ist die volle Dosis im Blut und entfaltet ihre Wirkung. Die Wirkstoffkonzentration im Blut nimmt pro Stunde um $16\%$ ab. Beträgt die Wirkstoffkonzentration im Blut weniger als die Hälfte des Initialwertes, so wirkt es im Körper nicht mehr schmerzlindernd.
 	\begin{parts}
-		\part[1] Stelle den zeitlichen Verlauf der Konzeptration im Blut graphisch dar, wenn unsere Versuchsperson genau eine solche Tablette pro Tag nimmt.
+		\part[1] Gib eine Funktionsgleichung an, die den Konzentrationsverlauf ab der maximalen Wirkstoffkonzentration beschreibt, wenn unsere Versuchsperson genau eine solche Tablette pro Tag einnimmt.
 		\part[1] Wie viele Stunden wirkt eine einzige Tablette?
-		\part[2] Nehmen wir an, bei einer Tablette Aspririn mit doppelter Menge Wirkstoff wird die Halbwertszeit der Wirkstoffkonzentration im Blut vervierfacht und es reicht einen Viertel der Initialkonzentration damit sie schmerzlindernd wirkt. Kann diese Tablette einen gesamten Arbeitstag ($8$ Stunden) schmerzlindernd wirken?
+		\part[2] Nehmen wir an, bei einer Tablette Aspririn mit doppelter Menge Wirkstoff wird die Halbwertszeit der Wirkstoffkonzentration im Blut vervierfacht. Kann diese Tablette einen gesamten Arbeitstag ($8$ Stunden) schmerzlindernd wirken? Begründe.
 	\end{parts}
 
 	\ifthenelse{\boolean{printanswers}}
 	{\begin{solution}
-			tba
+			\begin{parts}
+				\part $f(t)=c_{max}\*0.84^t$
+				\part $\frac{1}{2}\*c_{max}=c_{max}\*0.84^t \quad\Rightarrow\quad t\approx3.98$h
+				\part Ja, wird sie, denn $\frac{1}{2}\*C_{max}=C_{max}\*\sqrt[4]{0.84}^t\quad\Rightarrow\quad t\approx35.9$h
+			\end{parts}
 	\end{solution}}
 	{\vspace{5pt}\antwort{2.5}}
 
