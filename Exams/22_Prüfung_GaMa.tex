@@ -5,10 +5,10 @@
 \input{../Header/headerExam.sty}
 \graphicspath{{Analysis/data-analysis/},{Algebra/data-algebra/},{Geometrie/data-geometrie/}}
 %=========================================================
-\newcommand{\theme}{Integralrechnung}
+\newcommand{\theme}{Vektorgeometrie Grundlagen}
 \newcommand{\teacher}{Jonas Guler}
 \newcommand{\class}{4GaMa}
-\renewcommand{\date}{16.12.25}
+\renewcommand{\date}{03.03.26}
 %=========================================================
 \begin{document}
 \fontsize{14}{14}\selectfont
@@ -52,10 +52,10 @@
 \question[\totalpoints]
 \addpoints
 \begin{parts}
-	\part[3] Für welche zwei Werte der oberen Grenze $a$ gilt \[\int_{-1}^{a}(x^2-2x)\d{x}=0?\]
-	\part[3] Erkläre anhand einer sinnvollen Skizze des Graphen, warum es zwei Lösungen möglich sind.
+	\part[1\half] Welcher Vektor entspricht der Menge aller Pfeile, die dieselbe Länge und Richtung haben wie der Pfeil von  $A\left(4\:\mid\:-3\:\mid\:-1\right)$ nach $B\left(6\:\mid\:9\:\mid\:9\right)$? %Barth3 K4.1 ÜA A1
+	\part[1\half] Gegeben ist ein Vektor $\v{v}=\Vec{3}{1}{-2}$. Berechne sein Endpunkt, wenn der Anfangspunkt die Koordinaten $(8\:\mid\:-4\:\mid\:2)$ hat. %Barth3 K4.1 ÜA A5
 \end{parts}
-\vspace{7pt}\antwort{21}
+\vspace{7pt}\antwort{20.5}
 
 
 %---------------------------------------------------------
@@ -63,108 +63,81 @@
 \noaddpoints
 \question[\totalpoints]
 \addpoints
-Berechne die folgenden unbestimmten Integrale.
 \begin{parts}
-	\part[2] $\displaystyle\int\left(\frac{2}{x^3}\*\sqrt[3]{x}\right)\d{x}$
-	\part[2] $\displaystyle\int\left(2\cos{x}+\frac{4x}{x^2}-6e^x\right)\d{x}$
+	\part[2] Erkläre einem Laien den Unterschied zwischen einem Punkt und seinem Ortsvektor. Veranschauliche deine Erklärung mit einer geeigneten Skizze. %Barth3 K4.1 SE A9
+	\part[2] Ein Dreieck hat die Eckpunkte  $A(0\:\mid\:0), B(3\:\mid\:4)$ und $C(2\:\mid\:7)$. Es wird nun zuerst um den Vektor $\v{v}=\vec{5}{-2}$ und danach um den Vektor $\v{w}=\vec{-3}{6}$ verschoben. Gib die Koordinaten der Eckpunkte des verschobenen Dreiecks an. %Barth3 K4.1 ÜA A8a
 \end{parts}
-\vspace{7pt}\antwort{21.5}
+\vspace{7pt}\antwort{19}
 
 
 %---------------------------------------------------------
-\newpage
-\question[6]
-\begin{minipage}{0.6\linewidth}
-	Gegeben sind die beiden Funktionen \[f:y=\sin{x} \text{ und } g:y=mx+q.\] Die drei Schnittpunkte des Graphen sind $S_1\left(-\frac{5\pi}{6},-\frac{1}{2}\right)$, $S_2(0,0)$ und $S_3\left(5\frac{\pi}{6},\frac{1}{2}\right)$.\vspace{5pt}
-	\begin{parts}
-		\part Ermittle die Gleichung der Gerade $g$.
-		\part Welchen Inhalt hat die Fläche, die von den beiden Graphen begrenzt wird?
-	\end{parts}
-\end{minipage}
-\hfill
-\begin{minipage}{0.375\linewidth}
-	\centering
-	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=15mm,
-		>=latex,   %Voreinstellung für Pfeilspitzen
-		font= \footnotesize, scale=0.9]
-		%Raster zeichnen
-		\draw [color=gray!50]  [step=5mm] (-3.7,-1.45) grid (3.7,1.45);
-		% Achsen zeichnen
-		\draw[->,thick] (-3.8,0) -- (3.8,0) node[right, below] {\normalsize $x$};
-		\draw[->,thick] (0,-1.8) -- (0,1.8) node[above, left] {\normalsize $y$};
-		% Achsen beschriften
-		%\foreach \x in {-3,-2,-1,1,2,...,3} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
-		%\foreach \y in {-2,-1,1,2} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
-		% Besserer Ursprung
-		%\draw[color=black] (0pt,-7pt) node[right] {$0$};
-		%Funktionen zeichnen:
-		\clip(-3.6,-2.1) rectangle (3.6,2.1); %Bildbereich
-		\draw[blue,samples=100] plot (\x,{sin(\x r)});
-		\draw[blue,samples=100] plot (\x,{0.190986*\x});
-		% Bereich unter Funktionen einfärben
-		\fill[blue, domain=0:5*pi/6, variable=\x, fill opacity=0.3] (0, 0) -- plot(\x, {sin(\x r)}) -- (5*pi/6,0.5) -- plot(\x, {0.190986*\x}) -- cycle;
-		\fill[blue, domain=-5*pi/6:0, variable=\x, fill opacity=0.3] (-5*pi/6, -0.5) -- plot(\x, {0.190986*\x}) -- (0,0) -- plot(\x, {sin(\x r)}) -- cycle;
-		%Beschriftung
-		\node[blue]  at (3.3,-0.5) {\normalsize$f$};
-		\node[blue]  at (3.3,0.45) {\normalsize$g$};
-		\draw[fill=black] (-5*pi/6,-0.5) circle (1pt);
-		\node[black] at (-2.6,-0.8) {\normalsize$S_1$};
-		\draw[fill=black] (0,0) circle (1pt);
-		\node[black] at (0.3,-0.3) {\normalsize$S_2$};
-		\draw[fill=black] (5*pi/6,0.5) circle (1pt);
-		\node[black] at (2.7,0.8) {\normalsize$S_3$};
-	\end{tikzpicture}
-\end{minipage}
-\vspace{5pt}\antwort{19}
-
-
-%=========================================================
-%--------------START ZWEITER TEIL (mit TR)
-%=========================================================
 \newpage
 \noaddpoints
-\question[\totalpoints] % MA 03 A4
+\question[\totalpoints] %DMK Geo2 S104 A102
 \addpoints
-\begin{minipage}{0.525\linewidth}
-	\begin{parts}
-		\part[3] Berechne $u$.
-		\part[3] Berechne das Volumen $V$ des Körpers, der bei einer Rotation um die $x-$Achse in den Grenzen aus a) entsteht.\newline(Falls keine Lösung bei a), verwende $u=3$.)
-	\end{parts}
-\end{minipage}
-\hfill
-\begin{minipage}{0.45\linewidth}
-	\centering\includegraphics[scale=0.7]{logrotvol.png}
-\end{minipage}
-\vspace{5pt}\antwort{20.5}
+Betrachte das abgebildete Viereck $ABCD$ mit den Seitenmitten $M$ und $N$.
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+		>=latex,   %Voreinstellung für Pfeilspitzen
+		font= \footnotesize, scale=0.5]
+		%Vektoren
+		\draw[thick] (0,0) -- (6,-2);
+		\draw[->,thick] (6,-2) -- (3.5,5);
+		\draw[<-,thick] (3.5,5) -- (1,4);
+		\draw[->,thick] (0,0) -- (1,4);
+		\draw[myred,->,thick] (3,-1) -- (4.75,1.5);
+		%Punkte
+		\draw (3,-1) circle (2pt);
+		\draw (4.75,1.5) circle (2pt);
+		%Beschriftung
+		\node at (-0.2,-0.2) {$A$};
+		\node at (6.2,-2.2) {$B$};
+		\node at (3.7,5.2) {$C$};
+		\node at (0.8,4.2) {$D$};
+		\node at (3,-1.4) {$M$};
+		\node at (5.2,1.5) {$N$};
+		\node[myred] at (3.625,0.3) {$\vv{r}$};
+		\node at (0.15,2) {$\vv{u}$};
+		\node at (6.7,0) {$\vv{w}=\vv{BC}$};
+		\node at (2.25,4.85) {$\vv{v}$};
+	\end{tikzpicture}
+\end{figure}
+\begin{parts}
+	\part[2] Berechne den Vektor zwischen den Punkten $A$ und $B$ in Abhängigkeit der Vektoren $\v{u},\v{v}$ und $\v{w}$.
+	\part[2] Drücke den Vektor $\v{r}$ als Linearkombination der Vektoren $\v{u},\v{v}$ und $\v{w}$ aus.
+\end{parts}
+\vspace*{7pt}\antwort{16.5}
 
 
 %---------------------------------------------------------
 \newpage
-\question[4] % MA 10 A7
-\begin{minipage}{0.525\linewidth}
-	In der nebenstehenden Figur sind die Graphen der Funktionen $f:y=x^3$,\newline $g:y=x^2$ und $h:y=a\*x$ abgebildet. Wie gross muss $a$ gewählt werden, dass die beiden hervorgehobenen Flächen gleich gross sind?
-\end{minipage}
-\hfill
-\begin{minipage}{0.45\linewidth}
-	\centering\includegraphics[scale=0.75]{x3x2ax.png}
-\end{minipage}
-\vspace{5pt}\antwort{19.5}
+\question[3] %Barth3 K4.2 ÜA A1b
+Sei $\v{u}=\Vec{5}{2}{0}$, $\v{v}=\Vec{3}{-8}{1}$ und $\v{w}=\Vec{0.6}{4}{4}$.\newline Berechne $\displaystyle2\v{u}+3\v{v}-\frac{1}{2}\*\v{w}$.
+\vspace{7pt}\antwort{9.5}
+\vfill
+\question[3] %DMK Geo2 S93 A37a
+Im Dreieck $ABC$ sind die Ecke $C\left(7\:\mid\:-3\:\mid\:9\right)$ und die Seitenmitten $M_a\left(2\:\mid\:8\:\mid\:-4\right)$ und $M_b\left(5\:\mid\:1\:\mid\:-1\right)$ gegeben. Berechne den Mittelpunkt $M_c$.
+\vspace{7pt}\antwort{9.5}
+
 
 %---------------------------------------------------------
 \newpage
-\question[6] % MA 03 A3
-\begin{minipage}{0.525\linewidth}
-	Eine Parabel (2. Ordnung) mit Scheitelpunkt $S(0\:\vert\:2)$ zerlegt das abgebildete Quadrat in drei flächengleiche Teile $A=B=C$. Bestimme die Parabelgleichung.
-\end{minipage}
-\hfill
-\begin{minipage}{0.45\linewidth}
-	\centering\includegraphics[scale=1]{Parabelfinden.png}
-\end{minipage}
-\vspace{7pt}\antwort{18.5}
+\question[4] % DMK Geo2 S104 A105c
+Berechne den Parameter $a$, sodass die Vektoren $\v{u}=\Vec{2}{a}{-6}$ und $\v{v}=\Vec{-3}{a+4}{9}$ gleich lang sind.
+\vspace{5pt}\antwort{22.5}
 
 %---------------------------------------------------------
 \newpage
-{\bf Reserve:}\newline\antwort{24.5}
+\question[6] %DMK Geo2 S105 A106b
+Gegeben sind die Eckpunkte eine Dreiecks $A\left(-4\:\mid\:6\:\mid\:-8\right), B\left(6\:\mid\:2\:\mid\:14\right)$ und $C\left(-6\:\mid\:12\:\mid\:-17\right)$. Berechne den Winkel $\alpha$ bei Punkt $A$.
+\vspace{7pt}\antwort{23.5}
+
+%---------------------------------------------------------
+\newpage
+\question[5]
+Überprüfe, ob die Vektoren $\v{u}=\Vec{5}{4}{3}$ und $\v{v}=\Vec{2}{8}{-2}$ senkrecht zum Vektor $\v{n}=\Vec{-2}{1}{2}$ stehen.
+\vspace{7pt}\antwort{21}
 
 \end{questions}
 \end{document}

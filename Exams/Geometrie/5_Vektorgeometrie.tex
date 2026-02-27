@@ -3,6 +3,7 @@
 \input{../../Header/styleExam.sty}
 \input{../../Header/headerQuestion.sty}
 \input{../../Header/mathexpressions.sty}
+\graphicspath{{data-geometrie/}}
 %=========================================================
 \newcommand{\theme}{Vektorgeometrie}
 \newcommand{\teacher}{Jonas Guler}
@@ -17,8 +18,208 @@
 %=========================================================
 %-------------------TESTFRAGEN
 %=========================================================
-\question[2]
-Hier sollte vermutlich irgendetwas stehen.
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+\begin{parts}
+	\part[2] Beurteile die folgende Aussage. Hugo sagt:\newline\flqq Der Vektor $\v{v}=\vec{4}{3}$ ist der Pfeil vom Ursprung zum Punkt $P\left(4\:\mid\:3\right)$.\frqq\newline
+	Was muss sich Hugo unbedingt einprägen? %Barth3 K4.1 SE A6
+	\part[2] Gib die Menge aller Pfeile an, die die gleiche Richtung und Länge wie der Vektor zwischen den Punkten $P\left(4\:\mid\:-13\right)$ und $Q\left(16\:\mid\:22\right)$ besitzen.
+\end{parts}
+
+
+%---------------------------------------------------------
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+\begin{parts}
+	\part[2] Erkläre einem Laien, was unter dem Betrag eines Vektors verstanden wird und zeige ihm die notwendige Notation. %Barth3 K4.1 SE A9
+	\part[2] Berechne den Betrag des Vektors $\v{v}=\Vec{-4}{3}{12}$.
+\end{parts}
+
+
+%---------------------------------------------------------
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+\begin{parts}
+	\part[1\half] Welcher Vektor entspricht der Menge aller Pfeile, die dieselbe Länge und Richtung haben wie der Pfeil von  $A\left(4\:\mid\:-3\:\mid\:-1\right)$ nach $B\left(6\:\mid\:9\:\mid\:9\right)$? %Barth3 K4.1 ÜA A1
+	\part[1\half] Gegeben ist ein Vektor $\v{v}=\Vec{3}{1}{-2}$. Berechne sein Endpunkt, wenn der Anfangspunkt die Koordinaten $(8\:\mid\:-4\:\mid\:2)$ hat. %Barth3 K4.1 ÜA A5
+\end{parts}
+\vspace{7pt}\antwort{20.5}
+
+
+%---------------------------------------------------------
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+\begin{parts}
+	\part[2] Erkläre einem Laien den Unterschied zwischen einem Punkt und seinem Ortsvektor. Veranschauliche deine Erklärung mit einer geeigneten Skizze. %Barth3 K4.1 SE A9
+	\part[2] Ein Dreieck hat die Eckpunkte  $A(0\:\mid\:0), B(3\:\mid\:4)$ und $C(2\:\mid\:7)$. Es wird nun zuerst um den Vektor $\v{v}=\vec{5}{-2}$ und danach um den Vektor $\v{w}=\vec{-3}{6}$ verschoben. Gib die Koordinaten der Eckpunkte des verschobenen Dreiecks an. %Barth3 K4.1 ÜA A8a
+\end{parts}
+
+
+%---------------------------------------------------------
+\noaddpoints
+\question[\totalpoints] %DMK Geo2 S104 A102
+\addpoints
+Betrachte das abgebildete Viereck $ABCD$ mit den Seitenmitten $M$ und $N$.
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+		>=latex,   %Voreinstellung für Pfeilspitzen
+		font= \footnotesize, scale=0.5]
+		%Vektoren
+		\draw[->,thick] (0,0) -- (6,-2);
+		\draw[->,thick] (6,-2) -- (3.5,5);
+		\draw[<-,thick] (3.5,5) -- (1,4);
+		\draw[thick] (0,0) -- (1,4);
+		\draw[myred,->,thick] (0.5,2) -- (4.75,1.5);
+		%Punkte
+		\draw (0.5,2) circle (2pt);
+		\draw (4.75,1.5) circle (2pt);
+		%Beschriftung
+		\node at (-0.2,-0.2) {$A$};
+		\node at (6.2,-2.2) {$B$};
+		\node at (3.7,5.2) {$C$};
+		\node at (0.8,4.2) {$D$};
+		\node at (0.1,2) {$M$};
+		\node at (5.2,1.5) {$N$};
+		\node[myred] at (2.625,1.4) {$\vv{r}$};
+		\node at (3,-1.4) {$\vv{u}$};
+		\node at (5.65,0) {$\vv{w}$};
+		\node at (2.25,4.8) {$\vv{v}$};
+	\end{tikzpicture}
+\end{figure}
+\begin{parts}
+	\part[2] Berechne den Vektor zwischen den Punkten $A$ und $D$ in Abhängigkeit der Vektoren $\v{u},\v{v}$ und $\v{w}$.
+	\part[2] Drücke den Vektor $\v{r}$ als Linearkombination der Vektoren $\v{u},\v{v}$ und $\v{w}$ aus.
+\end{parts}
+
+
+%---------------------------------------------------------
+\noaddpoints
+\question[\totalpoints] %DMK Geo2 S104 A102
+\addpoints
+Betrachte das abgebildete Viereck $ABCD$ mit den Seitenmitten $M$ und $N$.
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+		>=latex,   %Voreinstellung für Pfeilspitzen
+		font= \footnotesize, scale=0.5]
+		%Vektoren
+		\draw[thick] (0,0) -- (6,-2);
+		\draw[->,thick] (6,-2) -- (3.5,5);
+		\draw[<-,thick] (3.5,5) -- (1,4);
+		\draw[->,thick] (0,0) -- (1,4);
+		\draw[myred,->,thick] (3,-1) -- (4.75,1.5);
+		%Punkte
+		\draw (3,-1) circle (2pt);
+		\draw (4.75,1.5) circle (2pt);
+		%Beschriftung
+		\node at (-0.2,-0.2) {$A$};
+		\node at (6.2,-2.2) {$B$};
+		\node at (3.7,5.2) {$C$};
+		\node at (0.8,4.2) {$D$};
+		\node at (3,-1.4) {$M$};
+		\node at (5.2,1.5) {$N$};
+		\node[myred] at (3.625,0.3) {$\vv{r}$};
+		\node at (0.15,2) {$\vv{u}$};
+		\node at (6.7,0) {$\vv{w}=\vv{BC}$};
+		\node at (2.25,4.85) {$\vv{v}$};
+	\end{tikzpicture}
+\end{figure}
+\begin{parts}
+	\part[2] Berechne den Vektor zwischen den Punkten $A$ und $B$ in Abhängigkeit der Vektoren $\v{u},\v{v}$ und $\v{w}$.
+	\part[2] Drücke den Vektor $\v{r}$ als Linearkombination der Vektoren $\v{u},\v{v}$ und $\v{w}$ aus.
+\end{parts}
+
+
+%---------------------------------------------------------
+\noaddpoints
+\question[\totalpoints] %DMK Geo2 S104 A102
+\addpoints
+Betrachte das abgebildete Viereck $ABCD$ mit den Seitenmitten $M$ und $N$.
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+		>=latex,   %Voreinstellung für Pfeilspitzen
+		font= \footnotesize, scale=0.5]
+		%Vektoren
+		\draw[thick] (0,0) -- (6,-2);
+		\draw[->,thick] (6,-2) -- (3.5,5);
+		\draw[<-,thick] (3.5,5) -- (1,4);
+		\draw[->,thick] (0,0) -- (1,4);
+		\draw[myred,->,thick] (3,-1) -- (2.25,4.5);
+		%Punkte
+		\draw (3,-1) circle (2pt);
+		\draw (2.25,4.5) circle (2pt);
+		%Beschriftung
+		\node at (-0.2,-0.2) {$A$};
+		\node at (6.2,-2.2) {$B$};
+		\node at (3.7,5.2) {$C$};
+		\node at (0.8,4.2) {$D$};
+		\node at (3,-1.5) {$M$};
+		\node at (2.25,4.9) {$N$};
+		\node[myred] at (2.9,1.75) {$\vv{r}$};
+		\node at (0.15,2) {$\vv{u}$};
+		\node at (5.2,1.5) {$\vv{w}$};
+		\node at (1.5,4.5) {$\vv{v}$};
+	\end{tikzpicture}
+\end{figure}
+\begin{parts}
+	\part[2] Berechne den Vektor zwischen den Punkten $A$ und $B$ in Abhängigkeit der Vektoren $\v{u},\v{v}$ und $\v{w}$.
+	\part[2] Drücke den Vektor $\v{r}$ als Linearkombination der Vektoren $\v{u},\v{v}$ und $\v{w}$ aus.
+\end{parts}
+
+
+
+
+%---------------------------------------------------------
+\noaddpoints
+\question[\totalpoints] %DMK Geo2 S104 A105
+\addpoints
+Berechne den Parameter $a$, sodass die Vektoren $\v{u}=\Vec{2}{a}{-6}$ und $\v{v}=\Vec{-3}{a+4}{9}$\:\ldots
+\begin{parts}
+	\part[3] \ldots kollinear sind.
+\end{parts}
+\begin{parts}
+	\setcounter{partno}{1}
+	\part[3] \ldots senkrecht stehen.
+\end{parts}
+\begin{parts}
+	\setcounter{partno}{2}
+	\part[3] \ldots gleich lang sind.
+\end{parts}
+
+
+%---------------------------------------------------------
+\question[3] %Barth3 K4.2 ÜA A1b
+Sei $\v{u}=\Vec{5}{2}{0}$, $\v{v}=\Vec{3}{-8}{1}$ und $\v{w}=\Vec{0.6}{4}{4}$.\newline Berechne $\displaystyle2\v{u}+3\v{v}-\frac{1}{2}\*\v{w}$.
+
+
+%---------------------------------------------------------
+\question[3] %DMK Geo2 S93 A37a
+Im Dreieck $ABC$ sind die Ecke $C\left(7\:\mid\:-3\:\mid\:9\right)$ und die Seitenmitten $M_a\left(2\:\mid\:8\:\mid\:-4\right)$ und $M_b\left(5\:\mid\:1\:\mid\:-1\right)$ gegeben. Berechne den Mittelpunkt $M_c$.
+
+
+%---------------------------------------------------------
+\question[4] %Barth3 K4.2 ÜA A6
+Vom Parallelogramm $ABCD$ kennt man $A\left(3\:\mid\:2\right), B\left(10\:\mid\:4\right)$ und $\v{AD}=\vec{1}{4}$. Berechne daraus die Koordinaten der Ecken $C$ und $D$.
+
+
+%---------------------------------------------------------
+\question[4] %DMK Geo2 S97 A64d umformuliert
+Gegeben sind zwei Seiten eines Dreiecks $\v{a}=\Vec{20}{-1}{-7}$ und $\v{b}=\Vec{5}{8}{-19}$. Zeige rechnerisch, dass es sich um ein gleichseitiges Dreieck handelt.
+
+
+%---------------------------------------------------------
+\question[6] %DMK Geo2 S105 A106b
+Gegeben sind die Eckpunkte eine Dreiecks $A\left(-4\:\mid\:6\:\mid\:-8\right), B\left(6\:\mid\:2\:\mid\:14\right)$ und $C\left(-6\:\mid\:12\:\mid\:-17\right)$. Berechne den Winkel $\alpha$ bei Punkt $A$.
+
+%---------------------------------------------------------
+\question[5] %DMK Geo2 S105 A109b
+Betrachte das Dreieck $ABC$ mit den Eckpunkten $A\left(7\:\mid\:2\:\mid\:6\right), B\left(1\:\mid\:5\:\mid\:8\right)$ und $C\left(3\:\mid\:9\:\mid\:4\right)$. Berechne einen Vektor $\v{n}$ , der senkrecht auf dem Dreieck steht und dessen Länge gleich gross wie der Flächeninhalt ist.
 
 \end{questions}
 \end{document}
