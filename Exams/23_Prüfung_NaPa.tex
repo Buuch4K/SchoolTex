@@ -5,10 +5,10 @@
 \input{../Header/headerExam.sty}
 \graphicspath{{Algebra/data-algebra/},{Geometrie/data-geometrie/},{Analysis/data-analysis/}} % Setzt den Pfad zu den Bilder fest
 %=========================================================
-\newcommand{\theme}{Folgen \& Reihen}
+\newcommand{\theme}{Grenzwert, Stetigkeit \& Differential}
 \newcommand{\teacher}{Jonas Guler}
 \newcommand{\class}{3NaPa}
-\renewcommand{\date}{10.02.26}
+\renewcommand{\date}{01.04.26}
 %=========================================================
 \begin{document}
 \fontsize{13}{13}\selectfont
@@ -34,7 +34,7 @@
     \vspace{5pt}
     Der Rechenweg muss \textbf{vollständig und nachvollziehbar} sein.\\
     Lösen Sie die Prüfung mit einen schwarzen oder blauen Kugelschreiber.\\
-    Als Hilfsmittel ist der Taschenrechner (TI - Nspire CX-II CAS) zugelassen.
+    Als Hilfsmittel ist der Taschenrechner (TI - Nspire CX-II CAS) zugelassen. Jedoch ist der $\Lim$-Befehl ausdrücklich verboten. Jegliche Lösungswege unter Verwendung dessen werden mit $0$ Punkten bewertet.
 \end{center}
 \rule[1ex]{\textwidth}{1pt}
 
@@ -48,87 +48,88 @@
 %=========================================================
 %------------------------TESTFRAGEN
 %=========================================================
+\question[3]
+Erkläre einem Laien in eigenen Worten den Unterschied zwischen dem Differenzenquotienten und dem Differentialquotienten. Mache dazu eine geeignete Skizze.
+
+\vspace*{5pt}\antwort{12.5}
+\vfill
+\question[2]
+Entscheide in der Tabelle unten, ob die Aussagen wahr oder falsch sind. Die Antworten müssen nicht begründet werden.\\
+\begin{small}
+	Bewertung: Für $0-2$ korrekte Antworten gibt es keine Punkte; $3$ korrekte Antworten $1$ Punkt und falls alle Antworten korrekt sind, gibt es $2$ Punkte.
+\end{small}
+\begingroup
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|p{12cm}|c|c|}\hline
+		& wahr & falsch \\\hline
+		Hat eine Funktion eine Definitionslücke, so kann die Funktion an dieser Stelle nicht stetig sein. & & \\\hline
+		Die Steigung einer linearen Funktion ist identisch mit dem Differenzenquotienten. & & \\\hline
+		Durch den Grenzwert im Differentialquotienten kann die durchschnittliche Steigung der Funktion genauer wie im Differenzenquotienten berechnet werden. & & \\\hline
+		Falls eine Folge konvergiert, so konvergiert auch die zugehörige Reihe. & & \\\hline
+	\end{tabular}
+\end{table}
+\endgroup
+
+
+%---------------------------------------------------------
+\newpage
+\question[4]
+Armin behauptet: \flqq Die Folge $\displaystyle a_n=\frac{(-1)^n}{10}$ konvergiert und hat genau zwei Grenzwerte, nämlich $0.1$ und $-0.1$.\frqq\\
+Kommentiere Armins Aussage. Hat er recht? Begründe!
+\vspace*{7pt}\antwort{9}
+\vfill
+\question[4]
+Wie muss der Parameter $a$ und der Exponent $m$ gewählt werden, damit der die folgende Gleichung wahr ist? Erkläre, wie du vorgegangen bist. \[\lim_{x\to\infty}\frac{a\*x^m-4x^3-1}{2x^4-11x^2+5}=3\]
+\antwort{9}
+
+
+%---------------------------------------------------------
+\newpage
 \noaddpoints
 \question[\totalpoints]
 \addpoints
 \begin{parts}
-	\part[3] Erkläre einem Laien unter welchen Bedingungen eine unendliche geometrische Reihe konvergiert. Erfinde dazu passende Beispiele.
+	\part[4] Berechne den folgenden Grenzwert ohne Verwendung des Taschenrechners: \[\lim_{n\to\infty}\frac{3n^5-6n^3+2}{n^5+3n^2-1}=\]
+	\part[2] Ab welchem Index $N\in\N$ ist der Abstand zum Grenzwert kleiner $0.001$.
 \end{parts}
-\vspace{5pt}\antwort{10.5}
+\vspace*{7pt}\antwort{21.5}
+
+
+%---------------------------------------------------------
+\newpage
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+Betrachte die Funktion \[f(x)=\begin{cases}\frac{x^2+5x-14}{x^2-4},&x\geq -7\\ -\frac{1}{9}\*(x+4)^2+1,&x<-7.\end{cases}\]
+\begin{parts}
+	\part[2] Ist die Funktion stetig in $x_0=-2$? Begründe deine Antwort.
+\end{parts}
+\vspace{5pt}\antwort{9.5}
 \begin{parts}
 	\setcounter{partno}{1}
-	\part[2] Von einer geometrischen Folge sind zwei Folgenglieder $a_2=96$ und $a_9=1640.25$ bekannt. Berechne $q$ und $a_{35}$.
+	\part[4] Zeige, dass die Funktion im Übergang $x_1=-7$ stetig ist.
 \end{parts}
 \vspace{5pt}\antwort{10.5}
 
 
 %---------------------------------------------------------
 \newpage
-\question[4]
-Von einer arithmetischen Folge sind die Partialsummen $s_7=21$ und $s_8=25$ bekannt. Berechne $a_1$ und die Differenz d.
-\vspace*{7pt}\antwort{9.5}
-\vfill
-\question[4]
-Von einer Folge $(a_n)_{n\in\N}$ sind das erste Glied und die rekursive Beschreibung gegeben. Schreibe die ersten $5$ Folgenglieder auf und entwickle daraus eine explizite Darstellung für das allgemeine Glied $a_n$ der Folge. \[a_1=1,\:a_{n+1}=a_n+2n+1\]
-\antwort{9.5}
-
-
-%---------------------------------------------------------
-\newpage
-\question[4] %DMK Ana S28 A171b
-Berechne aus den gegebenen Informationen einer arithmetischen Folge die gesuchten Grössen.\\
-Gegeben: $a_3=22$, $a_{7}=-2$. Gesucht: $a_1$ und $\displaystyle\sum_{k=8}^{24}a_k$.
-\vspace{5pt}\antwort{22.5}
-
-
-%---------------------------------------------------------
-\newpage
-\question[4]
-Berechne die folgende Summe: \[43+57+71+\ldots+659=\]
-\antwort{9.5}
-\vfill
-\question[4]
-Begründe die folgende Gleichheit mit Hilfe der Partialsummen einer geometrischen Reihe.
-\[1+2+4+8+\ldots+2^{n-1}=2^n-1\]
-\antwort{10.5}
-
-
-%---------------------------------------------------------
-\newpage
 \noaddpoints
-\question[\totalpoints]
+\question[\totalpoints] %DMK Ana S112 A377
 \addpoints
-In der unten abgebildeten Figurenfolge wird von Figur zu Figur einen Teil der Fläche herausgeschnitten. Das ursprüngliche Quadrat hat Seitenlänge $1$m.
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=0.5]{FR_sirpinskiQuadrate.png}
-\end{figure}
+Das verbleibende Wasservolumen in einem Schwimmbecken, dessen Abfluss man geöffnet hat, kann näherungsweise durch die Funktion $V$ mit der Gleichung\\${V(t)=200\cdot(50-t)^2}$ beschrieben werden ($t$ in Minuten, $V$ in Litern).
 \begin{parts}
-	\part[3] Beschreibe die Fläche, die von Figur zu Figur jeweils neu weggenommen wurde.
-	\part[3] Wie gross ist die übriggebliebene Fläche, wenn der Prozess unendlich fortgeführt wird.
+	\part[2] Berechne den Differenzenquotienten im Intervall $\left[0,5\right]$. Was ist die Bedeutung dieses Zahlenwertes im Zusammenhang mit dem Wasser im Schwimmbecken?
+	\part[2] Berechne den Differentialquotienten zum Zeitpunkt $t_0=5$ von Hand. Was bedeutet diese Ableitung im Zusammenhang mit dem Wasser im Schwimmbecken?
+	\part[1] Erkläre, die Bedeutung, wenn der Differentialquotient negativ und positiv ist.
 \end{parts}
-\vspace*{7pt}\antwort{17.5}
+\vspace*{7pt}\antwort{18.5}
 
 
 %---------------------------------------------------------
 \newpage
-\noaddpoints
-\question[\totalpoints]
-\addpoints
-\begin{minipage}{0.6\linewidth}
-	Ein Pendel wird $a_1=20$cm nach rechts aus seiner Ruhelage entfernt und dann losgelassen. Der Betrag der Amplitude\footnotemark{}\:nimmt pro vollständigen Pendel (von rechts $a_1$ nach links $a_2$ und zurück $a_3$) um $81\%$ ab.
-\end{minipage}
-\hfill
-\begin{minipage}{0.37\linewidth}
-	\centering\includegraphics[scale=0.25]{FR_pendel.jpeg}
-\end{minipage}
-\begin{parts}
-	\part[2] Beschreibe die Folge $a_n$, die jede Amplitude als Folgenglied enthält, explizit.
-	\part[1] Berechne die Summe der Amplituden bis zum 20. Ausschlag.
-	\part[2] Welche Summe der Amplituden hat das Pendel bis zum erneuten Stillstand insgesamt zurückgelegt?
-\end{parts}
-\vspace{5pt}\footnotetext{Die Amplitude ist die Distanz des Pendels vom maximalen Ausschlag zur Ruhelage. In der Skizze mit horizontalen \textcolor{red}{Pfeilen} dargestellt.}
-\vspace*{7pt}\antwort{16.5}
-
+{\bf Reserve:\vspace{7pt}\antwort{25}}
 \end{questions}
 \end{document}
