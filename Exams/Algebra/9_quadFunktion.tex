@@ -3,6 +3,7 @@
 \input{../../Header/styleExam.sty}
 \input{../../Header/headerQuestion.sty}
 \input{../../Header/mathexpressions.sty}
+\graphicspath{{data-algebra/}} % Setzt den Pfad zu den Bilder fest
 %=========================================================
 \newcommand{\theme}{Quadratische Funktionen}
 \newcommand{\teacher}{Jonas Guler}
@@ -26,12 +27,23 @@
     \part[2] Entschiede, ob die Funktion $f(x)=3\*(x-1)^2+7x-3$ eine quadratische Funktion ist. Begründe deine Antwort.
 \end{parts}
 
+
+%-------------------------------------------------------
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+\begin{parts}
+	\part[2] Bringe die folgende Parabel in Scheitelpunktform. \[p(x)=3x^2+24x+46\]
+	\part[2] Fasse für einen Laien die Einflüsse der Parameter $a$, $u$ und $v$ der Scheitelpunktform auf die Veränderung der Parabel in Bezug auf die Normalparabel zusammen.
+\end{parts}
+
+
 %-------------------------------------------------------
 \noaddpoints
 \question[\totalpoints]
 \addpoints
 Ordne die folgenden Funktionsgleichungen den rechts abgebildeten Parabeln zu. Treffe naheliegende Annahmen über die Koordinaten gewisser Punkte.\newline
-\begin{minipage}{0.4\linewidth}
+\begin{minipage}[t]{0.4\linewidth}
     \begin{parts}
         \part $\displaystyle f(x)=\frac{1}{2}x^2$
         \part $\displaystyle f(x)=x^2-7x+10$
@@ -42,8 +54,8 @@ Ordne die folgenden Funktionsgleichungen den rechts abgebildeten Parabeln zu. Tr
     \end{parts}
 \end{minipage}
 \hfill
-\begin{minipage}{0.55\linewidth}
-    \centering
+\begin{minipage}[t]{0.55\linewidth}
+    \centering\vspace{-0.7\baselineskip}
     \begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
         >=latex,   %Voreinstellung für Pfeilspitzen
         font= \footnotesize, scale=0.6]
@@ -59,10 +71,10 @@ Ordne die folgenden Funktionsgleichungen den rechts abgebildeten Parabeln zu. Tr
         \draw[color=black] (0pt,-7pt) node[right] {$0$};
         %Funktionen zeichnen:
         \clip(-6.6,-5.6) rectangle (7.6,6.6); %Bildbereich
-        \draw[myred,domain=-6.5:7.5,samples=100] plot (\x, {0.5*\x*\x});
-        \draw[forestgreen,domain=-6.5:7.5,samples=100] plot (\x, {-1*\x*\x-8*\x-16});
-        \draw[highdive,domain=-6.5:7.5,samples=100] plot (\x, {\x*\x-7*\x+10});
-        \draw[orange,domain=-6.5:7.5,samples=100] plot (\x, {-1*\x*\x+5});
+        \draw[myred,thick,domain=-6.5:7.5,samples=100] plot (\x, {0.5*\x*\x});
+        \draw[forestgreen,thick,domain=-6.5:7.5,samples=100] plot (\x, {-1*\x*\x-8*\x-16});
+        \draw[highdive,thick,domain=-6.5:7.5,samples=100] plot (\x, {\x*\x-7*\x+10});
+        \draw[orange,thick,domain=-6.5:7.5,samples=100] plot (\x, {-1*\x*\x+5});
         %Punkte
         \draw[fill=black!40] (0,0) circle (3pt);
         \draw[fill=black!40] (-4,0) circle (3pt);
@@ -75,41 +87,82 @@ Ordne die folgenden Funktionsgleichungen den rechts abgebildeten Parabeln zu. Tr
     \end{tikzpicture}
 \end{minipage}
 
+
 %-------------------------------------------------------
 \question[4]
-Die Graphen welcher quadratischer Funktionen sind im Graphen rechts abgebildet? Gib die jeweiligen Funktionsgleichungen an. Treffe naheliegende Annahmen über die Koordinaten gewisser Punkte.
-\begin{figure}[h]
-    \centering
-    \begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
-        >=latex,   %Voreinstellung für Pfeilspitzen
-        font= \footnotesize, scale=0.5]
-        %Raster zeichnen
-        \draw [color=gray!50]  [step=10mm] (-6.6,-5.6) grid (7.6,6.6);
-        % Achsen zeichnen
-        \draw[->,thick] (-6.8,0) -- (7.8,0) node[right, below] {\normalsize $x$};
-        \draw[->,thick] (0,-5.8) -- (0,6.8) node[above, left] {\normalsize $y$};
-        % Achsen beschriften
-        \foreach \x in {-6,-5,...,-1,1,2,...,7} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
-        \foreach \y in {-5,-4,...,-1,1,2,...,6} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
-        % Besserer Ursprung
-        \draw[color=black] (0pt,-7pt) node[right] {$0$};
-        %Funktionen zeichnen:
-        \clip(-6.6,-5.6) rectangle (7.6,6.6); %Bildbereich
-        \draw[myred,domain=-6.5:7.5,samples=100] plot (\x, {0.5*\x*\x});
-        \draw[forestgreen,domain=-6.5:7.5,samples=100] plot (\x, {-1*\x*\x-8*\x-16});
-        \draw[highdive,domain=-6.5:7.5,samples=100] plot (\x, {\x*\x-7*\x+10});
-        \draw[orange,domain=-6.5:7.5,samples=100] plot (\x, {-1*\x*\x+5});
-        %Punkte
-        \draw[fill=black!40] (0,0) circle (3pt);
-        \draw[fill=black!40] (-4,0) circle (3pt);
-        \draw[fill=black!40] (-3,-1) circle (3pt);
-        \draw[fill=black!40] (0,5) circle (3pt);
-        \draw[fill=black!40] (1,4) circle (3pt);
-        \draw[fill=black!40] (2,2) circle (3pt);
-        \draw[fill=black!40] (2,0) circle (3pt);
-        \draw[fill=black!40] (5,0) circle (3pt);
-    \end{tikzpicture}
-\end{figure}
+\begin{minipage}[t]{0.5\linewidth}
+	Die Graphen welcher quadratischer Funktionen sind im Graphen rechts abgebildet? Gib die jeweiligen Funktionsgleichungen an. Treffe naheliegende Annahmen über die Koordinaten gewisser Punkte.
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.475\linewidth}
+	\centering\vspace{-0.7\baselineskip}
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+		>=latex,   %Voreinstellung für Pfeilspitzen
+		font= \footnotesize, scale=0.5]
+		%Raster zeichnen
+		\draw [color=gray!50]  [step=10mm] (-6.6,-5.6) grid (7.6,6.6);
+		% Achsen zeichnen
+		\draw[->,thick] (-6.8,0) -- (7.8,0) node[right, below] {\normalsize $x$};
+		\draw[->,thick] (0,-5.8) -- (0,6.8) node[above, left] {\normalsize $y$};
+		% Achsen beschriften
+		\foreach \x in {-6,-5,...,-1,1,2,...,7} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+		\foreach \y in {-5,-4,...,-1,1,2,...,6} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+		% Besserer Ursprung
+		\draw[color=black] (0pt,-7pt) node[right] {$0$};
+		%Funktionen zeichnen:
+		\clip(-6.6,-5.6) rectangle (7.6,6.6); %Bildbereich
+		\draw[myred,thick,domain=-6.5:7.5,samples=100] plot (\x, {0.5*\x*\x});
+		\draw[forestgreen,thick,domain=-6.5:7.5,samples=100] plot (\x, {-1*\x*\x-8*\x-16});
+		\draw[highdive,thick,domain=-6.5:7.5,samples=100] plot (\x, {\x*\x-7*\x+10});
+		\draw[orange,thick,domain=-6.5:7.5,samples=100] plot (\x, {-1*\x*\x+5});
+		%Punkte
+		\draw[fill=black!40] (0,0) circle (3pt);
+		\draw[fill=black!40] (-4,0) circle (3pt);
+		\draw[fill=black!40] (-3,-1) circle (3pt);
+		\draw[fill=black!40] (0,5) circle (3pt);
+		\draw[fill=black!40] (1,4) circle (3pt);
+		\draw[fill=black!40] (2,2) circle (3pt);
+		\draw[fill=black!40] (2,0) circle (3pt);
+		\draw[fill=black!40] (5,0) circle (3pt);
+	\end{tikzpicture}
+\end{minipage}
+
+
+%-------------------------------------------------------
+\question[4] %GZP22 A12
+\begin{minipage}[t]{0.5\linewidth}
+	Bestimme die Gleichungen dieser Parabeln. Bringe sie dann auf die Form $y=ax^2+bx+c$. Treffe naheliegende Annahmen über die Koordinaten gewisser Punkte.
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.475\linewidth}
+	\centering\vspace{-0.7\baselineskip}
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+		>=latex,   %Voreinstellung für Pfeilspitzen
+		font= \footnotesize, scale=0.5]
+		%Raster zeichnen
+		\draw [color=gray!50]  [step=10mm] (-3.6,-5.6) grid (8.6,6.6);
+		% Achsen zeichnen
+		\draw[->,thick] (-3.8,0) -- (8.8,0) node[right, below] {\normalsize $x$};
+		\draw[->,thick] (0,-5.8) -- (0,6.8) node[above, left] {\normalsize $y$};
+		% Achsen beschriften
+		\foreach \x in {-3,...,-1,1,2,...,8} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+		\foreach \y in {-5,-4,...,-1,1,2,...,6} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+		% Besserer Ursprung
+		\draw[color=black] (7pt,-10pt) node {$0$};
+		%Funktionen zeichnen:
+		\clip(-3.6,-5.6) rectangle (8.6,6.6); %Bildbereich
+		\draw[orange,thick,domain=-3.5:6.5,samples=100] plot (\x, {-2*(\x)^2+8*\x-2});
+		\draw[forestgreen,thick,domain=-3.5:8.5,samples=100] plot (\x, {-1/4*(\x)^2+3/2*\x});
+		%Punkte
+		\draw[fill=black!40] (0,0) circle (3pt);
+		\draw[fill=black!40] (4,2) circle (3pt);
+		\draw[fill=black!40] (6,0) circle (3pt);
+		\draw[fill=black!40] (2,6) circle (3pt);
+		\draw[fill=black!40] (3,4) circle (3pt);
+	\end{tikzpicture}
+\end{minipage}
+
+
 
 %-------------------------------------------------------
 \question[3]
@@ -119,6 +172,52 @@ Betrachte die Parabel $p:y=\frac{1}{3}x^2-4x+12$ und berechne...
     \part die Koordinaten der Schnittpunkte $A$ und $B$ der Parabel mit der $x-$Achse.
     \part die Koordinaten des Schnittpunktes $Q$ mit der Parabel und der $y-$Achse.
 \end{parts}
+
+
+%---------------------------------------------------------
+\noaddpoints
+\question[\totalpoints] %Barth1 Nachtest Kap. 6 A13
+\addpoints
+Betrache die Parabel $p:y=x^2-4x-5$.
+\begin{parts}
+	\part[2] Gib die Nullstellen der Parabel an.
+	\part[2] Bringe die Funktionsgleichung der Parabel in Scheitelpunktform und gib die Koordinaten des Scheitelpunktes an.
+	\part[2] Berechne die Schnittpunkte der Parabel mit der Gerade\\ ${g:y=-4x-5}$.
+\end{parts}
+
+
+%---------------------------------------------------------
+\noaddpoints
+\question[\totalpoints] %Barth1 Nachtest K6 A14
+\addpoints
+Die Abbildung zeigt den Graphen der Funktion $g:y=0.5x^2-4x+9$.
+\begin{parts}
+	\part[2] Berechne die Koordinaten des Scheitelpunktes.
+	\part[4] Wenn man die Parabel an der $y-$Achse spiegelt, dann erhält man den Graphen welcher Funktion? Gib die entsprechende Funktionsgleichung an.
+\end{parts}
+
+
+%-------------------------------------------------------
+\noaddpoints
+\question[\totalpoints] %GZP24 A7
+\addpoints
+\begin{parts}
+	\part[2] Gesucht ist eine Parabel $p(x)$ mit Scheitelpunkt $S(-1\:\mid\:4)$ und einer Nullstelle $x_1=3$. Wo liegt die zweite Nullstelle?
+	\part[2] Eine zweite Parabel $q(x)$ ist kongruent zur ersten, hat ihren Scheitelpunkt aber $4$ Einheiten
+	weiter in $x-$ und $3$ Einheiten weiter in $y-$Richtung. Wie lautet die Funktionsgleichung?
+\end{parts}
+
+
+%-------------------------------------------------------
+\noaddpoints
+\question[\totalpoints] %GZP24 A11
+\addpoints
+Die Funktionsgleichung $p(x)=-0.1x^2+x+2$ modelliert die Flugbahn eines Fussballs, den ein Spieler bei $x=0$ einwirft.
+\begin{parts}
+	\part[2] Wie weit fliegt der Ball?
+	\part[2] Welche maximale Höhe erreicht der Ball?
+\end{parts}
+
 
 %-------------------------------------------------------
 \noaddpoints
@@ -136,6 +235,24 @@ Betrachte die Parabel $p:y=\frac{-2}{3}x^2-4x+12$ und berechne...
 Der Graph welcher quadratischen Funktion hat den Scheitelpunkt $S=(2,4)$ und geht durch den Punkt $P=(2,9)$?
 
 
+%-------------------------------------------------------
+\question[5]
+Gesucht ist der Scheitelpunkt einer Parabel, die durch die Nullstellen $x=-1$ und $x=-7$ und den Punkt $P\left(5\:\mid\:-8\right)$ verläuft.
+
+
+%-------------------------------------------------------
+\noaddpoints
+\question[\totalpoints] %GZP24 A5
+\addpoints
+Ein Fussball fliegt bei einem Freistoss $60$m weit. Der höchste Punkt seiner parabelförmigen
+Flugbahn ist $6$m hoch.
+\begin{parts}
+	\part[2] Skizziere die Flugbahn des Balles in einem Graphen. Zeichne den Scheitelpunkt und die Nullstellen ein und gib ihre Koordinaten an.
+	\part[2] Welche der Funktionsgleichungen passt zum Freistoss, welche nicht? Begründe!
+	\[f:y=-\frac{1}{150}\* x\*(x-60)\qquad g:y=-\frac{1}{60}x^2+\frac{9}{10}x+6\]
+\end{parts}
+
+
 %---------------------------------------------------------
 \noaddpoints
 \question[\totalpoints] %Barth Band 1 Kap 6.5 A12
@@ -143,9 +260,9 @@ Der Graph welcher quadratischen Funktion hat den Scheitelpunkt $S=(2,4)$ und geh
 Ein Autohersteller hat für ein bestimmtes Modell die folgenden Verbrauchswerte in Abhängigkeit von der Geschwindigkeit gemessen:
 \begingroup
 \renewcommand{\arraystretch}{1.5}
-\begin{table}[h]
+\begin{table}[H]
     \centering
-    \begin{tabular}{|c|c|c|c|}\hline
+    \begin{tabular}{|c|p{1cm}|p{1cm}|p{1cm}|}\hline
         Geschwindigkeit in km/h & 30 & 90 & 150 \\\hline
         Kraftstoffverbrauch in Liter pro 100 km & 7 & 5 & 11 \\\hline
     \end{tabular}
@@ -155,6 +272,24 @@ Ein Autohersteller hat für ein bestimmtes Modell die folgenden Verbrauchswerte 
     \part[3] Wenn wir annehmen, dass die Daten dem Graphen einer quadratischen Funktion folgen, welche Funktion müsste das dann sein? Bestimme dazu die drei Koeffizienten.
     \part[2] Welche konkrete Bedeutung hat der Scheitelpunkt dieser Parabel?
 \end{parts}
+
+
+%---------------------------------------------------------
+\noaddpoints
+\question[\totalpoints] %GZP23 A13
+\addpoints
+Von einer quadratischen Funktion $h$ kennt man die folgende Wertetabelle:
+\begingroup
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|p{1cm}|p{1cm}|p{1cm}|p{1cm}|}\hline
+		$x$ & -5 & 0 & 5 \\\hline
+		$h(x)$ & -27 & 3 & -67 \\\hline
+	\end{tabular}
+\end{table}
+\endgroup
+Gib die Funktionsgleichung von $h$ an.
 
 
 %---------------------------------------------------------
@@ -172,22 +307,49 @@ Am $20.$ Juli $1969$ betrat der Astronaut Neil Armstrong während der Apollo$-11
 \question[\totalpoints] %Barth Band 1 Kap 6.5 A13
 \addpoints
 Die Abbildung zeigt die Projektierung einer Brücke mit Scheitelpunkthöhe von $45$ Metern. Die Parabel führt überdies durch den Punkt $P=(50,20)$
-\begin{minipage}{0.6\linewidth}
+\begin{minipage}{0.575\linewidth}
     \begin{parts}
         \part[2] Welche Spannweite hat die Brücke auf Höhe der $x-$Achse?
         \part[2] Wie lang ist die Stütze bei $x=-40$ und $x=20$?
     \end{parts}
 \end{minipage}
 \hfill
-\begin{minipage}{0.35\linewidth}
+\begin{minipage}{0.4\linewidth}
     \centering
-    \includegraphics[scale=0.1]{data-algebra/parabelbrücke.png}
+    \includegraphics[scale=0.5]{parabelbrücke.png}
 \end{minipage}
 
 %---------------------------------------------------------
 \question[6] % Barth Band 1 Kap 6.5 A18b
 Für welchen Wert des Parameters $p$ berührt die Gerade $g$ die Parabel $p$ genau in einem Punkt?
 \[p:y=x^2 \quad\text{ und }\quad g:y=p\*x-9\]
+
+
+%---------------------------------------------------------
+\question[2]
+Bestimme die $x-$Koordinaten der Schnittpunkte der Parabel $p:y=4x+x^2$ mit der
+Geraden $g:y=3x+\frac{3}{4}$.
+
+%---------------------------------------------------------
+\noaddpoints
+\question[\totalpoints] %GZP23 A14
+\addpoints
+Gegeben sind die beiden Funktionen $f:y=3\*(x+4)^2-2$ und $g:y=-2.5x+2$.
+\begin{parts}
+	\part[2] Berechne die $x-$Koordinaten der Schnittpunkte der Graphen von $f$ und $g$.
+	\part[2] Die Graphen von $f$ und $g$ werden an der $x-$Achse gespiegelt. Bestimme die Funktionsgleichungen der gespiegelten Graphen $f'$ und $g'$.
+\end{parts}
+
+%---------------------------------------------------------
+\noaddpoints
+\question[\totalpoints] %GZP24 A8
+\addpoints
+Gegeben sind die Parabel $p(x)=\frac{1}{2}x^2-2x+1$  und die Gerade $g(x)=-\frac{3}{4}x+4$
+\begin{parts}
+	\part[2] Berechne die $x-$Koordinaten der Schnittpunkte der Gerade mit der Parabel.
+	\part[2] Gib die Gleichung einer zu $g$ parallelen Gerade an, welche die Parabel nur in einem Punkt
+	berührt.
+\end{parts}
 
 %---------------------------------------------------------
 \question[6] %Algebra 9/10 S112 A65b
@@ -197,9 +359,9 @@ Für welchen Wert des Parameters $p$ berührt die Gerade $g$ die Parabel $p$ gen
 \hfill
 \begin{minipage}{0.4\linewidth}
     \centering
-    \includegraphics[scale=1]{data-algebra/extremalwert-schachtel.png}
+    \includegraphics[scale=1]{extremalwert-schachtel.png}
 \end{minipage}
-\vspace{5pt}\newline
+\vspace{5pt}\\
 Berechne die Höhe der Schachtel mit dem maximalen Volumen.
 
 %---------------------------------------------------------
@@ -210,7 +372,7 @@ Berechne die Höhe der Schachtel mit dem maximalen Volumen.
 \hfill
 \begin{minipage}{0.4\linewidth}
     \centering
-    \includegraphics[scale=0.5]{data-algebra/extremalwert-blumenbeet.png}
+    \includegraphics[scale=0.5]{extremalwert-blumenbeet.png}
 \end{minipage}
 
 

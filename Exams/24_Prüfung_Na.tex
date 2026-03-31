@@ -4,10 +4,10 @@
 \input{../Header/mathexpressions.sty}
 \input{../Header/headerExam.sty}
 %=========================================================
-\newcommand{\theme}{Quadratische Gleichung}
+\newcommand{\theme}{Quadratische Funktion}
 \newcommand{\teacher}{Jonas Guler}
 \newcommand{\class}{2Na}
-\renewcommand{\date}{17.02.26}
+\renewcommand{\date}{30.03.26}
 \graphicspath{{Algebra/data-algebra/},{Geometrie/data-geometrie},{Analysis/data-analysis}} % Setzt den Pfad zu den Bilder fest
 %=========================================================
 \begin{document}
@@ -34,7 +34,8 @@
 	\vspace{5pt}
 	Der Rechenweg muss \textbf{vollständig und nachvollziehbar} sein.\\
 	Lösen Sie die Prüfung mit einen schwarzen oder blauen Kugelschreiber.\\
-	Als Hilfsmittel ist der kleine Taschenrechner (Ti-30X o.ä.) erlaubt.
+	Als Hilfsmittel ist der Taschenrechner (TI - Nspire CX-II CAS) erlaubt.
+	%Als Hilfsmittel ist der kleine Taschenrechner (TI-30X o.ä.) erlaubt.
 \end{center}
 \rule[1ex]{\textwidth}{1pt}
 
@@ -52,79 +53,102 @@
 \question[\totalpoints]
 \addpoints
 \begin{parts}
-	\part[1\half] Argumentiere, ob die folgende Aussage wahr oder falsch ist:\newline\flqq Nach quadratischem Ergänzen wird die Gleichung $x^2-8x=0$ die Form $(x-4)^2=20$ haben.\frqq %Barth SE K5.4 A10a
+	\part[2] Bringe die folgende Parabel in Scheitelpunktform. \[p(x)=2x^2+4x+3\]
 \end{parts}
-\vspace{5pt}\antwort{9.5}
+\antwort{10.5}
 \begin{parts}
 	\setcounter{partno}{1}
-	\part[1\half] Gib eine quadratische Gleichung in Normalform\footnote{Die Normalform einer quadratischen Gleichung lautet $ax^2+bx+c=0$.} an, die die beiden Lösungen $x_1=2$ und $x_2=-3$ hat. %Barth NAchtest K5 A11a
+	\part[2] Entschiede, ob die Funktion $f(x)=3\*(x-1)^2+7x-3$ eine quadratische Funktion ist. Begründe deine Antwort.
 \end{parts}
-\vspace{5pt}\antwort{9.5}
-
-
-%---------------------------------------------------------
-\newpage
-\noaddpoints
-\question[\totalpoints]  %Barth SE K5.3 A2
-\addpoints
-\begin{align*}
-	5x^2-8x&=0 && \vert\div x\\
-	5x-8&=0 &&\vert+8\:\vert\div 5\\
-	x&=\frac{8}{5}
-\end{align*}
-\begin{parts}
-	\part[1] Kennzeichne alle Fehler im obigen Lösungsweg.
-	\part[2] Löse die Gleichung korrekt.
-\end{parts}
-\vspace*{7pt}\antwort{19.5}
+\vspace{5pt}\antwort{10.5}
 
 
 %---------------------------------------------------------
 \newpage
 \question[4]
-Löse die folgende Gleichung mithilfe des quadratischen Ergänzens nach $x$ auf. \[\frac{1}{6}x^2-\frac{5}{4}x+\frac{3}{2}=0\]
-\begin{small}
-	Bewertung: Wird nicht das erwähnte Verfahren verwendet, werden Punkte abgezogen.
-\end{small}
-\vspace{5pt}\antwort{9}
-\vfill
-\question[4] %KSWilli A4
-Löse die folgende Gleichung mithilfe der Lösungsformel für quadratische Gleichungen nach $x$ auf. \[9x^2+54x+63=0\]
-\begin{small}
-	Bewertung: Wird nicht das erwähnte Verfahren verwendet, werden Punkte abgezogen.
-\end{small}
-\vspace{5pt}\antwort{9}
+Die Graphen welcher quadratischer Funktionen sind im Graphen rechts abgebildet? Gib die jeweiligen Funktionsgleichungen an. Treffe naheliegende Annahmen über die Koordinaten gewisser Punkte.
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+		>=latex,   %Voreinstellung für Pfeilspitzen
+		font= \footnotesize, scale=0.5]
+		%Raster zeichnen
+		\draw [color=gray!50]  [step=10mm] (-6.6,-5.6) grid (7.6,6.6);
+		% Achsen zeichnen
+		\draw[->,thick] (-6.8,0) -- (7.8,0) node[right, below] {\normalsize $x$};
+		\draw[->,thick] (0,-5.8) -- (0,6.8) node[above, left] {\normalsize $y$};
+		% Achsen beschriften
+		\foreach \x in {-6,-5,...,-1,1,2,...,7} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+		\foreach \y in {-5,-4,...,-1,1,2,...,6} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+		% Besserer Ursprung
+		\draw[color=black] (0pt,-7pt) node[right] {$0$};
+		%Funktionen zeichnen:
+		\clip(-6.6,-5.6) rectangle (7.6,6.6); %Bildbereich
+		%\draw[myred,domain=-6.5:7.5,samples=100] plot (\x, {0.5*\x*\x});
+		\draw[forestgreen,domain=-6.5:7.5,samples=100] plot (\x, {-1*\x*\x-8*\x-16});
+		%\draw[highdive,domain=-6.5:7.5,samples=100] plot (\x, {\x*\x-7*\x+10});
+		\draw[orange,domain=-6.5:7.5,samples=100] plot (\x, {-1*\x*\x+5});
+		%Punkte
+		%\draw[fill=black!40] (0,0) circle (3pt);
+		%\draw[fill=black!40] (2,2) circle (3pt);
+		\draw[fill=black!40] (-4,0) circle (3pt);
+		\draw[fill=black!40] (-3,-1) circle (3pt);
+		\draw[fill=black!40] (-3,-4) circle (3pt);
+		\draw[fill=black!40] (2,1) circle (3pt);
+		\draw[fill=black!40] (1,4) circle (3pt);
+		%\draw[fill=black!40] (2,0) circle (3pt);
+		%\draw[fill=black!40] (5,0) circle (3pt);
+	\end{tikzpicture}
+\end{figure}
+\vspace*{7pt}\antwort{15.5}
 
 
 %---------------------------------------------------------
 \newpage
 \noaddpoints
-\question[\totalpoints] %KSWilli A10
+\question[\totalpoints] %Barth1 Nachtest Kap. 6 A13
 \addpoints
-Gegeben ist die folgende quadratische Gleichung
-\[x^2+2ux+4=0.\]
+Betrache die Parabel $p:y=x^2-4x-5$.
 \begin{parts}
-	\part[4] Bestimme den Wert des Parameters $u$ so, dass die quadratische Gleichung genau eine Lösung besitzt.
-	\part[1] Bestimme diese eine Lösung der Gleichung.
+	\part[2] Gib die Nullstellen der Parabel an.
+	\part[2] Bringe die Funktionsgleichung der Parabel in Scheitelpunktform und gib die Koordinaten des Scheitelpunktes an.
+	\part[2] Berechne die Schnittpunkte der Parabel mit der Gerade\\ ${g:y=-4x-5}$.
 \end{parts}
-\vspace*{7pt}\antwort{20.5}
+\vspace{7pt}\antwort{21}
+
 
 %---------------------------------------------------------
 \newpage
-\question[4] %DMK Algebra9/10 S137 A35j
-Löse die folgende Wurzelgleichung nach der $x$ auf. \[\sqrt{x+2}+\sqrt{x-3}=\sqrt{3x+4}\]
-\antwort{22.5}
+\noaddpoints
+\question[\totalpoints] %Barth1 Nachtest K6 A14
+\addpoints
+Die Abbildung zeigt den Graphen der Funktion $g:y=0.5x^2-4x+9$.
+\begin{parts}
+	\part[2] Berechne die Koordinaten des Scheitelpunktes.
+	\part[4] Wenn man die Parabel an der $y-$Achse spiegelt, dann erhält man den Graphen welcher Funktion? Gib die entsprechende Funktionsgleichung an.
+\end{parts}
+\vspace{7pt}\antwort{21.5}
+
 
 %---------------------------------------------------------
 \newpage
 \question[5]
-Berechne die Länge des Radius des kleinen Kreises.
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.5]{quadGl-text-1.png}
-\end{figure}
-\antwort{18.5}
+Gesucht ist der Scheitelpunkt einer Parabel, die durch die Nullstellen $x=-1$ und $x=-7$ und den Punkt $P\left(5\:\mid\:-8\right)$ verläuft.
+\vspace{7pt}\antwort{23.5}
 
+
+%---------------------------------------------------------
+\newpage
+\question[6] %Barth Band 1 Kap 6.5 A16
+\begin{minipage}{0.575\linewidth}
+	Sie möchten an einer Ecke Ihres Hauses ein L-förmiges Blumenbeet anlegen, welches mit einem Gartenzaun  umrandet werden soll. Sie besitzen einen Gartenzaun der Gesamtlänge $50$ Metern. Wie müssen Sie $x$ und $y$ wählen, damit der Flächeninhalt des Blumenbeetes maximal wird?\\ (Beachten Sie die in der Abbildung dargestellten speziellen Abmessungen des Beetes.)
+\end{minipage}
+\hfill
+\begin{minipage}{0.4\linewidth}
+	\centering
+	\includegraphics[scale=0.6]{extremalwert-blumenbeet.png}
+\end{minipage}
+\vspace*{7pt}\antwort{19.5}
 
 \end{questions}
 \end{document}

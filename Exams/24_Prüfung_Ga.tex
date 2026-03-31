@@ -4,11 +4,11 @@
 \input{../Header/mathexpressions.sty}
 \input{../Header/headerExam.sty}
 %=========================================================
-\newcommand{\theme}{Quadratische Gleichung}
+\newcommand{\theme}{Quadratische Funktionen}
 \newcommand{\teacher}{Jonas Guler}
 \newcommand{\class}{2Ga}
-\renewcommand{\date}{18.02.26}
-\graphicspath{{Algebra/data-algebra/},{Geometrie/data-geometrie}} % Setzt den Pfad zu den Bilder fest
+\renewcommand{\date}{01.04.26}
+\graphicspath{{Algebra/data-algebra/},{Geometrie/data-geometrie},{Analysis/data-analysis}} % Setzt den Pfad zu den Bilder fest
 %=========================================================
 \begin{document}
 \fontsize{14}{14}\selectfont
@@ -34,7 +34,8 @@
     \vspace{5pt}
     Der Rechenweg muss \textbf{vollständig und nachvollziehbar} sein.\\
     Lösen Sie die Prüfung mit einen schwarzen oder blauen Kugelschreiber.\\
-    Als Hilfsmittel ist der kleine Taschenrechner (Ti-30X o.ä.) erlaubt.
+    Als Hilfsmittel ist der Taschenrechner (TI - Nspire CX-II CAS) erlaubt.
+    %Als Hilfsmittel ist der kleine Taschenrechner (TI-30X o.ä.) erlaubt.
 \end{center}
 \rule[1ex]{\textwidth}{1pt}
 
@@ -51,29 +52,15 @@
 \noaddpoints
 \question[\totalpoints]
 \addpoints
-\begin{parts} % Barth SE K5.3 A2
-	\part[1\half] Max soll die Gleichung $x^2+c=0$ lösen, in der $c$ eine reelle Zahl ist. Er argumentiert so: \flqq Die Zahl $x^2$ ist schon mal sicher grösser oder gleich $0$. Wenn man dazu noch eine weitere Zahl addiert, kann man nie im Leben bei $0$ landen. Die Gleichung besitzt also sicherlich keine Lösung.\frqq\:Erkläre Max, was an diesem Argument falsch ist und worauf er folglich gut achten muss.
-\end{parts}
-\vspace{5pt}\antwort{9.5}
-\begin{parts} %Barth SE K5.4 A10b
-	\setcounter{partno}{1}
-	\part[1\half] Argumentiere, ob die folgende Aussage wahr oder falsch ist:\newline \flqq Nach quadratischem Ergänzen wird die Gleichung $2x^2+4x=1$ die Form $2(x+2)^2=5$ haben.\frqq
-\end{parts}
-\vspace{5pt}\antwort{9.5}
-
-
-%---------------------------------------------------------
-\newpage
-\noaddpoints
-\question[\totalpoints] %Barth ÜA K5.4 A5f
-\addpoints
-Gegeben ist die folgende quadratische Gleichung
-\[(x-p)^2=9x.\]
 \begin{parts}
-	\part[4] Bestimme den Wert des Parameters $p$ so, dass die quadratische Gleichung genau eine Lösung besitzt.
-	\part[1] Bestimme diese eine Lösung der Gleichung.
+	\part[3] Bringe die folgende Parabel in Scheitelpunktform. \[p(x)=3x^2+24x+46\]
 \end{parts}
-\vspace*{7pt}\antwort{20.5}
+\vspace{5pt}\antwort{10.5}
+\begin{parts}
+	\setcounter{partno}{1}
+	\part[3] Fasse für einen Laien die Einflüsse der Parameter $a$, $u$ und $v$ der Scheitelpunktform auf die Veränderung der Parabel in Bezug auf die Normalparabel zusammen.
+\end{parts}
+\vspace{5pt}\antwort{10}
 
 
 %---------------------------------------------------------
@@ -81,44 +68,81 @@ Gegeben ist die folgende quadratische Gleichung
 \noaddpoints
 \question[\totalpoints]
 \addpoints
-Tina soll die Gleichung $5x^2-8x=0$ lösen. Sie dividiert durch $x$ und findet die lineare Gleichung $5x-8=0$. Sie löst diese und gibt als Lösungsmenge für die ursprüngliche Gleichung  $\L=\left\{\frac{8}{5}\right\}$ an.
+Betrachte die Parabel $p:y=-\frac{1}{4}x^2+\frac{3}{2}x$ und berechne...
 \begin{parts}
-	\part[1] Erkläre Tina, warum diese Lösungsmenge unvollständig ist.
-	\part[2] Löse die Gleichung vollständig und korrekt.
+	\part[2] die Nullstellen $x_1$ und $x_2$.
+	\part[2] die Koordinaten des Scheitelpunktes $S$.
+	\part[2] die Schnittpunkte der Parabel mir der Gerade $g:y=-\frac{1}{2}x+3$.
+\end{parts}
+\vspace*{7pt}\antwort{22}
+
+
+%---------------------------------------------------------
+\newpage
+\noaddpoints
+\question[\totalpoints] %GZP23 A15
+\addpoints
+Die Leistung $P$ (in Watt) einer Turbine hängt von der Umdrehungszahl $n$ ab und wird mit der Funktionsgleichung $P(n)=600n-0.8n^2$ beschrieben.
+\begin{parts}
+	\part[1] Welche Leistung generiert die Turbine bei einer Umdrehungszahl von $15$?
+	\part[3] Bei welcher Umdrehungszahl ist die Leistung maximal und wie gross ist diese Leistung?
+	\part[1] Mit welcher Umdrehungszahl muss sich die Turbine drehen, damit sie eine Leistung von mindestens $100'000$ Watt erzielt?
+\end{parts}
+\vspace{5pt}\antwort{20}
+
+
+%---------------------------------------------------------
+\newpage
+\question[5] %GZP22 A12
+\begin{minipage}[t]{0.5\linewidth}
+	Die Graphen welcher quadratischer Funktionen sind im Graphen rechts abgebildet? Gib die jeweiligen Funktionsgleichungen an. Treffe naheliegende Annahmen über die Koordinaten gewisser Punkte.
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.475\linewidth}
+	\centering\vspace{-0.7\baselineskip}
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+		>=latex,   %Voreinstellung für Pfeilspitzen
+		font= \footnotesize, scale=0.5]
+		%Raster zeichnen
+		\draw [color=gray!50]  [step=10mm] (-3.6,-5.6) grid (8.6,6.6);
+		% Achsen zeichnen
+		\draw[->,thick] (-3.8,0) -- (8.8,0) node[right, below] {\normalsize $x$};
+		\draw[->,thick] (0,-5.8) -- (0,6.8) node[above, left] {\normalsize $y$};
+		% Achsen beschriften
+		\foreach \x in {-3,...,-1,1,2,...,8} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+		\foreach \y in {-5,-4,...,-1,1,2,...,6} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+		% Besserer Ursprung
+		\draw[color=black] (7pt,-10pt) node {$0$};
+		%Funktionen zeichnen:
+		\clip(-3.6,-5.6) rectangle (8.6,6.6); %Bildbereich
+		\draw[orange,thick,domain=-3.5:6.5,samples=100] plot (\x, {-2*(\x)^2+8*\x-2});
+		\draw[forestgreen,thick,domain=-3.5:8.5,samples=100] plot (\x, {-1/4*(\x)^2+3/2*\x});
+		%Punkte
+		\draw[fill=black!40] (0,0) circle (3pt);
+		\draw[fill=black!40] (4,2) circle (3pt);
+		\draw[fill=black!40] (6,0) circle (3pt);
+		\draw[fill=black!40] (2,6) circle (3pt);
+		\draw[fill=black!40] (3,4) circle (3pt);
+	\end{tikzpicture}
+\end{minipage}
+\antwort{18.5}
+
+
+%---------------------------------------------------------
+\newpage
+\noaddpoints
+\question[\totalpoints] %GZP23 A14
+\addpoints
+Gegeben sind die beiden Funktionen $f:y=3\*(x+4)^2-2$ und $g:y=-2.5x+2$.
+\begin{parts}
+	\part[2] Berechne die $x-$Koordinaten der Schnittpunkte der Graphen von $f$ und $g$.
+	\part[4] Die Graphen von $f$ und $g$ werden an der $x-$Achse gespiegelt. Bestimme die Funktionsgleichungen der gespiegelten Graphen $f'$ und $g'$.
 \end{parts}
 \vspace*{7pt}\antwort{21.5}
 
 
 %---------------------------------------------------------
-\newpage
-\question[4]
-Löse die folgende Gleichung mithilfe des quadratischen Ergänzens nach $x$ auf. \[2x^2-8x-5=0\]
-\begin{small}
-	Bewertung: Wird nicht das erwähnte Verfahren verwendet, werden Punkte abgezogen.
-\end{small}
-\vspace{5pt}\antwort{8.5}
-\vfill
-\question[4] %KSWilli A4
-Löse die folgende Gleichung mithilfe der Lösungsformel für allgemeine quadratische Gleichungen nach $x$ auf. \[-9x^2-54x-63=0\]
-\begin{small}
-	Bewertung: Wird nicht das erwähnte Verfahren verwendet, werden Punkte abgezogen.
-\end{small}
-\vspace{5pt}\antwort{8.5}
-
-
-%---------------------------------------------------------
-\newpage
-\question[4] %DMK Algebra 9/10 S137 A35m
-Löse die folgende Bruchtermgleichung nach der $x$ auf. \[\frac{4x-1}{x+6}-\frac{2}{x-6}=\frac{4x^2-27x-6}{x^2-36}\]
-\antwort{22.5}
-
-
-%---------------------------------------------------------
-\newpage
-\question[5] % KSWilli A24
-Die Grundlinie eines Dreiecks von $3.6$m$^2$ Flächeninhalt ist um $11.4$m länger als die
-zugehörige Höhe. Berechne die Grundlinie.
-\vspace*{7pt}\antwort{23.5}
+{\bf Reserve:\vspace{7pt}\antwort{25}}
 
 \end{questions}
 \end{document}
