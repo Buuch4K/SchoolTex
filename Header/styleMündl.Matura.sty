@@ -1,0 +1,96 @@
+\linespread{1.15} % Line spacing
+
+%Exam Konfiguration
+\qformat{\textbf{Aufgabenstellung}}
+\hqword{Frage:}
+\hpword{Mögliche Punkte:}
+\hsword{Erreicht:}
+\htword{Total:}
+\pointpoints{Punkt}{Punkte}
+\renewcommand*\half{.5}
+\renewcommand{\solutiontitle}{}
+\shadedsolutions
+
+\def\bl{\begin{solution}} %\bl für Beginn Lehrerkommentar
+\def\el{\end{solution}} %\el für Ende Lehrerkommentar
+
+% Inhaltsverzeichnis definieren
+\renewcommand{\contentsname}{Aufgabenübersicht}
+
+
+% definiert die Blöcke pro Aufgabe
+\newcommand{\dieFragen}{}
+\def\fragen#1{
+	\renewcommand\dieFragen{#1}}
+\newcommand{\derBereich}{}
+\def\bereich#1{
+	\renewcommand\derBereich{#1}}
+\newcommand{\derTitel}{}
+\def\titel#1{
+	\renewcommand\derTitel{#1}}
+
+
+% definiert die Farbe der Themenbereiche
+\ExplSyntaxOn
+% Funktion: wendet direkt die textfarbe an
+\cs_new_protected:Npn \apply_color:nn #1 #2
+{
+	\str_case:nnF {#1}
+	{
+		{Integral}			{ \textcolor{orange}{#2} }
+		{Differential}		{ \textcolor{green}{#2} }
+		{Vektor}			{ \textcolor{cyan}{#2} }
+		{Stochastik}		{ \textcolor{yellow}{#2} }
+		{FolgenReihen}		{ \textcolor{brown}{#2} }
+		{ExpoLog}			{ \textcolor{magenta}{#2} }
+	}
+	{ \textcolor{black}{#2} }
+}
+
+\NewDocumentCommand{\colortext}{mm}
+{
+	\apply_color:nn {#1} {#2}
+}
+
+% Funktion: wendet direkt die die cellfarbe an
+\cs_new_protected:Npn \apply_cellcolor:n #1
+{
+	\str_case:VnF {#1}
+	{
+		{Integral}			{ \cellcolor{orange} }
+		{Differential}		{ \cellcolor{green} }
+		{Vektor}			{ \cellcolor{cyan} }
+		{Stochastik}		{ \cellcolor{yellow} }
+		{FolgenReihen}		{ \cellcolor{brown} }
+		{ExpoLog}			{ \cellcolor{magenta} }
+	}
+	{ \cellcolor{black} }
+}
+
+\NewDocumentCommand{\colorcell}{m}
+{
+	\apply_cellcolor:n {#1}
+}
+\ExplSyntaxOff
+
+
+% setzt die Blöcke der einzelnen Aufgaben
+\newcounter{numquestion}
+\renewcommand{\thenumquestion}{\arabic{numquestion}}
+\newenvironment{aufgabe}{
+	\refstepcounter{numquestion}
+	\newpage
+	\addcontentsline{toc}{section}{\colortext{\derBereich}{\textbf{\thenumquestion~ \derBereich: }}\derTitel}
+
+	\begin{center}
+		\begin{tabular}[width=\textwidth]{|c | p{11cm} | p{4cm} |}
+			\hline
+			\parbox[0pt][2.5em][c]{0cm}{}\LARGE\textbf{\thenumquestion} & \large\textbf{\derTitel} &  \colorcell{\derBereich} \derBereich\\ \hline
+		\end{tabular}
+	\end{center}
+
+	\begin{questions}
+		\question
+	}{
+	\end{questions}
+}
