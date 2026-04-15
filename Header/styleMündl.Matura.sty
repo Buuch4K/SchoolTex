@@ -33,47 +33,39 @@
 % definiert die Farbe der Themenbereiche
 \ExplSyntaxOn
 % Funktion: wendet direkt die textfarbe an
-\cs_new_protected:Npn \apply_color:nn #1 #2
-{
-	\str_case:nnF {#1}
-	{
+\cs_new_protected:Npn \apply_color:nn #1 #2 {
+	\str_case:nnF {#1}{
 		{Integral}			{ \textcolor{orange}{#2} }
 		{Differential}		{ \textcolor{green}{#2} }
 		{Vektor}			{ \textcolor{cyan}{#2} }
 		{Stochastik}		{ \textcolor{yellow}{#2} }
 		{FolgenReihen}		{ \textcolor{brown}{#2} }
 		{ExpoLog}			{ \textcolor{magenta}{#2} }
-	}
-	{ \textcolor{black}{#2} }
+	}{ \textcolor{black}{#2} }
 }
 
-\NewDocumentCommand{\colortext}{mm}
-{
+\NewDocumentCommand{\colortext}{mm}{
 	\apply_color:nn {#1} {#2}
 }
 
 % Funktion: wendet direkt die die cellfarbe an
-\cs_new_protected:Npn \apply_cellcolor:n #1
-{
-	\str_case:VnF {#1}
-	{
+\cs_new_protected:Npn \apply_cellcolor:n #1 {
+	\str_case:VnF {#1}{
 		{Integral}			{ \cellcolor{orange} }
 		{Differential}		{ \cellcolor{green} }
 		{Vektor}			{ \cellcolor{cyan} }
 		{Stochastik}		{ \cellcolor{yellow} }
 		{FolgenReihen}		{ \cellcolor{brown} }
 		{ExpoLog}			{ \cellcolor{magenta} }
-	}
-	{ \cellcolor{black} }
+	}{ \cellcolor{black} }
 }
 
-\NewDocumentCommand{\colorcell}{m}
-{
+\NewDocumentCommand{\colorcell}{m}{
 	\apply_cellcolor:n {#1}
 }
 \ExplSyntaxOff
 
-
+%===================================================
 % setzt die Blöcke der einzelnen Aufgaben
 \newcounter{numquestion}
 \renewcommand{\thenumquestion}{\arabic{numquestion}}
@@ -93,4 +85,12 @@
 		\question
 	}{
 	\end{questions}
+}
+
+
+%===================================================
+\newenvironment{itemcols}[1][]{
+	\begin{itemize}\begin{multicols}{#1}
+		}{
+	\end{multicols}\end{itemize}
 }
