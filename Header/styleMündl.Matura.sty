@@ -1,7 +1,7 @@
 \linespread{1.15} % Line spacing
 
 %Exam Konfiguration
-\qformat{\textbf{Aufgabenstellung}}
+\qformat{\textbf{Aufgabenstellung:}}
 \hqword{Frage:}
 \hpword{Mögliche Punkte:}
 \hsword{Erreicht:}
@@ -19,9 +19,6 @@
 
 
 % definiert die Blöcke pro Aufgabe
-\newcommand{\dieFragen}{}
-\def\fragen#1{
-	\renewcommand\dieFragen{#1}}
 \newcommand{\derBereich}{}
 \def\bereich#1{
 	\renewcommand\derBereich{#1}}
@@ -40,7 +37,7 @@
 		{Vektor}			{ \textcolor{cyan}{#2} }
 		{Stochastik}		{ \textcolor{yellow}{#2} }
 		{FolgenReihen}		{ \textcolor{brown}{#2} }
-		{ExpoLog}			{ \textcolor{magenta}{#2} }
+		{Wachstum}			{ \textcolor{magenta}{#2} }
 	}{ \textcolor{black}{#2} }
 }
 
@@ -56,7 +53,7 @@
 		{Vektor}			{ \cellcolor{cyan} }
 		{Stochastik}		{ \cellcolor{yellow} }
 		{FolgenReihen}		{ \cellcolor{brown} }
-		{ExpoLog}			{ \cellcolor{magenta} }
+		{Wachstum}			{ \cellcolor{magenta} }
 	}{ \cellcolor{black} }
 }
 
@@ -72,7 +69,7 @@
 \newenvironment{aufgabe}{
 	\refstepcounter{numquestion}
 	\newpage
-	\addcontentsline{toc}{section}{\colortext{\derBereich}{\textbf{\thenumquestion~ \derBereich: }}\derTitel}
+	\addcontentsline{toc}{section}{\colortext{\derBereich}{\textbf{\thenumquestion.~ \derBereich: }}\derTitel}
 
 	\begin{center}
 		\begin{tabular}[width=\textwidth]{|c | p{11cm} | p{4cm} |}

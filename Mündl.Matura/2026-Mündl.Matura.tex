@@ -13,7 +13,7 @@
 %=========================================================
 \fontsize{12}{12}\selectfont
 %definiert die Version
-\printanswers % falls kommentiert werden die Schülerversionen angezeigt
+%\printanswers % falls kommentiert werden die Schülerversionen angezeigt
 %=========================================================
 \begin{document}
 \noindent
@@ -128,8 +128,13 @@
 		\bl \begin{align*} \int f(x)\d{x}=\frac{1}{6}x^3-\frac{1}{2}x^2-\frac{3}{2}x\\ \int_{-1}^{3} f(x)\d{x}=-\frac{16}{3}	\end{align*} \el
 		\part Warum ist das Integral negativ? Erkläre.
 		\bl Integral ist eine unendliche Summe von unendlich kleinen Rechtecken, wobei die Höhe gleich dem Funktionswert sind. Falls die Funktion unterhalb der $x-$Achse verläuft ist also die Höhe negativ und ergo das Integral ist negativ. \el
-		\part Wie gehst du in der Berechnung der eingezeichneten Fläche vor?\\
-		\begin{minipage}{0.4\linewidth}
+		\begin{minipage}[t]{0.6\linewidth}
+			\part Wie gehst du in der Berechnung der eingezeichneten Fläche vor?
+			\bl\begin{align*} A&=\abs{\int_{1}^{3} f(x)\d{x}} + \abs{\int_{0.17157}^{1} f(x)-g(x)\d{x}}\\&= \frac{8}{3}+0.876 = 3.543 \end{align*}\el
+		\end{minipage}
+		\hfill
+		\begin{minipage}[t]{0.375\linewidth}
+			\vspace{0pt}
 			\begin{tikzpicture}[x=10mm, y=10mm, >=latex, font= \footnotesize, scale=0.6]
 				%Raster zeichnen
 				\draw [color=gray!50]  [step=10mm] (-3.3,-3.3) grid (5.3,3.3);
@@ -151,10 +156,6 @@
 				%\node[myred]  at (3.1,-2.3) {$f$};
 			\end{tikzpicture}
 		\end{minipage}
-		\hfill
-		\begin{minipage}{0.575\linewidth}
-			\bl\begin{align*} A&=\abs{\int_{1}^{3} f(x)\d{x}} + \abs{\int_{0.17157}^{1} f(x)-g(x)\d{x}}\\&= \frac{8}{3}+0.876 = 3.543 \end{align*}\el
-		\end{minipage}
 		\bl \part Wie lautet die Funktionsgleichung, wenn der Graph $5$ Einheiten nach oben und $3$ Einheiten nach rechts verschoben wird?\\
 		Wie lautet die Funktionsgleichung, wenn der Graph an der $x-$Achse gespiegelt wird? \el
 	\end{parts}
@@ -165,7 +166,7 @@
 \bereich{Vektor}
 \titel{Durchstosspunkt und Schnittwinkel}
 \begin{aufgabe}
-	Die Gerade ${g:\v{r}=\Vec{-4}{-10}{8}+t*\Vec{2}{3}{-2}}$ und die Ebene $E:3x-y+4z-15=0$ sind gegeben.
+	Die Gerade ${g:\v{r}=\Vec{-4}{-10}{8}+t\*\Vec{2}{3}{-2}}$ und die Ebene $E:3x-y+4z-15=0$ sind gegeben.
 	\begin{parts}
 		\part Welche gegenseitige Lage können eine Gerade und eine Ebene im Raum einnehmen?
 		\bl g parallel zu E: Richtungsvektor senkrecht zu Normalvektor\\ g in E: parallel und Stützpunkt von g gehört zu E\\ Schneidend: Durchstosspunkt berechnen \el
@@ -197,18 +198,12 @@
 		\begin{parts}
 			\part Skizziere den Graph und das Rechteck. Wie kannst du den prozentualen Anteil des Rechtecks bestimmen, der unterhalb des Graphen liegt?
 			\bl\begin{align*} T&=\int_{1}^{4}\sqrt{x}\d{x}=\left.\frac{2}{3}x^{\frac{3}{2}}\right\vert_1^4=\frac{16}{3}-\frac{2}{3}=\frac{14}{3}\\&\Rightarrow \text{Anteil:} \frac{\frac{14}{3}}{6}\*100=77\%\end{align*} \el
-			\part Stell dir eine Parallele zur $y-$Achse vor, die die Fläche unterhalb des Graphen im Rechteck halbiert. Wie kannst du die $x-$Stelle finden, an der sich diese vertikale Linie befindet.
-			\bl \begin{align*}
-				A&=\int_{1}^{a}\sqrt{x}\d{x}=\left.\frac{2}{3}x^{\frac{3}{2}}\right\vert_1^a=\frac{14}{6}\\
-				&\Rightarrow a^\frac{3}{2}=\frac{9}{2}\Rightarrow a=\sqrt[3]{4.5^2}\approx2.726
-			\end{align*} \el
 		\end{parts}
 	\end{minipage}
 	\hfill
 	\begin{minipage}{0.375\linewidth}
-		\ifthenelse{\boolean{printanswers}}
-		{\includegraphics[scale=1.2]{quadratmitwurzel.png}}
-		{\begin{tikzpicture}[x=10mm, y=10mm, >=latex, font= \footnotesize, scale=0.9]
+		\centering
+		\begin{tikzpicture}[x=10mm, y=10mm, >=latex, font= \footnotesize, scale=0.9]
 				%Raster zeichnen
 				\draw [color=gray!50]  [step=10mm] (-1.3,-1.3) grid (5.3,3.3);
 				% Achsen zeichnen
@@ -221,12 +216,23 @@
 				\draw[color=black] (0pt,-7pt) node[right] {$0$};
 				%Funktionen zeichnen:
 				\clip(-1.3,-1.3) rectangle (5.3,3.3); %Bildbereich
-				%Beschriftung
-				%\node[myred]  at (3.1,-2.3) {$f$};
-		\end{tikzpicture}}
+				\ifthenelse{\boolean{printanswers}}{
+					\draw[plotblue,thick,domain=0:6,samples=200] plot (\x, {(\x)^(1/2)});
+					\draw[charcoal,thick] (1,0) -- (4,0) -- (4,2) -- (1,2) -- cycle;
+					\draw[fill=charcoal] (1,0) circle (2pt) node at (0.8,0.2) {$A$};
+					\draw[fill=charcoal] (4,0) circle (2pt) node at (4.2,0.2) {$B$};
+					\draw[fill=charcoal] (4,2) circle (2pt) node at (4.2,2.2) {$C$};
+					\draw[fill=charcoal] (1,2) circle (2pt) node at (0.8,2.2) {$D$};}
+					{}
+		\end{tikzpicture}
 	\end{minipage}
 	\begin{parts}
-		\setcounter{partno}{2}
+		\setcounter{partno}{1}
+		\part Stell dir eine Parallele zur $y-$Achse vor, die die Fläche unterhalb des Graphen im Rechteck halbiert. Wie kannst du die $x-$Stelle finden, an der sich diese vertikale Linie befindet.
+		\bl \begin{align*}
+			A&=\int_{1}^{a}\sqrt{x}\d{x}=\left.\frac{2}{3}x^{\frac{3}{2}}\right\vert_1^a=\frac{14}{6}\\
+			&\Rightarrow a^\frac{3}{2}=\frac{9}{2}\Rightarrow a=\sqrt[3]{4.5^2}\approx2.726
+		\end{align*} \el
 		\part Wie berechnest du die Ableitung und die Stammfunktion von f?
 		\bl\[F(x)=\frac{2}{3}\*x^\frac{3}{2}+c \qquad f'(x)=\frac{1}{2}\*x^\frac{-1}{2}=\frac{1}{2\*\sqrt{x}}\]\el
 		\part Wir wissen von einem Graphen, dass er die $x-$Achse in $x=5$ berührt. Was können wir über die Ableitung und den Graphen aussagen?
@@ -291,19 +297,18 @@
 \titel{Kurvendiskussion}
 \begin{aufgabe}
 	Die Funktion $f(x)=x\*(x+2)\*(x-1)=x^3+x^2-2x$ ist gegeben.\\
-	\begin{minipage}{0.6\linewidth}
+	\begin{minipage}{0.595\linewidth}
 		\begin{parts}
 			\part Skizziere den Graphen der Funktion mit sowenig Aufwand wie möglich. Begründe deine Vorgehensweise.
 			\part Füge zusätzlich den Graphen der ersten Ableitung von $f$ ins Koordinatensystem ein.
 			\part Erkläre, was ein Wendepunkt ist. Wie können diese Punkte gefunden werden? Warum sind diese Punkte interessant?
 			\bl Geometrisch: Krümmungsänderung, steilste Stelle mit pos. or neg. Steigung $\Rightarrow$ Extrema von $f'$\\ Algebraisch: $f'(x)=0 \text{ und } f''(x)\neq0$ \el
+			\part $g$ sei eine horizontale Linie durch den Wendepunkt. Bestimme die Funktionsgleichung von $g$.
 		\end{parts}
 	\end{minipage}
 	\hfill
-	\begin{minipage}{0.375\linewidth}
-		\ifthenelse{\boolean{printanswers}}
-		{\includegraphics[scale=1.2]{skizzekurvendiskussion.png}}
-		{\begin{tikzpicture}[x=10mm, y=10mm, >=latex, font= \footnotesize, scale=0.9]
+	\begin{minipage}{0.38\linewidth}
+		\begin{tikzpicture}[x=10mm, y=10mm, >=latex, font= \footnotesize, scale=0.8]
 				%Raster zeichnen
 				\draw [color=gray!50]  [step=10mm] (-3.3,-3.3) grid (3.3,5.3);
 				% Achsen zeichnen
@@ -316,13 +321,16 @@
 				\draw[color=black] (0pt,-7pt) node[right] {$0$};
 				%Funktionen zeichnen:
 				\clip(-3.3,-3.3) rectangle (3.3,5.3); %Bildbereich
-				%Beschriftung
-				%\node[myred]  at (3.1,-2.3) {$f$};
-		\end{tikzpicture}}
+				\ifthenelse{\boolean{printanswers}}{
+					\draw[plotblue,thick,domain=-3:3,samples=200] plot (\x, {(\x)^3+(\x)^2-2*\x});
+					\draw[myred,thick,domain=-3:3,samples=200] plot (\x, {3*(\x)^2+2*(\x)-2});
+					%Beschriftung
+					\node[plotblue]  at (1.7,3.5) {$f$};
+					\node[myred]  at (-2.1,3.5) {$f'$};}{}
+		\end{tikzpicture}
 	\end{minipage}
 	\begin{parts}
-		\setcounter{partno}{3}
-		\part $g$ sei eine horizontale Linie durch den Wendepunkt. Bestimme die Funktionsgleichung von $g$.
+		\setcounter{partno}{4}
 		\bl\begin{minipage}{0.575\linewidth}
 			\begin{align*}
 				f(x)=x^3+x^2-2x &\Rightarrow f'(x)=3x^2+2x-1\\ f''(x)=6x+2=0 &\Rightarrow x_P=-\frac{1}{3}\\ f(x_P)=\frac{-1}{27}+\frac{1}{9}+\frac{2}{3}&=\frac{20}{27}\Rightarrow g(x)=\frac{20}{27}
@@ -368,7 +376,27 @@
 \begin{aufgabe}
 	\begin{parts}
 		\part Ohne irgendwelche Bedingungen skizziere den Graph der Stammfunktion dieser Parabel.
-		\begin{tikzpicture}[x=10mm, y=10mm, >=latex, font= \footnotesize, scale=0.9]
+		\begin{minipage}{0.475\linewidth}
+			\begin{tikzpicture}[x=10mm, y=10mm, >=latex, font= \footnotesize, scale=0.9]
+				%Raster zeichnen
+				\draw [color=gray!50]  [step=10mm] (-3.3,-3.3) grid (3.3,5.3);
+				% Achsen zeichnen
+				\draw[->,thick] (-3.3,0) -- (3.8,0) node[right, below] {\normalsize $x$};
+				\draw[->,thick] (0,-3.3) -- (0,5.8) node[above, left] {\normalsize $y$};
+				% Achsen beschriften
+				\foreach \x in {-3,-2,-1,1,2,3} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+				\foreach \y in {-3,-2,-1,1,2,...,5} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+				% Besserer Ursprung
+				\draw[color=black] (0pt,-7pt) node[right] {$0$};
+				%Funktionen zeichnen:
+				\clip(-3.3,-3.3) rectangle (3.3,5.3); %Bildbereich
+				\draw[plotblue,thick,domain=-3:3,samples=200] plot (\x, {(\x)^2-1});
+				\draw[plotblue,thick,domain=-3.3:3.3,samples=200] plot (\x, {\x+1});
+			\end{tikzpicture}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.475\linewidth}
+			\begin{tikzpicture}[x=10mm, y=10mm, >=latex, font= \footnotesize, scale=0.9]
 				%Raster zeichnen
 				\draw [color=gray!50]  [step=10mm] (-3.3,-3.3) grid (3.3,5.3);
 				% Achsen zeichnen
@@ -382,12 +410,11 @@
 				%Funktionen zeichnen:
 				\clip(-3.3,-3.3) rectangle (3.3,5.3); %Bildbereich
 				\ifthenelse{\boolean{printanswers}}{
-				\draw[myred,thick,domain=-3:3,samples=200] plot (\x, {1/3*(\x)^3-\x});
-				%Beschriftung
-				\node[myred]  at (3.1,4.8) {$F$};}{}
-				\draw[plotblue,thick,domain=-3:3,samples=200] plot (\x, {(\x)^2-1});
-				\draw[plotblue,thick,domain=-3.3:3.3,samples=200] plot (\x, {\x+1});
-		\end{tikzpicture}
+					\draw[myred,thick,domain=-3:3,samples=200] plot (\x, {1/3*(\x)^3-\x});
+					%Beschriftung
+					\node[myred]  at (3.1,4.8) {$F$};}{}
+			\end{tikzpicture}
+		\end{minipage}
 		\part Was ist die Fläche, die die beiden Graphen (Parabel und Gerade) einschliessen?
 		\bl \begin{align*}
 			f(x)=x^2-1 &\Rightarrow F(x)=\frac{1}{3}x^2-x+c \quad g(x)=x+1\\
@@ -414,10 +441,10 @@
 		\bl rekursiv: Beschreibung von einem Element zum nächsten, erstes muss gegeben sein.\\ explizit: Formel wie das $n-$te Glied berechnet wird \el
 		\part Wie würdest du die Summe der ersten 20 Glieder am effizientesten bestimmen?
 		\bl AF: $\displaystyle s_{20}=\frac{20}{2}(a_1+a_{20})$\\ GF: $\displaystyle s_{20}=a_1\*\frac{1-q^{20}}{1-q}$ \el
-		\part Wir kennen die Formel für die unendliche Summe einer geometrischen Folge: $\displaystyle s=a_1\frac{1}{1-q}$. Erkläre in welchen Fällen diese Formel angewendet werden kann.
+		\part Wir kennen die Formel für die unendliche Summe einer geometrischen Folge: $\displaystyle s=a_1\*\frac{1}{1-q}$. Erkläre in welchen Fällen diese Formel angewendet werden kann.
 		\bl Folge muss immer kleiner werden $\Rightarrow \abs{q}<1$ \el
-		\part In der Abbildung ist eine Folge von unendlich vielen Halbkreisen mit immer kleiner werdenden Radien abgebildet. Erkläre, wie du die totale markierte Fläche berechnen würdest.
-		\includegraphics[scale=0.5]{fr-halbkreise.png}
+		\part In der Abbildung ist eine Folge von unendlich vielen Halbkreisen mit immer kleiner werdenden Radien abgebildet. Erkläre, wie du die totale markierte Fläche berechnen würdest.\\[7pt]
+		\includegraphics[scale=0.7]{fr-halbkreise.png}
 		\bl \begin{align*}
 			q_{Radius}&=\frac{1}{2}\\
 			q_{Fläche}&=\frac{1}{4}\\
@@ -683,8 +710,8 @@
 			\part Rate, um was für einen Typ Funktion es sich hier handelt und benutze die Punkte in der Skizze, um die Funktionsgleichung zu finden. Erkläre, wie du vorgehst.
 			\bl Polynomfunktion 4. Grades, da 3 Extrema.\\ LGS mit Nullstellen und $f'(-2)=0$ und $f(1)=-4.5$.\\ $\Rightarrow f(x)=\frac{1}{2}x^4+x^3-2x^2-4x$ \el
 			\part Skizziere den Graphen der ersten Ableitung ins Koordinatensystem.
-			\part Erkläre, was der Ausdruck $\displaystyle\int_{-2}^{2}f(x)\d{x}$ bedeutet. Schätze den Wert des Integrals, ohne es explizit zu berechnen.
-			\bl Fläche zw $-2$ und $0$ ist positiv\\ Fläche zw $0$ und $2$ ist negativ \\ $\Rightarrow$ Resultat wird negativ sein \el
+			\part Erkläre, wie die Gleichung der Tangente im Punkt $P(1\mid-4.5)$ gefunden werden kann.
+			\bl $m=$ Steigung $\Rightarrow$ Ableitung am Punkt $P$\\ $q=$ $y-$Achsenabschnitt, wird mit Einsetzen des Punktes $P$ ermittelt. \el
 		\end{parts}
 	\end{minipage}
 	\hfill
@@ -703,23 +730,24 @@
 			%Funktionen zeichnen:
 			\clip(-5.3,-6.3) rectangle (5.3,5.3); %Bildbereich
 			\ifthenelse{\boolean{printanswers}}
+			{\draw[forestgreen,thick,domain=-5:5,samples=200] plot (\x, {2*(\x)^3+3*(\x)^2-4*(\x)-4});
+				\draw[orange,thick,domain=-5:5,samples=200] plot (\x, {6*(\x)^2+6*(\x)-4});
+				%Beschriftung
+				\node[forestgreen]  at (-2.8,-5.7) {$f'$};
+				\node[orange]  at (-1.4,4.6) {$f''$};}
 			{\draw[plotblue,thick,domain=-5:5,samples=200] plot (\x, {0.5*(\x)^4+(\x)^3-2*(\x)^2-4*\x});
-			\draw[forestgreen,thick,domain=-5:5,samples=200] plot (\x, {2*(\x)^3+3*(\x)^2-4*(\x)-4});
-			\draw[orange,thick,domain=-5:5,samples=200] plot (\x, {6*(\x)^2+6*(\x)-4});
-			%Beschriftung
-			\node[plotblue]  at (2.5,4.7) {$f$};
-			\node[forestgreen]  at (-2.8,-5.7) {$f'$};
-			\node[orange]  at (-1.4,4.6) {$f''$};}
-			{\draw[fill=charcoal] (-2,0) circle (2pt);
-			\draw[fill=charcoal] (0,0) circle (2pt);
-			\draw[fill=charcoal] (2,0) circle (2pt);
-			\draw[fill=charcoal] (1,-4.5) circle (2pt) node at (1.2,-5.1) {$(1\mid-4.5)$};}
+				%Beschriftung
+				\node[plotblue]  at (2.5,4.7) {$f$};
+				\draw[fill=charcoal] (-2,0) circle (2pt);
+				\draw[fill=charcoal] (0,0) circle (2pt);
+				\draw[fill=charcoal] (2,0) circle (2pt);
+				\draw[fill=charcoal] (1,-4.5) circle (2pt) node at (1.2,-5.1) {$(1\mid-4.5)$};}
 		\end{tikzpicture}
 	\end{minipage}
 	\begin{parts}
 		\setcounter{partno}{3}
-		\part Erkläre, wie die Gleichung der Tangente im Punkt $P(1\mid-4.5)$ gefunden werden kann.
-		\bl $m=$ Steigung $\Rightarrow$ Ableitung am Punkt $P$\\ $q=$ $y-$Achsenabschnitt, wird mit Einsetzen des Punktes $P$ ermittelt.
+		\part Erkläre, was der Ausdruck $\displaystyle\int_{-2}^{2}f(x)\d{x}$ bedeutet. Schätze den Wert des Integrals, ohne es explizit zu berechnen.
+		\bl Fläche zw $-2$ und $0$ ist positiv\\ Fläche zw $0$ und $2$ ist negativ \\ $\Rightarrow$ Resultat wird negativ sein
 		\part Betrachte die Fläche zwischen Graphen und $x-$Achse im $4.$ Quadranten. Wir nehmen an diese rotiert, um die $x-$Achse. Erkläre, wie du das entstehende Volumen berechnen kannst. Wird das Resultat positiv oder negativ sein? Begründe.\\[7pt]
 		Rotationsvolumen ist als Integral eine Summe von Scheiben $\quad\Rightarrow\displaystyle\pi\*\int_{-2}^{0}(f(x))^2\d{x}$\\ Funktionswert ist der Radius und Faktor $\pi$ macht Scheibe daraus\\ $\Rightarrow$ Volumen wird am Ende also positiv sein.\el
 	\end{parts}
@@ -828,21 +856,115 @@
 
 
 \bereich{FolgenReihen}
-\titel{arg1}
+\titel{Spiralfolge}
 \begin{aufgabe}
-	Inhalt...
+	\begin{minipage}{0.6\linewidth}
+		\begin{parts}
+			\part Betrachte die Abbildung rechts. Die einzelnen Strecken bilden eine Folge. Gib die ersten beiden Folgenglieder an.
+			\bl \[a_1=39, a_2=26\] \el
+			\part Bestimme die geschlossene Form für $a_n$.
+			\bl \[\text{geometrische Folge:}\quad a_n=a_1\*q^{n-1}=39\*\left(\frac{2}{3}\right)^{n-1}\]\el
+		\end{parts}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.375\linewidth}
+		\centering\includegraphics[scale=0.3]{fr-spiralfolge.png}
+	\end{minipage}
+	\begin{parts}
+		\part Erkläre, wie du die gesamte Länge der grünen Spirale berechnen kannst?
+		\bl Die Länge kann als unendliche Summe dieser Folgenglieder berechnet werden: \[s=a_1\*\frac{1}{1-q}=39\*\frac{1}{1-\frac{2}{3}}=39\*3=117\] \el
+		\part Wie findest du die Koordinaten des Punktes, zu den diese Spirale hinkonvergiert? Erkläre.
+		\bl Option 1: Schnittpunkt der linearen Funktionen (gestichelt im Graph) berechnen\\ Option 2: Betrachte die Teilfolgen $a_1,a_3,\ldots$ und $a_2,a_4,\ldots$. Diese konvergieren genau zu der $x-$ resp. $y-$Koordinate des Punktes.\el
+		\part Gib ein Beispiel einer geometrischen Folge an, die \textbf{nicht} konvergiert.
+	\end{parts}
 \end{aufgabe}
 
 %
 
 \bereich{Differential}
-\titel{arg1}
+\titel{Funktionsgleichung bestimmen}
 \begin{aufgabe}
-	Inhalt...
+	\begin{parts}
+		\part Eine  zur $y-$Achse symmetrische Polynomfunktion 4. Grades verläuft durch den Punkt ${P(0\mid-\frac{5}{2})}$ und hat einen Wendepunkt bei $W(1\mid2.5)$. Bestimme die Funktionsgleichung der Funktion.
+		\bl \begin{align*}
+			f(x)&=ax^4+bx^2+c\Rightarrow f'(x)=4ax^3+2bx \Rightarrow f''(x)=12ax^2+2b\\
+			f(0)&=c=-\frac{5}{2}\\
+			f(1)&=2.5\\
+			f''(1)&=0\\
+			&\Longrightarrow f(x)=-\frac{1}{2}x^4+3x^2-\frac{5}{2}
+		\end{align*} \el
+		\part Was ist ein Extremum und wie sind sie algebraisch charakerisiert?
+		\bl ein Extremum ist ein Hoch- oder ein Tiefpunkt der Funktion: \[f'(x)=0\Rightarrow f''(x)<0 \text{ (Maxima)}\sor f''(x)>0\text{ (Minima)}\] \el
+		\part Welche Nullstellen hat die obige Funktion?
+		\bl Vier Nullstellen: $x_1=-2.236, x_2=-1, x_3=1, x_4=2.236$ \el
+		\part Ausgehend von den jetzigen Informationen zur Funktion wie viele Hoch- und Tiefpunkte erwartest du? Warum?
+		\bl Insgesamt drei $\Rightarrow$ Ableitung hat maximalen Grad $3$ und zwischen jeder Nullstelle muss entweder ein Hoch- oder Tiefpunkt sein. \el
+		\part Skizziere den Graphen der Funktion so exakt wie möglich.\\
+		\begin{tikzpicture}[x=10mm, y=10mm, >=latex, font=\footnotesize, scale=0.8]
+			%Raster zeichnen
+			\draw [color=gray!50]  [step=10mm] (-4.3,-4.3) grid (4.3,3.3);
+			% Achsen zeichnen
+			\draw[->,thick] (-4.3,0) -- (4.8,0) node[right, below] {\normalsize $x$};
+			\draw[->,thick] (0,-4.3) -- (0,3.8) node[above, left] {\normalsize $y$};
+			% Achsen beschriften
+			\foreach \x/\label in {-4,...,-2,-1,1,2,...,4} \draw (\x,0.1) -- (\x,-0.1) node[below] {\label};
+			\foreach \y in {-4,...,-2,-1,1,2,...,3} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+			% Besserer Ursprung
+			\draw[color=black] (0pt,-7pt) node[right] {$0$};
+			%Funktionen zeichnen:
+			\clip(-4.3,-4.3) rectangle (4.3,3.3); %Bildbereich
+			\ifthenelse{\boolean{printanswers}}
+			{\draw[plotblue,thick,domain=-4:4,samples=200] plot (\x, {-1/2*(\x)^4+3*(\x)^2-5/2});}
+			{}
+			%Beschriftung
+			%\node[plotblue]  at (2.5,4.7) {$f$};
+		\end{tikzpicture}
+	\end{parts}
 \end{aufgabe}
 
 
 %----------------------------------------------------------
+
+
+\bereich{FolgenReihen}
+\titel{Fallende geometrische Folge}
+\begin{aufgabe}
+	Einen Volleyball fällt aus zwei Metern Höhe auf den Hallenboden, springt wieder hoch und fällt wieder auf den Hallenboden. Nach jedem Aufprall verliert er $\frac{2}{3}$ der Sprunghöhe.
+	\begin{parts}
+		\part Wie hoch springt der Ball nach dem zweiten Aufprall?
+		\part Wie hoch springt der Ball nach dem $n-$ten Aufprall?
+		\part Nach wie vielen Aufprallen springt der Ball weniger als einen Millimeter mehr hoch.
+		\part Wie lange ist der gesamte Weg, den der Ball zurücklegt?
+		\part Beschreibe, wie du die gleiche Aufgabe mit Hilfe einer Wachstumsfunktion lösen kannst?
+	\end{parts}
+\end{aufgabe}
+
+%
+
+\bereich{Stochastik}
+\titel{Baumdiagramm}
+\begin{aufgabe}
+	Von einem einzelligen Lebewesen ist bekannt, dass es nach einem Tag mit der Wahrscheinlichkeit $\frac{1}{4}$ zugrunde geht, mit der Wahrscheinlichkeit $\frac{1}{4}$ am Leben bleibt und sich mit der Wahrscheinlichkeit $\frac{1}{2}$ in zwei Lebewesen derselben Art teilt. Am nächsten Tag gilt für jedes vorhandene Lebewesen wiederum dasselbe.
+	\begin{parts}
+		\part Zeichne ein Baumdiagramm, das die obige Situation nach zwei Tagen beschreibt.
+		\bl \includegraphics[scale=0.5]{stocha-sterbendelebewesen.png}\\ wobei $p_0=\frac{1}{16}, p_1=\frac{1}{8}, p_2=\frac{5}{16}, p_3=\frac{1}{4}, p_4=\frac{1}{4}$. \el
+		\part Wie viele Lebewesen können nach Ablauf von zwei Tagen bestehen?
+		\bl \[0,1,2,3,4\] \el
+		\part Mit welcher Wahrscheinlichkeit treten die entsprechende Anzahlen auf?
+		\bl\begin{align*}
+			P(0)&=\frac{11}{32}=34.4\% P(1)&&=\frac{1}{8}=12.5\% \\
+			P(2)&=\frac{9}{32}=28.1\% P(3)&&=\frac{1}{8}=12.5\% \\
+			P(0)&=\frac{1}{8}=12.5\%
+		\end{align*}\el
+	\end{parts}
+\end{aufgabe}
+
+
+
+
+
+
+
 
 \newpage\ \\
 %=========================================================
