@@ -368,8 +368,7 @@
 \begin{aufgabe}
 	\begin{parts}
 		\part Ohne irgendwelche Bedingungen skizziere den Graph der Stammfunktion dieser Parabel.
-		\ifthenelse{\boolean{printanswers}}
-		{\begin{tikzpicture}[x=10mm, y=10mm, >=latex, font= \footnotesize, scale=0.9]
+		\begin{tikzpicture}[x=10mm, y=10mm, >=latex, font= \footnotesize, scale=0.9]
 				%Raster zeichnen
 				\draw [color=gray!50]  [step=10mm] (-3.3,-3.3) grid (3.3,5.3);
 				% Achsen zeichnen
@@ -382,30 +381,13 @@
 				\draw[color=black] (0pt,-7pt) node[right] {$0$};
 				%Funktionen zeichnen:
 				\clip(-3.3,-3.3) rectangle (3.3,5.3); %Bildbereich
+				\ifthenelse{\boolean{printanswers}}{
 				\draw[myred,thick,domain=-3:3,samples=200] plot (\x, {1/3*(\x)^3-\x});
+				%Beschriftung
+				\node[myred]  at (3.1,4.8) {$F$};}{}
 				\draw[plotblue,thick,domain=-3:3,samples=200] plot (\x, {(\x)^2-1});
 				\draw[plotblue,thick,domain=-3.3:3.3,samples=200] plot (\x, {\x+1});
-				%Beschriftung
-				\node[myred]  at (3.1,4.8) {$F$};
-		\end{tikzpicture}}
-		{\begin{tikzpicture}[x=10mm, y=10mm, >=latex, font= \footnotesize, scale=0.9]
-				%Raster zeichnen
-				\draw [color=gray!50]  [step=10mm] (-3.3,-3.3) grid (3.3,5.3);
-				% Achsen zeichnen
-				\draw[->,thick] (-3.3,0) -- (3.8,0) node[right, below] {\normalsize $x$};
-				\draw[->,thick] (0,-3.3) -- (0,5.8) node[above, left] {\normalsize $y$};
-				% Achsen beschriften
-				\foreach \x in {-3,-2,-1,1,2,3} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
-				\foreach \y in {-3,-2,-1,1,2,...,5} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
-				% Besserer Ursprung
-				\draw[color=black] (0pt,-7pt) node[right] {$0$};
-				%Funktionen zeichnen:
-				\clip(-3.3,-3.3) rectangle (3.3,5.3); %Bildbereich
-				\draw[plotblue,thick,domain=-3:3,samples=200] plot (\x, {(\x)^2-1});
-				\draw[plotblue,thick,domain=-3.3:3.3,samples=200] plot (\x, {\x+1});
-				%Beschriftung
-				%\node[myred]  at (3.1,-2.3) {$f$};
-		\end{tikzpicture}}
+		\end{tikzpicture}
 		\part Was ist die Fläche, die die beiden Graphen (Parabel und Gerade) einschliessen?
 		\bl \begin{align*}
 			f(x)=x^2-1 &\Rightarrow F(x)=\frac{1}{3}x^2-x+c \quad g(x)=x+1\\
@@ -515,7 +497,7 @@
 \end{aufgabe}
 
 
-
+%----------------------------------------------------------
 
 
 \bereich{Vektor}
@@ -602,10 +584,265 @@
 		\begin{align*}
 			\int\left(\frac{1}{2}x^2+3x^3-4x\right)\d{x}&=\frac{x^6}{12}+\frac{3x^4}{4}-2x^2\\
 			2\*\int_{-1}^{0}\left(\frac{1}{2}x^2+3x^3-4x\right)\d{x}&= 2\*\frac{7}{6} = \frac{7}{3}
-		\end{align*}\el
+		\end{align*}
+		\part Kannst du bei trigonometrischen Funktionen ebenfalls Symmetrien erkennen? Welche?\el
 	\end{parts}
 \end{aufgabe}
 
+
+%----------------------------------------------------------
+
+
+\bereich{Vektor}
+\titel{Vektorprodukt, Ebenen}
+\begin{aufgabe}
+	\begin{parts}
+		\part Betrachte die folgenden zwei Ausdrücke: \[\left[\Vec{2}{4}{5}\*\Vec{1}{0}{1}\right]\times\Vec{0}{1}{2}\qquad\left[\Vec{2}{4}{5}\times\Vec{1}{0}{1}\right]\*\Vec{0}{1}{2}\]
+		Einer der beiden Ausdrücke macht mathematisch keinen Sinn. Erkläre, welchen und warum.
+		\bl Erster Ausdruck mach keinen Sinn, da das Resultat eines Skalarproduktes eine Zahl ist und somit nicht als \flqq Faktor\frqq\: in einem Vektorprodukt verwendet werden kann. Zweiter Ausdruck ist mathematisch sinnvoll. \el
+		\part Wofür wird das Skalarprodukt in der Vektorgeometrie überwiegend verwendet? Wozu nutzt du auf der anderen Seite das Vektorprodukt?
+		\bl SP: Berechnung von Winkeln und Kontrolle, ob senkrecht\\ VP: Normalvektor, Flächeninhalte von Parallelogramm/Dreieck, Abstand von Punkt zur Gerade \el
+		\part Eine Ebene $E:2x-y+2z+4=0$ und eine Gerade $g:\v{r}=\Vec{0}{1}{2}+t\*\Vec{4}{4}{2}$ sind gegeben. Wie findest du den Durchstosspunkt?
+		\bl \[2(4t)-(16+4t)+2(2+2t)+4=0 \Rightarrow 8t=8 \Rightarrow t=1\] \el
+		\part Erkläre anhand der Skizze, wie der Winkel zwischen der Ebene und der Gerade berechnet werden kann.\\[12pt]
+		\includegraphics[scale=1]{vektor-durchstosspunkt.png}
+	\end{parts}
+\end{aufgabe}
+
+%
+
+\bereich{Integral}
+\titel{Rotationsvolumen}
+\begin{aufgabe}
+	Der Ausdruck $\displaystyle\pi\*\int_{2}^{3}(\frac{4}{3}x-2)^2\d{x}$ beschreibt das Volumen eines Rotationskörpers.\\[12pt]
+	\begin{minipage}{0.5\linewidth}
+		\begin{parts}
+			\part Mache eine geeignete Skizze, um zu erklären, um was für einen Körper es sich hier handelt.
+			\bl Kegel mit fehlender Spitze \el
+			\part Erkläre, wie dieses Integral zustande gekommen ist. Woher kommt der Faktor $\pi$ und das Quadrat im Integranden?
+			\bl Integral ist eine Summe von kleinen Scheiben, diese werden mit $\pi\* r^2$ berechnet, wobei der Funktionswert als Radius benutzt wird. \el
+			\part Wie könnte das Volumen dieses Körpers ohne Integral berechnet werden?
+		\end{parts}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.475\linewidth}
+		\begin{tikzpicture}[x=10mm, y=10mm, >=latex, font= \footnotesize, scale=1.2]
+			%Raster zeichnen
+			\draw [color=gray!50]  [step=10mm] (-1.3,-2.3) grid (4.3,3.3);
+			% Achsen zeichnen
+			\draw[->,thick] (-1.3,0) -- (4.8,0) node[right, below] {\normalsize $x$};
+			\draw[->,thick] (0,-2.3) -- (0,3.8) node[above, left] {\normalsize $y$};
+			% Achsen beschriften
+			\foreach \x in {-1,1,2,...,4} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+			\foreach \y in {-2,-1,1,2,...,3} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+			% Besserer Ursprung
+			\draw[color=black] (0pt,-7pt) node[right] {$0$};
+			%Funktionen zeichnen:
+			\clip(-1.3,-2.3) rectangle (4.3,3.3); %Bildbereich
+			\ifthenelse{\boolean{printanswers}}
+			{\draw[plotblue,thick,domain=-1:6,samples=200] plot (\x, {4/3*\x-2});
+			\draw[plotblue,thick,,dashed,domain=2:3,samples=200] plot (\x, {-4/3*\x+2});
+			\draw[charcoal,thick,dashed] (3,2) -- (3,-2);
+			\draw[charcoal,thick,dashed] (2,2/3) -- (2,-2/3);}{}
+			%Beschriftung
+			%\node[myred]  at (3.1,-2.3) {$f$};
+		\end{tikzpicture}
+	\end{minipage}
+	\begin{parts}
+		\setcounter{partno}{3}
+		\bl Ganzer Kegel berechnen minus fehlender kleiner Kegel:\[\frac{1}{3}\*2^2\pi\*1.5-\left(\frac{1}{3}\*\left(\frac{2}{3}\right)^2\pi\*0.5\right)=\frac{\pi}{3}\left(6-\frac{2}{9}\right)=\frac{52}{27}\*\pi\]\el
+		\part Einen Kegel mit Radius $r=2$ und Höhe $h=5$ ist gegeben. In diesen Kegel wird ein Zylinder einbeschrieben. Gesucht sind der Radius und die Höhe des Zylinders, sodass sein Volumen maximal ist. Erkläre, wie du dieses Problem lösen würdest.
+		\ifthenelse{\boolean{printanswers}}
+		{\bl\begin{minipage}{0.3\linewidth}
+				\centering\includegraphics[scale=1]{int-zylinderrotation-lp.png}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.675\linewidth}
+			Betrachte die Gleichung für das Volumen und die Nebenbedingung ergibt sich aus der Ähnlichkeit:
+			\begin{align*}
+				V&=r^2\*\pi\*x\\
+				\frac{r}{2}&=\frac{6-x}{6}\Rightarrow 6r=12-2x \Rightarrow r=2-\frac{1}{3}x\\
+				V(x)&=\left(2-\frac{1}{3}x\right)^2\*\pi\* x=\ldots\\
+				V'(x)&=4\pi-\frac{8\pi}{3}x+\frac{\pi}{3}x^2=0 \Rightarrow x=\ldots
+			\end{align*}
+		\end{minipage}\el}
+		{\\[12pt]\includegraphics[scale=1]{int-zylinderrotation.png}}
+	\end{parts}
+\end{aufgabe}
+
+
+%----------------------------------------------------------
+
+
+\bereich{Differential}
+\titel{Spezielle Punkte}
+\begin{aufgabe}
+	\begin{minipage}{0.5\linewidth}
+		Die Skizze zeigt den Graphen einer Funktion.\\
+		\begin{parts}
+			\part Rate, um was für einen Typ Funktion es sich hier handelt und benutze die Punkte in der Skizze, um die Funktionsgleichung zu finden. Erkläre, wie du vorgehst.
+			\bl Polynomfunktion 4. Grades, da 3 Extrema.\\ LGS mit Nullstellen und $f'(-2)=0$ und $f(1)=-4.5$.\\ $\Rightarrow f(x)=\frac{1}{2}x^4+x^3-2x^2-4x$ \el
+			\part Skizziere den Graphen der ersten Ableitung ins Koordinatensystem.
+			\part Erkläre, was der Ausdruck $\displaystyle\int_{-2}^{2}f(x)\d{x}$ bedeutet. Schätze den Wert des Integrals, ohne es explizit zu berechnen.
+			\bl Fläche zw $-2$ und $0$ ist positiv\\ Fläche zw $0$ und $2$ ist negativ \\ $\Rightarrow$ Resultat wird negativ sein \el
+		\end{parts}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.475\linewidth}
+		\begin{tikzpicture}[x=10mm, y=10mm, >=latex, font=\footnotesize, scale=0.7]
+			%Raster zeichnen
+			\draw [color=gray!50]  [step=10mm] (-5.3,-6.3) grid (5.3,5.3);
+			% Achsen zeichnen
+			\draw[->,thick] (-5.3,0) -- (5.8,0) node[right, below] {\normalsize $x$};
+			\draw[->,thick] (0,-6.3) -- (0,5.8) node[above, left] {\normalsize $y$};
+			% Achsen beschriften
+			\foreach \x in {-5,...,-2,-1,1,2,...,5} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+			\foreach \y in {-6,...,-2,-1,1,2,...,5} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+			% Besserer Ursprung
+			\draw[color=black] (0pt,-7pt) node[right] {$0$};
+			%Funktionen zeichnen:
+			\clip(-5.3,-6.3) rectangle (5.3,5.3); %Bildbereich
+			\ifthenelse{\boolean{printanswers}}
+			{\draw[plotblue,thick,domain=-5:5,samples=200] plot (\x, {0.5*(\x)^4+(\x)^3-2*(\x)^2-4*\x});
+			\draw[forestgreen,thick,domain=-5:5,samples=200] plot (\x, {2*(\x)^3+3*(\x)^2-4*(\x)-4});
+			\draw[orange,thick,domain=-5:5,samples=200] plot (\x, {6*(\x)^2+6*(\x)-4});
+			%Beschriftung
+			\node[plotblue]  at (2.5,4.7) {$f$};
+			\node[forestgreen]  at (-2.8,-5.7) {$f'$};
+			\node[orange]  at (-1.4,4.6) {$f''$};}
+			{\draw[fill=charcoal] (-2,0) circle (2pt);
+			\draw[fill=charcoal] (0,0) circle (2pt);
+			\draw[fill=charcoal] (2,0) circle (2pt);
+			\draw[fill=charcoal] (1,-4.5) circle (2pt) node at (1.2,-5.1) {$(1\mid-4.5)$};}
+		\end{tikzpicture}
+	\end{minipage}
+	\begin{parts}
+		\setcounter{partno}{3}
+		\part Erkläre, wie die Gleichung der Tangente im Punkt $P(1\mid-4.5)$ gefunden werden kann.
+		\bl $m=$ Steigung $\Rightarrow$ Ableitung am Punkt $P$\\ $q=$ $y-$Achsenabschnitt, wird mit Einsetzen des Punktes $P$ ermittelt.
+		\part Betrachte die Fläche zwischen Graphen und $x-$Achse im $4.$ Quadranten. Wir nehmen an diese rotiert, um die $x-$Achse. Erkläre, wie du das entstehende Volumen berechnen kannst. Wird das Resultat positiv oder negativ sein? Begründe.\\[7pt]
+		Rotationsvolumen ist als Integral eine Summe von Scheiben $\quad\Rightarrow\displaystyle\pi\*\int_{-2}^{0}(f(x))^2\d{x}$\\ Funktionswert ist der Radius und Faktor $\pi$ macht Scheibe daraus\\ $\Rightarrow$ Volumen wird am Ende also positiv sein.\el
+	\end{parts}
+\end{aufgabe}
+
+%
+
+\bereich{Vektor}
+\titel{Pyramide mit Grundebene}
+\begin{aufgabe}
+	\begin{minipage}{0.6\linewidth}
+		Von einer Pyramide mit quadratischer Grundfläche und Spitze $S$ sind folgende Punkte $A(2\mid2\mid1), B(0\mid1\mid1)$ und $S(1\mid2\mid3)$ bekannt. Die Grundfläche ist ein Teil der Ebene $E:x-2y+2z=0$.
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.375\linewidth}
+		\centering\includegraphics[scale=0.9]{vektor-pyramide.png}
+	\end{minipage}
+	\begin{parts}
+		\part Beweise, dass die Punkte $A$ und $B$ auf der Ebene $E$ liegen.
+		\bl Koordinaten der Punkte in Koordinatengleichung der Ebene einsetzen $\Rightarrow$ sollte stimmen \el
+		\part Genügen die Informationen, um das Volumen der Pyramide zu bestimmen? Begründe.
+		\bl Ja, mit Seite $AB$ kann die Grundfläche berechnet werden: $\Rightarrow A=\left(\sqrt{2^2+1^2}\right)^2=5$\\ Danach Abstand von $S$ zur Grundebene: $\Rightarrow h=\frac{\abs{1-4+6}}{3}=1 \Rightarrow V=\frac{1}{3}*5*1=\frac{5}{3}$ \el
+		\part Von der Grundfläche kennen wir die Punkte $A$ und $B$. Wie können die fehlenden Eckpunkte gefunden werden? Erkläre dein Vorgehen.
+		\bl Option 1: LGS Punkt in $E$, Skalarprodukt$=0$, Länge $=\sqrt{5}$\\ Option 2: Vektorprodukt $\v{AB}\times\v{n}=$ Richtungsvektor zur fehlenden Ecke - Vorsicht Länge anpassen.\el
+		\part Du möchtest die Fläche des Dreiecks $ABS$ berechnen. Erkläre einen Weg, der dies ermöglicht.
+		\bl Fläche kann berechnet werden, indem wir den Abstand von Punkt $S$ zur Gerade  durch $A$ und $B$ bestimmen: $\Rightarrow F=\frac{1}{2}\*\sqrt{5}\* d(S,AB)$\\
+		Option 1: Senkrechte Ebene zu $AB$ durch $S$ $\Rightarrow$ Durchstosspunkt...\\
+		Option 2: $d(S,AB)=\frac{\abs{\v{AB}\times\v{AS}}}{\abs{\v{AB}}}=\frac{\abs{\Vec{-2}{-1}{0}\times\Vec{-1}{0}{2}}}{\abs{\v{AB}}}=\ldots=\sqrt{\frac{21}{5}}$\\
+		Option 3: Benutze die Eigenschaft des Vektorprodukts: $F=\frac{1}{2}\abs{\v{AB}\times\v{AS}}=\frac{1}{2}\sqrt{21}$ \el
+	\end{parts}
+\end{aufgabe}
+
+
+%----------------------------------------------------------
+
+
+\bereich{FolgenReihen}
+\titel{Grenzwert von Reihen}
+\begin{aufgabe}
+	\begin{parts}
+		\part Erkläre in eigenen Worden, was geometrische und arithmetische Folgen sind.
+		\part Von einer Folge sind die beiden Glieder $a_1=\frac{1}{2}$ und $a_4=-12$ bekannt. Bestimme die allgemeine Form $a_n$, falls es sich um eine\ldots
+		\begin{itemize}
+			\item\ldots arithmetische Folge handelt.
+			\item\ldots geometrische Folge handelt.
+		\end{itemize}
+		\bl \begin{align*}
+			-12=\frac{3}{2}+3d&\Rightarrow d=-\frac{9}{2} &&\Rightarrow a_n=\frac{3}{2}-(n-1)\*\frac{9}{2}\\
+			-12=\frac{3}{2}\*q^3&\Rightarrow q=-2 &&\Rightarrow a_n=\frac{3}{2}\*(-2)^{n-1}
+		\end{align*} \el
+		\part Kann die Summe von unendlich vielen Gliedern für diese Folge berechnet werden? Begründe?
+		\bl arithmetische Reihe kann nie konvergieren, geometrische Reihe konvergiert nur wenn $\abs{q}<1$. Also in diesem Fall nein! \el
+		\part Was ist die Summe der ersten $20$ Glieder der arithmetischen Folge?
+		\bl $s_{20}=\frac{20}{2}(a_1+a_20)=20\*\left(\frac{3}{2}+\frac{3}{2}-19\*\frac{9}{2}\right)=-82.5$ \el
+		\part Eine periodische Zahl $0.\bar{9}$ kann als unendliche geometrische Reihe angesehen werden, wenn \[\frac{9}{10}+\frac{9}{100}+\frac{9}{1000}+\ldots\]
+		Benutze das Wissen über geometrische Reihen, um zu zeigen, dass $0.\bar{9}=1$.
+		\bl Es ist eine geometrische Folge mit $a_1=\frac{9}{10}$ und $q=\frac{1}{10}<1$. Das heisst wir können den Grenzwert berechnen: \[s=\frac{9}{10}\*\frac{1}{1-\frac{1}{10}}=\frac{9}{10}\*\frac{10}{9}=1\] \el
+	\end{parts}
+\end{aufgabe}
+
+%
+
+\bereich{Differential}
+\titel{Ableitung der Trigo}
+\begin{aufgabe}
+	\begin{parts}
+		\part Skizziere die Graphen der folgenden Funktionen.
+		\begin{itemcols}[3]
+			\item $f(x)=\sin{x}$ \item $g(x)=2\*\cos{x}$ \item $h(x)=\tan{x}$
+		\end{itemcols}
+		\begin{tikzpicture}[x=10mm, y=10mm, >=latex, font=\footnotesize, scale=0.9]
+			%Raster zeichnen
+			\draw [color=gray!50]  [step=10mm] (-7.3,-3.3) grid (8.3,3.3);
+			% Achsen zeichnen
+			\draw[->,thick] (-8.3,0) -- (8.8,0) node[right, below] {\normalsize $x$};
+			\draw[->,thick] (0,-3.3) -- (0,3.8) node[above, left] {\normalsize $y$};
+			% Achsen beschriften
+			\foreach \x/\label in {-6.28/$-2\pi$,-4.71/$\frac{-3\pi}{2}$,-3.14/$-\pi$,-1.57/$\frac{-\pi}{2}$,1.57/$\frac{\pi}{2}$,3.14/$\pi$,4.71/$\frac{3\pi}{2}$,6.28/$2\pi$,7.85/$\frac{7\pi}{2}$}
+			\draw (\x,0.1) -- (\x,-0.1) node[below] {\label};
+			\foreach \y in {-3,...,-2,-1,1,2,...,3} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+			% Besserer Ursprung
+			\draw[color=black] (0pt,-7pt) node[right] {$0$};
+			%Funktionen zeichnen:
+			\clip(-7.3,-3.3) rectangle (8.3,3.3); %Bildbereich
+			\ifthenelse{\boolean{printanswers}}
+			{\draw[plotblue,thick,domain=-8:8,samples=200] plot (\x, {sin(\x r)});
+			\draw[forestgreen,thick,domain=-8:8,samples=200] plot (\x, {2*cos(\x r)});
+			\draw[myred,thick,domain=-1.56:1.56,samples=200] plot (\x, {tan(\x r)});}
+			{}
+			%Beschriftung
+			%\node[plotblue]  at (2.5,4.7) {$f$};
+		\end{tikzpicture}
+		\part Erkläre die Bedeutung der Werte auf der $x-$Achse.
+		\bl Winkel in Bogenmass $\Rightarrow$ Winkel wird mit der Bogenlänge im Einheitskreis beschrieben \el
+		\part Erkläre anhand des Einheitskreis, wie erkennt werden kann, für welche Winkel der Tangenswert positiv resp. negativ ist.
+		\bl positiv im 1. und 3. Quadranten $\Rightarrow$ Cosinus- und Sinus-Werte haben dasselbe Vorzeichen \el
+		\part Benutze die Graphen oben, um zu erklären, was ein Wendepunkt ist und wie er algebraisch berechnet werden kann.
+		\bl Wendepunkt ist eine Änderung der Krümmung $\Rightarrow$ Extremum der ersten Ableitung $\Rightarrow f''(x)=0$ \el
+		\part Benutze die Graphen oben, um zu zeigen, dass der Cosinus die Ableitung des Sinus ist. Wenn wir formell die Ableitung einer unbekannten Funktion bestimmen wollen, verwenden wir den Differentialquotienten. Erkläre, wie dieses Vorgehen funktioniert und worauf zu achten ist.
+		\bl Differentialquotient ist de Grenzwert der Steigung einer Sekante $\Rightarrow$ lässt man den zweiten Punkt entlang der Funktion zum Ersten wandern, wird der Abstand zwischen den Punkten immer kleiner und somit wird aus der Sekante eine Tangente. \el
+	\end{parts}
+\end{aufgabe}
+
+
+%----------------------------------------------------------
+
+
+\bereich{FolgenReihen}
+\titel{arg1}
+\begin{aufgabe}
+	Inhalt...
+\end{aufgabe}
+
+%
+
+\bereich{Differential}
+\titel{arg1}
+\begin{aufgabe}
+	Inhalt...
+\end{aufgabe}
+
+
+%----------------------------------------------------------
 
 \newpage\ \\
 %=========================================================
