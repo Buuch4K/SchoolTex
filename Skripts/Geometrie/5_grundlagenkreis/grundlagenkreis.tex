@@ -58,19 +58,20 @@
 				\item $\sqrt{10}=$
 		\end{enumerate}\end{minipage}
 	\end{aufgabe}
-	\begin{figure}[ht]
+	\begin{figure}[H]
 		\centering\includegraphics[scale=0.25]{6-12EckArchimedes.png}
 		\caption{Archimedes' einbeschriebene 6-Eck links und rechts mit einem 12-Eck}
 		\label{fig:Archi6-12e}
 	\end{figure}
-	Die erste systematische Berechnung von $\pi$ absolvierte Archimedes ($287-212$ v. Chr.), in dem er den Kreis zwischen regelmässigen Vielecken einzwängt. Dabei startete er mit zwei $6$-Ecken, welche einem Kreis mit Durchmesser $1$ eingeschrieben werden, bzw. umschliessen. (siehe Abbildung \ref{fig:Archi6-12e}) und verdoppelte danach die Anzahl Ecken viermal bis zum $96$-Eck. Nun berechnetet er für jedes Vieleck jeweils den Umfang des äusseren und des inneren und konnte so die Zahl $\pi$ annähern.\newline
+	Die erste systematische Berechnung von $\pi$ absolvierte Archimedes ($287-212$ v. Chr.), in dem er den Kreis zwischen regelmässigen Vielecken einzwängt. Dabei startete er mit zwei $6$-Ecken, welche einem Kreis mit Durchmesser $1$ eingeschrieben werden, bzw. umschliessen (siehe Abbildung \ref{fig:Archi6-12e}) und verdoppelte danach die Anzahl Ecken viermal bis zum $96$-Eck. Nun berechnetet er für jedes Vieleck jeweils den Umfang des äusseren und des inneren und konnte so die Zahl $\pi$ annähern.\newline
 	Die Formel für den Interationsschritt (von $n$ nach $2n$-Ecken) lautet:
 	\begin{equation}\label{eq:iterArchi}
 		U_{2n}=\frac{2\cdot U_n}{\sqrt{2+2\sqrt{1-\left(\frac{U_n}{n}\right)^2}}},
 	\end{equation}
 	wobei $n$ die Anzahl Ecken, $U_n$ der Umfang des regelmässigen $n$-Ecks und $U_{2n}$ der Umfang des regelmässigen $2n$-Ecks entspricht.
 	\begin{aufgabe}
-		Versuche nun den Iterationsweg von Archimedes mit Hilfe deines Taschenrechners nachzuvollziehen. Es soll der Umfang eines Kreises mit Durchmesser $d=1$ angenähert werden. Dabei starten wir mit dem inneren $6$-Eck mit Seitenlänge $s=0.5$, also dem Umfang $U_6=3$. Benutze die Formel \ref{eq:iterArchi}, um die Tabelle unten zu vervollständigen.
+		Versuche nun den Iterationsweg von Archimedes mit Hilfe deines Taschenrechners nachzuvollziehen. Es soll der Umfang eines Kreises mit Durchmesser $d=1$ angenähert werden. Dabei wissen wir, dass der Umkreisradius eines Sechsecks gleich lang ist, wie die Seitenlänge. Das bedeutet, wir starten mit dem inneren $6$-Eck mit Seitenlänge $s=0.5$, also einem Umfang von $U_6=3$. Benutze die Formel \ref{eq:iterArchi}, um die Tabelle unten zu vervollständigen.
+		\begingroup\renewcommand{\arraystretch}{1.5}
 		\begin{table}[H]
 			\centering
 			\begin{tabular}{c|p{6cm}}
@@ -84,12 +85,13 @@
 				$384$ & \\
 			\end{tabular}
 		\end{table}
+		\endgroup
 	\end{aufgabe}
 	Der Kreis mit Durchmesser $d=1$ hat also einen Umfang von $U=\pi=3.14159265\ldots$. Halten wir also fest:
 	\begin{definition}
 		Die Kreiszahl $\pi$ entspricht für jeden Kreis dem Quotient $\frac{\text{Umfang}}{\text{Durchmesser}}$ und beträgt konstant \[\pi=3.14159265\ldots\]
 	\end{definition}
-	Leider wird diese Methode zur Berechnung von $\pi$ heute nicht mehr verwendet, da die Berechnung mit unendlichen Summen oder unendlichen Produkten viel effizienter und vorallem für den Computer einfacher ist. Jedoch kann man damit $\pi$ beliebig genau berechnen.\newpage
+	Leider wird diese Methode zur Berechnung von $\pi$ heute nicht mehr verwendet, da die Berechnung mit unendlichen Summen oder unendlichen Produkten viel effizienter und vorallem für den Computer einfacher ist. Jedoch kann man damit $\pi$ beliebig genau berechnen.
 
 
 \subsection*{Fun Facts: (Stand $2023$)}
@@ -118,15 +120,15 @@
 		\begin{enumerate}[label=\alph*)]
 			\item Berechne den Äquatorradius $r$.\newline\karos{2}
 			\item \begin{minipage}{0.6\linewidth}
-				Denke dir eine Schnur um den Aquator gelegt. Diese Schnur ist nun $10$ Meter zu lang, Um sie zu spannen, müsste man sie überalletwas von der Erde abstehen lassen. Wie gross muss der Abstand zur Erdoberfläche sein? Schätze zuerst!
+				Denke dir eine Schnur, die um den Äquator gelegt wird. Diese Schnur ist nun $10$ Meter zu lang. Um sie zu spannen, müsste sie rundherum gleich viel von der Erde angehoben werden. Wie gross muss der Abstand zur Erdoberfläche sein? Schätze zuerst!
 			\end{minipage}
 			\hfill
 			\begin{minipage}{0.35\linewidth}
 				\begin{figure}[H]
-					\centering\includegraphics[scale=0.5]{ErdeMitSchnur.png}
+					\centering\includegraphics[scale=0.4]{ErdeMitSchnur.png}
 				\end{figure}
 			\end{minipage}
-			\karos{4}
+			\karos{2.5}
 		\end{enumerate}
 	\end{aufgabe}
 	\begin{aufgabe}
@@ -139,13 +141,14 @@
 \subsection{Kreisfläche}
 	Um die  Fläche eines Kreises zu berechnen, wenn man seinen Radius kennt, kann man folgenden Trick anwenden:
 	\begin{aufgabe}
-		Betrachte das Geogebra-Applet unter folgenden Link \url{https://www.geogebra.org/m/gpcvcgxc}.
+		Betrachte das folgende \href{https://www.geogebra.org/m/gpcvcgxc}{Geogebra-Applet}\footnotemark.
 		\begin{enumerate}[label=\alph*)]
 			\item Erkläre die Konstruktion des Rechtecks aus dem Kreis.
 			\item Begründe, warum der Flächeninhalt des Rechtecks sich bei feinerer Unterteilung (Schieberegler) immer mehr der Größe des Flächeninhalt des Kreises annähert.
 			\item Stelle eine Formel für den Flächeninhalt des Rechtecks auf. Benutze dabei die Formel für den Umfang des Kreises mit Radius $r$. \textbf{Tipp:} Seite mal Seite ;-)
 		\end{enumerate}
 	\end{aufgabe}
+	\footnotetext{\url{https://www.geogebra.org/m/gpcvcgxc}}
 	\begin{satz}[Kreisfläche]
 		Der Flächeninhalt eines Kreis mit Radius $r$ beträgt also: \[\lineortext{A=r^2\pi}.\]
 	\end{satz}
@@ -168,9 +171,10 @@
 \subsection{Kreisbogen und Kreissektor}
 	Starten wir mit einer kurzen Aufgabe aus der realen Welt.
 	\begin{aufgabe}
-		Bearbeite das Geogebra-Applet unter folgendem Link \url{https://www.geogebra.org/m/pyvvjumu} und notiere deine Überlegungen.\vspace{5pt}\newline
+		Bearbeite das \href{https://www.geogebra.org/m/pyvvjumu}{Geogebra-Applet}\footnotemark\:und notiere deine Überlegungen.\vspace{5pt}\newline
 		\karos{4}
 	\end{aufgabe}
+	\footnotetext{\url{https://www.geogebra.org/m/pyvvjumu}}
 	Die wichtigste Erkenntnis aus der obigen Aufgabe ist:
 	\begin{center}\lineortext{Der Mittelpunktswinkel $\alpha$ ist proportional zur Bogenlänge $b$.}\end{center}
 	Das heisst: \[\frac{b}{U}=\frac{\alpha}{360^\circ}\quad\to\quad b=\lineortext{\frac{\alpha}{360^\circ}\cdot 2r\pi}.\]
@@ -241,10 +245,11 @@
 					Winkel als Vielfaches von $\pi$ & $0$ & & $\:\:$X & $\:\frac{\pi}{2}$ & & & $\:\:$X & X & $\:\:$X \\
 				\end{tabular}
 			\end{table}
-			\item Überprüfe deine Berechnungen aus der Tabelle, indem du im Geogebra-Applet \url{https://www.geogebra.org/m/wwh8jhtm} den roten Punkt auf dem Kreis verschiebst.
+			\item Überprüfe deine Berechnungen aus der Tabelle, indem du im \href{https://www.geogebra.org/m/wwh8jhtm}{Geogebra-Applet}\footnotemark\:den roten Punkt auf dem Kreis verschiebst.
 		\end{enumerate}
 		\karos{4}
 	\end{aufgabe}
+	\footnotetext{\url{https://www.geogebra.org/m/wwh8jhtm}}
 	\subsection*{Wie können wir nun aber Grad in Bogenmass umrechnen?}
 	Wir betrachten dafür die Formel für die Bogenlänge:
 	\begin{equation*}
@@ -302,7 +307,7 @@
 		%\multicolumn{4}{|l|}{History}\\\hline
 		Version & Datum & Person & Bemerkung \\\hline
 		$0.1$ & 22.12.2023 & Jonas Guler & Kapitel erstellt \\\hline
-		$0.2$ & ToDo & Jonas Guler & \\\hline
+		$1.0$ & 28.04.2026 & Jonas Guler & kleine Korrekturen und Links als Hyperlinks ergänzt \\\hline
 	\end{tabular}
 \end{table}
 
