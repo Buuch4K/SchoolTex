@@ -5,10 +5,10 @@
 \input{../Header/headerExam.sty}
 \graphicspath{{Analysis/data-analysis/},{Algebra/data-algebra/},{Geometrie/data-geometrie/}}
 %=========================================================
-\newcommand{\theme}{Vektorgeometrie Grundlagen}
+\newcommand{\theme}{Vektorgeometrie}
 \newcommand{\teacher}{Jonas Guler}
 \newcommand{\class}{4GaMa}
-\renewcommand{\date}{03.03.26}
+\renewcommand{\date}{07.05.26}
 %=========================================================
 \begin{document}
 \fontsize{14}{14}\selectfont
@@ -19,7 +19,7 @@
 \begin{tabular*}{\textwidth}{l @{\extracolsep{6pt}}l @{\extracolsep{\fill}}l @{\extracolsep{6pt}}l}
     \multicolumn{2}{l}{{\bf \theme}} & {\bf Note:} & {\answerbox}\\
     \multicolumn{2}{l}{{\bf \teacher}} & & \\
-    {\bf Klasse:} & {\class} &  {\bf Name:} &{\hrulefill}\\
+    {\bf Klasse:} & {\class} &  {\bf Name:} & {\rule{5cm}{0.5pt}}\\
     {\bf Dauer:} & $45$ Minuten & {\bf Datum:} & {\date}\\[8pt]
 \end{tabular*}
 \endgroup
@@ -52,10 +52,18 @@
 \question[\totalpoints]
 \addpoints
 \begin{parts}
-	\part[1\half] Welcher Vektor entspricht der Menge aller Pfeile, die dieselbe Länge und Richtung haben wie der Pfeil von  $A\left(4\:\mid\:-3\:\mid\:-1\right)$ nach $B\left(6\:\mid\:9\:\mid\:9\right)$? %Barth3 K4.1 ÜA A1
-	\part[1\half] Gegeben ist ein Vektor $\v{v}=\Vec{3}{1}{-2}$. Berechne sein Endpunkt, wenn der Anfangspunkt die Koordinaten $(8\:\mid\:-4\:\mid\:2)$ hat. %Barth3 K4.1 ÜA A5
+	\part[1] Erkläre einem Laien in etwa zwei Sätzen, wie du entscheidest, ob ein Punkt auf einer Gerade liegt.
 \end{parts}
-\vspace{7pt}\antwort{20.5}
+\vspace{7pt}\antwort{6.5}
+\begin{parts}
+	\setcounter{partno}{1}
+	\part[2] Welche der folgenden Geraden passt nicht dazu? Begründe deine Antwort.
+	\begin{align*}
+		g:\v{r}=\Vec{3}{-5}{6}+t\*\Vec{6}{11}{-3}, &\qquad h:\v{r}=\Vec{9}{6}{3}+t\*\Vec{-6}{-11}{3},\\
+		l:\v{r}=\Vec{3}{-5}{6}+t\*\Vec{3}{6}{-3}, &\qquad m:\v{r}=\Vec{9}{6}{3}+t\*\Vec{2}{4}{-1}
+	\end{align*}
+\end{parts}
+\vspace{7pt}\antwort{10}
 
 
 %---------------------------------------------------------
@@ -64,78 +72,79 @@
 \question[\totalpoints]
 \addpoints
 \begin{parts}
-	\part[2] Erkläre einem Laien den Unterschied zwischen einem Punkt und seinem Ortsvektor. Veranschauliche deine Erklärung mit einer geeigneten Skizze. %Barth3 K4.1 SE A9
-	\part[2] Ein Dreieck hat die Eckpunkte  $A(0\:\mid\:0), B(3\:\mid\:4)$ und $C(2\:\mid\:7)$. Es wird nun zuerst um den Vektor $\v{v}=\vec{5}{-2}$ und danach um den Vektor $\v{w}=\vec{-3}{6}$ verschoben. Gib die Koordinaten der Eckpunkte des verschobenen Dreiecks an. %Barth3 K4.1 ÜA A8a
+	\part[3] Zeige, dass die beiden Geraden $g$ und $h$ parallel sind. \[g:\v{r}=\Vec{2}{2}{2}+s\*\Vec{9}{-3}{6}, \qquad h:\v{r}=\Vec{12}{-\frac{3}{2}}{9}+t\*\Vec{-6}{2}{-4}\]
 \end{parts}
-\vspace{7pt}\antwort{19}
+\antwort{9.5}
+\begin{parts}
+	\setcounter{partno}{1}
+	\part[2] Gib die Parametergleichung der Ebene $E$ an, die die beiden Geraden $g$ und $h$ enthält.
+\end{parts}
+\vspace{7pt}\antwort{10}
+
+
+%---------------------------------------------------------
+\newpage
+\question[4]
+Berechne den Schnittpunkt und den Schnittwinkel der beiden Geraden $g$ und $h$.
+\[g:\v{r}=\Vec{1}{-2}{-5}+s\*\Vec{4}{5}{6}, \qquad h:\v{r}=\Vec{-3}{0}{3}+t\*\Vec{3}{2}{1}\]
+\antwort{10}
+
+\question[2]
+Entscheide in der Tabelle unten, ob die Aussagen wahr oder falsch sind. Die Antworten müssen nicht begründet werden.\newline
+\begin{small}
+	Bewertung: Für $0-2$ korrekte Antworten gibt es keine Punkte; $3$ korrekte Antworten $1$ Punkt und falls alle Antworten korrekt sind, gibt es $2$ Punkte.
+\end{small}
+\begingroup
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|p{12cm}|c|c|}\hline
+		& wahr & falsch \\\hline
+		Der Punkt $P(1\mid 6\mid -3)$ liegt auf der Ebene $E:5x-y-2z-5=0$. & & \\\hline
+		Falls das Gleichungssystem zur Berechnung eines Durchstosspunktes keine Lösung besitzt, ist die Gerade vollständig in der Ebene enthalten. & & \\\hline
+		Zwei windschiefe Geraden besitzen keine gemeinsamen Punkte. & & \\\hline
+		Die Gerade $g:\v{r}=\Vec{0}{0}{7}+t\*\Vec{-6}{2}{4}$ enthält den Punkt $P(-21\mid 7\mid 21)$. & & \\\hline
+	\end{tabular}
+\end{table}
+\endgroup
+
+%---------------------------------------------------------
+\newpage
+\question[3]
+Gib die Koordinatengleichung der Ebene $F$ an, die Parallel zur Ebene $E$ liegt und den Punkt $P$ enthält. \[E:2x+y-3z-37=0\text{ und } P(4\mid 8\mid 7)\]
+\antwort{8.5}
+
+\question[4]
+Berechne den Durchstosspunkt der Ebene $E$ mit der Gerade $g$.
+\[g:\v{r}=\Vec{1}{2}{3}+u\*\Vec{0}{5}{-2},\qquad E:\v{r}=\Vec{1}{2}{4}+s\*\Vec{-1}{1}{4}+t\*\Vec{2}{2}{-5}\]
+\antwort{9}
 
 
 %---------------------------------------------------------
 \newpage
 \noaddpoints
-\question[\totalpoints] %DMK Geo2 S104 A102
+\question[\totalpoints]
 \addpoints
-Betrachte das abgebildete Viereck $ABCD$ mit den Seitenmitten $M$ und $N$.
-\begin{figure}[H]
-	\centering
-	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
-		>=latex,   %Voreinstellung für Pfeilspitzen
-		font= \footnotesize, scale=0.5]
-		%Vektoren
-		\draw[thick] (0,0) -- (6,-2);
-		\draw[->,thick] (6,-2) -- (3.5,5);
-		\draw[<-,thick] (3.5,5) -- (1,4);
-		\draw[->,thick] (0,0) -- (1,4);
-		\draw[myred,->,thick] (3,-1) -- (4.75,1.5);
-		%Punkte
-		\draw (3,-1) circle (2pt);
-		\draw (4.75,1.5) circle (2pt);
-		%Beschriftung
-		\node at (-0.2,-0.2) {$A$};
-		\node at (6.2,-2.2) {$B$};
-		\node at (3.7,5.2) {$C$};
-		\node at (0.8,4.2) {$D$};
-		\node at (3,-1.4) {$M$};
-		\node at (5.2,1.5) {$N$};
-		\node[myred] at (3.625,0.3) {$\vv{r}$};
-		\node at (0.15,2) {$\vv{u}$};
-		\node at (6.7,0) {$\vv{w}=\vv{BC}$};
-		\node at (2.25,4.85) {$\vv{v}$};
-	\end{tikzpicture}
-\end{figure}
-\begin{parts}
-	\part[2] Berechne den Vektor zwischen den Punkten $A$ und $B$ in Abhängigkeit der Vektoren $\v{u},\v{v}$ und $\v{w}$.
-	\part[2] Drücke den Vektor $\v{r}$ als Linearkombination der Vektoren $\v{u},\v{v}$ und $\v{w}$ aus.
-\end{parts}
-\vspace*{7pt}\antwort{16.5}
+In der Grundebene ($xy-$Ebene) befinden sich drei Dörfer bei den Koordinaten $A(9\mid2\mid0),\: B(1\mid8\mid0)$ und $C(9\mid12\mid0)$. Zwei Berggipfel haben die Koordinaten $D(5\mid4\mid6)$ und $E(3\mid6\mid8)$.\\
+\begin{minipage}{0.6\linewidth}
+	\begin{parts}
+		\part[2] Zeige durch Rechnung, dass das Dorf $A$ und die beiden Berggipfel $D$ und $E$ \textbf{nicht} auf einer Gerade liegen.
+		\part[3] In welchem Punkt $P$ der Grundebene $ABC$ befinden sich die beiden Bergspitzen genau auf einer Gerade?
+	\end{parts}
+\end{minipage}
+\hfill
+\begin{minipage}{0.375\linewidth}
+	\centering\includegraphics[scale=0.9]{vektor-bergdörfer.png}
+\end{minipage}
+\vspace{7pt}\antwort{18.5}
 
 
 %---------------------------------------------------------
 \newpage
-\question[3] %Barth3 K4.2 ÜA A1b
-Sei $\v{u}=\Vec{5}{2}{0}$, $\v{v}=\Vec{3}{-8}{1}$ und $\v{w}=\Vec{0.6}{4}{4}$.\newline Berechne $\displaystyle2\v{u}+3\v{v}-\frac{1}{2}\*\v{w}$.
-\vspace{7pt}\antwort{9.5}
-\vfill
-\question[3] %DMK Geo2 S93 A37a
-Im Dreieck $ABC$ sind die Ecke $C\left(7\:\mid\:-3\:\mid\:9\right)$ und die Seitenmitten $M_a\left(2\:\mid\:8\:\mid\:-4\right)$ und $M_b\left(5\:\mid\:1\:\mid\:-1\right)$ gegeben. Berechne den Mittelpunkt $M_c$.
-\vspace{7pt}\antwort{9.5}
+\question[6]
+Gegeben sind die Punkte $A(1\mid 0\mid 1), B(7\mid -9\mid 4)$ und $C(3\mid 0\mid -2)$. Bestimme die Punkte auf der Gerade durch $A$ und $B$, die vom Punkt $C$ den Abstand $5$ haben. \\ \textit{Tipp: Der Punkt C liegt nicht auf der Gerade.}
+\vspace{7pt}\antwort{22}
 
-
-%---------------------------------------------------------
-\newpage
-\question[4] % DMK Geo2 S104 A105c
-Berechne den Parameter $a$, sodass die Vektoren $\v{u}=\Vec{2}{a}{-6}$ und $\v{v}=\Vec{-3}{a+4}{9}$ gleich lang sind.
-\vspace{5pt}\antwort{9.5}
-\vfill
-\question[6] %DMK Geo2 S105 A106b
-Gegeben sind die Eckpunkte eine Dreiecks $A\left(-4\:\mid\:6\:\mid\:-8\right), B\left(6\:\mid\:2\:\mid\:14\right)$ und $C\left(-6\:\mid\:12\:\mid\:-17\right)$. Berechne den Winkel $\alpha$ bei Punkt $A$.
-\vspace{7pt}\antwort{9.5}
-
-%---------------------------------------------------------
-\newpage
-\question[5]
-Überprüfe, ob die Vektoren $\v{u}=\Vec{5}{4}{3}$ und $\v{v}=\Vec{2}{8}{-2}$ senkrecht zum Vektor $\v{n}=\Vec{-2}{1}{2}$ stehen.
-\vspace{7pt}\antwort{21}
 
 \end{questions}
 \end{document}
