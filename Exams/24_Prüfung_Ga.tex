@@ -8,7 +8,7 @@
 \newcommand{\teacher}{Jonas Guler}
 \newcommand{\class}{2Ga}
 \renewcommand{\date}{18.05.26}
-\graphicspath{{Algebra/data-algebra/},{Geometrie/data-geometrie},{Analysis/data-analysis}} % Setzt den Pfad zu den Bilder fest
+\graphicspath{{Algebra/data-algebra},{Geometrie/data-geometrie},{Analysis/data-analysis}} % Setzt den Pfad zu den Bilder fest
 %=========================================================
 \begin{document}
 \fontsize{14}{14}\selectfont
@@ -49,7 +49,9 @@
 %=========================================================
 %---------------------TESTFRAGEN
 %=========================================================
-\question[5] % Potenz- und Bruchumformungen
+\noaddpoints
+\question[\totalpoints]
+\addpoints
 \begin{parts}
 	\part[2] Alice weiss noch nicht, was Potenzen der Art $5^{-2}$, $10^{-2}$ oder $3^{-16}$ genau bedeuten. Gib ihr eine gut nachvollziehbare Motivation für die Definition $a^{-n}:=\frac{1}{a^n}$ (für eine von 0 verschiedene reelle Basis a und eine natürliche Zahl n) an.
 \end{parts}
@@ -75,7 +77,7 @@ Schreibe die folgenden Terme als eine einzige Potenz.
 
 %---------------------------------------------------------
 \newpage
-\question[5]
+\question[4]
 Ordne die Exponenten der folgenden Terme  der Grösse nach.
 \begin{itemcols}[5]
 	\item[\ ] $\displaystyle\left(\frac{1}{x}\right)^{-6}$
@@ -109,22 +111,63 @@ Entscheide in der Tabelle unten, ob die Aussagen wahr oder falsch sind. Die Antw
 %---------------------------------------------------------
 \newpage
 \question[5] % Potenzfunktionen
-
-\vspace{5pt}\antwort{20}
+\begin{minipage}{0.6\linewidth}
+	Zwei Potenzfunktionen der Form $f:y=a\*x^p$ sind im Graphen auf der rechten Seite abgebildet.
+	\begin{parts}
+		\part Gib die Funktionsgleichung der beiden skizzierten Potenzfunktionen an. Treffe dazu sinnvolle Annahmen für die Koordinaten der grau markierten Punkte. Du darfst nur diese Punkte verwenden.
+		\part Spiegle den \textcolor{plotblue}{blauen} Funktionsgraphen an der $x-$Achse. Gib die Funktionsgleichung sowie Definitions- und Wertemenge des gespiegelten Funktionsgraphen an.
+	\end{parts}
+\end{minipage}
+\hfill
+\begin{minipage}{0.375\linewidth}
+	\centering
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+		>=latex,   %Voreinstellung für Pfeilspitzen
+		font= \footnotesize, scale=0.7]
+		%Raster zeichnen
+		\draw [color=gray!50]  [step=10mm] (-4.3,-2.3) grid (4.3,8.3);
+		% Achsen zeichnen
+		\draw[->,thick] (-4.3,0) -- (4.8,0) node[right, below] {\normalsize $x$};
+		\draw[->,thick] (0,-2.3) -- (0,8.8) node[above, left] {\normalsize $y$};
+		% Achsen beschriften
+		\foreach \x in {-4,...,-2,-1,1,2,...,4} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+		\foreach \y in {-2,-1,1,2,...,8} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+		% Besserer Ursprung
+		\draw[color=black] (0pt,-7pt) node[right] {$0$};
+		%Funktionen zeichnen:
+		\clip(-4.3,-2.3) rectangle (4.3,8.3); %Bildbereich
+		\draw[plotblue,thick,domain=-4.3:-0.5,samples=100] plot (\x, {8/(\x)^3});
+		\draw[plotblue,thick,domain=0.5:4.3,samples=100] plot (\x, {8/(\x)^3});
+		\draw[forestgreen,thick,domain=-3:3,samples=200] plot (\x, {0.25*(\x)^4});
+		%Beschriftung
+		\draw[fill=black!40] (1,8) circle (3pt);
+		\draw[fill=black!40] (-2,-1) circle (3pt);
+		\draw[fill=black!40] (0,0) circle (3pt);
+		\draw[fill=black!40] (2,4) circle (3pt);
+	\end{tikzpicture}
+\end{minipage}
+\vspace{5pt}\antwort{16.5}
 
 
 %---------------------------------------------------------
 \newpage
-\question[5] % Kreisbogen
-
-\antwort{18.5}
+\question[5] % DMK Geo1 S97 A37a
+Der Durchmesser von Bobs Velorad misst $70$ cm. Er fährt jeden Tag $45$ Minuten von Zuhause zur Schule und zurück. In einer Stunde macht das Rad dabei $8185$ Umdrehungen. Wie weit ist Bobs Schulweg?
+\vspace{7pt}\antwort{23}
 
 
 %---------------------------------------------------------
 \newpage
-\question[5] % Kreisfläche
+\question[5] % DMK Geo1 S102 A67a
+\begin{minipage}{0.6\linewidth}
+	Eine Kreisscheibe mit Radius $1$ wird gemäss Zeichung rechts in vier flächengleiche Teile zerlegt. Die drei Teile auf dem äusseren Kreisring haben je den gleichen Flächeninhalt wie die innere Kreisscheibe.\\ Berechne die Breite $x$ des Kreisrings.
+\end{minipage}
+\hfill
+\begin{minipage}{0.375\linewidth}
+	\centering\includegraphics[scale=0.73]{kreis-scheibenteilung.png}
+\end{minipage}
 
-\vspace*{7pt}\antwort{21.5}
+\antwort{20.5}
 
 
 \end{questions}
