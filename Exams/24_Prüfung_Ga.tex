@@ -4,10 +4,10 @@
 \input{../Header/mathexpressions.sty}
 \input{../Header/headerExam.sty}
 %=========================================================
-\newcommand{\theme}{Quadratische Funktionen}
+\newcommand{\theme}{Potenzen und Kreise}
 \newcommand{\teacher}{Jonas Guler}
 \newcommand{\class}{2Ga}
-\renewcommand{\date}{01.04.26}
+\renewcommand{\date}{18.05.26}
 \graphicspath{{Algebra/data-algebra/},{Geometrie/data-geometrie},{Analysis/data-analysis}} % Setzt den Pfad zu den Bilder fest
 %=========================================================
 \begin{document}
@@ -19,7 +19,7 @@
 \begin{tabular*}{\textwidth}{l @{\extracolsep{6pt}}l @{\extracolsep{\fill}}l @{\extracolsep{6pt}}l}
 	\multicolumn{2}{l}{{\bf \theme}} & {\bf Note:} & {\answerbox}\\
 	\multicolumn{2}{l}{{\bf \teacher}} & & \\
-	{\bf Klasse:} & {\class} &  {\bf Name:} & {\hrulefill}\\
+	{\bf Klasse:} & {\class} &  {\bf Name:} & {\rule{5cm}{0.5pt}}\\
 	{\bf Dauer:} & $45$ Minuten & {\bf Datum:} & {\date}\\[8pt]
 \end{tabular*}
 \endgroup
@@ -34,8 +34,8 @@
     \vspace{5pt}
     Der Rechenweg muss \textbf{vollständig und nachvollziehbar} sein.\\
     Lösen Sie die Prüfung mit einen schwarzen oder blauen Kugelschreiber.\\
-    Als Hilfsmittel ist der Taschenrechner (TI - Nspire CX-II CAS) erlaubt.
-    %Als Hilfsmittel ist der kleine Taschenrechner (TI-30X o.ä.) erlaubt.
+    %Als Hilfsmittel ist der Taschenrechner (TI - Nspire CX-II CAS) erlaubt.
+    Als Hilfsmittel ist der kleine Taschenrechner (TI-30X o.ä.) erlaubt.
 \end{center}
 \rule[1ex]{\textwidth}{1pt}
 
@@ -49,100 +49,83 @@
 %=========================================================
 %---------------------TESTFRAGEN
 %=========================================================
-\noaddpoints
-\question[\totalpoints]
-\addpoints
+\question[5] % Potenz- und Bruchumformungen
 \begin{parts}
-	\part[3] Bringe die folgende Parabel in Scheitelpunktform. \[p(x)=3x^2+24x+46\]
+	\part[2] Alice weiss noch nicht, was Potenzen der Art $5^{-2}$, $10^{-2}$ oder $3^{-16}$ genau bedeuten. Gib ihr eine gut nachvollziehbare Motivation für die Definition $a^{-n}:=\frac{1}{a^n}$ (für eine von 0 verschiedene reelle Basis a und eine natürliche Zahl n) an.
 \end{parts}
-\vspace{5pt}\antwort{10.5}
+\vspace{7pt}\antwort{6.5}
 \begin{parts}
 	\setcounter{partno}{1}
-	\part[3] Fasse für einen Laien die Einflüsse der Parameter $a$, $u$ und $v$ der Scheitelpunktform auf die Veränderung der Parabel in Bezug auf die Normalparabel zusammen.
+	\part[4] Verwandle den folgenden Term in ein klammer- und nennerfreies Produkt. Schreibe dabei bei jeder Umformung das entsprechende Gesetz dazu. \[\frac{a^5b^{-4}}{c^3d^{-2}}\*\frac{0.6c^{-5}d^4}{ab^{-2}}\]
 \end{parts}
-\vspace{5pt}\antwort{10}
+\vspace{5pt}\antwort{12}
 
 
 %---------------------------------------------------------
 \newpage
-\noaddpoints
-\question[\totalpoints]
-\addpoints
-Betrachte die Parabel $p:y=-\frac{1}{4}x^2+\frac{3}{2}x$ und berechne...
-\begin{parts}
-	\part[2] die Nullstellen $x_1$ und $x_2$.
-	\part[2] die Koordinaten des Scheitelpunktes $S$.
-	\part[2] die Schnittpunkte der Parabel mir der Gerade $g:y=-\frac{1}{2}x+3$.
-\end{parts}
-\vspace*{7pt}\antwort{22}
+\question[6] % Barth K1.3 ÜA A2
+Schreibe die folgenden Terme als eine einzige Potenz.
+\begin{parcols}[3]
+	\part $\displaystyle \frac{1}{x^6}\div\frac{1}{x^2}$ %i
+	\part $\displaystyle \sqrt[10]{x}\*\left(\sqrt[4]{x}\div\sqrt[3]{x}\right)$ %p
+	\part $\displaystyle \left(\sqrt[3]{x^2}\div\left(\sqrt{x}\right)^3\right)\*\frac{1}{\sqrt[6]{x}}$ %x
+\end{parcols}
+\vspace{5pt}\antwort{22}
 
 
 %---------------------------------------------------------
 \newpage
-\noaddpoints
-\question[\totalpoints] %GZP23 A15
-\addpoints
-Die Leistung $P$ (in Watt) einer Turbine hängt von der Umdrehungszahl $n$ ab und wird mit der Funktionsgleichung $P(n)=600n-0.8n^2$ beschrieben.
-\begin{parts}
-	\part[1] Welche Leistung generiert die Turbine bei einer Umdrehungszahl von $15$?
-	\part[3] Bei welcher Umdrehungszahl ist die Leistung maximal und wie gross ist diese Leistung?
-	\part[1] Mit welcher Umdrehungszahl muss sich die Turbine drehen, damit sie eine Leistung von mindestens $100'000$ Watt erzielt?
-\end{parts}
+\question[5]
+Ordne die Exponenten der folgenden Terme  der Grösse nach.
+\begin{itemcols}[5]
+	\item[\ ] $\displaystyle\left(\frac{1}{x}\right)^{-6}$
+	\item[\ ] $\displaystyle\frac{1}{x^{2}}$
+	\item[\ ] $\displaystyle\sqrt[4]{x^8}$
+	\item[\ ] $\displaystyle\sqrt[4]{x}$
+	\item[\ ] $\displaystyle\frac{1}{\sqrt[3]{x^9}}$
+\end{itemcols}
+\vspace*{7pt}\antwort{10.5}
+\vfill
+\question[2]
+Entscheide in der Tabelle unten, ob die Aussagen wahr oder falsch sind. Die Antworten müssen nicht begründet werden.\newline
+\begin{small}
+	Bewertung: Für $0-2$ korrekte Antworten gibt es keine Punkte; $3$ korrekte Antworten $1$ Punkt und falls alle Antworten korrekt sind, gibt es $2$ Punkte.
+\end{small}
+\begingroup
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|p{12cm}|c|c|}\hline
+		& wahr & falsch \\\hline
+		Falls $a\neq0$ gilt, dann ist folgende Umformung korrekt  $a^{-3}+a^{-3}+a^{-3}=a^{-2}$. & & \\\hline
+		$\displaystyle 9^{\frac{3}{2}}\in\N$ & & \\\hline
+		Falls $a\neq0$ gilt, dann ist folgende Umformung korrekt  $\displaystyle \left(a^2\right)^2=a^{\left(2^2\right)}$. & & \\\hline
+		Falls $a\neq0$ gilt, dann ist folgende Umformung korrekt  $2^{-3}\*(-2)^3=1$. & & \\\hline
+	\end{tabular}
+\end{table}
+\endgroup
+\antwort{3.5}
+
+%---------------------------------------------------------
+\newpage
+\question[5] % Potenzfunktionen
+
 \vspace{5pt}\antwort{20}
 
 
 %---------------------------------------------------------
 \newpage
-\question[5] %GZP22 A12
-\begin{minipage}[t]{0.5\linewidth}
-	Die Graphen welcher quadratischer Funktionen sind im Graphen rechts abgebildet? Gib die jeweiligen Funktionsgleichungen an. Treffe naheliegende Annahmen über die Koordinaten gewisser Punkte.
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.475\linewidth}
-	\centering\vspace{-0.7\baselineskip}
-	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
-		>=latex,   %Voreinstellung für Pfeilspitzen
-		font= \footnotesize, scale=0.5]
-		%Raster zeichnen
-		\draw [color=gray!50]  [step=10mm] (-3.6,-5.6) grid (8.6,6.6);
-		% Achsen zeichnen
-		\draw[->,thick] (-3.8,0) -- (8.8,0) node[right, below] {\normalsize $x$};
-		\draw[->,thick] (0,-5.8) -- (0,6.8) node[above, left] {\normalsize $y$};
-		% Achsen beschriften
-		\foreach \x in {-3,...,-1,1,2,...,8} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
-		\foreach \y in {-5,-4,...,-1,1,2,...,6} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
-		% Besserer Ursprung
-		\draw[color=black] (7pt,-10pt) node {$0$};
-		%Funktionen zeichnen:
-		\clip(-3.6,-5.6) rectangle (8.6,6.6); %Bildbereich
-		\draw[orange,thick,domain=-3.5:6.5,samples=100] plot (\x, {-2*(\x)^2+8*\x-2});
-		\draw[forestgreen,thick,domain=-3.5:8.5,samples=100] plot (\x, {-1/4*(\x)^2+3/2*\x});
-		%Punkte
-		\draw[fill=black!40] (0,0) circle (3pt);
-		\draw[fill=black!40] (4,2) circle (3pt);
-		\draw[fill=black!40] (6,0) circle (3pt);
-		\draw[fill=black!40] (2,6) circle (3pt);
-		\draw[fill=black!40] (3,4) circle (3pt);
-	\end{tikzpicture}
-\end{minipage}
+\question[5] % Kreisbogen
+
 \antwort{18.5}
 
 
 %---------------------------------------------------------
 \newpage
-\noaddpoints
-\question[\totalpoints] %GZP23 A14
-\addpoints
-Gegeben sind die beiden Funktionen $f:y=3\*(x+4)^2-2$ und $g:y=-2.5x+2$.
-\begin{parts}
-	\part[2] Berechne die $x-$Koordinaten der Schnittpunkte der Graphen von $f$ und $g$.
-	\part[4] Die Graphen von $f$ und $g$ werden an der $x-$Achse gespiegelt. Bestimme die Funktionsgleichungen der gespiegelten Graphen $f'$ und $g'$.
-\end{parts}
+\question[5] % Kreisfläche
+
 \vspace*{7pt}\antwort{21.5}
 
-
-%---------------------------------------------------------
-{\bf Reserve:\vspace{7pt}\antwort{25}}
 
 \end{questions}
 \end{document}
