@@ -120,8 +120,8 @@
 % Vektorgeometrie
 %%
 \renewcommand{\v}[1]{\vv{#1}}       % besserer Pfeil über Buchstaben
-\renewcommand{\vec}[2]{\begingroup\renewcommand{\arraystretch}{1}\left(\begin{array}{c} #1 \\ #2 \end{array}\right)\endgroup}   % two dimensional vector
-\renewcommand{\Vec}[3]{\begingroup\renewcommand{\arraystretch}{1}\left(\begin{array}{c} #1 \\ #2 \\ #3 \end{array}\right)\endgroup}      % three dimensional vector
+\renewcommand{\vec}[2]{\begingroup\renewcommand{\arraystretch}{1}\begin{pmatrix} #1 \\ #2 \end{pmatrix}\right)\endgroup}   % two dimensional vector
+\renewcommand{\Vec}[3]{\begingroup\renewcommand{\arraystretch}{1}\begin{pmatrix} #1 \\ #2 \\ #3 \end{pmatrix}\endgroup}      % three dimensional vector
 \let\oldmid\mid
 \renewcommand{\mid}{\,\oldmid\,} % grösseren Abstand zwischen Koordinaten eines Punktes
 
