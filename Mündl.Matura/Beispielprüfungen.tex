@@ -1,0 +1,68 @@
+\documentclass[11pt]{exam}
+\input{../Header/packages.sty}
+\input{../Header/headerMündl.Matura.sty}
+\input{../Header/styleMündl.Matura.sty}
+\input{../Header/mathexpressions.sty}
+\graphicspath{{images/}}
+%=========================================================
+\newcommand{\school}{KS Heerbrugg}
+\newcommand{\fach}{Mündliche Matura Mathematik}
+\newcommand{\teacher}{Jonas Guler}
+\newcommand{\myyear}{2026}
+\newcommand{\mastertitle}{Beispielprüfungen}
+%=========================================================
+\fontsize{12}{12}\selectfont
+%definiert die Version
+%\printanswers % falls kommentiert werden die Schülerversionen angezeigt
+%=========================================================
+\begin{document}
+\noindent
+\begin{small}
+	\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}}l @{\extracolsep{7pt}}l}
+		\fach & & \teacher\\
+		\school & & \myyear\\
+	\end{tabular*}
+\end{small}
+\vspace{0.75cm}\\
+\rule[1ex]{\textwidth}{1pt}
+\begin{center}
+	{\bf\huge\mastertitle}\\
+\end{center}
+\rule[1ex]{\textwidth}{1pt}\\
+\tableofcontents
+%=========================================================
+%-------------------TESTFRAGEN
+%=========================================================
+\bereich{Vektor}
+\titel{Gerade, Winkel zwischen Geraden}
+\begin{aufgabe}
+	Gegeben ist die Gerade $g:\Vec{x}{y}{z}=\Vec{3}{-2}{2}+t\*\Vec{1}{-1}{2}$ und die Punkte $A(-1\mid2\mid1)$ und $B(3\mid4\mid-7)$.\\
+	\begin{parts}
+		\part Wie prüft man, ob $A$ und/oder $B$ auf der Geraden liegen?
+		\bl Wie sieht man, ob AB eine Gerade ist, die ev. parallel oder senkrecht zu $g$ verläuft?\el
+		\part Jetzt sucht man den Punkt $P$ auf $g$, der von $A$ und $B$ gleich weit entfernt ist. Wie geht man dabei vor?
+		\part Wie bestimmt man den Winkel zwischen zwei Geraden?
+		\bl \part $g$ und $A$ definieren eine Ebene. Ebenengleichung? Abstand von B von E? \el
+		\bl \part Abstand zweier Geraden, wenn Windschief?
+		\el
+	\end{parts}
+\end{aufgabe}
+
+
+%
+\bereich{Vektor}
+\titel{Ebene, Pyramide}
+\begin{aufgabe}
+	Gegeben sind die Punkte $A(2\mid2\mid1)$, $B(0\mid1\mid1)$ und $S(1\mid2\mid3)$ von einer Pyramide mit quadratischer Grundfläche $ABCD$ und Spitze $S$. Die Grundfläche liegt in der Ebene $E: x-2y+2z=0$.
+	\begin{parts}
+		\part Wie weisst man nach, dass $A$ und $B$ in der Ebene liegen?
+		\part Bestimme das Volumen der Pyramide.
+		\part Wie könnte man die beiden fehlenden Ecken bestimmen.
+		\bl Kreuzprodukt von Normalvektor und Verbindungsvektor $\v{AB}$, dann auf gleiche Länge skalieren.  \el
+		\bl \part Winkel zwischen AB und AS? \[ \cos(\varphi)=\frac{\v{a}\cdot \v{b}}{\abs{\v{a}}\abs{\v{b}}}\] \el
+		% nur NP \bl \part Angenommen S würde mittig über der quadratischen Grundfläche liegen. Wie könntest du Mittelpunkt und Radius der Inkugel bestimmen? \el
+		\bl \part Von der Pyramidenspitze wird ein Lichtstrahl senkrecht zur Grundfläche ausgestrahlt. Wie würdest du dessen Schnittpunkt mit einer weiteren Ebene bestimmen? Reflektion?\el
+	\end{parts}
+\end{aufgabe}
+
+\end{document}
