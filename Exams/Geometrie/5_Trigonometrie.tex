@@ -3,6 +3,7 @@
 \input{../../Header/styleExam.sty}
 \input{../../Header/headerQuestion.sty}
 \input{../../Header/mathexpressions.sty}
+\graphicspath{{data-geometrie/}}
 %=========================================================
 \newcommand{\theme}{Trigonometrie}
 \newcommand{\teacher}{Jonas Guler}
@@ -17,8 +18,434 @@
 %=========================================================
 %-------------------TESTFRAGEN
 %=========================================================
-\question[2]
-Hier sollte vermutlich irgendetwas stehen.
+\question[5] %Rhyn S2 A9f
+\begin{minipage}{0.6\linewidth}
+	Berechne alle fehlenden Seiten und Winkel, wenn
+	\[c=7.68\quad\text{ und }\quad\alpha=3\beta\]
+	gegeben sind.
+\end{minipage}
+\hfill
+\begin{minipage}{0.35\linewidth}
+	\centering\includegraphics[scale=0.6]{trigo-dreieck.png}
+\end{minipage}
+
+
+%---------------------------------------------------------
+\question[6] %Rhyn S2 A10f
+\begin{minipage}{0.6\linewidth}
+	Berechne alle fehlenden Seiten und Winkel, wenn
+	\[h_c=9.1\quad\text{ und }\quad p=6\]
+	gegeben sind.
+\end{minipage}
+\hfill
+\begin{minipage}{0.35\linewidth}
+	\centering\includegraphics[scale=0.6]{trigo-dreieck.png}
+\end{minipage}
+
+
+%---------------------------------------------------------
+\question[5] % Funktionsgraphen
+\textbf{Beachte:} Lösungswege mit Hilfe des Taschenrechners geben keine Punkte!
+\begin{parts}
+	\part Zeichne den Winkel $\alpha=230^\circ$ im Einheitskreis ein und gib den Sinus-, Cosinus- und Tangenswert von $\alpha$ an.
+\end{parts}
+\vspace{5pt}
+\begin{figure}[H]
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+		>=latex,   %Voreinstellung für Pfeilspitzen
+		font= \footnotesize, scale=3]
+		%Raster zeichnen
+		% \draw [color=gray!50]  [step=7.5mm] (-1.3,-5.3) grid (14.8,5.8);
+		% Achsen zeichnen
+		\draw[->,thick] (-1.1,0) -- (1.2,0) node[right, below] {\normalsize $x$};
+		\draw[->,thick] (0,-1.1) -- (0,1.2) node[above, left] {\normalsize $y$};
+		% Achsen beschriften
+		\foreach \x in {-1,1} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+		\foreach \y in {-1,1} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+		% Besserer Ursprung
+		\draw[color=black] (0pt,-7pt) node[right] {$0$};
+		%Funktionen zeichnen:
+		\clip(-1.1,-1.1) rectangle (1.1,1.1); %Bildbereich
+		\draw circle [radius=1];
+	\end{tikzpicture}
+\end{figure}
+\begin{parts}
+	\setcounter{partno}{1}
+	\part Berechne alle Winkel $\beta$ zwischen $0^\circ$ und $360^\circ$ für welche gilt: \[\cos{\beta}=-0.65\]
+\end{parts}
+\begin{figure}[H]
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+		>=latex,   %Voreinstellung für Pfeilspitzen
+		font= \footnotesize, scale=3]
+		%Raster zeichnen
+		\draw [color=gray!50]  [step=2mm] (-1,-1) grid (1,1);
+		% Achsen zeichnen
+		\draw[->,thick] (-1.1,0) -- (1.2,0) node[right, below] {\normalsize $x$};
+		\draw[->,thick] (0,-1.1) -- (0,1.2) node[above, left] {\normalsize $y$};
+		% Achsen beschriften
+		\foreach \x in {-1,1} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+		\foreach \y in {-1,1} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+		% Besserer Ursprung
+		\draw[color=black] (0pt,-7pt) node[right] {$0$};
+		%Funktionen zeichnen:
+		\clip(-1.1,-1.1) rectangle (1.1,1.1); %Bildbereich
+		\draw circle [radius=1];
+	\end{tikzpicture}
+\end{figure}
+
+
+%---------------------------------------------------------
+\question[5] % Funktionsgraphen
+\textbf{Beachte:} Lösungswege mit Hilfe des Taschenrechners geben keine Punkte!
+\begin{parts}
+	\part Zeichne den Winkel $\alpha=-65^\circ$ im Einheitskreis ein und gib den Sinus-, Cosinus- und Tangenswert von $\alpha$ an.
+\end{parts}
+\vspace{5pt}
+\begin{figure}[H]
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+		>=latex,   %Voreinstellung für Pfeilspitzen
+		font= \footnotesize, scale=3]
+		%Raster zeichnen
+		% \draw [color=gray!50]  [step=7.5mm] (-1.3,-5.3) grid (14.8,5.8);
+		% Achsen zeichnen
+		\draw[->,thick] (-1.1,0) -- (1.2,0) node[right, below] {\normalsize $x$};
+		\draw[->,thick] (0,-1.1) -- (0,1.2) node[above, left] {\normalsize $y$};
+		% Achsen beschriften
+		\foreach \x in {-1,1} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+		\foreach \y in {-1,1} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+		% Besserer Ursprung
+		\draw[color=black] (0pt,-3pt) node[right] {$0$};
+		%Funktionen zeichnen:
+		\clip(-1.1,-1.1) rectangle (1.1,1.1); %Bildbereich
+		\draw circle [radius=1];
+	\end{tikzpicture}
+\end{figure}
+\begin{parts}
+	\setcounter{partno}{1}
+	\part Berechne alle Winkel $\beta$ zwischen $0^\circ$ und $360^\circ$ für welche gilt: \[\tan{\beta}=-2\]
+\end{parts}
+\begin{figure}[H]
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+		>=latex,   %Voreinstellung für Pfeilspitzen
+		font= \footnotesize, scale=3]
+		%Raster zeichnen
+		\draw [color=gray!50]  [step=2mm] (-1,-1) grid (1,1);
+		% Achsen zeichnen
+		\draw[->,thick] (-1.1,0) -- (1.2,0) node[right, below] {\normalsize $x$};
+		\draw[->,thick] (0,-1.1) -- (0,1.2) node[above, left] {\normalsize $y$};
+		% Achsen beschriften
+		\foreach \x in {-1,1} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+		\foreach \y in {-1,1} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+		% Besserer Ursprung
+		\draw[color=black] (0pt,-7pt) node[right] {$0$};
+		%Funktionen zeichnen:
+		\clip(-1.1,-1.1) rectangle (1.1,1.1); %Bildbereich
+		\draw circle [radius=1];
+	\end{tikzpicture}
+\end{figure}
+
+
+%---------------------------------------------------------
+\noaddpoints
+\question[3] % Funktionsgraphen
+\addpoints
+\textbf{Beachte:} Lösungswege mit Hilfe des Taschenrechners gibt keine Punkte!
+\begin{parts}
+	\part[3] Zeichne den Winkel $\alpha=135^\circ$ im Einheitskreis ein und schätze den Sinus-, Cosinus- und Tangenswert von $\alpha$ an.
+\end{parts}
+\vspace{5pt}
+\begin{figure}[H]
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+		>=latex,   %Voreinstellung für Pfeilspitzen
+		font= \footnotesize, scale=2.8]
+		%Raster zeichnen
+		\draw [color=gray!50]  [step=2mm] (-1,-1) grid (1,1);
+		% Achsen zeichnen
+		\draw[->,thick] (-1.1,0) -- (1.3,0) node[right, below] {\normalsize $x$};
+		\draw[->,thick] (0,-1.1) -- (0,1.3) node[above, left] {\normalsize $y$};
+		% Achsen beschriften
+		\foreach \x in {-1,1} \draw (\x,-.03) -- (\x,.03);
+		\foreach \y in {-1,1} \draw (-.03,\y) -- (.03,\y);
+		\draw[color=black] (1.05,-.1) node {$1$};
+		\draw[color=black] (-.05,1.1) node {$1$};
+		\draw[color=black] (-1.1,-.1) node {$-1$};
+		\draw[color=black] (-.1,-1.1) node {$-1$};
+		% Besserer Ursprung
+		\draw[color=black] (0pt,-3pt) node[right] {$0$};
+		% Funktionen zeichnen:
+		\clip(-1.1,-1.1) rectangle (1.1,1.1); %Bildbereich
+		\draw circle [radius=1];
+	\end{tikzpicture}
+\end{figure}
+\begin{parts}
+	\setcounter{partno}{1}
+	\part[2] Berechne alle Winkel $\beta$ zwischen $0^\circ$ und $360^\circ$ für welche gilt: \[\sin{\beta}=-0.65\]
+\end{parts}
+\begin{figure}[H]
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+		>=latex,   %Voreinstellung für Pfeilspitzen
+		font= \footnotesize, scale=2.8]
+		%Raster zeichnen
+		\draw [color=gray!50]  [step=2mm] (-1,-1) grid (1,1);
+		% Achsen zeichnen
+		\draw[->,thick] (-1.1,0) -- (1.3,0) node[right, below] {\normalsize $x$};
+		\draw[->,thick] (0,-1.1) -- (0,1.3) node[above, left] {\normalsize $y$};
+		% Achsen beschriften
+		\foreach \x in {-1,1} \draw (\x,-.03) -- (\x,.03);
+		\foreach \y in {-1,1} \draw (-.03,\y) -- (.03,\y);
+		\draw[color=black] (1.05,-.1) node {$1$};
+		\draw[color=black] (-.05,1.1) node {$1$};
+		\draw[color=black] (-1.1,-.1) node {$-1$};
+		\draw[color=black] (-.1,-1.1) node {$-1$};
+		% Besserer Ursprung
+		\draw[color=black] (0pt,-3pt) node[right] {$0$};
+		% Funktionen zeichnen:
+		\clip(-1.1,-1.1) rectangle (1.1,1.1); %Bildbereich
+		\draw circle [radius=1];
+	\end{tikzpicture}
+\end{figure}
+
+%---------------------------------------------------------
+\question[5] % Funktionsgraphen
+\textbf{Beachte:} Lösungswege mit Hilfe des Taschenrechners gibt keine Punkte!
+\begin{parts}
+	\part Zeichne den Winkel $\alpha=165^\circ$ im Einheitskreis ein und gib den Sinus-, Cosinus- und Tangenswert von $\alpha$ an.
+\end{parts}
+\vspace{5pt}
+\begin{figure}[H]
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+		>=latex,   %Voreinstellung für Pfeilspitzen
+		font= \footnotesize, scale=3]
+		%Raster zeichnen
+		% \draw [color=gray!50]  [step=7.5mm] (-1.3,-5.3) grid (14.8,5.8);
+		% Achsen zeichnen
+		\draw[->,thick] (-1.1,0) -- (1.2,0) node[right, below] {\normalsize $x$};
+		\draw[->,thick] (0,-1.1) -- (0,1.2) node[above, left] {\normalsize $y$};
+		% Achsen beschriften
+		\foreach \x in {-1,1} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+		\foreach \y in {-1,1} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+		% Besserer Ursprung
+		\draw[color=black] (0pt,-7pt) node[right] {$0$};
+		%Funktionen zeichnen:
+		\clip(-1.1,-1.1) rectangle (1.1,1.1); %Bildbereich
+		\draw circle [radius=1];
+	\end{tikzpicture}
+\end{figure}
+\begin{parts}
+	\setcounter{partno}{1}
+	\part Berechne alle Winkel $\beta$ zwischen $0^\circ$ und $360^\circ$ für welche gilt: \[\cot{\beta}=-1.5\]
+\end{parts}
+\begin{figure}[H]
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+		>=latex,   %Voreinstellung für Pfeilspitzen
+		font= \footnotesize, scale=3]
+		%Raster zeichnen
+		\draw [color=gray!50]  [step=2mm] (-1,-1) grid (1,1);
+		% Achsen zeichnen
+		\draw[->,thick] (-1.1,0) -- (1.2,0) node[right, below] {\normalsize $x$};
+		\draw[->,thick] (0,-1.1) -- (0,1.2) node[above, left] {\normalsize $y$};
+		% Achsen beschriften
+		\foreach \x in {-1,1} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+		\foreach \y in {-1,1} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+		% Besserer Ursprung
+		\draw[color=black] (0pt,-7pt) node[right] {$0$};
+		%Funktionen zeichnen:
+		\clip(-1.1,-1.1) rectangle (1.1,1.1); %Bildbereich
+		\draw circle [radius=1];
+	\end{tikzpicture}
+\end{figure}
+
+
+%---------------------------------------------------------
+\question[4] %GZP 13 A8
+Berechne in der folgenden Figur den Winkel $\phi$.
+\begin{figure}[H]
+	\centering\includegraphics[scale=1]{trigo-thalesähnlichkeit.png}
+\end{figure}
+
+
+%---------------------------------------------------------
+\question[3] % GZP 14 A9
+Es gilt: \[\sin{(\alpha)}=\frac{4}{5}.\]
+Berechne \begin{parts}
+	\part $\cos{(\alpha)}$ \part $\tan{(\alpha)}$
+\end{parts}
+ohne den Winkel $\alpha$ explizit zu berechnen.
+
+
+%---------------------------------------------------------
+\question[4] % GZP 14 A15
+\begin{minipage}{0.575\linewidth}
+	Ein Aussichtsturm steht $30$m vom diesseitigen Kanalufer entfernt. Von der Aussichtsplattform $S$ aus erscheint das diesseitige Kanalufer unter einem Winkel von $\alpha=24.5^\circ$ und das jenseitige unter dem Winkel $\beta=64^\circ.$\vspace{5pt}
+	\begin{parts}
+		\part Wie hoch ist der Aussichtsturm?
+		\part Wie breit ist der Kanal?
+	\end{parts}
+\end{minipage}
+\hfill
+\begin{minipage}{0.4\linewidth}
+	\centering\includegraphics[scale=0.5]{trigo-aussichtsturm.png}
+\end{minipage}
+
+
+%---------------------------------------------------------
+\question[4] % GZP 14 A17
+Im rechtwinkligen Dreieck $ABC$ mit Hypotenuse $c$ sind die Seite $a=6$ und die Seitenhalbierende $s_a=13$ gegeben. Berechne die Höhe $h_c$.
+
+
+%---------------------------------------------------------
+\question[6] % GZP 15 A7
+Kreuze an, ob die folgenden Aussagen oder Gleichungen richtig oder falsch sind.\\
+\begingroup
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|c|c}
+		& richtig & falsch\\\hline
+		$\sin{\alpha}=\sin{180^\circ-\alpha}$ & & \\
+		$\cos{180^\circ-\beta}=\cos{180^\circ+\beta}$ & & \\
+		$\tan{\alpha}>0$ für $90^\circ<\alpha<180^\circ$ & & \\
+		$\cos{\alpha}=\sin{\alpha}$ für $\alpha=\frac{\pi}{6}$ & & \\
+		$\sin{360^\circ-\beta}=\sin{180^\circ-\beta}$ & & \\
+		In einem Dreieck mit $\gamma=90^\circ$ gilt: $\sin{\alpha}=\cos{90^\circ-\alpha}$ & & \\
+	\end{tabular}
+\end{table}
+\endgroup
+
+%---------------------------------------------------------
+\question[3] % GZP 15 A16
+In einem rechtwinkligen Dreieck $ABC$ mit Hypotenuse $c$ sind die Seite $a=7$ und die Seitenhalbierende $s_a=4.5$ gegeben. Berechne die Länge der Winkelhalbierenden $w_\beta$.
+
+
+%---------------------------------------------------------
+\question[4] % GZP 16 A12
+Berechne \[\oldcos^2(\alpha)\*\tan{\alpha}-\oldsin^2(\alpha)\*\frac{1}{\tan{\alpha}}\]
+
+
+%---------------------------------------------------------
+\question[4] %GZP 18 A20
+Im Rechteck $ABCD$ beträgt $\overline{AD}=10$cm, $\alpha=30^\circ$ und $\beta=70^\circ$. Berechne die Strecke $\overline{CE}$.
+\begin{figure}[H]
+	\centering\includegraphics[scale=0.5]{trigo-rechteckstrecke.png}
+\end{figure}
+
+
+%---------------------------------------------------------
+\question[3] % Barth Band 2 Kap. 5.7 A1d
+Berechne die fehlenden Seitenlängen und Winkel im Dreieck $ABC$, wenn gilt: \[a=6,\quad b=5\quad\text{und}\quad \alpha=40^\circ.\]
+
+
+%---------------------------------------------------------
+\question[3] %Rhyn S9 A58
+Von einem Parallelogramm $ABCD$ sind die Seiten $a=83$ und $b=109$ sowie die Diagonale $f=\overline{BD}=42$ gegeben. Berechne alle $4$ Innenwinkel dieses Parallelogramms?
+
+
+%---------------------------------------------------------
+\question[4] % Rhyn S6 A41
+Ein Satellit befindet sich $100$km über dem Atlantik.\\
+\textit{Tipp: } Der Erdradius beträgt $6370$km.
+\begin{parts}
+	\part Unter welchem Winkel ist der Rand der Erdkugel sichtbar?
+	\part In welcher Entfernung ist der Rand der Erdkugel sichtbar?
+\end{parts}
+
+%---------------------------------------------------------
+\question[3] % NW1 S188 A4
+Welche der untenstehenden Winkel haben den gleichen Sinuswert?
+\[\frac{\pi}{2},\qquad150^\circ, \qquad\frac{3\pi}{4}, \qquad90^\circ, \qquad\frac{\pi}{6}, \qquad45^\circ\]
+Begründe mit Hilfe des Einheitskreises und ohne Verwendung des Taschenrechners.
+\begin{figure}[H]
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+		>=latex,   %Voreinstellung für Pfeilspitzen
+		font= \footnotesize, scale=3]
+		%Raster zeichnen
+		% \draw [color=gray!50]  [step=7.5mm] (-1.3,-5.3) grid (14.8,5.8);
+		% Achsen zeichnen
+		\draw[->,thick] (-1.1,0) -- (1.2,0) node[right, below] {\normalsize $x$};
+		\draw[->,thick] (0,-1.1) -- (0,1.2) node[above, left] {\normalsize $y$};
+		% Achsen beschriften
+		\foreach \x in {-1,1} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+		\foreach \y in {-1,1} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+		% Besserer Ursprung
+		\draw[color=black] (0pt,-7pt) node[right] {$0$};
+		%Funktionen zeichnen:
+		\clip(-1.1,-1.1) rectangle (1.1,1.1); %Bildbereich
+		\draw circle [radius=1];
+	\end{tikzpicture}
+\end{figure}
+
+
+%---------------------------------------------------------
+\question[4] % NW1 S188 A8
+Welche der untenstehenden Winkel haben den gleichen Cosinuswert?
+\[\frac{\pi}{2},\quad-270^\circ, \quad-120^\circ, \quad-90^\circ, \quad\frac{5\pi}{4}, \quad120^\circ, \quad135^\circ,\quad\frac{2\pi}{3}\]
+Begründe mit Hilfe des Einheitskreises und ohne Verwendung des Taschenrechners.
+\begin{figure}[H]
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+		>=latex,   %Voreinstellung für Pfeilspitzen
+		font= \footnotesize, scale=2.8]
+		%Raster zeichnen
+		%\draw [color=gray!50]  [step=2mm] (-1,-1) grid (1,1);
+		% Achsen zeichnen
+		\draw[->,thick] (-1.1,0) -- (1.3,0) node[right, below] {\normalsize $x$};
+		\draw[->,thick] (0,-1.1) -- (0,1.3) node[above, left] {\normalsize $y$};
+		% Achsen beschriften
+		\foreach \x in {-1,1} \draw (\x,-.03) -- (\x,.03);
+		\foreach \y in {-1,1} \draw (-.03,\y) -- (.03,\y);
+		\draw[color=black] (1.05,-.1) node {$1$};
+		\draw[color=black] (-.05,1.1) node {$1$};
+		\draw[color=black] (-1.1,-.1) node {$-1$};
+		\draw[color=black] (-.1,-1.1) node {$-1$};
+		% Besserer Ursprung
+		\draw[color=black] (0pt,-3pt) node[right] {$0$};
+		% Funktionen zeichnen:
+		\clip(-1.1,-1.1) rectangle (1.1,1.1); %Bildbereich
+		\draw circle [radius=1];
+	\end{tikzpicture}
+\end{figure}
+
+
+%---------------------------------------------------------
+\question[4]
+\begin{minipage}{0.6\linewidth}
+	Du siehst von zwei verschiedenen Punkten, $A$ und $B$, die Spitze des Säntis. Beide Punkte befinden sich $400$m über Meer. Die Distanz zwischen $A$ und $B$ beträgt exakt $8.1$km. Beim Punkt $A$ siehst du die Spitze unter einem Winkel $\alpha=6^\circ$ und bei $B$ gilt $\beta=10^\circ$.\vspace{5pt}
+	\begin{parts}
+		\part Zeige rechnerisch, dass der Säntis ca. $2500$m hoch ist.
+		\part Wie nahe bist du dem Säntis vom Punkt $B$?
+	\end{parts}
+\end{minipage}
+\hfill
+\begin{minipage}{0.35\linewidth}
+	\centering\includegraphics[scale=0.6]{trigo-aussichtspunkt.png}
+\end{minipage}
+
+
+%---------------------------------------------------------
+\question[3]
+Entscheide, ob die Aussagen in der Tabelle unten wahr oder falsch sind. Die Antworten müssen nicht begründet werden.\newline
+\begin{small}
+	Bewertung: Für $0-2$ richtige Antworten gibt es keine Punkte, $3$ richtige Antworten geben $1.5$ Punkte und falls alle Antworten richtig sind $3$ Punkte.
+\end{small}
+\begingroup
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|c|c|}\hline
+		& wahr & falsch\\\hline
+		$\sin{\alpha}=\sin{\pi-\alpha}$ & & \\\hline
+		$\cos{\pi-\beta}=\cos{\pi+\beta}$ & & \\\hline
+		$\tan{\alpha}>0$ für $90^\circ<\alpha<180^\circ$ & & \\\hline
+		In einem Dreieck mit $\gamma=90^\circ$ gilt: $\sin{\alpha}=\cos{90^\circ-\alpha}$ & & \\\hline
+		$\displaystyle\sin{90^\circ-\alpha}=\sin{90^\circ+\alpha}$ &  & \\\hline
+		$\displaystyle\cos{\alpha}=-\cos{-\alpha}$ &  & \\\hline
+		$\displaystyle\oldsin^2(\alpha)+\oldcos^2(\alpha)=\oldtan^2(\alpha)$ &  & \\\hline
+		$\displaystyle\tan{270^\circ}$ ist nicht definiert. &  & \\\hline
+	\end{tabular}
+\end{table}
+\endgroup
+
+
+
 
 \end{questions}
 \end{document}
