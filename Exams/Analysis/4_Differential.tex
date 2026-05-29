@@ -105,14 +105,14 @@ Eine Eiche, die im Jahr  $2010$ eine Höhe von $10$ Metern hatte, erreichte im J
 Zeichne im unten abgebildeten Graphen die folgenden Stellen und Bereiche ein:
 \begin{parts}
 	\part[2] Alle Stellen, die Steigung gleich $0$ haben.
-	\part[2\half] Alle Bereiche, die positive bzw. negative Steigung haben.
-	\part[1\half] Alle Stellen, an denen die Steigung am grössten ist.
+	\part[2\half] Alle Bereiche, die \textcolor{plotblue}{positive} resp. \textcolor{forestgreen}{negative} Steigung haben mit unterschiedlicher Farbe.
+	\part[1\half] Alle Stellen im Intervall $\left[-2.5,2.5\right]$, an denen die Steigung betragsmässig am grössten ist.
 \end{parts}
 \begin{figure}[H]
 	\centering
 	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
 		>=latex,   %Voreinstellung für Pfeilspitzen
-		font= \footnotesize, scale=1.5]
+		font= \footnotesize, scale=1.3]
 		%Raster zeichnen
 		\draw [color=gray!50]  [step=10mm] (-4.3,-4.3) grid (4.3,4.3);
 		% Achsen zeichnen
@@ -125,15 +125,15 @@ Zeichne im unten abgebildeten Graphen die folgenden Stellen und Bereiche ein:
 		\draw[color=black] (0pt,-7pt) node[right] {$0$};
 		%Funktionen zeichnen:
 		\clip(-4.3,-4.3) rectangle (4.3,4.3); %Bildbereich
-		\draw[color=plotblue,line width=2pt,domain=-4.3:4.3,samples=200] plot (\x, {(0.1*\x^4+0.4*\x^3-3*\x^2+2*\x+0.5)});
+		\draw[color=highdive,line width=2pt,domain=-4.3:4.3,samples=200] plot (\x, {(0.1*\x^4+0.4*\x^3-3*\x^2+2*\x+0.5)});
 		%Beschriftung
-		\node[color=plotblue]  at (3.4,3.5) {\normalsize\textbf{$f$}};
+		\node[color=highdive]  at (3.4,3.5) {\normalsize\textbf{$f$}};
 	\end{tikzpicture}
 \end{figure}
 
 %---------------------------------------------------------
 \noaddpoints
-\question[\totalpoints]
+\question[3]
 \addpoints
 Skizziere ins leere Koordinatensystem den Graphen der Ableitungsfunktion der gegebenen Funktion $f$ möglichst exakt.
 \begin{figure}[H]
