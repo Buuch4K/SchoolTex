@@ -39,13 +39,13 @@
 	Der abgebildete Graph zeigt drei Funktionen des Typs $f(x)=x^k$ für $k\in\Z$.\\
 	\includegraphics[width=0.4\textwidth]{divexpgraph.png}
 	\begin{parts}
-		\part Skizziere den Graphen der Ableitung der blauen Funktion.\\
+		\part Skizziere den Graphen der Ableitung der \textcolor{plotblue}{blauen} Funktion.\\
 		\begin{tikzpicture}[x=10mm, y=10mm, >=latex, font= \footnotesize, scale=0.6]
 			%Raster zeichnen
 			%\draw [color=gray!50]  [step=10mm] (-4.3,-4.3) grid (4.3,4.3);
 			% Achsen zeichnen
-			\draw[->,thick] (-1.3,0) -- (6.8,0) node[right, below] {\normalsize $x$};
-			\draw[->,thick] (0,-1.3) -- (0,6.8) node[above, left] {\normalsize $y$};
+			\draw[->,thick] (-3.3,0) -- (4.8,0) node[right, below] {\normalsize $x$};
+			\draw[->,thick] (0,-3.3) -- (0,4.8) node[above, left] {\normalsize $y$};
 			% Achsen beschriften
 			%\foreach \x in {-4,...,-2,-1,1,2,...,4} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
 			%\foreach \y in {-4,...,-2,-1,1,2,...,4} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
@@ -58,7 +58,7 @@
 		\end{tikzpicture}
 		\part Benutze die eingezeichneten Punkte, um die Funktionsgleichungen jedes Graphen zu bestimmen.
 		\bl \[8=4^k \Leftrightarrow 2^3=2^{2k}\Leftrightarrow k=1.5\]\[ rot(x)=x^{1.5}\quad grün(x)=x^\frac{1}{3}\quad blau=x^{-1}\] \el
-		\part Berechne die Ableitung und die Stammfunktion der blauen Funktion.
+		\part Berechne die Ableitung und die Stammfunktion der \textcolor{plotblue}{blauen} Funktion.
 		\bl \[f'(x)=-x^{-2} \quad F(x)=\ln{x}\] \el
 		\bl
 		\part Der rote und grüne Graph umschliessen eine Fläche im ersten Quadranten. Erkläre, wie diese Fläche berechnet werden kann.
@@ -932,10 +932,20 @@
 	Einen Volleyball fällt aus zwei Metern Höhe auf den Hallenboden, springt wieder hoch und fällt wieder auf den Hallenboden. Nach jedem Aufprall verliert er $\frac{2}{3}$ der Sprunghöhe.
 	\begin{parts}
 		\part Wie hoch springt der Ball nach dem zweiten Aufprall?
+		\bl\[a_2=2\*\left(\frac{2}{3}\right)^2=\frac{8}{9}\approx0.889\]\el
 		\part Wie hoch springt der Ball nach dem $n-$ten Aufprall?
+		\bl Der Ball beschreibt eine geometrische Folge mit $a_1=2$m und $q=\frac{2}{3}$.
+		\[a_n=a_1\*q^{n-1}=2\*\frac{2}{3}^{n-1}\]\el
 		\part Nach wie vielen Aufprallen springt der Ball weniger als einen Millimeter mehr hoch.
+		\bl \begin{align*}
+			a_n&=2\*\frac{2}{3}^{n-1}=0.001\\
+			&\Rightarrow n\approx 19.74
+		\end{align*}
+		Ab dem $20.$ Aufprall ist springt der Ball nicht mehr höher als einen Millimeter\el
 		\part Wie lange ist der gesamte Weg, den der Ball zurücklegt?
+		\bl \[s=a_1\*\frac{1}{1-q}=2\*\frac{1}{1-\frac{2}{3}}=6\] \el
 		\part Beschreibe, wie du die gleiche Aufgabe mit Hilfe einer Wachstumsfunktion lösen kannst?
+		\bl Die Beschreibung passt zu einer fallenden Wachtumsfunktion mit Anfangswert $B_0=2$m und Wachstumsfaktor $a=\frac{2}{3}$. Das bedeutet, die Funktion $f(x)=2\*\left(\frac{2}{3}\right)^n$ beschreibt den Zerfall ebenfalls. \el
 	\end{parts}
 \end{aufgabe}
 
