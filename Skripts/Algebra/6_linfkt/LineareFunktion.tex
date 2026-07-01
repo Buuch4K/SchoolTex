@@ -3,6 +3,7 @@
 \input{../../../Header/styleScript.sty}
 \input{../../../Header/headerScript.sty}
 \input{../../../Header/mathexpressions.sty}
+\graphicspath{{images/}}
 
 
 \newcommand{\Skriptname}{Lineare Funktion}
@@ -35,6 +36,7 @@
 		\item Alle Bilder zusammen heissen Wertebereich $\mathbb{W}$
 	\end{itemize}
 	\begin{beispiel}
+		\label{bsp:sternzeichen}
 		Die Zuordnung, welche jedem (Geburts-)Datum sein Sternzeichen zuordnet, ist eine Funktion. Wir bezeichnen diese mit $f$.
 		Der Definitionsbereich $\mathbb{D}$ sind gerade alle (Geburts-)Daten. Der Wertebereich die Sternzeichen.
 		\begin{align*}
@@ -42,26 +44,26 @@
 			\mathbb{W}&=\{\text{Widder, Stier, ..., Fische}\}
 		\end{align*}
 		\begin{framed}
-			\vspace{6cm}
+			\vspace{3.5cm}
 		\end{framed}
 	\end{beispiel}
 	\begin{beispiel}
+		\label{bsp:produktdatum}
 		Die Funktion $g$ ordnet jedem Datum das Produkt aus Tag und Monat zu.
 		\begin{align*}
 			\mathbb{D}&=\{\text{1. Jan., 2. Jan.,...,30. Dez., 31. Dez.}\}\\
 			\mathbb{W}&=\{\text{1, 2,3, ..., 336, 348, 360, 372}\}
 		\end{align*}
 		\begin{framed}
-			\vspace{6cm}
+			\vspace{3.5cm}
 		\end{framed}
 	\end{beispiel}
 	\begin{definition}[Wertetabelle]
 		Die tabellarische Auflistung aller Paare aus dem Definitions- und Wertebereich heisst \emph{Wertetabelle}.
 	\end{definition}
-	Wir betrachten die Wertetabellen der beiden Funktionen aus Beispiel 1 und 2:
-	\underline{Funktion $f$}:
-	\hspace{0.3\textwidth}
-	\underline{Funktion $g$:}\vfill\newpage
+	Wir betrachten die Wertetabellen der beiden Funktionen aus Beispiel \ref{bsp:sternzeichen} und \ref{bsp:produktdatum}:\\
+	\underline{Funktion $f$}:\\\karos{3.5}
+	\underline{Funktion $g$}:\\\karos{3.5}
 	\begin{aufgabe}
 		$f$ und $g$ sind Funktionen. Begründe, wieso die umgekehrte Richtung der beiden Zuordnungen keine Funktionen sind. Wieso ist aber beim Sinus auch die umgekehrte Richtung eine Funktion.
 	\end{aufgabe}
@@ -137,25 +139,28 @@
 		\end{enumerate}
 	\end{aufgabe}
 	\begin{aufgabe}
-		Erstelle eine Wertetabelle für die drei Funktionen aus vorheriger Aufgabe:\\
-		\begin{tabular}{|p{2cm}|p{3cm}|p{3cm}|p{3cm}|}\hline
-			$x$ &$f(x)$&$g(x)$ &  $h(x)$ \\\hline
-			0 &   & & \\\hline
-			0.5 &  &  &  \\\hline
-			1 && & \\\hline
-			1.5 & &&\\\hline
-			2 & & &\\\hline
-			2.5 & & &\\\hline
-			50 & &&\\\hline
-			1000  & &&\\\hline
-		\end{tabular}
+		Erstelle eine Wertetabelle für die drei Funktionen aus vorheriger Aufgabe:
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{p{2cm}|p{3cm}|p{3cm}|p{3cm}}
+				$x$ &$f(x)$&$g(x)$ &  $h(x)$ \\\hline
+				0 &   & & \\\hline
+				0.5 &  &  &  \\\hline
+				1 && & \\\hline
+				1.5 & &&\\\hline
+				2 & & &\\\hline
+				2.5 & & &\\\hline
+				50 & &&\\\hline
+				1000  & &&\\
+			\end{tabular}
+		\end{table}
 	\end{aufgabe}
 
 \subsection{Der Graph einer Funktion}
 	Jeder hat schon Darstellungen von Graphen gesehen und weiss intuitiv, was ein Graph einer Funktion ist.
 	Wir betrachten uns dazu ein Beispiel:
 	\begin{figure}[H]
-		\centering\includegraphics[width=0.5\textwidth]{images/tempgraph.PNG}
+		\centering\includegraphics[width=0.5\textwidth]{tempgraph.PNG}
 	\end{figure}
 	Wir sehen hier einen Temperaturverlauf über den Tag verteilt.
 	Zu jedem Messzeitpunkt erhalten wir eine Temperatur. Wir können dies als Funktion auffassen, welche jedem Zeitpunkt die Temperatur zuordnet.
@@ -164,7 +169,8 @@
 		\text{Zeit} &\longmapsto \text{Temperatur}
 	\end{align*}
 	In unserem konkreten Beispiel haben wir die Wertetabelle:
-	\begin{center}
+	\begin{table}[H]
+		\centering
 		\begin{tabular}{c|c}
 			Zeit [$h$] &Temperatur [$^\circ C$] \\\hline
 			0:00 &  12 \\\hline
@@ -173,9 +179,9 @@
 			12:00 &  21 \\\hline
 			16:00 &  24 \\\hline
 			20:00 &  19 \\\hline
-			24:00 &  12 \\\hline
+			24:00 &  12 \\
 		\end{tabular}
-	\end{center}
+	\end{table}
 	Einige Vorteile der Darstellung als Graph gegenüber einer reinen Tabelle werden in diesem Beispiel deutlich:
 	\begin{itemize}
 		\item Visuelle Darstellung ermöglicht schnelleren Überblick
@@ -199,8 +205,9 @@
 	\end{center}
 	\textbf{A:}\\
 	Wir erstellen zuerst die Wertetabelle, dazu wählen wir geschickte Stellen $x$ aus. In unserem Beispiel nehmen wir den Bereich von -4 bis 4 mit Abstand 1:
-	\begin{center}
-		\begin{tabular}{c|c}
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{p{2cm}|p{3cm}}
 			$x$ & $f(x)$ \\\hline
 			-4 &  $\frac{1}{2}\* (-4)^2 -1= 7$ \\\hline
 			-3 & $\frac{1}{2}\* (-3)^2 -1 =3.5$ \\\hline
@@ -210,9 +217,9 @@
 			1 &  -0.5 \\\hline
 			2 &  1 \\\hline
 			3&  3.5 \\\hline
-			4 &  7 \\\hline
+			4 &  7 \\
 		\end{tabular}
-	\end{center}
+	\end{table}
 	\textbf{B}:\\
 	Zu jeder reelen Zahl $x$ aus dem Definitionsbereich können wir den zugehörigen Funktionswert $y=f(x)$ berechnen. Also z.B.
 	\begin{align*}
@@ -231,18 +238,18 @@
 			1 &  -0.5& (1/-0.5) \\\hline
 			2 &  1 & (2/1)\\\hline
 			3&  3.5&  (3/3.5)\\\hline
-			4 &  7& (4/7) \\\hline
+			4 &  7& (4/7) \\
 		\end{tabular}
 	\end{center}
 	Die so erhaltenen Zahlenpaare übertragen wir als Punkte ins Koordinatensystem. Die erste Zahl ist unsere Koordinate in $x$-Richtung, die zweite in $y$-Richtung.
 	\begin{figure}[H]
-		\centering\includegraphics[width=0.75\textwidth]{images/graphpunkte.PNG}
+		\centering\includegraphics[width=0.75\textwidth]{graphpunkte.PNG}
 	\end{figure}
 	\textbf{C}:\\
 	Nun müssen die so eingezeichneten Punkte nur noch durch eine Kurve möglichst 'schön' verbunden werden.
 
 	\begin{figure}[H]
-		\centering\includegraphics[width=0.75\textwidth]{images/graphmitkurve.PNG}
+		\centering\includegraphics[width=0.75\textwidth]{graphmitkurve.PNG}
 	\end{figure}
 	Und fertig ist unser Graph der Funktion $f(x)=\frac{1}{2}x^2-1$.
 	\begin{aufgabe}
@@ -289,7 +296,7 @@
 	\end{align*}
 	Somit ist $(-3/3.5)$ eine weitere Lösung der Gleichung. Offensichtlich gibt es unendlich viele Lösungen (Wir können für $x$ alle Zahlen aus $\mathbb{R}$ einsetzen und kriegen immer ein zugehöriges $y$).\\
 
-	Durch den Graphen von $f$ haben wir nun offensichtlich einfach alle Lösungen dieser Gleichnung, also ihre Lösungsmenge, grafisch dargestellt. Damit ist es auch zu rechtfertigen, dass wir den Graphen von $f$ von nun an immer mit der Funktionsgleichung anschreiben.\\
+	Durch den Graphen von $f$ haben wir nun offensichtlich einfach alle Lösungen dieser Gleichung, also ihre Lösungsmenge, grafisch dargestellt. Damit ist es auch zu rechtfertigen, dass wir den Graphen von $f$ von nun an immer mit der Funktionsgleichung anschreiben.\\
 
 	\textbf{Zusammenfassung:}
 	\begin{framed}
@@ -304,349 +311,407 @@
 \newpage
 \section{Proportionalität}
 \subsection{Direkte Proportionalität}
-Wir betrachten nun einen besonders einfachen Typ von Funktionen.
-Im einem Geschäft in Berneck kostet 1kg Mehl 1.50 CHF. Wieviel kosten mehrere kg? Wieviel bezahlt man also für 2,3,4,5 oder 10 kg Mehl? Offensichtlich beträgt der Preis für 2kg gerade $2\* 1.5$ CHF, für 3 kg $3\* 1.5$ CHF.
-Allgemein also als Funktion:
-\begin{center}
-\begin{align*}
-f:~~~~ \mathbb{D}=\text{Anzahl Kilogramm}=\mathbb{N} &\longrightarrow \mathbb{W}=\text{Preis in CHF}=\mathbb{R}_{0}^{+} \\
-x &\longmapsto f(x)=1.5\* x
-\end{align*}
-\end{center}
-Man kann leicht den Graphen zu dieser Funktion erstellen.
-\begin{center}
-\begin{tabular}{c|c|c}
-		Anzahl Kilogramm: x & Preis: $f(x)$ & Zahlenpaar\\\hline
-		1 &  1.5& (1/1.5)\\\hline
-		2 & 3 & (2/3)\\\hline
-		3 &  4.5 & (3/4.5)\\\hline
-		4 &  6 & (4/6)\\\hline
-	5 &  7.5& (5/7.5) \\\hline
-	10 &  15& (10/15) \\\hline
-\end{tabular}\end{center}
-\begin{figure}[H]
-\centering\includegraphics[width=0.75\textwidth]{images/direktprop.PNG}
-\end{figure}
-Wir sehen, dass der Graph eine Gerade ist, welche durch 0 geht. Für jeden Schritt der Länge 1 in $x$- Richtung steigt, der Wert in $y$-Richtung um 1.5.\newpage
-\begin{definition}[Proportionalität]
-Eine Funktion vom Typ:\begin{center}\vspace{-1cm}
-\begin{align*}
-f: ~~ y=m\* x
-\end{align*}\end{center}
-heisst \emph{Proportionalität}. $m$ ist eine konstante Zahl und heisst \emph{Proportionalitätsfaktor}.
-\end{definition}
+	Wir betrachten nun einen besonders einfachen Typ von Funktionen. Im einem Geschäft in Berneck kostet 1kg Mehl 1.50 CHF. Wie viel kosten mehrere kg? Wie viel bezahlt man also für 2,3,4,5 oder 10 kg Mehl? Offensichtlich beträgt der Preis für 2kg gerade $2\* 1.5$ CHF, für 3 kg $3\* 1.5$ CHF.
+	Allgemein also als Funktion:
+	\begin{center}
+		\begin{align*}
+			f:~~~~ \mathbb{D}=\text{Anzahl Kilogramm}=\mathbb{N} &\longrightarrow \mathbb{W}=\text{Preis in CHF}=\mathbb{R}_{0}^{+} \\
+			x &\longmapsto f(x)=1.5\* x
+		\end{align*}
+	\end{center}
+	Man kann leicht den Graphen zu dieser Funktion erstellen.
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{c|c|c}
+			Anzahl Kilogramm: x & Preis: $f(x)$ & Zahlenpaar\\\hline
+			1 &  1.5& (1/1.5)\\\hline
+			2 & 3 & (2/3)\\\hline
+			3 &  4.5 & (3/4.5)\\\hline
+			4 &  6 & (4/6)\\\hline
+			5 &  7.5& (5/7.5) \\\hline
+			10 &  15& (10/15) \\
+		\end{tabular}
+	\end{table}
+	\begin{figure}[H]
+		\centering\includegraphics[width=0.75\textwidth]{direktprop.PNG}
+	\end{figure}
+	Wir sehen, dass der Graph eine Gerade ist, welche durch 0 geht. Für jeden Schritt der Länge 1 in $x$- Richtung steigt, der Wert in $y$-Richtung um 1.5.\newpage
+	\begin{definition}[Proportionalität]
+		Eine Funktion vom Typ:\begin{center}\vspace{-1cm}
+		\begin{align*}
+			f: ~~ y=m\* x
+		\end{align*}\end{center}
+		heisst \emph{Proportionalität}. $m$ ist eine konstante Zahl und heisst \emph{Proportionalitätsfaktor}.
+	\end{definition}
 
-\begin{aufgabe}
-Zeichne die Graphen für folgende Proportionalitäten: (du kannst sie mit unterschiedlichen Farben in \textbf{ein} Koordinatensystem zeichnen.
-\begin{align*}
-y&=x\\
-y&=2x\\
-y&=\frac{1}{2}x\\
-y&=-x\\
-y&=-\frac{2}{3}x
-\end{align*}
-Was fällt auf?\\
-Wie kann man den Graphen einer beliebigen Proportionalität $y=\dfrac{a}{b}x$ (mit $a\in \mathbb{Z}$, $b \in \mathbb{N}$) zeichnen ohne eine Wertetabelle zu erstellen?
-\end{aufgabe}
-Wir wollen aus den Beobachtungen der obigen Aufgabe die Eigenschaften der Proportionalitäten festhalten:
-\begin{framed}\noindent\textbf{Eigenschaften der Proportionalitäten:}\begin{enumerate}[label=\roman*)]
-\item Der Graph einer Proportionalität ist eine \emph{Gerade}, die durch den Nullpunkt verläuft.
-\item $m$ gibt die \emph{Steigung} an:\begin{itemize}\item[$m=1:$] Der Graph ist die Winkelhalbierende der beiden Achsen.
-\item[$m>1:$] Der Graph verläuft steiler als die Winkelhalbierende.
-\item[$m>0:$] Der Graph verläuft steigend.
-\item[$m<0:$] Der Graph verläuft fallend.
-\end{itemize}
-\item Wenn $m\in\mathbb{Z}$ können wir den Graphen einfach zeichnen.
-\begin{enumerate}[label=\alph*)]
-\item Zeichne $(0/0)$ und $(1/m)$
-\item Verbinde sie zu einer Geraden.
-\end{enumerate}
-\item Wenn $m=\dfrac{a}{b}\in\mathbb{Q}$ können wir den Graphen ebenfalls einfach zeichnen.
-\begin{enumerate}[label=\alph*)]
-\item Zeichne $(0/0)$ und $(b/a)$
-\item Verbinde sie zu einer Geraden.
-\end{enumerate}
-\item Der \emph{Quotient} $\dfrac{y}{x}=m$ ist für alle Punkte $(x/y)$ auf dem Graphen einer Proportionalität \emph{konstant}.
-\end{enumerate}
-\end{framed}
+	\begin{aufgabe}
+		Zeichne die Graphen für folgende Proportionalitäten: (du kannst sie mit unterschiedlichen Farben in \textbf{ein} Koordinatensystem zeichnen.
+		\begin{align*}
+			y&=x\\
+			y&=2x\\
+			y&=\frac{1}{2}x\\
+			y&=-x\\
+			y&=-\frac{2}{3}x
+		\end{align*}
+		Was fällt auf?\\
+		Wie kann man den Graphen einer beliebigen Proportionalität $y=\dfrac{a}{b}x$ (mit $a\in \mathbb{Z}$, $b \in \mathbb{N}$) zeichnen ohne eine Wertetabelle zu erstellen?
+	\end{aufgabe}
+	Wir wollen aus den Beobachtungen der obigen Aufgabe die Eigenschaften der Proportionalitäten festhalten:
+	\begin{framed}\noindent\textbf{Eigenschaften der Proportionalitäten:}
+		\begin{enumerate}[label=\roman*)]
+			\item Der Graph einer Proportionalität ist eine \emph{Gerade}, die durch den Nullpunkt verläuft.
+			\item $m$ gibt die \emph{Steigung} an:
+			\begin{itemize}\item[$m=1:$] Der Graph ist die Winkelhalbierende der beiden Achsen.
+				\item[$m>1:$] Der Graph verläuft steiler als die Winkelhalbierende.
+				\item[$m>0:$] Der Graph verläuft steigend.
+				\item[$m<0:$] Der Graph verläuft fallend.
+			\end{itemize}
+			\item Wenn $m\in\mathbb{Z}$ können wir den Graphen einfach zeichnen.
+			\begin{enumerate}[label=\alph*)]
+				\item Zeichne $(0/0)$ und $(1/m)$
+				\item Verbinde sie zu einer Geraden.
+			\end{enumerate}
+			\item Wenn $m=\dfrac{a}{b}\in\mathbb{Q}$ können wir den Graphen ebenfalls einfach zeichnen.
+			\begin{enumerate}[label=\alph*)]
+				\item Zeichne $(0/0)$ und $(b/a)$
+				\item Verbinde sie zu einer Geraden.
+			\end{enumerate}
+			\item Der \emph{Quotient} $\dfrac{y}{x}=m$ ist für alle Punkte $(x/y)$ auf dem Graphen einer Proportionalität \emph{konstant}.
+		\end{enumerate}
+	\end{framed}
 \subsection{Indirekte Proportionalität}
-\begin{definition}[Indirekte Proportionalität]
-Eine Funktion vom Typ:\begin{center}\vspace{-1cm}
-\begin{align*}
-f: ~~ y=\frac{c}{x}
-\end{align*}\end{center}
-heisst \emph{indirekte (oder umgekehrte) Proportionalität}. $c$ ist eine konstante Zahl.
-\end{definition}
-\begin{beispiel}
-Die Fläche eines Rechtecks beträgt $500 cm^2$. Wie gross ist die Länge $y$ in Abhängigkeit der Breite $x$?\\
-\textbf{Lösung: } Es gilt $y\* x=500 \Rightarrow y=\dfrac{500}{x}$
-Der Graph dieser Funktion (mittels Wertetabelle gezeichnet) sieht folgendermassen aus:
+	\begin{definition}[Indirekte Proportionalität]
+		Eine Funktion vom Typ:
+		\begin{center}\vspace{-1cm}
+			\begin{align*}
+				f: ~~ y=\frac{c}{x}
+			\end{align*}
+		\end{center}
+		heisst \emph{indirekte (oder umgekehrte) Proportionalität}. $c$ ist eine konstante Zahl.
+	\end{definition}
+	\begin{beispiel}
+		Die Fläche eines Rechtecks beträgt $500 cm^2$. Wie gross ist die Länge $y$ in Abhängigkeit der Breite $x$?\\
+		\textbf{Lösung: } Es gilt $y\* x=500 \Rightarrow y=\dfrac{500}{x}$
+		Der Graph dieser Funktion (mittels Wertetabelle gezeichnet) sieht folgendermassen aus:
+		\begin{figure}[H]
+		    \centering\includegraphics[width=0.75\textwidth]{indprop.PNG}
+		\end{figure}
+		Graphen der indirekten Proportionalität heissen \textbf{Hyperbel}.
+	\end{beispiel}
+	\noindent Wegen:
+	\begin{center}\vspace{-1.5cm}
+		\begin{align*} y&=\frac{c}{x}~~|\* x\\ x\* y&=c\end{align*}
+	\end{center} gilt:
+	\begin{framed}\noindent
+		Das \textbf{Produkt} $x\* y=c$ ist \textbf{konstant} für jeden Punkt $(x/y)$ auf dem Graphen einer indirekten Proportionalität.
+	\end{framed}
 
-\begin{figure}[H]
-    \centering\includegraphics[width=0.75\textwidth]{images/indprop.PNG}
-\end{figure}
-Graphen der indirekten Proportionalität heissen \textbf{Hyperbel}.
-\end{beispiel}
-\noindent Wegen: \begin{center}\vspace{-1.5cm}\begin{align*} y&=\frac{c}{x}~~|\* x\\
-x\* y&=c\end{align*}
-\end{center} gilt:
-\begin{framed}\noindent
-Das \textbf{Produkt} $x\* y=c$ ist \textbf{konstant} für jeden Punkt $(x/y)$ auf dem Graphen einer indirekten Proportionalität.
-\end{framed}\subsection{Beispielaufgaben zu Proportionalität}
-\begin{beispiel} 4kg Äpfel kosten 10 Franken. Wie lautet die Funktionsgleichung der zugehörigen Proportionalität:
-\begin{align*}
-y&=m\* x\\
-\text{Preis in Franken}&=m\* \text{Anzahl kg Äpfel}
-\end{align*} \end{beispiel}
-\begin{beispiel}
-Fünf Sportvereine haben gemeinsam einen Preis im Wert von 90'440 Franken für ihre Nachwuchsförderung gewonnen. Die Vereine haben 18, 20, 23, 28 resp. 30 Nachwuchstalente.\\
-Wie teilen die fünf Vereine den Preis von 90'440 Franken proportional zur Anzahl der Nachwuchstalente auf.\end{beispiel}
-\begin{beispiel}
-Zwei Sportvereine haben gemeinsam einen Preis im Wert von 45'900 Franken für ihre Nachwuchsförderung gewonnen. Die Vereine A zählt 24 Nachwuchstalente, B zählt 30 Nachwuchstalente.\\
-Wie teilen die beiden Vereine den Preis von 45'900 Franken indirekt proportional zur Anzahl der Nachwuchstalente auf.\end{beispiel}
-\begin{aufgabe}
-Löse das Arbeitsblatt zu Proportionalität
-\end{aufgabe}
+
+\subsection{Beispielaufgaben zu Proportionalität}
+	\begin{beispiel}
+		4kg Äpfel kosten 10 Franken. Wie lautet die Funktionsgleichung der zugehörigen Proportionalität:
+		\begin{align*}
+			y&=m\* x\\
+			\text{Preis in Franken}&=m\* \text{Anzahl kg Äpfel}
+		\end{align*}
+	\end{beispiel}
+	\begin{beispiel}
+		Fünf Sportvereine haben gemeinsam einen Preis im Wert von 90'440 Franken für ihre Nachwuchsförderung gewonnen. Die Vereine haben 18, 20, 23, 28 resp. 30 Nachwuchstalente.\\
+		Wie teilen die fünf Vereine den Preis von 90'440 Franken proportional zur Anzahl der Nachwuchstalente auf.
+	\end{beispiel}
+	\begin{beispiel}
+		Zwei Sportvereine haben gemeinsam einen Preis im Wert von 45'900 Franken für ihre Nachwuchsförderung gewonnen. Die Vereine A zählt 24 Nachwuchstalente, B zählt 30 Nachwuchstalente.\\
+		Wie teilen die beiden Vereine den Preis von 45'900 Franken indirekt proportional zur Anzahl der Nachwuchstalente auf.
+	\end{beispiel}
+	\begin{aufgabe}
+		Löse das Arbeitsblatt zu Proportionalität
+	\end{aufgabe}
+
+
 \newpage
 \section{Lineare Funktion}
-Wir haben zur \textit{direkten Proportionalität} das Beispiel des Preises von Mehl gesehen. Dabei haben wir einen Preis pro Kilo angenommen und die Preise für verschiedene Mengen jeweils berechnet. \\ In Realität haben wir in diesem Beispiel jedoch häufig gewisse Grundkosten, welche unabhängig von der Menge anfallen (z.B. Aufwand für Abholung oder Lieferkosten, Verpackungskosten usw.).\\
+	Wir haben zur \textit{direkten Proportionalität} das Beispiel des Preises von Mehl gesehen. Dabei haben wir einen Preis pro Kilo angenommen und die Preise für verschiedene Mengen jeweils berechnet. \\ In Realität haben wir in diesem Beispiel jedoch häufig gewisse Grundkosten, welche unabhängig von der Menge anfallen (z.B. Aufwand für Abholung oder Lieferkosten, Verpackungskosten usw.).\\
 
-Wie sieht der Graph des Preises von Mehl aus, wenn wir Grundkosten von 5 CHF annehmen und einen Preis von 1.50 $\frac{CHF}{kg}$? Die Grundkosten fallen auf jeden Fall an, d.h. an der Stelle $x=0$ haben wir bereits einen $y$-Wert von 5 CHF. Danach kommt für jedes zusätzliceh Kilo der Preis von 1.50 CHF hinzu. Dies ergibt den folgenden Graph:
-\begin{figure}[H]
-    \centering\includegraphics[width=0.9\textwidth]{images/linfkt.PNG}
-\end{figure}
-Wir haben im Abschnitt zur Proportionalität gesehen, dass die Funktionsgleichung einer Proportionalität als \begin{align*}
-y=m\* x
-\end{align*}
-geschrieben werden kann. Nun haben wir aber eine verschobene Proportionalität, nämlich um den Wert 5.
-Für einen beliebigen $x$-Wert (Menge von Reis) erhalten wir die zugehörigen Kosten mittels der Rechnung:
-\begin{align*}
-1.5\* x + 5
-\end{align*}
-\noindent
-Wenn wir dies also als Funktion aufschreiben, wird die Funktionsgleichung zu:
-\begin{align*}
-f: y=1.5\* x+5
-\end{align*}
-Die Gleichung beinhaltet die einfache Proportionalität $g:y=1.5x$ und eine Verschiebung um den Wert 5 nach oben.
-\begin{definition}[Lineare Funktion]
-Eine \emph{Funktion} $f$ mit Funktionsgleichung
-\begin{align*}
-y=m\* x + q
-\end{align*} heisst \emph{lineare Funktion}. Dabei ist $m$ eine konstante Zahl und heisst \emph{Steigung}, $q$ ist der \emph{y-Achsenabschnitt (oder auch: Ordinatenabschnitt)}.
-\end{definition}
-\noindent
-Der \textbf{Graph der linearen Funktion} ist eine Gerade mit der Steigung $m$ und $y-$Achsenabschnitt $q$:
-\begin{figure}[H]
-    \centering\includegraphics[width=0.7\textwidth]{images/graphlinfkt.PNG}
-\end{figure}
-Ist $m=\frac{a}{b} (a\in \mathbb{Z}, b \in \mathbb{N})$ ein Bruch, so kann man den Graphen mit folgendem Rezept zeichnen:
+	Wie sieht der Graph des Preises von Mehl aus, wenn wir Grundkosten von 5 CHF annehmen und einen Preis von 1.50 $\frac{CHF}{kg}$? Die Grundkosten fallen auf jeden Fall an, d.h. an der Stelle $x=0$ haben wir bereits einen $y$-Wert von 5 CHF. Danach kommt für jedes zusätzliche Kilo der Preis von 1.50 CHF hinzu. Dies ergibt den folgenden Graph:
+	\begin{figure}[H]
+	    \centering\includegraphics[width=0.9\textwidth]{linfkt.PNG}
+	\end{figure}
+	Wir haben im Abschnitt zur Proportionalität gesehen, dass die Funktionsgleichung einer Proportionalität als
+	\begin{align*}
+		y=m\* x
+	\end{align*}
+	geschrieben werden kann. Nun haben wir aber eine verschobene Proportionalität, nämlich um den Wert 5.
+	Für einen beliebigen $x$-Wert (Menge von Reis) erhalten wir die zugehörigen Kosten mittels der Rechnung:
+	\begin{align*}
+		1.5\* x + 5
+	\end{align*}
+	\noindent Wenn wir dies also als Funktion aufschreiben, wird die Funktionsgleichung zu:
+	\begin{align*}
+		f: y=1.5\* x+5
+	\end{align*}
+	Die Gleichung beinhaltet die einfache Proportionalität $g:y=1.5x$ und eine Verschiebung um den Wert 5 nach oben.
+	\begin{definition}[Lineare Funktion]
+		Eine \emph{Funktion} $f$ mit Funktionsgleichung
+		\begin{align*}
+			y=m\* x + q
+		\end{align*}
+		heisst \emph{lineare Funktion}. Dabei ist $m$ eine konstante Zahl und heisst \emph{Steigung}, $q$ ist der \emph{y-Achsenabschnitt (oder auch: Ordinatenabschnitt)}.
+	\end{definition}
+	\noindent Der \textbf{Graph der linearen Funktion} ist eine Gerade mit der Steigung $m$ und $y-$Achsenabschnitt $q$:
+	\begin{figure}[H]
+	    \centering\includegraphics[width=0.7\textwidth]{graphlinfkt.PNG}
+	\end{figure}
+	Ist $m=\frac{a}{b} (a\in \mathbb{Z}, b \in \mathbb{N})$ ein Bruch, so kann man den Graphen mit folgendem Rezept zeichnen:
 
-\begin{framed}
-\textbf{Graph einer linearen Funktion $y=m\* x +q $ mit $m=\frac{a}{b}$ zeichnen:}
-\begin{enumerate}[label=(\Alph*)]
-\item Gehe auf der $y-$Achse um $q$ nach oben/unten und zeichne den Punkt $(0/q)$.
-\item Gehe von diesem Punkt in $x-$Richtung um $b$ nach links/rechts
-\item Gehe von diesem Punkt in $y-$Richtung um $a$ nach oben/unten und zeichne hier den erhaltenen Punkt ein. (\emph{Dies ist der Punkt $(b/m\* b+q)=(b/a+q)$})
-\item Verbinde die beiden Punkte zum Graphen der linearen Funktion.
-\end{enumerate}\end{framed}\newpage
-\begin{beispiel}
-Wir wollen dieses Vorgehen am Beispiel der linearen Funktion $y=\dfrac{2}{5}x+2$ üben:
-\vspace{5cm}
-\end{beispiel}
-\begin{aufgabe}
-Zeichne den Graphen der Funktionen:
-\begin{enumerate}[label=\alph*)]
-\item $f(x)=\frac{3}{2}x-1$
-\item $f(x)=-\frac{2}{3}x-2$
-\item $f(x)=2x+2$
-\end{enumerate}
-\end{aufgabe}
-\noindent\newpage
-Wie kann man umgekehrt \textbf{aus einem Graphen die Funktion rauslesen}? Wir brauchen dazu zwei Punkte $A$ und $B$ auf dem Graphen, denn:
+	\begin{framed}
+		\textbf{Graph einer linearen Funktion $y=m\* x +q $ mit $m=\frac{a}{b}$ zeichnen:}
+		\begin{enumerate}[label=(\Alph*)]
+			\item Gehe auf der $y-$Achse um $q$ nach oben/unten und zeichne den Punkt $(0/q)$.
+			\item Gehe von diesem Punkt in $x-$Richtung um $b$ nach links/rechts
+			\item Gehe von diesem Punkt in $y-$Richtung um $a$ nach oben/unten und zeichne hier den erhaltenen Punkt ein. (\emph{Dies ist der Punkt $(b/m\* b+q)=(b/a+q)$})
+			\item Verbinde die beiden Punkte zum Graphen der linearen Funktion.
+		\end{enumerate}
+	\end{framed}\newpage
+	\begin{beispiel}
+		Wir wollen dieses Vorgehen am Beispiel der linearen Funktion $y=\dfrac{2}{5}x+2$ üben:
+		\vspace{5cm}
+	\end{beispiel}
+	\begin{aufgabe}
+		Zeichne den Graphen der Funktionen:
+		\begin{enumerate}[label=\alph*)]
+			\item $f(x)=\frac{3}{2}x-1$
+			\item $f(x)=-\frac{2}{3}x-2$
+			\item $f(x)=2x+2$
+		\end{enumerate}
+	\end{aufgabe}
+	\noindent\newpage
+	Wie kann man umgekehrt \textbf{aus einem Graphen die Funktion rauslesen}? Wir brauchen dazu zwei Punkte $A$ und $B$ auf dem Graphen, denn:
 
-\begin{framed}\noindent
-Für die Steigung $m$ der Geraden $g$ durch die beiden Punkte $A(x_A/y_A)$ und $B(x_B/y_B)$ gilt:
-\begin{align*}
-m=\frac{\Delta Y}{\Delta X}=\frac{y_B-y_A}{x_B-x_A}
-\end{align*}
-Die Steigung $m$ ist also der Quotient aus den \textbf{Differenzen} in $y-$Richtung und $x-$Richtung.\\
-$q$ können wir, wenn möglich, direkt aus dem Schnittpunkt mit der $y-$Achse ablesen.
-\end{framed}
-\begin{figure}[H]
-    \centering\includegraphics[width=0.5\textwidth]{images/steiglinfkt.PNG}
-\end{figure}\noindent
-\begin{beispiel}
-Wir wollen die Funktionsgleichung des folgenden Graphen bestimmen:
-\begin{figure}[H]
-    \centering\includegraphics[width=0.5\textwidth]{images/graphfkt.PNG}
-\end{figure}\noindent
-\end{beispiel}
-\begin{aufgabe}[Steigung bestimmen]
-a) Bestimme die Steigung der Geraden durch die beiden Punkte $A(1/3)$ und $B(2/-1)$\\
-b) Bestimme die Steigung der Geraden durch die beiden Punkte $A(1/-2)$ und $B(7/3)$\\
-c) Bestimme die Steigung der Geraden durch die beiden Punkte $A(-5/3)$ und $B(-2/-3)$\\
-d) Bestimme die Steigung der Geraden durch die beiden Punkte $A(-127/-3)$ und $B(223/-38)$\\
-\end{aufgabe}
-Wir können also die Steigung anhand zweier Punkte bestimmen. Indem wir auch noch den y-Achsenabschnitt $q$ ablesen, sind wir so in der Lage die Funktionsgleichung zu aufgezeichneten Graphen zu bestimmen.
-\begin{beispiel}
-Wir bestimmen die Funktionsgleichung des folgenden Graphen $g$:
-\begin{center}\begin{figure}[H]
-\flushleft {\includegraphics[scale=0.6]{images/graph1.png}}
-\end{figure}
-\end{center}
-\end{beispiel}
-\begin{aufgabe}[Funktionsgleichungen bestimmen]
-Bestimme die Funktionsgleichungen der aufgezeichneten Graphen:
-\flushleft {\includegraphics[scale=0.5]{images/graph2.png}}
-\end{aufgabe}\newpage
+	\begin{framed}
+		\noindent Für die Steigung $m$ der Geraden $g$ durch die beiden Punkte $A(x_A/y_A)$ und $B(x_B/y_B)$ gilt:
+		\begin{align*}
+			m=\frac{\Delta Y}{\Delta X}=\frac{y_B-y_A}{x_B-x_A}
+		\end{align*}
+		Die Steigung $m$ ist also der Quotient aus den \textbf{Differenzen} in $y-$Richtung und $x-$Richtung.\\
+		$q$ können wir, wenn möglich, direkt aus dem Schnittpunkt mit der $y-$Achse ablesen.
+	\end{framed}
+	\begin{figure}[H]
+	    \centering\includegraphics[width=0.5\textwidth]{steiglinfkt.PNG}
+	\end{figure}
+	\noindent
+	\begin{beispiel}
+		Wir wollen die Funktionsgleichung des folgenden Graphen bestimmen:
+		\begin{figure}[H]
+		    \centering\includegraphics[width=0.5\textwidth]{graphfkt.PNG}
+		\end{figure}
+		\noindent
+	\end{beispiel}
+	\begin{aufgabe}[Steigung bestimmen]
+		\begin{enumerate}[label=\alph*)]
+		\item Bestimme die Steigung der Geraden durch die beiden Punkte $A(1/3)$ und $B(2/-1)$
+		\item Bestimme die Steigung der Geraden durch die beiden Punkte $A(1/-2)$ und $B(7/3)$
+		\item Bestimme die Steigung der Geraden durch die beiden Punkte $A(-5/3)$ und $B(-2/-3)$
+		\item Bestimme die Steigung der Geraden durch die beiden Punkte $A(-127/-3)$ und $B(223/-38)$
+		\end{enumerate}
+	\end{aufgabe}
+	Wir können also die Steigung anhand zweier Punkte bestimmen. Indem wir auch noch den y-Achsenabschnitt $q$ ablesen, sind wir so in der Lage die Funktionsgleichung zu aufgezeichneten Graphen zu bestimmen.
+	\begin{beispiel}
+		Wir bestimmen die Funktionsgleichung des folgenden Graphen $g$:
+		\begin{figure}[H]
+			\includegraphics[scale=0.6]{graph1.png}
+		\end{figure}
+	\end{beispiel}
+	\begin{aufgabe}[Funktionsgleichungen bestimmen]
+		Bestimme die Funktionsgleichungen der aufgezeichneten Graphen:
+	\begin{figure}[H]
+		\includegraphics[scale=0.5]{graph2.png}
+	\end{figure}
+	\end{aufgabe}
+
+
+\newpage
 \subsection{$y-$Achsenabschnitt $q$ bestimmen}
-Bisher konnten wir zur Bestimmung der Funktionsgleichung zu einem Graphen den $y-$Achsenabschnitt $q$ direkt ablesen. Dies ist aber nicht immer möglich.
-\begin{beispiel}Wir möchten die Funktionsgleichung der Geraden $g$ bestimmen.
-\flushleft {\includegraphics[width=0.5\textwidth]{images/graph3.png}}
-\end{beispiel}\vspace{2cm}
-\begin{beispiel}Bestimme die Gleichung der Geraden $g$ durch die Punkte $A(-1/2)$ und $B(9/7)$
-\end{beispiel}\vspace{5cm}
-\begin{framed}\textbf{Vorgehen:}\vspace{4cm}
-\end{framed}
-\begin{aufgabe}
-Bestimme die Funktionsgleichungen der aufgezeichneten Graphen
-\flushleft {\includegraphics[width=\textwidth]{images/graph4.png}}
-\end{aufgabe}
-\vspace{3cm}
-\begin{aufgabe}
-Bestimme die Funktionsgleichungen der Geraden durch die Punkte $A$ und $B$.\\
-a) $A(-3/2)$ und $B(-1/6)$\\
-b) $A(5/-3)$ und $B(-1/5)$\\
-c) $A(-128/743)$ und $B(272/443)$
-\end{aufgabe}\newpage
+	Bisher konnten wir zur Bestimmung der Funktionsgleichung zu einem Graphen den $y-$Achsenabschnitt $q$ direkt ablesen. Dies ist aber nicht immer möglich.
+	\begin{beispiel}
+		Wir möchten die Funktionsgleichung der Geraden $g$ bestimmen.
+		\begin{figure}[H]
+			\includegraphics[width=0.5\textwidth]{graph3.png}
+		\end{figure}
+	\end{beispiel}\vspace{2cm}
+	\begin{beispiel}
+		Bestimme die Gleichung der Geraden $g$ durch die Punkte $A(-1/2)$ und $B(9/7)$
+	\end{beispiel}\vspace{5cm}
+	\begin{framed}
+		\textbf{Vorgehen:}\vspace{4cm}
+	\end{framed}
+	\begin{aufgabe}
+		Bestimme die Funktionsgleichungen der aufgezeichneten Graphen
+		\begin{figure}[H]
+			\includegraphics[width=\textwidth]{graph4.png}
+		\end{figure}
+	\end{aufgabe}\vspace{3cm}
+	\begin{aufgabe}
+		Bestimme die Funktionsgleichungen der Geraden durch die Punkte $A$ und $B$.
+		\begin{enumerate}[label=\alph*)]
+			\item $A(-3/2)$ und $B(-1/6)$
+			\item $A(5/-3)$ und $B(-1/5)$
+			\item $A(-128/743)$ und $B(272/443)$
+		\end{enumerate}
+	\end{aufgabe}\newpage
+
+
+
 \subsection{Schnittpunkt zweier Geraden}
-Wir wollen nun noch sehen, wie wir Schnittpunkte bestimmen.
-Zuerst einmal die \textbf{Schnittpunkte} mit den Koordinatenachsen.
-\begin{beispiel} Wir bestimmen die Schnittpunkte mit der $x-$ und $y-$Achse des Graphen der Funktion $y=-\frac{2}{3}x+\frac{9}{4}$.
+	Wir wollen nun noch sehen, wie wir Schnittpunkte bestimmen.
+	Zuerst einmal die \textbf{Schnittpunkte} mit den Koordinatenachsen.
+	\begin{beispiel}
+		Wir bestimmen die Schnittpunkte mit der $x-$ und $y-$Achse des Graphen der Funktion $y=-\frac{2}{3}x+\frac{9}{4}$.
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{p{0.5\textwidth}p{0.5\textwidth}}
+				\raisebox{-.9\height}{ \includegraphics[width=0.45\textwidth]{sp1.png}} & Wir wissen, dass beim Schnittpunkt mit der $y-$Achse $x=0$ ist. Ebenso ist beim Schnittpunkt mit der $x-$Achse $y=0$. Das nützen wir aus und setzen dies jeweils in die Gleichung ein.
+				\textbf{Schnittpunkt mit $y-$Achse}:\newline\newline\newline
+				\textbf{Schnittpunkt mit $x-$Achse}:
+			\end{tabular}
+		\end{table}
+		\vspace{1cm}
+	\end{beispiel}
+	Nun wollen wir den \textbf{Schnittpunkt zweier Geraden} bestimmen. Die Geraden $g: y=\frac{5}{2}x+1$ und $h: y=-0.5x-2$ sind gegeben. Gesucht ist deren Schnittpunkt $S(x_s/y_s)$.
+	\begin{beispiel}
+		\begin{table}[H]
+			\begin{tabular}{p{0.5\textwidth}p{0.5\textwidth}}
+			\raisebox{-.9\height}{\includegraphics[width=0.45\textwidth]{sp2.png}} & Betrachten wir zuerst einmal den Schnittpunkt $S(x_s/y_s)$. Dieser liegt auf der Geraden $g$, also muss er sicherlich die Funktionsgleichung von $g$ erfüllen:
+			\newline\newline
+			\newline
+			Zudem liegt er auch auf der Geraden $h$, also muss auch gelten:\vspace{1cm}
+			\end{tabular}
+		\end{table}
+		Wir erhalten also zwei Gleichungen für die Unbekannten $x_S$ und $y_S$. Die linke Seite der beiden Gleichungen stellen sogar dieselbe Zahl $y_S$ dar. Daher sind die rechten Seiten der beiden Gleichungen ebenfalls gleich gross und wir können sie gleichsetzen:
+		\vspace{1.5cm}\\
+		Für die Berechnung von $y_S$ müssen wir nur noch die erhaltene Lösung $x_S$ in eine der beiden Gleichungen einsetzen:
+	\end{beispiel}
+	\begin{aufgabe}
+		Berechne den Schnittpunkt der Geraden:
+		\begin{enumerate}[label=\alph*)]
+			\item $g: y=\frac{3}{2}x+3$ und $h=-\frac{1}{2}x-3$
+			\item $g: y=0.5x+4$ und $h: y=-x+10$
+		\end{enumerate}
+	\end{aufgabe}
+	\begin{aufgabe}
+		Ein Dreieck $\triangle$ABC wird durch die 3 Geraden $a: y=-\frac{11}{5}x+\frac{23}{5}$, $b=\frac{5}{2}x+\frac{9}{4}$ und $c: y=\frac{4}{11}x-\frac{34}{11}$ begrenzt.
+		\begin{enumerate}[label=\alph*)]
+			\item Zeichne die Graphen (Figur) in deinem Taschenrechner.
+			\item Berechne die Eckpunkte A, B, C.
+		\end{enumerate}
+	\end{aufgabe}\vspace{2cm}
+	\begin{aufgabe}
+		Berechne die schraffierte Fläche\\
+		\includegraphics[width=0.9\textwidth]{sp3.PNG}
+	\end{aufgabe}
 
-\begin{tabular}{p{0.5\textwidth}p{0.5\textwidth}}
-\raisebox{-.9\height}{ \includegraphics[width=0.45\textwidth]{images/sp1.png}}
- &
-Wir wissen, dass beim Schnittpunkt mit der $y-$Achse $x=0$ ist. Ebenso ist beim Schnittpunkt mit der $x-$Achse $y=0$. Das nützen wir aus und setzen dies jeweils in die Gleichung ein.
-\textbf{Schnittpunkt mit $y-$Achse}:\newline\newline\newline
-\textbf{Schnittpunkt mit $x-$Achse}:
- \end{tabular}
-\vspace{1cm}
-\end{beispiel}
-Nun wollen wir den \textbf{Schnittpunkt zweier Geraden} bestimmen. Die Geraden $g: y=\frac{5}{2}x+1$ und $h: y=-0.5x-2$ sind gegeben. Gesucht ist deren Schnittpunkt $S(x_s/y_s)$.
-\begin{beispiel}~~\\
-\begin{tabular}{p{0.5\textwidth}p{0.5\textwidth}}
-\raisebox{-.9\height}{ \includegraphics[width=0.45\textwidth]{images/sp2.png}}
- &
-Betrachten wir zuerst einmal den Schnittpunkt $S(x_s/y_s)$. Dieser liegt auf der Geraden $g$, also muss er sicherlich die Funktionsgleichung von $g$ erfüllen:
-\newline\newline
-\newline
-Zudem liegt er auch auf der Geraden $h$, also muss auch gelten:\vspace{1cm}
- \end{tabular}
-Wir erhalten also zwei Gleichungen für die Unbekannten $x_S$ und $y_S$. Die linke Seite der beiden Gleichungen stellen sogar dieselbe Zahl $y_S$ dar. Daher sind die rechten Seiten der beiden Gleichungen ebenfalls gleich gross und wir können sie gleichsetzen:
-\vspace{1.5cm}
-\\
-Für die Berechnung von $y_S$ müssen wir nur noch die erhaltene Lösung $x_S$ in eine der beiden Gleichungen einsetzen:
 
-\end{beispiel}
-\begin{aufgabe}Berechne den Schnittpunkt der Geraden:
-a) $g: y=\frac{3}{2}x+3$ und $h=-\frac{1}{2}x-3$\\
-b) $g: y=0.5x+4$ und $h: y=-x+10$
-\end{aufgabe}
-\begin{aufgabe}
-Ein Dreieck $\triangle$ABC wird durch die 3 Geraden $a: y=-\frac{11}{5}x+\frac{23}{5}$, $b=\frac{5}{2}x+\frac{9}{4}$ und $c: y=\frac{4}{11}x-\frac{34}{11}$ begrenzt.\\
-a) Zeichne die Graphen (Figur) in deinem Taschenrechner\\
-b) Berechne die Eckpunkte A, B, C.
-\end{aufgabe}\vspace{2cm}
-\begin{aufgabe}
-Berechne die schraffierte Fläche\\
- \includegraphics[width=0.9\textwidth]{images/sp3.PNG}
-\end{aufgabe}
 \newpage
 \subsection{Anwendungen}
-Lineare Funktionen haben viele Anwendungen. Je nach Anwendung werden die Variablen $x$ und $y$ anders benannt.
+	Lineare Funktionen haben viele Anwendungen. Je nach Anwendung werden die Variablen $x$ und $y$ anders benannt.
 \subsubsection{Notenskala}
-\begin{minipage}{0.45\linewidth}
-    \begin{beispiel}
-        In einer Prüfung müssen 25 Punkte erreicht werden für die Note 6. 13 Punkte genügen für eine 4.\\
-        a) Stelle die Notenskala in einem Koordinatensystem graphisch dar.\\
-        b) Stelle eine Formel auf, mit welcher man aus der Punktzahl die Note errechnen kann.\\
-        c) Welche Note erhält man für 0, 5, 10, 20 Punkte?\\
-        d) Wieviele Punkte werden benötigt, um die Note 4.5 zu erreichen?
-    \end{beispiel}
-\end{minipage}
-\hfill
-\begin{minipage}{0.45\linewidth}
-    \centering\includegraphics[width=\textwidth]{images/note.png}
-\end{minipage}
-\vspace{6cm}
-\begin{aufgabe}
-Betrachte die Notenskala:\\ Für 25 Punkte gibt es eine 6, für 0 Punkte eine 1.\\
-Beantworte für diese Skala die Fragen a)-d) aus dem Beispiel, sowie:\\
-e) Welche Note gibt es für die Hälfte der Punkte?
-\end{aufgabe}
-\subsubsection{Kostenaufgaben}
-\begin{beispiel}
-Die Handykosten setzten sich zusammen aus einer monatlichen Grundgebühr und den Tarifen für die Gesprächskosten.
-Wir vergleichen die beiden Telekommunikationsgesellschaften \emph{Sugar} und \emph{Sunset}:\vspace{0.5cm}\\
-\begin{tabular}{l|c|c}
-\hline
-& Grundgebühr je Monat [CHF] & Gesprächskosten [CHF je Stunde]\\\hline
-Sugar & 10& 8\\\hline
-Sunset & 25& 5\\ \hline
-\end{tabular}
-\end{beispiel}
-Wie viele Stunden müsste man pro Monat telefonieren, damit \emph{Sunset} günstiger ist als \emph{Sugar}?\\
- \includegraphics[width=0.5\textwidth]{images/telekom.png}
-\vspace{7cm}
-\begin{aufgabe}
-\emph{Sunset} führt eine Preissenkung auf noch 20 Franken Grundgebühr durch, gleichzeitig wird aber der Gesprächskostentarif auf 6 CHF/Stunde erhöht. Ab wievielen Stunden telefonieren pro Monat ist \emph{Sunset} nun günstiger?
-\end{aufgabe}
-\subsubsection{Weg-Zeit Aufgaben}
-Bei Weg-Zeit Aufgaben, wird der Verlauf eines zurückgelegten Weges in Abhängigkeit der vergangenen Zeit betrachtet.
-\begin{beispiel} Ein Auto fährt auf der Autobahn mit konstant 120 $\dfrac{km}{h}$. Es fährt um 13:00 in St. Gallen los, um welche Zeit erreicht es das 144 km entfernte Luzern?
-\end{beispiel}
- \includegraphics[width=1\textwidth]{images/zeitweg.png}
-\vspace{4cm}\\
-Ein zweites Auto fährt um 13:40 in Zürich, 90 km von St. Gallen, entfernt ebenfalls Richtung Luzern los, es fährt mit 80  $\dfrac{km}{h}$. Wann und wieviele Kilometer nach Zürich wird es vom ersten Auto eingeholt?
-\newpage
-\subsection{Parallele und orthogonale Graphen}
-In diesem letzten Theorieteil zu linearen Funktionen wollen wir schauen, wie die Lage von Geraden anhand der Steigung $m$ direkt abgelesen werden kann.
-\begin{satz}[Parallele Geraden]
-Zwei Graphen von linearen Funktionen
-\begin{align*}
-f_1(x)&=m_1\* x + 	q_1\\
-f_2(x)&=m_2\* x + 	q_2
-\end{align*} sind \textbf{parallel}, falls:
-\begin{align*}
-m_1=m_2
-\end{align*}
-\end{satz}
-\begin{definition}[Orthogonale Geraden]
-Zwei Geraden sind zueinander \emph{orthogonal}, wenn sie sich unter einem rechten Winkel schneiden.
-\end{definition}
-\begin{satz}[Orthogonale Geraden]
+	\begin{minipage}{0.45\linewidth}
+	    \begin{beispiel}
+	        In einer Prüfung müssen 25 Punkte erreicht werden für die Note 6. 13 Punkte genügen für eine 4.
+	        \begin{enumerate}[label=\alph*)]
+	        	\item Stelle die Notenskala in einem Koordinatensystem graphisch dar.
+	        	\item Stelle eine Formel auf, mit welcher man aus der Punktzahl die Note errechnen kann.
+	        	\item Welche Note erhält man für 0, 5, 10, 20 Punkte?
+	        	\item Wie viele Punkte werden benötigt, um die Note 4.5 zu erreichen?
+	        \end{enumerate}
+	    \end{beispiel}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.45\linewidth}
+	    \centering\includegraphics[width=\textwidth]{note.png}
+	\end{minipage}
+	\vspace{6cm}
+	\begin{aufgabe}
+		Betrachte die Notenskala:\\ Für 25 Punkte gibt es eine 6, für 0 Punkte eine 1.\\ Beantworte für diese Skala die Fragen a)-d) aus dem Beispiel, sowie:\\ e) Welche Note gibt es für die Hälfte der Punkte?
+	\end{aufgabe}
 
-\begin{minipage}{0.5\textwidth}
- Zwei Graphen von linearen Funktionen
-\begin{align*}
-f_1(x)&=m_1\* x + 	q_1\\
-f_2(x)&=m_2\* x + 	q_2
-\end{align*} sind \textbf{orthogonal}, falls:
-\begin{align*}
-m_2=-\frac{1}{m_1}
-\end{align*}\end{minipage}
-\begin{minipage}{0.5\textwidth}
- \centering\includegraphics[width=0.75\textwidth]{images/ortho.png}
-\end{minipage}
-\end{satz}
-\begin{aufgabe}
-a) Bestimme eine zur x-Achse parallele Gerade durch $(7/4)$.\\
-b) Bestimme eine zur Geraden $y=\frac{1}{2}x+2$ parallele Gerade durch $(2/4)$\\
-c) Bestimme eine zur Geraden $y=-2x+4$ orthogonale Gerade durch $(4/3)$ und zeichne die beiden in ein Koordinatensystem.\\
-d) Bestimme eine zur Geraden $y=\frac{2}{3}x-4$ orthogonale Gerade, welche die $x-$Achse im selben Punkt schneidet.
-\end{aufgabe}
+
+
+\subsubsection{Kostenaufgaben}
+	\begin{beispiel}
+		Die Handykosten setzten sich zusammen aus einer monatlichen Grundgebühr und den Tarifen für die Gesprächskosten.
+		Wir vergleichen die beiden Telekommunikationsgesellschaften \emph{Sugar} und \emph{Sunset}:\vspace{0.5cm}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{l|c|c}
+				& Grundgebühr je Monat [CHF] & Gesprächskosten [CHF je Stunde]\\\hline
+				Sugar & 10& 8\\\hline
+				Sunset & 25& 5\\
+			\end{tabular}
+		\end{table}
+	\end{beispiel}
+	Wie viele Stunden müsste man pro Monat telefonieren, damit \emph{Sunset} günstiger ist als \emph{Sugar}?
+	\begin{figure}[H]
+		\includegraphics[width=0.5\textwidth]{telekom.png}
+	\end{figure}
+	\vspace{7cm}
+	\begin{aufgabe}
+		\emph{Sunset} führt eine Preissenkung auf noch 20 Franken Grundgebühr durch, gleichzeitig wird aber der Gesprächskostentarif auf 6 CHF/Stunde erhöht. Ab wie vielen Stunden telefonieren pro Monat ist \emph{Sunset} nun günstiger?
+	\end{aufgabe}
+
+
+\subsubsection{Weg-Zeit Aufgaben}
+	Bei Weg-Zeit Aufgaben, wird der Verlauf eines zurückgelegten Weges in Abhängigkeit der vergangenen Zeit betrachtet.
+	\begin{beispiel}
+		Ein Auto fährt auf der Autobahn mit konstant 120 $\dfrac{km}{h}$. Es fährt um 13:00 in St. Gallen los, um welche Zeit erreicht es das 144 km entfernte Luzern?
+	\end{beispiel}
+	\begin{figure}[H]
+		\includegraphics[width=1\textwidth]{zeitweg.png}
+	\end{figure}
+	\vspace{4cm}
+	Ein zweites Auto fährt um 13:40 in Zürich, $90$km von St. Gallen, entfernt ebenfalls Richtung Luzern los, es fährt mit $80\frac{km}{h}$. Wann und wie viele Kilometer nach Zürich wird es vom ersten Auto eingeholt?
+
+
+\subsection{Parallele und orthogonale Graphen}
+	In diesem letzten Theorieteil zu linearen Funktionen wollen wir schauen, wie die Lage von Geraden anhand der Steigung $m$ direkt abgelesen werden kann.
+	\begin{satz}[Parallele Geraden]
+		Zwei Graphen von linearen Funktionen
+		\begin{align*}
+			f_1(x) &= m_1\* x + q_1\\
+			f_2(x) &= m_2\* x + q_2
+		\end{align*}
+		sind \textbf{parallel}, falls:
+		\begin{align*}
+			m_1 = m_2
+		\end{align*}
+	\end{satz}
+	\begin{definition}[Orthogonale Geraden]
+		Zwei Geraden sind zueinander \emph{orthogonal}, wenn sie sich unter einem rechten Winkel schneiden.
+	\end{definition}
+	\begin{satz}[Orthogonale Geraden]
+		\begin{minipage}{0.5\textwidth}
+			Zwei Graphen von linearen Funktionen
+			\begin{align*}
+				f_1(x) &= m_1\* x + q_1\\
+				f_2(x) &= m_2\* x + q_2
+			\end{align*}
+			sind \textbf{orthogonal}, falls:
+			\begin{align*}
+				m_2 = -\frac{1}{m_1}
+			\end{align*}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.5\textwidth}
+			\centering\includegraphics[width=0.75\textwidth]{ortho.png}
+		\end{minipage}
+	\end{satz}
+	\begin{aufgabe}
+		\begin{enumerate}[label=\alph*)]
+			\item Bestimme eine zur x-Achse parallele Gerade durch $(7/4)$.
+			\item Bestimme eine zur Geraden $y=\frac{1}{2}x+2$ parallele Gerade durch $(2/4)$
+			\item Bestimme eine zur Geraden $y=-2x+4$ orthogonale Gerade durch $(4/3)$ und zeichne die beiden in ein Koordinatensystem.
+			\item Bestimme eine zur Geraden $y=\frac{2}{3}x-4$ orthogonale Gerade, welche die $x-$Achse im selben Punkt schneidet.
+		\end{enumerate}
+	\end{aufgabe}
 
 
 \newpage
