@@ -58,8 +58,10 @@
 \renewcommand{\d}[1]{\ensuremath{\operatorname{d}\!{#1}}}
 \newcommand{\Sum}{\sum\limits}
 \newcommand{\Prod}{\prod\limits}
-\newcommand{\Min}{\min\limits}
-\newcommand{\Max}{\max\limits}
+\let\oldmin\min
+\renewcommand{\min}[1]{\oldmin{\left\{#1\right\}}}
+\let\oldmax\max
+\renewcommand{\max}[1]{\oldmax{\left\{#1\right\}}}
 \newcommand{\Lim}{\lim\limits}
 \newcommand{\Inf}{\inf\limits}
 \newcommand{\Sup}{\sup\limits}
@@ -136,3 +138,9 @@
 \newcommand{\otext}[2]{\overset{\text{#1}}{#2}}
 \newcommand{\lineortext}[1]{\hspace{0,1cm}\underline{\hspace{0.1cm}\hphantom{#1}\hspace{0.1cm}}\hspace{0,1cm}} % Lückentext erstellen
 \newcommand{\gap}[1]{\rule{#1 cm}{1pt}}
+
+
+%%
+% Formeldarstellung
+%%
+\newcommand{\ds}{\displaystyle}
