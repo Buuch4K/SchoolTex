@@ -8,7 +8,7 @@
 
 \newcommand{\Skriptname}{Grenzwerte}
 \newcommand{\Autor}{Jonas Guler (Gu)}
-\newcommand{\version}{\textit{v}0.1}
+\newcommand{\version}{\textit{v}1.0}
 
 \begin{document}  % Skript - Tynd --> PDF
 \begin{titlepage}
@@ -245,7 +245,7 @@
 			\draw[black,dashed,smooth,domain=0:17.3] plot (\x, {2.7});
 			\draw[black,thick,smooth,domain=0:17.3] plot (\x, {2});
 			\draw[black,dashed,smooth,domain=0:17.3] plot (\x, {1.3});
-			\foreach \x/\y in {1/0.4,2/0.8,3/1.7,4/2.6,5/3.1,6/3.05,7/2.95,8/2.8,9/2.55,10/2.2,11/1.8,12/1.6,13/2.05,14/1.95,15/1.98,16/2.07,17/1.99,18/2.01}{\fill[forestgreen] (\x,\y) circle (2pt);} % Folgepunkte
+			\foreach \x/\y in {1/0.4,2/0.8,3/1.7,4/2.6,5/3,6/3.2,7/3.05,8/2.8,9/2.55,10/2.2,11/1.8,12/1.6,13/2.05,14/1.95,15/1.98,16/2.07,17/1.99,18/2.01}{\fill[forestgreen] (\x,\y) circle (2pt);} % Folgepunkte
 			% Beschriftung
 			\node[above] at (15,3.5) {Streifen der Breite $\epsilon$};
 			\draw[->] (15,3.5) -- (14.3,2.75);
@@ -393,6 +393,7 @@
 	\end{beweis}
 	Die genau gleiche Argumentation kann für jede andere Grundrechenart herangezogen werden und damit können wir uns also sicher sein, dass die folgenden Grenzwertsätze für alle Operationen (Addition, Subtraktion, Multiplikation und Division) gelten.
 	\begin{satz}[Grenzwertsätze]
+		\label{satz:grenzwertsaetze}
 		Gegeben sind zwei konvergente Folgen $(a_n)$ und $(b_n)$, dann gilt:
 		\begin{enumerate}[label=\ ,leftmargin=2cm]
 			\item $\ds\lim_{n\to\infty}\left(a_n\pm b_n\right)=$
@@ -487,13 +488,287 @@
 	\end{figure}
 	{\bf Feststellung:}\vspace{2pt}\\\karos{3.5}
 
-
-
 \subsection{Grenzwerte im Unendlichen}
+	\begin{beispiel}\ \\
+		\begin{minipage}{0.475\linewidth}
+			{\bf Potenzfunktionen:}
+			\centering
+			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=1cm, y=1cm,
+				>=latex,   %Voreinstellung für Pfeilspitzen
+				font= \footnotesize, scale=0.65]
+				%Raster zeichnen
+				\draw [color=gray!50]  [step=10mm] (-5.3,-3.3) grid (5.3,3.3);
+				% Achsen zeichnen
+				\draw[->,thick] (-5.3,0) -- (5.8,0) node[right, below] {\normalsize $x$};
+				\draw[->,thick] (0,-3.3) -- (0,3.8) node[above, left] {\normalsize $y$};
+				% Achsen beschriften
+				\foreach \x in {-5,...,-3,-2,-1,1,2,...,5} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+				\foreach \y in {-3,-2,-1,1,2,...,3} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+				% Besserer Ursprung
+				\draw[color=black] (0pt,-8pt) node[right] {$0$};
+				%Funktionen zeichnen:
+				\clip(-5.3,-3.3) rectangle (5.3,3.3); %Bildbereich
+				\draw[plotblue, thick, domain=-5.3:5.3, samples=100] plot (\x, {pow(\x,2)});
+				\draw[highdive, thick, domain=-5.3:-0.01, samples=200] plot (\x, {pow(\x,-1)});
+				\draw[highdive, thick, domain=0.01:5.3, samples=200] plot (\x, {pow(\x,-1)}) node[above=8pt,left=4pt] {$x^{-1}$};
+				\draw[plotblue] (2,2.8) node {$x^2$};
+			\end{tikzpicture}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.475\linewidth}
+			{\bf $\log{}-$ \& $\exp{}-$ Funktionen:}
+			\centering
+			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=1cm, y=1cm,
+				>=latex,   %Voreinstellung für Pfeilspitzen
+				font= \footnotesize, scale=0.65]
+				%Raster zeichnen
+				\draw [color=gray!50]  [step=10mm] (-5.3,-3.3) grid (5.3,3.3);
+				% Achsen zeichnen
+				\draw[->,thick] (-5.3,0) -- (5.8,0) node[right, below] {\normalsize $x$};
+				\draw[->,thick] (0,-3.3) -- (0,3.8) node[above, left] {\normalsize $y$};
+				% Achsen beschriften
+				\foreach \x in {-5,...,-2,-1,1,2,...,5} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+				\foreach \y in {-3,-2,-1,1,2,...,3} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+				% Besserer Ursprung
+				\draw[color=black] (0pt,-8pt) node[right] {$0$};
+				%Funktionen zeichnen:
+				\clip(-5.3,-3.3) rectangle (5.8,3.3); %Bildbereich
+				\draw[plotblue, thick, domain=-5.3:5.3, samples=100] plot (\x, {exp(\x)});
+				\draw[plotblue] (1.4,2.8) node {$\exp{x}$};
+				\draw[highdive, thick, domain=0.01:5.3, samples=100] plot (\x, {ln(\x)});
+				\draw[highdive] (5,1.1) node {$\ln{x}$};
+			\end{tikzpicture}
+		\end{minipage}\vspace{4pt}\\
+		\begin{minipage}{0.475\linewidth}
+			{\bf Trigonometrische Funktionen:}
+			\centering
+			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=1cm, y=1cm,
+				>=latex,   %Voreinstellung für Pfeilspitzen
+				font= \footnotesize, scale=0.65]
+				%Raster zeichnen
+				\draw [color=gray!50]  [step=10mm] (0,-3.3) grid (10.3,3.3);
+				% Achsen zeichnen
+				\draw[->,thick] (-0.3,0) -- (10.8,0) node[right, below] {\normalsize $x$};
+				\draw[->,thick] (0,-3.3) -- (0,3.8) node[above, left] {\normalsize $y$};
+				% Achsen beschriften
+				\foreach \x in {1,2,...,10} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+				\foreach \y in {-3,-2,-1,0,1,2,...,3} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+				% Besserer Ursprung
+				%\draw[color=black] (0pt,-8pt) node[left] {$0$};
+				%Funktionen zeichnen:
+				\clip(0,-3.3) rectangle (10.3,3.3); %Bildbereich
+				\draw[plotblue, thick, domain=0:10.3, samples=500] plot (\x, {sin(2*\x r)}) node[above=6pt,left=4pt] {$f$};
+			\end{tikzpicture}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.475\linewidth}
+			\centering
+			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=1cm, y=1cm,
+				>=latex,   %Voreinstellung für Pfeilspitzen
+				font= \footnotesize, scale=0.65]
+				%Raster zeichnen
+				\draw [color=gray!50]  [step=10mm] (0,-3.3) grid (10.3,3.3);
+				% Achsen zeichnen
+				\draw[->,thick] (-0.3,0) -- (10.8,0) node[right, below] {\normalsize $x$};
+				\draw[->,thick] (0,-3.3) -- (0,3.8) node[above, left] {\normalsize $y$};
+				% Achsen beschriften
+				\foreach \x in {1,2,...,10} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+				\foreach \y in {-3,-2,-1,0,1,2,...,3} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+				% Besserer Ursprung
+				%\draw[color=black] (0pt,-8pt) node[left] {$0$};
+				%Funktionen zeichnen:
+				\clip(0,-3.3) rectangle (10.3,3.3); %Bildbereich
+				\draw[plotblue, thick, domain=0:10.3, samples=500] plot (\x, {3*exp(-0.2*\x)*cos(2*\x r)}) node[above=14pt,left=4pt] {$f$};
+			\end{tikzpicture}
+		\end{minipage}
+	\end{beispiel}
+	Wir können also an dieser Stelle festhalten, dass für die Diskussion von Grenzwerte von Funktionen die genau gleichen \flqq Regeln\frqq\:wie für die Folgen gelten. Entsprechend können wir den Satz \ref{satz:grenzwertsaetze} wie folgt auf die Funktionen erweitern.
+	\begin{satz}[Grenzwertsätze]
+		Gegeben sind zwei Funktionen $f$ und $g$ mit je einem Grenzwert $\ds\lim_{x\to\infty}f(x)$ und $\ds\lim_{x\to\infty}g(x)$, dann gilt:
+		\begin{enumerate}[label=\ ,leftmargin=2cm]
+			\item $\ds\lim_{n\to\infty}\left(f\pm g\right)=$
+			\item $\ds\lim_{n\to\infty}\left(f\* g\right)=$
+			\item $\ds\lim_{n\to\infty}\left(\frac{f}{g}\right)=$
+		\end{enumerate}
+		Zudem können wir ganz allgemein formulieren:
+		\begin{enumerate}[label=\ ,leftmargin=2cm]
+			\item Gilt $\ds\lim_{n\to\infty}\left(f\right)=\infty\quad\Rightarrow$
+		\end{enumerate}
+	\end{satz}
+	Das heisst im Allgemeinen können damit weitere Grenzwerte von Funktionen berechnen.
+	\begin{aufgabe}
+		\begin{enumerate}
+			\item Die Folge $(a_n)$ ist durch das allgemeine Glied gegeben. Berechne für jede Folge $\ds\lim_{n\to\infty}(a_n)$.
+			\begin{enumcols}[3]
+				\item $\ds\lim_{x\to\infty}\left(\frac{3x-1}{x+2}\right)$
+				\item $\ds\lim_{x\to\infty}\left(\frac{3x+1}{x^2}\right)$
+				\item $\ds\lim_{x\to\infty}\left(\frac{3-x^2}{x^4-2x^2}\right)$
+				\item $\ds\lim_{x\to\infty}\left(\frac{8x^3}{2x^2+x}\right)$
+				\item $\ds\lim_{x\to\infty}\left(\frac{4x+3}{2x^6}\right)$
+				\item $\ds\lim_{x\to\infty}\left(\frac{x^4+x^2+6}{9-x^4}\right)$
+			\end{enumcols}
+			\item Bestimme die Parameter $a$,$b$ und $c$ so, dass gilt: \[\lim_{x\to\infty}\left(\frac{a\*x^b+4x^5+c\*x^3-1}{2x^3-11x^2+5}\right)=3\]
+		\end{enumerate}
+	\end{aufgabe}
 
 \subsection{Grenzwerte im Endlichen}
-
-
+	Betrachte dir die Funktion $\ds f(x)=\frac{2x^2+x}{x}$.\\
+	\begin{minipage}{0.575\linewidth}
+		\begin{enumerate}[label=\alph*)]
+			\item Erstelle zuerst eine Wertetabelle und skizziere die Folge in einem Koordinatensystem.
+		\end{enumerate}
+		\begingroup
+		\renewcommand{\arraystretch}{1.5}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{c|p{5mm}|p{5mm}|p{5mm}|p{5mm}|p{5mm}|p{5mm}|p{5mm}|p{7mm}}
+				$x$ & $1$ & $2$ & $3$ & $5$ & $10$ & $20$ & $50$ & $100$ \\\hline
+				$f(x)$ & & & & & & & &
+			\end{tabular}
+		\end{table}
+		\endgroup
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.4\linewidth}
+		\centering
+		\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=1cm, y=1cm,
+			>=latex,   %Voreinstellung für Pfeilspitzen
+			font= \footnotesize, scale=0.7]
+			%Raster zeichnen
+			\draw [color=gray!50]  [step=10mm] (-3.3,-3.3) grid (5.3,3.3);
+			% Achsen zeichnen
+			\draw[->,thick] (-3.3,0) -- (5.8,0) node[right, below] {\normalsize $x$};
+			\draw[->,thick] (0,-3.3) -- (0,3.8) node[above, left] {\normalsize $y$};
+			% Achsen beschriften
+			\foreach \x in {-3,...,-2,-1,1,2,...,5} \draw (\x,-.1) -- (\x,.1) node[below=5pt] {$\x$};
+			\foreach \y in {-3,...,-2,-1,1,2,...,3} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+			% Besserer Ursprung
+			\draw[color=black] (0pt,-10pt) node[right] {$0$};
+			%Funktionen zeichnen:
+			%\clip(-3.3,-5.3) rectangle (3.3,7.3); %Bildbereich
+			%\draw[blue, smooth, domain=-9:9] plot (\x, {-1*pow(\x-3,2)+1}) node[yshift=13cm] {$$};
+		\end{tikzpicture}
+	\end{minipage}\vspace{6pt}\\
+	Der Grenzwert dieser Funktion im unendlichen ist nicht interessant, da die Funktionswerte immer grösser und grösser werden und die Funktion somit für $x\lto\infty$ divergiert.\\
+	\begin{minipage}{0.575\linewidth}
+		Allerdings ist die Funktion \gap{4} für $x_0=0$. Nähern wir uns mit $x$ gegen diese Stelle $0$, nähern sich die Funktionswerte beliebig nahe der Zahl $1$.\\ Auch hier sagen wir, die Funktion \gap{3} für $x\lto x_0$ gegen den Grenzwert $1$.\\
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.4\linewidth}
+		\ \vspace{3.2cm}\\
+	\end{minipage}
+	Geschrieben wird das ebenfalls analog zu den Folgen:\vspace{6pt}\\\karos{2.5}
+	\begin{definition}[Definitionslücke]
+		Ist eine Funktion $f$ an einer Stelle $x_0$ nicht definitiert, so wird diese Stelle als \textbf{Definitionslücke} bezeichnet.
+	\end{definition}
+	Diese Definitionslücke $x_0=0$ in der Funktion $f(x)=\frac{2x^2+x}{x}$ erkennen wir auch in der Funktionsgleichung, denn sobald die Zahl $0$ eingesetzt wird, wird der Bruch durch $0$ geteilt, was bekanntlich nicht erlaubt ist. Damit teilt die Definitionslücke unseren Funktionsgraphen in einen linken und einen rechten Teil. Wir können uns also von beiden Seiten her dieser Stelle nähern. Dementsprechend gibt es auch zwei verschiedene Grenzwerte; einen von der linken Seite kommend und den zweiten von der rechten Seite herkommend.
+	\begin{definition}
+		Der Grenzwert \gap{4} heisst rechtsseitiger Grenzwert und \gap{4} heisst linksseitiger Grenzwert.
+	\end{definition}
+	Wie wir im Einsteigsbeispiel mit der Funktion $f(x)=\frac{2x^2+x}{x}$ gesehen haben, können die beiden Grenzwerte übereinstimmen. Dies hängt aber stark von der Funktion ab und gilt nicht allgemein.
+	\begin{beispiel}
+		Wir untersuchen die Funktion $f(x)=\frac{1}{x-1}$ an der Stelle $x_0=1$. Nähern wir uns von der linken Seite an die Stelle $x_0$ an, gehen die Funktionswerte immer weiter ins Negative. Nähern wir uns von der rechten Seite gehen wir genau in entgegengesetzte Richtung; also werden die Funktionswerte immer grösser im Positiven.\\
+		\begin{minipage}{0.5\linewidth}
+			\centering
+			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=1cm, y=1cm,
+				>=latex,   %Voreinstellung für Pfeilspitzen
+				font= \footnotesize, scale=0.7]
+				%Raster zeichnen
+				\draw [color=gray!50]  [step=10mm] (-5.3,-3.3) grid (5.3,3.3);
+				% Achsen zeichnen
+				\draw[->,thick] (-5.3,0) -- (5.8,0) node[right, below] {\normalsize $x$};
+				\draw[->,thick] (0,-3.3) -- (0,3.8) node[above, left] {\normalsize $y$};
+				% Achsen beschriften
+				\foreach \x in {-5,...,-2,-1,1,2,...,5} \draw (\x,-.1) -- (\x,.1) node[below=5pt] {$\x$};
+				\foreach \y in {-3,...,-2,-1,1,2,...,3} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+				% Besserer Ursprung
+				\draw[color=black] (0pt,-10pt) node[right] {$0$};
+				%Funktionen zeichnen:
+				%\clip(-3.3,-3.3) rectangle (3.3,3.3); %Bildbereich
+				%\draw[blue, thick, domain=-3.3:0.99, samples=200] plot (\x, {1/(\x-1)});
+				%\draw[blue, thick, domain=1.01:3.3, samples=200] plot (\x, {1/(\x-1)});
+			\end{tikzpicture}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.475\linewidth}
+			\begin{enumerate}[label=\ ]
+				\item $\ds\lim_{x\to1^-}f(x)=$
+				\item
+				\item $\ds\lim_{x\to1^+}f(x)=$
+			\end{enumerate}
+		\end{minipage}
+	\end{beispiel}
+	\begin{itemize}
+		\item Der Grenzwert einer Funktion an der Stelle $x_0$ existiert nur, wenn der linksseite und rechtsseitige Grenzwert übereinstimmen. In diesem Fall können wir den Grenzwert wie folgt angeben:
+		\begin{enumerate}[label=\ ,leftmargin=2cm]
+			\item $\ds\lim_{x\to x_0^-}f(x)=\lim_{x\to x_0^+}f(x)=$
+		\end{enumerate}
+		\item Sind der links- und rechtsseitige Grenzwert nicht gleich, so existiert der Grenzwert nicht.
+		\begin{enumerate}[label=\ ,leftmargin=2cm]
+			\item $\ds\lim_{x\to x_0^-}f(x)\neq\lim_{x\to x_0^+}f(x)$
+		\end{enumerate}
+	\end{itemize}
+	Da wir hier die Variable $x$ nicht einfach gegen $\infty$ schicken, können wir für die Berechnung des Grenzwertes nicht auch unsere bekannten Methoden zurückgreifen. Da die gesuchte Stelle aber eine reele Zahl ist ($x_0\in\R$), kann der Grenzwert durch einsetzen der entsprechenden Zahl berechnet werden.
+	\begin{beispiel}
+		Berechne den Grenzwert $\ds\lim_{x\to 5}\left(\frac{x-1}{x^2-1}\right)$.\vspace{5pt}\\\karos{2.5}
+	\end{beispiel}
+	Leider ist das Einsetzen der Zahl nicht immer möglich. In diesem Fall ist ein zusätzlicher Umformungsschritt notwendig.
+	\begin{beispiel}
+		Berechne den Grenzwert $\ds\lim_{x\to 2}\left(\frac{x^3-3x-2}{x^2-4}\right)$.\vspace{5pt}\\\karos{4.5}
+	\end{beispiel}
+	\begin{aufgabe}
+		\begin{enumerate}
+			\item Betrachte den Ausschnitt des Graphen einer Funktion $f$. Welche Vermutungen bezüglich der folgenden Grenzwerte ergeben sich daraus?\\
+			\begin{minipage}{0.6\linewidth}
+				\centering
+				\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=1cm, y=1cm,
+					>=latex,   %Voreinstellung für Pfeilspitzen
+					font= \footnotesize, scale=1.2]
+					%Raster zeichnen
+					\draw [color=gray!50]  [step=5mm] (-1.3,-0.8) grid (5.3,3.3);
+					% Achsen zeichnen
+					\draw[->,thick] (-1.3,0) -- (5.8,0) node[right, below] {\normalsize $x$};
+					\draw[->,thick] (0,-0.8) -- (0,3.8) node[above, left] {\normalsize $y$};
+					% Achsen beschriften
+					\foreach \x in {-1,1,2,...,5} \draw (\x,-.1) -- (\x,.1) node[below=5pt] {$\x$};
+					\foreach \y in {1,2,...,3} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+					% Besserer Ursprung
+					\draw[color=black] (0pt,-10pt) node[right] {$0$};
+					%Funktionen zeichnen:
+					\clip(-1.3,-0.8) rectangle (5.3,3.3); %Bildbereich
+					\draw[plotblue, thick, domain=-1.3:0.95, samples=50] plot (\x, {-0.5*(\x)+2.5});
+					\draw[plotblue,thick] (1,2) circle (1.5pt);
+					\filldraw[plotblue] (1,1) circle (1.5pt);
+					\draw[plotblue, thick, domain=1.01:3.95, samples=100] plot (\x, {pow((\x-1),2)/9+1});
+					\draw[plotblue,thick] (4,2) circle (1.5pt);
+					\filldraw[plotblue] (4,1) circle (1.5pt);
+					\draw[plotblue, thick, domain=4.05:5.3, samples=100] plot (\x, {pow((\x-1),2)/9+1});
+				\end{tikzpicture}
+			\end{minipage}
+			\hfill
+			\begin{minipage}{0.375\linewidth}
+				\begin{enumerate}[label=\alph*)]
+					\item $\ds\lim_{x\to1^-}f(x)=$
+					\item $\ds\lim_{x\to1^+}f(x)=$
+					\item $\ds\lim_{x\to1}f(x)=$
+					\item $\ds\lim_{x\to4^-}f(x)=$
+					\item $\ds\lim_{x\to4^+}f(x)=$
+					\item $\ds\lim_{x\to4}f(x)=$
+				\end{enumerate}
+			\end{minipage}
+			\item Bestimme den Grenzwert der Funktion $f$ an der angegebenen Stelle $a$.
+			\begin{enumcols}[2]
+				\item $\ds f(x)=2x-6;\qquad a=3$
+				\item $\ds f(x)=\frac{x-2}{x}; \qquad a=2$
+				\item $\ds f(x)=\frac{x-2}{x}; \qquad a=0$
+				\item $\ds f(x)=\frac{(2-x)(2+x)}{2-x}; \qquad a=2$
+				\item $\ds f(x)=\frac{8(x-3)}{x^2-9}; \qquad a=3$
+				\item $\ds f(x)=\frac{10(x-1)(x+1)}{1-x}; \qquad a=1$
+				\item $\ds f(x)=\frac{x^2+3x+2}{x^2+2x}; \qquad a=-2$
+				\item $\ds f(x)=\frac{x^2-4x+3}{x^2-9}; \qquad a=3$
+			\end{enumcols}
+		\end{enumerate}
+	\end{aufgabe}
 
 \newpage
 \subsection*{History}
@@ -502,7 +777,7 @@
 	\begin{tabular}{|p{13mm}|p{20mm}|p{30mm}|p{70mm}|}\hline
 		%\multicolumn{4}{|l|}{History}\\\hline
 		Version & Datum & Person & Bemerkung \\\hline
-		$0.1$ & ToDo & Jonas Guler & Kapitel erstellen \\\hline
+		$1.0$ & 28.07.26 & Jonas Guler & Kapitel erstellt \\\hline
 	\end{tabular}
 \end{table}
 
