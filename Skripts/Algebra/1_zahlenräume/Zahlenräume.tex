@@ -12,7 +12,7 @@
 	\clearpage
 	\title{\Huge\textbf{\Skriptname} \\[1cm]}
 	\author{Autor:\\ \Autor}
-	\date{\normalsize {Version 1.0}\\ \datelong}
+	\date{\normalsize {Version 1.1}\\ \datelong}
 	\maketitle
     \thispagestyle{empty}
     \vfill
@@ -37,9 +37,10 @@
         \end{itemize}
     \end{notation}
     \begin{beispiel}
+    	\label{bsp:aufzählmengen}
         \begin{itemize}
             \item Alle (Halb-)Kantone der Schweiz bilden eine Menge.
-            \[K=\left\{\text{AG, AR, AI, BL, \ldots VS, ZH}\right\}\]
+            \[K=\left\{\text{AG, AR, AI, BL, \ldots, VS, ZH}\right\}\]
             Es gilt: $\text{SG}\in K$ und $\text{GR}\in K$, hingegen $\text{FL}\notin K$ und $\text{Heerbrugg}\notin K$. Da $\abs{K} = 26$, so ist die Menge endlich.
             \item Die 7er-Reihe ist eine Menge von Zahlen. Ihre Elemente sind alle Vielfachen von 7. Die Menge ist unendlich.
             \[R_{7} = \left\{0, 7, 14, 21, 28, 35, \ldots\right\}\]
@@ -47,29 +48,113 @@
         \end{itemize}
     \end{beispiel}
     \begin{aufgabe}
+    	\label{aufg:aufzählmengen}
         Entscheide, ob die folgenden Ausdrücke eine Menge beschreiben. Begründe.
         \begin{enumerate}[label=\alph*)]
-            \item $\{$Altstätten, Heerbrugg, St. Margrethen, Rorschach$\}$
+            \item $\{$Altstätten, Heerbrugg, St. Margrethen, Widnau$\}$
             \item $\{1,2,2,3,4,5\}$
             \item $(1,2,3,4,5)$
             \item $\{\}$
         \end{enumerate}
     \end{aufgabe}
+    Für Mengen werden verschiedene Darstellungsformen unterschieden, wobei jede für sich gewisse Vor- aber auch Nachteile mit sich bringt.
+    \begin{notation}
+    	\begin{enumerate}[label=\ ]
+    		\item {\bf Aufzählende Form:} Die aufzählende Form haben wir oben im Beispiel \ref{bsp:aufzählmengen} resp. in der Aufgabe \thesection.\ref{aufg:aufzählmengen} bereits gesehen. Dabei werden die einzelnen Elemente der Menge zwischen geschweiften Klammern notiert. Ein weiteres Beispiel wäre: \[A=\left\{Mo, Di, Mi, Do, Fr, Sa, So\right\};\quad B=\left\{1,2,3,6\right\}\]
+    		\item {\bf Beschreibende Form:} In der beschreibenden Form werden die einzelnen Elemente in deutscher Sprache beschrieben. \[A=\text{Menge aller Wochentage};\quad B=\text{Menge aller Teiler von $6$}\]
+    		\item {\bf Mengendiagramm:}
+    		\begin{figure}[H]
+    			\centering
+    			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=1cm, y=1cm,
+    				>=latex,   %Voreinstellung für Pfeilspitzen
+    				font= \footnotesize, scale=0.65]
+    				\draw[plotblue,thick] (0,0) ellipse (4cm and 2cm);
+    				\node[plotblue]  at (0,0) {$Mo$};
+    				\node[plotblue]  at (2,1.2) {$Di$};
+    				\node[plotblue]  at (-1,1.5) {$Mi$};
+    				\node[plotblue]  at (-0.3,-1.4) {$Do$};
+    				\node[plotblue]  at (3,0.4) {$Fr$};
+    				\node[plotblue]  at (-2.7,-0.6) {$Sa$};
+    				\node[plotblue]  at (2.4,-1.1) {$So$};
+    				\draw[plotblue,thick] (8,0) ellipse (2cm and 1cm);
+    				\node[plotblue]  at (9.2,0.2) {$1$};
+    				\node[plotblue]  at (6.5,-0.1) {$2$};
+    				\node[plotblue]  at (7.8,0.6) {$3$};
+    				\node[plotblue]  at (8.4,-0.6) {$6$};
+    			\end{tikzpicture}
+    		\end{figure}
+    	\end{enumerate}
+    \end{notation}
+    \begin{aufgabe}
+    	\begin{enumerate}
+    		\item Notiere die Mengen in aufzählender Form. \textit{Tipp: $\N=\left\{1,2,3,4,5,\ldots\right\}$}
+    		\begin{enumcols}[2]
+    			\item $\left\{x\in\N\mid x<11\right\}$
+    			\item $\left\{x\in\N\mid x<11 \text{ und } x>5\right\}$
+    			\item $\left\{x\in\N\mid \text{$x$ ist gerade und $x\leq 12$}\right\}$
+    			\item Menge aller Teiler von 36
+    		\end{enumcols}
+    		\item Notiere die Menge in beschreibender Form.
+    		\begin{enumcols}[2]
+    			\item $\left\{2,4,6,8,\ldots\right\}$
+    			\item $\left\{1,3,5,7,9,11\right\}$
+    			\item $\left\{1,3,5,15\right\}$
+    			\item $\left\{16,25,36,49,64,81\right\}$
+    		\end{enumcols}
+    	\end{enumerate}
+    \end{aufgabe}
+    \begin{aufgabe}[für die Schnellen]
+    	Notiere die Menge in beschreibender Form.
+    	\begin{enumcols}[2]
+    		\item $\left\{17,27,37,47,57,67,77,87,97\right\}$
+    		\item $\left\{2,3,5,7,11,13,17,19,23,29\right\}$
+    	\end{enumcols}
+    \end{aufgabe}
 \subsection{Teilmenge}
     \vspace{5pt}
     \begin{definition}[Teilmenge]
-        Falls alle Elemente einer Menge $B$ auch in einer zweiten Menge $A$ enthalten sind, so ist $B$ eine Teilmenge von $A$.\[B\subset A\]
+        Die Menge $B$ heisst \textbf{Teilmenge} der Menge $A$, wenn jedes Elemente der Menge $B$ auch in der zweiten Menge $A$ enthalten ist. \[B\subset A\]
+        Wenn eine dritte Menge $C$ keine Teilmenge von $A$ ist, dann schreiben wir $C\nsubset A$.
     \end{definition}
     \begin{beispiel}
         Wir betrachten die beiden Mengen $A=\{-1,0,1,2,3\}$ und $B=\{2\}$ in einem Mengendiagramm.
         \begin{figure}[H]
             \centering
-            \includegraphics[scale=0.8]{images/teilmenge.png}
+        	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=1cm, y=1cm,
+        		>=latex,   %Voreinstellung für Pfeilspitzen
+        		font= \footnotesize, scale=0.75]
+        		\draw[plotblue,thick] (0,0) ellipse (4cm and 2cm);
+        		\draw[highdive,thick] (0,0) ellipse (1.4cm and 0.8cm);
+        		\node[plotblue]  at (-3.8,1.2) {$A$};
+        		\node[highdive]  at (1.2,0.8) {$B$};
+        	\end{tikzpicture}
         \end{figure}
         Es ist einfach zu erkennen, dass die Menge $B$ vollständig von der grösseren Menge $A$ umschlossen wird und somit alle Elemente von $B$ auch in $A$ enthalten sind.
     \end{beispiel}
+    \begin{aufgabe}
+    	\begin{enumerate}
+    		\item Setze das korrekte Zeichen $\subset, \in, \nsubset, \nin$ ein.
+    		\begin{enumcols}[3]
+    			\item $\left\{7\right\}\gap{1}\left\{7,8,9\right\}$
+    			\item $7\gap{1}\left\{7,8,9\right\}$
+    			\item $6\gap{1}\left\{7,8,9\right\}$
+    			\item $0\gap{1}\left\{0\right\}$
+    			\item $\left\{7\right\}\gap{1}\left\{8,9\right\}$
+    			\item $\left\{1,2,3\right\}\gap{1}\N$
+    		\end{enumcols}
+    		\item Notiere jeweils alle möglichen Teilmengen von $A=\left\{0,1\right\}, B=\left\{0,1,2\right\}$ und $C=\left\{0,1,2,3\right\}$. Was stellt du bezüglich der Anzahl Teilmengen fest?
+    		\item Beschreibe in eigenen Worten, wann zwei mengen als \textbf{gleich} angesehen werden.
+    		\item Ist die Aussage wahr oder falsch? Begründe.
+    		\begin{enumerate}[label=\alph*)]
+    			\item Für jede Menge $M$ gilt: $M\subset M$
+    			\item $\left\{\right\}$ hat keine Teilmenge.
+    			\item Wenn $A\subset B$ und $B\subset A$ gilt, dann ist $A=B$.
+    			\item Aus $A\subset B$ und $B\subset C$ folgt $A\subset C$.
+    		\end{enumerate}
+    	\end{enumerate}
+    \end{aufgabe}
     \begin{definition}[leere Menge]
-        Eine Menge, die keine Elemente enthält, heisst \textbf{leere Menge} und wird mit $\emptyset$ bezeichnet.
+        Eine Menge, die keine Elemente enthält, heisst \textbf{leere Menge} und wird mit $\{\}$ oder $\emptyset$ bezeichnet.
     \end{definition}
     \begin{aufgabe}
         Beschreiben $\emptyset$ und $\{0\}$ dieselbe Menge? Begründe.\vspace{5pt}\newline\karos{3.5}
@@ -81,7 +166,7 @@
     Ähnlich wie das Plus, Minus, etc. gibt es für Mengen auch Operationen, mit denen die neue Mengen beschrieben werden können. In diesem Abschnitt werden die drei verschiedenen Mengenoperationen eingeführt. Dazu betrachten wir die beiden Mengen: \[C=\{1,2,3\}\quad\text{ und }\quad D=\{3,4,5\}.\]
     \begin{enumerate}[label=\ ]
             \item\begin{minipage}{0.6\linewidth}
-                \textbf{Durchschnitt:} $C\cap D=\gap{5}$\newline
+                \textbf{Durchschnitt:} $C\cap D=\gap{5}$\\
                 Die Mengenoperation \glqq Durchschnitt\grqq\:ist eine kommutative Operation. Das heisst: \[C\cap D=D\cap C\]
             \end{minipage}
             \hfill
@@ -90,7 +175,7 @@
                 \includegraphics[scale=0.7]{images/operationen.png}
             \end{minipage}\vspace{18pt}
             \item\begin{minipage}{0.6\linewidth}
-                \textbf{Vereinigung:} $C\cup D=\gap{5}$\newline
+                \textbf{Vereinigung:} $C\cup D=\gap{5}$\\
                 Die Mengenoperation \glqq Vereinigung\grqq\:ist ebenfalls eine kommutative Operation. Das heisst: \[C\cup D=D\cup C\]
             \end{minipage}
             \hfill
@@ -99,7 +184,7 @@
                 \includegraphics[scale=0.7]{images/operationen.png}
             \end{minipage}\vspace{18pt}
             \item\begin{minipage}{0.6\linewidth}
-                \textbf{Differenzmenge:} $C\backslash D=\gap{2}$\newline
+                \textbf{Differenzmenge:} $C\backslash D=\gap{2}$\\
                 Die Mengenoperation \glqq Differenzmenge\grqq\: ist \textbf{nicht} kommutativ.\[D\backslash C=\gap{3}\neq D\backslash C\]
             \end{minipage}
             \hfill
@@ -183,7 +268,7 @@
             \item Die Zahl $n$ ist durch $5$ teilbar $\Leftrightarrow$ Die letzte Ziffer von $n$ ist eine $0$ oder $5$
         \end{enumerate}
     \end{satz}
-    Es gibt selbstverständlich auch Teilbarkeitsregeln für $7, 11$ und $13$. Jedoch sind diese Regeln nicht mehr so einfach formulierbar wie die obigen. Falls du diese dennoch nachlesen willst, folge diesem \href{https://www.matheretter.de/wiki}{Link} und suche in der Auflistung nach \glqq Teilbarkeit und Teilbarkeitsregeln\grqq.
+    Es gibt selbstverständlich auch Teilbarkeitsregeln für $7, 11$ und $13$. Jedoch sind diese Regeln nicht mehr so einfach formulierbar wie die obigen. Falls du diese dennoch nachlesen willst, folge diesem \href{https://www.matheretter.de/wiki}{Link}\footnote{\url{https://www.matheretter.de/wiki}} und suche in der Auflistung nach \glqq Teilbarkeit und Teilbarkeitsregeln\grqq.
     \begin{aufgabe}
         Berechne für die folgenden Zahlen ihre Primfaktorzerlegung.
         \begin{enumerate}[label=\alph*)]
@@ -199,7 +284,7 @@
 \subsection{Grösster gemeinsamer Teiler und kleinstes gemeinsames Vielfach}
     Die Primfaktorzerlegung hilft uns vor allem bei der Suche nach dem grössten gemeinsamen Teiler ($\ggT$) oder dem kleinsten gemeinsamen Vielfach ($\kgV$).
     \begin{definition}
-        Der grösste gemeinsame Teiler $\ggT$ ist die größte natürliche Zahl, durch die sich zwei ganze Zahlen ohne Rest teilen lassen.\newline
+        Der grösste gemeinsame Teiler $\ggT$ ist die größte natürliche Zahl, durch die sich zwei ganze Zahlen ohne Rest teilen lassen.\\
         Das kleinste gemeinsame Vielfach $\kgV$ ist die kleinste natürliche Zahl, die ein Vielfaches beider ganzen Zahlen ist.
     \end{definition}
     Lasst uns dazu direkt ein Beispiel betrachten und diskutieren, wie diese nun gefunden werden.
@@ -241,11 +326,11 @@
     \begin{definition}[Ganze Zahlen]
         Die Menge der ganzen Zahlen  ist die Menge
         \[\Z = \{ \ldots, -2, -1, 0, 1, 2, 3, 4, \ldots\}\]
-        Eine ganze Zahl $n$ ist definiert durch ihr \emph{Vorzeichen} ($ + $ oder $ - $) und ihren \emph{Betrag} $\abs{n}$. Der Betrag ist dabei folgendermassen definiert:
+        Eine ganze Zahl $n$ ist definiert durch ihr \textbf{Vorzeichen} ($ + $ oder $ - $) und ihren \textbf{Betrag} $\abs{n}$. Der Betrag ist dabei folgendermassen definiert:
         \[\abs{n} = \begin{cases} n &\text{ falls } n>0 \\ -n &\text{ falls } n<0 \end{cases}\]
     \end{definition}\vspace{5pt}
     \begin{minipage}{0.47\linewidth}
-        Wir sehen, dass die natürlichen Zahlen in den ganzen Zahlen enthalten sind. Man sagt, die Menge der natürlichen Zahlen $\N$ ist eine Teilmenge der ganzen Zahlen $\Z$.
+        Wir sehen, dass die natürlichen Zahlen in den ganzen Zahlen enthalten sind. Man sagt, die Menge der natürlichen Zahlen $\N$ ist eine Teilmenge der ganzen Zahlen $\Z$.\\
     \end{minipage}
     \hfill
     \begin{minipage}{0.47\linewidth}
@@ -263,11 +348,11 @@
         Die \textbf{Gegenzahl} einer Zahl $a\in\Z$ ist diejenige Zahl $x\in\Z$, welche denselben Betrag aber das umgekehrte Vorzeichen wie $a$ besitzt. Dabei gilt immer \[a+x=0\]
         Ist $x$ die Gegenzahl von $a$, so schreiben wir $x=-a$
     \end{definition}
-    Um uns ans Umgehen mit Beträgen zu gewöhnen, lösen wir noch ein Beispiel dazu. Grundsätzlich kann man Betragsstriche als Klammern sehen, welche \glqq das Vorzeichen entfernen\grqq.
+    Um uns ans Umgehen mit Beträgen zu gewöhnen, lösen wir noch ein Beispiel dazu. Grundsätzlich kann man Betragsstriche als Klammern sehen, welche \glqq das Vorzeichen entfernen\grqq.\newpage
     \begin{beispiel}
     	Wir vereinfachen Terme mit Betragsstrichen:
-    	\[\abs{8\*(2 - 5)} + 3\*\abs{2 - \abs{14 + 1} + \abs{-3}\*\abs{4}} - \abs{3 - 7}= \]\karos{2.5}
-    	\[-\abs{\frac{3}{4} - \frac{21}{10}} + \abs{\frac{3}{2}\abs{\left(\frac{1}{4} + \frac{1}{5}\right)}} - \abs{\frac{12}{5}\*\left(-\frac{15}{8}\right)}=\]\karos{3.5}
+    	\[\abs{8\*(2 - 5)} + 3\*\abs{2 - \abs{14 + 1} + \abs{-3}\*\abs{4}} - \abs{3 - 7}= \]\karos{3.5}
+    	\[-\abs{\frac{3}{4} - \frac{21}{10}} + \abs{\frac{3}{2}\abs{\left(\frac{1}{4} + \frac{1}{5}\right)}} - \abs{\frac{12}{5}\*\left(-\frac{15}{8}\right)}=\]\karos{5.5}
     \end{beispiel}
     \begin{aufgabe}
         Löse die beiden Aufgaben $16$ und $17$ in der Aufgabensammlung.
@@ -275,17 +360,17 @@
 
 
 \section{Die rationalen Zahlen}
-    Die ganzen Zahlen sind unter Addition (und Subtraktion) abgeschlossen. D.h. jede Summe (und jede Differenz) zweier ganzer Zahlen ist wieder eine ganze Zahl. Falls ihr später mal Mathematik studieren möchtet, werdet ihr ein solches Objekt als \glqq Gruppe\grqq\: kennenlernen. \newline
+    Die ganzen Zahlen sind unter Addition (und Subtraktion) abgeschlossen. D.h. jede Summe (und jede Differenz) zweier ganzer Zahlen ist wieder eine ganze Zahl. Falls ihr später mal Mathematik studieren möchtet, werdet ihr ein solches Objekt als \glqq Gruppe\grqq\: kennenlernen. \\
     Bezüglich der Multiplikation sind die ganzen Zahlen aber nicht abgeschlossen, denn beispielsweise hat die Gleichung
     \[5\*x = 2\]
     keine Lösung in $\Z$. Wir müssen also unsere Zahlenmenge noch weiter vergrössern.
     \begin{definition}[Rationale Zahlen]
-    	Die Menge der \emph{rationalen Zahlen} ist die Zahlenmenge
-    	\[\Q = \left\{\frac{z}{n} \mid z, n\in\Z, n\neq 0 \right\}\]
-    	Die Zahl $z$ heisst \emph{Zähler}, die Zahl $n$ heisst \emph{Nenner}.
+    	Die Menge der \textbf{rationalen Zahlen} ist die Zahlenmenge
+    	\[\Q = \left\{\frac{z}{n} \mid z, n\in\Z, n\neq 0 \right\}=\hspace*{4cm}\]
+    	Die Zahl $z$ heisst \textbf{Zähler}, die Zahl $n$ heisst \textbf{Nenner}.
     \end{definition}
-    Statt von rationalen Zahlen spricht man oft auch von \glqq Brüchen\grqq\: oder \glqq Bruchzahlen\grqq. Der Begriff \glqq rational\grqq\: leitet sich vom lateinischen Wort \glqq ratio\grqq\: ab, was \glqq Verhältnis\grqq\: bedeutet. Jede ganze (und somit auch jede natürliche Zahl) kann als Bruchzahl geschrieben werden, z.B. $-5=\frac{-5}{1}$. Dementsprechend sind die ganzen Zahlen eine Teilmenge der rationalen Zahlen: $\N\subset\Z\subset\Q$.\vspace{3cm}\newline
-    Eine rationale Zahl kann auf verschiedene Arten dargestellt werden: als verschiedene Bruchzahlen oder als Dezimalzahl.\vspace{2cm}\newline
+    Statt von rationalen Zahlen spricht man oft auch von \glqq Brüchen\grqq\: oder \glqq Bruchzahlen\grqq. Der Begriff \glqq rational\grqq\: leitet sich vom lateinischen Wort \glqq ratio\grqq\: ab, was \glqq Verhältnis\grqq\: bedeutet. Jede ganze (und somit auch jede natürliche Zahl) kann als Bruchzahl geschrieben werden, z.B. $-5=\frac{-5}{1}$. Dementsprechend sind die ganzen Zahlen eine Teilmenge der rationalen Zahlen: $\N\subset\Z\subset\Q$.\vspace{3cm}\\
+    Eine rationale Zahl kann auf verschiedene Arten dargestellt werden: als verschiedene Bruchzahlen oder als Dezimalzahl.\vspace{2cm}\\
     Damit wir diese verschiedenen Darstellungen auch vom einen ins andere umformen können, betrachten wir die folgende Definition.
     \begin{definition}
         Eine Dezimalbruchentwicklung einer Zahl ist von der Form $ n.a_{1}a_{2}a_{3}a_{4}\ldots $ wobei $n\in\Z$ eine ganze Zahl ist und $a_{0}, a_{1}, a_{2}, \ldots $ Ziffern aus $\{0,1,\ldots8,9\} $ sind.
@@ -297,7 +382,7 @@
     \begin{beispiel}\
         \begin{itemize}
             \item endlich: $\frac{3}{8}=0.375$ d.h. $n=\gap{1}$ und $a_1=\gap{1},a_2=\gap{1},a_3=\gap{1},a_4=\gap{1},\ldots$
-            \item periodisch: $\frac{81}{11}=7.363636\ldots=7.\overline{36}$ d.h. $n=\gap{1}$ und $a_1=\gap{1},a_2=\gap{1},$\newline$a_3=\gap{1},a_4=\gap{1},\ldots$. Man sagt also, $\frac{81}{11}$ hat die Periode $36$ und somit Länge $2$.
+            \item periodisch: $\frac{81}{11}=7.363636\ldots=7.\overline{36}$ d.h. $n=\gap{1}$ und $a_1=\gap{1},a_2=\gap{1},$\\$a_3=\gap{1},a_4=\gap{1},\ldots$. Man sagt also, $\frac{81}{11}$ hat die Periode $36$ und somit Länge $2$.
         \end{itemize}
     \end{beispiel}
     \begin{aufgabe}
@@ -324,7 +409,7 @@
     \end{beispiel}
     Viel interessanter sind aber periodische Dezimalbrüche. Studiere dazu folgendes Beispiel
     \begin{beispiel}
-        Erkläre in eigenen Worten, was in diesem Beispiel gemacht wird.\newline
+        Erkläre in eigenen Worten, was in diesem Beispiel gemacht wird.\\
         Wir suchen die Bruchzahl $x$, welche zur periodischen Dezimalzahl $0.\overline{7}$ gehört. Dazu gehen wir wie folgt vor:
         \begin{table}[H]
             \centering
@@ -345,8 +430,8 @@
 \section{Die reelen Zahlen}
     Die reelen Zahlen bilden unseren Abschluss unserer Zahlenräume. Um aber besser zu verstehen, welche Zahlen hier noch dazugekommen sind, bearbeite folgende Aufgabe.
     \begin{aufgabe}
-        Wir haben gelernt, dass die Dezimalbruchentwicklung einer rationalen Zahl stets entweder endlich oder periodisch ist. Notiere hier Beispiele von Zahlen die diese beiden Eigenschaften \textbf{nicht} erfüllen.\vspace{5pt}\newline\karos{3.5}
-        Wie viele solcher Zahlen gibt es denn?\vspace{5pt}\newline\karos{1.5}
+        Wir haben gelernt, dass die Dezimalbruchentwicklung einer rationalen Zahl stets entweder endlich oder periodisch ist. Notiere hier Beispiele von Zahlen die diese beiden Eigenschaften \textbf{nicht} erfüllen.\vspace{5pt}\\\karos{3.5}
+        Wie viele solcher Zahlen gibt es denn?\vspace{5pt}\\\karos{1.5}
     \end{aufgabe}
     \begin{definition}[Irrationale Zahlen]
         Dezimalbrüche, die unendlich und nicht-periodisch sind, nennen wir irrationale Zahlen. Man schreibt dafür $\I$.
@@ -357,20 +442,20 @@
         Einfach gesagt, zu den reellen Zahlen gehören alle möglichen Dezimalbrüche. \[\R=\left\{n.a_1a_2a_3\ldots\vert n\in\Z,a_1,a_2,a_3,\ldots\in\{0,1,\ldots9\}\right\}\]
     \end{definition}\vspace{5pt}
     \begin{minipage}{0.47\linewidth}
-        Die natürlichen, ganzen, rationalen und irrationalen Zahlen sind alle auch reelle Zahlen. Somit sind die entsprechenden Zahlenmengen Teilmengen von $\R$.\newline
-        Es gilt $\N\subset\Z\subset\Q\subset\R$.
+        Die natürlichen, ganzen, rationalen und irrationalen Zahlen sind alle auch reelle Zahlen. Somit sind die entsprechenden Zahlenmengen Teilmengen von $\R$.\\
+        Es gilt $\N\subset\Z\subset\Q\subset\R$.\\
     \end{minipage}
     \hfill
     \begin{minipage}{0.47\linewidth}
         %Venn Diagramm mit \R bis \N
-    \end{minipage}\vspace{24pt}\newline
+    \end{minipage}\vspace{24pt}\\
     Diese vier Zahlenmengen bilden die Grundlage aller unserer weiteren Konzepten. In der Primarschule habt ihr bestimmt die Zahlengerade benutzt, um Zahlen darin einzuzeichnen. Zeichnen wir doch unsere Zahlenmengen ebenfalls hier ein.
     \begin{figure}[H]
         \centering
         \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1cm]
             \draw[->](-5,0) --(8,0);
             \foreach \x in {-4.,-3.,-2.,-1.,0.,1.,2.,3.,4.,5.,6.,7.}
-            \draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) ;%node[below] {\footnotesize $\x$};
+            \draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt);
             \draw[color=black] (8,0) node[right] {$\R$};
         \end{tikzpicture}
     \end{figure}\vspace{2cm}
@@ -379,6 +464,8 @@
     Da wir nun unseren Zahlengerade gefüllt haben, sollten wir uns noch kurz über die geltenden Rechengesetze unterhalten. Dabei wird davon ausgegangen, dass  diese Gesetze bereits bekannt sind und es ist somit nur eine Repetition.
     \begin{satz}[grundlegende Rechengesetze]
         Sind $a,b$ und $c$ beliebige reelle Zahlen, so gilt:
+        \begingroup
+        \renewcommand{\arraystretch}{1.5}
         \begin{table}[H]
             \begin{tabular}{p{8cm} c}
                 Kommitativgesetz der Addition: & $a+b=b+a$ \\
@@ -389,14 +476,8 @@
                 & $(a\pm b)\*c=a\*c\pm b\*c$
             \end{tabular}
         \end{table}
+        \endgroup
     \end{satz}
-
-\subsection{Der Betrag einer reellen Zahl}
-    Weiter können wir den Betrag einer Zahl, wie wir ihn im Abschnitt zu den ganzen Zahlen kennen gelernt haben, auf die Menge der reellen Zahlen erweitern.
-    \begin{definition}
-        Sei $x\in\R$ eine beliebige reelle Zahl, so ist der Betrag von $x$ definiert als \[\abs{x} = \begin{cases} x &\text{ falls } x\geq0 \\ -x &\text{ falls } x<0. \end{cases}\]
-    \end{definition}
-    Wir sehen es gibt überhaupt keinen Unterschied, ausser dass die Zahl nun eine reelle Zahl sein darf.
 
 \subsection{Approximation}
     Da reelle Zahlen teils nicht exakt angegeben werden können, sollten wir ein Symbol einführen, das deutlich macht, dass wir eine Zahl nur näherungsweise angegeben. Zum Beispiel können wir die Nachkommastellen von $\sqrt{2}$ niemals alle aufschreiben, da sie eine unendliche und nicht periodische Dezimalbruchentwicklung besitzt. Wenn wir also mit $n$ die Wurzel von $2$ meinen, dann schreiben wir entweder $n=\sqrt{2}$ für die abstrakte Notation oder $n\approx 1.414$ für den gerundeten Wert.
@@ -409,7 +490,7 @@
     \begin{definition}[Intervall]
         Intervalle sind Teilmengen der reellen Zahlen, wobei sie alle Zahlen umfassen, die zwischen den beiden Grenzen liegen. Dabei wird noch unterschieden, ob die Grenzen dazugehören oder nicht:
         \begin{enumerate}[label=\alph*)]
-            \item \textbf{abgeschlossenes} Intervall\newline
+            \item \textbf{abgeschlossenes} Intervall\\
             \begin{minipage}{0.60\linewidth}
                 \[[a,b]=\{x\in\R\vert a\leq x\leq b\}\]
                 Die Grenzen gehören hier dazu!
@@ -418,7 +499,7 @@
             \begin{minipage}{0.37\linewidth}
                 \centering\includegraphics[scale=1]{images/geschlossen.png}
             \end{minipage}
-            \item \textbf{offenes} Intervall\newline
+            \item \textbf{offenes} Intervall\\
             \begin{minipage}{0.60\linewidth}
                 \[]a,b[=\{x\in\R\vert a<x<b\}\]
                 Die Grenzen gehören hier \textbf{nicht} dazu!
@@ -427,7 +508,7 @@
             \begin{minipage}{0.37\linewidth}
                 \centering\includegraphics[scale=1]{images/offen.png}
             \end{minipage}
-            \item \textbf{halboffenes} Intervall (nach links)\newline
+            \item \textbf{halboffenes} Intervall (nach links)\\
             \begin{minipage}{0.60\linewidth}
                 \[]a,b]=\{x\in\R\vert a<x\geq b\}\]
                 Nur die rechte Grenzen gehört dazu!
@@ -436,7 +517,7 @@
             \begin{minipage}{0.37\linewidth}
                 \centering\includegraphics[scale=1]{images/halboffenlinks.png}
             \end{minipage}
-            \item \textbf{halboffenes} Intervall (nach rechts)\newline
+            \item \textbf{halboffenes} Intervall (nach rechts)\\
             \begin{minipage}{0.60\linewidth}
                 \[[a,b[=\{x\in\R\vert a\geq x<b\}\]
                 Nur die linke Grenzen gehört dazu!
@@ -479,6 +560,8 @@
         %\multicolumn{4}{|l|}{History}\\\hline
         Version & Datum & Person & Bemerkung \\\hline
         $0.1$ & 02.08.2024 & Jonas Guler & Kapitel erstellt \\\hline
+        $1.0$ & 20.11.2025 & Jonas Guler & Kapitel fertig \\\hline
+        $1.1$ & 28.08.2026 & Jonas Guler & Überarbeitung: Zusätzliche Aufgaben bei den Mengen hinzugefügt.\\\hline
          & ToDo & Jonas Guler & \\\hline
     \end{tabular}
 \end{table}
