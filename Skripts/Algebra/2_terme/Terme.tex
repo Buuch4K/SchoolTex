@@ -3,6 +3,7 @@
 \input{../../../Header/styleScript.sty}
 \input{../../../Header/mathexpressions.sty}
 \input{../../../Header/headerScript.sty}
+\usepackage{ipsum}
 \graphicspath{{images/}}
 
 \newcommand{\Skriptname}{Terme und Termumformungen}
@@ -13,7 +14,7 @@
 	\clearpage
 	\title{\Huge\textbf{\Skriptname} \\[1cm]}
 	\author{Autor:\\ \Autor}
-	\date{\normalsize {Version 1.0}\\ \datelong}
+	\date{\normalsize {Version 1.1}\\ \datelong}
 	\maketitle
     \thispagestyle{empty}
     \vfill
@@ -22,9 +23,9 @@
 \pagenumbering{arabic}
 %########################################## Kapitel 2 ##################################################
 \section{Der Begriff des Terms}
-    Wir haben schon eine Vorstellung davon, was ein Term ist. Man kann den Begriff folgendermassen definieren:
+    Wir haben aus dem vorangegangenen Unterricht der Sekundarschule eine Vorstellung davon, was ein Term ist. Nichts desto trotz möchten wir den Begriff an dieser Stelle nochmals sauber definieren:
     \begin{definition}
-        Unter einem Term versteht man eine sinnvolle Aneinanderreihung von endlich vielen mathematischen Symbolen, in der aber kein Relationszeichen vorkommt.\newline
+        Unter einem \textbf{Term} versteht man eine sinnvolle Aneinanderreihung von endlich vielen mathematischen Symbolen, in der aber kein Relationszeichen vorkommt.\\
     	Folgende Bestandteile kann ein Term beinhalten:
     	\begin{enumerate}[label=\ ]
     		\item Jede Zahl aus $\N,\Z,\Q,\R$ ist ein Term.
@@ -40,37 +41,42 @@
     		\item Potenzen: Der Term $S^{T}$ wird \emph{Potenz} genannt, $S$ heisst \emph{Basis}, $T$ heisst \emph{Exponent}.
     		\item Wurzeln: Der Term $\sqrt{S}$ wird \emph{(Quadrat-)Wurzel} gennant, $S$ heisst \emph{Radikand}.
     	\end{enumerate}
-        \textbf{Wichtig:} $=,<,>,\geq,\leq,\in,\subset,\ldots$ dürfen nicht in einem Term enthalten sein!
+        \textbf{Wichtig:} Relationszeichen, wie z.B. $=,<,>,\geq,\leq,\in,\subset,\ldots$, dürfen \textbf{nicht} in einem Term vorkommen!
     \end{definition}
     \begin{beispiel}
-    	Wir beginnen mit den Termen $R=x^{2}, S=3y$. Dann können wir auf verschiedene Weise neue Terme bilden:
-    	\begin{align*}
-    	   R+S = x^{2} + 3y \qquad \frac{R - 10}{S} = \frac{x^{2} - 10}{3y}
-    	\end{align*}
-        Oft gibt man an, welche Variablen in einem Term vorkommen, d.h. \glqq von welchen Variablen ein Term abhängt\grqq. Wir würden beispielsweise schreiben:
-        \begin{align*}
-        	R(x) = x^{2}, \qquad S(y)=3y, \qquad U(x,y)=xy - 5y
-        \end{align*}
-    	Terme kann man \emph{auswerten}, indem man für die Variablen Zahlenwerte einsetzt.\newline Für ${T(x)=\sqrt{x^{2}-1}}$ gilt:
-        \begin{align*}
-        	T(5) &=\sqrt{5^{2} - 1} = \hspace{1.5cm} && T(1) = \hspace{2.5cm} \\[0.1cm]
-        	T(7) &= && T(0) =
-        \end{align*}
-        Für die Reihenfolge, in welcher diese Operationen ausgeführt werden, gilt:
-        \begin{itemize}
-            \item Operationen 3. Stufe: Potenzieren, Wurzelziehen.
-            \item Operationen 2. Stufe: Multiplikation, Division/Brüche
-            \item Operationen 1. Stufe: Addition, Subtraktion
-        \end{itemize}
-        Gleichwertige Operationen werden von links nach rechts ausgeführt:
-        \begin{align*}
-            9 - 3 + 8 = (9-3)+8 &= \hspace{3cm}&&&\\
-            9 - 3 + 8  \neq 9 - (3+8) &= &&&\\
-            9 : 3 \cdot 8 = (9:3) \cdot 8 &= &&&\\
-            9 : 3 \cdot 8 \neq 9 : (3 \cdot 8) &= &&&
-        \end{align*}
-        Um die Reihenfolge der Operationen zu verändern, verwenden wir runde oder eckige Klammern $ ( \quad ), [\quad] $. Insgesamt gilt für die Reihenfolge der Auswertung somit \textbf{Kla}mmern - \textbf{Po}tenzen - \textbf{Pu}nktoperationen - \textbf{Stri}choperationen, kurz \textbf{KlaPoPuStri}.
+    	Wir beginnen mit den Termen $x^{2}, 3y$. Dann können wir auf verschiedene Weise neue Terme bilden:
+    	\[\text{z.B.: Addition: } x^{2} + 3y \quad\text{ oder }\quad\frac{x^{2} - 10}{3y}\]
+        Üblicherweise wird jedem Term einen Buchstaben als \flqq Namen\frqq\:zugewiesen gefolgt von den Variablen, die in einem Term vorkommen, d.h. \glqq von welchen Variablen ein Term abhängt\grqq. Wir würden beispielsweise schreiben:
+        \[R(x) = x^{2}, \qquad S(y)=3y, \qquad U(x,y)=xy - 5y\]
     \end{beispiel}
+    Terme kann man auswerten, indem man für die enthaltenen Variablen gewisse Zahlenwerte einsetzt. Die eingesetzten Zahlenwerte werden dabei meistens beliebig gewählt oder durch die Aufgabenstellung vorgegeben.\\
+    \begin{beispiel}
+    	Für $T(x)=\sqrt{x^{2}-1}$ gilt:
+    	\begin{gridspace}{2.5}
+    		\begin{enumerate}[label=\ ,leftmargin=1.1cm]\vspace*{-1mm}\begin{multicols}{2}
+	    			\item $T(5)=\sqrt{5^{2} - 1}=$
+	    			\item $T(1)=$
+	    			\item $T(7)=$
+	    			\item $T(0)=$
+    			\end{multicols}\end{enumerate}
+    	\end{gridspace}
+    \end{beispiel}
+    Für das Auswerten von Termen müssen wir uns selbstverständlich an die bekannten mathematischen Regeln halten. Insbesondere betrifft dies die Reihenfolge, in welcher diese Operationen ausgeführt werden. Dafür gilt:
+    \begin{itemize}
+        \item Operationen 3. Stufe: Potenzieren, Wurzelziehen
+        \item Operationen 2. Stufe: Multiplikation, Division/Brüche
+        \item Operationen 1. Stufe: Addition, Subtraktion
+    \end{itemize}
+    Gleichwertige Operationen (z.B. Addition und Subtraktion) werden von links nach rechts ausgeführt. Ansonsten wird die höhere Stufe zuerst berechnet.
+    \begin{gridspace}{4.5}
+    	\begin{enumerate}[label=\ ,leftmargin=1.1cm]
+    		\item $9 - 3 + 8 = (9-3)+8=$
+    		\item $9 - 3 + 8  \neq 9 - (3+8)=$
+    		\item $9 : 3 \cdot 8 = (9:3) \cdot 8=$
+    		\item $9 : 3 \cdot 8 \neq 9 : (3 \cdot 8)=$
+    	\end{enumerate}
+    \end{gridspace}
+    Um die Reihenfolge der Operationen zu verändern, verwenden wir runde oder eckige Klammern $ ( \quad ), [\quad] $. Insgesamt gilt für die Reihenfolge der Auswertung somit \textbf{Kla}mmern - \textbf{Po}tenzen - \textbf{Pu}nkt-operationen - \textbf{Stri}choperationen, kurz \textbf{KlaPoPuStri}.
     \begin{aufgabe}
         \begin{enumerate}
             \item Welche der folgenden Ausdrücke ist ein Term? Begründe deine Antwort.
@@ -82,24 +88,19 @@
                 \item $\frac{7}{19}\nin\N$
                 \item $1+\frac{x}{1+\frac{x}{1+x}}$
             \end{enumcols}
-            \item Lange Zeit wurde der Mythos verbreitet, dass es unmöglich sei, ein Stück Papier mehr als $7-$mal zu falten. Im Jahr $2001$ wiederlegte eine Schülerin diese Mythos, in dem sie einen langen Papierstreifen $11-$mal faltete.\newline
-            Sie fand zudem einem Term $T(D,n)$, der zu jeder beliebigen Papierdicke $D\:[\text{in mm}]$ die Mindestlänge des Papierstreifens berechnet, die  nötig ist um den Streifen $n-$mal zu falten: \[T(D,n)=\frac{\pi\*D}{6}\left(2^n+4\right)\left(2^n-1\right)\]
-            Welche Mindestlänge muss ein $0.1$mm dicker Papierstreifen haben,wenn er $7-$mal, $10-$mal oder $12-$mal gefaltet werden soll.
+            \item Lange Zeit wurde der Mythos verbreitet, dass es unmöglich sei, ein Stück Papier mehr als $7-$mal in der Mitte zu falten. Im Jahr $2001$ wiederlegte eine Schülerin diese Mythos, in dem sie einen langen Papierstreifen $11-$mal faltete.\newline
+            Sie fand zudem einem Term $T(D,n)$, der zu jeder beliebigen Papierdicke $D\:[\text{in mm}]$ die Mindestlänge des Papierstreifens berechnet, die nötig ist, um den Streifen $n-$mal zu falten: \[T(D,n)=\frac{\pi\*D}{6}\left(2^n+4\right)\left(2^n-1\right)\]
+            Welche Mindestlänge muss ein $0.1$mm dicker Papierstreifen haben, wenn er $7-$mal, $10-$mal oder $12-$mal gefaltet werden soll?
         \end{enumerate}
     \end{aufgabe}
 
 \newpage
 \section{Gleichheit von Termen}
-    Wie wir gesehen haben, kann man für die Variablen in Termen Zahlenwerte einsetzen. Man sagt, man wertet den Term an einer Stelle aus:
-    \begin{align*}
-    	T(x,y) &= (x-y)^{2} - y^{2} \hspace{8cm} \\
-    	T(4,1) &= \\ %(4-1)^{2} - 1^{2} = 9 - 1= 8 \\
-    	T(3,5) &= \\ %(3-5)^{2} - 5^{2} = 4 - 24 = -20 \\
-    	T(2, 0) &= %(2-0)^{2} - 0^{2} = 4 - 0 = 4
-    \end{align*}
-    Wir vergleichen nun die beiden Terme $ S(x,y) = x^{2} - 2xy $ und $ T(x,y) = (x-y)^{2} - y^{2} $, indem wir verschiedene Auswertungen machen:\vspace{5pt}\newline
+    Wie wir gesehen haben, kann man für die Variablen in Termen Zahlenwerte einsetzen. Man sagt, der Term wird an einer Stelle ausgewertet. Lasst uns die folgenden beiden Terme ${S(x,y) = x^{2} - 2xy}$ und ${T(x,y) = (x-y)^{2} - y^{2}}$ vergleichen, indem wir verschiedene Auswertungen machen:\\[5pt]
+    \begingroup
+    \renewcommand{\arraystretch}{1.5}
     \begin{minipage}{0.47\linewidth}
-        Term: $S(x,y)=x^{2}-2xy$\vspace{5pt}\newline
+        Term: $S(x,y)=x^{2}-2xy$\\[5pt]
         \begin{tabular}{m{0.8cm}|m{0.8cm}|m{0.8cm}|m{0.8cm}|m{0.8cm}|p{0.8cm}}
         	$x\backslash y$ & 0 & 1 & 2 & 3 & 4 \\\hline
         	0 & & & & & \\\hline
@@ -111,7 +112,7 @@
     \end{minipage}
     \hfill
     \begin{minipage}{0.47\linewidth}
-        Term: $T(x,y)=(x-y)^{2}-y^{2}$\vspace{5pt}\newline
+        Term: $T(x,y)=(x-y)^{2}-y^{2}$\\[5pt]
         \begin{tabular}{m{0.8cm}|m{0.8cm}|m{0.8cm}|m{0.8cm}|m{0.8cm}|m{0.8cm}}
         	$x\backslash y$ & 0 & 1 & 2 & 3 & 4 \\\hline
         	0 & & & & & \\\hline
@@ -120,10 +121,8 @@
         	3 & & & & & \\\hline
         	4 & & & & & \\
         \end{tabular}
-    \end{minipage}\vspace{5pt}\newline
-    Wir machen folgende Beobachtungen: \vspace{42pt}
-    %Für die vorgenommenen Termauswertungen stimmen die beiden Terme überein.
-    %Dies ist aber keine Garantie, dass die beiden Terme für alle Werte übereinstimmen.
+    \end{minipage}\\[5pt]\endgroup
+    Wir machen folgende Beobachtungen:\\[5pt]\karos{2.5}
     \begin{definition}
         Für die (Un-)Gleichheit von zwei Termen gilt.
         \begin{itemize}
@@ -150,35 +149,24 @@
     	   \item Die Addition ist assoziativ.
     	\end{enumerate}
     \end{satz}
-    Wir benutzen diese Gesetze als \textbf{Axiome}. D.h. wir gehen davon aus, dass sie wahr sind und benutzen diese Axiome, um weitere Gesetze herzuleiten. Geometrisch kann man die Gesetze plausibel machen, indem man Zahlen als Pfeile auf der Zahlengerade auffasst und die Addition als das Aneinanderhängen von diesen Pfeilen interpretiert:
-    \begin{figure}[H]
-        \centering
-        \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1cm]
-            \draw[->](-5,0) --(8,0);
-            \foreach \x in {-4.,-3.,-2.,-1.,0.,1.,2.,3.,4.,5.,6.,7.}
-            \draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) ;%node[below] {\footnotesize $\x$};
-            \draw[color=black] (8,0) node[right] {$\R$};
-        \end{tikzpicture}
-    \end{figure}\vspace{2cm}
-
-    Die Subtraktion braucht keine eigenen Gesetze, da sie keine neue Operation darstellt. Um das zu erkennen, wiederholen wir den Begriff der \textbf{Gegenzahl}:
+    Wir benutzen diese Gesetze als \textbf{Axiome}. D.h. wir gehen davon aus, dass sie wahr sind und benutzen diese Axiome, um weitere Gesetze herzuleiten. Die Subtraktion braucht keine eigenen Gesetze, da sie keine neue Operation darstellt. Um das zu erkennen, wiederholen wir den Begriff der \textbf{Gegenzahl}:
     \begin{definition}
     	Die Gegenzahl einer Zahl $a\in\R$ ist diejenige Zahl $x$ mit demselben Betrag und umgekehrten Vorzeichen.\newline
     	Für die Gegenzahl von $a$ schreiben wir: $x=-a$.
     \end{definition}
     \begin{beispiel}
-    	Beschreibe formal:
+    	Beschreibe in allgemeiner Form unter Verwendung zweier beliebiger reeller Zahlen $a,b\in\R$.
     	\begin{enumerate}[label=\alph*)]
-    		\item Das Produkt von zwei Gegenzahlen ist gleich dem Produkt der beiden Zahlen.\vspace{18pt}
-    		\item Die Gegenzahl ist gleich dem Produkt aus $ -1 $ und dieser Zahl.\vspace{18pt}
-    		\item Die Gegenzahl der Gegenzahl ist wieder gleich der Zahl.\vspace{18pt}
-    		\item Die Differenz zweier Zahlen ist gleich der Addition aus Minuend und der Gegenzahl des Subtrahenden.\vspace{18pt}
-    		\item Die Gegenzahl einer Summe ist gleich der Summe der Gegenzahlen.\vspace{30pt}
+    		\item Das Produkt von zwei Gegenzahlen ist gleich dem Produkt der beiden Zahlen.\\[5pt]\karos{1.5}
+    		\item Die Gegenzahl ist gleich dem Produkt aus $ -1 $ und dieser Zahl.\\[5pt]\karos{1.5}
+    		\item Die Gegenzahl der Gegenzahl ist wieder gleich der Zahl.\\[5pt]\karos{1.5}
+    		\item Die Differenz zweier Zahlen ist gleich der Addition aus Minuend und der Gegenzahl des Subtrahenden.\\[5pt]\karos{1.5}
+    		\item Die Gegenzahl einer Summe ist gleich der Summe der Gegenzahlen.\\[5pt]\karos{1.5}
     	\end{enumerate}
     \end{beispiel}
-    Punkt d) zeigt insbesondere folgendes zur Subtraktion:
+    Der Punkt d) zeigt einen sehr speziellen Zusammenhang zwischen der Addition und der Subtraktion. Denn:
     \begin{satz}
-        Die Subtraktion ist keine eigene Operation. Die Subtraktion entspricht der Addition einer Gegenzahl.\vspace{18pt}
+        Die Subtraktion ist keine eigene Operation. Die Subtraktion entspricht der Addition einer Gegenzahl.
     \end{satz}
     Aus den Gesetzen der Addition und der Schreibweise der Subtraktion als Addition der Gegenzahl folgen die Klammerregeln:
     \begin{satz}
@@ -189,8 +177,9 @@
     	\end{enumerate}
     \end{satz}
     \begin{aufgabe}
-        Löse die Aufgaben $18-25$ aus der Aufgabensammlung.
+        Löse die Aufgaben $18-25$ aus der Aufgabensammlung.\footnotemark
     \end{aufgabe}
+    \footnotetext{Die Smartphone-App \flqq photomath\frqq\:kann als Hilfestellung oder Kontrolle der Aufgaben hinzugezogen werden. Hier sind die Links zu den Downloads im \href{https://apps.apple.com/ch/app/photomath/id919087726?l=de-DEPhotomath}{Apple App Store} resp.  \href{https://play.google.com/store/apps/details?id=com.microblink.photomath&hl=en&pli=1}{Google Play Store}}
 
 \newpage
 \section{Multiplikation und Division}
@@ -208,17 +197,7 @@
     		\item Die 0 ist der einzige Nullteiler in $ \mathbb{R} $.
     	\end{enumerate}
     \end{satz}
-    Wir nehmen diese Gesetze wie schon bei der Addition als gegeben hin. Man kann die Gesetze aber geometrisch veranschaulichen und somit plausibel erklären:
-    \begin{figure}[H]
-        \centering
-        \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1cm]
-            \draw[->](-5,0) --(8,0);
-            \foreach \x in {-4.,-3.,-2.,-1.,0.,1.,2.,3.,4.,5.,6.,7.}
-            \draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) ;%node[below] {\footnotesize $\x$};
-            \draw[color=black] (8,0) node[right] {$\R$};
-        \end{tikzpicture}
-    \end{figure}\vspace{1cm}
-    Die Division braucht keine eigenen Gesetze, da sie keine neue Operation darstellt. Um das einzusehen, wiederholen wir den Begriff des Kehrwerts:
+    Wir nehmen diese Gesetze wie schon bei der Addition als gegeben hin. Sie entsprechen den Regeln, die wir aus der Primar- und Sekundarschule bereits kennengelernt haben. Die Division braucht keine eigenen Gesetze, da sie keine neue Operation darstellt. Um das einzusehen, wiederholen wir den Begriff des Kehrwerts:
     \begin{definition}
     	Der Kehrwert einer Zahl $a\in\R$ ist diejenige Zahl $x\in\R$, welche die folgende Gleichung erfüllt:
     	\begin{align*}
@@ -227,36 +206,44 @@
     	Für den Kehrwert von $a$ schreiben wir: $x=\frac{1}{a}$. Bemerke, $0$ besitzt keinen Kehrwert!
     \end{definition}
     \begin{beispiel}
-    	Schreibe formal:
+    	Beschreibe in allgemeiner Form unter Verwendung zweier beliebiger reeller Zahlen $a,b\in\R$.
     	\begin{enumerate}[label=\alph*)]
-    		\item Der Kehrwert einer Gegenzahl ist die Gegenzahl des Kehrwerts dieser Zahl. \vspace{18pt}
-    		\item Der Kehrwert einer Summe ist \emph{nicht gleich} der Summe der Kehrwerte.\vspace{18pt}
-    		\item Der Kehrwert eines Bruches ist gleich dem Bruch dessen Zähler gleich dem ursprünglichen Nenner und dessen Nenner gleich dem ursprünglichen Zähler ist.\vspace{18pt}
-    		\item Der Quotient zweier Zahlen ist gleich dem Produkt aus Dividend und dem Kehrwert des Divisors.\vspace{18pt}
+    		\item Der Kehrwert einer Gegenzahl ist die Gegenzahl des Kehrwerts dieser Zahl.\\[5pt]\karos{1.5}
+    		\item Der Kehrwert einer Summe ist \emph{nicht gleich} der Summe der Kehrwerte.\\[5pt]\karos{1.5}
+    		\item Der Kehrwert eines Bruches ist gleich dem Bruch dessen Zähler gleich dem ursprünglichen Nenner und dessen Nenner gleich dem ursprünglichen Zähler ist.\\[5pt]\karos{1.5}
+    		\item Der Quotient zweier Zahlen ist gleich dem Produkt aus Dividend und dem Kehrwert des Divisors.\\[5pt]\karos{1.5}
     	\end{enumerate}
     \end{beispiel}
-    Punkt d) zeigt insbesondere folgendes zur Division:
+    Auch hier stellen wir fest, dass der Punkt d) insbesondere folgendes zur Division zeigt:
     \begin{satz}
-        Die Division ist keine eigene Operation. Die Division entspricht der Multiplikation mit dem Kehrwert.\vspace{18pt}
+        Die Division ist keine eigene Operation. Die Division entspricht der Multiplikation mit dem Kehrwert.
     \end{satz}
     Es ist wichtig, dass wir gut verstehen, wie sich die Multiplikation (und damit auch die Division) im Zusammenhang mit Vorzeichen verhalten:
-    \begin{align*}
-        2\*5 =&\hspace{3cm} &&2\*(-5)=\hspace{5cm} \\
-        (-2)\*5=& &&(-2)\*(-5)=\\
-        2:5=\frac{2}{5}=& &&2:(-5)=\frac{2}{-5}=\\
-        (-2):5=\frac{-2}{5}=& &&(-2):(-5)=\frac{-2}{-5}=
-    \end{align*}
+    \begin{gridspace}{4.5}
+    	\begin{enumerate}[label=\ ,leftmargin=1.1cm]\vspace*{-1mm}\begin{multicols}{2}
+    			\item $2\*5=$
+    			\item $(-2)\*5=$
+    			\item $\ds 2\div 5=\frac{2}{5}=$
+    			\item $\ds (-2):5=\frac{-2}{5}=$
+    			\item $2\*(-5)=$
+    			\item $(-2)\*(-5)=$
+    			\item $\ds 2:(-5)=\frac{2}{-5}=$
+    			\item $\ds (-2):(-5)=\frac{-2}{-5}=$
+    		\end{multicols}
+    	\end{enumerate}
+    \end{gridspace}
     Diese Rechengesetze gelten allgemein:
-    \begin{satz}[Punktoperationen und Vorzeichen]\label{satz:PunktVorzeichen}
+    \begin{satz}[Punktoperationen und Vorzeichen]
+    	\label{satz:PunktVorzeichen}\vspace*{-12pt}
         \begin{table}[H]
             \centering
-            \begin{tabular}{m{0.5cm} m{4.3cm} m{3.2cm} m{0.7cm} m{3.5cm}}
+            \begin{tabular}{m{0.5cm} m{4.6cm} m{3.8cm} m{1cm} m{3.8cm}}
                 \multicolumn{5}{l}{Für das Multiplizieren von Termen gelten folgende Regeln:}\\
                 1. & Gleiches Vorzeichen & $a\*b = ab$ & bzw. & $(-a)\*(-b) = ab$ \\
                 2. & Verschiedene Vorzeichen & $(-a)\*b = -ab$ & bzw. & $a\*(-b) = -ab$ \\
                 \multicolumn{5}{l}{Für das Dividieren von Termen unterschiedlicher Vorzeichen gelten analog:}\\
-                3. & Gleiches Vorzeichen & $a\div b = \frac{a}{b}$ & bzw. & $(-a)\div(-b) = \frac{-a}{-b}=\frac{a}{b}$ \\
-                4. & Verschiedene Vorzeichen & $(-a)\div b = \frac{-a}{b}=-\frac{a}{b}$ & bzw. & $a\div(-b) = \frac{a}{-b}=-\frac{a}{b}$ \\
+                3. & Gleiches Vorzeichen & $\ds a\div b = \frac{a}{b}$ & bzw. & $\ds (-a)\div(-b) = \frac{-a}{-b}=\frac{a}{b}$ \\
+                4. & Verschiedene Vorzeichen & $\ds (-a)\div b = \frac{-a}{b}=-\frac{a}{b}$ & bzw. & $\ds a\div(-b) = \frac{a}{-b}=-\frac{a}{b}$ \\
             \end{tabular}
         \end{table}
     \end{satz}
@@ -269,7 +256,7 @@
                 \item $2\*(-1)\*4\*(-2)$
                 \item $(-a)\*b^2\*(-ab)\*ab^2$
                 \item $5xy\*(2x^2)\*(-2x)^2$
-                \item $\frac{1}{3}\*\left(-\frac{6}{5}\right)\*\frac{-7}{4}\*\left(-\frac{10}{3}\right)$
+                \item $\ds \frac{1}{3}\*\left(-\frac{6}{5}\right)\*\frac{-7}{4}\*\left(-\frac{10}{3}\right)$
             \end{enumcols}\newpage
             \item Bestimme folgende Potenzen und achte dabei auf das Vorzeichen des Resultats. Welche Gesetzmässigkeiten kannst du feststellen? Stelle eine Regel für Potenzen der Form $(-a)^n$ auf.
             \begin{enumcols}[4]
@@ -307,28 +294,17 @@
         Die Multiplikation ist distributiv über der Addition. D.h. für drei rationale Zahlen $a,b,c$ gelten
         \[a\*(b+c)=a\*b+a\*c\]
         \begin{figure}[H]
-            \centering
+            \centering\vspace*{-20pt}
             \begin{tikzpicture}[scale=0.75][line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
                 \clip(-3.8,-1.82) rectangle (14.86,2.5);
-                \draw [line width=1pt] (-3.,-1.)-- (2.,-1.);
-                %\draw [line width=1pt] (2.,-1.)-- (2.,2.);
-                \draw [line width=1pt] (2.,2.)-- (-3.,2.);
-                \draw [line width=1pt] (-3.,2.)-- (-3.,-1.);
-                \draw [line width=1pt] (2.,-1.)-- (4.,-1.);
-                \draw [line width=1pt] (4.,-1.)-- (4.,2.);
-                \draw [line width=1pt] (4.,2.)-- (2.,2.);
-                \draw [line width=1pt] (6.,-1.)-- (11.,-1.);
-                \draw [line width=1pt] (11.,-1.)-- (11.,2.);
-                \draw [line width=1pt] (11.,2.)-- (6.,2.);
-                \draw [line width=1pt] (6.,2.)-- (6.,-1.);
-                \draw [line width=1pt] (12.,-1.)-- (14.,-1.);
-                \draw [line width=1pt] (14.,-1.)-- (14.,2.);
-                \draw [line width=1pt] (14.,2.)-- (12.,2.);
-                \draw [line width=1pt] (12.,2.)-- (12.,-1.);
+                \draw [line width=1pt] (-3.,-1.) -- (4,-1) -- (4,2) -- (-3,2) -- (-3,-1);
+                \draw[line width=1pt,dashed] (2,-1) -- (2,2);
+                \draw [line width=1pt] (6.,-1.)-- (11.,-1.) -- (11.,2.) -- (6.,2.) -- (6.,-1.);
+                \draw [line width=1pt] (12.,-1.)-- (14.,-1.) -- (14.,2.) -- (12.,2.) -- (12.,-1.);
                 \draw (-.5,0.86) node[anchor=north west] {$a\*(b+c)$};
                 \draw (8.14,0.86) node[anchor=north west] {$a\*b$};
                 \draw (12.5,0.86) node[anchor=north west] {$a\*c$};
-                \draw (4.68,0.82) node[anchor=north west] {$=$};
+                \draw (4.7,0.86) node[anchor=north west] {$=$};
                 \draw (11.2,0.86) node[anchor=north west] {$+$};
             \end{tikzpicture}
         \end{figure}
@@ -337,14 +313,16 @@
 \subsection{Ausmultiplizieren von Summen}
     Mit dem Distributivgesetz lassen sich auch Produkte von Summen ausmultiplizieren.
     \begin{beispiel}\label{bsp:Distributiv}
-    	Entwickle in eine Summe und fasse zusammen:
-    	\begin{enumerate}[label=\alph*)]
-    		\item $(x-y)(3x-y)=$\vspace{24pt}
-    		\item $(-2b-5a)(3a+b)=$\vspace{24pt}
-    		\item $(u+2v)(3uv-2v-4u)=$\vspace{24pt}
-    		\item $(4a+3s)(-2s+2r-5)=$\vspace{30pt}
-    		\item $(2u+v)(v-u)(3u+4v)=$\vspace{30pt}
-    	\end{enumerate}
+    	Entwickle in eine Summe und fasse so weit wie möglich zusammen:
+    	\begin{gridspace}{11}
+    		\begin{enumerate}[label=\alph*)]
+    			\item $(x-y)(3x-y)=$\\
+    			\item $(-2b-5a)(3a+b)=$\\
+    			\item $(u+2v)(3uv-2v-4u)=$\\
+    			\item $(4a+3s)(-2s+2r-5)=$\\
+    			\item $(2u+v)(v-u)(3u+4v)=$\\
+    		\end{enumerate}
+    	\end{gridspace}
     \end{beispiel}
     \begin{aufgabe}
         Löse von den Aufgaben $27-45$ jeweils alle ungeraden Nummern.
@@ -353,26 +331,21 @@
 \subsection{Die binomischen Formeln}
     Wir repetieren die binomischen Formeln. Wir erklären zunächst den Begriff des Polynoms:
     \begin{definition}
-    	Unter dem Begriff \emph{Polynom} (pol\'{y}s griechisch viel, n\'{o}mos griechisch Gesetz/Regel) fasst man eine Familie von Termen zusammen:
+    	Unter dem Begriff \textbf{Polynom} (pol\'{y}s griechisch viel, n\'{o}mos griechisch Gesetz/Regel) fasst man eine Familie von Termen zusammen, bei denen die Variablen jeweils nur in der Basis der Potenz vorkommen. Einige Beispiele:
     	\begin{align*}
     		&-3uv^{3}w &&\text{Monom oder 1-gliedriges Polynom} \\
     		&2ab - b^{3} &&\text{Binom oder 2-gliedriges Polynom} \\
     		&-x + y - z &&\text{Trinom oder 3-gliedriges Polynom}
     	\end{align*}
     	Auch folgende Terme sind Polynome:
-    	\begin{align*}
-    		5(x^{2} - 3x +1) = 5x^{2} - 15x + 5 \qquad
-    		\frac{a-b}{2} = \frac{1}{2}a - \frac{1}{2} b
-    	\end{align*}
+    	\[5(x^{2} - 3x +1) = 5x^{2} - 15x + 5; \qquad \frac{a-b}{2} = \frac{1}{2}a - \frac{1}{2} b \]
     	Folgende Terme sind aber keine Polynome:
-    	\begin{align*}
-    		2^{x} - 4x, \quad \sqrt{a^{2} + b^{2}}, \quad \frac{1}{a^{2} - 5a + 3}
-    	\end{align*}
+    	\[2^{x} - 4x; \qquad \sqrt{a^{2} + b^{2}}; \qquad \frac{1}{a^{2} - 5a + 3}\]
     \end{definition}
     Aus dem Distributivgesetz folgen nun die drei binomischen Formeln:
-    \begin{satz}
+    \begin{satz}[Binomische Formeln]
 	   Für Zahlen $a,b\in\R$ gelten die drei binomischen Formeln:
-    	\begin{enumerate}
+    	\begin{enumerate}[leftmargin=2cm]
     		\item binomische Formel: \qquad $(a+b)^{2} = a^{2} + 2ab + b^{2}$
     		\item binomische Formel: \qquad $(a-b)^{2} = a^{2} - 2ab + b^{2}$
     		\item binomische Formel: \qquad $(a-b)(a+b) = a^{2} - b^{2}$
@@ -392,31 +365,43 @@
     \begin{aufgabe}
         \begin{enumerate}
             \item Berechne die untenstehenden Terme, indem du sie ausmultiplizierst.
-            \begin{enumerate}[label=\ ]
-                \item $(a+b)^3=$
-                \item $(a+b)^4=$
-                \item $(a+b)^5=$
-            \end{enumerate}
-            \item Vergleiche nun die Exponenten der beiden Variablen $a$ und $b$ aller $6$ ausmultiplizierter Terme und suche nach einer Gesetzmässigkeit. Was stellst du fest?
         \end{enumerate}
-        \karos{2}
-        \begin{enumerate}\setcounter{enumi}{1}
+        \begin{gridspace}{3.5}
+           	\begin{enumerate}[label=\ ,leftmargin=1.1cm]
+           		\item $(a+b)^3=$
+           		\item $(a+b)^4=$
+           		\item $(a+b)^5=$
+           	\end{enumerate}
+        \end{gridspace}
+		\begin{enumerate}
+			\setcounter{enumi}{1}
+			\item Vergleiche nun die Exponenten der beiden Variablen $a$ und $b$ aller $6$ ausmultiplizierter Terme und suche nach einer Gesetzmässigkeit. Was stellst du fest?
+        \end{enumerate}
+        \karos{2.5}
+        \begin{enumerate}
+        	\setcounter{enumi}{2}
             \item Vergleiche nun die Koeffizienten (=Zahl vor den Variablen) aller $6$ ausmultiplizierter Terme. Was fällt die dabei auf? Welcher Zusammenhang besteht zu der untenstehenden Zahlenpyramide?
             \begin{figure}[H]
                 \centering
                 \includegraphics[scale=0.5]{pascaldreieck.png}
             \end{figure}
             \item Schreibe nun mithilfe der obigen beiden Erkenntnissen die Terme für $(a+b)^6$ und $(a+b)^7$ direkt hin. Ausmultiplizieren ist hier verboten!
-            \begin{enumerate}[label=\ ]
-                \item $(a+b)^6=$
-                \item $(a+b)^7=$
-            \end{enumerate}
-            \item Multipliziere den untenstehenden Term aus. Was ändert sich dabei? Warum?
-            \begin{enumerate}[label=\ ]
-                \item $(a\mathbf{-}b)^5=$
-            \end{enumerate}
-            \karos{2}
         \end{enumerate}
+        \begin{gridspace}{2.5}
+           	\begin{enumerate}[label=\ ,leftmargin=1.1cm]
+           		\item $(a+b)^6=$
+           		\item $(a+b)^7=$
+           	\end{enumerate}
+        \end{gridspace}
+        \begin{enumerate}
+        	\setcounter{enumi}{4}
+        	\item Multipliziere den untenstehenden Term aus. Was ändert sich dabei? Warum?
+    	\end{enumerate}
+    	\begin{gridspace}{3.5}
+    		\begin{enumerate}[label=\ ,leftmargin=1.1cm]
+    		\item $(a\mathbf{-}b)^5=$
+    		\end{enumerate}
+    	\end{gridspace}
     \end{aufgabe}
     \begin{aufgabe}
         Nutze, die Gesetzmässigkeiten von oben, um auch diese beiden Terme zu notieren. Ausmultiplizieren ist auch hier verboten!
@@ -436,43 +421,50 @@
     Besitzen alle Summanden einer Summe einen gemeinsamen Faktor, so kann man diesen ausklammern. Der grösstmögliche auszuklammernde Faktor ist dabei gleich dem $\ggT$ der Summanden. Der $\ggT$ bezieht sich hier nicht nur auf Zahlen, sondern auch auf Variabeln.
     \begin{beispiel}
         Klammere den $\ggT$ der Summanden aus:
-        \begin{enumerate}[label=\alph*)]
-            \item $6rs-18r^{2}=$\vspace{18pt}
-            \item $-35xyz-7xz^{2}+14x^{2}yz=$\vspace{18pt}
-            \item $27np-12nq+21n=$\vspace{18pt}
-            \item $60u^{2}v^{2}-24uv^{2}+48uv-36u^{2}v = $\vspace{18pt}
-            \item $-84s^{2}(r+1)+24s^{3}(r+1)-60s(r+1)^{2} = $\vspace{24pt}
-        \end{enumerate}
+        \begin{gridspace}{10.5}
+        	\begin{enumerate}[label=\alph*)]
+        		\item $6rs-18r^{2}=$\\
+        		\item $-35xyz-7xz^{2}+14x^{2}yz=$\\
+        		\item $27np-12nq+21n=$\\
+        		\item $60u^{2}v^{2}-24uv^{2}+48uv-36u^{2}v=$\\
+        		\item $-84s^{2}(r+1)+24s^{3}(r+1)-60s(r+1)^{2}=$\\
+        	\end{enumerate}
+        \end{gridspace}
     \end{beispiel}
     \begin{aufgabe}
         Löse von den Aufgaben $75-90$ jeweils die ungeraden Nummern.
     \end{aufgabe}
 
-\subsection{Ausklammern in Teilsummen}
+\subsection{Ausklammern mithilfe von Gruppen bilden}
     Die zweite Methode, welche wir studieren, ist das \glqq Ausklammern in Teilsummen\grqq. Im Wesentlichen kehrt man dabei die Schritte des Ausmultiplizierens zweier Summen um.
     \begin{beispiel}
         Im folgenden Beispiel multiplizieren wir ein Produkt von zwei Summen aus. Studiere, wie die vier Summanden entstehen:
         \[(3x-y)(-5a+2b) = 3x(-5a+2b) -y(-5a+2b) = -15ax + 6bx + 5ay - 2by\]
-        Faktorisiere nun folgende Summe, indem du die Schritte aus obigen Beispiel in umgekehrter Reihenfolge anwendest:
-        \begin{enumerate}[label=\alph*)]
-            \item $12ax - 20bx -21ay + 35by = $ \vspace{30pt}
-            \item $-18ru - 6rv + 30su + 10sv =$ \vspace{24pt}
-            \item $48m^{2}rs + 8rs - 54m^{2}t - 9t = $ \vspace{18pt}
-        \end{enumerate}
+        Wir wollen also diese eindeutige Struktur nutzen, um dieses Ausmultiplizieren umzudrehen und damit die Summe faktorisieren zu können. Dazu wenden wir die Schritte aus dem obigen Beispiel in umgekehrter Reihenfolge an:
+        \begin{gridspace}{9.5}
+        	\begin{enumerate}[label=\alph*)]
+        		\item $12ax - 20bx -21ay + 35by = $\\[10mm]
+        		\item $-18ru - 6rv + 30su + 10sv =$\\[10mm]
+        		\item $48m^{2}rs + 8rs - 54m^{2}t - 9t = $\\
+        	\end{enumerate}
+        \end{gridspace}
     \end{beispiel}
-
-    Ein erstes Problem der Methode des Ausklammerns in Teilsummen besteht darin, dass die Faktorisierung nicht eindeutig ist.
+    Ein erstes Problem der Methode des Ausklammerns in Teilsummen besteht darin, dass die Faktorisierung nicht eindeutig ist. Je nachdem wie die Gruppen gebildet werden, entsteht eine leicht andere faktorisierte Form.
     \begin{beispiel}
         Faktorisiere folgende Terme durch Ausklammern in Teilsummen. Durch die Reihenfolge der Summanden werden zwei verschiedene Vorgehen nahegelegt:
-        \begin{enumerate}[label=\alph*)]
-            \item $18pu + 60qu - 27pv - 90qv = $ \vspace{24pt}
-            \item $18pu - 27pv + 60qu - 90qv =$\vspace{18pt}
-        \end{enumerate}
+        \begin{gridspace}{4.5}
+        	\begin{enumerate}[label=\alph*)]
+        		\item $18pu+60qu-27pv-90qv=$\\
+        		\item $18pu-27pv+60qu-90qv =$
+        	\end{enumerate}
+        \end{gridspace}
         Dieses Problem kann man nun lösen, indem man zunächst den $\ggT$ aller Koeffizienten ausklammert:
-        \begin{enumerate}[label=\alph*)]
-            \item $-140ax - 56ay + 175bx + 70by = $\vspace{30pt}
-            \item $10su + \frac{5}{3}tu - 2sv - \frac{2}{3}tv =$\vspace{18pt}
-        \end{enumerate}
+        \begin{gridspace}{4.5}
+        	\begin{enumerate}[label=\alph*)]
+        		\item $-140ax-56ay+175bx+70by=$\\
+        		\item $\ds 10su+\frac{5}{3}tu-2sv-\frac{2}{3}tv=$
+        	\end{enumerate}
+        \end{gridspace}
     \end{beispiel}
     \begin{aufgabe}
         Löse die Aufgaben $91-96$ aus der Aufgabensammlung.
@@ -481,30 +473,34 @@
 \subsection{Faktorisieren mit den Binomischen Formeln}
     Das stärkste Werkzeug, um eine Summe zu faktorisieren, sind die binomischen Formeln (kombiniert mit Ausklammern). Im Wesentlichen wenden wir dabei die Binomischen Formeln in umgekehrter Richtung an.
     \begin{beispiel} Faktorisiere die folgenden Summen mit Hilfe der binomischen Formeln.
-        \begin{enumerate}[label=\alph*)]
-            \item $x^{2}-6x+9 =$
-            \item $9x^{2}-4y^{2} =$
-            \item $16x^{2}+56xy^{2}+49y^{4} =$
-            \item $9r^{2}-16s^{6} =$
-            \item $9m^{4}+12m^{2}np+4n^{2}p^{2} =$
-            \item $25r^{4}s^{2}-9t^{8}u^{2} =$
-        \end{enumerate}
+    	\begin{gridspace}{6.5}
+    		\begin{enumerate}[label=\alph*)]
+    			\item $x^{2}-6x+9 =$
+    			\item $9x^{2}-4y^{2} =$
+    			\item $16x^{2}+56xy^{2}+49y^{4} =$
+    			\item $9r^{2}-16s^{6} =$
+    			\item $9m^{4}+12m^{2}np+4n^{2}p^{2} =$
+    			\item $25r^{4}s^{2}-9t^{8}u^{2} =$
+    		\end{enumerate}
+    	\end{gridspace}
     \end{beispiel}
     Bei einigen Summen muss zunächst ein gemeinsamer Faktor ausgeklammert werden, bevor man die binomischen Formeln anwendet.
     \begin{beispiel}
         Faktorisiere die folgenden Summen mithilfe der binomischen Formeln und klammere zuerst einen geeigneten Faktor aus.
-        \begin{enumerate}[label=\alph*)]
-            \item $75a^{2}-27b^{6} =$
-            \item $12u^{4}-75v^{2} =$
-            \item $50r^{2}s^{6}-80rs^{3}t^{2}+32t^{4} =$
-            \item $-3u^{4}+30u^{2}v-75v^{2} =$
-            \item $4m^{3}-16mn^{4} =$
-            \item $4x^{2}z+16xyz+16y^{2}z =$
-            \item $-125x^{2}y+350xyz^{2}-245yz^{4} =$
-        \end{enumerate}
+        \begin{gridspace}{7.5}
+        	\begin{enumerate}[label=\alph*)]
+        		\item $75a^{2}-27b^{6} =$
+        		\item $12u^{4}-75v^{2} =$
+        		\item $50r^{2}s^{6}-80rs^{3}t^{2}+32t^{4} =$
+        		\item $-3u^{4}+30u^{2}v-75v^{2} =$
+        		\item $4m^{3}-16mn^{4} =$
+        		\item $4x^{2}z+16xyz+16y^{2}z =$
+        		\item $-125x^{2}y+350xyz^{2}-245yz^{4} =$
+        	\end{enumerate}
+        \end{gridspace}
     \end{beispiel}
     \begin{aufgabe}
-        Löse die Aufgaben $97-104$ aus der Aufgabensammlung.
+        Löse die Aufgaben $100-104$ aus der Aufgabensammlung.
     \end{aufgabe}
 
 \subsection{Faktorisieren mit einem Ansatz}
@@ -512,30 +508,39 @@
     \begin{definition}
 	   Ein Polynom der Form
 	   \[p(x) = ax^{2} + bx + c \qquad a,b,c\in\R\]
-	   nennt man ein \emph{quadratisches Polynom} oder ein \emph{Polynom von Grad 2} in einer Variablen. Die Zahlen $a,b,c$ nennt man \emph{Koeffizienten} des Polynoms. Man sagt, $a$ ist der Koeffizient des quadratischen Terms $ax^{2}$, $b$ ist der Koeffizient des linearen Terms $bx$ und $c$ ist der Koeffizient des konstanten Terms.
+	   nennt man ein \textbf{quadratisches Polynom} oder ein \textbf{Polynom von Grad 2} in einer Variablen. Die Zahlen $a,b,c$ nennt man \emph{Koeffizienten} des Polynoms. Man sagt, $a$ ist der Koeffizient des quadratischen Terms $ax^{2}$, $b$ ist der Koeffizient des linearen Terms $bx$ und $c$ ist der Koeffizient des konstanten Terms.
     \end{definition}
-    Wir studieren nun zunächst wieder das Ausmultiplizieren von zwei Summen:
+    Wir repetieren zuerst nochmals das Ausmultiplizieren von zwei Summen. Mithilfe der binomischen Formeln sind solche Terme einfach ausmultipliziert.
     \begin{beispiel}
-        Beim Ausmultiplizieren entsteht ein quadratischer Term, ein linearer Term und ein konstanter Term. Überlege dir, wie der lineare Koeffizient und der konstante Koeffizient aus den beiden Faktoren entstehen:
-        \[(x-7)(x+3) = \hspace{10cm}\]
+        Wir stellen dabei fest, dass beim Ausmultiplizieren ein quadratischer Term, ein linearer Term und ein konstanter Term entsteht. Überlege dir, aus welchen Teilen innerhalb der ursprünglichen Klammern der lineare Koeffizient und der konstante Koeffizient entstehen:
+         \begin{gridspace}{1.5}
+        	\begin{enumerate}[label=\ , leftmargin=1.4cm]
+        		\item $(x-7)(x+3)=$
+        	\end{enumerate}
+        \end{gridspace}
         Wir halten fest: Der Koeffizient des konstanten Terms ist gleich \gap{5} der Zahlen der beiden Faktoren. Der Koeffizient des linearen Terms ist gleich \gap{4} oder \gap{5} der Zahlen der beiden Faktoren. \newline
         Faktorisiere nun folgende Produkte, indem du den Ansatz $ (x \pm \ldots )(x \pm \ldots) $ machst. Anschliessend zerlegst du den Koeffizienten des konstanten Terms in ein Produkt und überlegst dir, wie du die Faktoren zum Koeffizienten des linearen Terms addieren kannst.
-        \begin{enumerate}[label=\alph*)]
-            \item $x^{2}-x+12 =$ \vspace{18pt}
-            \item $x^{2}-7x+10 =$ \vspace{18pt}
-            \item $x^{2}-7x-8 =$ \vspace{18pt}
-        \end{enumerate}
+        \begin{gridspace}{6.5}
+        	\begin{enumerate}[label=\alph*)]
+        		\item $x^{2}-x+12 =$\\
+        		\item $x^{2}-7x+10 =$\\
+        		\item $x^{2}-7x-8 =$
+        	\end{enumerate}
+        \end{gridspace}
+
         Wir können noch eine weiter Beobachtung festhalten: Hat der Koeffizient des konstanten Terms ein positives Vorzeichen, so muss man den Ansatz $ (x+ \ldots)(x+\ldots)$ oder $(x-\ldots)(x-\ldots)$ verwenden. Hat der Koeffizient des konstanten Terms jedoch ein negatives Vorzeichen, so muss man den Ansatz $(x+\ldots)(x-\ldots)$ verwenden.
     \end{beispiel}
     Ist der Koeffizient des quadratischen Terms nicht mehr =1, so ist das Anwenden der Methode etwas komplexer:
     \begin{beispiel}
         Bei folgenden Polynomen ist der quadratische Koeffizient $ \neq 1 $. Je nach Situation muss die Ansatzmethode anders angepasst werden.
-        \begin{enumerate}[label=\alph*)]
-            \item $2x^{2} + 4x - 30 = 2(x^{2}+2x-15) =$\vspace{18pt}
-            \item $4x^{2} + 40x + 96 = $ \vspace{18pt}
-        \end{enumerate}
+        \begin{gridspace}{2.5}
+        	\begin{enumerate}[label=\alph*)]
+        		\item $2x^{2} + 4x - 30 = 2(x^{2}+2x-15) =$
+        		\item $4x^{2} + 40x + 96 = $
+        	\end{enumerate}
+        \end{gridspace}
     \end{beispiel}
-    Wir halten also fest: Ist der Koeffizient des quadratischen Terms nicht gleich 1, muss der Koeffizient $a$ ausgeklammert werden können anderen falls sind wir nicht in der Lage den Ausdruck zu faktrieren.
+    Wir halten also fest: Ist der Koeffizient des quadratischen Terms nicht gleich 1, muss der Koeffizient $a$ ausgeklammert werden können, anderenfalls sind wir nicht in der Lage den Ausdruck zu fakotrisieren.
     \begin{aufgabe}
         Löse die Aufgaben $105-111$ aus der Aufgabensammlung.
     \end{aufgabe}
@@ -552,7 +557,9 @@
         %\multicolumn{4}{|l|}{History}\\\hline
         Version & Datum & Person & Bemerkung \\\hline
         $0.1$ & 02.08.2024 & Jonas Guler & Kapitel erstellt \\\hline
-        $0.2$ & ToDo & Jonas Guler & \\\hline
+        $1.0$ & 20.11.2025 & Jonas Guler & Kapitel fertig \\\hline
+        $1.1$ & 29.07.2026 & Jonas Guler & Überarbeitung des Inhaltes und hinzufügen von karierten Hintergrundlinien in den Beispielen. \\\hline
+         & To Do & Jonas Guler &  \\\hline
     \end{tabular}
 \end{table}
 
