@@ -3,6 +3,7 @@
 \newlength\tindent
 \setlength{\tindent}{\parindent}
 \setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
 \renewcommand{\indent}{\hspace*{\tindent}}
 
 \makeatletter
@@ -291,4 +292,24 @@
     minimum height=2em]
 
 % Karriertes Papier für Antwort
-\newcommand{\karos}[1]{\begin{tikzpicture}\draw[step=0.5cm,color=gray] (0,0) grid (\linewidth,#1 cm);\end{tikzpicture}}
+\newcommand{\karos}[1]{\begin{tikzpicture}\draw[step=0.5cm,color=gray!55] (0,0) grid (\linewidth,#1 cm);\end{tikzpicture}}
+
+% Karriertes Papier für Antwort MIT OVERLAY
+\newtcolorbox{gridspace}[1]{%
+	enhanced,
+	breakable,
+	colback=white!0,
+	boxrule=0pt,
+	left=5mm,
+	right=5mm,
+	top=0mm,
+	bottom=2mm,
+	boxsep=0pt,
+	height=#1,
+	before upper={\setlength{\baselineskip}{10mm}
+		\setlength{\parskip}{0pt}
+		\setlength{\lineskip}{0pt}
+		\vspace{2mm}
+		\setlist[enumerate]{leftmargin=6mm,topsep=0pt,parsep=0pt,partopsep=0pt}},
+	underlay={\draw[step=5mm,color=gray!55] (interior.south west) grid (interior.north east);}
+}
