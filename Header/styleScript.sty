@@ -13,7 +13,6 @@
 \sectionfont{\underline}
 \usetikzlibrary{arrows, petri, topaths, graphs, backgrounds}
 
-
 % =================== BEISPIEL ====================
 \theoremstyle{definition}
 \newtheorem{beispiel}{Beispiel}
@@ -302,14 +301,30 @@
 	boxrule=0pt,
 	left=5mm,
 	right=5mm,
-	top=0mm,
+	top=6.25mm,
 	bottom=2mm,
 	boxsep=0pt,
-	height=#1,
-	before upper={\setlength{\baselineskip}{10mm}
+	height=#1cm,
+	before upper={
+		\begingroup
+		\setlength{\baselineskip}{10mm}
 		\setlength{\parskip}{0pt}
 		\setlength{\lineskip}{0pt}
-		\vspace{2mm}
-		\setlist[enumerate]{leftmargin=6mm,topsep=0pt,parsep=0pt,partopsep=0pt}},
-	underlay={\draw[step=5mm,color=gray!55] (interior.south west) grid (interior.north east);}
+		% keep every paragraph on the grid rhythm
+		%\everypar{\vspace{0pt}\strut}
+		% math formulas shifted by one grid row
+		\let\oldbracketopen\[
+		\renewcommand{\[}{\vspace{-5mm}\oldbracketopen}
+		% Align displayed formulas to the grid
+		\setlength{\abovedisplayskip}{0pt}
+		\setlength{\belowdisplayskip}{0pt}
+		\setlength{\abovedisplayshortskip}{0pt}
+		\setlength{\belowdisplayshortskip}{0pt}
+		% Enumerate follows the same rhythm
+		\setlist[enumerate]{leftmargin=6mm,itemsep=0mm,topsep=0pt,parsep=0pt,partopsep=0pt}
+		\setlist[itemize]{leftmargin=6mm,itemsep=10mm,topsep=0pt,parsep=0pt,partopsep=0pt}},
+	after upper={
+		\endgroup},
+	underlay={
+		\draw[step=5mm,color=gray!55] (interior.south west) grid (interior.north east);}
 }
