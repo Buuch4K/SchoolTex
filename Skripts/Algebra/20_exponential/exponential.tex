@@ -7,14 +7,13 @@
 
 \newcommand{\Skriptname}{Wachstum und Zerfall}
 \newcommand{\Autor}{Jonas Guler (Gu)}
-\newcommand{\version}{\textit{v}1.1}
 
 \begin{document}
 \begin{titlepage}
 	\clearpage
 	\title{\Huge\textbf{\Skriptname} \\[1.5cm]}
 	\author{Autor:\\ \Autor}
-	\date{\normalsize {Version \version}\\ \datelong}
+	\date{\normalsize {Version 1.2}\\ \datelong}
 	\maketitle
 	\thispagestyle{empty}
 	\vfill
@@ -25,9 +24,11 @@
 \section{Exponentialfunktion}
 	Bis jetzt kennen wir die lineare, quadratische und trigonometrischen Funktionen. Leider eignen sich diese nicht unbedingt für Modellierungen in der Natur. Aus diesem Grund lernen wir in diesem Abschnitt eine neue Klasse von Funktionen kennen.
 	\begin{aufgabe}
-		Auf einem Teich mit einer Oberfläche von $100'000 m^2$ wächst eine schnellwüchsige Wasserpflanze. Zum Zeitpunkt der ersten Messung sind $0.5\%$ des Teichs bedeckt. In jedem folgenden Monat verdreifacht sich die bedeckte Fläche.
+		Auf einem Teich mit einer Oberfläche von $100'000$ m$^2$ wächst eine schnellwüchsige Wasserpflanze. Zum Zeitpunkt der ersten Messung sind $0.5\%$ des Teichs bedeckt. In jedem folgenden Monat verdreifacht sich die bedeckte Fläche.
 		\begin{enumerate}[label=\alph*)]
 			\item Fülle die Tabelle aus.
+			\begingroup
+			\renewcommand{\arraystretch}{1.5}
 			\begin{table}[H]
 				\centering
 				\begin{tabular}{c|p{8mm}|p{8mm}|p{12mm}|p{12mm}|p{12mm}|c|p{15mm}}
@@ -35,25 +36,29 @@
 					Bedeckte Fläche in $m^2$ & $500$ & $1500$ & & & & &
 				\end{tabular}
 			\end{table}
-			\item Zeichne den Graphen der Funktion \textit{Monat} $\mapsto$ \textit{bedeckte Fläche} in das Koordinatensystem.\newline
-			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
-				>=latex,   %Voreinstellung für Pfeilspitzen
-				font=\footnotesize, scale=1.2]
-				%Raster zeichnen
-				\draw [color=gray!50]  [step=5mm] (-0,-0) grid (5.3,5.3);
-				% Achsen zeichnen
-				\draw[->,thick] (-0.3,0) -- (5.5,0) node[right=25pt, below] {\normalsize $x$ in Monaten};
-				\draw[->,thick] (0,-0.3) -- (0,5.5) node[above, left] {\normalsize $y$ in $m^2$};
-				% Achsen beschriften
-				\foreach \x in {1,2,...,5} \draw (\x,-.1) -- (\x,.1) node[below=5pt] {$\x$};
-				\foreach \y in {1,2,...,5} \draw (-.1,\y) -- (.1,\y) node[left=5pt] {$\y\cdot 10'000$};
-				% Besserer Ursprung
-				\draw[color=black] (0pt,-7pt) node[right] {$0$};
-				%Funktionen zeichnen:
-				\clip(-0.3,-0.3) rectangle (5.3,5.3); %Bildbereich
-				%Beschriftung
-				%\node[blue]  at (11,5) {\normalsize$f$};
-			\end{tikzpicture}
+			\endgroup
+			\item Zeichne den Graphen der Funktion \emph{Monat} $\mapsto$ \emph{bedeckte Fläche} in das Koordinatensystem.
+			\begin{figure}[H]
+				\hspace{1.5cm}
+				\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+					>=latex,   %Voreinstellung für Pfeilspitzen
+					font=\footnotesize, scale=1.2]
+					%Raster zeichnen
+					\draw [color=gray!50]  [step=5mm] (-0,-0) grid (5.3,5.3);
+					% Achsen zeichnen
+					\draw[->,thick] (-0.3,0) -- (5.5,0) node[right=25pt, below] {\normalsize $x$ in Monaten};
+					\draw[->,thick] (0,-0.3) -- (0,5.5) node[above, left] {\normalsize $y$ in m$^2$};
+					% Achsen beschriften
+					\foreach \x in {1,2,...,5} \draw (\x,-.1) -- (\x,.1) node[below=5pt] {$\x$};
+					\foreach \y/\label in {1/10'000,2/20'000,3/30'000,4/40'000,5/50'000} \draw (-.1,\y) -- (.1,\y) node[left=5pt] {$\label$};
+					% Besserer Ursprung
+					\draw[color=black] (0pt,-7pt) node[right] {$0$};
+					%Funktionen zeichnen:
+					\clip(-0.3,-0.3) rectangle (5.3,5.3); %Bildbereich
+					%Beschriftung
+					%\node[blue]  at (11,5) {\normalsize$f$};
+				\end{tikzpicture}
+			\end{figure}
 		\end{enumerate}
 	\end{aufgabe}
 	\begin{aufgabe}
@@ -64,25 +69,28 @@
 			\item Erstelle pro Angebot je eine Wertetabelle, in der du für jeden Tag das zur Verfügung stehende Geld einträgst.
 			\item Welches Angebot sollte sie wählen?
 			\item Bestimmen Sie für die beiden Angebote die Funktionsgleichung $y=f(x)$, wobei $y$ das zur Verfügung stehende Geld am $x$-ten Tag darstellt.
-			\item Zeichne die Graphen der beiden Funktionen ins Koordinatensystem ein.\newline
-			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=0.5mm,
-				>=latex,   %Voreinstellung für Pfeilspitzen
-				font=\footnotesize, scale=0.9]
-				%Raster zeichnen
-				\draw [color=gray!50]  [step=5mm] (-0,-0) grid (12.1,204);
-				% Achsen zeichnen
-				\draw[->,thick] (-0.3,0) -- (12.5,0) node[right, below] {\normalsize $x$};
-				\draw[->,thick] (0,-5) -- (0,210) node[above, left] {\normalsize $y$ in CHF};
-				% Achsen beschriften
-				\foreach \x in {1,2,...,12} \draw (\x,-2.) -- (\x,2.) node[below=4pt] {$\x$};
-				\foreach \y in {20,40,...,200} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
-				% Besserer Ursprung
-				\draw[color=black] (0pt,-7pt) node[right] {$0$};
-				%Funktionen zeichnen:
-				%\clip(-0.3,-0.3) rectangle (60.8,6.8); %Bildbereich
-				%Beschriftung
-				%\node[blue]  at (11,5) {\normalsize$f$};
-			\end{tikzpicture}
+			\item Zeichne die Graphen der beiden Funktionen ins Koordinatensystem ein.
+			\begin{figure}[H]
+				\hspace{1.5cm}
+				\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=0.5mm,
+					>=latex,   %Voreinstellung für Pfeilspitzen
+					font=\footnotesize, scale=0.9]
+					%Raster zeichnen
+					\draw [color=gray!50]  [step=5mm] (-0,-0) grid (12.1,204);
+					% Achsen zeichnen
+					\draw[->,thick] (-0.3,0) -- (12.5,0) node[right, below] {\normalsize $x$};
+					\draw[->,thick] (0,-5) -- (0,210) node[above, left] {\normalsize $y$ in CHF};
+					% Achsen beschriften
+					\foreach \x in {1,2,...,12} \draw (\x,-2.) -- (\x,2.) node[below=4pt] {$\x$};
+					\foreach \y in {20,40,...,200} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+					% Besserer Ursprung
+					\draw[color=black] (0pt,-7pt) node[right] {$0$};
+					%Funktionen zeichnen:
+					%\clip(-0.3,-0.3) rectangle (60.8,6.8); %Bildbereich
+					%Beschriftung
+					%\node[blue]  at (11,5) {\normalsize$f$};
+				\end{tikzpicture}
+			\end{figure}
 		\end{enumerate}
 	\end{aufgabe}
 	\begin{aufgabe}
@@ -91,28 +99,30 @@
 			\item Erstelle eine Wertetabelle, in der du die Anzahl vorhandene Atome für die nächsten $3$ Stunden eintragen.
 			\item Um welchen Faktor verringert sich die Anzahl Atome in einer Stunde?
 			\item Gib eine Formel an, mit der man berechnen kann, wie viele Atome nach $x$ Stunden noch vorhanden sind.
-			\item Zeichne den Graphen der Funktion \textit{vergangene Stunden} $\mapsto$ \textit{verbleibende Atome}.\newline
-			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=21.6mm, y=2.4mm,
-				>=latex,   %Voreinstellung für Pfeilspitzen
-				font=\footnotesize, scale=1]
-				%Raster zeichnen
-				\draw [color=gray!50]  [step=4.8mm] (-0,-0) grid (4.1,32.4);
-				% Achsen zeichnen
-				\draw[->,thick] (-0.3,0) -- (4.5,0) node[below=8pt, right] {\normalsize $x$ in h};
-				\draw[->,thick] (0,-1) -- (0,33) node[above, left] {\normalsize $y$};
-				% Achsen beschriften
-				\foreach \x in {1,2,...,12} \draw (\x/3,-.3) -- (\x/3,.3) node[below=12pt] {$\frac{\x}{3}$};
-				\foreach \y in {5,10,...,30} \draw (-.05,\y) -- (.05,\y) node[left=4pt] {$\y\cdot 1'000$};
-				% Besserer Ursprung
-				\draw[color=black] (0pt,-7pt) node[right] {$0$};
-				%Funktionen zeichnen:
-				%\clip(-0.3,-0.3) rectangle (60.8,6.8); %Bildbereich
-				%Beschriftung
-				%\node[blue]  at (11,5) {\normalsize$f$};
-			\end{tikzpicture}
+			\item Zeichne den Graphen der Funktion \emph{vergangene Stunden} $\mapsto$ \emph{verbleibende Atome}.
+			\begin{figure}[H]
+				\hspace{1.5cm}
+				\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=21.6mm, y=2.4mm,
+					>=latex,   %Voreinstellung für Pfeilspitzen
+					font=\footnotesize, scale=1]
+					%Raster zeichnen
+					\draw [color=gray!50]  [step=4.8mm] (-0,-0) grid (4.1,32.4);
+					% Achsen zeichnen
+					\draw[->,thick] (-0.1,0) -- (4.5,0) node[below=8pt, right] {\normalsize $x$ in h};
+					\draw[->,thick] (0,-1) -- (0,33) node[above, left] {\normalsize $y$};
+					% Achsen beschriften
+					\foreach \x in {1,2,...,12} \draw (\x/3,-.3) -- (\x/3,.3) node[below=4pt] {$\frac{\x}{3}$};
+					\foreach \y/\label in {5/5'000,10/10'000,15/15'000,20/20'000,25/25'000,30/30'000} \draw (-.04,\y) -- (.04,\y) node[left=4pt] {$\label$};
+					% Besserer Ursprung
+					\draw[color=black] (0pt,-7pt) node[right] {$0$};
+					%Funktionen zeichnen:
+					%\clip(-0.3,-0.3) rectangle (60.8,6.8); %Bildbereich
+					%Beschriftung
+					%\node[blue]  at (11,5) {\normalsize$f$};
+				\end{tikzpicture}
+			\end{figure}
 		\end{enumerate}
 	\end{aufgabe}
-
 	In allen drei Beispielen der Einführungsaufgaben ist die neue Klasse von Funktionen enthalten. Wir können sie also genauer definieren.
 	\begin{definition}
 		Eine Exponentialfunktion ist eine Funktion der Form
@@ -128,12 +138,11 @@
 		\end{itemize}
 	\end{beispiel}
 	An dieser Stelle soll auch nochmals auf den Unterschied der bereits bekannten Funktion hingewiesen werden.\newline
-	Steht die Variable $x$ in der Basis, so spricht man von einer \textbf{Potenz}funktion/ \textbf{Polynom}funktion: $f:y=x^2, g:y=2x^5-3x^3$.\newline
-	Steht hingegen die Variable $x$ im Exponenten, spricht man von einer \textbf{Exponential}funktion: $f:y=2^x, g:y=2\cdot 5^x$.
-	\newpage
+	Steht die Variable $x$ in der Basis, so spricht man von einer \textbf{Potenz}funktion/ \textbf{Polynom}funktion: $f:y=x^2, g:y=2x^5-3x^3$.\\
+	Steht hingegen die Variable $x$ im Exponenten, spricht man von einer \textbf{Exponential}funktion: ${f:y=2^x},\\ {g:y=2\cdot 5^x}$.\newpage
 	Für die Untersuchung der Eigenschaften einer Exponentialfunktion beschränken wir uns zunächst auf die Grundform: \[f:y=a^x.\]
 	\begin{aufgabe}
-		Betrachte die folgenden beiden Funktionsgleichungen und Graphen und beschreibe ihre Veränderung in eigenen Worten.\newline
+		Betrachte die folgenden beiden Funktionsgleichungen und Graphen und beschreibe ihre Veränderung in eigenen Worten.\\
 		\begin{minipage}{0.48\linewidth}
 			\[f:y=2^x\]
 			\centering
@@ -181,12 +190,12 @@
 				\node[forestgreen]  at (3.2,1) {\normalsize$g$};
 			\end{tikzpicture}
 		\end{minipage}
-		\karos{4}
+		\karos{4.5}
 	\end{aufgabe}
 	Wir können also die Erkenntnisse im folgenden Satz zusammenfassen:
 	\begin{satz}
 		Für eine Funktion der Form $f(x)=a^x$ gilt: Wird das Argument $x$ um eine Einheit erhöht, verändert sich der Funktionswert $y$ um den Faktor $a$.\newline
-		Wenn $a>1$ gilt, ist die entsprechende Funktion monoton wachsend.\newline
+		Wenn $a>1$ gilt, ist die entsprechende Funktion monoton wachsend.\\
 		Wenn $0<a<1$ gilt, ist die entsprechende Funktion monoton fallend.
 	\end{satz}
 	Die beiden Funktionen im Beispiel besitzen aber auch sehr viele Gemeinsamkeiten. Bei beiden ist der Einfluss des Parameters $a$ entscheidend für die Gestalt der Kurve. Der Definitions- und Wertebereich ist ebenfalls bei beiden Funktionen gleich. Fasse im folgenden Satz deine Beobachtungen zusammen.
@@ -196,18 +205,23 @@
 			\item Der Definitionsbereich ist \gap{2} und der Wertebereich ist \gap{2}.
 			\item Der $y-$Achsenabschnitt ist \gap{2}.
 			\item Die Funktion hat \gap{2} Nullstellen.
-			\item Monotonie:\begin{itemize}
+			\item Monotonie:
+			\begin{itemize}
 				\item Für $a>1$ ist die Funktion streng monoton wachsend.
-				\item Für $0<a<1$ ist die Funktion streng monoton fallend.\end{itemize}
-			\item Asymptotisches Verhalten:\begin{itemize}
+				\item Für $0<a<1$ ist die Funktion streng monoton fallend.
+				\end{itemize}
+			\item Asymptotisches Verhalten:
+			\begin{itemize}
 				\item Für $a>1$ kommen die Funktionswerte für kleiner werdende $x$ beliebig nahe bei $0$ zu liegen, bleiben aber immer positiv.
-				\item für $0<a<1$ kommen die Funktionswerte für grösser werdende $x$ beliebig nahe bei $0$ zu liegen, bleiben aber immer positiv. \end{itemize}
+				\item für $0<a<1$ kommen die Funktionswerte für grösser werdende $x$ beliebig nahe bei $0$ zu liegen, bleiben aber immer positiv.
+			\end{itemize}
 		\end{itemize}
 	\end{satz}
 	\begin{aufgabe}
 		\begin{enumerate}
 			\item Zeichne die Exponentialfunktionen zu $f:y=a^x$ für $a=2,3,\frac{5}{4},\frac{1}{3},\frac{4}{5}$ ins gleiche Koordinatensystem, wobei $1=4$ Häuschen und $-4\leq x\leq 4$ ist.
-			\item Der Punkt $P$ liegt auf der Funktion mit der Gleichung $f:y=a^x$. Berechne a. \begin{enumcols}[4]
+			\item Der Punkt $P$ liegt auf der Funktion mit der Gleichung $f:y=a^x$. Berechne a.
+			\begin{enumcols}[4]
 				\item $P(2,16)$
 				\item $P(\frac{1}{2},16)$
 				\item $P(4,9)$
@@ -242,6 +256,8 @@
 			\item Betrachten wir zunächst die lineare Funktion $l(t)=2t+3$.
 			\begin{enumerate}[label=\alph*)]
 				\item Fülle die folgende Wertetabelle aus:
+				\begingroup
+				\renewcommand{\arraystretch}{1.5}
 				\begin{table}[H]
 					\centering
 					\begin{tabular}{c|p{10mm}|p{10mm}|p{10mm}|p{10mm}|p{10mm}|p{10mm}}
@@ -249,15 +265,19 @@
 						$l(t)$ & & & & &
 					\end{tabular}
 				\end{table}
+				\endgroup
 				\item Wie verändert sich der Funktionswert, wenn man das Argument $t$ um eins erhöht? Wie, wenn man $t$ um 6 erhöht?
-				\item Fülle den folgenden Lückentext aus:\newline Eine lineare Funktion der Form $f:y=m\cdot t+q$ hat den $y-$Achsenabschnitt \gap{2}. Wenn man das Argument um 1 erhöht, steigt der Funktionswert um \gap{2}. Wenn man das Argument um $\Delta t$ erhöht, steigt der Funktionswert also um \gap{2}.
+				\item Fülle den folgenden Lückentext aus:\\ Eine lineare Funktion der Form $f:y=m\cdot t+q$ hat den $y-$Achsenabschnitt \gap{2}. Wenn man das Argument um 1 erhöht, steigt der Funktionswert um \gap{2}. Wenn man das Argument um $\Delta t$ erhöht, steigt der Funktionswert also um \gap{2}.
 			\end{enumerate}
 		\end{enumerate}
 		\karos{4}\newpage
-		\begin{enumerate}\setcounter{enumi}{1}
+		\begin{enumerate}
+			\setcounter{enumi}{1}
 			\item Betrachten wir als nächstes die Exponentialfunktion $e(t)=3\cdot 2^t$.
 			\begin{enumerate}[label=\alph*)]
 				\item Fülle die folgende Wertetabelle aus:
+				\begingroup
+				\renewcommand{\arraystretch}{1.5}
 				\begin{table}[H]
 					\centering
 					\begin{tabular}{c|p{10mm}|p{10mm}|p{10mm}|p{10mm}|p{10mm}|p{10mm}}
@@ -265,8 +285,9 @@
 						$e(t)$ & & & & &
 					\end{tabular}
 				\end{table}
+				\endgroup
 				\item Wie verändert sich der Funktionswert, wenn man das Argument $t$ um eins erhöht? Wie, wenn man $t$ um 6 erhöht?
-				\item Fülle den folgenden Lückentext aus:\newline Eine Exponentialfunktion der Form $f:y=b\cdot a^t$ hat den $y-$Achsenabschnitt \gap{2}. Wenn man das Argument um 1 erhöht, wird der Funktionswert ver-\gap{2}-facht. Wenn man das Argument um $\Delta t$ erhöht, wird der Funktionswert ver-\gap{2}-facht.
+				\item Fülle den folgenden Lückentext aus:\\ Eine Exponentialfunktion der Form $f:y=b\cdot a^t$ hat den $y-$Achsenabschnitt \gap{2}. Wenn man das Argument um 1 erhöht, wird der Funktionswert ver-\gap{2}-facht. Wenn man das Argument um $\Delta t$ erhöht, wird der Funktionswert ver-\gap{2}-facht.
 			\end{enumerate}
 		\end{enumerate}
 		\karos{4}
@@ -274,9 +295,9 @@
 	Wird eine Grösse – zum Beispiel ein Populationsbestand oder ein Kapital – im Verlauf der Zeit immer grösser, spricht man von einem Wachstum (falls sie kleiner wird, von einem Zerfall). Je nachdem wie die Grösse anwächst, unterscheidet man verschiedene Wachstumsarten. Die beiden wichtigsten Arten sind das lineare und das exponentielle Wachstum:
 	\begin{definition}[lineares und exponentielles Wachstum]
 		\begin{enumerate}
-			\item Wenn die Grösse in jeweils gleichen Zeitschritten um \textbf{denselben Betrag anwächst}, spricht man von einem \textbf{linearen} Wachstum. Der zeitliche Verlauf der Grösse wird durch eine lineare Funktion $f(t)=a\cdot t+b$ beschrieben. Dabei ist $b$ der Startwert der Grösse, also der Wert zum Zeitpunkt $t=0$, und $a$ ist der Betrag, um welchen die Grösse bei Ablauf einer Zeiteinheit anwächst.\newline
+			\item Wenn die Grösse in jeweils gleichen Zeitschritten um \textbf{denselben Betrag anwächst}, spricht man von einem \textbf{linearen} Wachstum. Der zeitliche Verlauf der Grösse wird durch eine lineare Funktion $f(t)=a\cdot t+b$ beschrieben. Dabei ist $b$ der Startwert der Grösse, also der Wert zum Zeitpunkt $t=0$, und $a$ ist der Betrag, um welchen die Grösse bei Ablauf einer Zeiteinheit anwächst.\\
 			Für $a<0$ beschreibt die Funktion $f(t)=a\cdot t+b$ einen linearen Zerfall.
-			\item Wenn die Grösse in jeweils gleichen Zeitschritten sich um \textbf{denselben Faktor verändert} spricht man von einem \textbf{exponentiellen} Wachstum. Der zeitliche Verlauf der Grösse wird durch eine Exponentialfunktion $g(t)=b\cdot a^t$ beschrieben. Dabei ist $b$ der Startwert der Grösse zum Zeitpunkt $t=0$ und $a$ ist der Faktor, um welchen die Grösse bei Ablauf einer Zeiteinheit zunimmt.\newline
+			\item Wenn die Grösse in jeweils gleichen Zeitschritten sich um \textbf{denselben Faktor verändert} spricht man von einem \textbf{exponentiellen} Wachstum. Der zeitliche Verlauf der Grösse wird durch eine Exponentialfunktion $g(t)=b\cdot a^t$ beschrieben. Dabei ist $b$ der Startwert der Grösse zum Zeitpunkt $t=0$ und $a$ ist der Faktor, um welchen die Grösse bei Ablauf einer Zeiteinheit zunimmt.\\
 			Für $0<a<1$ beschreibt die Funktion $g(t)=b\cdot a^t$ einen exponentiellen Zerfall.
 		\end{enumerate}
 	\end{definition}
@@ -290,13 +311,15 @@
 		\end{enumerate}
 	\end{notation}
 	\begin{beispiel}
-		Eine Bakterienpopulation in einer Nährlösung vermehrt sich durch Zellteilung. Zu Beginn des Experiments besteht die Population aus $200$ Bakterien. Durch Zellteilung verdoppelt sich die Anzahl Bakterien alle $3$ Stunden. Gesucht ist die Funktion $B(t)$, welche die Anzahl der Bakterien $t$ Stunden nach Beginn des Experiments angibt.\newline
+		Eine Bakterienpopulation in einer Nährlösung vermehrt sich durch Zellteilung. Zu Beginn des Experiments besteht die Population aus $200$ Bakterien. Durch Zellteilung verdoppelt sich die Anzahl Bakterien alle $3$ Stunden. Gesucht ist die Funktion $B(t)$, welche die Anzahl der Bakterien $t$ Stunden nach Beginn des Experiments angibt.\\
 		Da sich die Anzahl Bakterien in gleichen Zeitschritten ($3$ Stunden) jeweils um den Faktor zwei („verdoppeln“) verändert, handelt es sich hier um ein exponentielles Wachstum. Die gesuchte Funktion hat somit die Form \[B(t)=b\cdot a^t.\]
-		Die Aufgabe besteht nun darin, die beiden Parameter $b$ und $a$ zu ermitteln.\vspace{5pt}\newline\karos{5}
+		Die Aufgabe besteht nun darin, die beiden Parameter $b$ und $a$ zu ermitteln.\vspace{5pt}\\\karos{5}
 	\end{beispiel}
 	\begin{aufgabe}
 		\begin{enumerate}
 			\item Entscheide bei jeder der folgenden Wertetabellen, ob die zugrundeliegende Funktion linear oder exponentiell ist. Trage anschliessend die fehlenden Werte ein und gib die Funktionsgleichung an.
+			\begingroup
+			\renewcommand{\arraystretch}{1.5}
 			\begin{table}[H]
 				\centering
 				\begin{tabular}{c|p{8mm}|p{8mm}|p{8mm}|p{8mm}|p{8mm}|p{8mm}|p{8mm}|p{8mm}}
@@ -339,6 +362,7 @@
 					$k(t)$ & & & $2$ & & $18$ & $54$ & &
 				\end{tabular}
 			\end{table}
+			\endgroup
 			\item In einer Petrischale befinden sich $1000$ Bakterien.  Nach Ablauf von $5$ Monaten wird festgestellt, dass sich nun $8000$ Bakterien in der Schale befinden. Lösen Sie die folgenden Aufgaben in der Annahme, dass die Population exponentiell anwächst.
 			\begin{enumerate}[label=\alph*)]
 				\item Wie gross ist die Bakterienpopulation nach $t$ Monaten?
@@ -374,23 +398,23 @@
 		\end{enumerate}
 		\karos{6}
 	\end{aufgabe}
-	\begin{satz}
-		Wird ein Kapital $K_0$ zum Zinssatz $p$ angelegt, wo gilt für das Kapital $K(n)$ nach $n$ Jahren.
+	\begin{satz}[diskrete Verzinsung]
+		Wird ein Kapital $K_0$ zum Zinssatz $p$ angelegt, so gilt für das Kapital $K(n)$ nach $n$ Jahren.
 		\[K(n)=\gap{6}\]
 		Der Zinssatz wird im allgemeinen Kontext auch mit \textbf{Wachstumsrate} bezeichnet.
 	\end{satz}
 	\begin{beispiel}
-		Elins Kapital nach $34$ Jahren:\vspace{5pt}\newline\karos{2}
+		Elins Kapital nach $34$ Jahren:\vspace{5pt}\\\karos{2}
 	\end{beispiel}
 	Allgemein gilt: Wenn eine Grösse in gleichen Zeitschritten um einen bestimmten Prozentsatz zunimmt (oder abnimmt) handelt es sich um ein exponentielles Wachstum (oder Zerfall). Das kann man leicht einsehen: Angenommen eine Grösse $g$ wächst pro Zeiteinheit um einen Prozentsatz $p$. Dann gilt für alle $t\in\R$:
 	\[g(t+1)=g(t)+g(t)*p\]
 	Wenn man nun $g(t)$ ausklammert, folgt
 	\[g(t+1)=g(t)\cdot (1+p)\]
-	Oder in Worten: Nach Ablauf einer Zeiteinheit wird die Grösse $g$ jeweils ver-$(1+p)$-facht. Damit handelt es sich um ein exponentielles Wachstum um den Wachstumsfaktor $(1+p)$.\newline
-	Eine Zunahme von z.B. $13\%$ entspricht dann dem Wachstumsfaktor \gap{4}. \newline
+	Oder in Worten: Nach Ablauf einer Zeiteinheit wird die Grösse $g$ jeweils ver-$(1+p)$-facht. Damit handelt es sich um ein exponentielles Wachstum um den Wachstumsfaktor $(1+p)$.\\
+	Eine Zunahme von z.B. $13\%$ entspricht dann dem Wachstumsfaktor \gap{4}. \\
 	Eine Abnahme von z.B. $23\%$ entspricht dem Wachstumsfaktor \gap{4}.
 	\begin{beispiel}
-		Durch Verabreichung eines Medikaments befinden sich $40$mg Wirkstoff im Blut eines Patienten. In jeder folgenden Stunde wird $20\%$ des Wirkstoffes vom Körper abgebaut. Wie viel Wirkstoff befindet sich $12$ Stunden nach der Verabreichung noch im Körper?\vspace{5pt}\newline\karos{6}
+		Durch Verabreichung eines Medikaments befinden sich $40$mg Wirkstoff im Blut eines Patienten. In jeder folgenden Stunde wird $20\%$ des Wirkstoffes vom Körper abgebaut. Wie viel Wirkstoff befindet sich $12$ Stunden nach der Verabreichung noch im Körper?\vspace{5pt}\\\karos{6}
 	\end{beispiel}
 	\begin{aufgabe}
 		\begin{enumerate}
@@ -408,29 +432,52 @@
 	\end{aufgabe}
 
 \newpage
-\section{Unterjährige Verzinsung und die Euler'sche Zahl}
-	In diesem Abschnitt werden wir den Spuren von Jakob Bernoulli folgen, der sich im Jahr $1689$ mit einer Frage rund um die Verzinsung von Kapitalien befasst und so eine der wichtigsten Zahlen entdeckt hat.\vspace{16pt}\newline
-	In besagter Frage ging es darum, wie viel Geld die Bank einem Kunden auszahlen soll, wenn dieser sein Konto vor Ablauf eines Jahres auflöst. Zur Veranschaulichung betrachten wir ein Zahlenbeispiel:\newline
-	Alice hat im Januar $100$ CHF zu einem Zinssatz von $2\%$ angelegt. Ende Dezember würde der Zins dem Konto gutgeschrieben und Alice besässe $102$ CHF auf dem Konto. So weit kommt es aber nicht! Schon Ende Juni benötigt Alice das Geld für eine Reise. Sie geht zur Bank und löst das Konto auf. Doch wie viel Geld soll die Bank ausbezahlen? $100$ CHF wäre zu wenig und $102$ CHF zu viel, aber was ist richtig? Etwa die Mitte $101$ CHF?\vspace{16pt}\newline
+\section{Stetige Verzinsung und die Euler'sche Zahl}
+	In diesem Abschnitt werden wir den Spuren von Jakob Bernoulli folgen, der sich im Jahr $1689$ mit einer Frage rund um die Verzinsung von Kapitalien befasst und so eine der wichtigsten Zahlen entdeckt hat.\vspace{16pt}\\
+	In besagter Frage ging es darum, wie viel Geld die Bank einem Kunden auszahlen soll, wenn dieser sein Konto vor Ablauf eines Jahres auflöst. Zur Veranschaulichung betrachten wir ein Zahlenbeispiel:\\
+	Alice hat im Januar $100$ CHF zu einem Zinssatz von $2\%$ angelegt. Ende Dezember würde der Zins dem Konto gutgeschrieben und Alice besässe $102$ CHF auf dem Konto. So weit kommt es aber nicht! Schon Ende Juni benötigt Alice das Geld für eine Reise. Sie geht zur Bank und löst das Konto auf. Doch wie viel Geld soll die Bank ausbezahlen? $100$ CHF wäre zu wenig und $102$ CHF zu viel, aber was ist richtig? Etwa die Mitte $101$ CHF?\vspace{16pt}\\
 	Aus mathematischer Sicht ist die Antwort nicht schwierig: Das Kapital nach $t$ Jahren ist gegeben durch die Exponentialfunktion
 	\[K(t)=100\cdot 1.02^t\]
 	Nach einem halben Jahr beträgt das Kapital also
 	\[K(0.5)=100\cdot 1.02^{0.5}\approx100.995\]
-	Wir sehen: Wenn die Bank die Hälfte des Jahreszinses gutschreibt und nach sechs Monate insgesamt $101$ CHF ausbezahlt, dann ist das streng genommen knapp $0.5$ Rp zu viel! Allerdings ist der Fehler nur ganz klein. Zudem hatte man im $17$ Jahrhundert keine Taschenrechner zur Verfügung und das Ausrechnen der Zahl $1.02^{0.5}$ wäre langwierig und somit auch teuer gewesen. Vermutlich waren es solche Überlegungen, die dazu geführt haben, dass die Banken in solchen Fällen tatsächlich die Hälfte des Zinses – also zu viel – gutschreiben!\vspace{16pt}\newline
-	Auf den ersten Blick scheint es, als würden die Banken dabei einen harmlosen, kleinen Fehler begehen. Aber eine Idee machte die Branche nervös: Was passiert, wenn sich Alice das Geld nach einem halben Jahr ausbezahlen lässt, um es kurz darauf (zB in einer anderen Bank) für die zweite Jahreshälfte wieder anzulegen? Dann würde sie dreifach von dem Fehler profitieren: Zum einen erhält sie nach dem ersten Halbjahr $0.5$ Rp zu viel ausbezahlt, zum anderen erhält sie in der zweiten Jahreshälfte Zinsen auf diese $0.5$ Rp und zum Schluss wird am Ende der zweiten Jahreshälfte wieder zu viel ausbezahlt! Der Fehler wird sich auch dann noch in Grenzen halten. Was aber, wenn Alice diesen „Trick“ nicht erst nach einem halben Jahr anwendet, sondern nach jedem Monat? Dann profitiert sie zwölfmal von der falschen Auszahlung! Und wenn sie den „Trick“ täglich anwendet? Oder jede Sekunde? Kann man (rein theoretisch) unendlich viel Geld damit machen?!\vspace{16pt}\newline
+	Wir sehen: Wenn die Bank die Hälfte des Jahreszinses gutschreibt und nach sechs Monate insgesamt $101$ CHF ausbezahlt, dann ist das streng genommen knapp $0.5$ Rp zu viel! Allerdings ist der Fehler nur ganz klein. Zudem hatte man im $17$ Jahrhundert keine Taschenrechner zur Verfügung und das Ausrechnen der Zahl $1.02^{0.5}$ wäre langwierig und somit auch teuer gewesen. Vermutlich waren es solche Überlegungen, die dazu geführt haben, dass die Banken in solchen Fällen tatsächlich die Hälfte des Zinses – also zu viel – gutschreiben!\vspace{16pt}\\
+	Auf den ersten Blick scheint es, als würden die Banken dabei einen harmlosen, kleinen Fehler begehen. Aber eine Idee machte die Branche nervös: Was passiert, wenn sich Alice das Geld nach einem halben Jahr ausbezahlen lässt, um es kurz darauf (zB in einer anderen Bank) für die zweite Jahreshälfte wieder anzulegen? Dann würde sie dreifach von dem Fehler profitieren: Zum einen erhält sie nach dem ersten Halbjahr $0.5$ Rp zu viel ausbezahlt, zum anderen erhält sie in der zweiten Jahreshälfte Zinsen auf diese $0.5$ Rp und zum Schluss wird am Ende der zweiten Jahreshälfte wieder zu viel ausbezahlt! Der Fehler wird sich auch dann noch in Grenzen halten. Was aber, wenn Alice diesen „Trick“ nicht erst nach einem halben Jahr anwendet, sondern nach jedem Monat? Dann profitiert sie zwölfmal von der falschen Auszahlung! Und wenn sie den „Trick“ täglich anwendet? Oder jede Sekunde? Kann man (rein theoretisch) unendlich viel Geld damit machen?!\vspace{16pt}\\
 	Nun dies sind die Fragen mit denen sich der Basler Mathematiker Jakob Bernoulli beschäftigt hat. Damit man den Effekt etwas besser sieht, werden wir im Folgenden von einem Kapital von $1$ CHF ausgehen, der zu einem Jahreszinssatz von $100\%$ angelegt wird. Wenn man das Geld, während des ganzen Jahres auf der Bank lässt, wird am Schluss $1$ CHF an Zinsen gutgeschrieben und man hätte so insgesamt $2$ CHF auf dem Konto.
-	Wird die Hälfte des Zinses nach einem halben Jahr ausbezahlt, so hat man während der zweite Jahreshälfte $1.50$ auf dem Konto. Am Ende der zweiten Jahreshälfte kommen also $75$ Rappen Zinsen hinzu. Insgesamt hat man Ende des Jahres dann $2.25$ auf dem Konto!\newline
+	Wird die Hälfte des Zinses nach einem halben Jahr ausbezahlt, so hat man während der zweite Jahreshälfte $1.50$ auf dem Konto. Am Ende der zweiten Jahreshälfte kommen also $75$ Rappen Zinsen hinzu. Insgesamt hat man Ende des Jahres dann $2.25$ auf dem Konto!\\
 	Der letzte Absatz kann man auch so verstehen: Wird nach einem halben Jahr die Hälfte des Zinses ausbezahlt, so entspricht das einer Anlage zu einem Halbjahreszins von $50\%$. Das Kapital nach zwei Halbjahren kann man somit wie folgt berechnen
 	\[\utext{1}{Startkapital}\cdot \left(1+\utext{\frac{50}{100}}{Halbjahreszins}\right)^{\utext{2}{Anzahl Halbjahre}}=2.25\]
 	\begin{enumerate}
-		\item Wie viel Geld kann man anhäufen, wenn man diesen \glqq Trick\grqq\:alle drei Monate durchführt?\vspace{5pt}\newline\karos{2}
-		\item Wie gross ist das Kapital nach einem Jahr, wenn man den \glqq Trick\grqq\: $n-$mal anwendet? Gib eine Formel an.\vspace{5pt}\newline\karos{2}
-		\item Berechne den Wert am Jahresende, falls nach jedem Monat, jedem Tag, jeder Stunde oder jeder Sekunde aufgezinst würde. Es gilt $1$ Jahr $ = 360$ Banktage.\vspace{5pt}\newline\karos{2}
+		\item Wie viel Geld kann man anhäufen, wenn man diesen \glqq Trick\grqq\:alle drei Monate durchführt?\vspace{5pt}\\\karos{2.5}
+		\item Wie gross ist das Kapital nach einem Jahr, wenn man den \glqq Trick\grqq\: $n-$mal anwendet? Gib eine Formel an.\vspace{5pt}\\\karos{2.5}
+		\item Berechne den Wert am Jahresende, falls nach jedem Monat, jedem Tag, jeder Stunde oder jeder Sekunde aufgezinst würde. Es gilt $1$ Jahr $ = 360$ Banktage.\vspace{5pt}\\\karos{2.5}
 	\end{enumerate}
 	\begin{definition}[Euler'sche Zahl]
 		Für wachsende $n$ nähert sich der Term \[\left(1+\frac{1}{n}\right)^n\] immer mehr einer bestimmten Zahl. Diese Zahl heisst die Eulersche Zahl $e$. \[e=\lim_{n\rightarrow\infty}\left(1+\frac{1}{n}\right)^n\approx2.718281828459...\]
-		Die Exponentialfunktion $f(x)=\exp{x}$ spielt eine wichtige Rolle in der Mathematik und in vielen Anwendungen. Der Grund dafür werden wir aber erst ende dritten/ anfangs vierten Klasse kennen lernen...
+		Die Exponentialfunktion $f(x)=\exp{x}$ trägt ganz spezielle Eigenschaften und spielt deshalb in vielen Anwendungen eine zentrale Rolle. Diese Eigenschaften werden wir aber erst Ende dritter resp. Anfangs vierter Klasse kennenlernen...
 	\end{definition}
+	Mithilfe der Eulerschen Zahl können wir also für ein Vermögen an unendlich vielen Stellen Zins auszahlen. Man spricht hier auch von einer \textbf{stetigen Verzinsung}.
+	\begin{satz}[stetige Verzinsung]
+		Wird ein Kapital $K_0$ zum Zinsatz von $p$ angelegt, so gilt für das Kapital $K(n)$ nach $n$ Jahren:
+		\[K(n)=K_0\*\exp{\frac{p}{100}\*n}\]
+		Der Zinssatz ist auch in diesem Kontext gleichbedeutend mit der Wachstumsrate.
+	\end{satz}
+	\begin{aufgabe}
+		\begin{enumerate}
+			\item Ein Kapital von $1000.-$ CHF wird bei einer Bank angelegt. Der Zins wird jeweils am Ende einer Zinsperiode zum Kapital geschlagen. Berechne das Kapital jeweils nach $10$ Jahren.
+			\begin{enumerate}[label=\alph*)]
+				\item Das Kapital wird jährlich zu $1\%$ verzinst.
+				\item Das Kapital wird monatlich zu $\frac{1}{12}\%$ verzinst.
+				\item Das Kapital wird zu $1\%$ bestmöglich; d.h. stetig verzinst.
+			\end{enumerate}
+			\item Wie gross ist ein Kapital von $100.-$ CHF nach einem Jahr bei drei Banken mit verschiede-
+			nen Anlagemodellen? Der Zins wird jeweils am Ende einer Zinsperiode zum Kapital geschlagen.
+			\begin{enumerate}[label=\alph*)]
+				\item Bank A verzinst jährlich mit $1\%$.
+				\item Bank B verzinst wöchentlich mit $0.014\%$ Wochenzins.
+				\item Bank C verzinst einen Jahreszins von $0.5\%$ bestmöglich, d. h. stetig.
+			\end{enumerate}
+		\end{enumerate}
+	\end{aufgabe}
 
 
 \newpage
@@ -451,27 +498,54 @@
 		\end{table}
 		Beide sind irritiert, denn bisher haben sie ausschliesslich Polynomgleichungen (vorallem lineare und quadratische) gelöst. Auf den ersten Blick wissen sie nicht, wie sie das Problem anpacken sollen.
 		\begin{enumerate}[label=\alph*)]
-			\item Warum sind das keine Polynomgleichungen? \vspace{5pt}\newline\karos{2}
-			\item Versuche die beiden Gleichungen ohne technische Hilfsmittel zu lösen. \vspace{5pt}\newline\karos{4}
+			\item Warum sind das keine Polynomgleichungen? \vspace{5pt}\\\karos{2.5}
+			\item Versuche die beiden Gleichungen ohne technische Hilfsmittel zu lösen. \vspace{5pt}\\\karos{4.5}
 		\end{enumerate}
 	\end{aufgabe}
-	Wenn wir stellen also fest, dass falls die Gleichung so umgeformt werden kann, dass auf beiden Seiten des Gleichheitszeichen dieselbe Basis steht, sind wir mit den bekannten Methoden in der Lage, die Gleichung zu lösen. Betrachten wir zunächst ein Beispiel.\newline
+	Wenn wir stellen also fest, dass falls die Gleichung so umgeformt werden kann, dass auf beiden Seiten des Gleichheitszeichen dieselbe Basis steht, sind wir mit den bekannten Methoden in der Lage, die Gleichung zu lösen. Betrachten wir zunächst ein Beispiel.
 	\begin{beispiel}
-		Lösen wir die folgende Gleichung.\[4^{2x-1}\*\left(\frac{1}{2}\right)^2=8^{0.5x}\] Bemerke, dass hier alle Faktoren als Potenzen mit der Basis $2$ geschrieben werden können:\vspace{5pt}\newline\karos{4.5}
-		Da die Exponentialfunktion für zwei verschiedene Argumente nie das gleiche Bild haben kann, ist die Gleichung erfüllt, falls die Exponenten übereinstimmen. Es reicht also folgende Gleichung zu lösen:\vspace{5pt}\newline\karos{6}
+		Lösen wir die folgende Gleichung.\[4^{2x-1}\*\left(\frac{1}{2}\right)^2=8^{0.5x}\] Bemerke, dass hier alle Faktoren als Potenzen mit der Basis $2$ geschrieben werden können:\vspace{5pt}\\\karos{4.5}
+		Da die Exponentialfunktion für zwei verschiedene Argumente nie das gleiche Bild haben kann, ist die Gleichung erfüllt, falls die Exponenten übereinstimmen. Es reicht also folgende Gleichung zu lösen:\vspace{5pt}\\\karos{6}
 	\end{beispiel}
 	\begin{satz}[Exponentenvergleich]
 		Gewisse Exponentialgleichungen können in die spezielle Form, in der auf beiden Seiten des Gleichheitszeichen dieselbe Basis steht, gebracht werden. Um diese Gleichung zu lösen, genügt es, wenn die Exponenten der beiden Terme gleichgesetzt werden.
 	\end{satz}
 	\begin{aufgabe}
-		Löse die folgenden Gleichungen nach $x$ auf.
-		\begin{enumerate}[label=\alph*)]\begin{multicols}{2}
-				\item $2^{x-4}=2^{4-x}$
+		\begin{enumerate}
+			\item Löse die folgenden Gleichungen nach $x$ auf.
+			\begin{enumcols}[3]
+				\item $2^x=8$
+				\item $2^x=1024$
+				\item $3^x=81$
+				\item $4^x=\frac{1}{2}$
+				\item $\left(\frac{1}{5}\right)^{-x}=625$
+				\item $3^{4x}=9$
+				\item $5^{6x-3}=625$
+				\item $2^x=1$
+				\item $2^{3x-1}=256$
+			\end{enumcols}
+			\item Löse die folgenden Gleichungen mithilfe des Exponentenvergleichs nach $x$ auf.
+			\begin{enumcols}[3]
+				\item $2^x=2^{2x-3}$
+				\item $3^{x-4}=3^{4-x}$
 				\item $\left(\frac{1}{2}\right)^{-x}=\left(\frac{1}{2}\right)^{x^2-2}$
-				\item $\e^{3x}-\e^{-3x}=0$
-				\item $\e^{2x+5}-\e^{2x-5}=0$
-		\end{multicols}\end{enumerate}
-		Löse nun die Aufgaben $1-8$ auf Seite $182$ im Buch Algebra $9/10$.
+				\item $\exp{3x}-\exp{-3x}=0$
+				\item $\exp{2x+5}-\exp{2x-5}=0$
+				\item $5^{2x-1}\*5^{3x+5}=5^{4x-2}$
+				\item $2^{3x}\*\left(\frac{1}{2}\right)^{x-1}=8$
+				\item $2^{3x-4}\*4^{2x-3}=8^{x+2}$
+				\item $3^{x-1}+3^{x+1}=90$
+			\end{enumcols}
+		\end{enumerate}
+	\end{aufgabe}
+	\begin{aufgabe}[für Schnelle]
+		Löse die folgenden Gleichungen mithilfe des Exponentenvergleichs nach $x$ auf.
+		\begin{enumcols}[2]
+			\item $8^{2x-1}-4^{3x-1}+2^{6x-1}=96$
+			\item $7^{2x+5}+47^{x+3}=\frac{8}{343}$
+			\item $3^{8x-21}-2\*9^{4x-10}+81^{2x-5}+54=0$
+			\item $\left(16^x-1\right)^3-49\*\left(16^x-1\right)=0$
+		\end{enumcols}
 	\end{aufgabe}
 
 \newpage
@@ -483,6 +557,7 @@
 		Version & Datum & Person & Bemerkung \\\hline
 		$1.0$ & 02.08.2024 & Jonas Guler & Kapitel erstellt \\\hline
 		$1.1$ & 07.08.2025 & Jonas Guler & Fehler korrigiert \\\hline
+		$1.2$ & 31.07.2026 & Jonas Guler & Fehler korrigiert, vereinzelt Darstellung korrigiert und neue Umgebungen hinzugefügt. Zusätzliche Aufgaben zu stetigen Verzinsung und Exponentialgleichungen hinzugefügt. \\\hline
 		$2.0$ & ToDo & Jonas Guler & Weitere Wachstumsmethoden \\\hline
 	\end{tabular}
 \end{table}
