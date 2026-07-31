@@ -7,12 +7,12 @@
 \newcommand{\Skriptname}{Potenzen und Wurzeln}
 \newcommand{\Autor}{Jonas Guler (Gu)}
 
-\begin{document}   % Barth Buch 2 Kap 2
+\begin{document} % Barth Buch 2 Kap 2
 \begin{titlepage}
 	\clearpage
 	\title{\Huge\textbf{\Skriptname} \\[1cm]}
 	\author{Autor:\\ \Autor}
-	\date{\normalsize {Version 1.0}\\ \datelong}
+	\date{\normalsize{Version 1.1\\ \datelong}}
 	\maketitle
     \thispagestyle{empty}
     \vfill
@@ -33,9 +33,21 @@
     \begin{beispiel}\ 
     	\begin{enumerate}[label=\alph*)]
         	\item Kürze soweit wie möglich, ohne auszurechnen:
-        	\[\frac{5^{2}\*14^{3}\*3\*2^{5}}{15\*28^{2}\*6^{3}} =\hspace{12cm}\]\vspace{3cm}
-        	\item Welche der folgenden Zahlen ist die grösste?\[2^{32},\quad4^{15},\quad8^{11},\quad16^8,\quad32^6\]\vspace{2cm}
+        \end{enumerate}
+        \begin{gridspace}{4.5}
+        	\begin{itemize}[label=\ ]\vspace*{-3mm}
+        		\item $\ds\frac{5^{2}\*14^{3}\*3\*2^{5}}{15\*28^{2}\*6^{3}}=$
+        	\end{itemize}
+        \end{gridspace}
+        \begin{enumerate}[label=\alph*)]
+        	\setcounter{enumi}{1}
+        	\item Welche der folgenden Zahlen ist die grösste?
     	\end{enumerate}
+    	\begin{gridspace}{4.5}
+    		\begin{itemize}[label=\ ,leftmargin=5cm]
+    			\item $2^{32},\quad4^{15},\quad8^{11},\quad16^8,\quad32^6$
+    		\end{itemize}
+    	\end{gridspace}
     \end{beispiel}
     Im Allgemeinen gelten für Potenzen folgende Rechenregeln, die sogenannten Potenzgesetze:\newpage
     \begin{satz}[Potenzgesetze für natürliche Exponenten]
@@ -44,23 +56,30 @@
     		\item Potenzen mit gleicher Basis $a^{m}\*a^{n}=$
     		\item Potenzen mit gleichem Exponenten $a^{n}\*b^{n}=$
     		\item Iterierte Potenzen $(a^{m})^{n}=$
-            \item Potenz eines Bruches mit gleicher Basis $\displaystyle\frac{a^n}{a^m}=$
-            \item Potenz eines Bruches mit gleichem Exponent $\displaystyle\frac{a^n}{b^n}=$
+            \item Potenz eines Bruches mit gleicher Basis $\ds\frac{a^n}{a^m}=$
+            \item Potenz eines Bruches mit gleichem Exponent $\ds\frac{a^n}{b^n}=$
         \end{enumerate}
         Es liegt auf der Hand, dass bei 4. $a\neq0$ und bei 5. $b\neq0$ gelten muss.
     \end{satz}
     \begin{beweis}
-        Wir möchten hier beispielhaft einen ersten Beweis durchführen. Dazu betrachten wir die Definition einer Potenz:\vspace{5pt}\newline\karos{6}
+        Wir möchten hier beispielhaft einen ersten Beweis durchführen. Dazu betrachten wir die Definition einer Potenz:\vspace{5pt}\\\karos{6}
     \end{beweis}
     \begin{aufgabe} %Algebra 9/10 Brückenkapitel
         \begin{enumerate}
+        	\item Schreibe die Summe als Produkt und das Produkt als Potenz.
+        	\begin{enumerate}[label=\alph*)]
+        		\item $x+x+x+x+x; \quad x\*x\*x\*x\*x$
+        		\item $(z+1)+(z+1)+(z+1)+(z+1); \quad (z+1)\*(z+1)\*(z+1)\*(z+1)$
+        		\item $(p+p+p+p)+(p+p);\quad (p\*p\*p\*p)\*(p\*p)$
+        		\item $2k+2k+2k+2k+2k;\quad 2k\*2k\*2k\*2k\*2k$
+        	\end{enumerate}
             \item Vereinfache die folgenden Terme.
             \begin{enumcols}[2]
+            	\item $x^2\*x^2\*x^2$
+            	\item $n\*p\*n\*p\*n\*p$
                 \item $z^2+z^2+z^2$
                 \item $a-1+a-2+a-3$
-                \item $n\*p\*n\*p\*n\*p$
-                \item $x^2\*x^2\*x^2$
-            \end{enumcols}
+            \end{enumcols}\newpage
             \item Schreibe als Potenz mit Basis $m$.
             \begin{enumcols}[2]
                 \item $m^2\*m^3\*m$
@@ -69,7 +88,18 @@
                 \item $m^5\div m^2$
                 \item $\left(m^4\*m^3\right)\div m^2$
                 \item $\left(\frac{m^5}{m^2}\right)^2$
-            \end{enumcols}\newpage
+            \end{enumcols}
+            \item Nutze Potenzen, zn den Term möglichst einfach zu schreiben.
+            \begin{enumcols}[4]
+            	\item $a^9\div a^7$
+            	\item $(3a)^3\*a^3$
+            	\item $\frac{(3a)^2}{27a}$
+            	\item $(a+1)^3(a+1)^4$
+            	\item $2a^3\div (8a^2)$
+            	\item $27ab^2\*\frac{1}{3}a^3b$
+            	\item $(2a)^3\div\left(\frac{1}{4}a\right)$
+            	\item $\left(\frac{1}{2}a\right)^3\*a^2$
+            \end{enumcols}
             \item Wahr oder Falsch?!
             \begin{enumcols}[2]
                 \item $10^3\*10^4=10^2\*10^5$
@@ -89,6 +119,20 @@
             \end{enumcols}
         \end{enumerate}
     \end{aufgabe}
+    \begin{aufgabe}[für Schnelle]
+    	Gib das Vorzeichen der Potenzen an, one die Potenzen selbst auszurechnen, wenn $a>0$ und $b<0$ gilt.
+    	\begin{enumcols}[3]
+    		\item $(-4)^{6}$
+    		\item $-2^{8}$
+    		\item $(-5)^{7}$
+    		\item $a^{4}$
+    		\item $(-a)^{4}$
+    		\item $-a^{4}$
+    		\item $(b)^{5}$
+    		\item $(-b)^{5}$
+    		\item $-b^{5}$
+    	\end{enumcols}
+    \end{aufgabe}
 
 \newpage
 \section{Die Quadratwurzel}
@@ -97,23 +141,25 @@
         \begin{enumerate}
             \item Wie kannst du die Seitenlänge des Quadrats ausdrücken, wenn du keinen TR hast.
             \item Was sagt der TR. Wie lange ist die Quadratseite? Ist dieses Resultat exakt?
-            \item Wie kannst du nun mit Massstab, Geodreieck und Zirkel eine Strecke konstruieren, sodass das Quadrat über dieser Strecke Flächeninhalt $20$ cm$^2$ hat?\newline\textit{Tipp: Denke an ein rechtwinkliges Dreieck und wende darin den Höhensatz an.}
+            \item Wie kannst du nun mit Massstab, Geodreieck und Zirkel eine Strecke konstruieren, sodass das Quadrat über dieser Strecke Flächeninhalt $20$ cm$^2$ hat?\\\textit{Tipp: Denke an den Thaleskreis mit enthaltenem rechtwinkliges Dreieck und wende darin den Höhensatz an.}
         \end{enumerate}
     \end{aufgabe}
     Wir kennen also die Quadratwurzel bereits. Dennoch möchten wir sie nochmals klar definieren, damit wir alle vom gleichen sprechen.
     \begin{definition}
-        Sei $a\in\R_0^+$. Die \textbf{Wurzel} von $a$ ist diejenige nicht-negative reele Zahl $x$, sodass \[\lineortext{x^2=a}\] gilt. Wir schreiben auch $x=\sqrt{a}$. Der Term unter der Wurzel heisst \textit{Radikand}.
+        Sei $a\in\R_0^+$. Die \textbf{Wurzel} von $a$ ist diejenige nicht-negative reele Zahl $x$, sodass \[\gap{5}\] gilt. Wir schreiben auch $x=\sqrt{a}$. Der Term unter der Wurzel heisst \textit{Radikand}.
     \end{definition}
     Bemerke, dass beispielsweise $-4$ nicht in Frage kommt, wenn wir $\sqrt{16}$ bilden wollen. Deshalb ist es extrem wichtig, ob die Aufgabe nach der Wurzel einer nicht-negativen Zahl $a$ fragt oder ob die Aufgabe nach der Lösung der Gleichung $x^2=a$ fragt.
     \begin{itemize}
-        \item Berechne $\quad\sqrt{49}=\lineortext{\qquad 7}$
-        \item Löse die Gleichung $x^2=49$. $\qquad\lineortext{\mathbb{L}=\left\{-7,7\right\}\qquad}$
+        \item Berechne $\quad\sqrt{49}=\gap{3}$
+        \item Löse die Gleichung $x^2=49$. $\qquad\gap{3}$
     \end{itemize}
     Um mit der Wurzel rechnen zu können und Terme auch zu vereinfachen, sind wir auf einige Gesetze angewiesen. Direkt aus der Definition folgen:
-    \begin{satz}\begin{enumerate}[label=\alph*)]
-        \item $(\sqrt{a})^2=a$ für jede $a\geq0$
-        \item $\sqrt{a^2}=\abs{a}$ für jede $a\in\R$ 
-    \end{enumerate}\end{satz}
+    \begin{satz}
+    	\begin{enumerate}[label=\alph*)]
+        	\item $(\sqrt{a})^2=a$ für jede $a\geq0$
+        	\item $\sqrt{a^2}=\abs{a}$ für jede $a\in\R$
+    	\end{enumerate}
+    \end{satz}
     Die Betragstriche bei $b)$ sind entscheidend. Da falls beispielsweise $a=-3$ gilt, so ist $\sqrt{a^2}=\sqrt{9}=3$. Wir erhalten also hier nicht die Ausgangszahl sondern den Betrag.\newpage
     \begin{aufgabe}
         Vereinfache die folgenden Terme so weit wie möglich. Überlege dir gut, wo es Betragstriche braucht.
@@ -131,10 +177,9 @@
             \item $\left(\frac{\sqrt{5}}{10}\right)^2$
         \end{multicols}\end{enumerate}
     \end{aufgabe}
-    Als nächstes wollen wir die Wurzelgesetze näher anschauen. um effektiv Terme umformen zu können.
+    Als nächstes wollen wir die Wurzelgesetze näher anschauen, um effektiv Terme umformen zu können.
     \begin{aufgabe}
-        Begründe, warum $\sqrt{4\cdot 81} = \sqrt{4}\cdot\sqrt{81}$ gilt.\newline
-        \karos{2}
+        Begründe, warum $\sqrt{4\cdot 81} = \sqrt{4}\cdot\sqrt{81}$ gilt.\\[2pt]\karos{2.5}
     \end{aufgabe}
     Selbstverständlich ist ein Beispiel nicht genug, um die obige Aussage $\sqrt{a\cdot b}=\sqrt{a}\cdot\sqrt{b}$ für alle nicht negativen Zahlen $a$ und $b$ zu behaupten. Deshalb möchten wir diese Aussage gemeinsam beweisen.
     \begin{satz}\label{satz:wurzelgesetz}
@@ -142,47 +187,45 @@
         \[\sqrt{a\cdot b}=\sqrt{a}\cdot\sqrt{b}.\]
     \end{satz}
     \begin{beweis}
-        \karos{4}
+        \karos{4.5}
     \end{beweis}
     \begin{satz}
          Für alle nicht negativen reellen Zahlen $a$ und $b$ gilt:
          \[\sqrt{\frac{a}{b}}=\frac{\sqrt{a}}{\sqrt{b}}.\]
     \end{satz}
-    Für das zweite Gesetz verzichten wir auf die Angabe eines Beweises, da er von der Idee her genau gleich wie Satz \ref{satz:wurzelgesetz} funktioniert. 
+    Für das zweite Gesetz verzichten wir auf die Angabe eines Beweises, da er von der Idee her genau gleich wie Satz \ref{satz:wurzelgesetz} funktioniert.
     \begin{aufgabe}
-        Vereinfache die Terme soweit bis keine Wurzel mehr enthalten ist.
-        \begin{enumerate}[label=\alph*)]\begin{multicols}{3}
-            \item $\sqrt{x^2-2xy+y^2}$
-            \item $\sqrt{4n^2-28n+49}$
-            \item $\sqrt{\left(\frac{u+v}{2}\right)^2-uv}$
-            \item $\sqrt{\left(c^2-\frac{1}{4}\right)^2+c^2}$
-            \item $\sqrt{2r}\sqrt{3s}\sqrt{6rs}$
-            \item $\sqrt{xy}\sqrt{\frac{x}{y}}$
-        \end{multicols}\end{enumerate}
-    \end{aufgabe}
-    \begin{aufgabe}
-        Vereinfache die Terme so weit wie möglich.
-        \begin{enumerate}[label=\alph*)]\begin{multicols}{3}
-            \item $\sqrt{2}\left(\sqrt{2}-1\right)$
-            \item $\sqrt{6}\left(\sqrt{\frac{1}{2}}-\sqrt{\frac{1}{3}}\right)$
-            \item $\left(\sqrt{2}+1\right)\left(\sqrt{2}-1\right)$
-            \item $\sqrt{9+4\sqrt{2}}\sqrt{9-4\sqrt{2}}$
-            \item $\sqrt{\frac{\sqrt{10}}{6}-\frac{\sqrt{6}}{10}}\sqrt{\frac{\sqrt{10}}{6}+\frac{\sqrt{6}}{10}}$
-            \item $\left(\sqrt{2-\frac{1}{2}\sqrt{7}}-\sqrt{2+\frac{1}{2}\sqrt{7}}\right)^2$
-        \end{multicols}\end{enumerate}
-    \end{aufgabe}
-    \begin{aufgabe}
-        Vereinfach die folgenden Brüche soweit bis keine Wurzeln mehr im Nenner enthalten sind.
-        \begin{enumerate}[label=\alph*)]\begin{multicols}{4}
-            \item $\frac{3}{\sqrt{6}}$
-            \item $\frac{\sqrt{3}}{\sqrt{5}}$
-            \item $\sqrt{\frac{2}{5}}$
-            \item $\frac{28}{\sqrt{42}}$
-            \item $\frac{\sqrt{99}}{\sqrt{80}}$
-            \item $\sqrt{\frac{25}{98}}$
-            \item $\frac{5-\sqrt{5}}{\sqrt{5}}$
-            \item $\frac{\sqrt{2}-2\sqrt{3}}{\sqrt{6}}$
-        \end{multicols}\end{enumerate}
+    	\begin{enumerate}
+    		\item Vereinfache die Terme soweit bis keine Wurzel mehr enthalten ist.
+    		\begin{enumcols}[3]
+    			\item $\sqrt{x^2-2xy+y^2}$
+    			\item $\sqrt{4n^2-28n+49}$
+    			\item $\sqrt{\left(\frac{u+v}{2}\right)^2-uv}$
+    			\item $\sqrt{\left(c^2-\frac{1}{4}\right)^2+c^2}$
+    			\item $\sqrt{2r}\sqrt{3s}\sqrt{6rs}$
+    			\item $\sqrt{xy}\sqrt{\frac{x}{y}}$
+    		\end{enumcols}
+    		\item Vereinfache die Terme so weit wie möglich.
+    		\begin{enumcols}[3]
+    			\item $\sqrt{2}\left(\sqrt{2}-1\right)$
+    			\item $\sqrt{6}\left(\sqrt{\frac{1}{2}}-\sqrt{\frac{1}{3}}\right)$
+    			\item $\left(\sqrt{2}+1\right)\left(\sqrt{2}-1\right)$
+    			\item $\sqrt{9+4\sqrt{2}}\sqrt{9-4\sqrt{2}}$
+    			\item $\sqrt{\frac{\sqrt{10}}{6}-\frac{\sqrt{6}}{10}}\sqrt{\frac{\sqrt{10}}{6}+\frac{\sqrt{6}}{10}}$
+    			\item $\left(\sqrt{2-\frac{1}{2}\sqrt{7}}-\sqrt{2+\frac{1}{2}\sqrt{7}}\right)^2$
+    		\end{enumcols}
+    		\item Vereinfach die folgenden Brüche soweit bis keine Wurzeln mehr im Nenner enthalten sind.
+    		\begin{enumcols}[4]
+    			\item $\frac{3}{\sqrt{6}}$
+    			\item $\frac{\sqrt{3}}{\sqrt{5}}$
+    			\item $\sqrt{\frac{2}{5}}$
+    			\item $\frac{28}{\sqrt{42}}$
+    			\item $\frac{\sqrt{99}}{\sqrt{80}}$
+    			\item $\sqrt{\frac{25}{98}}$
+    			\item $\frac{5-\sqrt{5}}{\sqrt{5}}$
+    			\item $\frac{\sqrt{2}-2\sqrt{3}}{\sqrt{6}}$
+    		\end{enumcols}
+    	\end{enumerate}
     \end{aufgabe}
 
 \newpage
@@ -193,8 +236,8 @@
         %\multicolumn{4}{|l|}{History}\\\hline
         Version & Datum & Person & Bemerkung \\\hline
         $0.1$ & 16.12.2023 & Jonas Guler & Kapitel erstellt \\\hline
-        $0.2$ & 02.10.2024 & Jonas Guler & Definition auf n-te Wurzel verallgemeinert \\\hline
-        $0.3$ & ToDo & Jonas Guler & Aufgaben hinzufügen und Rationale Exponenten \\\hline
+        $1.0$ & 02.10.2024 & Jonas Guler & Kapitel für natürliche Exponenten fertig. Inhalte aufgeteilt: rationale Exponenten und n-te Wurzel in separates Skript überführt.\\\hline
+        $1.1$ & 31.07.2026 & Jonas Guler & Überarbeitung und Aufgaben zu Wurzeln erweitert. \\\hline
     \end{tabular}
 \end{table}
 
