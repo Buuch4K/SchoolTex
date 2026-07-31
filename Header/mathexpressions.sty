@@ -90,7 +90,8 @@
 \renewcommand{\arctan}[1]{\oldarctan{\left(#1\right)}}
 \let\oldln\ln
 \renewcommand{\ln}[1]{\oldln{\left(#1\right)}}
-\newcommand{\Log}[2]{\ensuremath{\operatorname{log}_{#1}\left(#2\right)}}
+\let\oldlog\log
+\renewcommand{\log}[2]{\oldlog_{#1}\left(#2\right)}
 \newcommand{\e}{\operatorname{e}}
 \renewcommand{\exp}[1]{\ensuremath{\operatorname{\e}^{#1}}}
 
