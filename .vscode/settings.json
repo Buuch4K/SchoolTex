@@ -1,147 +1,14 @@
 {
   "latex-workshop.view.pdf.viewer": "tab",
   "latex-workshop.view.pdf.zoom": "page-fit",
-  "latex-workshop.view.pdf.color.dark.pageColor": "#1e1e1e",
-  "latex-workshop.view.pdf.color.dark.textColor": "#e0e0e0",
-  
-  "latex-workshop.latex.recipes": [
-    {
-      "name": "latexmk (pdflatex)",
-      "tools": ["latexmk"]
-    },
-    {
-      "name": "latexmk (xelatex)",
-      "tools": ["latexmk-xelatex"]
-    },
-    {
-      "name": "pdflatex → biber → pdflatex",
-      "tools": ["pdflatex", "biber", "pdflatex"]
-    }
-  ],
-  
-  "latex-workshop.latex.tools": [
-    {
-      "name": "latexmk",
-      "command": "latexmk",
-      "args": [
-        "-synctex=1",
-        "-interaction=nonstopmode",
-        "-file-line-error",
-        "-pdf",
-        "-outdir=%OUTDIR%",
-        "%DOC%"
-      ],
-      "env": {}
-    },
-    {
-      "name": "latexmk-xelatex",
-      "command": "latexmk",
-      "args": [
-        "-synctex=1",
-        "-interaction=nonstopmode",
-        "-file-line-error",
-        "-xelatex",
-        "-outdir=%OUTDIR%",
-        "%DOC%"
-      ],
-      "env": {}
-    },
-    {
-      "name": "pdflatex",
-      "command": "pdflatex",
-      "args": [
-        "-synctex=1",
-        "-interaction=nonstopmode",
-        "-file-line-error",
-        "-output-directory=%OUTDIR%",
-        "%DOC%"
-      ],
-      "env": {}
-    },
-    {
-      "name": "biber",
-      "command": "biber",
-      "args": [
-        "%OUTDIR%/%DOCFILE%"
-      ],
-      "env": {}
-    }
-  ],
-  
   "latex-workshop.latex.autoBuild.run": "onFileChange",
-  "latex-workshop.latex.autoBuild.interval": 1000,
-  
   "latex-workshop.latex.clean.fileTypes": [
-    "*.aux",
     "*.bbl",
     "*.blg",
     "*.fdb_latexmk",
     "*.fls",
-    "*.log",
-    "*.out",
     "*.synctex.gz",
-    "*.toc",
     "*.xdv"
   ],
-  
-  "latex-workshop.latex.outDir": "./build",
-  
-  "latex-workshop.synctex.afterBuild.enabled": true,
-  
-  "latex-workshop.intellisense.package.enabled": true,
-  
-  "latex-workshop.message.error.show": true,
-  "latex-workshop.message.warning.show": true,
-  
-  "ltex.language": "de-DE",
-  "ltex.additionalRules.enablePickyRules": true,
-  "ltex.checkFrequency": "save",
-  "ltex.diagnosticSeverity": "information",
-  
-  "ltex.disabledRules": {
-    "de-DE": [
-      "WHITESPACE_RULE"
-    ]
-  },
-  
-  "gitlens.hovers.currentLine.enabled": true,
-  "gitlens.codeLens.enabled": true,
-  "gitlens.codeLens.recentChange.enabled": true,
-  "git.autofetch": true,
-  
-  "editor.formatOnSave": false,
-  "editor.defaultFormatter": null,
-  
-  "[latex]": {
-    "editor.formatOnSave": false,
-    "editor.wordWrap": "on",
-    "editor.tabSize": 2
-  },
-  
-  "[markdown]": {
-    "editor.wordWrap": "on",
-    "editor.tabSize": 2
-  },
-  
-  "files.exclude": {
-    "**/*.aux": true,
-    "**/*.log": true,
-    "**/*.fls": true,
-    "**/*.fdb_latexmk": true,
-    "**/*.synctex.gz": true,
-    "**/*.out": true,
-    "**/*.toc": true
-  },
-  
-  "search.exclude": {
-    "**/build": true,
-    "**/*.aux": true,
-    "**/*.log": true
-  },
-  
-  "better-comments.multilineComments": true,
-  "better-comments.highlightPlainText": false,
-  
-  "markdown.preview.fontSize": 14,
-  "markdown.preview.lineHeight": 1.6
+  "ltex.language": "de-DE"
 }
