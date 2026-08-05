@@ -1,4 +1,25 @@
-## Core latex/pdflatex auxiliary files:
+# -------------------------------
+# VS Code + LaTeX: Build-Ausgabe
+# -------------------------------
+build/
+latex.out/
+
+# -------------------------------
+# Betriebssystem
+# -------------------------------
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# -------------------------------
+# VS Code (Workspace-Dateien bewusst NICHT ignorieren)
+# (settings.json & extensions.json sollen geteilt werden)
+# Optional: persönliche Debug-Configs ausschließen
+.vscode/launch.json
+
+# -------------------------------
+# Core LaTeX/pdflatex Auxiliary
+# -------------------------------
 *.aux
 *.lof
 *.log
@@ -12,19 +33,19 @@
 *.cb2
 .*.lb
 
-## Intermediate documents:
+# -------------------------------
+# Intermediate documents
+# -------------------------------
 *.dvi
 *.xdv
 *-converted-to.*
-# these rules might exclude image files for figures etc.
-# *.ps
-# *.eps
-# *.pdf
 
-## Generated if empty string is given at "Please type another file name for output:"
-.pdf
+# Falls du PDF-Figuren versionieren willst, KEIN globales *.pdf-Ignore!
+# (Generierte PDFs landen ohnehin in build/)
 
-## Bibliography auxiliary files (bibtex/biblatex/biber):
+# -------------------------------
+# Bibliography (bibtex/biblatex/biber)
+# -------------------------------
 *.bbl
 *.bbl-SAVE-ERROR
 *.bcf
@@ -33,7 +54,9 @@
 *-blx.bib
 *.run.xml
 
-## Build tool auxiliary files:
+# -------------------------------
+# Build-Tools
+# -------------------------------
 *.fdb_latexmk
 *.synctex
 *.synctex(busy)
@@ -43,17 +66,19 @@
 *.rubbercache
 rubber.cache
 
-## Build tool directories for auxiliary files
+# -------------------------------
 # latexrun
+# -------------------------------
 latex.out/
 
-## Auxiliary and intermediate files from other packages:
+# -------------------------------
+# Package-spezifische Dateien
+# (nur häufig Relevantes beibehalten)
+# -------------------------------
+
 # algorithms
 *.alg
 *.loa
-
-# achemso
-acs-*.bib
 
 # amsthm
 *.thm
@@ -64,16 +89,10 @@ acs-*.bib
 *.snm
 *.vrb
 
-# changes
-*.soc
-
 # comment
 *.cut
 
-# cprotect
-*.cpt
-
-# elsarticle (documentclass of Elsevier journals)
+# elsarticle
 *.spl
 
 # endnotes
@@ -89,7 +108,7 @@ acs-*.bib
 *.t[1-9][0-9]
 *.tfm
 
-#(r)(e)ledmac/(r)(e)ledpar
+# ledmac/ledpar
 *.end
 *.?end
 *.[1-9]
@@ -117,8 +136,7 @@ acs-*.bib
 *.slg
 *.slo
 *.sls
-
-# uncomment this for glossaries-extra (will ignore makeindex's style files!)
+# Für glossaries-extra ggf. auch *.ist ignorieren:
 # *.ist
 
 # gnuplot
@@ -141,17 +159,14 @@ acs-*.bib
 *.trc
 *.xref
 
-# hypdoc
-*.hd
-
 # hyperref
 *.brf
 
 # knitr
 *-concordance.tex
-# TODO Uncomment the next line if you use knitr and want to ignore its generated tikz files
-# *.tikz
 *-tikzDictionary
+# Wenn knitr TikZ-Dateien erzeugt und du sie ignorieren willst:
+# *.tikz
 
 # listings
 *.lol
@@ -202,7 +217,7 @@ _minted*
 # scrwfile
 *.wrt
 
-# svg
+# svg (Inkscape-Exports)
 svg-inkscape/
 
 # sympy
@@ -251,7 +266,7 @@ pythontex-files-*/
 # xindy
 *.xdy
 
-# xypic precompiled matrices and outlines
+# xypic
 *.xyc
 *.xyd
 
@@ -259,51 +274,44 @@ pythontex-files-*/
 *.ttt
 *.fff
 
-# Latexian
-TSWLatexianTemp*
+# standalone
+*.sta
 
-## Editors:
-# WinEdt
+# Makeindex
+*.lpz
+
+# xwatermark
+*.xwm
+
+# REVTeX (optional)
+#*Notes.bib
+
+# -------------------------------
+# Editoren & temporäre Dateien
+# -------------------------------
+# Allgemein
+*~
 *.bak
+*.backup
 *.sav
-
-# Texpad
-.texpadtmp
+*.swp
+.*.swp
 
 # LyX
 *.lyx~
 
+# Texpad
+.texpadtmp
+
 # Kile
-*.backup
-
-# gummi
-.*.swp
-
-# KBibTeX
-*~[0-9]*
-
-# TeXnicCenter
 *.tps
 
-# auto folder when using emacs and auctex
+# Emacs/AUCTeX
 ./auto/*
 *.el
 
-# expex forward references with \gathertags
+# expex
 *-tags.tex
 
-# standalone packages
-*.sta
-
-# Makeindex log files
-*.lpz
-
-# xwatermark package
-*.xwm
-
-# REVTeX puts footnotes in the bibliography by default, unless the nofootinbib
-# option is specified. Footnotes are the stored in a file with suffix Notes.bib.
-# Uncomment the next line to have this generated file ignored.
-#*Notes.bib
-
-*.DS_Store
+# Latexian
+TSWLatexianTemp*
