@@ -1,0 +1,15 @@
+{
+  "recommendations": [
+    "James-Yu.latex-workshop",
+    "tecosaur.latex-utilities",
+    "valentjn.vscode-ltex",
+    "eamodio.gitlens",
+    "ms-vsliveshare.vsliveshare",
+    "mhutchie.git-graph",
+    "yzhang.markdown-all-in-one",
+    "aaron-bond.better-comments",
+    "tomoki1207.pdf",
+    "oderwat.indent-rainbow"
+  ],
+  "unwantedRecommendations": []
+}
