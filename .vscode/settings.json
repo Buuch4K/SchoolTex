@@ -11,4 +11,6 @@
     "*.xdv"
   ],
   "ltex.language": "de-DE"
+  "editor.wordWrap": "on",
+  "editor.wordWrapColumn": 0
 }
