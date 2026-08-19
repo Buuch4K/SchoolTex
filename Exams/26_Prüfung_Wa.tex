@@ -1,0 +1,176 @@
+\documentclass[11pt]{exam}
+\input{../Header/packages.sty}
+\input{../Header/styleExam.sty}
+\input{../Header/mathexpressions.sty}
+\input{../Header/headerExam.sty}
+%=========================================================
+\newcommand{\theme}{Mengenlehre}
+\newcommand{\teacher}{Jonas Guler}
+\newcommand{\class}{1Wa}
+\renewcommand{\date}{10.09.26}
+\graphicspath{{Algebra/data-algebra},{Geometrie/data-geometrie},{Analysis/data-analysis}} % Setzt den Pfad zu den Bilder fest
+%=========================================================
+\begin{document}
+\fontsize{14}{14}\selectfont
+%========================================================
+\noindent
+\begingroup
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular*}{\textwidth}{l @{\extracolsep{6pt}}l @{\extracolsep{\fill}}l @{\extracolsep{6pt}}l}
+	\multicolumn{2}{l}{{\bf \theme}} & {\bf Note:} & {\answerbox}\\
+	\multicolumn{2}{l}{{\bf \teacher}} & & \\
+	{\bf Klasse:} & {\class} &  {\bf Name:} & {\rule{5cm}{0.5pt}}\\
+	{\bf Dauer:} & $45$ Minuten & {\bf Datum:} & {\date}\\[8pt]
+\end{tabular*}
+\endgroup
+\rule[1ex]{\textwidth}{1pt}
+%=========================================================
+\begin{center}
+	\textbf{Bewertungstabelle}\\
+	\small Wird von der Lehrperson ausgefüllt\\
+	\vspace{5pt}
+	\addpoints
+	\gradetable[h][questions]\\
+	\vspace{5pt}
+	Der Rechenweg muss \textbf{vollständig und nachvollziehbar} sein.\\
+	Lösen Sie die Prüfung mit einen schwarzen oder blauen Kugelschreiber.\\
+	Als Hilfsmittel ist der Taschenrechner (TI - Nspire CX-II CAS) erlaubt.
+	%Als Hilfsmittel ist der kleine Taschenrechner (TI-30X o.ä.) erlaubt.
+\end{center}
+\rule[1ex]{\textwidth}{1pt}
+
+\vspace{10cm}
+\begin{center}
+	%\Huge{Repetitionsprüfung}
+\end{center}
+
+\newpage
+\begin{questions}
+%=========================================================
+%---------------------TESTFRAGEN
+%=========================================================
+\question[2]
+Berechne im gleichschenkligen Dreieck $ABC$ mit $a=b=8$ und $\gamma=56^\circ$ die Seite $c$ und die Höhe $h_a$.
+\vspace{7pt}\antwort{6.5}
+\question[3]
+Berechne im rechtwinkligen Dreieck $ABC$ mit $\gamma=90^\circ, a=8$ und $b=6$ die beiden Winkelhalbierenden $w_\alpha$ und $w_\beta$.
+\vspace{5pt}\antwort{6.5}
+\question[2]
+Entscheide, ob die Aussagen in der Tabelle unten wahr oder falsch sind. Die Antworten müssen nicht begründet werden.\newline
+\begin{small}
+	Bewertung: Für $0-2$ richtige Antworten gibt es keine Punkte, $3$ richtige Antworten geben $1$ Punkte und falls alle Antworten richtig sind $2$ Punkte.
+\end{small}
+\begingroup
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|c|c|}\hline
+		& wahr & falsch\\\hline
+		$\sin{\alpha}=\sin{\pi-\alpha}$ & & \\\hline
+		$\cos{\pi-\beta}=\cos{\pi+\beta}$ & & \\\hline
+		$\tan{\alpha}>0$ für $180^\circ<\alpha<270^\circ$ & & \\\hline
+		In einem Dreieck mit $\gamma=90^\circ$ gilt: $\sin{\alpha}=\cos{90^\circ+\alpha}$ & & \\\hline
+	\end{tabular}
+\end{table}
+\endgroup
+
+
+%---------------------------------------------------------
+\newpage
+\noaddpoints
+\question[\totalpoints] % Funktionsgraphen
+\addpoints
+\textbf{Beachte:} Lösungswege mit Hilfe des Taschenrechners geben keine Punkte!
+\begin{parts}
+	\part[3] Zeichne den Winkel $\alpha=145^\circ$ und den Sinus-, Tangens- und Cotangenswert von $\alpha$ im Einheitskreis ein und schätze anschliessend alle Werte.
+\end{parts}
+\vspace{5pt}
+\begin{figure}[H]
+	\hspace{10mm}
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+		>=latex,   %Voreinstellung für Pfeilspitzen
+		font= \footnotesize, scale=3]
+		%Raster zeichnen
+		\draw [color=gray!50]  [step=2mm] (1.599,-1) grid (4.2,1);
+		% Achsen zeichnen
+		\draw[->,thick] (-1.1,0) -- (1.2,0) node[right, below] {\normalsize $x$};
+		\draw[->,thick] (0,-1.1) -- (0,1.2) node[above, left] {\normalsize $y$};
+		% Achsen beschriften
+		\foreach \x in {-1,1} \draw (\x,-.1) -- (\x,.1) node[below=4pt,right] {$\x$};
+		\foreach \y in {-1,1} \draw (-.1,\y) -- (.1,\y) node[left=4pt,above] {$\y$};
+		% Besserer Ursprung
+		\draw[color=black] (0pt,-3pt) node[right] {$0$};
+		%Funktionen zeichnen:
+		\clip(-1.1,-1.1) rectangle (1.1,1.1); %Bildbereich
+		\draw circle [radius=1];
+	\end{tikzpicture}
+\end{figure}
+\begin{parts}
+	\setcounter{partno}{1}
+	\part[2] Berechne alle Winkel $\beta$ zwischen $0^\circ$ und $360^\circ$ für welche gilt: \[\cos{\beta}=-0.75\]
+\end{parts}
+\begin{figure}[H]
+	\hspace{10mm}
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+		>=latex,   %Voreinstellung für Pfeilspitzen
+		font= \footnotesize, scale=3]
+		%Raster zeichnen
+		\draw [color=gray!50]  [step=2mm] (-1,-1) grid (4.2,1);
+		% Achsen zeichnen
+		\draw[->,thick] (-1.1,0) -- (1.2,0) node[right, below] {\normalsize $x$};
+		\draw[->,thick] (0,-1.1) -- (0,1.2) node[above, left] {\normalsize $y$};
+		% Achsen beschriften
+		\foreach \x in {-1,1} \draw (\x,-.1) -- (\x,.1) node[below=4pt,right] {$\x$};
+		\foreach \y in {-1,1} \draw (-.1,\y) -- (.1,\y) node[left=4pt,above] {$\y$};
+		% Besserer Ursprung
+		\draw[color=black] (0pt,-3pt) node[right] {$0$};
+		%Funktionen zeichnen:
+		\clip(-1.1,-1.1) rectangle (1.1,1.1); %Bildbereich
+		\draw circle [radius=1];
+	\end{tikzpicture}
+\end{figure}
+
+
+%---------------------------------------------------------
+\newpage
+\question[4] %GZP 18 A20
+Im Rechteck $ABCD$ beträgt $\overline{AD}=10$cm, $\alpha=30^\circ$ und $\beta=70^\circ$. Berechne die Strecke $\overline{CE}$.
+\begin{figure}[H]
+	\centering\includegraphics[scale=0.6]{trigo-rechteckstrecke.png}
+\end{figure}
+\vspace{7pt}\antwort{19.5}
+
+%---------------------------------------------------------
+\newpage
+\question[4] % GZP 14 A15
+Ein Aussichtsturm steht $30$m vom diesseitigen Kanalufer entfernt. Von der Aussichtsplattform $S$ aus erscheint das diesseitige Kanalufer unter einem Winkel von $\alpha=24.5^\circ$ und das jenseitige unter dem Winkel $\beta=64^\circ.$\\
+\begin{minipage}[t]{0.475\linewidth}
+	\begin{parts}
+		\part Wie hoch ist der Aussichtsturm?
+		\part Wie breit ist der Kanal?
+	\end{parts}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.5\linewidth}
+    \vspace{0pt}
+	\centering\includegraphics[scale=0.6]{trigo-aussichtsturm.png}
+\end{minipage}
+\vspace{5pt}\antwort{18.5}
+
+
+%---------------------------------------------------------
+\newpage
+\question[4] % GZP 14 A17
+Im rechtwinkligen Dreieck $ABC$ mit Hypotenuse $c$ sind die Seite $a=6$ und die Seitenhalbierende $s_a=13$ gegeben. Berechne die Höhe $h_c$.
+\vspace{7pt}\antwort{23.5}
+
+
+%---------------------------------------------------------
+\newpage
+\question[5] %Geo2 S.45 A63
+Um die Breite eines Flusses (mit parallelen Ufern) zu berechnen, ist längs eines Ufers eine Strecke $\overline{AB}$ mit $50$m Länge bestimmt worden. Am gegenüberliegenden Ufer wird eine Stelle $P$ anvisiert, wobei $\alpha=64.1^\circ$ und $\beta=79.6^\circ$ messen. Berechne die Breite des Flusses.\\
+\emph{Tipp:} Mache eine sinnvolle Skizze der Situation.
+\vspace{7pt}\antwort{22}
+
+\end{questions}
+\end{document}
