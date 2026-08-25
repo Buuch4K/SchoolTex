@@ -4,11 +4,11 @@
 \input{../Header/mathexpressions.sty}
 \input{../Header/headerExam.sty}
 %=========================================================
-\newcommand{\theme}{Potenzen und Kreise}
+\newcommand{\theme}{Trigonometrie}
 \newcommand{\teacher}{Jonas Guler}
-\newcommand{\class}{2Ga}
-\renewcommand{\date}{18.05.26}
-\graphicspath{{Algebra/data-algebra},{Geometrie/data-geometrie},{Analysis/data-analysis}} % Setzt den Pfad zu den Bilder fest
+\newcommand{\class}{3Ga}
+\renewcommand{\date}{27.08.26}
+\graphicspath{{Algebra/data-algebra},{Geometrie/data-geometrie},{Analysis/data-analysis}} % Setzt den Pfad zu den Bildern fest
 %=========================================================
 \begin{document}
 \fontsize{14}{14}\selectfont
@@ -49,126 +49,139 @@
 %=========================================================
 %---------------------TESTFRAGEN
 %=========================================================
-\noaddpoints
-\question[\totalpoints]
-\addpoints
-\begin{parts}
-	\part[2] Alice weiss noch nicht, was Potenzen der Art $5^{-2}$, $10^{-2}$ oder $3^{-16}$ genau bedeuten. Gib ihr eine gut nachvollziehbare Motivation für die Definition $a^{-n}:=\frac{1}{a^n}$ (für eine von 0 verschiedene reelle Basis a und eine natürliche Zahl n) an.
-\end{parts}
-\vspace{7pt}\antwort{6.5}
-\begin{parts}
-	\setcounter{partno}{1}
-	\part[4] Verwandle den folgenden Term in ein klammer- und nennerfreies Produkt. Schreibe dabei bei jeder Umformung das entsprechende Gesetz dazu. \[\frac{a^5b^{-4}}{c^3d^{-2}}\*\frac{0.6c^{-5}d^4}{ab^{-2}}\]
-\end{parts}
-\vspace{5pt}\antwort{12}
+\question[3]
+Berechne im rechtwinkligen Dreieck $ABC$ mit $\gamma=90^\circ, a=16$ und $b=8$ die beiden Winkelhalbierenden $w_\alpha$ und $w_\beta$.
+\vspace{5pt}\antwort{10.5}
+\question[4]
+Welche der untenstehenden Sinus- resp. Cosinuswerte  sind gleich?
+\[\cos{165^\circ},\quad\sin{255^\circ}, \quad\sin{135^\circ}, \quad\cos{315^\circ}, \quad\sin{285^\circ}, \quad\cos{45^\circ}\]
+Begründe mit Hilfe des Einheitskreises und \textbf{ohne} Verwendung des Taschenrechners.
+\begin{figure}[H]
+	\hspace{10mm}
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+		>=latex,   %Voreinstellung für Pfeilspitzen
+		font= \footnotesize, scale=3]
+		%Raster zeichnen
+		\draw [color=black]  [step=2mm] (1.599,-1) grid (4.2,1);
+		% Achsen zeichnen
+		\draw[->,thick] (-1.1,0) -- (1.2,0) node[right, below] {\normalsize $x$};
+		\draw[->,thick] (0,-1.1) -- (0,1.2) node[above, left] {\normalsize $y$};
+		% Achsen beschriften
+		\foreach \x in {-1,1} \draw (\x,-.1) -- (\x,.1) node[below=4pt,right] {$\x$};
+		\foreach \y in {-1,1} \draw (-.1,\y) -- (.1,\y) node[left=4pt,above] {$\y$};
+		% Besserer Ursprung
+		\draw[color=black] (0pt,-3pt) node[right] {$0$};
+		%Funktionen zeichnen:
+		\clip(-1.1,-1.1) rectangle (1.1,1.1); %Bildbereich
+		\draw circle [radius=1];
+	\end{tikzpicture}
+\end{figure}
 
 
 %---------------------------------------------------------
 \newpage
-\question[6] % Barth K1.3 ÜA A2
-Schreibe die folgenden Terme als eine einzige Potenz.
-\begin{parcols}[3]
-	\part $\displaystyle \frac{1}{x^6}\div\frac{1}{x^2}$ %i
-	\part $\displaystyle \sqrt[10]{x}\*\left(\sqrt[4]{x}\div\sqrt[3]{x}\right)$ %p
-	\part $\displaystyle \left(\sqrt[3]{x^2}\div\left(\sqrt{x}\right)^3\right)\*\frac{1}{\sqrt[6]{x}}$ %x
-\end{parcols}
-\vspace{5pt}\antwort{22}
+\noaddpoints
+\question[\totalpoints] % Funktionsgraphen
+\addpoints
+\textbf{Beachte:} Lösungswege mit Hilfe des Taschenrechners geben keine Punkte!
+\begin{parts}
+	\part[3] Zeichne den Winkel $\displaystyle\alpha=-65^\circ$ und den Sinus-, Cosinus- und Tangenswert von $\alpha$ im Einheitskreis ein und schätze die jeweiligen Werte anhand der Skizze.
+\end{parts}
+\vspace{5pt}
+\begin{figure}[H]
+	\hspace{10mm}
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+		>=latex,   %Voreinstellung für Pfeilspitzen
+		font= \footnotesize, scale=3]
+		%Raster zeichnen
+		\draw [color=black]  [step=2mm] (1.599,-1) grid (4.2,1);
+		% Achsen zeichnen
+		\draw[->,thick] (-1.1,0) -- (1.2,0) node[right, below] {\normalsize $x$};
+		\draw[->,thick] (0,-1.1) -- (0,1.2) node[above, left] {\normalsize $y$};
+		% Achsen beschriften
+		\foreach \x in {-1,1} \draw (\x,-.1) -- (\x,.1) node[below=4pt,right] {$\x$};
+		\foreach \y in {-1,1} \draw (-.1,\y) -- (.1,\y) node[left=4pt,above] {$\y$};
+		% Besserer Ursprung
+		\draw[color=black] (0pt,-3pt) node[right] {$0$};
+		%Funktionen zeichnen:
+		\clip(-1.1,-1.1) rectangle (1.1,1.1); %Bildbereich
+		\draw circle [radius=1];
+	\end{tikzpicture}
+\end{figure}
+\begin{parts}
+	\setcounter{partno}{1}
+	\part[2] Zeichne alle Winkel $\beta$ zwischen $0^\circ$ und $360^\circ$ ein und messe sie anhand der Skizze. Dabei gilt: \[\tan{\beta}=-2\]
+\end{parts}
+\begin{figure}[H]
+	\hspace{10mm}
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+		>=latex,   %Voreinstellung für Pfeilspitzen
+		font= \footnotesize, scale=3]
+		%Raster zeichnen
+		\draw [color=gray!50]  [step=2mm] (-1,-2.4001) grid (4.2,1.4);
+		% Achsen zeichnen
+		\draw[->,thick] (-1.1,0) -- (1.2,0) node[right, below] {\normalsize $x$};
+		\draw[->,thick] (0,-1.1) -- (0,1.2) node[above, left] {\normalsize $y$};
+		% Achsen beschriften
+		\foreach \x in {-1,1} \draw (\x,-.1) -- (\x,.1) node[below=4pt,right] {$\x$};
+		\foreach \y in {-1,1} \draw (-.1,\y) -- (.1,\y) node[left=4pt,above] {$\y$};
+		% Besserer Ursprung
+		\draw[color=black] (0pt,-3pt) node[right] {$0$};
+		%Funktionen zeichnen:
+		\clip(-1.1,-1.1) rectangle (1.1,1.1); %Bildbereich
+		\draw circle [radius=1];
+	\end{tikzpicture}
+\end{figure}
+
+
+%---------------------------------------------------------
+\newpage
+\question[4] % GZP 14 A15
+Ein Aussichtsturm steht $30$m vom diesseitigen Kanalufer entfernt. Von der Aussichtsplattform $S$ aus erscheint das diesseitige Kanalufer unter einem Winkel von $\alpha=24.5^\circ$ und das jenseitige unter dem Winkel $\beta=64^\circ.$\\
+\begin{minipage}[t]{0.475\linewidth}
+	\begin{parts}
+		\part Wie hoch ist der Aussichtsturm?
+		\part Wie breit ist der Kanal?
+	\end{parts}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.4\linewidth}
+	\vspace{0pt}
+	\centering\includegraphics[scale=0.5]{trigo-aussichtsturm.png}
+\end{minipage}
+\vspace{5pt}\antwort{19}
+
+
+%---------------------------------------------------------
+\newpage
+\question[4] %GZP 13 A8
+Berechne in der folgenden Figur den Winkel $\phi$.
+\begin{figure}[H]
+	\centering\includegraphics[scale=1]{trigo-thalesähnlichkeit.png}
+\end{figure}
+\vspace{7pt}\antwort{18.5}
 
 
 %---------------------------------------------------------
 \newpage
 \question[4]
-Ordne die Exponenten der folgenden Terme  der Grösse nach.
-\begin{itemcols}[5]
-	\item[\ ] $\displaystyle\left(\frac{1}{x}\right)^{-6}$
-	\item[\ ] $\displaystyle\frac{1}{x^{2}}$
-	\item[\ ] $\displaystyle\sqrt[4]{x^8}$
-	\item[\ ] $\displaystyle\sqrt[4]{x}$
-	\item[\ ] $\displaystyle\frac{1}{\sqrt[3]{x^9}}$
-\end{itemcols}
-\vspace*{7pt}\antwort{10.5}
-\vfill
-\question[2]
-Entscheide in der Tabelle unten, ob die Aussagen wahr oder falsch sind. Die Antworten müssen nicht begründet werden.\newline
-\begin{small}
-	Bewertung: Für $0-2$ korrekte Antworten gibt es keine Punkte; $3$ korrekte Antworten $1$ Punkt und falls alle Antworten korrekt sind, gibt es $2$ Punkte.
-\end{small}
-\begingroup
-\renewcommand{\arraystretch}{1.5}
-\begin{table}[H]
-	\centering
-	\begin{tabular}{|p{12cm}|c|c|}\hline
-		& wahr & falsch \\\hline
-		Falls $a\neq0$ gilt, dann ist folgende Umformung korrekt  $a^{-3}+a^{-3}+a^{-3}=a^{-2}$. & & \\\hline
-		$\displaystyle 9^{\frac{3}{2}}\in\N$ & & \\\hline
-		Falls $a\neq0$ gilt, dann ist folgende Umformung korrekt  $\displaystyle \left(a^2\right)^2=a^{\left(2^2\right)}$. & & \\\hline
-		Falls $a\neq0$ gilt, dann ist folgende Umformung korrekt  $2^{-3}\*(-2)^3=1$. & & \\\hline
-	\end{tabular}
-\end{table}
-\endgroup
-\antwort{3.5}
-
-%---------------------------------------------------------
-\newpage
-\question[5] % Potenzfunktionen
-\begin{minipage}{0.6\linewidth}
-	Zwei Potenzfunktionen der Form $f:y=a\*x^p$ sind im Graphen auf der rechten Seite abgebildet.
-	\begin{parts}
-		\part Gib die Funktionsgleichung der beiden skizzierten Potenzfunktionen an. Treffe dazu sinnvolle Annahmen für die Koordinaten der grau markierten Punkte. Du darfst nur diese Punkte verwenden.
-		\part Spiegle den \textcolor{plotblue}{blauen} Funktionsgraphen an der $x-$Achse. Gib die Funktionsgleichung sowie Definitions- und Wertemenge des gespiegelten Funktionsgraphen an.
-	\end{parts}
-\end{minipage}
-\hfill
-\begin{minipage}{0.375\linewidth}
-	\centering
-	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
-		>=latex,   %Voreinstellung für Pfeilspitzen
-		font= \footnotesize, scale=0.7]
-		%Raster zeichnen
-		\draw [color=gray!50]  [step=10mm] (-4.3,-2.3) grid (4.3,8.3);
-		% Achsen zeichnen
-		\draw[->,thick] (-4.3,0) -- (4.8,0) node[right, below] {\normalsize $x$};
-		\draw[->,thick] (0,-2.3) -- (0,8.8) node[above, left] {\normalsize $y$};
-		% Achsen beschriften
-		\foreach \x in {-4,...,-2,-1,1,2,...,4} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
-		\foreach \y in {-2,-1,1,2,...,8} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
-		% Besserer Ursprung
-		\draw[color=black] (0pt,-7pt) node[right] {$0$};
-		%Funktionen zeichnen:
-		\clip(-4.3,-2.3) rectangle (4.3,8.3); %Bildbereich
-		\draw[plotblue,thick,domain=-4.3:-0.5,samples=100] plot (\x, {8/(\x)^3});
-		\draw[plotblue,thick,domain=0.5:4.3,samples=100] plot (\x, {8/(\x)^3});
-		\draw[forestgreen,thick,domain=-3:3,samples=200] plot (\x, {0.25*(\x)^4});
-		%Beschriftung
-		\draw[fill=black!40] (1,8) circle (3pt);
-		\draw[fill=black!40] (-2,-1) circle (3pt);
-		\draw[fill=black!40] (0,0) circle (3pt);
-		\draw[fill=black!40] (2,4) circle (3pt);
-	\end{tikzpicture}
-\end{minipage}
-\vspace{5pt}\antwort{16.5}
+In einem Dreieck ABC sind die Seiten $a=7$cm und $b=9$cm sowie der eingeschlossene Winkel $\gamma=58^\circ$ gegeben. Berechne die fehlende Seite $c$.
+\vspace{7pt}\antwort{23.5}
 
 
 %---------------------------------------------------------
 \newpage
-\question[5] % DMK Geo1 S97 A37a
-Der Durchmesser von Bobs Velorad misst $70$ cm. Er fährt jeden Tag $45$ Minuten von Zuhause zur Schule und zurück. In einer Stunde macht das Rad dabei $8185$ Umdrehungen. Wie weit ist Bobs Schulweg?
-\vspace{7pt}\antwort{23}
-
-
-%---------------------------------------------------------
-\newpage
-\question[5] % DMK Geo1 S102 A67a
-\begin{minipage}{0.6\linewidth}
-	Eine Kreisscheibe mit Radius $1$ wird gemäss Zeichung rechts in vier flächengleiche Teile zerlegt. Die drei Teile auf dem äusseren Kreisring haben je den gleichen Flächeninhalt wie die innere Kreisscheibe.\\ Berechne die Breite $x$ des Kreisrings.
-\end{minipage}
-\hfill
-\begin{minipage}{0.375\linewidth}
-	\centering\includegraphics[scale=0.73]{kreis-scheibenteilung.png}
-\end{minipage}
-
-\antwort{20.5}
-
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+Von zwei Messpunkten $A$ und $B$, die $2.4$km voneinander entfernt sind, wird ein unzugänglicher Aussichtsturm $T$ angepeilt. Gemessen werden die Winkel  $\alpha=63^\circ$ und $\beta=48^\circ$.
+\begin{parts}
+	\part[1] Berechne den fehlenden Winkel $\gamma$ bei $T$.
+	\part[2] Bestimme die Entfernung $\overline{AT}$ mithilfe des Sinussatzes.
+	\part[2] Bestimme die Entfernung $\overline{BT}$ mithilfe des Kosinussatzes.
+\end{parts}
+\emph{Tipp:} Mache zuerst eine geeignete Skizze der Situation.
+\vspace{7pt}\antwort{20}
 
 \end{questions}
 \end{document}

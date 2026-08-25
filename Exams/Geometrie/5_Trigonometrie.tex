@@ -44,13 +44,13 @@
 
 
 %---------------------------------------------------------
-\question[2]
-Berechne im gleichschenkligen Dreieck $ABC$ mit $a=b=8$ und $\gamma=56^\circ$ die Seite $c$ und die Höhe $h_a$.
+\question[3]
+Berechne im rechtwinkligen Dreieck $ABC$ mit $\gamma=90^\circ, a=8$ und $b=6$ die beiden Winkelhalbierenden $w_\alpha$ und $w_\beta$.
 
 
 %---------------------------------------------------------
 \question[3]
-Berechne im rechtwinkligen Dreieck $ABC$ mit $\gamma=90^\circ, a=8$ und $b=6$ die beiden Winkelhalbierenden $w_\alpha$ und $w_\beta$.
+Berechne im rechtwinkligen Dreieck $ABC$ mit $\gamma=90^\circ, a=16$ und $b=8$ die beiden Winkelhalbierenden $w_\alpha$ und $w_\beta$.
 
 
 %---------------------------------------------------------
@@ -108,7 +108,7 @@ Berechne im rechtwinkligen Dreieck $ABC$ mit $\gamma=90^\circ, a=8$ und $b=6$ di
 \question[5] % Funktionsgraphen
 \textbf{Beachte:} Lösungswege mit Hilfe des Taschenrechners geben keine Punkte!
 \begin{parts}
-	\part Zeichne den Winkel $\alpha=-65^\circ$ im Einheitskreis ein und gib den Sinus-, Cosinus- und Tangenswert von $\alpha$ an.
+	\part Zeichne den Winkel $\displaystyle\alpha=-65^\circ$ und den Sinus-, Cosinus- und Tangenswert von $\alpha$ im Einheitskreis ein und schätze die jeweiligen Werte anhand der Skizze.
 \end{parts}
 \vspace{5pt}
 \begin{figure}[H]
@@ -116,7 +116,7 @@ Berechne im rechtwinkligen Dreieck $ABC$ mit $\gamma=90^\circ, a=8$ und $b=6$ di
 		>=latex,   %Voreinstellung für Pfeilspitzen
 		font= \footnotesize, scale=3]
 		%Raster zeichnen
-		% \draw [color=gray!50]  [step=7.5mm] (-1.3,-5.3) grid (14.8,5.8);
+		\draw [color=black]  [step=2mm] (1.599,-1) grid (4.2,1);
 		% Achsen zeichnen
 		\draw[->,thick] (-1.1,0) -- (1.2,0) node[right, below] {\normalsize $x$};
 		\draw[->,thick] (0,-1.1) -- (0,1.2) node[above, left] {\normalsize $y$};
@@ -132,14 +132,14 @@ Berechne im rechtwinkligen Dreieck $ABC$ mit $\gamma=90^\circ, a=8$ und $b=6$ di
 \end{figure}
 \begin{parts}
 	\setcounter{partno}{1}
-	\part Berechne alle Winkel $\beta$ zwischen $0^\circ$ und $360^\circ$ für welche gilt: \[\tan{\beta}=-2\]
+	\part Zeichne alle Winkel $\beta$ zwischen $0^\circ$ und $360^\circ$ ein und messe sie anhand der Skizze. Dabei gilt: \[\tan{\beta}=-2\]
 \end{parts}
 \begin{figure}[H]
 	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
 		>=latex,   %Voreinstellung für Pfeilspitzen
 		font= \footnotesize, scale=3]
 		%Raster zeichnen
-		\draw [color=gray!50]  [step=2mm] (-1,-1) grid (1,1);
+		\draw [color=gray!50]  [step=2mm] (-1,-2.4001) grid (4.2,1.4);
 		% Achsen zeichnen
 		\draw[->,thick] (-1.1,0) -- (1.2,0) node[right, below] {\normalsize $x$};
 		\draw[->,thick] (0,-1.1) -- (0,1.2) node[above, left] {\normalsize $y$};
@@ -395,19 +395,20 @@ Welche der untenstehenden Winkel haben den gleichen Sinuswert?
 \[\frac{\pi}{2},\qquad150^\circ, \qquad\frac{3\pi}{4}, \qquad90^\circ, \qquad\frac{\pi}{6}, \qquad45^\circ\]
 Begründe mit Hilfe des Einheitskreises und ohne Verwendung des Taschenrechners.
 \begin{figure}[H]
+	\hspace{10mm}
 	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
 		>=latex,   %Voreinstellung für Pfeilspitzen
 		font= \footnotesize, scale=3]
 		%Raster zeichnen
-		% \draw [color=gray!50]  [step=7.5mm] (-1.3,-5.3) grid (14.8,5.8);
+		\draw [color=gray!50]  [step=2mm] (1.599,-1) grid (4.2,1);
 		% Achsen zeichnen
 		\draw[->,thick] (-1.1,0) -- (1.2,0) node[right, below] {\normalsize $x$};
 		\draw[->,thick] (0,-1.1) -- (0,1.2) node[above, left] {\normalsize $y$};
 		% Achsen beschriften
-		\foreach \x in {-1,1} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
-		\foreach \y in {-1,1} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+		\foreach \x in {-1,1} \draw (\x,-.1) -- (\x,.1) node[below=4pt,right] {$\x$};
+		\foreach \y in {-1,1} \draw (-.1,\y) -- (.1,\y) node[left=4pt,above] {$\y$};
 		% Besserer Ursprung
-		\draw[color=black] (0pt,-7pt) node[right] {$0$};
+		\draw[color=black] (0pt,-3pt) node[right] {$0$};
 		%Funktionen zeichnen:
 		\clip(-1.1,-1.1) rectangle (1.1,1.1); %Bildbereich
 		\draw circle [radius=1];
@@ -439,6 +440,33 @@ Begründe mit Hilfe des Einheitskreises und ohne Verwendung des Taschenrechners.
 		% Besserer Ursprung
 		\draw[color=black] (0pt,-3pt) node[right] {$0$};
 		% Funktionen zeichnen:
+		\clip(-1.1,-1.1) rectangle (1.1,1.1); %Bildbereich
+		\draw circle [radius=1];
+	\end{tikzpicture}
+\end{figure}
+
+
+%---------------------------------------------------------
+\question[4]
+Welche der untenstehenden Sinus- resp. Cosinuswerte  sind gleich?
+\[\cos{165^\circ},\quad\sin{255^\circ}, \quad\sin{135^\circ}, \quad\cos{315^\circ}, \quad\sin{285^\circ}, \quad\cos{45^\circ}\]
+Begründe mit Hilfe des Einheitskreises und \textbf{ohne} Verwendung des Taschenrechners.
+\begin{figure}[H]
+	\hspace{10mm}
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+		>=latex,   %Voreinstellung für Pfeilspitzen
+		font= \footnotesize, scale=3]
+		%Raster zeichnen
+		\draw [color=black]  [step=2mm] (1.599,-1) grid (4.2,1);
+		% Achsen zeichnen
+		\draw[->,thick] (-1.1,0) -- (1.2,0) node[right, below] {\normalsize $x$};
+		\draw[->,thick] (0,-1.1) -- (0,1.2) node[above, left] {\normalsize $y$};
+		% Achsen beschriften
+		\foreach \x in {-1,1} \draw (\x,-.1) -- (\x,.1) node[below=4pt,right] {$\x$};
+		\foreach \y in {-1,1} \draw (-.1,\y) -- (.1,\y) node[left=4pt,above] {$\y$};
+		% Besserer Ursprung
+		\draw[color=black] (0pt,-3pt) node[right] {$0$};
+		%Funktionen zeichnen:
 		\clip(-1.1,-1.1) rectangle (1.1,1.1); %Bildbereich
 		\draw circle [radius=1];
 	\end{tikzpicture}
@@ -509,6 +537,16 @@ Berechne die fehlenden Seitenlängen und Winkel im Dreieck $ABC$, wenn gilt:
 
 
 %---------------------------------------------------------
+\question[2]
+Berechne im gleichschenkligen Dreieck $ABC$ mit $a=b=8$ und $\gamma=56^\circ$ die Seite $c$ und die Höhe $h_a$.
+
+
+%---------------------------------------------------------
+\question[4]
+In einem Dreieck ABC sind die Seiten $a=7$cm und $b=9$cm sowie der eingeschlossene Winkel $\gamma=58^\circ$ gegeben. Berechne die fehlende Seite $c$.
+
+
+%---------------------------------------------------------
 \question[3]
 Von einem Parallelogramm $ABCD$ sind die Seiten $a=83$ und $b=109$ sowie die Diagonale $f=\overline{BD}=42$ gegeben. Berechne alle $4$ Innenwinkel dieses Parallelogramms.
 
@@ -530,6 +568,18 @@ Der Wärter eines Leuchtturm beobachtet mit seinem Feldstecher ein vorbeifahrend
 Um die Breite eines Flusses (mit parallelen Ufern) zu berechnen, ist längs eines Ufers eine Strecke $\overline{AB}$ mit $50$m Länge bestimmt worden. Am gegenüberliegenden Ufer wird eine Stelle $P$ anvisiert, wobei $\alpha=64.1^\circ$ und $\beta=79.6^\circ$ messen. Berechne die Breite des Flusses.\\
 \emph{Tipp:} Mache eine sinnvolle Skizze der Situation.
 
+
+%---------------------------------------------------------
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+Von zwei Messpunkten $A$ und $B$, die $2.4$km voneinander entfernt sind, wird ein unzugänglicher Aussichtsturm $T$ angepeilt. Gemessen werden die Winkel  $\alpha=63^\circ$ und $\beta=48^\circ$.
+\begin{parts}
+	\part[1] Berechne den fehlenden Winkel $\gamma$ bei $T$.
+	\part[2] Bestimme die Entfernung $\overline{AT}$ mithilfe des Sinussatzes.
+	\part[2] Bestimme die Entfernung $\overline{BT}$ mithilfe des Kosinussatzes.
+\end{parts}
+\emph{Tipp:} Mache zuerst eine geeignete Skizze der Situation.
 
 
 
