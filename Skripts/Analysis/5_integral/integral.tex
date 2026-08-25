@@ -7,14 +7,13 @@
 
 \newcommand{\Skriptname}{Integralrechnung}
 \newcommand{\Autor}{Jonas Guler (Gu)}
-\newcommand{\version}{\textit{v}1.1}
 
 \begin{document}
 \begin{titlepage}
 	\clearpage
 	\title{\Huge\textbf{\Skriptname} \\[1cm]}
 	\author{Autor:\\ \Autor}
-	\date{\normalsize {Version \version}\\ \datelong}
+	\date{\normalsize {Version 1.1}\\ \datelong}
 	\maketitle
 	\thispagestyle{empty}
 	\vfill
@@ -40,7 +39,7 @@
 		\karos{4}
 	\end{aufgabe}
 	\begin{aufgabe}[Stratos Jump]
-		Am $14$. Oktober $2012$ sprang Felix Baumgartner von $h=38'969$ Metern in die Tiefe. Wir möchten seinen Sprung als freien Fall ohne Widerstand modelieren. Er beschleunigte also konstant mit der Erdbeschleunigung $g=9.81\frac{m}{s^2}$.\vspace{5pt}\newline
+		Am $14$. Oktober $2012$ sprang Felix Baumgartner von $h=38'969$ Metern in die Tiefe. Wir möchten seinen Sprung als freien Fall ohne Widerstand modellieren. Er beschleunigte also konstant mit der Erdbeschleunigung $g=9.81\frac{m}{s^2}$.\vspace{5pt}\\
 		\begin{minipage}{0.55\linewidth}
 			\begin{enumerate}[label=\alph*)]
 				\item Skizziere den Graphen der Beschleunigung in Abhängigkeit von der Zeit.
@@ -61,29 +60,29 @@
 
 \section{Der Weg zum bestimmten Integral}
 	\begin{wrapfigure}{r}{0.4\textwidth}
-		\center{\includegraphics[width=0.3\textwidth]{x2_ausgang.png}}
+		\centering\includegraphics[width=0.3\textwidth]{x2_ausgang.png}
 	\end{wrapfigure}
-	Wir möchten also die Fläche unter einer Kurve berechnen. Dazu betrachten wir die Funktion $f(x)=x^2$ und möchten dabei die eingeschlossene Fläche zwischen $a=0$ und $b=2$. Die Situation ist nebenan dargestellt. Weil die blau markierte Figur auf der einen Seite mit durch den Parabelbogen begrenzt ist, können wir ihren Flächeninhalt mit unseren bisherigen geometrischem Mittel nicht exakt berechnen. Daher möchten wir den Flächeninhalt näherungsweise berechnen und schrittweise verbessern. Die Idee, die wir verfolgen wollen, ist die Fläche in $n=4$ gleich breite, senkrechte Streifen zu zerlegen. Jeder dieser Streifen hat auf der $x$-Achse eine Breite von $\frac{1}{2}$. Die Höhe der Streifen wird in zwei verschiedenen Varianten berechnet.\vspace{10pt}\newline
+	Wir möchten also die Fläche unter einer Kurve berechnen. Dazu betrachten wir die Funktion $f(x)=x^2$ und möchten dabei die eingeschlossene Fläche zwischen $a=0$ und $b=2$. Die Situation ist nebenan dargestellt. Weil die blau markierte Figur auf der einen Seite mit durch den Parabelbogen begrenzt ist, können wir ihren Flächeninhalt mit unseren bisherigen geometrischem Mittel nicht exakt berechnen. Daher möchten wir den Flächeninhalt näherungsweise berechnen und schrittweise verbessern. Die Idee, die wir verfolgen wollen, ist die Fläche in $n=4$ gleich breite, senkrechte Streifen zu zerlegen. Jeder dieser Streifen hat auf der $x$-Achse eine Breite von $\frac{1}{2}$. Die Höhe der Streifen wird in zwei verschiedenen Varianten berechnet.\vspace{10pt}\\
 	\begin{minipage}{0.8\linewidth}
 		\textbf{Untersumme:}
-		\center{\includegraphics[width=0.7\textwidth]{x2_USumme4.png}}\newline
+		\centering\includegraphics[width=0.7\textwidth]{x2_USumme4.png}\\
 		Die Höhe jedes Rechtecks ist gleich dem \textbf{kleinstmöglichen} Funktionswert $f(x)$ in jedem Streifen. Berechnen wir also die Höhen der Rechtecke abhängig von der Funktion $f$:
 		\begin{enumerate}[label=\ ]\begin{multicols}{2}
-				\item $f(0)=$ \newline
+				\item $f(0)=$ \\
 				\item $f(0.5)=$
-				\item $f(1)=$ \newline
+				\item $f(1)=$ \\
 				\item $f(1.5)=$
 		\end{multicols}\end{enumerate}
 	\end{minipage}
 	\hfill
 	\begin{minipage}{0.8\linewidth}
 		\textbf{Obersumme:}
-		\center{\includegraphics[width=0.7\textwidth]{x2_OSumme4.png}}\newline
+		\centering\includegraphics[width=0.7\textwidth]{x2_OSumme4.png}\\
 		Die Höhe jedes Rechtecks ist gleich dem \textbf{grösstmöglichen} Funktionswert $f(x)$ in jedem Streifen. Im Unterschied zum ersten befinden sich die Höhen hier auf der rechten Seite.
 		\begin{enumerate}[label=\ ]\begin{multicols}{2}
-				\item $f(0.5)=$ \newline
+				\item $f(0.5)=$ \\
 				\item $f(1)=$
-				\item $f(1.5)=$ \newline
+				\item $f(1.5)=$ \\
 				\item $f(2)=$
 		\end{multicols}\end{enumerate}
 	\end{minipage}
@@ -102,10 +101,10 @@
 			&=\lineortext{0.125+0.5+1.125+2=3.75}
 		\end{align*}
 	\end{minipage}\vspace{5pt}
-	Zusammenfassend können wir also sagen, dass die blau eingefärbte Fläche mit den folgenden Ungleichungen angenähert werden kann. \[\lineortext{1.75} < A < \lineortext{3.75}\] Wir stellen aber auch fest, dass die Genauigkeit für diese Fläche noch sehr ungenau ist. Wir könnten versuchen, dies mit dem Durchschnitt beider Resultate schätzungsweise verbessern aber auch dies bietet nicht die zum Ziel gesetzte exakte Berechnung der Fläche.\newline
+	Zusammenfassend können wir also sagen, dass die blau eingefärbte Fläche mit den folgenden Ungleichungen angenähert werden kann. \[\lineortext{1.75} < A < \lineortext{3.75}\] Wir stellen aber auch fest, dass die Genauigkeit für diese Fläche noch sehr ungenau ist. Wir könnten versuchen, dies mit dem Durchschnitt beider Resultate schätzungsweise verbessern aber auch dies bietet nicht die zum Ziel gesetzte exakte Berechnung der Fläche.\\
 	Wir können aber ähnlich wie wir dies bereits bei mehreren Stellen schon gemacht haben die Anzahl der Rechtecke verdoppeln. Dabei wird die Breite der Rechtecke halbiert und und somit wird auch die Annäherung besser sein. Damit haben wir eine Breite der Rechtecke von $\frac{1}{4}$.
 	\begin{minipage}{0.8\linewidth}
-		\center{\includegraphics[width=0.7\textwidth]{x2_USumme8.png}}\newline
+		\centering\includegraphics[width=0.7\textwidth]{x2_USumme8.png}\\
 		Die Höhe der Rechtecke ist also:
 		\begin{enumerate}[label=\ ]\begin{multicols}{2}
 				\item $f(0)=0$
@@ -125,7 +124,7 @@
 	\end{minipage}
 	\hfill
 	\begin{minipage}{0.8\linewidth}
-		\center{\includegraphics[width=0.7\textwidth]{x2_OSumme8.png}}\newline
+		\centering\includegraphics[width=0.7\textwidth]{x2_OSumme8.png}\\
 		Die Höhe der Rechtecke ist also:
 		\begin{enumerate}[label=\ ]\begin{multicols}{2}
 				\item $f(\frac{1}{4})=\frac{1}{16}$
@@ -144,7 +143,7 @@
 		\end{align*}
 	\end{minipage}
 	Zusammenfassend sehen wir also, dass wir die Berechnung für die Fläche verbessern konnten und neu nur noch eine Ungenauigkeit von $1$ aufweist.\[2.1875<A<3.1875\]
-	Natürlich können wir jetzt die die Anzahl Rechtecke erneut verdoppeln und so eine noch genauere Anschätzung erhalten. Wir sehen dann:\newline
+	Natürlich können wir jetzt die die Anzahl Rechtecke erneut verdoppeln und so eine noch genauere Abschätzung erhalten. Wir sehen dann:\\
 	\begin{minipage}{0.8\linewidth}
 		\begin{align*}
 			n&=16:\qquad &&U_{16}=2.421875 \\
@@ -161,7 +160,7 @@
 			n&=64:\qquad &&O_{64}=2.729492\ldots\\
 			n&=128:\qquad &&O_{128}=2.697998\ldots
 		\end{align*}
-	\end{minipage}\vspace{10pt}\newline
+	\end{minipage}\vspace{10pt}\\
 	Betrachten wir sowohl $U_n$ und $O_n$ als eine Folge und lassen $n$ nach unendlich gehen, was die Breite der Rechtecke immer kleiner werden lässt, so erhalten wir ein Resultat für die Fläche.
 	\[A=\lim_{n\to\infty}U_n = \lim_{n\to\infty}O_n=\frac{8}{3}\]
 	Um das Konzept zu festigen, folgen einige in Schwierigkeit aufbauende Aufgaben.
@@ -179,7 +178,7 @@
 				\item Die Anzahl der Rechtecke wurde bewusst mühsam gewählt, um dich zu zwingen, genau zu überlegen, wie breit ein Rechteck ist. Wie breit ist ein Rechteck, wenn wir die Breite abhängig von der Anzahl Rechtecke $n$ beschreiben wollen.
 				\item Da $f$ eine lineare Funktion ist, sind wir in der Lage, die Fläche exakt berechnen. Vergleiche deine Lösung mit den Annäherungen aus $a)$.
 			\end{enumerate}
-			\item Betrachte die Funktion $f(x)=\frac{1}{x}$ im Bereich $a=2$ und $b=4$.\vspace*{11pt}\newline
+			\item Betrachte die Funktion $f(x)=\frac{1}{x}$ im Bereich $a=2$ und $b=4$.\vspace*{11pt}\\
 			\begin{minipage}{0.55\linewidth}
 				\begin{enumerate}[label=\alph*)]
 					\item Der Graph der Funktion fällt, deshalb überlege dir gut, was die Höhe der Rechtecke ist.
@@ -198,13 +197,13 @@
 		Das bestimmte Integral einer Funktion $f$ im Intervall $\left[a,b\right]$ entspricht der Fläche unter der Kurve im Intervall $\left[a,b\right]$ und ist der Grenzwert des Ober- bzw. Untersumme.
 		\[\int_a^b f(x)\:\d{x}=\lim_{n\to\infty}U_n=\lim_{n\to\infty}O_n\]
 
-		\textit{Sprich:} Integral $f(x)$ für $x$ von $a$ bis $b$\newline
+		\textit{Sprich:} Integral $f(x)$ für $x$ von $a$ bis $b$\\
 		\textbf{TR:} Menü $\to\:4\:\to\:3$
 	\end{definition}
 	Dabei müssen wir aber folgende Spezialfälle sauber auseinanderhalten:
 	\begin{enumerate}[label=\Alph*)]
-		\item Spezialfall $a=b$:\newline Falls die beiden Grenze zusammenfallen, so ist die Breite der Rechtecke $\gap{2}$ und damit sind sowohl die Ober- als auch die Untersumme ebenfalls gleich $0$. Das heisst: \[\gap{5}.\]
-		\item Spezialfall $a>b$:\newline Falls $a$ grösser ist als $b$, so gilt für die Breite der Rechtecke $\gap{2}$ und damit ändert sich auch das Vorzeichen des Integrals \[\gap{5}.\]
+		\item Spezialfall $a=b$:\\ Falls die beiden Grenze zusammenfallen, so ist die Breite der Rechtecke $\gap{2}$ und damit sind sowohl die Ober- als auch die Untersumme ebenfalls gleich $0$. Das heisst: \[\gap{5}.\]
+		\item Spezialfall $a>b$:\\ Falls $a$ grösser ist als $b$, so gilt für die Breite der Rechtecke $\gap{2}$ und damit ändert sich auch das Vorzeichen des Integrals \[\gap{5}.\]
 	\end{enumerate}
 	\begin{satz}
 		Satz vertauschen der Integrationsgrenzen und aufteilen der Integrationsgrenzen...
@@ -334,23 +333,23 @@
 \section{Der Hauptsatz der Differential und Integralrechnung}
 	Wir stehen also vor einem Problem. Wir wissen, dass die Fläche unter einer Kurve mit Hilfe von Rechtecken angenähert werden kann. Leider ist dies aber extrem zeitaufwändig und oftmals auch algebraisch schwierig zu berechnen. Erstaunlicherweise ist die Lösung dieses Problems sehr einfach.
 	\begin{satz}
-		Gegeben ist eine Funktion $f$ im Intervall $\left[a,b\right]$ und eine beliebige Stammfunktion $F$ von $f$.\newline
+		Gegeben ist eine Funktion $f$ im Intervall $\left[a,b\right]$ und eine beliebige Stammfunktion $F$ von $f$.\\
 		Dann  ist die Funktion \[A(x)=\int_a^x f(t)\d{t}\] eine Stammfunktion von $f$ und für die Fläche unter der Kurve gilt: \[\int_a^b f(x)\d{x}=\left[F(x)\right]_a^b=F(b)-F(a)\]
 	\end{satz}
 	\begin{beweis}
 		\begin{wrapfigure}{r}{0.4\textwidth}
-			\center{\includegraphics[width=0.3\textwidth]{flächenfunktion.png}}
+			\centering\includegraphics[width=0.3\textwidth]{flächenfunktion.png}
 		\end{wrapfigure}
-		Die Funktion \[A(x)=\int_a^x f(t)\d{t}\] beschreibt die Fläche unter dem Graph von $f$ zwischen $a$ und $x$. Im ersten Schritt müssen wir jedoch überprüfen, ob $A(x)$ eine Stammfunktion von $f$ ist. Dabei genügt es zu zeigen, dass $A(x)$ abgeleitet gleich $f$ ist.\newline
+		Die Funktion \[A(x)=\int_a^x f(t)\d{t}\] beschreibt die Fläche unter dem Graph von $f$ zwischen $a$ und $x$. Im ersten Schritt müssen wir jedoch überprüfen, ob $A(x)$ eine Stammfunktion von $f$ ist. Dabei genügt es zu zeigen, dass $A(x)$ abgeleitet gleich $f$ ist.\\
 
-		\karos{6.5}\newline
+		\karos{6.5}\\
 		Das heisst also, $A(x)$ ist eine Stammfunktion von $f$ und es gilt: \[A(x)=\int_a^x f(t)\d{t} = F(x)+c.\] Zum Schluss wäre es jedoch schön, wenn wir herausfinden, welchen Wert der Parameter $c$ erhält. Dazu nutzen wir den Spezialfall $a=b$, in dem die Grenzen aufeinander fallen.
-		\vspace{5pt}\newline\karos{4.5}\newline
+		\vspace{5pt}\\\karos{4.5}\\
 		Damit folgt also die Behauptung \[\int_a^b f(x)\d{x}=F(b)-F(a).\]\flushright{$\blacksquare$}
 	\end{beweis}
 	\begin{beispiel}
 		Betrachte die Funktion $f(x)=x^2$. Analog zum Vorgang mit der Ober- und Untersumme wollen wir die Fläche unter der Kurve zwischen $a=0$ und $b=2$ berechnen.
-		\vspace{5pt}\newline\karos{6}
+		\vspace{5pt}\\\karos{6}
 	\end{beispiel}
 	\begin{aufgabe}
 		Berechne die folgenden bestimmten Integrale mit Hilfe des Hauptsatzes von Hand.
@@ -387,9 +386,9 @@
 			\end{tabular}
 		\end{table}
 		\begin{enumerate}[label=\alph*)]
-			\item Berechne für jeden oben abgebildeten Graphen die eingezeichnete Fläche.\vspace{5pt}\newline\karos{6}
-			\item Erkläre das Problem, welches du feststellst.\vspace{5pt}\newline\karos{2}
-			\item Suche nach einer möglichen Lösung und beschreibe dein Lösungsweg möglichst genau. \textit{Tipp: Nullstellen}\vspace{5pt}\newline\karos{2}
+			\item Berechne für jeden oben abgebildeten Graphen die eingezeichnete Fläche.\vspace{5pt}\\\karos{6}
+			\item Erkläre das Problem, welches du feststellst.\vspace{5pt}\\\karos{2}
+			\item Suche nach einer möglichen Lösung und beschreibe dein Lösungsweg möglichst genau. \textit{Tipp: Nullstellen}\vspace{5pt}\\\karos{2}
 		\end{enumerate}
 	\end{aufgabe}
 	\begin{algo}
@@ -397,7 +396,7 @@
 		\begin{enumerate}
 			\item \gap{14}
 			\item \gap{14}
-			\item \gap{14}\vspace{7pt}\newline\gap{14}
+			\item \gap{14}\vspace{7pt}\\\gap{14}
 		\end{enumerate}
 	\end{algo}
 	\begin{aufgabe}
@@ -426,10 +425,10 @@
 	\begin{aufgabe}
 		Betrachte die Funktionen $f(x)=-x^2+3x+3$ und $g(x)=x^2-4x+6$ im folgenden \href{https://www.geogebra.org/m/gfdvryzw}{Geogebra-Applet}\footnotemark.
 		\begin{enumerate}[label=\alph*)]
-			\item Wie lässt sich die Länge der senkrechten orangen Strecken mathematisch beschrieben.\vspace{5pt}\newline\karos{1}
-			\item Verschiebe nun die Fläche, sodass sie direkt über der $x-$Achse liegt. Was beschreibt diese Funktion?\vspace{5pt}\newline\karos{1}
-			\item Wir definieren die Differenzfunktion $f(x)-g(x)$. Welche Fläche wird nun von dieser Differenzfunktion und der $x-$Achse eingeschlossen?\vspace{5pt}\newline\karos{1}
-			\item Schliesse daraus eine Formel zur Berechnung der Fläche zwischen den beiden Graphen und wende sie auf dieses Beispiel an.\vspace{5pt}\newline\karos{5}
+			\item Wie lässt sich die Länge der senkrechten orangen Strecken mathematisch beschrieben.\vspace{5pt}\\\karos{1}
+			\item Verschiebe nun die Fläche, sodass sie direkt über der $x-$Achse liegt. Was beschreibt diese Funktion?\vspace{5pt}\\\karos{1}
+			\item Wir definieren die Differenzfunktion $f(x)-g(x)$. Welche Fläche wird nun von dieser Differenzfunktion und der $x-$Achse eingeschlossen?\vspace{5pt}\\\karos{1}
+			\item Schliesse daraus eine Formel zur Berechnung der Fläche zwischen den beiden Graphen und wende sie auf dieses Beispiel an.\vspace{5pt}\\\karos{5}
 		\end{enumerate}
 	\end{aufgabe}
 	\footnotetext{\url{https://www.geogebra.org/m/gfdvryzw}}
@@ -438,7 +437,7 @@
 		\begin{enumerate}
 			\item \gap{14}
 			\item \gap{14}
-			\item \gap{14}\vspace{7pt}\newline\gap{14}
+			\item \gap{14}\vspace{7pt}\\\gap{14}
 		\end{enumerate}
 	\end{algo}
 	\begin{aufgabe}
@@ -497,7 +496,7 @@
 	\end{aufgabe}
 	Wir haben nun also zwei einfache Beispiele gesehen. Da wir bis jetzt aber immer geradlinig begrenzte Flächen hatten, konnten wir die bekannten Volumenformel verwenden. Deshalb stellt sich nun natürlich die Frage, wie kann das Vorgehen auf krummlinige Flächen erweitert werden?
 	\begin{beispiel}
-		Die Fläche zwischen dem Graphen der Funktion $f(x)=4x-x^2$ und der $x-$Achse rotiert um die $x-$Achse. Berechnen Sie das Volumen des Rotationskörpers.\vspace{7pt}\newline
+		Die Fläche zwischen dem Graphen der Funktion $f(x)=4x-x^2$ und der $x-$Achse rotiert um die $x-$Achse. Berechnen Sie das Volumen des Rotationskörpers.\vspace{7pt}\\
 		\begin{minipage}{0.47\linewidth}
 			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
 				>=latex,   %Voreinstellung für Pfeilspitzen
@@ -572,17 +571,17 @@
 				\centering\includegraphics[scale=0.5]{keplerfass.jpeg}
 			\end{figure}
 		\end{minipage}
-	\end{aufgabe}\newpage
-	\begin{beispiel}
-		Gabriels Horn
-	\end{beispiel}
+	\end{aufgabe}
 
-\subsection{Uneigentliche Integrale}
-	tbd %Skript-Atchu --> PDF/LATEX
+
+\include{erweiterung-integral.tex}
+
 
 
 \newpage
 \subsection*{History}
+\begingroup
+\renewcommand{\arraystretch}{1.5}
 \begin{table}[H]
 	\centering
 	\begin{tabular}{|p{13mm}|p{20mm}|p{30mm}|p{70mm}|}\hline
@@ -590,8 +589,9 @@
 		Version & Datum & Person & Bemerkung \\\hline
 		$1.0$ & 02.04.25 & Jonas Guler & Kapitel erstellt \\\hline
 		$1.1$ & 20.11.25 & Jonas Guler & Fehler verbessert \\\hline
-		to Do & 03.12.25 & Jonas Guler & Aufgabe 5.6 Funktionen anpassen\newline b) Nullstelle ausserhalb Intervall\newline c) Fläche unendlich \\\hline
+		to Do & 03.12.25 & Jonas Guler & \\\hline
 	\end{tabular}
 \end{table}
+\endgroup
 
 \end{document}
