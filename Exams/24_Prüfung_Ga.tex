@@ -7,7 +7,7 @@
 \newcommand{\theme}{Trigonometrie}
 \newcommand{\teacher}{Jonas Guler}
 \newcommand{\class}{3Ga}
-\renewcommand{\date}{27.08.26}
+\renewcommand{\date}{05.09.26}
 \graphicspath{{Algebra/data-algebra},{Geometrie/data-geometrie},{Analysis/data-analysis}} % Setzt den Pfad zu den Bildern fest
 %=========================================================
 \begin{document}
@@ -34,14 +34,14 @@
     \vspace{5pt}
     Der Rechenweg muss \textbf{vollständig und nachvollziehbar} sein.\\
     Lösen Sie die Prüfung mit einen schwarzen oder blauen Kugelschreiber.\\
-    %Als Hilfsmittel ist der Taschenrechner (TI - Nspire CX-II CAS) erlaubt.
-    Als Hilfsmittel ist der kleine Taschenrechner (TI-30X o.ä.) erlaubt.
+    Als Hilfsmittel ist der Taschenrechner (TI - Nspire CX-II CAS) erlaubt.
+    %Als Hilfsmittel ist der kleine Taschenrechner (TI-30X o.ä.) erlaubt.
 \end{center}
 \rule[1ex]{\textwidth}{1pt}
 
 \vspace{10cm}
 \begin{center}
-    %\Huge{Repetitionsprüfung}
+    \Huge{Repetitionsprüfung}
 \end{center}
 
 \newpage
@@ -50,11 +50,11 @@
 %---------------------TESTFRAGEN
 %=========================================================
 \question[3]
-Berechne im rechtwinkligen Dreieck $ABC$ mit $\gamma=90^\circ, a=16$ und $b=8$ die beiden Winkelhalbierenden $w_\alpha$ und $w_\beta$.
+Berechne im rechtwinkligen Dreieck $ABC$ mit $\gamma=90^\circ, a=16$ und $b=8$ die beiden Seitenhalbierende $s_a$ und $s_b$.
 \vspace{5pt}\antwort{10.5}
 \question[4]
 Welche der untenstehenden Sinus- resp. Cosinuswerte  sind gleich?
-\[\cos{165^\circ},\quad\sin{255^\circ}, \quad\sin{135^\circ}, \quad\cos{315^\circ}, \quad\sin{285^\circ}, \quad\cos{45^\circ}\]
+\[\cos{165^\circ},\quad\sin{\frac{17\*\pi}{12}}, \quad\sin{135^\circ}, \quad\cos{315^\circ}, \quad\sin{285^\circ}, \quad\cos{\frac{\pi}{4}}\]
 Begründe mit Hilfe des Einheitskreises und \textbf{ohne} Verwendung des Taschenrechners.
 \begin{figure}[H]
 	\hspace{10mm}
@@ -83,9 +83,9 @@ Begründe mit Hilfe des Einheitskreises und \textbf{ohne} Verwendung des Taschen
 \noaddpoints
 \question[\totalpoints] % Funktionsgraphen
 \addpoints
-\textbf{Beachte:} Lösungswege mit Hilfe des Taschenrechners geben keine Punkte!
+\textbf{Beachte:} Diese Aufgaben muss ohne Taschenrechner gelöst werden. Anderenfalls werden Punkte abgezogen.
 \begin{parts}
-	\part[3] Zeichne den Winkel $\displaystyle\alpha=-65^\circ$ und den Sinus-, Cosinus- und Tangenswert von $\alpha$ im Einheitskreis ein und schätze die jeweiligen Werte anhand der Skizze.
+	\part[3] Zeichne den Winkel $\displaystyle\alpha=65^\circ$ und den Sinus-, Cosinus- und Tangenswert von $\alpha$ im Einheitskreis ein und schätze die jeweiligen Werte anhand der Skizze.
 \end{parts}
 \vspace{5pt}
 \begin{figure}[H]
@@ -110,7 +110,7 @@ Begründe mit Hilfe des Einheitskreises und \textbf{ohne} Verwendung des Taschen
 \end{figure}
 \begin{parts}
 	\setcounter{partno}{1}
-	\part[2] Zeichne alle Winkel $\beta$ zwischen $0^\circ$ und $360^\circ$ ein und messe sie anhand der Skizze. Dabei gilt: \[\tan{\beta}=-2\]
+	\part[2] Zeichne alle Winkel $\beta$ zwischen $0^\circ$ und $360^\circ$ ein und messe resp. berechne sie anhand der Skizze. Dabei gilt: \[\cos{\beta}=-0.45\]
 \end{parts}
 \begin{figure}[H]
 	\hspace{10mm}
@@ -118,7 +118,7 @@ Begründe mit Hilfe des Einheitskreises und \textbf{ohne} Verwendung des Taschen
 		>=latex,   %Voreinstellung für Pfeilspitzen
 		font= \footnotesize, scale=3]
 		%Raster zeichnen
-		\draw [color=gray!50]  [step=2mm] (-1,-2.4001) grid (4.2,1.4);
+		\draw [color=gray!50]  [step=2mm] (-1,-2.2001) grid (4.2,1.4);
 		% Achsen zeichnen
 		\draw[->,thick] (-1.1,0) -- (1.2,0) node[right, below] {\normalsize $x$};
 		\draw[->,thick] (0,-1.1) -- (0,1.2) node[above, left] {\normalsize $y$};
@@ -136,37 +136,42 @@ Begründe mit Hilfe des Einheitskreises und \textbf{ohne} Verwendung des Taschen
 
 %---------------------------------------------------------
 \newpage
-\question[4] % GZP 14 A15
-Ein Aussichtsturm steht $30$m vom diesseitigen Kanalufer entfernt. Von der Aussichtsplattform $S$ aus erscheint das diesseitige Kanalufer unter einem Winkel von $\alpha=24.5^\circ$ und das jenseitige unter dem Winkel $\beta=64^\circ.$\\
-\begin{minipage}[t]{0.475\linewidth}
-	\begin{parts}
-		\part Wie hoch ist der Aussichtsturm?
-		\part Wie breit ist der Kanal?
-	\end{parts}
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.4\linewidth}
-	\vspace{0pt}
-	\centering\includegraphics[scale=0.5]{trigo-aussichtsturm.png}
-\end{minipage}
-\vspace{5pt}\antwort{19}
+\question[6] % GZP 15 A7
+Kreuze an, ob die folgenden Aussagen oder Gleichungen richtig oder falsch sind.
+\begingroup
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|c|c}
+		& richtig & falsch\\\hline
+		$\sin{\alpha}=\sin{180^\circ-\alpha}$ & & \\
+		$\cos{180^\circ-\beta}=\cos{180^\circ+\beta}$ & & \\
+		$\tan{\alpha}>0$ für $90^\circ<\alpha<180^\circ$ & & \\
+		$\cos{\alpha}=\sin{\alpha}$ für $\alpha=\frac{\pi}{6}$ & & \\
+		$\sin{360^\circ-\beta}=\sin{180^\circ-\beta}$ & & \\
+		In einem Dreieck mit $\gamma=90^\circ$ gilt: $\sin{\alpha}=\cos{90^\circ-\alpha}$ & & \\
+	\end{tabular}
+\end{table}
+\endgroup
+\vspace{5pt}\antwort{17.5}
 
 
 %---------------------------------------------------------
 \newpage
-\question[4] %GZP 13 A8
-Berechne in der folgenden Figur den Winkel $\phi$.
-\begin{figure}[H]
-	\centering\includegraphics[scale=1]{trigo-thalesähnlichkeit.png}
-\end{figure}
-\vspace{7pt}\antwort{18.5}
-
-
-%---------------------------------------------------------
-\newpage
-\question[4]
-In einem Dreieck ABC sind die Seiten $a=7$cm und $b=9$cm sowie der eingeschlossene Winkel $\gamma=58^\circ$ gegeben. Berechne die fehlende Seite $c$.
-\vspace{7pt}\antwort{23.5}
+\noaddpoints
+\question[\totalpoints] % Rhyn S6 A41
+\addpoints
+Ein Satellit befindet sich $100$km über dem Atlantik.\\
+\textit{Tipp: } Der Erdradius beträgt $6370$km.
+\begin{parts}
+	\part[2] Unter welchem Winkel ist der Rand der Erdkugel sichtbar?
+\end{parts}
+\vspace{7pt}\antwort{10.5}
+\begin{parts}
+	\setcounter{partno}{1}
+	\part[2] In welcher Entfernung ist der Rand der Erdkugel sichtbar?
+\end{parts}
+\vspace{7pt}\antwort{10.5}
 
 
 %---------------------------------------------------------
@@ -181,6 +186,20 @@ Von zwei Messpunkten $A$ und $B$, die $2.4$km voneinander entfernt sind, wird ei
 	\part[2] Bestimme die Entfernung $\overline{BT}$ mithilfe des Kosinussatzes.
 \end{parts}
 \emph{Tipp:} Mache zuerst eine geeignete Skizze der Situation.
+\vspace{7pt}\antwort{19.5}
+
+
+%---------------------------------------------------------
+\newpage
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+Der Wärter eines Leuchtturm beobachtet mit seinem Feldstecher ein vorbeifahrendes Schiff. Zum ersten Mal sieht er es in 73 km Entfernung in Richtung N86W. Zum letzten Mal sieht er es zweieinhalb Stunden später in 97 km Entfernung in Richtung S38E.
+\begin{parts}
+	\part[2] Welche Distanz hat das Schiff zurückgelegt?
+	\part[2] Welchen Kurs fährt das Schiff?
+	\part[1] Wie nahe fährt das Schiff am Leuchtturm vorbei?
+\end{parts}
 \vspace{7pt}\antwort{20}
 
 \end{questions}
