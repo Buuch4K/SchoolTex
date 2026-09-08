@@ -45,4 +45,47 @@
 	{\setlength{\textwidth}{\textwidth}\fillwithgrid{#1cm}\vspace{5pt}}
 }
 
+%=========================================================
+% Karriertes Papier für Antwort MIT OVERLAY
+\tcbuselibrary{breakable,skins}
+\usetikzlibrary{mindmap,trees}
+\newlength\tindent
+\setlength{\tindent}{\parindent}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
 
+\newtcolorbox{gridspace}[1]{%
+	enhanced,
+	breakable,
+	blanker,
+	boxrule=0pt,
+	left=5mm,
+	right=5mm,
+	top=5.75mm,
+	bottom=0mm,
+	boxsep=0pt,
+	height=#1cm,
+	width=16cm,
+	before upper={
+		\begingroup
+		\setlength{\baselineskip}{5.75mm}
+		\setlength{\parskip}{0pt}
+		\setlength{\lineskip}{0pt}
+		% keep every paragraph on the grid rhythm
+		%\everypar{\vspace{0pt}\strut}
+		% math formulas shifted by one grid row
+		\let\oldbracketopen\[
+		\renewcommand{\[}{\vspace{-5mm}\oldbracketopen}
+		% Align displayed formulas to the grid
+		\setlength{\abovedisplayskip}{0pt}
+		\setlength{\belowdisplayskip}{0pt}
+		\setlength{\abovedisplayshortskip}{0pt}
+		\setlength{\belowdisplayshortskip}{0pt}
+		% Enumerate follows the same rhythm
+		\setlist[enumerate]{leftmargin=6mm,itemsep=0mm,topsep=0pt,parsep=0pt,partopsep=0pt}
+		\setlist[itemize]{leftmargin=6mm,itemsep=10mm,topsep=0pt,parsep=0pt,partopsep=0pt}},
+	after upper={
+		\endgroup},
+	underlay={
+		\draw[step=5mm,color=gray!55] (interior.south west) grid (interior.north east);}
+}
