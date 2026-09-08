@@ -3,6 +3,7 @@
 \input{../../Header/styleExam.sty}
 \input{../../Header/headerQuestion.sty}
 \input{../../Header/mathexpressions.sty}
+\graphicspath{{data-algebra}} % Setzt den Pfad zu den Bilder fest
 %=========================================================
 \newcommand{\theme}{Zahlenäume}
 \newcommand{\teacher}{Jonas Guler}
@@ -24,31 +25,31 @@
 	\part[2] Schreibe die grau markierten Mengen als Mengenterm.
 \end{parts}
 \begin{minipage}[t]{0.45\linewidth}
-	\centering\includegraphics[width=5cm]{data-algebra/a).png}
+	\centering\includegraphics[width=5cm]{a).png}
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.45\linewidth}
-	\centering\includegraphics[width=5cm]{data-algebra/c).png}
+	\centering\includegraphics[width=5cm]{c).png}
 \end{minipage}
 \begin{parts}
 	\part[2] Schreibe die grau markierte Mengen als Mengenterm.
 \end{parts}
 \begin{minipage}{0.45\linewidth}
-	\centering\includegraphics[width=5cm]{data-algebra/f).png}
+	\centering\includegraphics[width=5cm]{f).png}
 \end{minipage}
 \hfill
 \begin{minipage}{0.45\linewidth}
-	\centering\includegraphics[width=5cm]{data-algebra/b).png}
+	\centering\includegraphics[width=5cm]{b).png}
 \end{minipage}
 \begin{parts}
 	\part[2] Schreibe die grau markierte Mengen als Mengenterm.
 \end{parts}
 \begin{minipage}{0.45\linewidth}
-	\centering\includegraphics[width=5cm]{data-algebra/d).png}
+	\centering\includegraphics[width=5cm]{d).png}
 \end{minipage}
 \hfill
 \begin{minipage}{0.45\linewidth}
-	\centering\includegraphics[width=5cm]{data-algebra/e).png}
+	\centering\includegraphics[width=5cm]{e).png}
 \end{minipage}
 
 
@@ -63,13 +64,13 @@
 	\part[2] Schraffiere die folgenden Mengen im Venn Diagramm.
 \end{parts}
 \begin{minipage}[t]{0.45\linewidth}
-	will be defined later
-	\centering\includegraphics[width=5cm]{data-algebra/VennDiagramm.png}
+	$(A\cup B)\cap (G\setminus (A\cup B))$
+	\centering\includegraphics[width=5cm]{VennDiagramm.png}
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.45\linewidth}
 	$(A\setminus C)\cup(B\cap C)$
-	\centering\includegraphics[width=5cm]{data-algebra/VennDiagramm.png}
+	\centering\includegraphics[width=5cm]{VennDiagramm.png}
 \end{minipage}
 \begin{parts}
 	\setcounter{partno}{1}
@@ -77,12 +78,12 @@
 \end{parts}
 \begin{minipage}[t]{0.45\linewidth}
 	$(A\cap B)\setminus (C\cap B)$
-	\centering\includegraphics[width=5cm]{data-algebra/VennDiagramm.png}
+	\centering\includegraphics[width=5cm]{VennDiagramm.png}
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.45\linewidth}
 	$(C\cap B)\cup(A\cap(B\cap C))$
-	\centering\includegraphics[width=5cm]{data-algebra/VennDiagramm.png}
+	\centering\includegraphics[width=5cm]{VennDiagramm.png}
 \end{minipage}
 \begin{parts}
 	\setcounter{partno}{1}
@@ -90,12 +91,12 @@
 \end{parts}
 \begin{minipage}[t]{0.45\linewidth}
 	$(A\cup B)\setminus (A\cap C)$
-	\centering\includegraphics[width=5cm]{data-algebra/VennDiagramm.png}
+	\centering\includegraphics[width=5cm]{VennDiagramm.png}
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.5\linewidth}
 	$\left(C\setminus(A\cap B\cap C)\right)\cup\left(G\setminus(A\cup B\cup C)\right)$
-	\centering\includegraphics[width=5cm]{data-algebra/VennDiagramm.png}
+	\centering\includegraphics[width=5cm]{VennDiagramm.png}
 \end{minipage}
 
 
@@ -103,29 +104,29 @@
 \noaddpoints
 \question[\totalpoints]
 \addpoints
-\begin{parts}
-    \part[4] Gegeben sind die folgenden Mengen $A=\left\{2,3,5,7,9,12,15\right\}$, $B=\left\{0,2,4,6,8,10,12\right\}$ und $C=\left\{0,-0.3,-1,\frac{-5}{2},-5\right\}$. Gib folgende Mengen an.
-    \begin{subparts}
-        \subpart $A\cap B=$
-	    \subpart $B\cup \N=$
-	    \subpart $C\cap \Z=$
-        \subpart $C\setminus \Q^-=$
-    \end{subparts}
-\end{parts}
+Gegeben sind die folgenden Mengen $A=\left\{2,3,5,7,9,12,15\right\}$, $B=\left\{0,2,4,6,8,10,12\right\}$ und $C=\left\{0,-0.3,-1,\frac{-5}{2},-5\right\}$. Gib folgende Mengen an.
+\begin{gridspace}{8.5}
+   	\begin{enumerate}[label=(\alph*)]
+   		\item $A\cap B=$
+   		\item $B\cup \N=$
+   		\item $C\cap \Z=$
+   		\item $C\setminus \Q^-=$
+   	\end{enumerate}
+\end{gridspace}
 
 %---------------------------------------------------------
 \noaddpoints
 \question[\totalpoints]
 \addpoints
-\begin{parts}
-    \part[4] Gegeben sind die folgenden Mengen $A=\left\{0,2,3,4,6,9,13,15\right\}$, $B=\left\{1,3,5,7,9,11,13\right\}$ und $C=\left\{0,3.2,3,\frac{5}{2},11\right\}$. Gib folgende Mengen an.
-    \begin{subparts}
-        \subpart $A\cup B=$
-	    \subpart $A\cap \N=$
-	    \subpart $C\cap \Z=$
-        \subpart $C\setminus \Q^+=$
-    \end{subparts}
-\end{parts}
+Gegeben sind die folgenden Mengen $A=\left\{0,2,3,4,6,9,13,15\right\}$, $B=\left\{1,3,5,7,9,11,13\right\}$ und $C=\left\{0,3.2,3,\frac{5}{2},11\right\}$. Gib folgende Mengen an.
+\begin{gridspace}{8.5}
+   	\begin{enumerate}[label=(\alph*)]
+   		\item $A\cup B=$
+   		\item $A\cap \N=$
+   		\item $C\cap \Z=$
+   		\item $C\setminus \Q^+=$
+   	\end{enumerate}
+\end{gridspace}
 
 %---------------------------------------------------------
 \noaddpoints
@@ -166,6 +167,19 @@ Verwandle $(a)$ und $(b)$ in eine Dezimalzahl und $(c)$ und $(d)$ in einen gewö
 
 %---------------------------------------------------------
 \noaddpoints
+\question[\totalpoints]
+\addpoints
+\begin{parts}
+	\part[4] Stelle zu jeder dieser Zahlen die Primfaktorzerlegung her.
+	\begin{itemcols}[2]
+		\item $6776$
+		\item $2520$
+	\end{itemcols}
+	\part[4] Benutze die Primfaktorzerlegung, um das $\kgV$ und den $\ggT$ der zwei Zahlen $135$ und $294$ zu berechnen.
+\end{parts}
+
+%---------------------------------------------------------
+\noaddpoints
 \question[\totalpoints] % ggT und kgV
 \addpoints
 Benutze die Primfaktorzerlegung, um die folgenden $\kgV$ und $\ggT$ zu berechnen.
@@ -201,6 +215,7 @@ Entscheide in der Tabelle unten, ob die Aussagen wahr oder falsch sind. Die Antw
         Eine Zahl ist durch $3$ teilbar, wenn ihre Quersumme ein Vielfaches von $3$ ist. & & \\\hline
         Es gibt eine natürliche Zahl, die zwei verschiedene Primfaktorzerlegungen besitzt.  & & \\\hline
         Es gibt keine natürliche Zahl, die zwei verschiedene Primfaktorzerlegungen besitzt.  & & \\\hline
+        Die Zahl $2645379$ ist durch $3$ teilbar. & & \\\hline
         In einem abgeschlossenen Intervall gehören die Grenzen nicht dazu. & & \\\hline
         In einem offenen Intervall gehören die Grenzen nicht dazu. & & \\\hline
         Eine unendliche Menge besitzt unendliche viele Teilmengen. & & \\\hline
@@ -334,6 +349,11 @@ Berechne den Wert der folgenden Terme, indem du alle Betragsstriche auflöst.
 	\part[2] $\abs{-5-\abs{2-3}}+2=$
 	\part[2] $\abs{-2\*\abs{8-4}+1}+\abs{-4+\abs{-3}}=$
 \end{parts}
+
+
+%---------------------------------------------------------
+\question[2]
+Gib eine irrationale Zahl an, die weniger als $\frac{1}{100000}$ von $\frac{1}{5}$ entfernt ist.
 
 
 \end{questions}
