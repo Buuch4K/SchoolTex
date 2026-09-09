@@ -7,7 +7,7 @@
 \newcommand{\theme}{Zahlenräume}
 \newcommand{\teacher}{Jonas Guler}
 \newcommand{\class}{1Wa}
-\renewcommand{\date}{10.09.26}
+\renewcommand{\date}{12.09.26}
 \graphicspath{{Algebra/data-algebra},{Geometrie/data-geometrie},{Analysis/data-analysis}} % Setzt den Pfad zu den Bilder fest
 %=========================================================
 \begin{document}
@@ -41,7 +41,7 @@
 
 \vspace{10cm}
 \begin{center}
-	%\Huge{Repetitionsprüfung}
+	\Huge{Repetitionsprüfung}
 \end{center}
 
 \newpage
@@ -55,28 +55,89 @@
 \begin{parts}
 	\part[2] Schreibe die grau markierte Mengen als Mengenterm.
 \end{parts}
-\begin{minipage}{0.5\linewidth}
-	\centering\includegraphics[width=5cm]{d).png}
+\begin{minipage}{0.475\linewidth}
+	\centering
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.9]
+		% Komplement von B
+		\fill[gray!40] (-3,-3) rectangle (3,3);
+		\fill[white] (-0.8,-0.8) circle (1.5);
+
+		% Schnittmenge A und C
+		\begin{scope}
+			\clip (0,0.8) circle (1.5);
+			\fill[gray!40] (0.8,-0.8) circle (1.5);
+		\end{scope}
+
+		\draw[color=black] (-3,-3) rectangle (3,3);
+		\draw[color=black] (2.8,2.75) node {\footnotesize $G$};
+		\draw[color=black] (0,0.8) circle (1.5);
+		\draw[color=black] (-1,2.15) node {\footnotesize $A$};
+		\draw[color=black] (0.8,-0.8) circle (1.5);
+		\draw[color=black] (2,-2) node {\footnotesize $C$};
+		\draw[color=black] (-0.8,-0.8) circle (1.5);
+		\draw[color=black] (-2,-2) node {\footnotesize $B$};
+	\end{tikzpicture}
 \end{minipage}
 \hfill
 \begin{minipage}{0.5\linewidth}
-	\centering\includegraphics[width=5cm]{e).png}
+	\centering
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.9]
+		% A vereinigt C
+		\fill[gray!40] (0,0.8) circle (1.5);
+		\fill[gray!40] (0.8,-0.8) circle (1.5);
+
+		% Schnittmenge A und B wieder entfernen
+		\begin{scope}
+			\clip (0,0.8) circle (1.5);
+			\clip (-0.8,-0.8) circle (1.5);
+			\fill[white] (-3,-3) rectangle (3,3);
+		\end{scope}
+
+		\draw[color=black] (-3,-3) rectangle (3,3);
+		\draw[color=black] (2.8,2.75) node {\footnotesize $G$};
+		\draw[color=black] (0,0.8) circle (1.5);
+		\draw[color=black] (-1,2.15) node {\footnotesize $A$};
+		\draw[color=black] (0.8,-0.8) circle (1.5);
+		\draw[color=black] (2,-2) node {\footnotesize $C$};
+		\draw[color=black] (-0.8,-0.8) circle (1.5);
+		\draw[color=black] (-2,-2) node {\footnotesize $B$};
+	\end{tikzpicture}
 \end{minipage}
 \vspace{7pt}\antwort{5.5}
 \begin{parts}
 	\setcounter{partno}{1}
 	\part[2] Schraffiere die folgenden Mengen im Venn Diagramm.
 \end{parts}
-\begin{minipage}[t]{0.5\linewidth}
-	$(A\cup B)\cap (G\setminus (A\cap B))$
-	\centering\includegraphics[width=5cm]{VennDiagramm.png}
+\begin{minipage}[t]{0.475\linewidth}
+	$(A\cup C)\cap B$
+	\centering
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.9]
+		\draw[color=black] (-3,-3) -- (-3,3) -- (3,3) -- (3,-3) -- (-3,-3);
+		\draw[color=black] (2.8,2.75) node {\footnotesize $G$};
+		\draw[color=black] (0,0.8) circle (1.5);
+		\draw[color=black] (-1,2.15) node {\footnotesize $A$};
+		\draw[color=black] (0.8,-0.8) circle (1.5);
+		\draw[color=black] (2,-2) node {\footnotesize $C$};
+		\draw[color=black] (-0.8,-0.8) circle (1.5);
+		\draw[color=black] (-2,-2) node {\footnotesize $B$};
+	\end{tikzpicture}
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.5\linewidth}
-	$(A\setminus C)\cup(B\cap C)$
-	\centering\includegraphics[width=5cm]{VennDiagramm.png}
+	$G\setminus (A\cup B)\cup(A\cap C)$
+	\centering
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.9]
+		\draw[color=black] (-3,-3) -- (-3,3) -- (3,3) -- (3,-3) -- (-3,-3);
+		\draw[color=black] (2.8,2.75) node {\footnotesize $G$};
+		\draw[color=black] (0,0.8) circle (1.5);
+		\draw[color=black] (-1,2.15) node {\footnotesize $A$};
+		\draw[color=black] (0.8,-0.8) circle (1.5);
+		\draw[color=black] (2,-2) node {\footnotesize $C$};
+		\draw[color=black] (-0.8,-0.8) circle (1.5);
+		\draw[color=black] (-2,-2) node {\footnotesize $B$};
+	\end{tikzpicture}
 \end{minipage}
-\antwort{5.5}
+\vspace{7pt}\antwort{5.5}
 
 
 %---------------------------------------------------------
@@ -92,21 +153,21 @@ Entscheide, ob die Aussagen in der Tabelle unten wahr oder falsch sind. Die Antw
 	\centering
 	\begin{tabular}{|l|c|c|}\hline
 		& wahr & falsch\\\hline
-		In einem abgeschlossenen Intervall gehören die Grenzen nicht dazu. & & \\\hline
-		Die Zahl $2645379$ ist durch $3$ teilbar. & & \\\hline
-		Es gibt eine natürliche Zahl mit zwei verschiedenen Primfaktorzerlegungen. & & \\\hline
-		Die Gegenzahl einer Gegenzahl ist wieder die ursprüngliche Zahl. & & \\\hline
+		In einem offenen Intervall gehören die Grenzen nicht dazu. & & \\\hline
+		Die Zahl $4815276$ ist durch $3$ teilbar. & & \\\hline
+		Jede natürliche Zahl grösser als 1 besitzt eine Primfaktorzerlegung. & & \\\hline
+		Addiert man eine Zahl und ihre Gegenzahl, erhält man $0$. & & \\\hline
 	\end{tabular}
 \end{table}
 \endgroup
 \antwort{6.5}
 \vfill
 \question[4]
-Die folgenden Mengen $A=\left\{0,2,3,4,6,9,13,15\right\}$, $B=\left\{1,3,5,7,9,11,13\right\}$ und ${C=\left\{0,3.2,3,\frac{5}{2},11\right\}}$ sind gegeben. Schreibe die Mengen der untenstehenden Ausdrücke in aufzählender Form.
+Die folgenden Mengen $A=\left\{1,3,4,7,10,12,16\right\}$, $B=\left\{-2,3,-5,7,11,12,15\right\}$ und ${C=\left\{1,\frac{6}{5},4,5,7,12\right\}}$ sind gegeben. Schreibe die Mengen der untenstehenden Ausdrücke in aufzählender Form.
 \begin{gridspace}{8.5}
 	\begin{enumerate}[label=(\alph*)]
 		\item $A\cup B=$
-		\item $A\cap \N=$
+		\item $B\cap \N=$
 		\item $C\cap \Z=$
 		\item $C\setminus \Q^+=$
 	\end{enumerate}
@@ -121,14 +182,14 @@ Die folgenden Mengen $A=\left\{0,2,3,4,6,9,13,15\right\}$, $B=\left\{1,3,5,7,9,1
 \begin{parts}
 	\part[4] Stelle zu jeder dieser Zahlen die Primfaktorzerlegung her.
 	\begin{itemcols}[2]
-		\item $6776$
-		\item $2520$
+		\item $7128$
+		\item $2772$
 	\end{itemcols}
 \end{parts}
 \vspace{7pt}\antwort{10.5}
 \begin{parts}
 	\setcounter{partno}{1}
-	\part[4] Benutze die Primfaktorzerlegung, um das $\kgV$ und den $\ggT$ der zwei Zahlen $135$ und $294$ zu berechnen.
+	\part[4] Benutze die Primfaktorzerlegung, um das $\kgV$ und den $\ggT$ der zwei Zahlen $168$ und $360$ zu berechnen.
 \end{parts}
 \vspace{7pt}\antwort{10.5}
 
@@ -140,10 +201,10 @@ Die folgenden Mengen $A=\left\{0,2,3,4,6,9,13,15\right\}$, $B=\left\{1,3,5,7,9,1
 \addpoints
 Verwandle $(a)$ und $(b)$ in einen Dezimalbruch und $(c)$ und $(d)$ in einen gewöhnlichen Bruch.
 \begin{parcols}[2]
-	\part[2] $\frac{2}{125}$ %0.012
-	\part[2] $\frac{21}{16}$ %1.3125
-	\part[2] $0.\overline{153}$ %17/111
-	\part[2] $0.81\overline{6}$ %49/60
+	\part[2] $\frac{175}{4}$ %43.75
+	\part[2] $\frac{29}{21}$ %1.380952...
+	\part[2] $0.\overline{258}$ %86/333
+	\part[2] $0.67\overline{5}$ %152/225
 \end{parcols}
 \vspace{7pt}\antwort{21.5}
 
@@ -155,7 +216,7 @@ Verwandle $(a)$ und $(b)$ in einen Dezimalbruch und $(c)$ und $(d)$ in einen gew
 \addpoints
 Zeichne die folgenden Mengen als Intervalle in die Zahlengerade ein und gib die Teilmenge als Ausdruck von Intervallen an.
 \begin{parts}
-	\part[2] $\left\{x\in \R\:|-4\leq x < 2\right\}=$
+	\part[2] $\left\{x\in \R\:|-6< x \leq 3\right\}=$
 \end{parts}\vspace{1cm}
 \begin{figure}[H]
 	\centering
@@ -167,7 +228,7 @@ Zeichne die folgenden Mengen als Intervalle in die Zahlengerade ein und gib die 
 	\end{tikzpicture}
 \end{figure}\vspace{1cm}
 \begin{parts}\setcounter{partno}{1}
-	\part[2] $\R\setminus\left[1.5,2.5\right]=$
+	\part[2] $\R\setminus\left]-4.25,1.775\right[=$
 \end{parts}\vspace{1cm}
 \begin{figure}[H]
 	\centering
@@ -184,8 +245,8 @@ Zeichne die folgenden Mengen als Intervalle in die Zahlengerade ein und gib die 
 \addpoints
 Stelle folgende Teilmengen von $\R$ als Intervalle dar.
 \begin{parts}
-	\part[2] $\left\{x\in \R\:|-4\leq x < 2 \text{ oder } 2 < x \leq 3.4 \right\}=$
-	\part[2] $\R^+\setminus\left\{2.3,7\right\}=$
+	\part[2] $\left\{x\in \R\:|-8\leq x < -2 \text{ oder } -2 < x \leq 3.4 \right\}=$
+	\part[2] $\R^-\setminus\left\{-9.5\right\}=$
 \end{parts}
 \vspace{7pt}\antwort{10.5}
 

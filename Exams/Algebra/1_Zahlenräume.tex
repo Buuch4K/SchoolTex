@@ -53,9 +53,65 @@
 \end{minipage}
 
 
+%-------------------------------------------------------
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+\begin{parts}
+	\part[2] Schreibe die grau markierte Mengen als Mengenterm.
+\end{parts}
+\begin{minipage}{0.475\linewidth}
+	\centering
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.9]
+		% Komplement von B
+		\fill[gray!40] (-3,-3) rectangle (3,3);
+		\fill[white] (-0.8,-0.8) circle (1.5);
+
+		% Schnittmenge A und C
+		\begin{scope}
+			\clip (0,0.8) circle (1.5);
+			\fill[gray!40] (0.8,-0.8) circle (1.5);
+		\end{scope}
+
+		\draw[color=black] (-3,-3) rectangle (3,3);
+		\draw[color=black] (2.8,2.75) node {\footnotesize $G$};
+		\draw[color=black] (0,0.8) circle (1.5);
+		\draw[color=black] (-1,2.15) node {\footnotesize $A$};
+		\draw[color=black] (0.8,-0.8) circle (1.5);
+		\draw[color=black] (2,-2) node {\footnotesize $C$};
+		\draw[color=black] (-0.8,-0.8) circle (1.5);
+		\draw[color=black] (-2,-2) node {\footnotesize $B$};
+	\end{tikzpicture}
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\linewidth}
+	\centering
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.9]
+		% A vereinigt C
+		\fill[gray!40] (0,0.8) circle (1.5);
+		\fill[gray!40] (0.8,-0.8) circle (1.5);
+
+		% Schnittmenge A und B wieder entfernen
+		\begin{scope}
+			\clip (0,0.8) circle (1.5);
+			\clip (-0.8,-0.8) circle (1.5);
+			\fill[white] (-3,-3) rectangle (3,3);
+		\end{scope}
+
+		\draw[color=black] (-3,-3) rectangle (3,3);
+		\draw[color=black] (2.8,2.75) node {\footnotesize $G$};
+		\draw[color=black] (0,0.8) circle (1.5);
+		\draw[color=black] (-1,2.15) node {\footnotesize $A$};
+		\draw[color=black] (0.8,-0.8) circle (1.5);
+		\draw[color=black] (2,-2) node {\footnotesize $C$};
+		\draw[color=black] (-0.8,-0.8) circle (1.5);
+		\draw[color=black] (-2,-2) node {\footnotesize $B$};
+	\end{tikzpicture}
+\end{minipage}
+
+
 
 %-------------------------------------------------------
-\newpage
 \noaddpoints
 \question[\totalpoints]
 \addpoints
@@ -100,10 +156,48 @@
 \end{minipage}
 
 
-%---------------------------------------------------------
+
+%-------------------------------------------------------
 \noaddpoints
 \question[\totalpoints]
 \addpoints
+\begin{parts}
+	\setcounter{partno}{1}
+	\part[2] Schraffiere die folgenden Mengen im Venn Diagramm.
+\end{parts}
+\begin{minipage}[t]{0.475\linewidth}
+	$(A\cup C)\cap B$
+	\centering
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.9]
+		\draw[color=black] (-3,-3) -- (-3,3) -- (3,3) -- (3,-3) -- (-3,-3);
+		\draw[color=black] (2.8,2.75) node {\footnotesize $G$};
+		\draw[color=black] (0,0.8) circle (1.5);
+		\draw[color=black] (-1,2.15) node {\footnotesize $A$};
+		\draw[color=black] (0.8,-0.8) circle (1.5);
+		\draw[color=black] (2,-2) node {\footnotesize $C$};
+		\draw[color=black] (-0.8,-0.8) circle (1.5);
+		\draw[color=black] (-2,-2) node {\footnotesize $B$};
+	\end{tikzpicture}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.5\linewidth}
+	$G\setminus (A\cup B)\cup(A\cap C)$
+	\centering
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.9]
+		\draw[color=black] (-3,-3) -- (-3,3) -- (3,3) -- (3,-3) -- (-3,-3);
+		\draw[color=black] (2.8,2.75) node {\footnotesize $G$};
+		\draw[color=black] (0,0.8) circle (1.5);
+		\draw[color=black] (-1,2.15) node {\footnotesize $A$};
+		\draw[color=black] (0.8,-0.8) circle (1.5);
+		\draw[color=black] (2,-2) node {\footnotesize $C$};
+		\draw[color=black] (-0.8,-0.8) circle (1.5);
+		\draw[color=black] (-2,-2) node {\footnotesize $B$};
+	\end{tikzpicture}
+\end{minipage}
+
+
+%---------------------------------------------------------
+\question[4]
 Gegeben sind die folgenden Mengen $A=\left\{2,3,5,7,9,12,15\right\}$, $B=\left\{0,2,4,6,8,10,12\right\}$ und $C=\left\{0,-0.3,-1,\frac{-5}{2},-5\right\}$. Gib folgende Mengen an.
 \begin{gridspace}{8.5}
    	\begin{enumerate}[label=(\alph*)]
@@ -114,10 +208,9 @@ Gegeben sind die folgenden Mengen $A=\left\{2,3,5,7,9,12,15\right\}$, $B=\left\{
    	\end{enumerate}
 \end{gridspace}
 
+
 %---------------------------------------------------------
-\noaddpoints
-\question[\totalpoints]
-\addpoints
+\question[4]
 Gegeben sind die folgenden Mengen $A=\left\{0,2,3,4,6,9,13,15\right\}$, $B=\left\{1,3,5,7,9,11,13\right\}$ und $C=\left\{0,3.2,3,\frac{5}{2},11\right\}$. Gib folgende Mengen an.
 \begin{gridspace}{8.5}
    	\begin{enumerate}[label=(\alph*)]
@@ -126,6 +219,19 @@ Gegeben sind die folgenden Mengen $A=\left\{0,2,3,4,6,9,13,15\right\}$, $B=\left
    		\item $C\cap \Z=$
    		\item $C\setminus \Q^+=$
    	\end{enumerate}
+\end{gridspace}
+
+
+%---------------------------------------------------------
+\question[4]
+Die folgenden Mengen $A=\left\{1,3,4,7,10,12,16\right\}$, $B=\left\{-2,3,-5,7,11,12,15\right\}$ und ${C=\left\{1,\frac{6}{5},4,5,7,12\right\}}$ sind gegeben. Schreibe die Mengen der untenstehenden Ausdrücke in aufzählender Form.
+\begin{gridspace}{8.5}
+	\begin{enumerate}[label=(\alph*)]
+		\item $A\cup B=$
+		\item $B\cap \N=$
+		\item $C\cap \Z=$
+		\item $C\setminus \Q^+=$
+	\end{enumerate}
 \end{gridspace}
 
 %---------------------------------------------------------
@@ -158,6 +264,19 @@ Verwandle $(a)$ und $(b)$ in eine Dezimalzahl und $(c)$ und $(d)$ in einen gewö
 \noaddpoints
 \question[\totalpoints]
 \addpoints
+Verwandle $(a)$ und $(b)$ in einen Dezimalbruch und $(c)$ und $(d)$ in einen gewöhnlichen Bruch.
+\begin{parcols}[2]
+	\part[2] $\frac{175}{4}$ %43.75
+	\part[2] $\frac{29}{21}$ %1.380952...
+	\part[2] $0.\overline{258}$ %86/333
+	\part[2] $0.67\overline{5}$ %152/225
+\end{parcols}
+
+
+%---------------------------------------------------------
+\noaddpoints
+\question[\totalpoints]
+\addpoints
 Verwandle $(a)$ und $(b)$ in eine Dezimalzahl und $(c)$ und $(d)$ in einen gewöhnlichen Bruch.
 \begin{parcols}[2]
     \part[2] $0.\overline{365}$
@@ -176,6 +295,20 @@ Verwandle $(a)$ und $(b)$ in eine Dezimalzahl und $(c)$ und $(d)$ in einen gewö
 		\item $2520$
 	\end{itemcols}
 	\part[4] Benutze die Primfaktorzerlegung, um das $\kgV$ und den $\ggT$ der zwei Zahlen $135$ und $294$ zu berechnen.
+\end{parts}
+
+
+%---------------------------------------------------------
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+\begin{parts}
+	\part[4] Stelle zu jeder dieser Zahlen die Primfaktorzerlegung her.
+	\begin{itemcols}[2]
+		\item $7128$
+		\item $2772$
+	\end{itemcols}
+	\part[4] Benutze die Primfaktorzerlegung, um das $\kgV$ und den $\ggT$ der zwei Zahlen $168$ und $360$ zu berechnen.
 \end{parts}
 
 %---------------------------------------------------------
@@ -215,11 +348,14 @@ Entscheide in der Tabelle unten, ob die Aussagen wahr oder falsch sind. Die Antw
         Eine Zahl ist durch $3$ teilbar, wenn ihre Quersumme ein Vielfaches von $3$ ist. & & \\\hline
         Es gibt eine natürliche Zahl, die zwei verschiedene Primfaktorzerlegungen besitzt.  & & \\\hline
         Es gibt keine natürliche Zahl, die zwei verschiedene Primfaktorzerlegungen besitzt.  & & \\\hline
+        Jede natürliche Zahl grösser als 1 besitzt eine Primfaktorzerlegung. & & \\\hline
         Die Zahl $2645379$ ist durch $3$ teilbar. & & \\\hline
+        Die Zahl $4815276$ ist durch $3$ teilbar. & & \\\hline
         In einem abgeschlossenen Intervall gehören die Grenzen nicht dazu. & & \\\hline
         In einem offenen Intervall gehören die Grenzen nicht dazu. & & \\\hline
         Eine unendliche Menge besitzt unendliche viele Teilmengen. & & \\\hline
         Die Gegenzahl einer Gegenzahl ist wieder die ursprüngliche Zahl. & & \\\hline
+        Addiert man eine Zahl und ihre Gegenzahl, erhält man $0$. & & \\\hline
     \end{tabular}
 \end{table}
 \endgroup
@@ -289,6 +425,37 @@ Zeichne die folgenden Mengen als Intervalle in die Zahlengerade ein.
 
 
 %---------------------------------------------------------
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+Zeichne die folgenden Mengen als Intervalle in die Zahlengerade ein und gib die Teilmenge als Ausdruck von Intervallen an.
+\begin{parts}
+	\part[2] $\left\{x\in \R\:|-6< x \leq 3\right\}=$
+\end{parts}\vspace{1cm}
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+		\draw[->](-5,0) --(8,0);
+		\foreach \x in {-4.,-3.,-2.,-1.,0.,1.,2.,3.,4.,5.,6.,7.}
+		\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) ;%node[below] {\footnotesize $\x$};
+		\draw[color=black] (8,0) node[right] {$\R$};
+	\end{tikzpicture}
+\end{figure}\vspace{1cm}
+\begin{parts}\setcounter{partno}{1}
+	\part[2] $\R\setminus\left]-4.25,1.775\right[=$
+\end{parts}\vspace{1cm}
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1cm]
+		\draw[->](-5,0) --(8,0);
+		\foreach \x in {-4.,-3.,-2.,-1.,0.,1.,2.,3.,4.,5.,6.,7.}
+		\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) ;%node[below] {\footnotesize $\x$};
+		\draw[color=black] (8,0) node[right] {$\R$};
+	\end{tikzpicture}
+\end{figure}
+
+
+%---------------------------------------------------------
 \newpage
 \noaddpoints
 \question[\totalpoints]
@@ -348,6 +515,17 @@ Berechne den Wert der folgenden Terme, indem du alle Betragsstriche auflöst.
 \begin{parts}
 	\part[2] $\abs{-5-\abs{2-3}}+2=$
 	\part[2] $\abs{-2\*\abs{8-4}+1}+\abs{-4+\abs{-3}}=$
+\end{parts}
+
+
+%---------------------------------------------------------
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+Stelle folgende Teilmengen von $\R$ als Intervalle dar.
+\begin{parts}
+	\part[2] $\left\{x\in \R\:|-8\leq x < -2 \text{ oder } -2 < x \leq 3.4 \right\}=$
+	\part[2] $\R^-\setminus\left\{-9.5\right\}=$
 \end{parts}
 
 
