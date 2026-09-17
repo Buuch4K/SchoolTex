@@ -33,16 +33,12 @@
 }{
     \end{multicols}\end{parts}
 }
+
 %=========================================================
 \newenvironment{itemcols}[1][]{
 	\begin{itemize}\begin{multicols}{#1}
 		}{
 	\end{multicols}\end{itemize}
-}
-
-%=========================================================
-\newcommand{\antwort}[1]{
-	{\setlength{\textwidth}{\textwidth}\fillwithgrid{#1cm}\vspace{5pt}}
 }
 
 %=========================================================
@@ -88,4 +84,12 @@
 		\endgroup},
 	underlay={
 		\draw[step=5mm,color=gray!55] (interior.south west) grid (interior.north east);}
+}
+
+
+%=========================================================
+\newcommand{\antwort}[1]{
+	\begin{gridspace}{#1}
+		\
+	\end{gridspace}
 }
