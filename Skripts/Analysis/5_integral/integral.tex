@@ -62,8 +62,9 @@
 	\begin{wrapfigure}{r}{0.4\textwidth}
 		\centering\includegraphics[width=0.3\textwidth]{x2_ausgang.png}
 	\end{wrapfigure}
-	Wir möchten also die Fläche unter einer Kurve berechnen. Dazu betrachten wir die Funktion $f(x)=x^2$ und möchten dabei die eingeschlossene Fläche zwischen $a=0$ und $b=2$. Die Situation ist nebenan dargestellt. Weil die blau markierte Figur auf der einen Seite mit durch den Parabelbogen begrenzt ist, können wir ihren Flächeninhalt mit unseren bisherigen geometrischem Mittel nicht exakt berechnen. Daher möchten wir den Flächeninhalt näherungsweise berechnen und schrittweise verbessern. Die Idee, die wir verfolgen wollen, ist die Fläche in $n=4$ gleich breite, senkrechte Streifen zu zerlegen. Jeder dieser Streifen hat auf der $x$-Achse eine Breite von $\frac{1}{2}$. Die Höhe der Streifen wird in zwei verschiedenen Varianten berechnet.\vspace{10pt}\\
-	\begin{minipage}{0.8\linewidth}
+	Wir möchten also die Fläche unter einer Kurve berechnen. Dazu betrachten wir die Funktion $f(x)=x^2$ und möchten dabei die eingeschlossene Fläche zwischen $a=0$ und $b=2$. Die Situation ist nebenan dargestellt. Weil die blau markierte Figur auf der einen Seite mit durch den Parabelbogen begrenzt ist, können wir ihren Flächeninhalt mit unseren bisherigen geometrischem Mittel nicht exakt berechnen. Daher möchten wir den Flächeninhalt näherungsweise berechnen und schrittweise verbessern. Die Idee, die wir verfolgen wollen, ist die Fläche in $n=4$ gleich breite, senkrechte Streifen zu zerlegen. Jeder dieser Streifen hat auf der $x$-Achse eine Breite von $\frac{1}{2}$. Die Höhe der Streifen wird in zwei verschiedenen Varianten berechnet.\vspace{7pt}
+
+	\begin{minipage}[t]{0.49\textwidth}
 		\textbf{Untersumme:}
 		\centering\includegraphics[width=0.7\textwidth]{x2_USumme4.png}\\
 		Die Höhe jedes Rechtecks ist gleich dem \textbf{kleinstmöglichen} Funktionswert $f(x)$ in jedem Streifen. Berechnen wir also die Höhen der Rechtecke abhängig von der Funktion $f$:
@@ -73,9 +74,14 @@
 				\item $f(1)=$ \\
 				\item $f(1.5)=$
 		\end{multicols}\end{enumerate}
+		Summieren wir nun alle Rechteckflächen, so erhalten wir:
+		\begin{align*}
+			U_4&=\lineortext{0.5\*0+0.5\*0.25+0.5\*1+0.5\*2.25}\\
+			&=\lineortext{0+0.125+0.5+1.125=1.75}
+		\end{align*}
 	\end{minipage}
 	\hfill
-	\begin{minipage}{0.8\linewidth}
+	\begin{minipage}[t]{0.49\textwidth}
 		\textbf{Obersumme:}
 		\centering\includegraphics[width=0.7\textwidth]{x2_OSumme4.png}\\
 		Die Höhe jedes Rechtecks ist gleich dem \textbf{grösstmöglichen} Funktionswert $f(x)$ in jedem Streifen. Im Unterschied zum ersten befinden sich die Höhen hier auf der rechten Seite.
@@ -85,25 +91,16 @@
 				\item $f(1.5)=$ \\
 				\item $f(2)=$
 		\end{multicols}\end{enumerate}
-	\end{minipage}
-	\begin{minipage}{0.8\linewidth}
-		Summieren wir nun alle Rechteckflächen, so erhalten wir:
-		\begin{align*}
-			U_4&=\lineortext{0.5\*0+0.5\*0.25+0.5\*1+0.5\*2.25}\\
-			&=\lineortext{0+0.125+0.5+1.125=1.75}
-		\end{align*}
-	\end{minipage}
-	\hfill
-	\begin{minipage}{0.8\linewidth}
 		Summieren wir nun alle Rechteckflächen, so erhalten wir:
 		\begin{align*}
 			O_4&=\lineortext{0.5\*0.25+0.5\*1+0.5\*2.25+0.5\*4}\\
 			&=\lineortext{0.125+0.5+1.125+2=3.75}
 		\end{align*}
-	\end{minipage}\vspace{5pt}
+	\end{minipage}\vspace{7pt}\\
 	Zusammenfassend können wir also sagen, dass die blau eingefärbte Fläche mit den folgenden Ungleichungen angenähert werden kann. \[\lineortext{1.75} < A < \lineortext{3.75}\] Wir stellen aber auch fest, dass die Genauigkeit für diese Fläche noch sehr ungenau ist. Wir könnten versuchen, dies mit dem Durchschnitt beider Resultate schätzungsweise verbessern aber auch dies bietet nicht die zum Ziel gesetzte exakte Berechnung der Fläche.\\
-	Wir können aber ähnlich wie wir dies bereits bei mehreren Stellen schon gemacht haben die Anzahl der Rechtecke verdoppeln. Dabei wird die Breite der Rechtecke halbiert und und somit wird auch die Annäherung besser sein. Damit haben wir eine Breite der Rechtecke von $\frac{1}{4}$.
-	\begin{minipage}{0.8\linewidth}
+	Wir können aber ähnlich wie wir dies bereits bei mehreren Stellen schon gemacht haben die Anzahl der Rechtecke verdoppeln. Dabei wird die Breite der Rechtecke halbiert und und somit wird auch die Annäherung besser sein. Damit haben wir eine Breite der Rechtecke von $\frac{1}{4}$.\vspace{7pt}
+
+	\begin{minipage}[t]{0.49\textwidth}
 		\centering\includegraphics[width=0.7\textwidth]{x2_USumme8.png}\\
 		Die Höhe der Rechtecke ist also:
 		\begin{enumerate}[label=\ ]\begin{multicols}{2}
@@ -123,7 +120,7 @@
 		\end{align*}
 	\end{minipage}
 	\hfill
-	\begin{minipage}{0.8\linewidth}
+	\begin{minipage}[t]{0.49\textwidth}
 		\centering\includegraphics[width=0.7\textwidth]{x2_OSumme8.png}\\
 		Die Höhe der Rechtecke ist also:
 		\begin{enumerate}[label=\ ]\begin{multicols}{2}
@@ -143,8 +140,9 @@
 		\end{align*}
 	\end{minipage}
 	Zusammenfassend sehen wir also, dass wir die Berechnung für die Fläche verbessern konnten und neu nur noch eine Ungenauigkeit von $1$ aufweist.\[2.1875<A<3.1875\]
-	Natürlich können wir jetzt die die Anzahl Rechtecke erneut verdoppeln und so eine noch genauere Abschätzung erhalten. Wir sehen dann:\\
-	\begin{minipage}{0.8\linewidth}
+	Natürlich können wir jetzt die die Anzahl Rechtecke erneut verdoppeln und so eine noch genauere Abschätzung erhalten. Wir sehen dann:\vspace{-21pt}
+
+	\begin{minipage}[t]{0.49\textwidth}
 		\begin{align*}
 			n&=16:\qquad &&U_{16}=2.421875 \\
 			n&=32:\qquad &&U_{32}=2.542968\ldots\\
@@ -153,7 +151,7 @@
 		\end{align*}
 	\end{minipage}
 	\hfill
-	\begin{minipage}{0.8\linewidth}
+	\begin{minipage}[t]{0.49\textwidth}
 		\begin{align*}
 			n&=16:\qquad &&O_{16}=2.921875\\
 			n&=32:\qquad &&O_{32}=2.792968\ldots\\
@@ -195,7 +193,7 @@
 	\footnotetext{\url{https://www.geogebra.org/m/vzjzrfdj}}
 	\begin{definition}[bestimmtes Integral]
 		Das bestimmte Integral einer Funktion $f$ im Intervall $\left[a,b\right]$ entspricht der Fläche unter der Kurve im Intervall $\left[a,b\right]$ und ist der Grenzwert des Ober- bzw. Untersumme.
-		\[\int_a^b f(x)\:\d{x}=\lim_{n\to\infty}U_n=\lim_{n\to\infty}O_n\]
+		\[\int_a^b f(x)\d{x}=\lim_{n\to\infty}U_n=\lim_{n\to\infty}O_n\]
 
 		\textit{Sprich:} Integral $f(x)$ für $x$ von $a$ bis $b$\\
 		\textbf{TR:} Menü $\to\:4\:\to\:3$
@@ -205,21 +203,28 @@
 		\item Spezialfall $a=b$:\\ Falls die beiden Grenze zusammenfallen, so ist die Breite der Rechtecke $\gap{2}$ und damit sind sowohl die Ober- als auch die Untersumme ebenfalls gleich $0$. Das heisst: \[\gap{5}.\]
 		\item Spezialfall $a>b$:\\ Falls $a$ grösser ist als $b$, so gilt für die Breite der Rechtecke $\gap{2}$ und damit ändert sich auch das Vorzeichen des Integrals \[\gap{5}.\]
 	\end{enumerate}
-	\begin{satz}
-		Satz vertauschen der Integrationsgrenzen und aufteilen der Integrationsgrenzen...
-	\end{satz}
 	\begin{aufgabe}
-		Skizziere für die folgenden Funktionen den Graphen und markiere darin die gesuchte Fläche.
-		\begin{enumerate}[label=\alph*)]\begin{multicols}{4}
-				\item $\displaystyle\int_0^2 3x^2\:\d{x}$
-				\item $\displaystyle\int_1^3 x^3\:\d{x}$
-				\item $\displaystyle\int_2^4(x^2+3)\:\d{x}$
-				\item $\displaystyle\int_1^3(x^2-4x)\:\d{x}$
-				\item $\displaystyle\int_0^4 \sqrt{x}\:\d{x}$
-				\item $\displaystyle\int_0^1 5x\sqrt{x}\:\d{x}$
-				\item $\displaystyle\int_0^\frac{\pi}{2}\cos{x}\:\d{x}$
-				\item $\displaystyle\int_1^\pi\sin{x}\:\d{x}$
-		\end{multicols}\end{enumerate}
+		Skizziere für die folgenden Funktionen den Graphen, markiere darin die gesuchte Fläche und berechne die exakten Werte des bestimmten Integrals mithilfe des Taschenrechners.
+		\begin{enumcols}[4]
+			\item $\displaystyle\int_0^2 3x^2\d{x}$
+			\item $\displaystyle\int_1^3 x^3\d{x}$
+			\item $\displaystyle\int_2^4(x^2+3)\d{x}$
+			\item $\displaystyle\int_1^3(x^2-4x)\d{x}$
+			\item $\displaystyle\int_0^4 \sqrt{x}\d{x}$
+			\item $\displaystyle\int_0^1 5x\sqrt{x}\d{x}$
+			\item $\displaystyle\int_0^\frac{\pi}{2}\cos{x}\d{x}$
+			\item $\displaystyle\int_1^\pi\sin{x}\d{x}$
+		\end{enumcols}
+	\end{aufgabe}
+	Nach diesem ersten Kennenlernen wollen wir weitere Eigenschaften des bestimmten Integrals erschliessen. Dazu untersuchen wir in der folgenden Aufgabe den Einfluss unterschiedlicher Grenzen auf die Flächenberechnungen.
+	\begin{aufgabe}
+		Betrachte für alle Teilaufgaben dieser Aufgabe die Funktion $f(x)=\frac{2}{5}x^3+\frac{6}{5}x^2+3x+5$.
+		\begin{enumerate}[label=\alph*)]
+			\item Berechne die Ober- und Untersumme der Fläche unter der Kurve zwischen $a=0$ und $b=3$ mit Hilfe von $6$ Rechtecken mit Breite $0.5$.
+			\item Berechne die Ober- und Untersumme der Fläche unter der Kurve zwischen $a=3$ und $b=5$ mit Hilfe von $4$ Rechtecken der Breite $0.5$.
+			\item Vergleiche die Resultate für die Ober- und Untersummen aus $a)$ und $b)$ mit der Fläche unter der Kurve zwischen $a=0$ und $b=5$ mithilfe von gleich breiten Rechtecken.
+		\end{enumerate}
+		\karos{5.5}
 	\end{aufgabe}
 	\newpage
 
@@ -262,7 +267,7 @@
 	\end{satz}
 	\begin{notation}
 		Das unbestimmte Integral einer Funktion $f$ ist die Menge aller Stammfunktionen $F$.\\ Schreibweisen:
-		\[\int f(x)\:\d x \text{ oder } F(x)+c\]
+		\[\int f(x)\d{x} \text{ oder } F(x)+c\]
 	\end{notation}
 	Die Rechenregeln für die Integrale sind im Grunde die gleichen wie fürs Ableiten. Ausgenommen davon sind die Produkt-, Quotienten- und Kettenregel.
 	\begin{satz}[Rechenregeln]
