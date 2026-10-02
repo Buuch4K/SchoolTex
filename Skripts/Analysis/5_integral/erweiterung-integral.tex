@@ -1,8 +1,211 @@
 \section{Erweiterung Integralrechnung}
 \subsection{Uneigentliche Integrale}
-	blablabla %Skript-Atchu --> PDF/LATEX
+	In diesem Abschnitt wollen wir untersuchen, ob und wie unbegrenzte Flächen unter einer Kurve berechnet werden können und welche Herausforderungen dabei zu meistern sind. Starten wir mit einem ganz einfachen Rätsel.
+	\begin{aufgabe}[Reicht unendlich viel Farbe für eine unendlich lange Fläche?]
+		\begin{enumerate}[label=\alph*)]
+			\item Betrachte die beiden Graphen von $f(x)=\frac{1}{x^2}$ und $g(x)=\frac{1}{x}$ mit der linken Grenze $a=1$. Nach rechts ist die Fläche unbegrenzt und wird dabei aber immer flacher. Du sollst die Fläche zwischen Graph und $x-$Achse ausmalen. Entscheide und begründe, ob endlich viel Farbe reicht?
+		\end{enumerate}
+		\begin{figure}[H]
+			\centering\vspace{-5mm}
+			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=20mm,
+				>=latex,   %Voreinstellung für Pfeilspitzen
+				font= \footnotesize, scale=1]
+				%Raster zeichnen
+				\draw [color=gray!50]  [step=5mm] (-1,-2) grid (15,2.25);
+				\clip(-0.8,-0.8) rectangle (15,2.25); %Bildbereich
+				% Achsen zeichnen
+				\draw[->,thick] (-0.8,0) -- (5.8,0) node[right, below] {\normalsize $x$};
+				\draw[->,thick] (0,-0.4) -- (0,1.8) node[above, left] {\normalsize $y$};
+				% Achsen beschriften
+				\foreach \x in {1,2,...,5} \draw (\x,-.05) -- (\x,.05) node[below=4pt] {$\x$};
+				\foreach \y in {0.5,1,1.5} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+				% Besserer Ursprung
+				\draw[color=black] (0pt,-7pt) node[left] {$0$};
+				%Funktionen zeichnen:
+				\fill[plotblue, domain=1:5.3,smooth, variable=\x, fill opacity=0.3]	(1,0) -- plot ({\x},{pow(\x,-2)}) -- (5.3,0) -- cycle;
+				\draw[plotblue, smooth,thick, domain=0.8:5.3] plot (\x, {pow(\x,-2)}) node[above] {\normalsize$f$};
+				%================ Zweiter Graph
+				% Achsen zeichnen
+				\draw[->,thick] (7.7,0) -- (14.3,0) node[right, below] {\normalsize $x$};
+				\draw[->,thick] (8.5,-0.4) -- (8.5,1.8) node[above, left] {\normalsize $y$};
+				% Achsen beschriften
+				\foreach \x/\label in {9.5/1,10.5/2,11.5/3,12.5/4,13.5/5} \draw (\x,-.05) -- (\x,.05) node[below=4pt] {$\label$};
+				\foreach \y in {0.5,1,1.5} \draw (8.4,\y) -- (8.6,\y) node[left=4pt] {$\y$};
+				% Besserer Ursprung
+				\draw[color=black] (8.49,-7pt) node[left] {$0$};
+				%Funktionen zeichnen:
+				\fill[forestgreen, domain=9.5:14,smooth, variable=\x, fill opacity=0.3]	(9.5,0) -- plot ({\x},{pow((\x-8.5),-1)}) -- (14,0) -- cycle;
+				\draw[forestgreen, smooth,thick, domain=9.1:14] plot (\x, {pow((\x-8.5),-1)}) node[above] {\normalsize$g$};
+			\end{tikzpicture}
+		\end{figure}
+		\begin{enumerate}[label=\alph*)]
+			\setcounter{enumi}{1}
+			\item Berechne für beide Funktionen die Fläche $A(b)$ bis zur gegebenen Stelle $b$ mithilfe eines geeigneten Integrals.
+			\begingroup
+			\renewcommand{\arraystretch}{2}
+			\begin{table}[H]
+				\centering
+				\begin{tabular}{|c|>{\centering\arraybackslash}p{17mm}|>{\centering\arraybackslash}p{17mm}|>{\centering\arraybackslash}p{17mm}|>{\centering\arraybackslash}p{17mm}|>{\centering\arraybackslash}p{17mm}|}\hline
+					$b$ & $2$ & $10$ & $100$ & $1000$ & $1'000'000$ \\[2pt]\hline
+					$\ds\int_{1}^{b}\frac{1}{x^2}\d{x}$ & & & & & \\[2pt]\hline
+					$\ds\int_{1}^{b}\frac{1}{x}\d{x}$ & & & & & \\[2pt]\hline
+				\end{tabular}
+			\end{table}
+			\endgroup
+			Was beobachtest du bei den beiden Zeilen? Formuliere daraus eine Vermutung:
+		\end{enumerate}
+		\karos{2.5}
+	\end{aufgabe}
+	Daraus erkennen wir das grundlegende Problem:\\
+	Der Hauptsatz der Integralrechnung besagt: $\ds\int_{a}^{b}f(x)\d{x} = F(b) - F(a)$. Das funktioniert nur, wenn $a$ und $b$ \textbf{Zahlen} sind. Aber $\infty$ ist keine Zahl, $F(\infty)$ ist nicht definiert. Wir brauchen eine neue Idee.  Wir rechnen nur bis zu einer beliebigen Grenze $p$ und lassen $p$ danach über alle Grenzen wachsen. Das ist genau der Grenzwert, den du aus der Analysis kennst.
+	\begin{definition}[uneigentliches Integral Typ \Romannum{1}]
+		Wird im Integral eine Fläche über ein unbeschränktes Intervall berechnet, spricht man von einem \textbf{uneigentlichen Integral von Typ \Romannum{1}}.
+		\[\int_{a}^{\infty}f(x)\d{x}=\lim_{p\to\infty}\int_{a}^{p}f(x)\d{x} \qquad \int_{-\infty}^{b}f(x)\d{x}=\lim_{p\to-\infty}\int_{p}^{b}f(x)\d{x}\]
+		Existiert der Grenzwert als \textbf{endliche Zahl}, so heisst der Integral \textbf{konvergent} und die Zahl ist sein Wert. Sonst heisst es \textbf{divergent}.
+	\end{definition}
 	\begin{beispiel}
-		Gabriels Horn
+		Lasst uns die Fläche unter den beiden Funktionen der Einstiegsaufgabe noch exakt berechnen:
+		\begin{gridspace}{4.5}
+			\begin{enumerate}[label=\ ]\vspace{-2.5mm}
+				\item $\ds\int_{1}^{\infty}\frac{1}{x^2}\d{x}=$
+				\item
+				\item $\ds\int_{1}^{\infty}\frac{1}{x}\d{x}=$
+			\end{enumerate}
+		\end{gridspace}
+	\end{beispiel}
+	\begin{satz}
+		Dabei bleibt also festzuhalten, dass es als Konvergenzbedingung nicht reicht, wenn die Funktion $f(x)\lto 0$ für $x\lto\infty$. Die Funktion muss insgesamt auch \flqq schnell genug\frqq\:abfallen. Ob dies wirklich der Fall ist, kann erst im Grenzwert der Stammfunktion herausgefunden werden.
+	\end{satz}
+	\begin{aufgabe}
+		\begin{enumerate}
+			\item Untersuche die Graphen der folgenden Funktionen auf mögliche uneigentliche Integrale und notiere dir mindestens je zwei verschiedene.
+			\begin{enumcols}[2]
+				\item $\ds f(x)=\frac{2x+4}{x^3}$
+				\item $\ds f(x)=\frac{x^3-5}{x^6}$
+			\end{enumcols}
+			\item Berechne je eines der gefundenen uneigentlichen Integrale von Hand exakt.
+		\end{enumerate}
+	\end{aufgabe}
+	Bis jetzt war die Unendlichkeit immer am Rand des Intervalls versteckt. Was, wenn diese aber in der gegebenen Funktion selbst liegt? Wie sollen wir in diesem Fall vorgehen? Können wir auch diese Integrale berechnen?
+
+	\begin{minipage}{0.65\textwidth}
+		Die Grenzen sind harmlos, und trotzdem stimmt etwas nicht. Betrachte das Integral $\ds\int_{0}^{2}\frac{1}{\sqrt{x}}\d{x}$ mit den Grenzen $a=0$ und $b=2$, welches normale ganze Zahlen sind.\\ Jedoch ist die Funktion $f$ bei $x=0$ \textbf{nicht} definiert, und der Graph schiesst dort senkrecht nach oben. Ist die Fläche trotzdem endlich?
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.325\textwidth}
+		\centering
+		\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+			>=latex,   %Voreinstellung für Pfeilspitzen
+			font= \footnotesize, scale=0.8]
+			%Raster zeichnen
+			\draw [color=gray!50]  [step=5mm] (-.3,-.3) grid (4.3,4.3);
+			% Achsen zeichnen
+			\draw[->,thick] (-0.8,0) -- (4.8,0) node[right, below] {\normalsize $x$};
+			\draw[->,thick] (0,-0.8) -- (0,4.8) node[above, left] {\normalsize $y$};
+			% Achsen beschriften
+			\foreach \x in {1,2,...,4} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+			\foreach \y in {1,2,...,4} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+			% Besserer Ursprung
+			\draw[color=black] (0pt,-7pt) node[left] {$0$};
+			%Funktionen zeichnen:
+			\clip(-.3,-.3) rectangle (4.3,4.3); %Bildbereich
+			\fill[plotblue, domain=0.01:2,smooth, variable=\x, fill opacity=0.3]	(0.01,0) -- plot ({\x},{pow((\x),{-0.5})}) -- (2,0) -- cycle;
+			\draw[plotblue, thick, samples=100, domain=0.01:4.1] plot (\x, {pow((\x),-0.5)}) node[above] {\normalsize$f$};
+		\end{tikzpicture}
+	\end{minipage}
+	\begin{aufgabe}[Von rechts an die Definitionslücke heranrücken]
+		Berechne die Fläche der unter der Kurve systematisch und stelle eine Vermutung für den Grenzwert auf.
+		\begingroup
+		\renewcommand{\arraystretch}{2}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|c|>{\centering\arraybackslash}p{17mm}|>{\centering\arraybackslash}p{17mm}|>{\centering\arraybackslash}p{17mm}|>{\centering\arraybackslash}p{17mm}|>{\centering\arraybackslash}p{17mm}|}\hline
+				$a$ & $0.1$ & $0.01$ & $0.001$ & $0.0001$ & $0.0000001$ \\[2pt]\hline
+				$\ds\int_{a}^{2}\frac{1}{\sqrt{x}}\d{x}$ & & & & & \\[2pt]\hline
+			\end{tabular}
+		\end{table}
+		\endgroup
+		Formuliere daraus eine Vermutung:\\[5pt]\karos{2.5}
+	\end{aufgabe}
+	\begin{definition}
+		Hat eine gegebene Funktion an der Stelle $\boldsymbol{a}$ (linker Rand) eine Definitionslücke, so gilt für der Integral \[\int_{a}^{b}f(x)\d{x}=\lim_{p\to a^+}\int_{p}^{b}f(x)\d{x}\]
+		Liegt die Definitionslücke an der Stelle $\boldsymbol{b}$ (rechter Rand), so gilt für das Integral \[\int_{a}^{b}f(x)\d{x}=\lim_{p\to b^-}\int_{a}^{p}f(x)\d{x}\]
+		Liegt eine Definitionslücke $\boldsymbol{c}$ innerhalb der Interval $\left[a,b\right]$, muss das Integral in zwei einzelne Teile $\int_{a}^{c}+\int_{c}^{b}$ aufgeteilt und beide Teile einzeln als uneigentliche Integrale behandelt werden. In allen Fällen spricht man hier von einem \textbf{uneigentlichen Integral Typ \Romannum{2}}.
+	\end{definition}
+	\begin{beispiel}
+		Lasst uns die Fläche unter der Funktion der Einstiegsaufgabe noch exakt berechnen:
+		\begin{gridspace}{2.5}
+			\begin{enumerate}[label=\ ]\vspace{-2.5mm}
+				\item $\ds\int_{1}^{\infty}\frac{1}{x^2}\d{x}=$
+			\end{enumerate}
+		\end{gridspace}
+	\end{beispiel}
+	\begin{satz}[ist das Integral uneigentlich?]
+		\begin{enumerate}
+			\item Ist eine Integrationsgrenze $-\infty$ oder $+\infty$? $\ds\quad\Longrightarrow$ \textbf{Typ \Romannum{1}}
+			\item Gibt es im Interval $\left[a,b\right]$ eine Stelle an der $f$ nicht definiert ist und somit gegen $-\infty$ oder $+\infty$ strebt $\ds\quad\Longrightarrow$ \textbf{Typ \Romannum{2}}
+		\end{enumerate}
+		\textbf{Wichtig:} Die beiden Fälle sind nicht exklusiv. Das heisst, in einem Integral können auch beide Fälle auftreten.
+	\end{satz}
+	\begin{aufgabe}
+		\begin{enumerate}
+			\item Untersuche die Graphen der folgenden Funktionen und entscheide für jedes dieser Integrale, ob es sich um ein uneigentliches Integral handelt. Bestimme zudem den jeweiligen Typ und welche Stelle das Problem darstellt.\\ Du musst die Integrale nicht komplett berechnen!
+			\begin{enumcols}[3]
+				\item $\ds\int_{0}^{3}x^2\d{x}$
+				\item $\ds\int_{2}^{\infty}\frac{3}{x^2}\d{x}$
+				\item $\ds\int_{0}^{1}\frac{1}{x}\d{x}$
+				\item $\ds\int_{4}^{1}\frac{1}{x-5}\d{x}$
+				\item $\ds\int_{-\infty}^{0}\exp{-x}\d{x}$
+				\item $\ds\int_{0}^{2}\frac{1}{x-1}\d{x}$
+				\item $\ds\int_{-\infty}^{-2}\frac{1}{(x+1)^3}\d{x}$
+				\item $\ds\int_{0}^{1}\ln{x}\d{x}$
+				\item $\ds\int_{3}^{\infty}\frac{5+x}{x^3}\d{x}$
+			\end{enumcols}
+			\item Berechne die folgenden uneigentlichen Integrale, sofern es existiert. Notiere in jeder Aufgabe, welches die Problemstelle ist, welcher Typ daraus resultiert und ob das Integral konvergiert oder divergiert.
+			\begin{enumcols}[3]
+				\item $\ds\int_{1}^{\infty}\frac{1}{x^3}\d{x}$
+				\item $\ds\int_{0}^{\infty}\exp{-x}\d{x}$
+				\item $\ds\int_{0}^{1}\frac{1}{\sqrt[3]{x}}\d{x}$
+				\item $\ds\int_{1}^{\infty}\frac{1}{\sqrt{x}}\d{x}$
+				\item $\ds\int_{-\infty}^{-1}-4x^{-3}\d{x}$
+				\item $\ds\int_{0}^{2}\frac{1}{(x-1)^2}\d{x}$
+			\end{enumcols}
+		\end{enumerate}
+	\end{aufgabe}
+	\begin{beispiel}
+		Das Maler Paradoxon\\[5pt]
+		\begin{minipage}{0.7\textwidth}
+			\flqq Mit einer bestimmten Menge Farbe kann das gesamte Gabriels Horn gefüllt werden. Jedoch ist die Mantelfläche des Horns unendlich gross und somit ist es scheinbar möglich, diese unendlich grosse Fläche mit einer endlichen Menge an Farbe anzumalen.\frqq\\[14pt] Das Gabriels Horn wird mathematisch gesehen als Rotationskörper mit der Randfunktion $f(x)=\frac{1}{x}$ im Interval $\left[1,\infty\right]$ definiert. Das heisst, betrachten wir den Funktionsgraphen im zwei dimensionalen Koordinatensystem sieht die Situation folgendermassen aus:
+			\begin{figure}[H]
+				\centering
+				\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+					>=latex,   %Voreinstellung für Pfeilspitzen
+					font= \footnotesize, scale=1]
+					%Raster zeichnen
+					\draw [color=gray!50]  [step=5mm] (-.3,-1.3) grid (9.3,1.3);
+					% Achsen zeichnen
+					\draw[->,thick] (-0.3,0) -- (9.8,0) node[right, below] {\normalsize $x$};
+					\draw[->,thick] (0,-1.3) -- (0,1.5) node[above, left] {\normalsize $y$};
+					% Achsen beschriften
+					\foreach \x in {1,2,...,9} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+					\foreach \y in {1} \draw (-0.1,\y) -- (0.1,\y) node[left=4pt] {$\y$};
+					% Besserer Ursprung
+					\draw[color=black] (2pt,-7pt) node[left] {$0$};
+					%Funktionen zeichnen:
+					\clip(-0.3,-1.3) rectangle (9.8,1.3); %Bildbereich
+					\fill[plotblue, smooth, domain=1:9.3, variable=\x, fill opacity=0.3]	(1,0) -- plot ({\x},{pow((\x),-1)}) -- (9.3,0) -- cycle;
+					\draw[plotblue, samples=100, thick, domain=0.8:9.3] plot (\x, {pow((\x),-1)}) node[above] {\normalsize$f$};
+					\draw[dashed, plotblue, samples=100, thick, domain=0.8:9.3] plot (\x, {-pow((\x),-1)}) node[] {};
+				\end{tikzpicture}
+			\end{figure}
+			\vspace{5pt}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.275\textwidth}
+			\centering\includegraphics[scale=0.2]{engelgabriel.png}
+		\end{minipage}
+		Berechne das Volumen des so entstehenden Rotationskörpers: \\[5pt]\karos{3.5}
+		Analog zum Volumen eines Rotationskörpers können wir mittels einer Formel eines Integrals die Mantelfläche eines Rotationskörpers berechnen. Die Idee dabei ist die Mantelfläche über eine Summe von stumpfen Kegeln anzunähern. Dabei findet man folgende Formel \[M=2\pi\int_{a}^{b} f(x)\*\sqrt{1+(f'(x))^2}\d{x}.\] Ohne diese Formel vollständig zu verstehen, lasst uns versuchen die Mantelfläche im obigen Beispiel zu berechnen. \\[5pt]\karos{5.5}
 	\end{beispiel}
 
 \subsection{Integrationsregel für Fortgeschrittene}
