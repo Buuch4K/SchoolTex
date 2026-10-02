@@ -290,7 +290,7 @@
     minimum height=2em]
 
 % Karriertes Papier für Antwort
-\newcommand{\karos}[1]{\begin{tikzpicture}\draw[step=0.5cm,color=gray!55] (0,0) grid (\linewidth,#1 cm);\end{tikzpicture}}
+\newcommand{\karos}[1]{\begin{tikzpicture}\draw[step=0.5cm,color=gray!50] (0,0) grid (\linewidth,#1 cm);\end{tikzpicture}}
 
 % Karriertes Papier für Antwort MIT OVERLAY
 \newtcolorbox{gridspace}[1]{%
@@ -325,5 +325,5 @@
 	after upper={
 		\endgroup},
 	underlay={
-		\draw[step=5mm,color=gray!55] (interior.south west) grid (interior.north east);}
+		\draw[step=5mm,color=gray!50] (interior.south west) grid (interior.north east);}
 }
