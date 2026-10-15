@@ -208,9 +208,323 @@
 		Analog zum Volumen eines Rotationskörpers können wir mittels einer Formel eines Integrals die Mantelfläche eines Rotationskörpers berechnen. Die Idee dabei ist die Mantelfläche über eine Summe von stumpfen Kegeln anzunähern. Dabei findet man folgende Formel \[M=2\pi\int_{a}^{b} f(x)\*\sqrt{1+(f'(x))^2}\d{x}.\] Ohne diese Formel vollständig zu verstehen, lasst uns versuchen die Mantelfläche im obigen Beispiel zu berechnen. \\[5pt]\karos{5.5}
 	\end{beispiel}
 
+\newpage
 \subsection{Integrationsregel für Fortgeschrittene}
+	Wir wissen bereits das Integieren lediglich die Umkehrung der Ableitung bewirkt und haben für verschiedene grundlegende Funktionen auch bereits Regeln hergeleitet, mit denen wir Integrale berechnen können. Jedoch gibt es nach wie vor eine grosse Menge an Funktionen, vor allem Produkte und verkettete Funktionen, die wir noch nicht integrieren können. Ein Beispiel ist etwa \[\int x\*\cos{x}\d{x}=\:?\] In diesem Abschnitt wollen wir diese Lücken schliessen und weitere Integrationsregel herleiten.
 \subsubsection{Partielle Integration}
+	\vspace{5pt}
+	\begin{aufgabe}
+		Betrachte das folgende Integral $\ds\int x\*\exp{x}\d{x}$ bestehend aus zwei einfachen Faktoren, die du beide problemlos integrieren kannst. Gib dir $2$ Minuten, um eine mögliche Stammfunktion zu finden und kontrolliere deinen Versuch, in dem du sie ableitest.\\[5pt]\karos{3.5}
+	\end{aufgabe}
+	Lass uns das ganze ein wenig systematische angehen. Wir haben gesehen, dass die Funktion $f(x)=\exp{x}$ in der Ableitung und im Integral einfach gleich bleibt. Deshalb nehmen wir an, die Stammfunktion bleibt auch in diesem Fall gleich. Also gilt $F(x)=x\*\exp{x}$. Zur Kontrolle leiten wir diese Stammfunktion ab: \\[5pt]\karos{3.5}
+	Vergleiche nun mit der Funktion $G(x)=\exp{x}\*(x-1)$. Ist dies eine korrekte Stammfunktion? \\[5pt]\karos{3.5}
+	Wir stellen also fest, dass ähnlich wie die Produktregel beim Ableiten für das Produkt von Funktionen im Integral die herkömmlichen Regeln nicht mehr reichen. Da wir aber die Produktregel fürs Ableiten bereits kennen, können wir damit begründen, wie diese Stammfunktion gebildet werden kann?\\[5pt]\karos{5.5}
+	\begin{satz}[Partielle Integration]\label{satz:partielleIntegration}
+		Werden in einem Integral zwei Funktionen miteinander multipliziert, muss der eine Faktor \emph{abgeleitet} ($u\lto u'$) und der andere \emph{integriert} ($v'\lto v$) werden.
+		{\begin{center}\lineortext{$\ds\qquad\int u(x)\* v'(x)\d{x} = u(x)\* v(x)-\int u'(x)\* v(x)\d{x}\qquad$}\end{center}}
+		Das neue Integral sollte schlussendlich einfacher sein als das alte. Dies kommt aber sehr auf die Wahl der jeweiligen Faktoren an.
+	\end{satz}
+	\begin{beispiel}\ \\
+		\vspace{-8mm}
+		\begin{gridspace}{5.5}
+			\begin{enumerate}[label=\ , leftmargin=0mm]\vspace{-1.75mm}
+				\item $\ds\int x\*\exp{x}\d{x}$
+				\item
+				\item $\ds\int x\*\cos{x}\d{x}$
+			\end{enumerate}
+		\end{gridspace}
+	\end{beispiel}
+	\begin{aufgabe}
+		Bestimme die folgenden unbestimmten Integrale.
+			\begin{enumcols}[2]
+				\item $\ds\int x\*\sqrt{x}\d{x}$
+				\item $\ds\int 2x\*\exp{-x}\d{x}$
+				\item $\ds\int (x+1)\*\sin{x}\d{x}$
+				\item $\ds\int x\*\ln{x}\d{x}$
+			\end{enumcols}
+	\end{aufgabe}
+	Im Satz \thesection.\ref{satz:partielleIntegration} wird darauf hingewiesen, dass die Wahl der jeweiligen Faktoren entscheidend ist. Welche Schwierigkeiten damit verbunden sind, sollen hier genauer erläutert werden. Betrachte dazu die folgenden zwei Lösungsansätze.
+	\begin{aufgabe}
+		Anna und Ben versuchen, beide das gleiche Integral $\ds\int x\*\sin{x}\d{x}$ zu berechnen. Dabei nehmen beide die partielle Integration zur Hilfe aber wählen die Faktoren gegenseitig.
+		\begin{gridspace}{5.5}
+			\begin{enumerate}[label=\ ,leftmargin=0mm]
+				\item {\bf Anna:} ($u=x,\:\: v'=\sin{x}$)
+				\item
+				\item {\bf Ben:} ($u=\sin{x},\:\: v'=x$)
+			\end{enumerate}
+		\end{gridspace}
+	\end{aufgabe}
+	Wir sehen also, die Formel ist immer richtig, aber nicht immer nützlich. Entscheidend ist, dass das neue Integral $\ds\int u'(x)\*v(x)\d{x}$ einfacher wird als das alte. Bei Ben steigt der Grad von $x$ auf $x^2$: Damit wird das Integral jedoch schwieriger. Es stellt sich also die Frage: \flqq Wie wählt man also klug?\frqq
+	\begin{aufgabe}
+		Entscheide pro Integral in max. einer Minute: Welcher Faktor abgeleitet ($u$) und welcher integriert ($v'$) wird? Du musst die Integrale nicht vollständig berechnen.
+		\begingroup
+		\renewcommand{\arraystretch}{2}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{c p{4cm}>{\centering\arraybackslash}p{4cm}>{\centering\arraybackslash}p{4cm}}
+				 & \textbf{Integral} & \textbf{abgeleitet ($v$)} & \textbf{integriert ($u'$)} \\
+				(a) & $\ds\int x\*\exp{3x}\d{x}$ & \gap{3.5} & \gap{3.5} \\
+				(b) & $\ds\int x\*\ln{x}\d{x}$ & \gap{3.5} & \gap{3.5} \\
+				(c) & $\ds\int (x^2+1)\*\exp{-x}\d{x}$ & \gap{3.5} & \gap{3.5} \\
+				(d) & $\ds\int \sqrt{x}\*\ln{x}\d{x}$ & \gap{3.5} & \gap{3.5} \\
+				(e) & $\ds\int x\*\sin{2x}\d{x}$ & \gap{3.5} & \gap{3.5} \\
+				(f) & $\ds\int \frac{\ln{x}}{x^2}\d{x}$ & \gap{3.5} & \gap{3.5} \\
+			\end{tabular}
+		\end{table}
+		\endgroup
+	\end{aufgabe}
+	Daraus lässt sich also eine Faustregel bilden, die in der Entscheidung unterstützen kann. Wir müssten trotzdem vorsichtig sein, denn diese Wahl folgt nicht konsequent dieser Regel.
+	\begin{satz}[Faustregel]
+		Polynom und Logarithmus ableiten, e-Funktion und Sinus/Kosinus integrieren. Sieht das neue Integral schwieriger aus, tausche die Wahl. Das kostet nur eine Zeile. Vereinfache $u'\*v$, bevor du integrierst.
+	\end{satz}
+	\begin{aufgabe}
+		\begin{enumerate}
+			\item Berechne die folgenden Stammfunktionen und überlege dir dabei jeweils zuerst, welcher Faktor abgeleitet und welcher integriert werden soll.
+			\begin{enumcols}[2]
+				\item $\ds\int x\*\sin{x}\d{x}$
+				\item $\ds\int (x-3)\*\exp{-x}\d{x}$
+				\item $\ds\int \sqrt{x}\*\ln{x}\d{x}$
+				\item $\ds\int \frac{\ln{x}}{x^2}\d{x}$
+			\end{enumcols}
+			\item Welche Fläche schliessen die $x-$Achse und die Funktion $f(x)=x^2\*\exp{x}$ im Intervall $\left[0,1\right]$ ein?
+		\end{enumerate}
+	\end{aufgabe}
+	In der zweiten Teilaufgabe oben haben wir eine Funktion gesehen, die nicht durch einmaliges Integrieren berechnet werden kann. Denn das zweite \flqq vereinfachte\frqq\:Integral besteht nach wie vor aus einem Produkt. Durch erneute partielle Integration lässt sich das Integral schliesslich berechnen. Wir sehen hier also, dass die partielle Integration nicht immer bei der ersten Anwendung die nötige Vereinfachung mit sich bringt, um jedes Integral direkt berechnen zu können.
+	\begin{aufgabe}
+		Das Ziel dieser Aufgabe ist, mit Hilfe wiederholter Anwendung der partiellen Integration das Integral $\ds\int \exp{x}\*\sin{x}\d{x}$ zu berechnen.
+		\begin{enumerate}[label=\alph*)]
+			\item Wähle für die ersten Anwendung die Faktoren wie folgt: $u(x)=\sin{x}$ und $v'(x)=\exp{x}$.
+		\end{enumerate}
+		\karos{3.5}
+		\begin{enumerate}[label=\alph*)]
+			\setcounter{enumi}{1}
+			\item Wähle nun für die zweite Anwendung die Faktoren gleich wie bei der ersten; also $u=\cos{x}$ und $v'(x)=\exp{x}$.
+		\end{enumerate}
+		\karos{3.5}
+		\begin{enumerate}[label=\alph*)]
+			\setcounter{enumi}{2}
+			\item Vergleiche nun das Integral nach der zweiten Anwendung mit dem ursprünglichen. Was fällt die dabei auf?
+		\end{enumerate}
+		\karos{2.5}
+		\begin{enumerate}[label=\alph*)]
+			\setcounter{enumi}{3}
+			\item Verwende die se Erkenntnis, um das ursprüngliche Integral zu berechnen:
+		\end{enumerate}
+		\begin{gridspace}{5.5}
+			\vspace{-2mm}
+			\begin{enumerate}[label=\ ,leftmargin=0mm]
+				\item $\ds\int \exp{x}\*\sin{x}\d{x}=$
+			\end{enumerate}
+		\end{gridspace}
+	\end{aufgabe}
+	\begin{aufgabe}
+		\begin{enumerate}
+			\item Berechne die folgenden unbestimmten Integrale mit Hilfe einer geeigeten mehrfachen Anwendung der partiellen Integration.
+			\begin{enumcols}[2]
+				\item $\ds\int x^2\*\exp{x}\d{x}$
+				\item $\ds\int x^2\*\sin{x}\d{x}$
+				\item $\ds\int \exp{x}\*\cos{x}\d{x}$
+				\item $\ds\int \left(\cos{x}\right)^2\d{x}$
+			\end{enumcols}
+			\item Skizziere die folgenden Flächen zuerst im Koordinatensystem und berechne sie im Anschluss.
+			\begin{enumcols}[2]
+				\item $\ds\int_{0}^{3} x\*\exp{-x}\d{x}$
+				\item $\ds\int_{0}^{\e} x^2\*\sin{x}\d{x}$
+				\item $\ds\int_{0}^{\frac{\pi}{2}} x\*\cos{x}\d{x}$
+				\item $\ds\int_{\pi}^{2\pi} \sin{x}\*\cos{x}\d{x}$
+			\end{enumcols}
+		\end{enumerate}
+	\end{aufgabe}
 
 \subsubsection{Substitutionsmethode}
-	blablabla
+	\begin{beispiel}
+		Die Integration durch Substitution kommt häufig dann zu Einsatz wenn eine verkettete Funktion zu integrieren ist. Betrachten wir das auf den ersten Blick abschreckend wirkende Integral \[\int\exp{\sin{x}}\*\cos{x}\d{x}.\] Darin steckt eine verkettete Funktion, nähnlich die Funktion $\ds(f\circ g)(x)=f(g(x))=\exp{\sin{x}}$ mit der inneren Funktion $g(x)=\sin{x}$ und der äusseren Funktion $f(x)=\exp{x}$. Zusätzlich kommt ein weiterer Term, $\cos{x}$, im Integral vor. Dieser ist zufälligerweise gerade die Ableitung der inneren Funkion. Das vorliegende Integral kann also in allgemeiner Form wie folgt geschrieben werden: \[\int f(g(x))\*g'(x)\d{x}.\] Dieser Ausdruck erinnert sicherlich stark an die Kettenregel. Nur wie kann ich die Kettenregel sinnvoll umdrehen?\\[5pt]\karos{5.5}
+	\end{beispiel}
+	Daraus folgt eine hilfreiche Regel, die mittels geeigneter Substitution Integrale von verketteten Funktionen berechnen lässt.
+	\begin{satz}[Substitutionsmethode]
+		Seien $f$ und $g$ zwei beliebige Funktionen. Dann gilt: \[\int f(g(x))\*g'(x)\d{x}=\int f(u)\d{u}\:\left\vert_{u=g(x)}\right.\]
+	\end{satz}
+	\begin{beispiel}
+		Lasst uns ein weiteres Beispiel betrachten, bei dem wir jedoch ein bestimmtes Integral berechnen möchten, um diesen Fall ebenfalls zu zeigen. Dabei untersuchen wir das Integral \[\ds\int \tan{x}\d{x}=\int\frac{\sin{x}}{\cos{x}}\d{x}.\] Auf den ersten Blick werdet ihr behaupten, da ist überhaupt keine verkettete Funktion vorhanden. Jedoch bei genauerem Blick erkennen wir, dass der Nenner als verkettete Funktion umgeschrieben werden kann:
+		\begin{gridspace}{4.5}
+			\vspace{-2.5mm}
+			\begin{enumerate}[label=\ ,leftmargin=0mm]
+				\item $\ds\int\tan{x}\d{x}=\int\frac{\sin{x}}{\cos{x}}\d{x}=\int\sin{x}\*\left(\cos{x}\right)^{-1}\d{x}=$
+			\end{enumerate}
+		\end{gridspace}
+	\end{beispiel}
+	\begin{aufgabe}
+		Berechne die folgenden unbestimmten Integrale mithilfe der Substitutionsmethode.
+		\begin{enumcols}[2]
+			\item $\ds\int (2x+1)^5\d{x}$
+			\item $\ds\int x\*\exp{x^2}\d{x}$
+			\item $\ds\int \exp{3x-1}\d{x}$
+			\item $\ds\int \sin{4x}\d{x}$
+			\item $\ds\int 3x^2\*\cos{x^3}\d{x}$
+			\item $\ds\int \frac{1}{(2x-3)^3}\d{x}$
+		\end{enumcols}
+	\end{aufgabe}
+	\begin{beispiel}
+		Der Bruch, der nach $\ln{x}$ aussieht...?\[\int\frac{x}{x^2+1}\d{x}\] Wir stellen fest, dass die Ableitung des Nenners bis auf den konstanten Faktor im Zähler steht. Dies ist offensichtlich keinen Zufall. Denn ich kann auch hier mit Hilfe einer geeigneten Substitution integrieren.\\[5pt]\karos{6.5}
+	\end{beispiel}
+	Aufgaben von diesem Stil können gemäss dem folgenden 5 Schritten bearbeitet werden.
+	\begin{algo}[Substitution als Rezept]
+		\begin{enumerate}
+			\item $u$ \textbf{wählen}: die innere Funktion $g(x)$. Frage: Gibt es einen Faktor, der (bis auf eine Zahl) die
+			Ableitung davon ist?
+			\item $\d{u}$ \textbf{bestimmen}: $\frac{\d{u}}{\d{x}}=g'(x)$ und nach $\d{x}$ bzw. nach dem $x-$Teil auflösen.
+			\item \textbf{Ersetzen}: Alles in $x$ durch $x$ ersetzen. Bleibt ein $x$ übrig, muss $u$ anders gewählt werden.
+			\item \textbf{Integrieren} nach $u$.
+			\item \textbf{Rücksubstitution} $u=g(x)$ und falls gwünscht Probe durch Ableiten.
+		\end{enumerate}
+	\end{algo}
+	\begin{aufgabe}
+		Berechne die folgenden unbestimmten Integrale mithilfe einer geeigneten Substitution.
+		\begin{enumcols}[2]
+			\item $\ds\int\sin{x}\*\cos{x}^2\d{x}$
+			\item $\ds\int x^2\*\sqrt{x^3+1}\d{x}$
+			\item $\ds\int\frac{x^3}{x^4+5}\d{x}$
+			\item $\ds\int\frac{\exp{x}}{\exp{x}+1}\d{x}$
+			\item $\ds\int\frac{1}{x\*\ln{x}}\d{x}$
+			\item $\ds\int\frac{\sin{x}}{1+\cos{x}}\d{x}$
+		\end{enumcols}
+	\end{aufgabe}
+	Zum Schluss möchten wir nochmalsuf bestimmte Integrale zurückkommen. Denn bei einer Substitution kommt hier eine Spezialität zu tragen.
+	Gemäss Eintrag im Formelbüchlein gilt für die Substitutionsregel für bestimmte Integrale folgendes:
+	\begin{satz}
+		Seien $f$ und $g$ zwei beliebige Funktionen. Dann gilt: \[\int_a^b f(g(x))\*g'(x)\d{x} = \int_{g(a)}^{g(b)} f(u)\d{u}\]
+	\end{satz}
+	Dabei fällt sicherlich auf, dass die Grenzen im substituierten Integral verändert werden. Dies kann am Beispiel der folgenden Graphen begründet werden: Betrachte das Integral $\ds\int_{0}^{2} x\*\exp{x^2}\d{x}$. Durch die Substitution von $u=x^2$ und $\d{u}=2x\d{x}$ werden die Argumente der verketteten Funktion verändert. Da die Grenzen eng mit den Argumenten verknüpft sind, müssen auch diese gemäss der Substitution angepasst werden. Betrachte dazu die folgenden zwei Graphen:\\
+	\begin{minipage}{0.475\textwidth}
+		\begin{figure}[H]
+			\title{$x\*\exp{x^2}$ auf $\left[0,2\right]$}
+			\centering
+			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+				>=latex,   %Voreinstellung für Pfeilspitzen
+				font= \footnotesize, scale=1]
+				%Raster zeichnen
+				%\draw [color=gray!50]  [step=5mm] (0,0) grid (2.3,2.3);
+				% Achsen zeichnen
+				\draw[->,thick] (-0.3,0) -- (4.8,0) node[right, below] {\normalsize $x$};
+				\draw[->,thick] (0,-0.3) -- (0,3.8) node[above, left] {\normalsize $y$};
+				% Achsen beschriften
+				\foreach \x/\label in {2/1,4/2} \draw (\x,-.1) -- (\x,.1) node[below=8pt] {$\label$};
+				\foreach \y/\label in {1.5/50,3/100} \draw (-.1,\y) -- (.1,\y) node[left=8pt] {$\label$};
+				% Besserer Ursprung
+				\draw[color=black] (-3pt,-6pt) node {$0$};
+				%Funktionen zeichnen:
+				\clip(-0.3,-0.3) rectangle (4.3,3.3); %Bildbereich
+				\fill[forestgreen, smooth, domain=1:4, variable=\x, fill opacity=0.3]	(0,0) -- plot ({\x}, {0.027*(\x/2)*exp((\x/2)*(\x/2)))}) -- (4,0) -- cycle;
+				\draw[forestgreen, samples=100, thick, domain=-0.3:4.3] plot ({\x}, {0.027*(\x/2)*exp((\x/2)*(\x/2)))});
+				\draw (2,1.2) node {$A\approx 26.80$};
+			\end{tikzpicture}
+		\end{figure}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.475\textwidth}
+		\begin{figure}[H]
+			\title{$\frac{1}{2}\*\exp{u}$ auf \lineortext{$\left[0,4\right]$}}
+			\centering
+			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm,
+				>=latex,   %Voreinstellung für Pfeilspitzen
+				font= \footnotesize, scale=1]
+				%Raster zeichnen
+				%\draw [color=gray!50]  [step=5mm] (0,0) grid (4.3,3.3);
+				% Achsen zeichnen
+				\draw[->,thick] (-0.3,0) -- (4.8,0) node[right, below] {\normalsize $x$};
+				\draw[->,thick] (0,-0.3) -- (0,3.8) node[above, left] {\normalsize $y$};
+				% Achsen beschriften
+				\foreach \x in {1,2,...,4} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+				\foreach \y/\label in {1/10,2/20,3/30} \draw (-0.1,\y) -- (0.1,\y) node[left=4pt] {$\label$};
+				% Besserer Ursprung
+				\draw[color=black] (2pt,-7pt) node[left] {$0$};
+				%Funktionen zeichnen:
+				\clip(-0.3,-0.3) rectangle (4.3,3.3); %Bildbereich
+				\fill[plotblue, smooth, domain=1:4, variable=\x, fill opacity=0.3]	(0,0) -- plot ({\x}, {0.055*exp(\x)}) -- (4,0) -- cycle;
+				\draw[plotblue, samples=100, thick, domain=-0.3:4.3] plot ({\x}, {0.055*exp(\x)});
+				\draw (2,1.2) node {$A\approx 26.80$};
+			\end{tikzpicture}
+		\end{figure}
+	\end{minipage}
+	Wir sehen klar, die beiden Flächen sind gleich gross. Die Substitution formt die Fläche jedoch um, ohne ihren Inhalt zu ändern, aber nur, wenn die Grenzen mitgeführt werden. Daraus folgt: \[\int_{0}^{2} x\*\exp{x^2}\d{x}= \int_{\gap{0.5}}^{\gap{0.5}} \exp{u}\d{u}=\gap{4.5}\] Lasst uns dies anhand der folgenden Aufgaben ebenfalls noch üben.
+	\begin{aufgabe}
+		\begin{enumerate}
+			\item Berechne die folgenden bestimmten Integrale. Überlege dir dabei gut, welche Grenzen einzusetzen sind.
+			\begin{enumcols}[2]
+				\item $\ds\int_{-1}^{0} \frac{1}{(1-x)^3}\d{x}$
+				\item $\ds\int_{-1}^{0} \frac{3x}{x^2+1}\d{x}$
+				\item $\ds\int_{2}^{6} \sqrt{4x+1}\d{x}$
+				\item $\ds\int_{-1}^{1} (2x+1)\*\exp{-x^2-x}\d{x}$
+			\end{enumcols}
+			\item Welche der drei Flächeninhalte sind gleich? Begründe deine Antwort mit Hilfe der Substitutionsregel.
+			\begin{figure}[H]
+				\centering\includegraphics[scale=0.5]{aufg_Substitutionsregel.png}
+			\end{figure}
+		\end{enumerate}
+	\end{aufgabe}
+\subsubsection*{Zusammenfassung}
+	Wir kennen nur zwei weitere sehr mächtige Integrationsregeln mit denen wir also auch Produkte und verkettete Funktion integrieren können. Dabei stellt sich aber sicherlich immer wieder die Frage, welche der beiden Regeln soll nun wann angewendet werden? Lass uns deshalb eine Entschiedungshilfe bilden, sodass wir die wichtigsten Punkte erkennen.
+	\begin{aufgabe}
+		Du bekommst vier Integrale, die auf den ersten Blick fast gleich aussehen. Zwei davon brauchen Substitution und zwei partielle Integration. Entscheide und Begründe.
+		\begin{gridspace}{4.5}
+			\vspace{-2mm}
+			\begin{enumerate}[label=\alph*),leftmargin=2mm]
+				\item $\ds\int x\*\exp{x^2}\d{x}$
+				\item $\ds\int x\*\exp{x}\d{x}$
+				\item $\ds\int x^2\*\exp{x^3}\d{x}$
+				\item $\ds\int x^2\*\exp{x}\d{x}$
+			\end{enumerate}
+		\end{gridspace}
+	\end{aufgabe}
+	Aus der Erkenntnis der Aufgabe lassen sich grundsätzliche Bedingungen aufstellen und systematisch Beurteilen, welche Methode angewendet werden soll.
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}[
+			>=latex, font=\small, scale=0.9,
+			frage/.style={draw=blue!50!black, fill=blue!8, rounded corners=2pt, text width=8cm, align=left, inner sep=5pt, minimum height=1.3cm},
+			antwort/.style={draw=orange!85!black, fill=orange!12, rounded corners=2pt, minimum width=4cm, minimum height=0.7cm,	font=\small\bfseries, align=center},
+			lbl/.style={font=\footnotesize}]
+			% Linke Spalte: Fragen
+			\node[frage] (f1) at (0,0)    {\textbf{1.} Lässt sich direkt integrieren? (Grundintegral, li\-neare Verkettung, ausmultiplizieren)};
+			\node[frage] (f2) at (0,-2) {\textbf{2.} };
+			\node[frage] (f3) at (0,-4) {\textbf{3.} };
+			\node[frage] (f4) at (0,-6) {\textbf{4.} Beides nötig? Erst substituieren, dann partiell integrieren.};
+			% Rechte Spalte: Antworten
+			\node[antwort] (a1) at (8,0)    {direkt rechnen};
+			\node[antwort] (a2) at (8,-2) {Substitution};
+			\node[antwort] (a3) at (8,-4) {partielle Integration};
+			% Pfeile "ja"
+			\draw[->] (f1.east) -- node[above, lbl] {ja} (a1.west);
+			\draw[->] (f2.east) -- node[above, lbl] {ja} (a2.west);
+			\draw[->] (f3.east) -- node[above, lbl] {ja} (a3.west);
+			% Pfeile "nein"
+			\draw[->] (f1.south) -- node[right, lbl] {nein} (f2.north);
+			\draw[->] (f2.south) -- node[right, lbl] {nein} (f3.north);
+			\draw[->] (f3.south) -- node[right, lbl] {nein} (f4.north);
+		\end{tikzpicture}
+	\end{figure}
+	\begin{beispiel}
+		Zum Schluss möchten wir noch ein Beispiel anfügen bei dem beide Methoden angewendet werden müssen. Berechne eine Stammfunktion der folgenden Funkion:
+		\begin{gridspace}{4.5}
+			\vspace{-1.5mm}
+			$\ds\int x^3\*\cos{x^2}\d{x}=$
+		\end{gridspace}
+	\end{beispiel}
+	\begin{aufgabe}[Gemischte Aufgaben]
+		\begin{enumerate}
+			\item Die folgenden Integrale sind komplett gemischt. Kontrolliere jeweils zuerst welche Methode angewendet werden soll und rechne erst dann.
+			\begin{enumcols}[2]
+				\item $\ds\int x\*\exp{x^2}\d{x}$
+				\item $\ds\int x\*\exp{x}\d{x}$
+				\item $\ds\int x^2\*\exp{x^3}\d{x}$
+				\item $\ds\int x^2\*\exp{x}\d{x}$
+				\item $\ds\int x\*\cos{x^2}\d{x}$
+				\item $\ds\int \exp{x}\*\cos{x}\d{x}$
+				\item $\ds\int x\*\sin{2x}\d{x}$
+				\item $\ds\int \exp{\sqrt{x}}\d{x}$
+			\end{enumcols}
+			\item Lass die Funktion $f(x)=\sin{x}$ im Bereich $\left[0,\pi\right]$ um die $x-$Achse rotieren und berechne das Volumen des entstehenden Rotationskörpers.
+		\end{enumerate}
+	\end{aufgabe}
+
 
