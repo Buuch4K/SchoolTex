@@ -4,10 +4,10 @@
 \input{../Header/mathexpressions.sty}
 \input{../Header/headerExam.sty}
 %=========================================================
-\newcommand{\theme}{Trigonometrie}
+\newcommand{\theme}{Wachstum, Zerfall und Logarithmus}
 \newcommand{\teacher}{Jonas Guler}
 \newcommand{\class}{3Na}
-\renewcommand{\date}{21.08.26}
+\renewcommand{\date}{23.10.26}
 \graphicspath{{Algebra/data-algebra},{Geometrie/data-geometrie},{Analysis/data-analysis}} % Setzt den Pfad zu den Bilder fest
 %=========================================================
 \begin{document}
@@ -46,15 +46,132 @@
 
 \newpage
 \begin{questions}
-	%=========================================================
-	%---------------------TESTFRAGEN
-	%=========================================================
+%=========================================================
+%---------------------TESTFRAGEN
+%=========================================================
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+Beantworte für die beiden Funktionen $f:y=a\*x$ und $g:y=a^x$ die folgenden Fragen: Wie verändert sich der Funktionswert, ...
+\begin{parts}
+	\part[2] ... wenn man den $x-$Wert um 4 erhöht?
+	\part[2] ... wenn man den $x-$Wert halbiert?
+\end{parts}
+\antwort{8.5}
 
-	\newpage
-	\question[5] %Geo2 S.45 A63
-	Um die Breite eines Flusses (mit parallelen Ufern) zu berechnen, ist längs eines Ufers eine Strecke $\overline{AB}$ mit $50$m Länge bestimmt worden. Am gegenüberliegenden Ufer wird eine Stelle $P$ anvisiert, wobei $\alpha=64.1^\circ$ und $\beta=79.6^\circ$ messen. Berechne die Breite des Flusses.\\
-	\emph{Tipp:} Mache eine sinnvolle Skizze der Situation.
-	\vspace{7pt}
+\question[3]
+Im folgenden sind drei Wertetabellen gegeben. Entscheide für jede Wertetabelle, ob es sich um eine Exponentialfunktion handelt. Wenn ja, gib die Funktionsgleichung an.
+\begin{parcols}[3]
+	\part \
+	\begin{table}[H]
+		\begin{tabular}{|c|c|c|c|c|}\hline
+			$x$ & 1 & 2 & 3 & 4 \\\hline
+			$f(x)$ & 4 & 16 & 64 & 256 \\\hline
+		\end{tabular}
+	\end{table}
+	\part \
+	\begin{table}[H]
+		\begin{tabular}{|c|c|c|c|c|}\hline
+			$x$ & 1 & 2 & 3 & 4 \\\hline
+			$f(x)$ & -6 & 2 & 10 & 18 \\\hline
+		\end{tabular}
+	\end{table}
+	\part\
+	\begin{table}[H]
+		\begin{tabular}{|c|c|c|c|c|}\hline
+			$x$ & 1 & 2 & 3 & 4 \\\hline
+			$f(x)$ & 20 & 5 & $\frac{5}{4}$ & $\frac{5}{16}$ \\\hline
+		\end{tabular}
+	\end{table}
+\end{parcols}
+\antwort{7.5}
+
+
+%-----------------------------------------------------------------------------
+\newpage
+\question[5]
+Von einem neu entdeckten radioaktiven Element namens Heerbruggium zerfallen in $7$ Minuten $10\%$ seines noch vorhandenen Bestandes.
+\begin{parts}
+	\part Berechne seine Halbwertszeit.
+	\part Wie viel Prozent seines noch vorhandenen Bestandes zerfallen in der nächsten Stunde?
+\end{parts}
+\antwort{21.5}
+
+
+%-----------------------------------------------------------------------------
+\newpage
+\question[6]
+Die Vermehrung von Keimen in Kuhmilch lässt sich durch eine Exponentialfunktion beschreiben. In $1$ cm$^3$ Kuhmilch werden $3$ Stunden nach dem Melken $66'000$ Keime nachgewiesen. $2$ Stunden später sind es bereits $1.1$ Millionen Keime.
+\begin{parts}
+	\part Berechne die Anzahl der Keime $6$ Stunden nach dem Melken.
+	\part In welcher Zeit verdreifacht sich die Anzahl der Keime?
+	\part Um wie viele Prozent wächst die Anzahl der Keime innerhalb einer Stunde?
+\end{parts}
+\antwort{19.5}
+
+%-----------------------------------------------------------------------------
+\newpage
+\question[4]
+Am Eröffnungstag eines Streichelzoos befanden sich $93$ Meerschweinchen in einem Gehege. Ein Jahr später waren es bereits $115$.
+\begin{parts}
+	\part Wie viele Meerschweinchen werden es am Tag des $10-$jährigen Jubiläums sein, wenn wir ein lineares Wachstum annehmen?
+	\part Wie viele Meerschweinchen werden es an diesem Tag sein, wenn wir ein exponentielles Wachstum annehmen?
+\end{parts}
+\antwort{8.5}
+
+\question[4]
+In das leere Feld ist jeweils ein Ausdruck so einzufüllen, dass insgesamt eine gültige Aussage entsteht.\\[-10pt]
+\begin{parts}
+	\part $\ds\log{a}{\gap{3}}=2\*\log{a}{p}-3\*\log{a}{q}-4\*\log{a}{r}$\\
+	\part $\ds\log{a}{\sqrt[3]{q^4}}=\gap{3}\*\log{a}{q}$\\
+	\part $\ds\log{a}{a^{-\frac{9}{13}}}=\gap{3}$\\
+	\part $\ds\gap{3}=\frac{3\*\ln{x}}{\ln{4}}$\\
+\end{parts}
+\antwort{4.5}
+
+
+%-----------------------------------------------------------------------------
+\newpage
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+{\bf Bewertung:} Diese Aufgabe ist ohne Taschenrechner zu lösen.
+\begin{parts}
+	\part[2] Schreibe den folgenden Logarithmus in möglichst viele Summanden aus.
+	\[\log{m}{\frac{m^2\sqrt[3]{m^2\*\sqrt{n^3}}}{m\*\sqrt[6]{n}}}\]
+\end{parts}
+\antwort{9}
+\begin{parts}
+	\setcounter{partno}{1}\vspace{5pt}
+	\part[2] Fasse den Term zu einem Logarithmus zusammen und vereinfache so weit wie möglich. \[5\*\ln{x+2}-\frac{1}{5}\*\ln{x-2}-4\*\ln{x+2}-\frac{4}{5}\*\ln{x-2}\]
+\end{parts}
+\antwort{9}
+
+
+%-----------------------------------------------------------------------------
+\newpage
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+\begin{minipage}{0.6\linewidth}
+	\begin{parts}
+		\part[2] Gezeichnet sind drei Graphen von Funktionen der Form $y=\log{b}{x}$. Gib an welcher zur Funktion mit der kleinsten und welcher zur Funktion mit der grössten Basis $b$ gehört.
+		\part[1] Gib die Basis der Funktion des Graphen $\textcolor{forestgreen}{A}$ an.
+	\end{parts}
+\end{minipage}
+\hfill
+\begin{minipage}{0.35\linewidth}
+	\centering\includegraphics[scale=0.08]{LogGraph.png}
+\end{minipage}
+\antwort{6.5}
+\begin{parts}
+	\setcounter{partno}{2}\vspace{5pt}
+	\part[4] Löse die folgende Gleichung für eine beliebige Basis $a$ ohne Verwendung des Taschenrechners nach $x$ auf. \[\frac{\log{a}{7x-10}}{\log{a}{x}}=2\]
+	\begin{small}
+		{\bf Bewertung:} Lösungen ohne Lösungsweg ergeben keine Punkte.
+	\end{small}
+\end{parts}
+\antwort{9.5}
 
  \end{questions}
 \end{document}
