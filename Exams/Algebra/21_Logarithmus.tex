@@ -95,10 +95,10 @@ Begründe, welche der folgenden Ausdrücke wahr sind und korrigiere die falschen
 \question[4]
 In das leere Feld ist jeweils ein Ausdruck so einzufüllen, dass insgesamt eine gültige Aussage entsteht.
 \begin{parts}
-	\part $\displaystyle\log{a}{\gap{3}}=2\*\log{a}{p}-3\*\log{a}{q}-4\*\log{a}{r}$\newline
-	\part $\displaystyle\log{a}{\sqrt[3]{q^4}}=\gap{3}\*\log{a}{q}$\newline
-	\part $\displaystyle\log{a}{a^{-\frac{9}{13}}}=\gap{3}$\newline
-	\part $\displaystyle\gap{3}=\frac{3\*\ln{x}}{\ln{4}}$\newline
+	\part $\ds\log{a}{\gap{3}}=2\*\log{a}{p}-3\*\log{a}{q}-4\*\log{a}{r}$\\
+	\part $\ds\log{a}{\sqrt[3]{q^4}}=\gap{3}\*\log{a}{q}$\\
+	\part $\ds\log{a}{a^{-\frac{9}{13}}}=\gap{3}$\\
+	\part $\ds\gap{3}=\frac{3\*\ln{x}}{\ln{4}}$\\
 \end{parts}
 
 
@@ -106,10 +106,10 @@ In das leere Feld ist jeweils ein Ausdruck so einzufüllen, dass insgesamt eine 
 \question[6]
 Schreibe den folgenden Logarithmus in möglichst viele Summanden aus.
 \begin{parcols}[3]
-        \part $\log{a}{5a^2c^3}$
-        \part $\log{a}{\frac{2(p^2+q^2)}{x+y}}$
-        \part $\log{a}{\frac{\sqrt[3]{u}}{a^5}}$
-    \end{parcols}
+    \part $\log{a}{5a^2c^3}$
+    \part $\log{a}{\frac{2(p^2+q^2)}{x+y}}$
+    \part $\log{a}{\frac{\sqrt[3]{u}}{a^5}}$
+\end{parcols}
 
 %---------------------------------------------------------
 \question[2]
@@ -204,8 +204,26 @@ Berechne die folgenden Logarithmen mithilfe des kleinen Taschenrechner. Notiere 
     \end{parts}
 \end{minipage}
 \hfill
-\begin{minipage}{0.35\linewidth}
-    \centering\includegraphics[scale=0.08]{data-algebra/LogGraph.png}
+\begin{minipage}{0.375\linewidth}
+    \centering
+    \begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm, >=latex,   %Voreinstellung für Pfeilspitzen
+    	font= \footnotesize, scale=0.9]
+    	%Raster zeichnen
+    	\draw [color=gray!50]  [step=10mm] (-.3,-2.3) grid (5.3,2.3);
+    	% Achsen zeichnen
+    	\draw[->,thick] (-.3,0) -- (5.8,0) node[right, below] {\normalsize $x$};
+    	\draw[->,thick] (0,-2.3) -- (0,2.8) node[above, left] {\normalsize $y$};
+    	% Achsen beschriften
+    	\foreach \x in {1,2,...,5} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+    	\foreach \y in {-2,-1,1,2} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+    	% Besserer Ursprung
+    	\draw[color=black] (0pt,-7pt) node[left] {$0$};
+    	%Funktionen zeichnen:
+    	\clip(-.3,-2.3) rectangle (5.8,2.3); %Bildbereich
+    	\draw[plotblue, thick, domain=0.01:5.3, samples=100] plot (\x,{ln(\x)/ln(1/2)}) node[above] {$A$};
+    	\draw[red, thick, domain=0.01:5.3, samples=100] plot (\x,{ln(\x)/ln(3)}) node[below] {$B$};
+    	\draw[forestgreen, thick, domain=0.01:5.3, samples=100] plot (\x,{ln(\x)/ln(2)}) node[below] {$C$};
+    \end{tikzpicture}
 \end{minipage}
 
 %---------------------------------------------------------
@@ -219,25 +237,96 @@ Berechne die folgenden Logarithmen mithilfe des kleinen Taschenrechner. Notiere 
     \end{parts}
 \end{minipage}
 \hfill
-\begin{minipage}{0.35\linewidth}
-    \centering\includegraphics[scale=0.08]{data-algebra/LogGraph.png}
+\begin{minipage}{0.375\linewidth}
+	\centering
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm, >=latex,   %Voreinstellung für Pfeilspitzen
+		font= \footnotesize, scale=0.9]
+		%Raster zeichnen
+		\draw [color=gray!50]  [step=10mm] (-.3,-2.3) grid (5.3,2.3);
+		% Achsen zeichnen
+		\draw[->,thick] (-.3,0) -- (5.8,0) node[right, below] {\normalsize $x$};
+		\draw[->,thick] (0,-2.3) -- (0,2.8) node[above, left] {\normalsize $y$};
+		% Achsen beschriften
+		\foreach \x in {1,2,...,5} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+		\foreach \y in {-2,-1,1,2} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+		% Besserer Ursprung
+		\draw[color=black] (0pt,-7pt) node[left] {$0$};
+		%Funktionen zeichnen:
+		\clip(-.3,-2.3) rectangle (5.8,2.3); %Bildbereich
+		\draw[plotblue, thick, domain=0.01:5.3, samples=100] plot (\x,{ln(\x)/ln(1/2)}) node[above] {$A$};
+		\draw[red, thick, domain=0.01:5.3, samples=100] plot (\x,{ln(\x)/ln(3)}) node[below] {$B$};
+		\draw[forestgreen, thick, domain=0.01:5.3, samples=100] plot (\x,{ln(\x)/ln(2)}) node[below] {$C$};
+	\end{tikzpicture}
 \end{minipage}
+
+
+%---------------------------------------------------------
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+\begin{minipage}{0.6\linewidth}
+	\begin{parts}
+		\part[2] Gezeichnet sind drei Graphen von Funktionen der Form $y=\log{b}{x}$. Gib an welcher zur Funktion mit der kleinsten und welcher zur Funktion mit der grössten Basis $b$ gehört.
+		\part[1] Gib die Basis der Funktion des Graphen $\textcolor{plotblue}{A}$ an.
+	\end{parts}
+\end{minipage}
+\hfill
+\begin{minipage}{0.375\linewidth}
+	\centering
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm, >=latex,   %Voreinstellung für Pfeilspitzen
+		font= \footnotesize, scale=0.9]
+		%Raster zeichnen
+		\draw [color=gray!50]  [step=10mm] (-.3,-2.3) grid (5.3,2.3);
+		% Achsen zeichnen
+		\draw[->,thick] (-.3,0) -- (5.8,0) node[right, below] {\normalsize $x$};
+		\draw[->,thick] (0,-2.3) -- (0,2.8) node[above, left] {\normalsize $y$};
+		% Achsen beschriften
+		\foreach \x in {1,2,...,5} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+		\foreach \y in {-2,-1,1,2} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+		% Besserer Ursprung
+		\draw[color=black] (0pt,-7pt) node[left] {$0$};
+		%Funktionen zeichnen:
+		\clip(-.3,-2.3) rectangle (5.8,2.3); %Bildbereich
+		\draw[plotblue, thick, domain=0.01:5.3, samples=100] plot (\x,{ln(\x)/ln(1/3)}) node[above] {$A$};
+		\draw[red, thick, domain=0.01:5.3, samples=100] plot (\x,{ln(\x)/ln(2)}) node[below] {$B$};
+		\draw[forestgreen, thick, domain=0.01:5.3, samples=100] plot (\x,{ln(\x)/ln(5)}) node[above] {$C$};
+	\end{tikzpicture}
+\end{minipage}
+
 
 %---------------------------------------------------------
 \question[3]
-\begin{minipage}{0.55\linewidth}
-    Im Koordinatensystem sind drei Graphen von Logarithmusfunktionen der Form $f(x)=\log{a}{x}$ eingezeichnet. Gib die drei Funktionsgleichungen an.
+\begin{minipage}{0.6\linewidth}
+    Im Koordinatensystem sind drei Graphen von Logarithmusfunktionen der Form ${f(x)=\log{a}{x}}$ eingezeichnet. Gib die drei Funktionsgleichungen an.
 \end{minipage}
 \hfill
-\begin{minipage}{0.4\linewidth}
-    \centering\includegraphics[scale=0.1]{data-algebra/LogGraph.png}
+\begin{minipage}{0.375\linewidth}
+    \centering
+    \begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm, >=latex,   %Voreinstellung für Pfeilspitzen
+    	font= \footnotesize, scale=0.9]
+    	%Raster zeichnen
+    	\draw [color=gray!50]  [step=10mm] (-.3,-2.3) grid (5.3,2.3);
+    	% Achsen zeichnen
+    	\draw[->,thick] (-.3,0) -- (5.8,0) node[right, below] {\normalsize $x$};
+    	\draw[->,thick] (0,-2.3) -- (0,2.8) node[above, left] {\normalsize $y$};
+    	% Achsen beschriften
+    	\foreach \x in {1,2,...,5} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+    	\foreach \y in {-2,-1,1,2} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+    	% Besserer Ursprung
+    	\draw[color=black] (0pt,-7pt) node[left] {$0$};
+    	%Funktionen zeichnen:
+    	\clip(-.3,-2.3) rectangle (5.8,2.3); %Bildbereich
+    	\draw[plotblue, thick, domain=0.01:5.3, samples=100] plot (\x,{ln(\x)/ln(1/2)}) node[above] {$A$};
+    	\draw[red, thick, domain=0.01:5.3, samples=100] plot (\x,{ln(\x)/ln(3)}) node[below] {$B$};
+    	\draw[forestgreen, thick, domain=0.01:5.3, samples=100] plot (\x,{ln(\x)/ln(2)}) node[below] {$C$};
+    \end{tikzpicture}
 \end{minipage}
 
 %---------------------------------------------------------
 \noaddpoints
 \question[\totalpoints]
 \addpoints
-Salmonellen sind Bakterien, die schwere Magen-Darm Erkrankungen auslösen. Bei Temperaturen von über $8^\circ$C vermehren sich Salmonellen exponentiell. Die infektiöse Dosis beträgt ca. eine Million Keime.\newline Bei einem infizierten Ei werden um 10:00 Uhr $1000$ Keime gezählt, um 12:00 Uhr sind es bereits $5500$.
+Salmonellen sind Bakterien, die schwere Magen-Darm Erkrankungen auslösen. Bei Temperaturen von über $8^\circ$C vermehren sich Salmonellen exponentiell. Die infektiöse Dosis beträgt ca. eine Million Keime.\\ Bei einem infizierten Ei werden um 10:00 Uhr $1000$ Keime gezählt, um 12:00 Uhr sind es bereits $5500$.
 \begin{parts}
     \part[1] Gib eine Funktion an, mit welcher sich die Anzahl Keime nach $t$ Stunden ausgehend von 10:00 Uhr berechnen lässt.
     \part[1] Bestimme die Zeit, in der sich die Keimzahl verdoppelt?
@@ -264,6 +353,11 @@ Löse die folgende Gleichung ohne Verwendung des Taschenrechners nach $x$ auf. \
 \begin{small}
     Bewertung: Lösungen ohne Lösungsweg ergeben keine Punkte.
 \end{small}
+
+%---------------------------------------------------------
+\question[4]
+{\bf Bewertung:} Diese Aufgabe ist ohne Taschenrechner zu lösen.\\
+Löse die folgende Gleichung für eine beliebige Basis $a$ nach $x$ auf. \[\log{a}{x^2-5}+\log{a}{x+5}=\log{a}{x+5}\] {\textit{Tipp: Forme die Gleichung sinnvoll mithilfe der Logarithmusgesetzen um.}}
 
 
 %---------------------------------------------------------
