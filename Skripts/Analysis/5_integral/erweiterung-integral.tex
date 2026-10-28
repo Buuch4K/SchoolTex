@@ -58,8 +58,8 @@
 	\end{aufgabe}
 	Daraus erkennen wir das grundlegende Problem:\\
 	Der Hauptsatz der Integralrechnung besagt: $\ds\int_{a}^{b}f(x)\d{x} = F(b) - F(a)$. Das funktioniert nur, wenn $a$ und $b$ \textbf{Zahlen} sind. Aber $\infty$ ist keine Zahl, $F(\infty)$ ist nicht definiert. Wir brauchen eine neue Idee.  Wir rechnen nur bis zu einer beliebigen Grenze $p$ und lassen $p$ danach über alle Grenzen wachsen. Das ist genau der Grenzwert, den du aus der Analysis kennst.
-	\begin{definition}[uneigentliches Integral Typ \Romannum{1}]
-		Wird im Integral eine Fläche über ein unbeschränktes Intervall berechnet, spricht man von einem \textbf{uneigentlichen Integral von Typ \Romannum{1}}.
+	\begin{definition}[uneigentliches Integral Typ \Romannumeral{1}]
+		Wird im Integral eine Fläche über ein unbeschränktes Intervall berechnet, spricht man von einem \textbf{uneigentlichen Integral von Typ \Romannumeral{1}}.
 		\[\int_{a}^{\infty}f(x)\d{x}=\lim_{p\to\infty}\int_{a}^{p}f(x)\d{x} \qquad \int_{-\infty}^{b}f(x)\d{x}=\lim_{p\to-\infty}\int_{p}^{b}f(x)\d{x}\]
 		Existiert der Grenzwert als \textbf{endliche Zahl}, so heisst der Integral \textbf{konvergent} und die Zahl ist sein Wert. Sonst heisst es \textbf{divergent}.
 	\end{definition}
@@ -130,7 +130,7 @@
 	\begin{definition}
 		Hat eine gegebene Funktion an der Stelle $\boldsymbol{a}$ (linker Rand) eine Definitionslücke, so gilt für der Integral \[\int_{a}^{b}f(x)\d{x}=\lim_{p\to a^+}\int_{p}^{b}f(x)\d{x}\]
 		Liegt die Definitionslücke an der Stelle $\boldsymbol{b}$ (rechter Rand), so gilt für das Integral \[\int_{a}^{b}f(x)\d{x}=\lim_{p\to b^-}\int_{a}^{p}f(x)\d{x}\]
-		Liegt eine Definitionslücke $\boldsymbol{c}$ innerhalb der Interval $\left[a,b\right]$, muss das Integral in zwei einzelne Teile $\int_{a}^{c}+\int_{c}^{b}$ aufgeteilt und beide Teile einzeln als uneigentliche Integrale behandelt werden. In allen Fällen spricht man hier von einem \textbf{uneigentlichen Integral Typ \Romannum{2}}.
+		Liegt eine Definitionslücke $\boldsymbol{c}$ innerhalb der Intervall $\left[a,b\right]$, muss das Integral in zwei einzelne Teile $\int_{a}^{c}+\int_{c}^{b}$ aufgeteilt und beide Teile einzeln als uneigentliche Integrale behandelt werden. In allen Fällen spricht man hier von einem \textbf{uneigentlichen Integral Typ \Romannumeral{2}}.
 	\end{definition}
 	\begin{beispiel}
 		Lasst uns die Fläche unter der Funktion der Einstiegsaufgabe noch exakt berechnen:
@@ -142,8 +142,8 @@
 	\end{beispiel}
 	\begin{satz}[ist das Integral uneigentlich?]
 		\begin{enumerate}
-			\item Ist eine Integrationsgrenze $-\infty$ oder $+\infty$? $\ds\quad\Longrightarrow$ \textbf{Typ \Romannum{1}}
-			\item Gibt es im Interval $\left[a,b\right]$ eine Stelle an der $f$ nicht definiert ist und somit gegen $-\infty$ oder $+\infty$ strebt $\ds\quad\Longrightarrow$ \textbf{Typ \Romannum{2}}
+			\item Ist eine Integrationsgrenze $-\infty$ oder $+\infty$? $\ds\quad\Longrightarrow$ \textbf{Typ \Romannumeral{1}}
+			\item Gibt es im Intervall $\left[a,b\right]$ eine Stelle an der $f$ nicht definiert ist und somit gegen $-\infty$ oder $+\infty$ strebt $\ds\quad\Longrightarrow$ \textbf{Typ \Romannumeral{2}}
 		\end{enumerate}
 		\textbf{Wichtig:} Die beiden Fälle sind nicht exklusiv. Das heisst, in einem Integral können auch beide Fälle auftreten.
 	\end{satz}
