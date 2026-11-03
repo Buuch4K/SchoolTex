@@ -4,10 +4,10 @@
 \input{../Header/mathexpressions.sty}
 \input{../Header/headerExam.sty}
 %=========================================================
-\newcommand{\theme}{Zahlenräume}
+\newcommand{\theme}{Terme und Termumformungen}
 \newcommand{\teacher}{Jonas Guler}
 \newcommand{\class}{1Wa}
-\renewcommand{\date}{12.09.26}
+\renewcommand{\date}{05.11.26}
 \graphicspath{{Algebra/data-algebra},{Geometrie/data-geometrie},{Analysis/data-analysis}} % Setzt den Pfad zu den Bilder fest
 %=========================================================
 \begin{document}
@@ -41,7 +41,7 @@
 
 \vspace{10cm}
 \begin{center}
-	\Huge{Repetitionsprüfung}
+	%\Huge{Repetitionsprüfung}
 \end{center}
 
 \newpage
@@ -49,129 +49,48 @@
 %=========================================================
 %---------------------TESTFRAGEN
 %=========================================================
+\question[2]
+Entscheide, welche der folgenden Ausdrücke Terme sind. Begründe deine Antwort jeweils kurz.
+\begin{parcols}[2]
+	\part $3x^2-\frac{y}{2}$
+	\part $4(a+b)=4a+4b$
+	\part $\sqrt{7}\nin\Q$
+	\part $(2x-)\*5$
+\end{parcols}
+\antwort{5.5}
+\begin{solution}
+	(a) Term. (b) Kein Term, enthält das Relationszeichen $=$. (c) Kein Term, enthält das Relationszeichen $\nin$. (d) Kein Term, keine sinnvolle Aneinanderreihung (der Subtrahend fehlt).\\
+	Bewertung: je $\frac{1}{2}$ Punkt.
+\end{solution}
+
 \noaddpoints
-\question[\totalpoints]
+\question[\totalpoints] %BinomischeFormeln
 \addpoints
+Fülle die folgenden Lücken aus.
 \begin{parts}
-	\part[2] Schreibe die grau markierte Mengen als Mengenterm.
+	\part[1] $(8w^3 \:\gap{1.5})^2=\gap{1.5}+208a^3bw+169a^6b^2$\\[5pt]
+	\part[1] $(\gap{1.5}-9y^2z)(\gap{1.5}+9y^2z) = 144x^2 \:\gap{1.5}$
 \end{parts}
-\begin{minipage}{0.475\linewidth}
-	\centering
-	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.9]
-		% Komplement von B
-		\fill[gray!40] (-3,-3) rectangle (3,3);
-		\fill[white] (-0.8,-0.8) circle (1.5);
+\antwort{3.5}
 
-		% Schnittmenge A und C
-		\begin{scope}
-			\clip (0,0.8) circle (1.5);
-			\fill[gray!40] (0.8,-0.8) circle (1.5);
-		\end{scope}
-
-		\draw[color=black] (-3,-3) rectangle (3,3);
-		\draw[color=black] (2.8,2.75) node {\footnotesize $G$};
-		\draw[color=black] (0,0.8) circle (1.5);
-		\draw[color=black] (-1,2.15) node {\footnotesize $A$};
-		\draw[color=black] (0.8,-0.8) circle (1.5);
-		\draw[color=black] (2,-2) node {\footnotesize $C$};
-		\draw[color=black] (-0.8,-0.8) circle (1.5);
-		\draw[color=black] (-2,-2) node {\footnotesize $B$};
-	\end{tikzpicture}
-\end{minipage}
-\hfill
-\begin{minipage}{0.5\linewidth}
-	\centering
-	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.9]
-		% A vereinigt C
-		\fill[gray!40] (0,0.8) circle (1.5);
-		\fill[gray!40] (0.8,-0.8) circle (1.5);
-
-		% Schnittmenge A und B wieder entfernen
-		\begin{scope}
-			\clip (0,0.8) circle (1.5);
-			\clip (-0.8,-0.8) circle (1.5);
-			\fill[white] (-3,-3) rectangle (3,3);
-		\end{scope}
-
-		\draw[color=black] (-3,-3) rectangle (3,3);
-		\draw[color=black] (2.8,2.75) node {\footnotesize $G$};
-		\draw[color=black] (0,0.8) circle (1.5);
-		\draw[color=black] (-1,2.15) node {\footnotesize $A$};
-		\draw[color=black] (0.8,-0.8) circle (1.5);
-		\draw[color=black] (2,-2) node {\footnotesize $C$};
-		\draw[color=black] (-0.8,-0.8) circle (1.5);
-		\draw[color=black] (-2,-2) node {\footnotesize $B$};
-	\end{tikzpicture}
-\end{minipage}
-\vspace{7pt}\antwort{5.5}
-\begin{parts}
-	\setcounter{partno}{1}
-	\part[2] Schraffiere die folgenden Mengen im Venn Diagramm.
-\end{parts}
-\begin{minipage}[t]{0.475\linewidth}
-	$(A\cup C)\cap B$
-	\centering
-	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.9]
-		\draw[color=black] (-3,-3) -- (-3,3) -- (3,3) -- (3,-3) -- (-3,-3);
-		\draw[color=black] (2.8,2.75) node {\footnotesize $G$};
-		\draw[color=black] (0,0.8) circle (1.5);
-		\draw[color=black] (-1,2.15) node {\footnotesize $A$};
-		\draw[color=black] (0.8,-0.8) circle (1.5);
-		\draw[color=black] (2,-2) node {\footnotesize $C$};
-		\draw[color=black] (-0.8,-0.8) circle (1.5);
-		\draw[color=black] (-2,-2) node {\footnotesize $B$};
-	\end{tikzpicture}
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.5\linewidth}
-	$G\setminus (A\cup B)\cup(A\cap C)$
-	\centering
-	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm,scale=0.9]
-		\draw[color=black] (-3,-3) -- (-3,3) -- (3,3) -- (3,-3) -- (-3,-3);
-		\draw[color=black] (2.8,2.75) node {\footnotesize $G$};
-		\draw[color=black] (0,0.8) circle (1.5);
-		\draw[color=black] (-1,2.15) node {\footnotesize $A$};
-		\draw[color=black] (0.8,-0.8) circle (1.5);
-		\draw[color=black] (2,-2) node {\footnotesize $C$};
-		\draw[color=black] (-0.8,-0.8) circle (1.5);
-		\draw[color=black] (-2,-2) node {\footnotesize $B$};
-	\end{tikzpicture}
-\end{minipage}
-\vspace{7pt}\antwort{5.5}
-
-
-%---------------------------------------------------------
-\newpage
 \question[2]
 Entscheide, ob die Aussagen in der Tabelle unten wahr oder falsch sind. Die Antworten müssen nicht begründet werden.\newline
 \begin{small}
-	Bewertung: Für $0-2$ richtige Antworten gibt es keine Punkte, $3$ richtige Antworten geben $1$ Punkte und falls alle Antworten richtig sind $2$ Punkte.
+	Bewertung: Für $0-2$ richtige Antworten gibt es keine Punkte, $3$ richtige Antworten geben $1$ Punkt und falls alle Antworten richtig sind $2$ Punkte.
 \end{small}
 \begingroup
 \renewcommand{\arraystretch}{1.5}
 \begin{table}[H]
 	\centering
-	\begin{tabular}{|l|c|c|}\hline
+	\begin{tabular}{|p{12cm}|c|c|}\hline
 		& wahr & falsch\\\hline
-		In einem offenen Intervall gehören die Grenzen nicht dazu. & & \\\hline
-		Die Zahl $4815276$ ist durch $3$ teilbar. & & \\\hline
-		Jede natürliche Zahl grösser als 1 besitzt eine Primfaktorzerlegung. & & \\\hline
-		Addiert man eine Zahl und ihre Gegenzahl, erhält man $0$. & & \\\hline
+		Die Division durch eine Zahl entspricht der Multiplikation mit ihrem Kehrwert. & & \\\hline
+		Die Zahl $0$ besitzt keine Gegenzahl. & & \\\hline
+		Für alle $a,b\in\R$ gilt $(a+b)^2=a^2+b^2$. & & \\\hline
+		Der Term $2x-5x^2$ ist ein Binom. & & \\\hline
 	\end{tabular}
 \end{table}
 \endgroup
-\antwort{6.5}
-\vfill
-\question[4]
-Die folgenden Mengen $A=\left\{1,3,4,7,10,12,16\right\}$, $B=\left\{-2,3,-5,7,11,12,15\right\}$ und ${C=\left\{1,\frac{6}{5},4,5,7,12\right\}}$ sind gegeben. Schreibe die Mengen der untenstehenden Ausdrücke in aufzählender Form.
-\begin{gridspace}{8.5}
-	\begin{enumerate}[label=(\alph*)]
-		\item $A\cup B=$
-		\item $B\cap \N=$
-		\item $C\cap \Z=$
-		\item $C\setminus \Q^+=$
-	\end{enumerate}
-\end{gridspace}
 
 
 %---------------------------------------------------------
@@ -179,80 +98,116 @@ Die folgenden Mengen $A=\left\{1,3,4,7,10,12,16\right\}$, $B=\left\{-2,3,-5,7,11
 \noaddpoints
 \question[\totalpoints]
 \addpoints
+Gegeben sind die drei Terme
+\begin{center}
+	$S(x,y)=(x+y)^2-2y\,(x+y)$\\[4pt]
+	$T(x,y)=x^2-y^2\qquad\text{und}\qquad U(x,y)=(x-y)^2$
+\end{center}
 \begin{parts}
-	\part[4] Stelle zu jeder dieser Zahlen die Primfaktorzerlegung her.
-	\begin{itemcols}[2]
-		\item $7128$
-		\item $2772$
-	\end{itemcols}
+	\part[2] Berechne $S(3,-2)$, $T(3,-2)$ und $U(3,-2)$.
 \end{parts}
-\vspace{7pt}\antwort{10.5}
+\antwort{6.5}
 \begin{parts}
 	\setcounter{partno}{1}
-	\part[4] Benutze die Primfaktorzerlegung, um das $\kgV$ und den $\ggT$ der zwei Zahlen $168$ und $360$ zu berechnen.
+	\part[1] Erkläre einem Laien, wie du überprüfen kannst, ob zwei Terme gleich sind.
 \end{parts}
-\vspace{7pt}\antwort{10.5}
-
-
-%---------------------------------------------------------
-\newpage
-\noaddpoints
-\question[\totalpoints]
-\addpoints
-Verwandle $(a)$ und $(b)$ in einen Dezimalbruch und $(c)$ und $(d)$ in einen gewöhnlichen Bruch.
-\begin{parcols}[2]
-	\part[2] $\frac{175}{4}$ %43.75
-	\part[2] $\frac{29}{21}$ %1.380952...
-	\part[2] $0.\overline{258}$ %86/333
-	\part[2] $0.67\overline{5}$ %152/225
-\end{parcols}
-\vspace{7pt}\antwort{21.5}
-
-
-%---------------------------------------------------------
-\newpage
-\noaddpoints
-\question[\totalpoints]
-\addpoints
-Zeichne die folgenden Mengen als Intervalle in die Zahlengerade ein und gib die Teilmenge als Ausdruck von Intervallen an.
+\antwort{4.5}
 \begin{parts}
-	\part[2] $\left\{x\in \R\:|-6< x \leq 3\right\}=$
-\end{parts}\vspace{1cm}
-\begin{figure}[H]
-	\centering
-	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
-		\draw[->](-5,0) --(8,0);
-		\foreach \x in {-4.,-3.,-2.,-1.,0.,1.,2.,3.,4.,5.,6.,7.}
-		\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) ;%node[below] {\footnotesize $\x$};
-		\draw[color=black] (8,0) node[right] {$\R$};
-	\end{tikzpicture}
-\end{figure}\vspace{1cm}
-\begin{parts}\setcounter{partno}{1}
-	\part[2] $\R\setminus\left]-4.25,1.775\right[=$
-\end{parts}\vspace{1cm}
-\begin{figure}[H]
-	\centering
-	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1cm]
-		\draw[->](-5,0) --(8,0);
-		\foreach \x in {-4.,-3.,-2.,-1.,0.,1.,2.,3.,4.,5.,6.,7.}
-		\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) ;%node[below] {\footnotesize $\x$};
-		\draw[color=black] (8,0) node[right] {$\R$};
-	\end{tikzpicture}
-\end{figure}
-\vfill
-\noaddpoints
-\question[\totalpoints]
-\addpoints
-Stelle folgende Teilmengen von $\R$ als Intervalle dar.
-\begin{parts}
-	\part[2] $\left\{x\in \R\:|-8\leq x < -2 \text{ oder } -2 < x \leq 3.4 \right\}=$
-	\part[2] $\R^-\setminus\left\{-9.5\right\}=$
+	\setcounter{partno}{2}
+	\part[2] Zeige mit Termumformungen, dass $S(x,y)=T(x,y)$ gilt.
 \end{parts}
-\vspace{7pt}\antwort{10.5}
+\antwort{7.5}
+\begin{solution}
+	(a) $S(3,-2)=1^2-2\*(-2)\*1=5$, \quad $T(3,-2)=9-4=5$, \quad $U(3,-2)=5^2=25$\\
+	(b) $T$ und $U$ sind verschieden, da sie für eine Termauswertung nicht übereinstimmen ($5\neq 25$).\\
+	(c) $S(x,y)=x^2+2xy+y^2-2xy-2y^2=x^2-y^2=T(x,y)$
+\end{solution}
+
+
+%---------------------------------------------------------
+\newpage %Ausmultiplizieren
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+Vereinfache die folgenden Terme so weit wie möglich.
+\begin{parts}
+	\part[2] $7x-\left(2y-\left(3x-(5y-x)\right)\right)$ % 11x-7y
+\end{parts}
+\antwort{6.5}
+\begin{parts}
+	\setcounter{partno}{1}
+	\part[2] $(-2a^2b)\*(-3ab^2)^2\*(-a)$ % 18a^5b^5
+\end{parts}
+\antwort{7}
+\begin{parts}
+	\setcounter{partno}{2}
+	\part[3] $-x^2+(35x-24-(3x^2+(19-47x))-(19+48x+2x^2))$
+\end{parts}
+\antwort{7}
+\begin{solution}
+	(a) $7x-(2y-(4x-5y))=7x-(7y-4x)=11x-7y$\\
+	(b) $(-2a^2b)\*9a^2b^4\*(-a)=18a^5b^5$\\
+	(c) $\ds\frac{96x^5y^3z}{-16x^2yz}=-6x^3y^2$
+\end{solution}
+
+
+%---------------------------------------------------------
+\newpage % Faktorisieren
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+Faktorisiere die folgenden Terme so weit wie möglich.
+\begin{parts}
+	\part[2] $24a^3b^2-36a^2b^3+12a^2b$
+\end{parts}
+\antwort{7}
+\begin{parts}
+	\setcounter{partno}{1}
+	\part[2] $15ax-10ay-9bx+6by$
+\end{parts}
+\antwort{7}
+\begin{parts}
+	\setcounter{partno}{2}
+	\part[2] $-2r^3+20r^2s-50rs^2$
+\end{parts}
+\antwort{7}
+\begin{solution}
+	(a) $12a^2b\,(2ab-3b^2+1)$\\
+	(b) $5a(3x-2y)-3b(3x-2y)=(3x-2y)(5a-3b)$\\
+	(c) $-2r\,(r^2-10rs+25s^2)=-2r\,(r-5s)^2$\\
+	Bewertung (c): je 1 Punkt für das Ausklammern, 1 Punkt für die binomische Formel.
+\end{solution}
+
 
 %---------------------------------------------------------
 \newpage
-{\bf Reserve:}\vspace{7pt}\antwort{25}
+\noaddpoints
+\question[\totalpoints]
+\addpoints
+Lena soll den Term $50a^3-8ab^2$ so weit wie möglich faktorisieren. Sie schreibt:
+\begin{align*}
+	50a^3-8ab^2&=2a\,(25a^2-8b^2)\\
+	&=2a\,(5a-4b)^2
+\end{align*}
+\begin{parts}
+	\part[2] Markiere die zwei Fehler in Lenas Lösungsweg und gib die korrekte Faktorisierung an.
+\end{parts}
+\antwort{9}
+\begin{parts}
+	\setcounter{partno}{1}
+	\part[2] Lena prüft ihr Resultat: \glqq Ich habe $a=1$ und $b=0$ eingesetzt. Bei beiden Termen kommt $50$ heraus. Also stimmt meine Faktorisierung.\grqq\\
+	Beurteile Lenas Argumentation.
+\end{parts}
+\antwort{9}
+\begin{solution}
+	(a) Fehler 1: $8ab^2:2a=4b^2$, nicht $8b^2$. Fehler 2: $25a^2-4b^2$ ist eine Differenz von Quadraten (3.\ binomische Formel), kein Quadrat einer Differenz.\\
+	Korrekt: $50a^3-8ab^2=2a\,(25a^2-4b^2)=2a\,(5a-2b)(5a+2b)$\\
+	(b) Die Argumentation ist falsch: Stimmen zwei Terme für \emph{eine} Auswertung überein, sind sie deshalb noch nicht gleich. Gleichheit müsste für \emph{jede} Auswertung gelten. Gegenbeispiel $a=b=1$: $50-8=42$, aber $2\*1\*(5-4)^2=2$. Die Terme sind also verschieden.
+\end{solution}
+
+%---------------------------------------------------------
+\newpage
+{\bf Reserve:}\antwort{24.5}
 
 
 
