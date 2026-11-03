@@ -3,11 +3,12 @@
 \input{../Header/styleExam.sty}
 \input{../Header/mathexpressions.sty}
 \input{../Header/headerExam.sty}
+%\printanswers % Auskommentieren aufheben, um die Lösungen anzuzeigen
 %=========================================================
 \newcommand{\theme}{Wachstum, Zerfall und Logarithmus}
 \newcommand{\teacher}{Jonas Guler}
 \newcommand{\class}{3Na}
-\renewcommand{\date}{23.10.26}
+\renewcommand{\date}{07.11.26}
 \graphicspath{{Algebra/data-algebra},{Geometrie/data-geometrie},{Analysis/data-analysis}} % Setzt den Pfad zu den Bilder fest
 %=========================================================
 \begin{document}
@@ -39,9 +40,11 @@
 \end{center}
 \rule[1ex]{\textwidth}{1pt}
 
-\vspace{10cm}
+\vspace{9cm}
 \begin{center}
-	%\Huge{Repetitionsprüfung}
+	\ifthenelse{\boolean{printanswers}}
+	{\bf\Huge{Lösung}}
+	{\Huge{Repetitionsprüfung}}
 \end{center}
 
 \newpage
@@ -54,10 +57,16 @@
 \addpoints
 Beantworte für die beiden Funktionen $f:y=a\*x$ und $g:y=a^x$ die folgenden Fragen: Wie verändert sich der Funktionswert, ...
 \begin{parts}
-	\part[2] ... wenn man den $x-$Wert um 4 erhöht?
-	\part[2] ... wenn man den $x-$Wert halbiert?
+	\part[2] ... wenn man den $x-$Wert um 2 verringert?
+	\part[2] ... wenn man den $x-$Wert verdoppelt?
 \end{parts}
-\antwort{8.5}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		(a) $f(x-2)=a\*x-2a$: Der Funktionswert von $f$ wird um $2a$ kleiner. $g(x-2)=\frac{a^x}{a^2}$: Der Funktionswert von $g$ wird durch $a^2$ dividiert.\\
+		(b) $f(2x)=2\*a\*x$: Der Funktionswert von $f$ wird verdoppelt. $g(2x)=a^{2x}=\left(a^x\right)^2$: Der Funktionswert von $g$ wird quadriert.\\
+		Bewertung: je $1$ Punkt pro Funktion und Teilaufgabe.
+\end{solution}}
+{\antwort{8.5}\vfill}
 
 \question[3]
 Im folgenden sind drei Wertetabellen gegeben. Entscheide für jede Wertetabelle, ob es sich um eine Exponentialfunktion handelt. Wenn ja, gib die Funktionsgleichung an.
@@ -66,68 +75,101 @@ Im folgenden sind drei Wertetabellen gegeben. Entscheide für jede Wertetabelle,
 	\begin{table}[H]
 		\begin{tabular}{|c|c|c|c|c|}\hline
 			$x$ & 1 & 2 & 3 & 4 \\\hline
-			$f(x)$ & 4 & 16 & 64 & 256 \\\hline
+			$f(x)$ & $\frac{1}{2}$ & 2 & 8 & 32 \\\hline
 		\end{tabular}
 	\end{table}
 	\part \
 	\begin{table}[H]
 		\begin{tabular}{|c|c|c|c|c|}\hline
 			$x$ & 1 & 2 & 3 & 4 \\\hline
-			$f(x)$ & -6 & 2 & 10 & 18 \\\hline
+			$f(x)$ & 12 & 6 & 4 & 3 \\\hline
 		\end{tabular}
 	\end{table}
 	\part\
 	\begin{table}[H]
 		\begin{tabular}{|c|c|c|c|c|}\hline
 			$x$ & 1 & 2 & 3 & 4 \\\hline
-			$f(x)$ & 20 & 5 & $\frac{5}{4}$ & $\frac{5}{16}$ \\\hline
+			$f(x)$ & 54 & 18 & 6 & 2 \\\hline
 		\end{tabular}
 	\end{table}
 \end{parcols}
-\antwort{7.5}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		(a) Exponentiell, konstanter Faktor $4$: $f(x)=\frac{1}{8}\*4^x$.\\
+		(b) Nicht exponentiell: Die Quotienten $\frac{1}{2},\ \frac{2}{3},\ \frac{3}{4}$ sind nicht konstant (es ist $f(x)=\frac{12}{x}$).\\
+		(c) Exponentiell, konstanter Faktor $\frac{1}{3}$: $f(x)=162\*\left(\frac{1}{3}\right)^x$.\\
+		Bewertung: je $1$ Punkt.
+		\end{solution}}
+{\antwort{7.5}\vfill}
 
 
 %-----------------------------------------------------------------------------
 \newpage
 \question[5]
-Von einem neu entdeckten radioaktiven Element namens Heerbruggium zerfallen in $7$ Minuten $10\%$ seines noch vorhandenen Bestandes.
+Die Lichtintensität im Meerwasser nimmt pro $4$ m Wassertiefe jeweils um $15\%$ ab.
 \begin{parts}
-	\part Berechne seine Halbwertszeit.
-	\part Wie viel Prozent seines noch vorhandenen Bestandes zerfallen in der nächsten Stunde?
+	\part In welcher Tiefe ist sie nur noch halb so gross wie an der Oberfläche?
+	\part Wie viel Prozent des Lichts werden auf den ersten $50$ m absorbiert?
 \end{parts}
-\antwort{21.5}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		Faktor pro $4$ m: $0.85$, also $I(h)=I_0\*0.85^{\frac{h}{4}}$ ($h$ in Metern).\\
+		(a) $0.85^{\frac{h}{4}}=0.5\ \Rightarrow\ h=4\*\frac{\ln{0.5}}{\ln{0.85}}\approx 17.06$ m.\\
+		(b) $0.85^{\frac{50}{4}}\approx 0.1311$. Auf den ersten $50$ m werden rund $86.9\%$ des Lichts absorbiert.\\
+		Bewertung: (a) $3$ Punkte (Modell $1$, Gleichung $1$, Lösung $1$), (b) $2$ Punkte.
+\end{solution}}
+{\antwort{21.5}\vfill}
 
 
 %-----------------------------------------------------------------------------
 \newpage
 \question[6]
-Die Vermehrung von Keimen in Kuhmilch lässt sich durch eine Exponentialfunktion beschreiben. In $1$ cm$^3$ Kuhmilch werden $3$ Stunden nach dem Melken $66'000$ Keime nachgewiesen. $2$ Stunden später sind es bereits $1.1$ Millionen Keime.
+Die Vermehrung von Hefezellen in einer Nährlösung lässt sich durch eine Exponentialfunktion beschreiben. In $1$ ml werden $4$ Stunden nach dem Ansetzen $5'000$ Hefezellen gezählt. $3$ Stunden später sind es bereits $135'000$.
 \begin{parts}
-	\part Berechne die Anzahl der Keime $6$ Stunden nach dem Melken.
-	\part In welcher Zeit verdreifacht sich die Anzahl der Keime?
-	\part Um wie viele Prozent wächst die Anzahl der Keime innerhalb einer Stunde?
+	\part Berechne die Anzahl der Hefezellen $10$ Stunden nach dem Ansetzen.
+	\part In welcher Zeit vervierfacht sich die Anzahl der Hefezellen?
+	\part Um wie viele Prozent wächst die Anzahl der Hefezellen innerhalb einer Stunde?
 \end{parts}
-\antwort{19.5}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		Ansatz $N(t)=b\*a^t$ ($t$ in Stunden): $a^3=\frac{135'000}{5'000}=27\Rightarrow a=3$ und $b=\frac{5'000}{3^4}\approx 61.73$.\\
+		(a) $N(10)=5'000\*3^6=3'645'000$ Hefezellen.\\
+		(b) $3^t=4\Rightarrow t=\frac{\ln{4}}{\ln{3}}\approx 1.26$ Stunden (etwa $76$ Minuten).\\
+		(c) $a=3$: Die Anzahl wächst pro Stunde um $200\%$.\\
+		Bewertung: Funktionsgleichung $2$ Punkte, (a) $1$ Punkt, (b) $2$ Punkte, (c) $1$ Punkt.
+\end{solution}}
+{\antwort{19.5}\vfill}
 
 %-----------------------------------------------------------------------------
 \newpage
 \question[4]
-Am Eröffnungstag eines Streichelzoos befanden sich $93$ Meerschweinchen in einem Gehege. Ein Jahr später waren es bereits $115$.
+Bei seiner Gründung hatte ein Fussballverein $64$ Mitglieder. Ein Jahr später waren es bereits $80$.
 \begin{parts}
-	\part Wie viele Meerschweinchen werden es am Tag des $10-$jährigen Jubiläums sein, wenn wir ein lineares Wachstum annehmen?
-	\part Wie viele Meerschweinchen werden es an diesem Tag sein, wenn wir ein exponentielles Wachstum annehmen?
+	\part Wie viele Mitglieder wird der Verein am Tag des $10-$jährigen Jubiläums haben, wenn wir ein lineares Wachstum annehmen?
+	\part Wie viele Mitglieder werden es an diesem Tag sein, wenn wir ein exponentielles Wachstum annehmen?
 \end{parts}
-\antwort{8.5}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		(a) Zunahme $16$ Mitglieder pro Jahr: $M(10)=64+10\*16=224$ Mitglieder.\\
+		(b) Faktor $\frac{80}{64}=1.25$ pro Jahr: $M(10)=64\*1.25^{10}\approx 596$ Mitglieder.\\
+		Bewertung: je $2$ Punkte.
+\end{solution}}
+{\antwort{8}\vfill}
 
 \question[4]
 In das leere Feld ist jeweils ein Ausdruck so einzufüllen, dass insgesamt eine gültige Aussage entsteht.\\[-10pt]
 \begin{parts}
-	\part $\ds\log{a}{\gap{3}}=2\*\log{a}{p}-3\*\log{a}{q}-4\*\log{a}{r}$\\
-	\part $\ds\log{a}{\sqrt[3]{q^4}}=\gap{3}\*\log{a}{q}$\\
-	\part $\ds\log{a}{a^{-\frac{9}{13}}}=\gap{3}$\\
-	\part $\ds\gap{3}=\frac{3\*\ln{x}}{\ln{4}}$\\
+	\part $\ds\log{a}{\gap{3}}=3\*\log{a}{p}+2\*\log{a}{q}-5\*\log{a}{r}$\\
+	\part $\ds\log{a}{q^2\*\sqrt[3]{q}}=\gap{3}\*\log{a}{q}$\\
+	\part $\ds\log{a}{\frac{1}{\sqrt[5]{a^2}}}=\gap{3}$\\
+	\part $\ds\gap{3}=\frac{2\*\ln{x}}{\ln{9}}$\\
 \end{parts}
-\antwort{4.5}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		(a) $\ds\frac{p^3\*q^2}{r^5}$ \qquad (b) $\ds\frac{7}{3}$ \qquad (c) $\ds-\frac{2}{5}$ \qquad (d) $\log{9}{x^2}$ $\left(=\log{3}{x}\right)$\\
+		Bewertung: je $1$ Punkt.
+\end{solution}}
+{\antwort{4.5}\vfill}
 
 
 %-----------------------------------------------------------------------------
@@ -138,14 +180,22 @@ In das leere Feld ist jeweils ein Ausdruck so einzufüllen, dass insgesamt eine 
 {\bf Bewertung:} Diese Aufgabe ist ohne Taschenrechner zu lösen.
 \begin{parts}
 	\part[2] Schreibe den folgenden Logarithmus in möglichst viele Summanden aus.
-	\[\log{m}{\frac{m^2\sqrt[3]{m^2\*\sqrt{n^3}}}{m\*\sqrt[6]{n}}}\]
+	\[\log{s}{\frac{s^3\sqrt{s\*\sqrt[3]{t^2}}}{s^2\*\sqrt[4]{t}}}\]
 \end{parts}
-\antwort{9}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		$3+\frac{1}{2}\*\left(1+\frac{2}{3}\*\log{s}{t}\right)-2-\frac{1}{4}\*\log{s}{t}=\frac{3}{2}+\frac{1}{3}\*\log{s}{t}-\frac{1}{4}\*\log{s}{t}=\frac{3}{2}+\frac{1}{12}\*\log{s}{t}$
+\end{solution}}
+{\antwort{9}\vfill}
 \begin{parts}
 	\setcounter{partno}{1}\vspace{5pt}
-	\part[2] Fasse den Term zu einem Logarithmus zusammen und vereinfache so weit wie möglich. \[5\*\ln{x+2}-\frac{1}{5}\*\ln{x-2}-4\*\ln{x+2}-\frac{4}{5}\*\ln{x-2}\]
+	\part[2] Fasse den Term zu einem Logarithmus zusammen und vereinfache so weit wie möglich. \[4\*\ln{x-3}-\frac{2}{3}\*\ln{x+3}-3\*\ln{x-3}-\frac{1}{3}\*\ln{x+3}\]
 \end{parts}
-\antwort{9}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		$\ln{x-3}-\ln{x+3}=\ln{\frac{x-3}{x+3}}$
+\end{solution}}
+{\antwort{9}\vfill}
 
 
 %-----------------------------------------------------------------------------
@@ -156,22 +206,53 @@ In das leere Feld ist jeweils ein Ausdruck so einzufüllen, dass insgesamt eine 
 \begin{minipage}{0.6\linewidth}
 	\begin{parts}
 		\part[2] Gezeichnet sind drei Graphen von Funktionen der Form $y=\log{b}{x}$. Gib an welcher zur Funktion mit der kleinsten und welcher zur Funktion mit der grössten Basis $b$ gehört.
-		\part[1] Gib die Basis der Funktion des Graphen $\textcolor{forestgreen}{A}$ an.
+		\part[1] Gib die Basis der Funktion des Graphen $\textcolor{blue}{A}$ an.
 	\end{parts}
 \end{minipage}
 \hfill
-\begin{minipage}{0.35\linewidth}
-	\centering\includegraphics[scale=0.08]{LogGraph.png}
+\begin{minipage}{0.375\linewidth}
+	\centering
+	\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=10mm, y=10mm, >=latex,   %Voreinstellung für Pfeilspitzen
+		font= \footnotesize, scale=0.75]
+		%Raster zeichnen
+		\draw [color=gray!50]  [step=10mm] (-.3,-2.6) grid (6.5,3.2);
+		% Achsen zeichnen
+		\draw[->,thick] (-.5,0) -- (6.8,0) node[right, below] {\normalsize $x$};
+		\draw[->,thick] (0,-2.8) -- (0,3.5) node[above, left] {\normalsize $y$};
+		% Achsen beschriften
+		\foreach \x in {1,2,...,6} \draw (\x,-.1) -- (\x,.1) node[below=4pt] {$\x$};
+		\foreach \y in {-2,-1,1,2,3} \draw (-.1,\y) -- (.1,\y) node[left=4pt] {$\y$};
+		% Besserer Ursprung
+		\draw[color=black] (0pt,-7pt) node[left] {$0$};
+		%Funktionen zeichnen:
+		\clip(-.3,-2.6) rectangle (6.8,3.2); %Bildbereich
+		\draw[plotblue, thick, domain=0.01:6.5, samples=100] plot (\x,{-ln(\x)/ln(3)}) node[above] {$A$};
+		\draw[myred, thick, domain=0.01:6.5, samples=100] plot (\x,{ln(\x)/ln(4)}) node[below] {$B$};
+		\draw[forestgreen, thick, domain=0.01:6.5, samples=100] plot (\x,{ln(\x)/ln(1.5)});
+		\node[forestgreen] at (3.6,2.8) {$C$};
+	\end{tikzpicture}
 \end{minipage}
-\antwort{6.5}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		(a) Kleinste Basis: Graph $A$ (fallend, also $b<1$). Grösste Basis: Graph $B$ (steigt am langsamsten).\\
+		(b) Graph $A$ verläuft durch $(3\,|\,-1)$: $b^{-1}=3\Rightarrow b=\frac{1}{3}$.\\
+		(Zur Kontrolle: $B$ hat die Basis $4$, $C$ die Basis $1.5$.)
+\end{solution}}
+{\antwort{6}\vfill}
 \begin{parts}
 	\setcounter{partno}{2}\vspace{5pt}
-	\part[4] Löse die folgende Gleichung für eine beliebige Basis $a$ ohne Verwendung des Taschenrechners nach $x$ auf. \[\frac{\log{a}{7x-10}}{\log{a}{x}}=2\]
+	\part[4] Löse die folgende Gleichung für eine beliebige Basis $a$ ohne Verwendung des Taschenrechners nach $x$ auf. \[\frac{\log{a}{x+12}}{\log{a}{x}}=2\]
 	\begin{small}
 		{\bf Bewertung:} Lösungen ohne Lösungsweg ergeben keine Punkte.
 	\end{small}
 \end{parts}
-\antwort{9.5}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		$\log{a}{x+12}=2\*\log{a}{x}=\log{a}{x^2}\ \Rightarrow\ x^2=x+12\ \Rightarrow\ x^2-x-12=(x-4)\*(x+3)=0$.\\
+		$x=-3$ fällt weg, da $\log{a}{-3}$ nicht definiert ist. $x=4$: $\log{a}{16}=2\*\log{a}{4}\ \checkmark$, und $\log{a}{4}\neq 0$. $\mathbb{L}=\{4\}$.\\
+		Bewertung: Umformung $1$ Punkt, quadratische Gleichung $1$ Punkt, Lösungen $1$ Punkt, Ausschluss von $x=-3$ $1$ Punkt.
+\end{solution}}
+{\antwort{9}\vfill}
 
  \end{questions}
 \end{document}

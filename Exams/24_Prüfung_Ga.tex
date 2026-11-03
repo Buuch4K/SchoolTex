@@ -3,11 +3,12 @@
 \input{../Header/styleExam.sty}
 \input{../Header/mathexpressions.sty}
 \input{../Header/headerExam.sty}
+%\printanswers % Auskommentieren aufheben, um die Lösungen anzuzeigen
 %=========================================================
 \newcommand{\theme}{Wachstum, Zerfall und Logarithmus}
 \newcommand{\teacher}{Jonas Guler}
 \newcommand{\class}{3Ga}
-\renewcommand{\date}{26.10.26}
+\renewcommand{\date}{07.11.26}
 \graphicspath{{Algebra/data-algebra},{Geometrie/data-geometrie},{Analysis/data-analysis}} % Setzt den Pfad zu den Bildern fest
 %=========================================================
 \begin{document}
@@ -39,9 +40,11 @@
 \end{center}
 \rule[1ex]{\textwidth}{1pt}
 
-\vspace{10cm}
+\vspace{9cm}
 \begin{center}
-    %\Huge{Repetitionsprüfung}
+	\ifthenelse{\boolean{printanswers}}
+	{\bf\Huge{Lösung}}
+	{\Huge{Repetitionsprüfung}}
 \end{center}
 
 \newpage
@@ -54,10 +57,16 @@
 \addpoints
 Beantworte für die beiden Funktionen $f:y=a\*x$ und $g:y=a^x$ die folgenden Fragen: Wie verändert sich der Funktionswert, ...
 \begin{parts}
-	\part[2] ... wenn man den $x-$Wert um 4 verringert?
-	\part[2] ... wenn man den $x-$Wert verdreifacht?
+	\part[2] ... wenn man den $x-$Wert um 3 vergrössert?
+	\part[2] ... wenn man den $x-$Wert halbiert?
 \end{parts}
-\antwort{8.5}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+	(a) $f(x+3)=a\*x+3a$: Der Funktionswert von $f$ wird um $3a$ grösser. $g(x+3)=a^x\*a^3$: Der Funktionswert von $g$ wird mit $a^3$ multipliziert.\\
+	(b) $f(\frac{x}{2})=\frac{1}{2}\*a\*x$: Der Funktionswert von $f$ wird halbiert. $g(\frac{x}{2})=a^{\frac{x}{2}}=\sqrt{a^x}$: Aus dem Funktionswert von $g$ wird die Quadratwurzel gezogen.\\
+	Bewertung: je $1$ Punkt pro Funktion und Teilaufgabe.
+\end{solution}}
+{\antwort{8.5}\vfill}
 
 \question[3]
 Im folgenden sind drei Wertetabellen gegeben. Entscheide für jede Wertetabelle, ob es sich um eine Exponentialfunktion handelt. Wenn ja, gib die Funktionsgleichung an.
@@ -66,70 +75,102 @@ Im folgenden sind drei Wertetabellen gegeben. Entscheide für jede Wertetabelle,
 	\begin{table}[H]
 		\begin{tabular}{|c|c|c|c|c|}\hline
 			$x$ & 1 & 2 & 3 & 4 \\\hline
-			$f(x)$ & 3 & 9 & 27 & 81 \\\hline
+			$f(x)$ & 80 & 40 & 20 & 10 \\\hline
 		\end{tabular}
 	\end{table}
 	\part \
 	\begin{table}[H]
 		\begin{tabular}{|c|c|c|c|c|}\hline
 			$x$ & 1 & 2 & 3 & 4 \\\hline
-			$f(x)$ & -7 & -2 & 3 & 8 \\\hline
+			$f(x)$ & 1 & 4 & 9 & 16 \\\hline
 		\end{tabular}
 	\end{table}
 	\part\
 	\begin{table}[H]
 		\begin{tabular}{|c|c|c|c|c|}\hline
 			$x$ & 1 & 2 & 3 & 4 \\\hline
-			$f(x)$ & 32 & 8 & 2 & $\frac{2}{4}$ \\\hline
+			$f(x)$ & 2 & 3 & $\frac{9}{2}$ & $\frac{27}{4}$ \\\hline
 		\end{tabular}
 	\end{table}
 \end{parcols}
-\antwort{7.5}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+	(a) Exponentiell, konstanter Faktor $\frac{1}{2}$: $f(x)=160\*\left(\frac{1}{2}\right)^x$.\\
+	(b) Nicht exponentiell: Die Quotienten $4,\ \frac{9}{4},\ \frac{16}{9}$ sind nicht konstant (es ist $f(x)=x^2$).\\
+	(c) Exponentiell, konstanter Faktor $\frac{3}{2}$: $f(x)=\frac{4}{3}\*\left(\frac{3}{2}\right)^x$.\\
+	Bewertung: je $1$ Punkt.
+\end{solution}}
+{\antwort{7.5}\vfill}
 
 
 %-----------------------------------------------------------------------------
 \newpage
 \question[5]
-Ein neu entwickeltes Schmerzmittel namens Analgetin wird vom Körper so abgebaut, dass in $5$ Stunden jeweils $20\%$ der noch im Blut vorhandenen Wirkstoffmenge abgebaut werden.
+Ein Elektroauto verliert so an Wert, dass es in $3$ Jahren jeweils $30\%$ seines aktuellen Werts einbüsst.
 \begin{parts}
-	\part Berechne die Halbwertszeit des Wirkstoffs im Blut.
-	\part Wie viel Prozent der noch vorhandenen Wirkstoffmenge werden im Lauf des nächsten Tages ($24$ Stunden) abgebaut?
+	\part Nach wie vielen Jahren ist das Auto nur noch halb so viel wert wie beim Kauf?
+	\part Wie viel Prozent seines Werts verliert das Auto im Lauf eines Jahrzehnts ($10$ Jahre)?
 \end{parts}
-\antwort{20.5}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		Wachstumsfaktor pro $3$ Jahre: $0.7$, also $W(t)=W_0\*0.7^{\frac{t}{3}}$ ($t$ in Jahren).\\
+		(a) $0.7^{\frac{t}{3}}=0.5\ \Rightarrow\ t=3\*\frac{\ln{0.5}}{\ln{0.7}}\approx 5.83$ Jahre.\\
+		(b) $0.7^{\frac{10}{3}}\approx 0.3046$. Das Auto verliert in $10$ Jahren rund $69.5\%$ seines Werts.\\
+		Bewertung: (a) $3$ Punkte (Modell $1$, Gleichung $1$, Lösung $1$), (b) $2$ Punkte.
+\end{solution}}
+{\antwort{20.5}\vfill}
 
 
 %-----------------------------------------------------------------------------
 \newpage
 \question[6]
-Die Verbreitung eines viralen Videos auf einer Online-Plattform lässt sich in der Anfangsphase durch eine Exponentialfunktion beschreiben. $2$ Tage nach dem Hochladen wurde das Video $40'000$-mal aufgerufen. $2$ Tage später sind es bereits $900'000$ Aufrufe.
+Die Ausbreitung einer invasiven Wasserpflanze in einem Baggersee lässt sich in der Anfangsphase durch eine Exponentialfunktion beschreiben. $3$ Wochen nach der Entdeckung bedeckt die Pflanze eine Fläche von $120$ m$^2$. $2$ Wochen später sind es bereits $750$ m$^2$.
 \begin{parts}
-	\part Berechne die Anzahl der Aufrufe $5$ Tage nach dem Hochladen.
-	\part In welcher Zeit verdreifacht sich die Anzahl der Aufrufe?
-	\part Um wie viele Prozent wächst die Anzahl der Aufrufe innerhalb eines Tages?
+	\part Berechne die bedeckte Fläche $8$ Wochen nach der Entdeckung.
+	\part In welcher Zeit verdoppelt sich die bedeckte Fläche?
+	\part Um wie viele Prozent wächst die bedeckte Fläche innerhalb einer Woche?
 \end{parts}
-\antwort{19.5}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		Ansatz $A(t)=b\*a^t$ ($t$ in Wochen): $a^2=\frac{750}{120}=6.25\Rightarrow a=2.5$ und $b=\frac{120}{2.5^3}=7.68$.\\
+		(a) $A(8)=7.68\*2.5^8\approx 11'719$ m$^2$.\\
+		(b) $2.5^t=2\Rightarrow t=\frac{\ln{2}}{\ln{2.5}}\approx 0.756$ Wochen (etwa $5.3$ Tage).\\
+		(c) $a=2.5$: Die Fläche wächst pro Woche um $150\%$.\\
+		Bewertung: Funktionsgleichung $2$ Punkte, (a) $1$ Punkt, (b) $2$ Punkte, (c) $1$ Punkt.
+\end{solution}}
+{\antwort{19.5}\vfill}
 
 
 %-----------------------------------------------------------------------------
 \newpage
 \question[4]
-Als eine Gemeinde ihr Förderprogramm für Solaranlagen startete, waren auf ihren Hausdächern $250$ Solaranlagen installiert. Ein Jahr später waren es bereits $310$.
+Als eine Stadt ihr E-Bike-Verleihsystem eröffnete, waren $1'800$ Personen registriert. Ein Jahr später waren es bereits $2'160$.
 \begin{parts}
-	\part Wie viele Solaranlagen werden es am Tag des $10-$jährigen Jubiläums des Förderprogramms sein, wenn wir ein lineares Wachstum annehmen?
-	\part Wie viele Solaranlagen werden es am Jubiläumstag sein, wenn wir ein exponentielles Wachstum annehmen?
+	\part Wie viele Personen werden am Tag des $8-$jährigen Jubiläums registriert sein, wenn wir ein lineares Wachstum annehmen?
+	\part Wie viele Personen werden am Jubiläumstag registriert sein, wenn wir ein exponentielles Wachstum annehmen?
 \end{parts}
-\antwort{8}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		(a) Zunahme $360$ Personen pro Jahr: $N(8)=1'800+8\*360=4'680$ Personen.\\
+		(b) Faktor $\frac{2'160}{1'800}=1.2$ pro Jahr: $N(8)=1'800\*1.2^8\approx 7'740$ Personen.\\
+		Bewertung: je $2$ Punkte.
+\end{solution}}
+{\antwort{8}\vfill}
 
 \question[4]
 In das leere Feld ist jeweils ein Ausdruck so einzufüllen, dass insgesamt eine gültige Aussage entsteht.\\[-10pt]
 \begin{parts}
-	\part $\ds\log{a}{\gap{3}}=3\*\log{a}{u}-2\*\log{a}{v}-5\*\log{a}{w}$\\
-	\part $\ds\log{a}{\sqrt[5]{v^3}}=\gap{3}\*\log{a}{v}$\\
-	\part $\ds\log{a}{a^{-\frac{7}{11}}}=\gap{3}$\\
-	\part $\ds\gap{3}=\frac{2\*\ln{y}}{\ln{5}}$\\
+	\part $\ds\log{a}{\gap{3}}=4\*\log{a}{u}-\log{a}{v}-3\*\log{a}{w}$\\
+	\part $\ds\log{a}{\frac{1}{\sqrt[3]{v^2}}}=\gap{3}\*\log{a}{v}$\\
+	\part $\ds\log{a}{\sqrt[4]{a^{-3}}}=\gap{3}$\\
+	\part $\ds\gap{3}=\frac{3\*\ln{y}}{\ln{2}}$\\
 \end{parts}
-\antwort{4.5}
-
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		(a) $\ds\frac{u^4}{v\*w^3}$ \qquad (b) $\ds-\frac{2}{3}$ \qquad (c) $\ds-\frac{3}{4}$ \qquad (d) $\log{2}{y^3}$\\
+		Bewertung: je $1$ Punkt.
+\end{solution}}
+{\antwort{4.5}\vfill}
 
 %-----------------------------------------------------------------------------
 \newpage
@@ -139,22 +180,35 @@ In das leere Feld ist jeweils ein Ausdruck so einzufüllen, dass insgesamt eine 
 {\bf Bewertung:} Diese Aufgabe ist ohne Taschenrechner zu lösen.
 \begin{parts}
 	\part[2] Schreibe den folgenden Logarithmus in möglichst viele Summanden aus.
-	\[\log{b}{\frac{b^5\*\sqrt{c^5}}{b\*\sqrt[3]{c}}}\]
+	\[\log{p}{\frac{p^7\*\sqrt[3]{q^4}}{p^2\*\sqrt{q}}}\]
 \end{parts}
-\antwort{9}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+	$\log{p}{p^7}+\frac{4}{3}\*\log{p}{q}-\log{p}{p^2}-\frac{1}{2}\*\log{p}{q}=7-2+\frac{4}{3}\*\log{p}{q}-\frac{1}{2}\*\log{p}{q}=5+\frac{5}{6}\*\log{p}{q}$
+\end{solution}}
+{\antwort{9}\vfill}
 \begin{parts}
 	\setcounter{partno}{1}\vspace{5pt}
-	\part[2] Fasse den Term zu einem Logarithmus zusammen und vereinfache so weit wie möglich. \[\ln{x+2}+2\*\ln{x-2}-\ln{x-2}-2\*\ln{x+2}\]
+	\part[2] Fasse den Term zu einem Logarithmus zusammen und vereinfache so weit wie möglich. \[3\*\ln{x+1}-\ln{x-1}-2\*\ln{x+1}+2\*\ln{x-1}\]
 \end{parts}
-\antwort{9}
-
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		$\ln{x+1}+\ln{x-1}=\ln{(x+1)\*(x-1)}=\ln{x^2-1}$
+\end{solution}}
+{\antwort{9}\vfill}
 
 %-----------------------------------------------------------------------------
 \newpage
 \question[4]
 {\bf Bewertung:} Diese Aufgabe ist ohne Taschenrechner zu lösen.\\
-Löse die folgende Gleichung für eine beliebige Basis $a$ nach $x$ auf. \[\log{a}{x^2-5}-\log{a}{x+5}=\log{a}{x+5}\] {\textit{Tipp: Forme die Gleichung sinnvoll mithilfe der Logarithmusgesetzen um.}}
-\antwort{21.5}
+Löse die folgende Gleichung für eine beliebige Basis $a$ nach $x$ auf. \[\log{a}{x^2+7}-\log{a}{x-1}=\log{a}{x+3}\] {\textit{Tipp: Forme die Gleichung sinnvoll mithilfe der Logarithmusgesetzen um.}}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		$\ds\log{a}{\frac{x^2+7}{x-1}}=\log{a}{x+3}\ \Rightarrow\ x^2+7=(x-1)\*(x+3)=x^2+2x-3\ \Rightarrow\ 2x=10\ \Rightarrow\ x=5$.\\
+		Probe: $x^2+7=32>0$, $x-1=4>0$, $x+3=8>0$, also ist $x=5$ zulässig. $\mathbb{L}=\{5\}$.\\
+		Bewertung: Logarithmusgesetz $1$ Punkt, Gleichung ohne Logarithmus $1$ Punkt, Lösung $1$ Punkt, Probe $1$ Punkt.
+\end{solution}}
+{\antwort{21.5}\vfill}
 
 \end{questions}
 \end{document}
