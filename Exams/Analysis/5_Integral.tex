@@ -44,7 +44,6 @@
 	\begin{enumerate}[label=\roman*)]
 		\item $x^5 - 2x^3 + 2x + c$
 		\item $3\:\exp{x} - 4\:\cos{x} + c$
-		\item $2\:\ln{x} + \frac{2}{3}x^{\frac{3}{2}} + c$
 	\end{enumerate}
 \end{solution}
 
@@ -210,6 +209,27 @@ wobei $t$ in Minuten und $r(t)$ in Liter pro Minute angegeben ist.
 	\part[3] Für welche zwei Werte der oberen Grenze $a$ gilt \[\int_{0}^{a}(x+1)\d{x}=12?\]
 	\part[3] Erkläre anhand einer sinnvollen Skizze des Graphen, warum es zwei Lösungen möglich sind.
 \end{parts}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		(a) $\ds\int_0^a(x+1)\d{x}=\left[\frac{x^2}{2}+x\right]_0^a=\frac{a^2}{2}+a=12\ \Rightarrow\ a^2+2a-24=(a-4)\*(a+6)=0\ \Rightarrow\ a_1=4,\ a_2=-6$\\
+		(b) \begin{minipage}[t]{0.45\linewidth}\vspace{-8pt}
+			\begin{tikzpicture}[x=4mm, y=4mm, >=latex, font=\footnotesize]
+				\fill[forestgreen, opacity=0.3] (-1,0) -- (0,0) -- (0,1) -- cycle;
+				\fill[red, opacity=0.3] (-6,0) -- (-1,0) -- (-6,-5) -- cycle;
+				\fill[forestgreen, opacity=0.3] (0,0) -- (4,0) -- (4,5) -- (0,1) -- cycle;
+				\draw[->] (-6.8,0) -- (5,0) node[below] {$x$};
+				\draw[->] (0,-5.5) -- (0,5.8) node[left] {$y$};
+				\draw[plotblue, thick] (-6.5,-5.5) -- (4.5,5.5);
+				\foreach \x in {-6,-1,4} \node[below] at (\x,0) {$\x$};
+			\end{tikzpicture}
+		\end{minipage}\hfill
+		\begin{minipage}[t]{0.5\linewidth}
+			$a=4$: Fläche oberhalb der $x$-Achse, $\frac{16}{2}+4=12$.\\
+			$a=-6$: Von $-6$ bis $-1$ liegt die Gerade unterhalb der $x$-Achse (Fläche $12.5$), von $-1$ bis $0$ oberhalb (Fläche $0.5$). Also ist $\int_{-6}^0(x+1)\d{x}=0.5-12.5=-12$. Da die Integrationsrichtung von $0$ nach $-6$ umgekehrt ist, gilt $\int_0^{-6}(x+1)\d{x}=+12$.
+		\end{minipage}\\
+		Bewertung: (a) Stammfunktion $1$ P., quadratische Gleichung $1$ P., beide Lösungen $1$ P.; (b) Skizze $1$ P., Erklärung negative Fläche $1$ P., Erklärung vertauschte Grenzen $1$ P.
+\end{solution}}
+{\antwort{10}}
 
 
 %---------------------------------------------------------
@@ -223,6 +243,13 @@ Berechne die folgenden unbestimmten Integrale.
     \part[2] $\int(4\sin{x}-2\cos{x})\d{x}$
     \part[2] $\int\left(\frac{4}{x}+\frac{4}{x^2}-6e^x\right)\d{x}$
 \end{parts}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		(a) $\ds\int3x^{\frac{9}{4}}\d{x}=\frac{12}{13}\*x^{\frac{13}{4}}+c$ \qquad (b) $\ds\int\left(4ax^2-2ax\right)\d{x}=\frac{4a}{3}\*x^3-a\*x^2+c$\\
+		(c) $-4\*\cos{x}-2\*\sin{x}+c$ \qquad (d) $4\*\ln{|x|}-\frac{4}{x}-6\*\exp{x}+c$\\
+		Bewertung: je Teilaufgabe $1$ P. für die korrekte Umformung bzw. die ersten Summanden, $1$ P. für das vollständige Resultat (fehlendes $+c$ insgesamt $-\frac{1}{2}$ P.).
+\end{solution}}
+{\antwort{8}}
 
 
 %---------------------------------------------------------
@@ -254,6 +281,13 @@ Berechne die folgenden unbestimmten Integrale.
     \part[2] $\int(4\sin{x}-2\cos{x})\d{x}$
     \part[2] $\int\left(\frac{4}{x}+\frac{4}{x^2}-6e^x\right)\d{x}$
 \end{parts}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		(a) $\ds\int2x^{-\frac{8}{3}}\d{x}=-\frac{6}{5}\*x^{-\frac{5}{3}}+c$ \qquad (b) $\ds\int\left(12x^2+2x-4\right)\d{x}=4x^3+x^2-4x+c$\\
+		(c) $-4\*\cos{x}-2\*\sin{x}+c$ \qquad (d) $4\*\ln{|x|}-\frac{4}{x}-6\*\exp{x}+c$\\
+		Bewertung: je Teilaufgabe $1$ P. für die korrekte Umformung bzw. die ersten Summanden, $1$ P. für das vollständige Resultat (fehlendes $+c$ insgesamt $-\frac{1}{2}$ P.).
+\end{solution}}
+{\antwort{8}}
 
 
 %---------------------------------------------------------
@@ -288,15 +322,36 @@ Welchen Inhalt hat die Fläche, die begrenzt wird von der x-Achse, der Kurve $f(
 		\node[black] at (1.1,1.2) {\normalsize$P$};
 	\end{tikzpicture}
 \end{figure}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		$P(1\,|\,1)$, $f'(x)=\frac{1}{2\sqrt{x}}\Rightarrow f'(1)=\frac{1}{2}$. Die Normale hat die Steigung $-2$: $n:y=-2x+3$ mit Nullstelle $x=1.5$.\\
+		$\ds A=\int_0^1\sqrt{x}\d{x}+\frac{1}{2}\*0.5\*1=\left[\frac{2}{3}x^{\frac{3}{2}}\right]_0^1+\frac{1}{4}=\frac{2}{3}+\frac{1}{4}=\frac{11}{12}$\\
+		Bewertung: Normalengleichung $1$ P., Nullstelle der Normalen $1$ P., Integral unter $f$ $1$ P., Dreieck und Resultat $1$ P.
+\end{solution}}
+{\antwort{8}}
 
 %---------------------------------------------------------
 \question[4] % MA 06 A1 Fh
 Berechne $a$, sodass gilt: \[\int_{0}^a\left(x^2-3ax+a^2\right)\d{x}+4.5=0.\]
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		$\ds\int_0^a\left(x^2-3ax+a^2\right)\d{x}=\left[\frac{x^3}{3}-\frac{3a}{2}x^2+a^2x\right]_0^a=\frac{a^3}{3}-\frac{3a^3}{2}+a^3=-\frac{a^3}{6}$\\
+		$-\frac{a^3}{6}+4.5=0\ \Rightarrow\ a^3=27\ \Rightarrow\ a=3$\\
+		Bewertung: Stammfunktion $1$ P., Einsetzen der Grenzen $1$ P., Vereinfachen $1$ P., Lösung $1$ P.
+\end{solution}}
+{\antwort{6}}
 
 
 %---------------------------------------------------------
 \question[4] % MA 03 A3
 Berechne $a$, sodass gilt: \[\int_{-2}^1\left(ax^2-2x+a\right)\d{x}=18.\]
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		$\ds\int_{-2}^1\left(ax^2-2x+a\right)\d{x}=\left[\frac{a}{3}x^3-x^2+ax\right]_{-2}^1=\left(\frac{a}{3}-1+a\right)-\left(-\frac{8a}{3}-4-2a\right)=6a+3$\\
+		$6a+3=18\ \Rightarrow\ a=2.5$\\
+		Bewertung: Stammfunktion $1$ P., Einsetzen der Grenzen $1$ P., Vereinfachen $1$ P., Lösung $1$ P.
+\end{solution}}
+{\antwort{6}}
 
 
 %---------------------------------------------------------
@@ -344,6 +399,15 @@ Berechne $a$, sodass gilt: \[\int_{-2}^1\left(ax^2-2x+a\right)\d{x}=18.\]
 		\node[black] at (4.3,2.3) {\normalsize$S_3$};
 	\end{tikzpicture}
 \end{minipage}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		(a) $g$ geht durch $S_2(0,0)$ und $S_3(4,2)$: $m=\frac{2}{4}=\frac{1}{2}$, $q=0$, also $g:y=\frac{1}{2}x$ (Kontrolle mit $S_1$: $\frac{1}{2}\*(-2)=-1$).\\
+		(b) $f(x)-g(x)=-\frac{3}{16}x^3+\frac{3}{8}x^2+\frac{3}{2}x$ mit Stammfunktion $D(x)=-\frac{3}{64}x^4+\frac{1}{8}x^3+\frac{3}{4}x^2$.\\
+		$\ds\int_{-2}^0(f-g)\d{x}=D(0)-D(-2)=0-\frac{5}{4}=-\frac{5}{4}$ ($g$ liegt oberhalb von $f$), \quad $\ds\int_0^4(f-g)\d{x}=D(4)-D(0)=8$.\\
+		$A=\frac{5}{4}+8=\frac{37}{4}=9.25$\\
+		Bewertung: (a) Steigung $1$ P., Gleichung $1$ P.; (b) Differenzfunktion und Stammfunktion $1$ P., Aufteilen in zwei Teilflächen $1$ P., Teilflächen $1$ P., Resultat $1$ P.
+\end{solution}}
+{\antwort{10}}
 
 %---------------------------------------------------------
 \noaddpoints
@@ -390,10 +454,25 @@ Berechne $a$, sodass gilt: \[\int_{-2}^1\left(ax^2-2x+a\right)\d{x}=18.\]
     	\node[black] at (2.7,0.8) {\normalsize$S_3$};
     \end{tikzpicture}
 \end{minipage}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		(a) $g$ geht durch $S_2(0,0)$ und $S_3\left(\frac{5\pi}{6},\frac{1}{2}\right)$: $m=\frac{\frac{1}{2}}{\frac{5\pi}{6}}=\frac{3}{5\pi}$, $q=0$, also $g:y=\frac{3}{5\pi}x$.\\
+		(b) Wegen der Punktsymmetrie zum Ursprung sind beide Teilflächen gleich gross:\\
+		$\ds A=2\*\int_0^{\frac{5\pi}{6}}\left(\sin{x}-\frac{3}{5\pi}x\right)\d{x}=2\*\left[-\cos{x}-\frac{3}{10\pi}x^2\right]_0^{\frac{5\pi}{6}}=2\*\left(\frac{\sqrt{3}}{2}+1-\frac{5\pi}{24}\right)=2+\sqrt{3}-\frac{5\pi}{12}\approx2.423$\\
+		Bewertung: (a) Steigung $1$ P., Gleichung $1$ P.; (b) Ansatz mit Symmetrie oder zwei Teilflächen $1$ P., Stammfunktion $1$ P., Einsetzen der Grenzen $1$ P., Resultat $1$ P.
+\end{solution}}
+{\antwort{10}}
 
 %---------------------------------------------------------
 \question[3] % DMK Ana23 S174 A284
 Der Graph der Funktion $f$ mit $f:y=cx+c$ rotiert im Intervall $\left[2,5\right]$ um die $x-$Achse. Das Volumen des Rotationskörpers beträgt $7\pi$. Bestimme $c$.
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		$\ds V=\pi\*\int_2^5c^2(x+1)^2\d{x}=\pi c^2\*\left[\frac{(x+1)^3}{3}\right]_2^5=\pi c^2\*\frac{216-27}{3}=63\pi c^2$\\
+		$63\pi c^2=7\pi\ \Rightarrow\ c^2=\frac{1}{9}\ \Rightarrow\ c=\pm\frac{1}{3}$\\
+		Bewertung: Volumenformel $1$ P., Integral $1$ P., beide Lösungen $1$ P.
+\end{solution}}
+{\antwort{6}}
 
 
 %---------------------------------------------------------
@@ -410,6 +489,14 @@ Der Graph der Funktion $f$ mit $f:y=cx+c$ rotiert im Intervall $\left[2,5\right]
 \begin{minipage}{0.45\linewidth}
     \centering\includegraphics[scale=0.7]{data-analysis/logrotvol.png}
 \end{minipage}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		(a) $\ds\int_1^u\frac{3}{x}\d{x}=3\*\ln{u}=2\ \Rightarrow\ u=\exp{\frac{2}{3}}\approx1.948$\\
+		(b) $\ds V=\pi\*\int_1^u\frac{9}{x^2}\d{x}=\pi\*\left[-\frac{9}{x}\right]_1^u=9\pi\*\left(1-\frac{1}{u}\right)=9\pi\*\left(1-\exp{-\frac{2}{3}}\right)\approx4.38\pi$\\
+		(Mit $u=3$: $V=9\pi\*\left(1-\frac{1}{3}\right)=6\pi$.)\\
+		Bewertung: (a) Integral $1$ P., Lösung $1$ P.; (b) Ansatz $1$ P., Resultat $1$ P.
+\end{solution}}
+{\antwort{8}}
 
 %---------------------------------------------------------
 \question[4] % MA 03 A3
@@ -420,6 +507,15 @@ Der Graph der Funktion $f$ mit $f:y=cx+c$ rotiert im Intervall $\left[2,5\right]
 \begin{minipage}{0.45\linewidth}
     \centering\includegraphics[scale=1]{data-analysis/Parabelfinden.png}
 \end{minipage}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		Ansatz $p(x)=2-kx^2$ mit $k>0$. Jede Teilfläche hat den Inhalt $\frac{4}{3}$ (Quadratfläche $4$).\\
+		Nullstellen von $p$: $x=\pm r$ mit $r=\sqrt{\frac{2}{k}}$, also $k=\frac{2}{r^2}$.\\
+		$\ds B=\int_{-r}^r\left(2-kx^2\right)\d{x}=4r-\frac{2k}{3}r^3=4r-\frac{4}{3}r=\frac{8}{3}r=\frac{4}{3}\ \Rightarrow\ r=\frac{1}{2}\ \Rightarrow\ k=8$\\
+		Parabel: $y=2-8x^2$\\
+		Bewertung: Ansatz $1$ P., Flächenbedingung $B=\frac{4}{3}$ $1$ P., Integral $1$ P., Resultat $1$ P.
+\end{solution}}
+{\antwort{8}}
 
 %---------------------------------------------------------
 \question[4] % MA 13 A3
@@ -430,6 +526,12 @@ Der Graph der Funktion $f$ mit $f:y=cx+c$ rotiert im Intervall $\left[2,5\right]
 \begin{minipage}{0.45\linewidth}
     \centering\includegraphics[scale=0.5]{data-analysis/rotSanduhr.png}
 \end{minipage}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		$\ds V=\pi\*\int_{-p}^p\left(3x^2+p^2\right)\d{x}=\pi\*\left[x^3+p^2x\right]_{-p}^p=\pi\*\left(2p^3+2p^3\right)=4p^3\pi$\\
+		Bewertung: Volumenformel mit $f^2=3x^2+p^2$ $1$ P., Stammfunktion $1$ P., Einsetzen der Grenzen $1$ P., Resultat $1$ P.
+\end{solution}}
+{\antwort{6}}
 
 
 %---------------------------------------------------------
@@ -441,6 +543,14 @@ Der Graph der Funktion $f$ mit $f:y=cx+c$ rotiert im Intervall $\left[2,5\right]
 \begin{minipage}{0.45\linewidth}
     \centering\includegraphics[scale=0.75]{data-analysis/x3x2ax.png}
 \end{minipage}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		Rechte Fläche zwischen $g$ und $f$ (Schnittstellen $0$ und $1$): $\ds\int_0^1\left(x^2-x^3\right)\d{x}=\frac{1}{3}-\frac{1}{4}=\frac{1}{12}$\\
+		Linke Fläche zwischen $f$ und $h$ (Schnittstellen $-\sqrt{a}$ und $0$): $\ds\int_{-\sqrt{a}}^0\left(x^3-ax\right)\d{x}=\left[\frac{x^4}{4}-\frac{a}{2}x^2\right]_{-\sqrt{a}}^0=\frac{a^2}{4}$\\
+		$\frac{a^2}{4}=\frac{1}{12}\ \Rightarrow\ a^2=\frac{1}{3}\ \Rightarrow\ a=\frac{1}{\sqrt{3}}=\frac{\sqrt{3}}{3}\approx0.577$ ($a>0$)\\
+		Bewertung: rechte Fläche $1$ P., Schnittstellen links $1$ P., linke Fläche $1$ P., Resultat $1$ P.
+\end{solution}}
+{\antwort{8}}
 
 
 %---------------------------------------------------------
@@ -478,6 +588,14 @@ Die Einheiten sind cm.
 	\part[2] Wie gross muss der Parameter $a$ sein, damit die Funktion eine weitere Nullstelle bei $x=73$ hat?
 	\part[3] Diese Funktion wird verwendet, um das Flügelprofil eines Passagierflugzeugs zu modellieren. Dabei ist die Fläche zwischen x-Achse und Funktion entscheidend. Berechne sie.
 \end{parts}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		(a) $f(1)=-a\*\sqrt{1}+3\*\ln{1}+a\*1=-a+0+a=0$ für alle $a$.\\
+		(b) $f(73)=-a\*\sqrt{73}+3\*\ln{73}+73a=0\ \Rightarrow\ a=\frac{-3\*\ln{73}}{73-\sqrt{73}}\approx-0.1997$\\
+		(c) $\ds F(x)=-\frac{2a}{3}x^{\frac{3}{2}}+3\*\left(x\*\ln{x}-x\right)+\frac{a}{2}x^2$, \quad $\ds A=\int_1^{73}f(x)\d{x}=F(73)-F(1)\approx271.56-(-2.97)\approx274.5$ cm$^2$\\
+		Bewertung: (a) Einsetzen $1$ P., Begründung $\ln{1}=0$ $1$ P.; (b) Gleichung $1$ P., Lösung $1$ P.; (c) Stammfunktion (insbesondere von $\ln{x}$) $1$ P., Grenzen $1$ P., Resultat $1$ P.
+\end{solution}}
+{\antwort{12}}
 
 
 \end{questions}
