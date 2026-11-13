@@ -4,6 +4,7 @@
 \input{../../Header/headerQuestion.sty}
 \input{../../Header/mathexpressions.sty}
 %=========================================================
+%\printanswers % einkommentieren, um statt der Antwortfelder die Lösungen anzuzeigen
 \newcommand{\theme}{Terme}
 \newcommand{\teacher}{Jonas Guler}
 %=========================================================
@@ -18,16 +19,23 @@
 %=========================================================
 \question[2]
 Entscheide, welche der folgenden Ausdrücke Terme sind. Begründe deine Antwort jeweils kurz.
-\begin{parcols}[2]
-	\part $3x^2-\frac{y}{2}$
-	\part $4(a+b)=4a+4b$
-	\part $\sqrt{7}\nin\Q$
-	\part $(2x-)\*5$
-\end{parcols}
-\begin{solution}
-	(a) Term. (b) Kein Term, enthält das Relationszeichen $=$. (c) Kein Term, enthält das Relationszeichen $\nin$. (d) Kein Term, keine sinnvolle Aneinanderreihung (der Subtrahend fehlt).\\
-	Bewertung: je $\frac{1}{2}$ Punkt.
-\end{solution}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		\begin{enumerate}[label=(\alph*)]
+			\item $3x^2-\frac{y}{2}$, Term
+			\item $4(a+b)=4a+4b$, Kein Term, enthält das Relationszeichen $=$.
+			\item $\sqrt{7}\nin\Q$, Kein Term, enthält das Relationszeichen $\nin$.
+			\item $(2x-)\*5$, Kein Term, keine sinnvolle Aneinanderreihung (der Subtrahend fehlt).
+		\end{enumerate}
+		Bewertung: je $\frac{1}{2}$ Punkt.
+\end{solution}}
+{\begin{parcols}[2]
+		\part $3x^2-\frac{y}{2}$
+		\part $4(a+b)=4a+4b$
+		\part $\sqrt{7}\nin\Q$
+		\part $(2x-)\*5$
+	\end{parcols}
+	\antwort{5.5}}
 
 %---------------------------------------------------------
 \noaddpoints
@@ -38,6 +46,13 @@ Berechne von den Termen $T(x,y,z)=xy^2z$ und $T(x,y,z)=-3xz + y$ den Wert.
     \part[2] $T(2,3,5)$ % 90, -27
     \part[2] $T\left(\frac{-1}{2},\frac{2}{3},\frac{3}{4}\right)$ % -1/6, 43/24
 \end{parts}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+	(a) $2\*3^2\*5=90$ \quad und \quad $-3\*2\*5+3=-27$\\
+	(b) $-\frac{1}{2}\*\frac{4}{9}\*\frac{3}{4}=-\frac{1}{6}$ \quad und \quad $-3\*\left(-\frac{1}{2}\right)\*\frac{3}{4}+\frac{2}{3}=\frac{9}{8}+\frac{2}{3}=\frac{43}{24}$\\
+	Bewertung: je $1$ Punkt pro korrekt berechnetem Termwert.
+\end{solution}}
+{\antwort{7}}
 
 %---------------------------------------------------------
 \question[6]
@@ -51,6 +66,14 @@ Wie muss $x$ gewählt werden, damit die folgende Gleichung richtig ist. (Gib \te
     \part $\lvert 1-x \rvert = 5$
     \part $\lvert a-c\rvert = \lvert b-x\rvert$
 \end{parcols}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+	Werte: (a) $\lvert -15\rvert=15$ \qquad (b) $-\left\lvert\frac{3+15}{-2}\right\rvert=-\lvert -9\rvert=-9$\\
+	Gleichungen: (a) $1-x=5$ oder $1-x=-5$, also $x=-4$ oder $x=6$\\
+	(b) $\lvert -2+15\rvert=13=\lvert 3-x\rvert$, also $3-x=13$ oder $3-x=-13$, d.\,h. $x=-10$ oder $x=16$\\
+	Bewertung: Werte je $1$ Punkt; Gleichungen je $1$ Punkt pro Lösung.
+\end{solution}}
+{\antwort{8}}
 
 
 
@@ -74,11 +97,14 @@ Gegeben sind die drei Terme
 	\setcounter{partno}{2}
 	\part[2] Zeige mit Termumformungen, dass $S(x,y)=T(x,y)$ gilt.
 \end{parts}
-\begin{solution}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
 	(a) $S(3,-2)=1^2-2\*(-2)\*1=5$, \quad $T(3,-2)=9-4=5$, \quad $U(3,-2)=5^2=25$\\
-	(b) $T$ und $U$ sind verschieden, da sie für eine Termauswertung nicht übereinstimmen ($5\neq 25$).\\
-	(c) $S(x,y)=x^2+2xy+y^2-2xy-2y^2=x^2-y^2=T(x,y)$
-\end{solution}
+	(b) Man setzt für die Variablen Zahlen ein und vergleicht die Werte. Stimmen sie für eine Einsetzung nicht überein, sind die Terme verschieden (z.\,B. $T(3,-2)=5\neq 25=U(3,-2)$). Stimmen sie überein, beweist das noch keine Gleichheit: Dazu formt man einen Term mit Termumformungen so lange um, bis der andere dasteht.\\
+	(c) $S(x,y)=x^2+2xy+y^2-2xy-2y^2=x^2-y^2=T(x,y)$\\
+	Bewertung: (a) $2$ Punkte für alle drei Werte, $1$ Punkt für zwei korrekte Werte; (b) $1$ Punkt, falls erwähnt wird, dass eine Einsetzung nur Ungleichheit zeigen kann; (c) $1$ Punkt für das korrekte Ausmultiplizieren, $1$ Punkt für das Zusammenfassen zu $T(x,y)$.
+\end{solution}}
+{\antwort{12}}
 
 
 
@@ -92,6 +118,14 @@ Löse die Klammern auf und vereinfache so weit wie möglich.
     \part[3] $3x^2-(4y+x+(3x^2-y-(7x+1))-3)$
     \part[3] $-8p+(-3q-(3p-4-(4q-3))-(q+p+1-(4q+7p)))$
 \end{parts}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+	(a) $a-(b+(a-(2b-a)))=a-(b+(2a-2b))=a-(2a-b)=-a+b$\\
+	(b) $3x^2-(4y+x+3x^2-y-7x-1-3)=3x^2-(3x^2-6x+3y-4)=6x-3y+4$\\
+	(c) $-8p+(-3q-(3p-4q-1)-(-6p-3q+1))=-8p+(-3q-3p+4q+1+6p+3q-1)=-8p+(3p+4q)=-5p+4q$\\
+	Bewertung: je $2$ Punkte für das korrekte Auflösen der Klammern (Teilpunkte pro Klammerebene), $1$ Punkt für das vollständig vereinfachte Resultat.
+\end{solution}}
+{\antwort{12}}
 
 %---------------------------------------------------------
 \noaddpoints
@@ -103,6 +137,14 @@ Löse die Klammern auf und vereinfache so weit wie möglich.
     \part[3] $3x^2-(4y+x+(3x^2-y-(7x+1))-3)$
     \part[3] $-x^2+(35x-24-(3x^2+(19-47x))-(19+48x+2x^2))$
 \end{parts}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+	(a) $-2a+b-(-2b+4a)=-2a+b+2b-4a=-6a+3b$\\
+	(b) $3x^2-(4y+x+3x^2-y-7x-1-3)=3x^2-(3x^2-6x+3y-4)=6x-3y+4$\\
+	(c) $-x^2+(35x-24-3x^2-19+47x-19-48x-2x^2)=-x^2+(-5x^2+34x-62)=-6x^2+34x-62$\\
+	Bewertung: je $2$ Punkte für das korrekte Auflösen der Klammern (Teilpunkte pro Klammerebene), $1$ Punkt für das vollständig vereinfachte Resultat.
+\end{solution}}
+{\antwort{12}}
 
 
 %---------------------------------------------------------
@@ -110,20 +152,40 @@ Löse die Klammern auf und vereinfache so weit wie möglich.
 \question[\totalpoints] %BinomischeFormeln
 \addpoints
 Fülle die folgenden Lücken aus.
-\begin{parts}
-    \part[2] $(8w+\gap{1.5})^2=\gap{1.5}+208a^3bw+169a^6b^2$
-    \part[2] $(\gap{1.5}-9y^2z)(\gap{1.5}+\gap{1.5}) = 144x^2 - \gap{1.5}$
-\end{parts}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		\addpoints % Punkte der Teilaufgaben auch in der Lösung zählen
+		\begin{parts}
+			\part[1] $(8w^3\mathcolor{plotblue}{+13a^3b})^2=\mathcolor{plotblue}{64w^6}+208a^3bw^3+169a^6b^2$
+			\part[1] $(\mathcolor{plotblue}{12x}-9y^2z)(\mathcolor{plotblue}{12x}+9y^2z) = 144x^2 \mathcolor{plotblue}{-81y^4z^2}$
+		\end{parts}
+		Bewertung: je $1$ Punkt, falls alle Lücken der Teilaufgabe korrekt ausgefüllt sind.
+\end{solution}}
+{\begin{parts}
+		\part[1] $(8w^3 \:\gap{1.5})^2=\gap{1.5}+208a^3bw^3+169a^6b^2$\\[5pt]
+		\part[1] $(\gap{1.5}-9y^2z)(\gap{1.5}+9y^2z) = 144x^2 \:\gap{1.5}$
+	\end{parts}
+	\antwort{3.5}}
 
 %---------------------------------------------------------
 \noaddpoints
 \question[\totalpoints] %BinomischeFormeln
 \addpoints
 Fülle die folgenden Lücken aus.
-\begin{parts}
-    \part[2] $121a^2b^4-\gap{1.5}=(\gap{1.5}-5d)(\gap{1.5}+\gap{1.5})$
-    \part[2] $(\gap{1.5}-\gap{1.5})^2=36u^2-96uv^2+\gap{1.5}$
-\end{parts}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		\addpoints % Punkte der Teilaufgaben auch in der Lösung zählen
+		\begin{parts}
+			\part[2] $121a^2b^4-\mathcolor{plotblue}{25d^2}=(\mathcolor{plotblue}{11ab^2}-5d)(\mathcolor{plotblue}{11ab^2}+\mathcolor{plotblue}{5d})$
+			\part[2] $(\mathcolor{plotblue}{6u}-\mathcolor{plotblue}{8v^2})^2=36u^2-96uv^2+\mathcolor{plotblue}{64v^4}$
+		\end{parts}
+		Bewertung: (a) je $\frac{1}{2}$ Punkt pro Lücke; (b) $1$ Punkt für die Klammer $(6u-8v^2)$, $1$ Punkt für $64v^4$.
+\end{solution}}
+{\begin{parts}
+		\part[2] $121a^2b^4-\gap{1.5}=(\gap{1.5}-5d)(\gap{1.5}+\gap{1.5})$\\[5pt]
+		\part[2] $(\gap{1.5}-\gap{1.5})^2=36u^2-96uv^2+\gap{1.5}$
+	\end{parts}
+	\antwort{4.5}}
 
 %---------------------------------------------------------
 \noaddpoints
@@ -135,6 +197,14 @@ Multipliziere aus und vereinfache so weit wie möglich.
     \part[2] $(a-2b-c)(c-2b-a)$
     \part[3] $24m^2-(5m-2)(8m-5)+(3m-4)(4m-3)$
 \end{parts}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+	(a) $(h^2-1)(h+3)=h^3+3h^2-h-3$\\
+	(b) $\bigl(-2b+(a-c)\bigr)\bigl(-2b-(a-c)\bigr)=4b^2-(a-c)^2=-a^2+4b^2-c^2+2ac$\\
+	(c) $24m^2-(40m^2-41m+10)+(12m^2-25m+12)=-4m^2+16m+2$\\
+	Bewertung: (a) $1$ Punkt für das Resultat; (b) $1$ Punkt für das korrekte Ausmultiplizieren, $1$ Punkt für das Zusammenfassen; (c) je $1$ Punkt pro Produkt, $1$ Punkt für das Zusammenfassen (Vorzeichen beachten).
+\end{solution}}
+{\antwort{12}}
 
 %---------------------------------------------------------
 \noaddpoints
@@ -146,6 +216,14 @@ Multipliziere aus und vereinfache so weit wie möglich.
     \part[2] $(5x^2+2x+3)(4x^2+7x+12)$
     \part[3] $6(n-1)(n+1)-(n^2+1)^2+n^4-2(-n+2)(-2n+1)$
 \end{parts}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+	(a) $(x^2-9)(x+1)=x^3+x^2-9x-9$\\
+	(b) $20x^4+35x^3+60x^2+8x^3+14x^2+24x+12x^2+21x+36=20x^4+43x^3+86x^2+45x+36$\\
+	(c) $6n^2-6-(n^4+2n^2+1)+n^4-2(2n^2-5n+2)=6n^2-6-n^4-2n^2-1+n^4-4n^2+10n-4=10n-11$\\
+	Bewertung: (a) $1$ Punkt für das Resultat; (b) $1$ Punkt für das vollständige Ausmultiplizieren, $1$ Punkt für das Zusammenfassen; (c) je $\frac{1}{2}$ Punkt für die drei Produkte bzw. Quadrate, $1.5$ Punkte für das korrekte Zusammenfassen.
+\end{solution}}
+{\antwort{12}}
 
 
 %---------------------------------------------------------
@@ -164,11 +242,14 @@ Vereinfache die folgenden Terme so weit wie möglich.
 	\setcounter{partno}{2}
 	\part[3] $-x^2+(35x-24-(3x^2+(19-47x))-(19+48x+2x^2))$
 \end{parts}
-\begin{solution}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
 	(a) $7x-(2y-(4x-5y))=7x-(7y-4x)=11x-7y$\\
 	(b) $(-2a^2b)\*9a^2b^4\*(-a)=18a^5b^5$\\
-	(c) $\ds\frac{96x^5y^3z}{-16x^2yz}=-6x^3y^2$
-\end{solution}
+	(c) $-x^2+(35x-24-3x^2-19+47x-19-48x-2x^2)=-x^2+(-5x^2+34x-62)=-6x^2+34x-62$\\
+	Bewertung: (a) $1$ Punkt für das Auflösen der Klammern, $1$ Punkt für das Resultat; (b) $1$ Punkt für $(-3ab^2)^2=9a^2b^4$, $1$ Punkt für Vorzeichen und Resultat; (c) $2$ Punkte für das Auflösen der Klammern, $1$ Punkt für das Resultat.
+\end{solution}}
+{\antwort{12}}
 
 %---------------------------------------------------------
 \noaddpoints
@@ -186,6 +267,14 @@ Betrachte den folgenden Lösungsweg.
     \part[2] Markiere die zwei Fehler im obigen Lösungsweg und korrigiere.
     \part[3] Beschreibe in eigenen Worten, wie der Lösungsweg verkürzt werden kann.
 \end{parts}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+	(a) In der dritten Zeile: $z^2\*z^2=z^4$ (nicht $z^2$) und $-2z\*z^2=-2z^3$ (nicht $+2z^3$). Korrekt:
+	\[(z^2-2z+1)(z^2+2z+1)=z^4+2z^3+z^2-2z^3-4z^2-2z+z^2+2z+1=z^4-2z^2+1\]
+	(b) Zuerst die Klammer in der eckigen Klammer mit der 3.\ binomischen Formel vereinfachen: $(z-1)(z+1)=z^2-1$. Danach mit der 2.\ binomischen Formel quadrieren: $(z^2-1)^2=z^4-2z^2+1$.\\
+	Bewertung: (a) je $1$ Punkt pro gefundenem und korrigiertem Fehler; (b) $1$ Punkt für die 3.\ binomische Formel, $1$ Punkt für die 2.\ binomische Formel, $1$ Punkt für eine verständliche Beschreibung.
+\end{solution}}
+{\antwort{12}}
 
 %---------------------------------------------------------
 \noaddpoints
@@ -195,12 +284,20 @@ Betrachte den folgenden Lösungsweg.
 \begin{align*}
     (3z-1)(2z+3)(3-2z)&=(6z^2+9z-2z-3)(3-2z)\\
     &=18z^2-12z^3+27z-18z^2+6z+4z^2+9+6z\\
-    &= 12z^3+4z^2+39z+9
+    &= -12z^3+4z^2+39z+9
 \end{align*}
 \begin{parts}
     \part[2] Markiere die zwei Fehler im obigen Lösungsweg und korrigiere.
     \part[3] Beschreibe in eigenen Worten, wie der Lösungsweg verkürzt werden kann.
 \end{parts}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+	(a) In der zweiten Zeile: $-2z\*3=-6z$ (nicht $+6z$) und $-3\*3=-9$ (nicht $+9$). Korrekt:
+	\[18z^2-12z^3+27z-18z^2-6z+4z^2-9+6z=-12z^3+4z^2+27z-9\]
+	(b) Die Faktoren $(2z+3)(3-2z)$ zuerst mit der 3.\ binomischen Formel multiplizieren: $(3+2z)(3-2z)=9-4z^2$. Danach bleibt nur noch $(3z-1)(9-4z^2)=27z-12z^3-9+4z^2$. (Alternativ in der ersten Zeile zuerst $9z-2z=7z$ zusammenfassen.)\\
+	Bewertung: (a) je $1$ Punkt pro gefundenem und korrigiertem Fehler; (b) $1$ Punkt für das Erkennen der 3.\ binomischen Formel, $1$ Punkt für die korrekte Rechnung, $1$ Punkt für eine verständliche Beschreibung.
+\end{solution}}
+{\antwort{12}}
 
 
 %---------------------------------------------------------
@@ -220,11 +317,14 @@ Lena soll den Term $50a^3-8ab^2$ so weit wie möglich faktorisieren. Sie schreib
 	\part[2] Lena prüft ihr Resultat: \glqq Ich habe $a=1$ und $b=0$ eingesetzt. Bei beiden Termen kommt $50$ heraus. Also stimmt meine Faktorisierung.\grqq\\
 	Beurteile Lenas Argumentation.
 \end{parts}
-\begin{solution}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
 	(a) Fehler 1: $8ab^2:2a=4b^2$, nicht $8b^2$. Fehler 2: $25a^2-4b^2$ ist eine Differenz von Quadraten (3.\ binomische Formel), kein Quadrat einer Differenz.\\
 	Korrekt: $50a^3-8ab^2=2a\,(25a^2-4b^2)=2a\,(5a-2b)(5a+2b)$\\
-	(b) Die Argumentation ist falsch: Stimmen zwei Terme für \emph{eine} Auswertung überein, sind sie deshalb noch nicht gleich. Gleichheit müsste für \emph{jede} Auswertung gelten. Gegenbeispiel $a=b=1$: $50-8=42$, aber $2\*1\*(5-4)^2=2$. Die Terme sind also verschieden.
-\end{solution}
+	(b) Die Argumentation ist falsch: Stimmen zwei Terme für \emph{eine} Auswertung überein, sind sie deshalb noch nicht gleich. Gleichheit müsste für \emph{jede} Auswertung gelten. Gegenbeispiel $a=b=1$: $50-8=42$, aber $2\*1\*(5-4)^2=2$. Die Terme sind also verschieden.\\
+	Bewertung: (a) je $\frac{1}{2}$ Punkt pro markiertem Fehler, $1$ Punkt für die korrekte Faktorisierung; (b) $1$ Punkt für die begründete Beurteilung, $1$ Punkt für ein Gegenbeispiel.
+\end{solution}}
+{\antwort{14}}
 
 
 %---------------------------------------------------------
@@ -233,25 +333,87 @@ Entscheide in der Tabelle unten, ob die Aussagen wahr oder falsch sind. Die Antw
 \begin{small}
     Bewertung: Für $0-2$ korrekte Antworten gibt es keine Punkte; $3$ korrekte Antworten einen Punkt und falls alle Antworten korrekt sind, gibt es $2$ Punkte.
 \end{small}
-\begingroup
-\renewcommand{\arraystretch}{1.5}
-\begin{table}[h]
-    \centering
-    \begin{tabular}{|p{12cm}|c|c|}\hline
-         & wahr & falsch \\\hline
-        Die Kehrwert eines Kehrwertes ist wieder die ursprüngliche Zahl. & & \\\hline
-        Das Produkt hat ein negatives Vorzeichen, wenn die beiden Faktoren das gleiche Vorzeichen haben. & & \\\hline
-        Die Gegenzahl einer Gegenzahl ist wieder die ursprüngliche Zahl. & & \\\hline
-        Das Produkt hat ein positives Vorzeichen, wenn die beiden Faktoren das gleiche Vorzeichen haben. & & \\\hline
-        Der Quotient ist das Ergebnis einer Division bei der Divisor durch Dividenden geteilt wird. & & \\\hline
-        Die Subtraktion ist keine notwendige Operation, denn man kann sie als Addition des Kehrwertes umgehen. & & \\\hline
-        Die Division durch eine Zahl entspricht der Multiplikation mit ihrem Kehrwert. & & \\\hline
-        Die Zahl $0$ besitzt keine Gegenzahl. & & \\\hline
-        Für alle $a,b\in\R$ gilt $(a+b)^2=a^2+b^2$. & & \\\hline
-        Der Term $2x-5x^2$ ist ein Binom. & & \\\hline
-    \end{tabular}
-\end{table}
-\endgroup
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+	\begingroup
+	\renewcommand{\arraystretch}{1.5}
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|p{12cm}|c|c|}\hline
+			& wahr & falsch \\\hline
+			Die Kehrwert eines Kehrwertes ist wieder die ursprüngliche Zahl. & X & \\\hline
+			Das Produkt hat ein negatives Vorzeichen, wenn die beiden Faktoren das gleiche Vorzeichen haben. & & X \\\hline
+			Die Gegenzahl einer Gegenzahl ist wieder die ursprüngliche Zahl. & X & \\\hline
+			Das Produkt hat ein positives Vorzeichen, wenn die beiden Faktoren das gleiche Vorzeichen haben. & X & \\\hline
+			Der Quotient ist das Ergebnis einer Division bei der Divisor durch Dividenden geteilt wird. & & X \\\hline
+			Die Subtraktion ist keine notwendige Operation, denn man kann sie als Addition des Kehrwertes umgehen. & & X \\\hline
+			Die Division durch eine Zahl entspricht der Multiplikation mit ihrem Kehrwert. & X & \\\hline
+			Die Zahl $0$ besitzt keine Gegenzahl. & & X \\\hline
+			Für alle $a,b\in\R$ gilt $(a+b)^2=a^2+b^2$. & & X \\\hline
+			Der Term $2x-5x^2$ ist ein Binom. & X & \\\hline
+		\end{tabular}
+	\end{table}
+	\endgroup
+	Hinweise: Der Dividend wird durch den Divisor geteilt. Die Subtraktion ist die Addition der \emph{Gegenzahl}. Die Gegenzahl von $0$ ist $0$.\\
+	Bewertung: Die Aufgabe ist ein Pool. Werden vier Aussagen ausgewählt, gilt die Bewertung im Aufgabentext; bei allen zehn Aussagen: alle korrekt $2$ Punkte, $8$--$9$ korrekt $1$ Punkt, sonst keine Punkte.
+\end{solution}}
+{\begingroup
+	\renewcommand{\arraystretch}{1.5}
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{|p{12cm}|c|c|}\hline
+			& wahr & falsch \\\hline
+			Die Kehrwert eines Kehrwertes ist wieder die ursprüngliche Zahl. & & \\\hline
+			Das Produkt hat ein negatives Vorzeichen, wenn die beiden Faktoren das gleiche Vorzeichen haben. & & \\\hline
+			Die Gegenzahl einer Gegenzahl ist wieder die ursprüngliche Zahl. & & \\\hline
+			Das Produkt hat ein positives Vorzeichen, wenn die beiden Faktoren das gleiche Vorzeichen haben. & & \\\hline
+			Der Quotient ist das Ergebnis einer Division bei der Divisor durch Dividenden geteilt wird. & & \\\hline
+			Die Subtraktion ist keine notwendige Operation, denn man kann sie als Addition des Kehrwertes umgehen. & & \\\hline
+			Die Division durch eine Zahl entspricht der Multiplikation mit ihrem Kehrwert. & & \\\hline
+			Die Zahl $0$ besitzt keine Gegenzahl. & & \\\hline
+			Für alle $a,b\in\R$ gilt $(a+b)^2=a^2+b^2$. & & \\\hline
+			Der Term $2x-5x^2$ ist ein Binom. & & \\\hline
+		\end{tabular}
+	\end{table}
+	\endgroup}
+
+
+%---------------------------------------------------------
+\question[2]
+Entscheide, ob die Aussagen in der Tabelle unten wahr oder falsch sind. Die Antworten müssen nicht begründet werden.\newline
+\begin{small}
+	Bewertung: Für $0-2$ richtige Antworten gibt es keine Punkte, $3$ richtige Antworten geben $1$ Punkt und falls alle Antworten richtig sind $2$ Punkte.
+\end{small}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+		\begingroup
+		\renewcommand{\arraystretch}{1.5}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|p{12cm}|c|c|}\hline
+				& wahr & falsch\\\hline
+				Die Division durch eine Zahl entspricht der Multiplikation mit ihrem Kehrwert. & X & \\\hline
+				Die Zahl $0$ besitzt keine Gegenzahl. & & X \\\hline
+				Für alle $a,b\in\R$ gilt $(a+b)^2=a^2+b^2$. & & X \\\hline
+				Der Term $2x-5x^2$ ist ein Binom. & X & \\\hline
+			\end{tabular}
+		\end{table}
+		\endgroup
+		Hinweis: Die Gegenzahl von $0$ ist $0$ (nur der Kehrwert von $0$ existiert nicht).
+\end{solution}}
+{\begingroup
+	\renewcommand{\arraystretch}{1.5}
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|p{12cm}|c|c|}\hline
+			& wahr & falsch\\\hline
+			Die Division durch eine Zahl entspricht der Multiplikation mit ihrem Kehrwert. & & \\\hline
+			Die Zahl $0$ besitzt keine Gegenzahl. & & \\\hline
+			Für alle $a,b\in\R$ gilt $(a+b)^2=a^2+b^2$. & & \\\hline
+			Der Term $2x-5x^2$ ist ein Binom. & & \\\hline
+		\end{tabular}
+	\end{table}
+	\endgroup}
 
 
 %---------------------------------------------------------
@@ -261,14 +423,44 @@ Berechne die folgenden Binome:
     \part $(5f^2+3g)^2$
     \part $(2k+l)^5$
 \end{parcols}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+	(a) $(5f^2+3g)^2=25f^4+30f^2g+9g^2$\\
+	(b) Koeffizienten aus dem Pascal'schen Dreieck: $1,5,10,10,5,1$
+	\begin{align*}
+		(2k+l)^5&=32k^5+5\*16k^4l+10\*8k^3l^2+10\*4k^2l^3+5\*2kl^4+l^5\\
+		&=32k^5+80k^4l+80k^3l^2+40k^2l^3+10kl^4+l^5
+	\end{align*}
+	Bewertung: (a) $2$ Punkte ($1$ Punkt Abzug pro Fehler); (b) $2$ Punkte für die Binomialkoeffizienten und die Exponenten, $2$ Punkte für die korrekten Zweierpotenzen.
+\end{solution}}
+{\antwort{10}}
 
 %---------------------------------------------------------
 \question[4]
 Beschreibe alle Regelmässigkeiten, die du in der ausmultiplizierten Form der Binome mit höheren Potenzen erkennen kannst. Nimm dir dazu ein geeignetes Beispiel zur Hilfe.
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+	Beispiel: $(a+b)^4=a^4+4a^3b+6a^2b^2+4ab^3+b^4$
+	\begin{itemize}
+		\item $(a+b)^n$ hat $n+1$ Summanden.
+		\item Der Exponent von $a$ nimmt von $n$ bis $0$ ab, jener von $b$ nimmt von $0$ bis $n$ zu. Die Summe der Exponenten ist in jedem Summanden $n$.
+		\item Die Koeffizienten sind die Zahlen der $n$-ten Zeile im Pascal'schen Dreieck; sie sind symmetrisch und beginnen und enden mit $1$.
+		\item Bei $(a-b)^n$ wechseln die Vorzeichen ab.
+	\end{itemize}
+	Bewertung: je $1$ Punkt pro korrekt beschriebener Regelmässigkeit (max.\ $3$ Punkte), $1$ Punkt für ein passendes Beispiel.
+\end{solution}}
+{\antwort{10}}
 
 %---------------------------------------------------------
 \question[4]
 Gib die ausmultiplizierte Form dieses Binoms mit höhere Potenz an. \[(2k+l)^5\]
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+	Koeffizienten aus dem Pascal'schen Dreieck: $1,5,10,10,5,1$
+	\[(2k+l)^5=32k^5+80k^4l+80k^3l^2+40k^2l^3+10kl^4+l^5\]
+	Bewertung: $2$ Punkte für die Binomialkoeffizienten und die Exponenten, $2$ Punkte für die korrekten Zweierpotenzen.
+\end{solution}}
+{\antwort{7}}
 
 %---------------------------------------------------------
 \noaddpoints
@@ -279,8 +471,17 @@ Zerlege die folgenden Terme in möglichst viele Faktoren.
     \part[2] $8p(2p-5)-(2p+5)(2p-5)$
     \part[2] $x(y-z)+z(z-y)$
     \part[2] $6ab+3a-12b-6$
-    \part[2] $6kp+3kq-9k-8p-4q+12r$
+    \part[2] $6kp+3kq-9k-8p-4q+12$
 \end{parts}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+	(a) $(2p-5)\bigl(8p-(2p+5)\bigr)=(2p-5)(6p-5)$\\
+	(b) $x(y-z)-z(y-z)=(y-z)(x-z)$\\
+	(c) $3(2ab+a-4b-2)=3\bigl(a(2b+1)-2(2b+1)\bigr)=3(2b+1)(a-2)$\\
+	(d) $3k(2p+q-3)-4(2p+q-3)=(2p+q-3)(3k-4)$\\
+	Bewertung: je $1$ Punkt für das Ausklammern bzw. Gruppieren, $1$ Punkt für die vollständige Faktorisierung.
+\end{solution}}
+{\antwort{14}}
 
 %---------------------------------------------------------
 \noaddpoints
@@ -293,6 +494,15 @@ Faktorisiere die folgenden Terme so weit wie möglich.
     \part[2] $p^2-x^2-2x-1$
     \part[2] $x^2-6x-16$
 \end{parts}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+	(a) $2a(a-b)+b(a-b)=(a-b)(2a+b)$\\
+	(b) $3a(2b+1)-7(2b+1)=(2b+1)(3a-7)$\\
+	(c) $p^2-(x^2+2x+1)=p^2-(x+1)^2=(p-x-1)(p+x+1)$\\
+	(d) $x^2-6x-16=(x-8)(x+2)$, denn $(-8)\*2=-16$ und $-8+2=-6$.\\
+	Bewertung: (a) und (b) je $1$ Punkt für das Resultat; (c) $1$ Punkt für $(x+1)^2$, $1$ Punkt für die 3.\ binomische Formel; (d) $1$ Punkt für das Zahlenpaar $-8$ und $2$, $1$ Punkt für die Faktorisierung.
+\end{solution}}
+{\antwort{12}}
 
 %---------------------------------------------------------
 \noaddpoints
@@ -305,6 +515,15 @@ Faktorisiere die folgenden Terme so weit wie möglich.
     \part[3] $4r^2-9s^2+6s-1$
     \part[3] $16x^4-81z^4$
 \end{parts}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+	(a) $-6x(x^4+6x^2y+9y^2)=-6x(x^2+3y)^2$\\
+	(b) $25c^2-(d^2-10d+25)=25c^2-(d-5)^2=(5c-d+5)(5c+d-5)$\\
+	(c) $4r^2-(9s^2-6s+1)=4r^2-(3s-1)^2=(2r-3s+1)(2r+3s-1)$\\
+	(d) $(4x^2-9z^2)(4x^2+9z^2)=(2x-3z)(2x+3z)(4x^2+9z^2)$\\
+	Bewertung: (a) $1$ Punkt für das Ausklammern von $-6x$, $1$ Punkt für die 1.\ binomische Formel; (b) $1$ Punkt für $(d-5)^2$, $1$ Punkt für die 3.\ binomische Formel; (c) $1$ Punkt für das Ausklammern von $-1$, $1$ Punkt für $(3s-1)^2$, $1$ Punkt für die 3.\ binomische Formel; (d) $1$ Punkt pro Anwendung der 3.\ binomischen Formel, $1$ Punkt für die Feststellung, dass $4x^2+9z^2$ nicht weiter zerlegbar ist.
+\end{solution}}
+{\antwort{14}}
 
 %---------------------------------------------------------
 \noaddpoints
@@ -315,6 +534,13 @@ Faktorisiere die folgenden Terme so weit wie möglich.
     \part[2] $-3u^2+18uv-27v^2$
     \part[3] $4c^3-8c^2-9c+18$
 \end{parts}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
+	(a) $-3(u^2-6uv+9v^2)=-3(u-3v)^2$\\
+	(b) $4c^2(c-2)-9(c-2)=(c-2)(4c^2-9)=(c-2)(2c-3)(2c+3)$\\
+	Bewertung: (a) $1$ Punkt für das Ausklammern von $-3$, $1$ Punkt für die 2.\ binomische Formel; (b) $1$ Punkt für das Gruppieren, $1$ Punkt für das Ausklammern von $(c-2)$, $1$ Punkt für die 3.\ binomische Formel.
+\end{solution}}
+{\antwort{10}}
 
 
 %---------------------------------------------------------
@@ -333,12 +559,14 @@ Faktorisiere die folgenden Terme so weit wie möglich.
 	\setcounter{partno}{2}
 	\part[2] $-2r^3+20r^2s-50rs^2$
 \end{parts}
-\begin{solution}
+\ifthenelse{\boolean{printanswers}}
+{\begin{solution}
 	(a) $12a^2b\,(2ab-3b^2+1)$\\
 	(b) $5a(3x-2y)-3b(3x-2y)=(3x-2y)(5a-3b)$\\
 	(c) $-2r\,(r^2-10rs+25s^2)=-2r\,(r-5s)^2$\\
-	Bewertung (c): je 1 Punkt für das Ausklammern, 1 Punkt für die binomische Formel.
-\end{solution}
+	Bewertung: (a) $1$ Punkt für den richtigen gemeinsamen Faktor $12a^2b$, $1$ Punkt für die Klammer; (b) $1$ Punkt für das Gruppieren, $1$ Punkt für das Resultat; (c) $1$ Punkt für das Ausklammern von $-2r$, $1$ Punkt für die 2.\ binomische Formel.
+\end{solution}}
+{\antwort{12}}
 
 
 \end{questions}
