@@ -1,0 +1,119 @@
+\documentclass[11pt,oneside]{article}
+\input{../../../Header/packages.sty}
+\input{../../../Header/mathexpressions.sty}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Lektionsplanung: Der Kathetensatz}
+\rhead{Jonas Guler (Gu)}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{14pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\linespread{1.15}
+
+\begin{document}
+{\Large\textbf{Lektionsplanung: Der Kathetensatz}}\\[2mm]
+\begin{tabularx}{\textwidth}{@{}lX}
+	Thema: & Sätze im rechtwinkligen Dreieck, Kathetensatz (Satz des Euklid)\\
+	Dauer: & 1 Lektion à 45 Minuten\\
+	Einbettung: & nach dem Satz des Pythagoras (Skript \textit{Sätze im rechtwinkligen Dreieck}, Abschnitt 3), vor dem Höhensatz\\
+	Material: & Arbeitsblatt \texttt{kathetensatz.pdf}, Taschenrechner, Geodreieck und Zirkel\\
+\end{tabularx}
+
+\section*{Lernziele}
+Die Lernenden \ldots
+\begin{itemize}[itemsep=0pt]
+	\item entdecken an Zahlenbeispielen den Zusammenhang $a^2=c\cdot q$ bzw.\ $b^2=c\cdot p$ und formulieren ihn als Vermutung.
+	\item können den Kathetensatz in Worten und als Formel angeben und am Flächenbild (Kathetenquadrat = Rechteck) erklären.
+	\item verstehen eine Herleitung des Kathetensatzes, die nur den Satz des Pythagoras benutzt, und wissen, dass umgekehrt Pythagoras aus dem Kathetensatz folgt.
+	\item berechnen mit dem Kathetensatz fehlende Grössen im rechtwinkligen Dreieck, insbesondere die Hypotenusenabschnitte.
+\end{itemize}
+
+\textbf{Vorwissen:} Satz des Pythagoras, Bezeichnungen $a,b,c,h_c,p,q$ (Skript Abschnitt 1), Berechnung von $h_c$ über den Flächeninhalt (Skript Aufgabe 2.1 Nr.\,6).
+
+\textbf{Achtung Notation:} Im Skript liegt $p$ bei $A$ (also an der Kathete $b$) und $q$ bei $B$. Es gilt deshalb $a^2=c\cdot q$ und $b^2=c\cdot p$. In \textit{Geometrie 2} (Niederberger) ist es umgekehrt ($a^2=c\cdot p$). Das Arbeitsblatt folgt konsequent dem Skript.
+
+\section*{Ablauf}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{11mm}|>{\raggedright\arraybackslash}p{27mm}|X|>{\raggedright\arraybackslash}p{22mm}|}\hline
+	\textbf{Zeit} & \textbf{Phase} & \textbf{Inhalt und Aktivität} & \textbf{Sozialform}\\\hline
+	0'--2' & Einstieg & Begrüssung, Lektionsziel nennen: \textit{Heute finden wir mit Pythagoras einen neuen Satz im rechtwinkligen Dreieck.} Arbeitsblatt austeilen, Bezeichnungen an der Figur auf S.\,1 kurz zeigen ($p$ an $b$, $q$ an $a$). & Plenum\\\hline
+	2'--14' & Schüleraktivität (Entdeckung) & \textbf{Aufgabe 1.1, Teil A:} $c$, $h_c$, $p$, $q$ für $a=15$, $b=20$ berechnen, Tabelle ausfüllen und Vermutung formulieren. \textbf{Teil B} (Beweis) für schnelle Paare. Lehrperson geht herum; häufige Hürde ist $h_c$: auf den Flächeninhalt $\frac{a\cdot b}{2}=\frac{c\cdot h_c}{2}$ hinweisen. & Partnerarbeit\\\hline
+	14'--26' & Theorieinput & Vermutungen sammeln (2--3 Paare). \textbf{Satz 2.1} an der Wandtafel mit Flächenbild entwickeln: farbiges Kathetenquadrat und gleichfarbiges Rechteck. \textbf{Beweis} gemeinsam mit den drei Pythagoras-Gleichungen (evtl.\ von einem Paar aus Teil B vorstellen lassen). \textbf{Bemerkungen:} Pythagoras folgt aus dem Kathetensatz (Euklid), Formeln $q=\frac{a^2}{c}$, $p=\frac{b^2}{c}$, Merksatz in Worten. \textbf{Beispiel 1} gemeinsam lösen (ca.\ 3'). & Plenum, Lehrervortrag mit Fragen\\\hline
+	26'--44' & Übungen & \textbf{Pflicht:} Aufgabe 3.1 a)--d), 3.2, 3.3.\newline \textbf{Zusatz:} 3.1 e)--f), 3.4 (Konstruktion mit Thaleskreis), 3.5 $\bigstar$ (Raumdiagonale). Lösungen liegen bei der Lehrperson auf bzw.\ werden ab Min.\ 38 aufgelegt. & Einzel- oder Partnerarbeit\\\hline
+	44'--45' & Abschluss & Merksatz von einer Schülerin oder einem Schüler wiederholen lassen: \textit{Kathete$^2$ = Hypotenuse $\cdot$ anliegender Abschnitt.} Hausaufgabe: Pflichtaufgaben fertig lösen. & Plenum\\\hline
+\end{tabularx}
+
+\section*{Tafelbild (Vorschlag)}
+\begin{minipage}{0.48\linewidth}
+	\textbf{Kathetensatz (Satz des Euklid)}\\
+	Kathetenquadrat = Rechteck aus Hypotenuse und anliegendem Hypotenusenabschnitt:
+	\[a^2=c\cdot q,\qquad b^2=c\cdot p\]
+	\textbf{Beweis:} (I) $a^2=h^2+q^2$, (II) $b^2=h^2+p^2$, (III) $a^2+b^2=p^2+2pq+q^2$.\\
+	(I)$-$(II): $a^2-b^2=q^2-p^2$, dazu (III):\\ $2a^2=2q^2+2pq=2q(p+q)=2qc$.
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\linewidth}
+	\centering
+	\begin{tikzpicture}[x=1cm, y=1cm, font=\footnotesize, scale=0.42]
+		\filldraw[fill=myblue, fill opacity=0.25, draw=black] (0,0) -- (3.2,2.4) -- (0.8,5.6) -- (-2.4,3.2) -- cycle;
+		\filldraw[fill=orange, fill opacity=0.25, draw=black] (3.2,2.4) -- (5,0) -- (7.4,1.8) -- (5.6,4.2) -- cycle;
+		\filldraw[fill=myblue, fill opacity=0.25, draw=black] (0,0) -- (3.2,0) -- (3.2,-5) -- (0,-5) -- cycle;
+		\filldraw[fill=orange, fill opacity=0.25, draw=black] (3.2,0) -- (5,0) -- (5,-5) -- (3.2,-5) -- cycle;
+		\draw[line width=1pt] (0,0) -- (5,0) -- (3.2,2.4) -- cycle;
+		\draw[dashed] (3.2,2.4) -- (3.2,0);
+		\draw (-0.6,2.6) node {$b^2$};
+		\draw (5.3,2.1) node {$a^2$};
+		\draw (1.6,-2.5) node {$c\, p$};
+		\draw (4.1,-2.5) node {$c\, q$};
+	\end{tikzpicture}
+\end{minipage}
+
+\section*{Mögliche Schwierigkeiten und Differenzierung}
+\begin{itemize}[itemsep=0pt]
+	\item \textbf{Zuordnung $p$/$q$:} Viele verwechseln, welcher Abschnitt zu welcher Kathete gehört. Immer mit Skizze arbeiten und den Merksatz in Worten (\textit{anliegender} Abschnitt) betonen.
+	\item \textbf{Rechter Winkel nicht bei $C$:} In späteren Aufgaben bewusst thematisieren (analog zu Pythagoras im Skript).
+	\item \textbf{Schwächere Lernende:} In Aufgabe 1.1 nur das zweite Dreieck (Werte gegeben) ausfüllen lassen und direkt die Vermutung formulieren.
+	\item \textbf{Stärkere Lernende:} Teil B von Aufgabe 1.1, Aufgaben 3.4 und 3.5; zusätzlich: Kehrsatz formulieren (\textit{Gilt $a^2=c\cdot q$, ist das Dreieck dann rechtwinklig?}).
+	\item \textbf{Ausblick nächste Lektion:} Höhensatz $h^2=p\cdot q$ (Geometrie 1 Aufgaben, Kap.\,5.2 Nr.\,40).
+\end{itemize}
+
+\newpage
+\section*{Lösungen}
+\textbf{Aufgabe 1.1}
+\begin{itemize}[itemsep=0pt]
+	\item[a)--c)] $c=\sqrt{15^2+20^2}=25$, $h_c=\frac{15\cdot 20}{25}=12$, $q=\sqrt{15^2-12^2}=9$, $p=\sqrt{20^2-12^2}=16$.
+	\item[d)] Dreieck 1: $a^2=225=c\cdot q=25\cdot 9$, $b^2=400=c\cdot p=25\cdot 16$.\\ Dreieck 2: $a^2=36=10\cdot 3.6$, $b^2=64=10\cdot 6.4$.
+	\item[e)] Vermutung: $a^2=c\cdot q$ und $b^2=c\cdot p$.
+	\item[f)--g)] (I) $a^2=h_c^2+q^2$, (II) $b^2=h_c^2+p^2$, (III) $a^2+b^2=(p+q)^2=p^2+2pq+q^2$.\\
+	(I)$-$(II): $a^2-b^2=q^2-p^2$. Addiert zu (III): $2a^2=2q^2+2pq=2q(p+q)=2qc$, also $a^2=c\cdot q$. Analog (oder mit (III)) $b^2=c\cdot p$.
+\end{itemize}
+
+\textbf{Beispiel 1:} $q=\frac{a^2}{c}=\frac{36}{9}=4$\,cm, $p=c-q=5$\,cm, $b^2=c\cdot p=45$, $b=\sqrt{45}=3\sqrt5\approx 6.71$\,cm. Kontrolle: $36+45=81=9^2$.
+
+\textbf{Aufgabe 3.1}
+\begin{enumerate}[label=\alph*), itemsep=0pt]
+	\item $c=5$\,cm, $q=\frac{16}{5}=3.2$\,cm, $p=\frac{9}{5}=1.8$\,cm.
+	\item $p=\frac{144}{16}=9$\,cm, $q=16-9=7$\,cm.
+	\item $c=10$\,cm, $a=\sqrt{10\cdot 8}=4\sqrt5\approx 8.94$\,cm, $b=\sqrt{10\cdot 2}=2\sqrt5\approx 4.47$\,cm.
+	\item $c=\frac{b^2}{p}=\frac{100}{8}=12.5$\,cm, $q=4.5$\,cm, $a=\sqrt{12.5\cdot 4.5}=7.5$\,cm.
+	\item $q=\frac{25}{13}\approx 1.92$\,cm, $p=\frac{144}{13}\approx 11.08$\,cm, $b=12$\,cm.
+	\item $c=\frac{12}{2}=6$\,cm, $p=4$\,cm, $b=\sqrt{24}=2\sqrt6\approx 4.90$\,cm.
+\end{enumerate}
+
+\textbf{Aufgabe 3.2:} Das Dreieck $\triangle ABC$ ist rechtwinklig bei $B$ mit Hypotenuse $\overline{AC}=25$\,cm. Kathetensatz: $\overline{AE}=\frac{20^2}{25}=16$\,cm, $\overline{CE}=\frac{15^2}{25}=9$\,cm, $\overline{BE}=\sqrt{20^2-16^2}=12$\,cm.
+
+\textbf{Aufgabe 3.3:} $a^2=c\cdot q$ mit $a=2q$: $4q^2=10q$, also $q=2.5$\,cm, $a=5$\,cm, $p=7.5$\,cm, $b=\sqrt{10\cdot 7.5}=5\sqrt3\approx 8.66$\,cm.
+
+\textbf{Aufgabe 3.4:} Das Dreieck $\triangle ABC$ ist nach Thales rechtwinklig bei $C$, $H$ ist der Höhenfusspunkt. Kathetensatz: $\overline{BC}^2=c\cdot q=4.5\cdot 2.5=11.25$\,cm$^2$, also $\overline{BC}\approx 3.35$\,cm.
+
+\textbf{Aufgabe 3.5:} Dreieck $\triangle BDH$ ist rechtwinklig bei $D$ mit $\overline{BD}=10$\,cm, $\overline{DH}=7.5$\,cm, $\overline{BH}=12.5$\,cm. $\overline{BP}=\frac{10^2}{12.5}=8$\,cm, $\overline{HP}=\frac{7.5^2}{12.5}=4.5$\,cm, also $\overline{BP}:\overline{HP}=16:9$.
+
+\section*{Quellen und Inspiration}
+\begin{itemize}[itemsep=0pt]
+	\item Geometrie 2 (Niederberger), Kap.\ \textit{Der Kathetensatz}, S.\,80--82 (Satz, Flächenverwandlung, Aufgaben 1, 4, 5, 7).
+	\item Geometrie 1 Aufgaben, Kap.\,5.2 \textit{Höhensatz und Kathetensatz}, Nr.\,43--47.
+\end{itemize}
+\end{document}
