@@ -68,18 +68,22 @@
 
 
 \section{Der Satz des Pythagoras}
-	Der Satz des Pythagoras dürfte allen bereits bekannt sein und ihr habt ihn bereits in der Sekundarschule ausführlich diskutiert und Berechnungsaufgaben dazu bearbeitet. Aus diesem Grund wird der Satz nicht weiter hergeleitet und der Berechnungsaspekt nicht gross thematisiert. Die Gelegenheit wird aber genutzt, um verschiedene Möglichkeiten zu diskutieren, wie der Satz des Pythagoras mathematisch bewiesen werden kann.
+	Der Satz des Pythagoras dürfte allen bereits bekannt sein und ihr habt ihn bereits in der Sekundarschule ausführlich diskutiert und Berechnungsaufgaben dazu bearbeitet. Aus diesem Grund wird der Satz nicht weiter hergeleitet und der Berechnungsaspekt nicht gross thematisiert. Die Gelegenheit wird aber genutzt, um verschiedene Möglichkeiten zu diskutieren, wie der Satz des Pythagoras mathematisch bewiesen werden kann. Zur Vollständigkeit halten wir den Satz nochmals fest:
 	\begin{satz}[Satz des Pythagoras]
 		In einem rechtwinkligen Dreieck mit Hypotenuse $c$ gilt: \[a^2+b^2=c^2.\]
 	\end{satz}
-	Der Satz des Pythagoras ermöglichst es uns also, in einem rechtwinkligen Dreieck bei zwei bekannten Seitenlängen, die dritte zu berechnen.\newpage
+	Der Satz des Pythagoras ermöglichst es uns also, in einem rechtwinkligen Dreieck bei zwei bekannten Seitenlängen, die dritte zu berechnen. Jedoch müssen wir aufpassen, bei welchem Punkt der rechte Winkel liegt, denn die gegenüberliegende Seite ist immer die Hypotenuse und somit ändern sich in gewissen Fällen die Plätze der Buchstaben $a,b$ und $c$.\newpage
 	\begin{beispiel}
-		Gegeben ist ein Dreieck mit
-		\begin{enumcols}[2]
-			\item $\gamma=90^\circ, a=6cm, c=10cm$
-			\item $\beta=90^\circ, a=6cm, c=10cm$
-		\end{enumcols}
-		Berechne in beiden Fällen die Länge der unbekannten dritten Seite $b$.
+		Gegeben sind folgende Dreiecke. Berechne die Länge der unbekannten dritten Seite $b$.
+		\begin{gridspace}{2.5}
+			\vspace{-2pt}
+			\begin{enumcols}[2]
+				\item $\gamma=90^\circ, a=6cm, c=10cm$
+				\item $\beta=90^\circ, a=6cm, c=10cm$
+			\end{enumcols}
+		\end{gridspace}
+
+
 	\end{beispiel}
 	\begin{aufgabe} % Skript Atchu S74 A1abcd,2,4
 		\begin{enumerate}
@@ -206,7 +210,7 @@
 			\item Begründe, dass das blaue Viereck im Innern der rechten Figur lauter rechte Winkel besitzt. Es handelt sich also um ein Quadrat.
 			\item Wenn es sich zu Beginn also auf beiden Seiten um gleich grosse Figuren handelt, und man auf beiden Seiten je vier identische Dreiecke wegnimmt, muss auch die übrigbleibende Restfläche gleich gross sein. Formuliere diese Tatsache durch eine mathematische Formel.
 		\end{enumerate}
-		\karos{10}
+		\karos{12.5}
 	\end{aufgabe}
 	\begin{aufgabe}[Beweis nach an-Narizi (ca. 900 n. Chr.)]
 		Betrachte die folgenden Figuren. Begründe auch damit die Aussage des Satzes von Pythagoras.
@@ -247,7 +251,7 @@
 			\item Begründe mit eigenen Worten, warum die beiden blauen Flächen gleich gross sind.
 			\item Erkläre, wie du daraus den Satz des Pythagoras formulieren kannst.
 		\end{enumerate}
-		\karos{14}
+		\karos{14.5}
 	\end{aufgabe}
 	\begin{aufgabe}[Beweis nach Garfield (ca. 1850)] % Skript Atchu
 		Betrachte die folgenden Figuren. Begründe auch damit die Aussage des Satzes von Pythagoras.
@@ -283,7 +287,7 @@
 			\item Berechne den Flächeninhalt des entstehenden Trapezes auf zwei verschiedene Arten (einerseits besteht die Figur aus drei Dreiecken, andererseits handelt es sich eben um ein Trapez: entweder kannst Du Dich noch an die Flächenformel für Trapeze erinnern, oder Du findest einen anderen Weg).
 			\item Wenn Du diese beiden Resultate miteinander vergleichst, müsstest Du einen Beweis des Satzes von Pythagoras erkennen.
 		\end{enumerate}
-		\karos{10}
+		\karos{12.5}
 	\end{aufgabe}\newpage
 
 
@@ -293,7 +297,7 @@
 \subsection{Die Raumdiagonale}
 	\begin{beispiel}\ \vspace{5pt}\\
 		\begin{minipage}{0.475\linewidth}
-			Peter möchte seinem Onkel per Post einen $135cm$ langen Stab schicken. Zu Hause liegt eine Schachtel mit den Kantenlängen $a=100$ cm, $b=80$ cm und $c=60$ cm herum. Passt der Stab vollständig in diese Schachtel? \\
+			Peter möchte seinem Onkel per Post einen $135cm$ langen Stab schicken. Zu Hause liegt eine Schachtel mit den Kantenlängen $a=100$ cm, $b=80$ cm und $c=60$ cm herum. \textbf{Schätze}, ob der Stab vollständig in diese Schachtel passt? \\
 			\textit{Der Stab ist sehr dünn. Die Dicke des Stabes muss für unsere Überlegungen also nicht berücksichtigt werden.}
 		\end{minipage}
 		\hfill
@@ -364,8 +368,32 @@
 	\begin{satz}
 		Die Länge $h$ der Höhe eines gleichseitigen Dreiecks mit Seitenlänge $s$ beträgt \[h=\gap{4}.\]
 	\end{satz}
-	\begin{aufgabe}
-		tbd
+	\begin{aufgabe}[Grundlinie eines gleichschenkligen Dreiecks]
+		In den folgenden Teilaufgaben geht es um die beiden Schenkel $s$ und die Grundlinie $d$ eines gleichschenkligen Dreiecks.
+		\begin{gridspace}{8.5}
+			\begin{enumerate}[label=\alph*)]
+				\item Berechne $d$, wenn $s=5$ Einheiten misst.\\
+				\item Drücke $d$ durch ein allgemeines $s$ aus.\\
+				\item Drücke $s$ durch ein allgemeines $d$ aus.\\
+				\item Berechne $s$, wenn $d=10$ Einheiten misst.
+			\end{enumerate}
+		\end{gridspace}
+	\end{aufgabe}
+	\begin{aufgabe} %Geo1 - Kap. 5.1 A28 und 29
+		\begin{enumerate}
+			\item Berechne in den folgenden Dreiecken mit speziellen Winkeln\ldots
+			\begin{enumerate}[label=\alph*)]
+				\item \ldots die fehlenden Seitenlängen im rechtwinkligen Dreieck $\triangle ABC$ mit $\gamma = 90^\circ$, $c=10$ cm und $\alpha=30^\circ$.
+				\item \ldots den Flächeninhalt des Dreiecks $\triangle ABC$, wenn $\alpha=30^\circ$, $\beta=45^\circ$ und $a=\sqrt{128}$.
+				\item \ldots den Flächeninhalt des Dreiecks $\triangle ABC$, wenn $\alpha=\beta=30^\circ$ und $c=6$ cm.
+			\end{enumerate}
+			\item Berechne in den folgenden Vierecken mit speziellen Winkeln\ldots
+			\begin{enumerate}[label=\alph*)]
+				\item \ldots den Flächeninhalt des Parallelogramms $ABCD$ mit $\alpha=30^\circ$, $\overline{BD}=12$ cm und $\angle ABD=90^\circ$.
+				\item \ldots die Seitenlängen und den Flächeninhalt des Trapezes $ABCD$ {$(AB \parallel CD)$} mit $\alpha=45^\circ$, $\beta=30^\circ$ und $c=h=4$ cm.
+				\item \ldots den Flächeninhalt des Rhombus $ABCD$ mit $\alpha=30^\circ$ und $a=5$ cm.
+			\end{enumerate}
+		\end{enumerate}
 	\end{aufgabe}
 
 \subsection{Der Kathetensatz}
