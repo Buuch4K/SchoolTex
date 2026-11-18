@@ -75,15 +75,13 @@
 	Der Satz des Pythagoras ermöglichst es uns also, in einem rechtwinkligen Dreieck bei zwei bekannten Seitenlängen, die dritte zu berechnen. Jedoch müssen wir aufpassen, bei welchem Punkt der rechte Winkel liegt, denn die gegenüberliegende Seite ist immer die Hypotenuse und somit ändern sich in gewissen Fällen die Plätze der Buchstaben $a,b$ und $c$.\newpage
 	\begin{beispiel}
 		Gegeben sind folgende Dreiecke. Berechne die Länge der unbekannten dritten Seite $b$.
-		\begin{gridspace}{2.5}
+		\begin{gridspace}{5.5}
 			\vspace{-2pt}
 			\begin{enumcols}[2]
 				\item $\gamma=90^\circ, a=6cm, c=10cm$
 				\item $\beta=90^\circ, a=6cm, c=10cm$
 			\end{enumcols}
 		\end{gridspace}
-
-
 	\end{beispiel}
 	\begin{aufgabe} % Skript Atchu S74 A1abcd,2,4
 		\begin{enumerate}
@@ -210,7 +208,7 @@
 			\item Begründe, dass das blaue Viereck im Innern der rechten Figur lauter rechte Winkel besitzt. Es handelt sich also um ein Quadrat.
 			\item Wenn es sich zu Beginn also auf beiden Seiten um gleich grosse Figuren handelt, und man auf beiden Seiten je vier identische Dreiecke wegnimmt, muss auch die übrigbleibende Restfläche gleich gross sein. Formuliere diese Tatsache durch eine mathematische Formel.
 		\end{enumerate}
-		\karos{12.5}
+		\karos{11}
 	\end{aufgabe}
 	\begin{aufgabe}[Beweis nach an-Narizi (ca. 900 n. Chr.)]
 		Betrachte die folgenden Figuren. Begründe auch damit die Aussage des Satzes von Pythagoras.
@@ -291,8 +289,6 @@
 	\end{aufgabe}\newpage
 
 
-
-
 \section{Anwendungen von Pythagoras}
 \subsection{Die Raumdiagonale}
 	\begin{beispiel}\ \vspace{5pt}\\
@@ -336,8 +332,8 @@
 			Jedes gleichseitige Dreieck ist achsensymmetrisch, kann also durch die Höhe in zwei kongruente, rechtwinklige Dreieck zerlegt werden.
 			Berechne die Höhe $h$ für ein gleichseitiges Dreieck...
 			\begin{enumerate}[label=\alph*)]
-				\item mit Seitenlänge $s=8cm$.
-				\item mit allgemeiner Seitenlänge $s$
+				\item \ldots mit Seitenlänge $s=8cm$.
+				\item \ldots mit allgemeiner Seitenlänge $s$
 			\end{enumerate}
 		\end{minipage}
 		\hfill
@@ -397,6 +393,108 @@
 	\end{aufgabe}
 
 \subsection{Der Kathetensatz}
+	In diesem Abschnitt wollen wir einen weiteren Zusammenhang im rechtwinkligen Dreieck diskutieren. Dabei verwenden wir wiederum die gängigen Bezeichnungen in einem rechtwinkligen Dreieck und nehmen einfachheitshalber an, dass der rechte Winkel $\gamma$ beim Punkt $C$ liegt.
+	\begin{aufgabe}
+		Gegeben ist ein rechtwinkliges Drieck mit $\gamma=90^\circ,\: a=15$ cm und $b=20$ cm.
+		\begin{enumerate}[label=\alph*)]
+			\item Berechne die Länge der Hypothenuse $c$.
+			\item Berechne die Höhe $h_c$.
+			\item Berechne die Hypothenusenabschnitte $p$ und $q$, in dem du die zwei durch die Höhe geteilten Dreiecke untersuchst.
+		\end{enumerate}
+		\karos{4.5}
+		\begin{enumerate}[label=\alph*)]
+			\setcounter{enumi}{3}
+			\item Übertrage die Werte in die folgende Tabelle und berechne zudem die fehlenden Werte für das zweite Dreieck mit $a=6$ cm und $b=8$ cm.
+			\begingroup
+			\renewcommand{\arraystretch}{1.5}
+			\begin{table}[H]
+				\centering
+				\begin{tabular}{|*{10}{>{\centering\arraybackslash}p{8.5mm}|}}\hline
+					$a$ & $b$ & $c$ & $h_c$ & $p$ & $q$ & $a^2$ & $c\cdot q$ & $b^2$ & $c\cdot p$ \\\hline\hline
+					$15$ & $20$ & & & & & & & & \\\hline
+					$6$ & $8$ & $10$ & $4.8$ & $6.4$ & $3.6$ & & & & \\\hline
+				\end{tabular}
+			\end{table}
+			\endgroup
+			\item Vergleiche nun die Werte aus den letzten $4$ Spalten und stelle eine Vermutung auf, wie diese Werte zusammenpassen.
+		\end{enumerate}
+		\karos{2.5}
+	\end{aufgabe}
+	Die Vermutung aus der Einstiegsaufgabe gilt in jedem rechtwinkligen Dreieck. Geometrisch betrachtet, vergleicht sie die Fläche eines Quadrates mit der Fläche eines Rechtecks.
+	\begin{satz}[Kathetensatz oder Satz des Euklid]
+		\begin{minipage}{0.6\linewidth}
+			In einem rechtwinkligen Dreieck ist das Quadrat über einer Kathete flächengleich wie das Rechteck aus der Hypotenuse und dem \textbf{an dieser Kathete anliegenden} Hypotenusenabschnitt:
+			\[a^2=c\* p \qquad\text{und}\qquad b^2=c\* q.\]
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.375\linewidth}
+			\centering
+			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=1cm, y=1cm,
+				>=latex,   %Voreinstellung für Pfeilspitzen
+				font=\footnotesize, scale=0.4]
+				% Dreieck: A(0,0), B(5,0), C(3.2,2.4); b=4, a=3, c=5, p=3.2, q=1.8
+				\filldraw[fill=plotblue, fill opacity=0.25, draw=black] (0,0) -- (3.2,2.4) -- (0.8,5.6) -- (-2.4,3.2) -- cycle;
+				\filldraw[fill=orange, fill opacity=0.25, draw=black] (3.2,2.4) -- (5,0) -- (7.4,1.8) -- (5.6,4.2) -- cycle;
+				\filldraw[fill=plotblue, fill opacity=0.25, draw=black] (0,0) -- (3.2,0) -- (3.2,-5) -- (0,-5) -- cycle;
+				\filldraw[fill=orange, fill opacity=0.25, draw=black] (3.2,0) -- (5,0) -- (5,-5) -- (3.2,-5) -- cycle;
+				\draw[line width=1pt] (0,0) -- (5,0) -- (3.2,2.4) -- cycle;
+				\draw[dashed] (3.2,2.4) -- (3.2,0);
+				\begin{scriptsize}
+					\draw (-0.3,-0.1) node[left] {$A$};
+					\draw (5.3,-0.1) node[right] {$B$};
+					\draw (3.2,2.6) node[above] {$C$};
+					\draw (0.5,2.7) node {$b^2$};
+					\draw (5.3,2.1) node {$a^2$};
+					\draw (1.6,-2.5) node {$c\* q$};
+					\draw (4.1,-2.5) node {$c\* p$};
+					\draw (1.6,0.25) node {$q$};
+					\draw (4.1,0.25) node {$p$};
+					\draw (5.35,-2.5) node[right] {$c$};
+				\end{scriptsize}
+			\end{tikzpicture}
+		\end{minipage}
+	\end{satz}
+	\begin{beweis}
+		Mit dem Satz des Pythagoras in den beiden Teildreiecken und im ganzen Dreieck gilt:
+		\begin{align*}
+			(\Romannumeral{1})\:a^2=\:&\gap{2.2}, \hspace{1.8cm} (\Romannumeral{2})\: b^2=\gap{2.2},\\
+			&(\Romannumeral{3})\: a^2+b^2=(p+q)^2=\gap{2.5}
+		\end{align*}
+		\karos{3.5}
+	\end{beweis}
+	{\bf Bemerkungen:}
+	\begin{itemize}
+		\item Umgekehrt folgt aus dem Kathetensatz sofort der Satz des Pythagoras: $a^2+b^2=c\cdot q+c\cdot p=\gap{4}$.\\[2mm] Genau so hat Euklid (ca. 300 v. Chr.) den Satz des Pythagoras in seinen \textit{Elementen} bewiesen.
+		\item Mit dem Kathetensatz lassen sich die Hypotenusenabschnitte direkt aus den Seiten berechnen: \[q=\gap{2} \qquad\text{und}\qquad p=\gap{2}.\]
+		\item {\bf Achtung:} Liegt der rechte Winkel nicht bei $C$, so ändern sich die Namen. Merke dir den Satz deshalb in Worten: \textit{Kathete$^2$ = Hypotenuse $\*$ anliegender Hypotenusenabschnitt}.
+	\end{itemize}
+	\begin{beispiel}
+		Im rechtwinkligen Dreieck $\triangle ABC$ mit $\gamma=90^\circ$ sind $a=6$ cm und $c=9$ cm gegeben. Berechne $q$, $p$ und $b$ ohne zuerst $b$ mit Pythagoras zu bestimmen und kontrolliere dein Resultat anschliessend mit dem Satz des Pythagoras.
+	\end{beispiel}
+	\karos{4}
+	\begin{aufgabe} % angelehnt an Geometrie 1 Aufgaben Kap. 5.2 Nr. 43, 47 und Geometrie 2 (Niederberger) S. 82 Nr. 4
+		\begin{enumerate}
+			\item Berechne in den rechtwinkligen Dreiecken $\triangle ABC$ mit $\gamma=90^\circ$ (Bezeichnungen wie in der Figur auf Seite 1) die gesuchten Grössen. Mache jeweils eine Skizze.
+			\begin{enumcols}[2]
+				\item $a=4$ cm, $b=3$ cm. Gesucht: $c,p,q$.
+				\item $c=16$ cm, $b=12$ cm. Gesucht: $p,q$.
+				\item $p=2$ cm, $q=8$ cm. Gesucht: $a,b$.
+				\item $b=10$ cm, $p=8$ cm. Gesucht: $c,q,a$.
+				\item $c=13$ cm, $a=5$ cm. Gesucht: $p,q,b$.
+				\item $a=\sqrt{12}$ cm, $q=2$ cm. Gesucht: $c,p,b$.
+			\end{enumcols}
+			\item Im Rechteck $ABCD$ gilt $\overline{AB}=20$\,cm und $\overline{BC}=15$\,cm. Das Lot von $B$ auf die Diagonale $AC$ hat den Fusspunkt $E$. Mache eine Skizze und berechne die Längen $\overline{AE}$, $\overline{CE}$ und $\overline{BE}$.
+			\item In einem rechtwinkligen Dreieck mit $\gamma=90^\circ$ misst die Hypotenuse $c=10$ cm. Die Kathete $a$ ist doppelt so lang wie der Hypotenusenabschnitt $q$. Berechne $a$, $q$, $p$ und $b$.
+			\item Mit dem Kathetensatz lässt sich ein Rechteck in ein flächengleiches Quadrat verwandeln. Gegeben ist ein Rechteck mit den Seitenlängen $4.5$ cm und $2.5$ cm.
+			\begin{enumerate}[label=\alph*)]
+				\item Zeichne eine Strecke $\overline{AB}$ der Länge $c=4.5$ cm und trage von $B$ aus die Länge $q=2.5$ cm auf $\overline{AB}$ ab. Den so erhaltenen Punkt nennst du $H$.
+				\item Errichte in $H$ die Senkrechte zu $AB$ und zeichne den Thaleskreis über $\overline{AB}$. Der Schnittpunkt der beiden ist $C$.
+				\item Begründe mit dem Kathetensatz, weshalb das Quadrat über $\overline{BC}$ denselben Flächeninhalt hat wie das Rechteck. Zeichne das Quadrat.
+				\item Kontrolliere: Miss $\overline{BC}$ und vergleiche mit dem berechneten Wert.
+			\end{enumerate}
+		\end{enumerate}
+	\end{aufgabe}
+
 
 \subsection{Der Höhensatz}
 
