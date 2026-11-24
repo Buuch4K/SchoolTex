@@ -395,32 +395,26 @@
 \subsection{Der Kathetensatz}
 	In diesem Abschnitt wollen wir einen weiteren Zusammenhang im rechtwinkligen Dreieck diskutieren. Dabei verwenden wir wiederum die gängigen Bezeichnungen in einem rechtwinkligen Dreieck und wir nehmen einfachheitshalber an, dass der rechte Winkel $\gamma$ beim Punkt $C$ liegt.
 	\begin{aufgabe}
-		Gegeben ist ein rechtwinkliges Drieck mit $\gamma=90^\circ,\: a=15$ cm und $b=20$ cm.
+		Öffne das \href{https://www.geogebra.org/m/a4ss2vsq}{GeoGebra-Applet}\footnotemark. Es zeigt ein rechtwinkliges Dreieck mit den Quadraten über den beiden Katheten und über der Hypotenuse. Mit den beiden Schiebereglern kannst du die Kathetenquadrate verändern.
 		\begin{enumerate}[label=\alph*)]
-			\item Berechne die Länge der Hypothenuse $c$.
-			\item Berechne die Höhe $h_c$.
-			\item Berechne die Hypothenusenabschnitte $p$ und $q$, in dem du die zwei durch die Höhe geteilten Dreiecke untersuchst.
+			\item Bewege den \textcolor{mypink}{\textbf{pinken}} Schieberegler langsam von links nach rechts. Beschreibe in Stichworten, was mit dem Quadrat über der Kathete $b$ geschieht. Unterscheide dabei die einzelnen Schritte.
 		\end{enumerate}
-		\karos{4.5}
-		\begin{enumerate}[label=\alph*)]
-			\setcounter{enumi}{3}
-			\item Übertrage die Werte in die folgende Tabelle und berechne zudem die fehlenden Werte für das zweite Dreieck mit $a=6$ cm und $b=8$ cm.
-			\begingroup
-			\renewcommand{\arraystretch}{1.5}
-			\begin{table}[H]
-				\centering
-				\begin{tabular}{|*{10}{>{\centering\arraybackslash}p{8.5mm}|}}\hline
-					$a$ & $b$ & $c$ & $h_c$ & $p$ & $q$ & $a^2$ & $c\cdot q$ & $b^2$ & $c\cdot p$ \\\hline\hline
-					$15$ & $20$ & & & & & & & & \\\hline
-					$6$ & $8$ & $10$ & $4.8$ & $6.4$ & $3.6$ & & & & \\\hline
-				\end{tabular}
-			\end{table}
-			\endgroup
-			\item Vergleiche nun die Werte aus den letzten $4$ Spalten und stelle eine Vermutung auf, wie diese Werte zusammenpassen.
+		\karos{3.5}
+		\begin{enumerate}[label=\alph*), resume]
+		\item Beim ersten Schritt entsteht aus dem Quadrat ein Parallelogramm. Begründe, weshalb sich der Flächeninhalt dabei nicht ändert. \textit{Tipp: Achte auf eine Grundseite und die zugehörige Höhe.}
+		\end{enumerate}
+		\karos{3.5}
+		\begin{enumerate}[label=\alph*), resume]
+		\item In welche Figur wird das Quadrat $b^2$ am Ende verwandelt? Gib ihre Seitenlängen an und notiere eine Gleichung für $b^2$.
+		\end{enumerate}
+		\karos{2.5}
+		\begin{enumerate}[label=\alph*), resume]
+		\item {\bf Vermutung:} Was wird mit dem Quadrat über der Kathete $a$ geschehen? Notiere zuerst eine Gleichung für $a^2$ und kontrolliere sie danach mit dem \textcolor{myorange}{\textbf{orangen}} Schieberegler.
 		\end{enumerate}
 		\karos{2.5}
 	\end{aufgabe}
-	Die Vermutung aus der Einstiegsaufgabe gilt in jedem rechtwinkligen Dreieck. Geometrisch betrachtet, vergleicht sie die Fläche eines Quadrates mit der Fläche eines Rechtecks.
+	\footnotetext{\url{https://www.geogebra.org/m/a4ss2vsq}}
+	Der Zusammenhang aus dem Geogebra-Applet gilt in jedem rechtwinkligen Dreieck. Geometrisch betrachtet, vergleicht sie die Fläche eines Quadrates mit der Fläche eines Rechtecks.
 	\begin{satz}[Kathetensatz oder Satz des Euklid]
 		\label{satz:kathetensatz}
 		\begin{minipage}{0.6\linewidth}
@@ -435,9 +429,9 @@
 				font=\footnotesize, scale=0.4]
 				% Dreieck: A(0,0), B(5,0), C(3.2,2.4); b=4, a=3, c=5, p=3.2, q=1.8
 				\filldraw[fill=plotblue, fill opacity=0.25, draw=black] (0,0) -- (3.2,2.4) -- (0.8,5.6) -- (-2.4,3.2) -- cycle;
-				\filldraw[fill=orange, fill opacity=0.25, draw=black] (3.2,2.4) -- (5,0) -- (7.4,1.8) -- (5.6,4.2) -- cycle;
+				\filldraw[fill=myorange, fill opacity=0.25, draw=black] (3.2,2.4) -- (5,0) -- (7.4,1.8) -- (5.6,4.2) -- cycle;
 				\filldraw[fill=plotblue, fill opacity=0.25, draw=black] (0,0) -- (3.2,0) -- (3.2,-5) -- (0,-5) -- cycle;
-				\filldraw[fill=orange, fill opacity=0.25, draw=black] (3.2,0) -- (5,0) -- (5,-5) -- (3.2,-5) -- cycle;
+				\filldraw[fill=myorange, fill opacity=0.25, draw=black] (3.2,0) -- (5,0) -- (5,-5) -- (3.2,-5) -- cycle;
 				\draw[line width=1pt] (0,0) -- (5,0) -- (3.2,2.4) -- cycle;
 				\draw[dashed] (3.2,2.4) -- (3.2,0);
 				\begin{scriptsize}
@@ -461,7 +455,7 @@
 			(\Romannumeral{1})\:a^2=\:&\gap{2.2}, \hspace{1.8cm} (\Romannumeral{2})\: b^2=\gap{2.2},\\
 			&(\Romannumeral{3})\: a^2+b^2=(p+q)^2=\gap{2.5}
 		\end{align*}
-		\karos{3.5}
+		\karos{4.5}
 	\end{beweis}
 	{\bf Bemerkungen:}
 	\begin{itemize}
@@ -472,7 +466,9 @@
 	\begin{beispiel}
 		Im rechtwinkligen Dreieck $\triangle ABC$ mit $\gamma=90^\circ$ sind $a=6$ cm und $c=9$ cm gegeben. Berechne $q$, $p$ und $b$ ohne zuerst $b$ mit Pythagoras zu bestimmen und kontrolliere dein Resultat anschliessend mit dem Satz des Pythagoras.
 	\end{beispiel}
+	\karos{2.5}
 	\karos{4}
+
 	\begin{aufgabe}
 		\begin{enumerate}
 			\item Berechne in den rechtwinkligen Dreiecken $\triangle ABC$ mit $\gamma=90^\circ$ (Bezeichnungen wie in der Figur auf Seite 1) die gesuchten Grössen. Mache jeweils eine Skizze.
@@ -505,7 +501,7 @@
 			\item Konstruiere das rechtwinklige Dreieck $\triangle ABC$ mit $\gamma=90^\circ$ aus $p=4.5$ cm und $q=2$ cm. \textit{Tipp: Zeichne zuerst die Hypotenuse mit dem Punkt $H_c$. Wo muss $C$ liegen, damit bei $C$ ein rechter Winkel entsteht?}
 			\item Miss die Höhe $h_c$ möglichst genau.
 		\end{enumerate}
-		\karos{7.5}
+		\karos{5.5}
 		\begin{enumerate}[label=\alph*), resume]
 			\item Übertrage deinen Messwert in die Tabelle und ergänze die fehlenden Werte. Die Höhen der anderen Dreiecke sind bereits berechnet.
 		\end{enumerate}
@@ -646,14 +642,14 @@
 	\karos{2}
 	\begin{enumerate}[label=\alph*), resume]
 		\item \textbf{Die Höhe:} Berechnen wir die Höhe über die Formel des linken Teildreiecks:
-		\begin{align}\nonumber
-			h_c^2&=b^2-x^2\\\nonumber
-			&=(b+x)(b-x)\\\nonumber
-			&=\left(b+\frac{b^2+c^2-a^2}{2c}\right)\left(b-\frac{b^2+c^2-a^2}{2c}\right)\\\nonumber
-			&=\frac{2bc+b^2+c^2-a^2}{2c}\*\frac{2bc-b^2-c^2+a^2}{2c}\\\nonumber
+		\begin{align*}
+			h_c^2&=b^2-x^2\\
+			&=(b+x)(b-x)\\
+			&=\left(b+\frac{b^2+c^2-a^2}{2c}\right)\left(b-\frac{b^2+c^2-a^2}{2c}\right)\\
+			&=\frac{2bc+b^2+c^2-a^2}{2c}\*\frac{2bc-b^2-c^2+a^2}{2c}\\
 			&=\frac{(b+c)^2-a^2}{2c}\*\frac{a^2-(b-c)^2}{2c}\\
 			&=\frac{((b+c)+a)((b+c)-a)\*(a-(b-c))(a+(b-c))}{4c^2}
-		\end{align}
+		\end{align*}
 		\item \textbf{Schöner schreiben:} Wir definieren den \textbf{halben Umfang} $s:=\frac{a+b+c}{2}$, somit gilt $a+b+c=2s$ und wir können diesen mühsam aussehenden Bruchterm für die Höhe vereinfachen. Dabei stellen wir fest:
 		\begin{align*}
 			a+b+c&=2s\hspace{6cm}\\

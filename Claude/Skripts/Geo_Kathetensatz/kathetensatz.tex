@@ -3,6 +3,7 @@
 \input{../../../Header/styleScript.sty}
 \input{../../../Header/headerScript.sty}
 \input{../../../Header/mathexpressions.sty}
+\usepackage{qrcode}
 
 
 \newcommand{\Skriptname}{Lektion: Der Kathetensatz}
@@ -48,30 +49,37 @@ In dieser Lektion verwenden wir die Bezeichnungen aus dem Skript: Im rechtwinkli
 
 %############################################################################################
 \section{Einstieg: Katheten und Hypotenusenabschnitte}
-\begin{aufgabe}[Entdeckungsaufgabe, Partnerarbeit] % Idee: Geometrie 1 Aufgaben (Niederberger) Kap. 5.2 Nr. 44
-	\textbf{Teil A: Rechnen mit Pythagoras.} Gegeben ist ein rechtwinkliges Dreieck mit $\gamma=90^\circ$, $a=15$ cm und $b=20$ cm.
+\begin{aufgabe}[Entdeckungsaufgabe mit GeoGebra, Partnerarbeit] % GeoGebra-Applet "Illustration Kathetensatz" (J. Guler), Idee Scherung: Geometrie 2 (Niederberger) S. 80
+	\begin{minipage}{0.75\linewidth}
+		\textbf{Teil A: Das Applet erkunden.} Öffne das GeoGebra-Applet \textit{Illustration Kathetensatz} über den QR-Code oder den Link \url{https://www.geogebra.org/m/a4ss2vsq}. Es zeigt ein rechtwinkliges Dreieck mit den Quadraten über den beiden Katheten und über der Hypotenuse. Mit den beiden Schiebereglern kannst du die Kathetenquadrate verändern.\\[1mm]
+		\textit{Hinweis: Verwende für die Hypotenusenabschnitte immer die Bezeichnungen aus der Figur auf Seite 1.}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.2\linewidth}
+		\centering\qrcode[height=2.3cm]{https://www.geogebra.org/m/a4ss2vsq}
+	\end{minipage}
 	\begin{enumerate}[label=\alph*)]
-		\item Berechne die Länge der Hypotenuse $c$.
-		\item Berechne die Höhe $h_c$. \textit{Tipp: Berechne den Flächeninhalt des Dreiecks auf zwei verschiedene Arten.}
-		\item Berechne die beiden Hypotenusenabschnitte $p$ und $q$. \textit{Tipp: Die Höhe $h_c$ zerlegt das Dreieck in zwei rechtwinklige Teildreiecke.}
+		\item Bewege den \textbf{pinken} Schieberegler langsam von links nach rechts. Beschreibe in Stichworten, was mit dem Quadrat über der Kathete $b$ geschieht. Unterscheide dabei die einzelnen Schritte.
 	\end{enumerate}
-	\karos{7}
+	\karos{3}
 	\begin{enumerate}[label=\alph*), resume]
-		\item Ergänze die Tabelle. Die Werte für das zweite Dreieck ($a=6$ cm, $b=8$ cm) sind teilweise bereits berechnet.
+		\item Beim ersten Schritt entsteht aus dem Quadrat ein Parallelogramm. Begründe, weshalb sich der Flächeninhalt dabei nicht ändert. \textit{Tipp: Achte auf eine Grundseite und die zugehörige Höhe.}
 	\end{enumerate}
-	\begin{center}
-		\renewcommand{\arraystretch}{1.8}
-		\begin{tabular}{|*{10}{>{\centering\arraybackslash}p{8.5mm}|}}\hline
-			$a$ & $b$ & $c$ & $h_c$ & $p$ & $q$ & $a^2$ & $c\cdot q$ & $b^2$ & $c\cdot p$ \\\hline\hline
-			$15$ & $20$ & & & & & & & & \\\hline
-			$6$ & $8$ & $10$ & $4.8$ & $6.4$ & $3.6$ & & & & \\\hline
-		\end{tabular}
-	\end{center}
+	\karos{3}
 	\begin{enumerate}[label=\alph*), resume]
-		\item Was fällt dir auf? Formuliere eine Vermutung in Worten und als Formel.
+		\item In welche Figur wird das Quadrat $b^2$ am Ende verwandelt? Gib ihre Seitenlängen an und notiere eine Gleichung für $b^2$.
 	\end{enumerate}
-	\karos{2.5}\\[3mm]
-	\textbf{Teil B (für Schnelle): Lässt sich die Vermutung beweisen?} Betrachte ein allgemeines rechtwinkliges Dreieck wie in der Figur oben.
+	\karos{2}
+	\begin{enumerate}[label=\alph*), resume]
+		\item \textbf{Vorhersage:} Was wird mit dem Quadrat über der Kathete $a$ geschehen? Notiere zuerst eine Gleichung für $a^2$ und kontrolliere sie danach mit dem \textbf{orangen} Schieberegler.
+	\end{enumerate}
+	\karos{2}
+	\begin{enumerate}[label=\alph*), resume]
+		\item Stelle beide Schieberegler ganz nach rechts. Welchen bekannten Satz kannst du jetzt am Hypotenusenquadrat ablesen? Begründe.
+		\item Formuliere deine Entdeckung aus c) und d) in Worten: \textit{Das Quadrat über einer Kathete ist flächengleich wie \ldots}
+	\end{enumerate}
+	\karos{3.5}\\[3mm]
+	\textbf{Teil B (für Schnelle): Lässt sich die Vermutung auch mit Pythagoras beweisen?} Betrachte ein allgemeines rechtwinkliges Dreieck wie in der Figur oben.
 	\begin{enumerate}[label=\alph*), resume]
 		\item Wende den Satz des Pythagoras dreimal an: im Teildreieck $\triangle H_cBC$, im Teildreieck $\triangle AH_cC$ und im ganzen Dreieck $\triangle ABC$ (mit $c=p+q$). Notiere die drei Gleichungen.
 		\item Subtrahiere die zweite Gleichung von der ersten und addiere das Resultat zur dritten. Was erhältst du?
