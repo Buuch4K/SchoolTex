@@ -7,14 +7,13 @@
 
 \newcommand{\Skriptname}{Sätze im rechtwinkligen Dreieck}
 \newcommand{\Autor}{Jonas Guler (Gu)}
-\newcommand{\version}{\textit{v}1.0}
 
 \begin{document}   % Atchu - PDF oder KSH-Aeppli - PDF oder KSH-Gubser - LATEX
 \begin{titlepage}
 	\clearpage
 	\title{\Huge\textbf{\Skriptname} \\[1cm]}
 	\author{Autor:\\ \Autor}
-	\date{\normalsize {Version \version}\\ \datelong}
+	\date{\normalsize {Version 1.1}\\ \datelong}
 	\maketitle
 	\thispagestyle{empty}
 	\vfill
@@ -58,8 +57,8 @@
 					\draw[color=red,fill=red] (4,0) circle (1pt);
 					\draw[color=red] (4,-0.5) node {$H_c$};
 					\draw[color=black] (3.5,1.5) node {$h_c$};
-					\draw[color=blue] (5,0.2) node {$q$};
-					\draw[color=blue] (2,0.2) node {$p$};
+					\draw[color=blue] (5,0.2) node {$p$};
+					\draw[color=blue] (2,0.2) node {$q$};
 				\end{scriptsize}
 			\end{tikzpicture}
 		\end{minipage}
@@ -70,6 +69,7 @@
 \section{Der Satz des Pythagoras}
 	Der Satz des Pythagoras dürfte allen bereits bekannt sein und ihr habt ihn bereits in der Sekundarschule ausführlich diskutiert und Berechnungsaufgaben dazu bearbeitet. Aus diesem Grund wird der Satz nicht weiter hergeleitet und der Berechnungsaspekt nicht gross thematisiert. Die Gelegenheit wird aber genutzt, um verschiedene Möglichkeiten zu diskutieren, wie der Satz des Pythagoras mathematisch bewiesen werden kann. Zur Vollständigkeit halten wir den Satz nochmals fest:
 	\begin{satz}[Satz des Pythagoras]
+		\label{satz:pythagoras}
 		In einem rechtwinkligen Dreieck mit Hypotenuse $c$ gilt: \[a^2+b^2=c^2.\]
 	\end{satz}
 	Der Satz des Pythagoras ermöglichst es uns also, in einem rechtwinkligen Dreieck bei zwei bekannten Seitenlängen, die dritte zu berechnen. Jedoch müssen wir aufpassen, bei welchem Punkt der rechte Winkel liegt, denn die gegenüberliegende Seite ist immer die Hypotenuse und somit ändern sich in gewissen Fällen die Plätze der Buchstaben $a,b$ und $c$.\newpage
@@ -393,7 +393,7 @@
 	\end{aufgabe}
 
 \subsection{Der Kathetensatz}
-	In diesem Abschnitt wollen wir einen weiteren Zusammenhang im rechtwinkligen Dreieck diskutieren. Dabei verwenden wir wiederum die gängigen Bezeichnungen in einem rechtwinkligen Dreieck und nehmen einfachheitshalber an, dass der rechte Winkel $\gamma$ beim Punkt $C$ liegt.
+	In diesem Abschnitt wollen wir einen weiteren Zusammenhang im rechtwinkligen Dreieck diskutieren. Dabei verwenden wir wiederum die gängigen Bezeichnungen in einem rechtwinkligen Dreieck und wir nehmen einfachheitshalber an, dass der rechte Winkel $\gamma$ beim Punkt $C$ liegt.
 	\begin{aufgabe}
 		Gegeben ist ein rechtwinkliges Drieck mit $\gamma=90^\circ,\: a=15$ cm und $b=20$ cm.
 		\begin{enumerate}[label=\alph*)]
@@ -422,6 +422,7 @@
 	\end{aufgabe}
 	Die Vermutung aus der Einstiegsaufgabe gilt in jedem rechtwinkligen Dreieck. Geometrisch betrachtet, vergleicht sie die Fläche eines Quadrates mit der Fläche eines Rechtecks.
 	\begin{satz}[Kathetensatz oder Satz des Euklid]
+		\label{satz:kathetensatz}
 		\begin{minipage}{0.6\linewidth}
 			In einem rechtwinkligen Dreieck ist das Quadrat über einer Kathete flächengleich wie das Rechteck aus der Hypotenuse und dem \textbf{an dieser Kathete anliegenden} Hypotenusenabschnitt:
 			\[a^2=c\* p \qquad\text{und}\qquad b^2=c\* q.\]
@@ -472,7 +473,7 @@
 		Im rechtwinkligen Dreieck $\triangle ABC$ mit $\gamma=90^\circ$ sind $a=6$ cm und $c=9$ cm gegeben. Berechne $q$, $p$ und $b$ ohne zuerst $b$ mit Pythagoras zu bestimmen und kontrolliere dein Resultat anschliessend mit dem Satz des Pythagoras.
 	\end{beispiel}
 	\karos{4}
-	\begin{aufgabe} % angelehnt an Geometrie 1 Aufgaben Kap. 5.2 Nr. 43, 47 und Geometrie 2 (Niederberger) S. 82 Nr. 4
+	\begin{aufgabe}
 		\begin{enumerate}
 			\item Berechne in den rechtwinkligen Dreiecken $\triangle ABC$ mit $\gamma=90^\circ$ (Bezeichnungen wie in der Figur auf Seite 1) die gesuchten Grössen. Mache jeweils eine Skizze.
 			\begin{enumcols}[2]
@@ -483,7 +484,7 @@
 				\item $c=13$ cm, $a=5$ cm. Gesucht: $p,q,b$.
 				\item $a=\sqrt{12}$ cm, $q=2$ cm. Gesucht: $c,p,b$.
 			\end{enumcols}
-			\item Im Rechteck $ABCD$ gilt $\overline{AB}=20$\,cm und $\overline{BC}=15$\,cm. Das Lot von $B$ auf die Diagonale $AC$ hat den Fusspunkt $E$. Mache eine Skizze und berechne die Längen $\overline{AE}$, $\overline{CE}$ und $\overline{BE}$.
+			\item Im Rechteck $ABCD$ gilt $\overline{AB}=20$ cm und $\overline{BC}=15$ cm. Das Lot von $B$ auf die Diagonale $AC$ hat den Fusspunkt $E$. Mache eine Skizze und berechne die Längen $\overline{AE}$, $\overline{CE}$ und $\overline{BE}$.
 			\item In einem rechtwinkligen Dreieck mit $\gamma=90^\circ$ misst die Hypotenuse $c=10$ cm. Die Kathete $a$ ist doppelt so lang wie der Hypotenusenabschnitt $q$. Berechne $a$, $q$, $p$ und $b$.
 			\item Mit dem Kathetensatz lässt sich ein Rechteck in ein flächengleiches Quadrat verwandeln. Gegeben ist ein Rechteck mit den Seitenlängen $4.5$ cm und $2.5$ cm.
 			\begin{enumerate}[label=\alph*)]
@@ -497,8 +498,249 @@
 
 
 \subsection{Der Höhensatz}
+	Auch in diesem Abschnitt lernen wir einen weiteren Zusammenhang im rechtwinkligen Dreieck kennen, der auf dem Satz des Pythagoras basiert.
+	\begin{aufgabe}
+		Beim Kathetensatz haben wir die Katheten mit den Hypotenusenabschnitten verglichen. Jetzt untersuchen wir, wie die Höhe $h_c$ mit $p$ und $q$ zusammenhängt.
+		\begin{enumerate}[label=\alph*)]
+			\item Konstruiere das rechtwinklige Dreieck $\triangle ABC$ mit $\gamma=90^\circ$ aus $p=4.5$ cm und $q=2$ cm. \textit{Tipp: Zeichne zuerst die Hypotenuse mit dem Punkt $H_c$. Wo muss $C$ liegen, damit bei $C$ ein rechter Winkel entsteht?}
+			\item Miss die Höhe $h_c$ möglichst genau.
+		\end{enumerate}
+		\karos{7.5}
+		\begin{enumerate}[label=\alph*), resume]
+			\item Übertrage deinen Messwert in die Tabelle und ergänze die fehlenden Werte. Die Höhen der anderen Dreiecke sind bereits berechnet.
+		\end{enumerate}
+		\begin{center}
+			\renewcommand{\arraystretch}{1.8}
+			\begin{tabular}{|*{6}{>{\centering\arraybackslash}p{13mm}|}}\hline
+				$p$ & $q$ & $c=p+q$ & $h_c$ & $h_c^2$ & $p\cdot q$ \\\hline\hline
+				$4.5$ & $2$ & & & & \\\hline
+				$8$ & $2$ & & $4$ & & \\\hline
+				$2.5$ & $10$ & & $5$ & & \\\hline
+				$1$ & $9$ & & $3$ & & \\\hline
+			\end{tabular}
+		\end{center}
+		\begin{enumerate}[label=\alph*), resume]
+			\item Was fällt dir auf? Formuliere eine Vermutung in Worten und als Formel.
+		\end{enumerate}
+		\karos{2.5}
+	\end{aufgabe}
+	Diese Vermutung ist als Höhensatz im rechtwinkligen Dreieck bekannt und stellt den Zusammenhang zwischen einem Quadrat und einem Rechteck her.
+	\begin{satz}[Höhensatz]
+		\label{satz:hoehensatz}
+		\begin{minipage}{0.55\linewidth}
+			In einem rechtwinkligen Dreieck ist das Quadrat über der Höhe zur Hypotenuse flächengleich wie das Rechteck aus den \textbf{beiden Hypotenusenabschnitten}:
+			\[h_c^2=p\* q.\]
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.425\linewidth}
+			\centering
+			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=1cm, y=1cm,
+				>=latex,   %Voreinstellung für Pfeilspitzen
+				font=\footnotesize, scale=0.8]
+				% Dreieck: A(0,0), B(5,0), C(3.2,2.4); p=3.2, q=1.8, h=2.4
+				\filldraw[fill=plotblue, fill opacity=0.25, draw=black] (0.8,0) -- (3.2,0) -- (3.2,2.4) -- (0.8,2.4) -- cycle;
+				\filldraw[fill=orange, fill opacity=0.25, draw=black] (0,0) -- (3.2,0) -- (3.2,-1.8) -- (0,-1.8) -- cycle;
+				\draw[line width=1pt] (0,0) -- (5,0) -- (3.2,2.4) -- cycle;
+				\draw[red, line width=1pt] (3.2,2.4) -- (3.2,0);
+				\draw[dashed, ->] (5,0) arc (0:-90:1.8);
+				\begin{scriptsize}
+					\draw (-0.1,-0.1) node[left] {$A$};
+					\draw (5.1,-0.1) node[right] {$B$};
+					\draw (3.2,2.5) node[above] {$C$};
+					\draw (1.7,1.5) node {$h_c^2$};
+					\draw (1.6,-0.9) node {$p\* q$};
+					\draw (1.6,-2.1) node {$q$};
+					\draw (3.5,-0.9) node {$p$};
+					\draw (4.1,0.25) node {$p$};
+					\draw[red] (3.5,1.3) node {$h_c$};
+				\end{scriptsize}
+			\end{tikzpicture}
+		\end{minipage}
+	\end{satz}
+	\begin{beweis}
+		Wir benutzen den Satz des Pythagoras im Teildreieck $\triangle AH_cC$ und den Kathetensatz:
+		\[(\Romannumeral{1})\:h_c^2=\gap{2.5} \quad\text{(Pythagoras)}, \qquad\qquad (\Romannumeral{2})\:b^2=\gap{2} \quad\text{(Kathetensatz)}\]
+		\karos{3}
+	\end{beweis}
+	{\bf Bemerkungen:}\\
+	Im Höhensatz spielt es keine Rolle, welcher Abschnitt $p$ und welcher $q$ heisst.\\{\bf Achtung:} Es muss aber die Höhe \textbf{auf die Hypotenuse} sein. Merke dir den Satz in Worten:\\\textit{Höhe$^2$ = Produkt der beiden Hypotenusenabschnitte}.
+	\begin{beispiel}
+		Im rechtwinkligen Dreieck $\triangle ABC$ mit $\gamma=90^\circ$ sind $q=4$ cm und $h_c=6$ cm gegeben. Berechne $p$, $c$, die Katheten $a$ und $b$ sowie den Flächeninhalt des Dreiecks $A_\triangle$.
+	\end{beispiel}
+	\karos{5}
+	\begin{aufgabe}
+		\begin{enumerate}
+			\item Berechne in den rechtwinkligen Dreiecken $\triangle ABC$ mit $\gamma=90^\circ$ (Bezeichnungen wie in der Figur auf Seite 1) die gesuchten Grössen. Mache jeweils eine Skizze.
+			\begin{enumcols}[2]
+				\item $p=8$ cm, $q=2$ cm. Gesucht: $h_c,a,b$.
+				\item $h_c=12$ cm, $p=16$ cm. Gesucht: $q,c$.
+				\item $h_c=6$ cm, $q=3$ cm. Gesucht: $p,a,b$.
+				\item $c=10$ cm, $p=2$ cm. Gesucht: $q,h_c,b$.
+				\item $b=5$ cm, $p=3$ cm. Gesucht: $h_c,q,c$.
+				\item $a=13$ cm, $h_c=12$ cm. Gesucht: $q,p,c$.
+			\end{enumcols}
+			\item In einem rechtwinkligen Dreieck mit $\gamma=90^\circ$ misst die Hypotenuse $c=15$ cm. Der Hypotenusenabschnitt $p$ ist viermal so lang wie $q$. Berechne $p$, $q$, $h_c$ und den Flächeninhalt des Dreiecks.
+			\item Mit dem Höhensatz lässt sich ein Rechteck in ein flächengleiches Quadrat verwandeln. Gegeben ist ein Rechteck mit den Seitenlängen $6$ cm und $2$ cm.
+			\begin{enumerate}[label=\alph*)]
+				\item Zeichne eine Strecke $\overline{AB}$ der Länge $6+2=8$ cm und markiere darauf den Punkt $H$ mit $\overline{AH}=6$ cm.
+				\item Errichte in $H$ die Senkrechte zu $AB$ und zeichne den Thaleskreis über $\overline{AB}$. Der Schnittpunkt der beiden ist $C$.
+				\item Begründe mit dem Höhensatz, weshalb das Quadrat über $\overline{HC}$ denselben Flächeninhalt hat wie das Rechteck. Zeichne das Quadrat.
+				\item Berechne $\overline{HC}$ und kontrolliere deine Zeichnung durch Messen.
+				\item Vergleiche mit der Konstruktion über den Kathetensatz aus der letzten Lektion: Was ist gleich, was ist anders?
+			\end{enumerate}
+			\item Ein Tunnel hat einen halbkreisförmigen Querschnitt mit einem Durchmesser von $10$ m.
+			\begin{enumerate}[label=\alph*)]
+				\item Wie hoch ist der Tunnel $1.5$ m vom Rand entfernt? \textit{Tipp: Thaleskreis.}
+				\item Passt ein $2.5$ m breiter und $4.5$ m hoher Lastwagen durch den Tunnel, wenn er genau in der Mitte fährt?
+				\item $\bigstar$ Wie breit darf ein $4$ m hoher Lastwagen höchstens sein, damit er in der Mitte gerade noch durch den Tunnel passt?
+			\end{enumerate}
+		\end{enumerate}
+	\end{aufgabe}
+
 
 \subsection{Die Flächenformel nach Heron}
+	Bisher haben wir mit Pythagoras, Kathetensatz und Höhensatz nur in \textbf{rechtwinkligen} Dreiecken angewendet. Zum Abschluss der Repetition und Vertiefung möchten wir eine sehr schöne Formel einführen, wie der Flächeninhalt eines beliebigen Dreiecks auf interessante Weise über die Länge aller drei Seiten berechnet werden kann.
+	\begin{aufgabe}[Entdeckungsaufgabe]
+		\begin{minipage}{0.6\linewidth}
+			{\bf Ein Dreieck ohne rechten Winkel.} Gegeben ist das Dreieck $\triangle ABC$ wie rechts abgebildet.
+			\begin{enumerate}[label=\alph*)]
+				\item Stelle in beiden Teildreiecken den Satz des Pythagoras für $h_c^2$ auf.
+				\item Setze die beiden Terme gleich und berechne $x$.\\\textit{Tipp: Die Terme $x^2$ fallen weg.}
+				\item Berechne $h_c$ und den Flächeninhalt $A$.
+			\end{enumerate}\vspace{3pt}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.375\linewidth}
+			\centering
+			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=1cm, y=1cm,
+				>=latex,   %Voreinstellung für Pfeilspitzen
+				font=\footnotesize, scale=0.6]
+				\coordinate (A) at (0,0);
+				\coordinate (B) at (7,0);
+				\coordinate (C) at (2.5,6);
+				\coordinate (H) at (2.5,0);
+				\draw[line width=0.8pt] (A) -- (B) -- (C) -- cycle;
+				\draw[color=myred, line width=0.8pt] (C) -- (H);
+				\draw (2.8,0) -- (2.8,0.3) -- (2.5,0.3);
+				\begin{scriptsize}
+					\fill (A) circle (1pt) node[below left] {$A$};
+					\fill (B) circle (1pt) node[below right] {$B$};
+					\fill (C) circle (1pt) node[above] {$C$};
+					\fill[myred] (H) circle (1.5pt) node[below,myred] {$H_c$};
+					\draw (0.6,3.4) node {$b=13$};
+					\draw (5.6,3.3) node {$a=15$};
+					\draw[color=myred] (2.95,3) node {$h_c$};
+					\draw[color=plotblue] (1.25,0.25) node {$x$};
+					\draw[color=plotblue] (4.75,0.25) node {$14-x$};
+					\draw (4.5,-0.6) node {$c=14$};
+				\end{scriptsize}
+			\end{tikzpicture}
+		\end{minipage}
+		\karos{5}
+	\end{aufgabe}
+	{\bf Herleitung: Derselbe Weg mit Variablen}\\
+	Jetzt soll das Dreieck ganz allgemein die Seiten $a$, $b$, $c$ haben. Wir gehen genau gleich vor wie in der Entdeckungsaufgabe und erhalten so eine Formel, die den Flächeninhalt \textbf{nur aus den drei Seiten} berechnet.
+	\begin{enumerate}[label=\alph*)]
+		\item \textbf{Zweimal Pythagoras:} Ergänze für die beiden Teildreiecke \[h_c^2=\gap{3}\qquad\text{und}\qquad h_c^2=\gap{3}.\]
+	\end{enumerate}
+	\karos{2}
+	\begin{enumerate}[label=\alph*), resume]
+		\item \textbf{Die Höhe:} Berechnen wir die Höhe über die Formel des linken Teildreiecks:
+		\begin{align}\nonumber
+			h_c^2&=b^2-x^2\\\nonumber
+			&=(b+x)(b-x)\\\nonumber
+			&=\left(b+\frac{b^2+c^2-a^2}{2c}\right)\left(b-\frac{b^2+c^2-a^2}{2c}\right)\\\nonumber
+			&=\frac{2bc+b^2+c^2-a^2}{2c}\*\frac{2bc-b^2-c^2+a^2}{2c}\\\nonumber
+			&=\frac{(b+c)^2-a^2}{2c}\*\frac{a^2-(b-c)^2}{2c}\\
+			&=\frac{((b+c)+a)((b+c)-a)\*(a-(b-c))(a+(b-c))}{4c^2}
+		\end{align}
+		\item \textbf{Schöner schreiben:} Wir definieren den \textbf{halben Umfang} $s:=\frac{a+b+c}{2}$, somit gilt $a+b+c=2s$ und wir können diesen mühsam aussehenden Bruchterm für die Höhe vereinfachen. Dabei stellen wir fest:
+		\begin{align*}
+			a+b+c&=2s\hspace{6cm}\\
+			-a+b+c&=a+b+c-2a=\gap{3}\\
+			a-b+c&=a+b+c-2b=\gap{3}\\
+			a+b-c&=a+b+c-2c=\gap{3}
+		\end{align*}
+		Damit können wir im Zähler des Bruches an allen vier Stellen eine deutliche Vereinfachung vornehmen und den Term für die Höhe $h_c$ wie folgt darstellen: \[\Rightarrow h_c^2=\frac{2s\*2(s-a)\*2(s-b)\*2(s-c)}{4c^2}=\gap{6}\]
+		\item Somit kennen wir die Grundlinie und die Höhe des Dreiecks und wir können also den Flächeninhalt über die bekannte Flächenformel berechnen:
+	\end{enumerate}
+	\begin{gridspace}{2.5}
+		\begin{enumerate}[label=\ ,leftmargin=0cm]
+			\vspace{-2mm}
+			\item $\ds A_{\triangle ABC}=\frac{1}{2}\*c\*h_c=$
+		\end{enumerate}
+	\end{gridspace}
+	\begin{enumerate}[label=\alph*), resume]
+		\item {\bf Kontrolle:} Teste deine Formel am Dreieck $a=15$, $b=13$, $c=14$.
+	\end{enumerate}
+	\karos{3.5}
+	Damit haben wir also eine zusätzliche Formel für den Flächeninhalt eines beliebigen Dreiecks gefunden. Lass uns dies festhalten.
+	\begin{satz}[Flächenformel nach Heron]
+		\label{satz:heron}
+		Ein Dreieck habe die Seitenlängen $a$, $b$, $c$ und den halben Umfang $s=\frac{1}{2}\*(a+b+c)$. Dann gilt für seinen Flächeninhalt \[A_\triangle=\sqrt{s\*(s-a)\*(s-b)\*(s-c)}.\]
+	\end{satz}
+	{\bf Bemerkungen:}
+	\begin{itemize}
+		\item Die Formel ist \textbf{symmetrisch} in $a$, $b$, $c$: Es spielt keine Rolle, welche Seite wie heisst. Sie gilt für spitz-, recht- und stumpfwinklige Dreiecke.
+		\item Kennt man $A$, so erhält man jede Höhe aus $A=\frac12\,a\,h_a$, also $h_a=\dfrac{2A}{a}$ (analog $h_b$ und $h_c$).
+	\end{itemize}
+	\begin{beispiel}
+		Ein Dreieck hat die Seiten $a=7$ cm, $b=8$ cm und $c=9$ cm. Berechne den Flächeninhalt $A$ und die Höhe $h_c$.
+	\end{beispiel}
+	\karos{4.5}
+
+	\begin{aufgabe}
+		\begin{enumerate}
+			\item Berechne den Flächeninhalt der Dreiecke mit den gegebenen Seitenlängen (in cm). Kontrolliere bei den rechtwinkligen Dreiecken mit $\frac{a\cdot b}{2}$ und beim gleichschenkligen Dreieck über die Höhe auf die Basis.
+			\begin{enumcols}[3]
+				\item $5,\ 12,\ 13$
+				\item $10,\ 10,\ 12$
+				\item $4,\ 5,\ 6$
+				\item $6,\ 7,\ 8$
+				\item $2.5,\ 6,\ 6.5$
+				\item $9,\ 10,\ 17$
+			\end{enumcols}
+			\item Ein Dreieck hat die Seiten $a=25$ cm, $b=39$ cm und $c=56$ cm.
+			\begin{enumerate}[label=\alph*)]
+				\item Berechne den Flächeninhalt mit der Formel von Heron.
+				\item Berechne alle drei Höhen $h_a$, $h_b$ und $h_c$. Welche ist am längsten? Begründe ohne Rechnung, weshalb das so sein muss.
+			\end{enumerate}
+		\end{enumerate}
+		\begin{minipage}{0.55\linewidth}
+			\begin{enumerate}[resume]
+				\item Ein Grundstück $ABCD$ hat die Form eines Vierecks. Ein Geometer hat die vier Seiten und die Diagonale $\overline{AC}$ gemessen und eine Skizze angefertigt.
+				\begin{enumerate}[label=\alph*)]
+					\item Berechne die Fläche des Grundstücks.
+					\item Wie teuer ist das Grundstück, wenn das Land $850$ Fr. pro m$^2$ kostet?
+				\end{enumerate}
+			\end{enumerate}
+		\end{minipage}
+		\hfill
+		\begin{minipage}{0.4\linewidth}
+			\centering
+			\begin{tikzpicture}[cross/.style={draw, cross out, minimum size=2*(#1-1pt), inner sep=0pt, outer sep=0pt}, x=1cm, y=1cm,
+				>=latex,   %Voreinstellung für Pfeilspitzen
+				font=\footnotesize, scale=0.1]
+				\coordinate (A) at (0,0);
+				\coordinate (B) at (33.33,-22.11);
+				\coordinate (C) at (45,0);
+				\coordinate (D) at (26.11,23.31);
+				\draw[fill=forestgreen!30] (A) -- (B) -- (C) -- (D) -- cycle;
+				\draw[dashed] (A) -- (C);
+				\begin{scriptsize}
+					\fill (A) circle (8pt) node[left] {$A$};
+					\fill (B) circle (8pt) node[below] {$B$};
+					\fill (C) circle (8pt) node[right] {$C$};
+					\fill (D) circle (8pt) node[above] {$D$};
+					\draw (14,-14) node {$40$};
+					\draw (42,-12) node {$25$};
+					\draw (38.5,13.5) node {$30$};
+					\draw (10,14.5) node {$35$};
+					\draw (22,1.8) node {$45$};
+				\end{scriptsize}
+			\end{tikzpicture}
+		\end{minipage}
+	\end{aufgabe}
 
 
 \newpage
@@ -509,7 +751,7 @@
 		%\multicolumn{4}{|l|}{History}\\\hline
 		Version & Datum & Person & Bemerkung \\\hline
 		$1.0$ & 08.12.24 & Jonas Guler & Abschnitt 1\&2 erstellt \\\hline
-		$1.1$ & ToDo & Jonas Guler & Abschnitt 3 ergänzen \\\hline
+		$1.1$ & 24.11.26 & Jonas Guler & Abschnitt 3 erstellt \\\hline
 	\end{tabular}
 \end{table}
 

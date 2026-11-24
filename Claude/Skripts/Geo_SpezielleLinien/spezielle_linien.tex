@@ -1,0 +1,322 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage[a4paper,top=2.2cm,bottom=2.2cm,left=2.2cm,right=2.2cm,headheight=14pt]{geometry}
+\usepackage{enumitem}
+\usepackage{tabularx,array}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{needspace}
+\newcolumntype{L}{>{\raggedright\arraybackslash\hyphenpenalty=50}X}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash\hyphenpenalty=50}p{#1}}
+
+\definecolor{akzent}{RGB}{30,80,140}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\raggedright
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\renewcommand{\arraystretch}{1.25}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small Spezielle Linien im Dreieck}
+\rhead{\small Aufgabenblatt}
+\cfoot{\small Seite \thepage\ von \pageref{AufgabenEnde}}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\titleformat{\section}{\large\bfseries\color{akzent}}{}{0pt}{}
+\titlespacing*{\section}{0pt}{14pt}{6pt}
+\titleformat{\subsection}{\normalsize\bfseries}{}{0pt}{}
+\titlespacing*{\subsection}{0pt}{10pt}{3pt}
+
+\newcommand{\stern}{$\bigstar$\ }
+\newcommand{\luecke}{\rule{1.8cm}{0.4pt}}
+\setlist[enumerate]{leftmargin=*,itemsep=3pt,topsep=3pt}
+\setlist[itemize]{leftmargin=*,itemsep=3pt,topsep=3pt}
+
+\begin{document}
+
+{\LARGE\bfseries Spezielle Linien im Dreieck}\\[2pt]
+{\large Repetitions- und Vertiefungsaufgaben}
+
+\vspace{8pt}
+Name: \rule{6cm}{0.4pt}\hfill Datum: \rule{3.5cm}{0.4pt}
+
+\vspace{6pt}
+\begin{tabularx}{\linewidth}{>{\bfseries}l L r}
+\hline
+Teil A -- Repetition & Linien, Schnittpunkte und ihre Eigenschaften & ca. 15 Min. \\
+Teil B -- Anwenden & Rechnen im Koordinatensystem, Sachaufgaben, L\"angen und Winkel & ca. 25 Min. \\
+Teil C -- Vertiefung & Begr\"unden, Lage der Punkte, Euler-Gerade & ca. 20 Min. \\
+\hline
+\end{tabularx}
+
+\small
+Hilfsmittel: Taschenrechner. Es wird nichts konstruiert; l\"ose die Rechnungen auf einem separaten Blatt.
+Aufgaben mit \stern sind Zusatzaufgaben f\"ur alle, die schneller fertig sind.\\
+Bezeichnungen: $U$ = Umkreismittelpunkt, $I$ = Inkreismittelpunkt, $H$ = H\"ohenschnittpunkt, $S$ = Schwerpunkt.
+\normalsize
+
+%==========================================================
+\section{Teil A -- Repetition (ca. 15 Min.)}
+
+\subsection{A1 \quad \"Ubersicht vervollst\"andigen}
+F\"ulle die Tabelle aus. Die erste Zeile ist als Beispiel bereits ausgef\"ullt.
+
+\vspace{2pt}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\linewidth}{|>{\bfseries}P{3.3cm}|L|P{3.1cm}|L|}
+\hline
+Linie & \textbf{Definition} & \textbf{Schnittpunkt} & \textbf{Besondere Eigenschaft des Schnittpunkts} \\ \hline
+Mittelsenkrechte & steht senkrecht auf einer Seite und geht durch deren Mittelpunkt & Umkreis\-mittelpunkt $U$ & gleich weit von allen drei \textbf{Ecken} entfernt \\ \hline
+Winkel\-halbierende & & & \\[1.4cm] \hline
+H\"ohe & & & \\[1.4cm] \hline
+Seiten\-halbierende & & & \\[1.4cm] \hline
+\end{tabularx}
+\renewcommand{\arraystretch}{1.25}
+
+\needspace{8cm}
+\subsection{A2 \quad Richtig oder falsch?}
+Kreuze an und begr\"unde. Korrigiere falsche Aussagen so, dass sie richtig werden.
+
+\begin{tabularx}{\linewidth}{@{}r L c c@{}}
+ & & \textbf{R} & \textbf{F} \\
+1. & Der Umkreismittelpunkt liegt immer im Innern des Dreiecks. & $\square$ & $\square$ \\[3pt]
+2. & Der Inkreismittelpunkt liegt immer im Innern des Dreiecks. & $\square$ & $\square$ \\[3pt]
+3. & Der Schwerpunkt teilt jede Seitenhalbierende im Verh\"altnis $1:2$, von der Ecke aus gemessen. & $\square$ & $\square$ \\[3pt]
+4. & Jeder Punkt auf der Winkelhalbierenden von $\alpha$ ist von den Seiten $b$ und $c$ gleich weit entfernt. & $\square$ & $\square$ \\[3pt]
+5. & In einem rechtwinkligen Dreieck ist der H\"ohenschnittpunkt die Ecke beim rechten Winkel. & $\square$ & $\square$ \\[3pt]
+6. & Eine H\"ohe steht senkrecht auf einer Seite und geht durch deren Mittelpunkt. & $\square$ & $\square$ \\[3pt]
+7. & Eine Seitenhalbierende teilt das Dreieck in zwei fl\"achengleiche Teildreiecke. & $\square$ & $\square$ \\[3pt]
+8. & Der Umkreismittelpunkt ist von allen drei Seiten gleich weit entfernt. & $\square$ & $\square$ \\[3pt]
+\end{tabularx}
+
+%==========================================================
+\section{Teil B -- Anwenden (ca. 25 Min.)}
+
+\subsection{B1 \quad Rechnen im Koordinatensystem}
+Gegeben ist das Dreieck mit $A(0\,|\,1)$, $B(12\,|\,1)$ und $C(3\,|\,10)$; 1 Einheit = 1 cm. L\"ose alles rechnerisch, ohne zu konstruieren.
+\begin{enumerate}
+\item Berechne die Koordinaten des Schwerpunkts $S$. \emph{Tipp:} Sie sind die Mittelwerte der Eckpunkt-Koordinaten.
+\item Begr\"unde, weshalb der Umkreismittelpunkt $U$ auf der Geraden $x = 6$ liegt.
+\item Setze $U(6\,|\,y)$. Nutze, dass $U$ von $A$ und $C$ gleich weit entfernt ist (Pythagoras), und berechne $y$ sowie den Umkreisradius.
+\item Berechne die H\"ohe $h_c$ und den Fl\"acheninhalt des Dreiecks.
+\item Auf welcher Geraden liegt die H\"ohe $h_c$? Was folgt daraus f\"ur die $x$-Koordinate des H\"ohenschnittpunkts $H$?
+\item Berechne den Umfang und daraus den Inkreisradius $r$. Es gilt $A = \tfrac12 \cdot r \cdot u$.
+\end{enumerate}
+
+\subsection{B2 \quad Sachaufgaben}
+Entscheide jeweils, welcher besondere Punkt gesucht ist, und begr\"unde mit seiner Eigenschaft.
+\begin{enumerate}
+\item \textbf{Feuerwehr:} Drei Gemeinden bauen ein gemeinsames Feuerwehrdepot. Es soll von allen drei Dorfzentren gleich weit entfernt sein. Welches Problem entsteht, wenn die drei Dorfzentren ein stark stumpfwinkliges Dreieck bilden?
+\item \textbf{Spielplatz:} Ein dreieckiger Park wird von drei geraden Strassen begrenzt. Darin soll ein m\"oglichst grosser kreisrunder Sandkasten entstehen. Wo liegt sein Mittelpunkt, und wie gross ist er h\"ochstens?
+\item \textbf{Balancieren:} Ein d\"unnes dreieckiges Holzbrett soll waagrecht auf einer Bleistiftspitze balancieren. Wo muss die Spitze ansetzen, und wie findest du diesen Punkt nur mit einem Lineal?
+\end{enumerate}
+
+\subsection{B3 \quad Berechnungen}
+\begin{enumerate}
+\item Ein rechtwinkliges Dreieck hat die Katheten 6 cm und 8 cm. Berechne den Umkreisradius. \emph{Tipp:} Satz des Thales.
+\item Im selben Dreieck: Berechne den Inkreisradius $r$. \emph{Tipp:} Zerlege das Dreieck in drei Teildreiecke mit gemeinsamer Spitze $I$. Es gilt $A = \tfrac12 \cdot r \cdot u$ ($u$ = Umfang).
+\item Die Seitenhalbierende $s_a$ ist 12 cm lang. Wie weit ist $S$ von der Ecke $A$ und vom Seitenmittelpunkt $M_a$ entfernt?
+\item In einem Dreieck gilt $\alpha = 70^\circ$ und $\beta = 50^\circ$. Berechne den Winkel $\angle AIB$.
+\item \stern Ein Dreieck hat den Fl\"acheninhalt 36 cm$^2$. Die drei Seitenhalbierenden zerlegen es in sechs kleine Dreiecke. Wie gross ist jedes davon? Begr\"unde.
+\end{enumerate}
+
+\subsection{B4 \quad L\"angen in besonderen Dreiecken}
+\textbf{Gleichschenkliges Dreieck} mit Basis 10 cm und Schenkeln von je 13 cm:
+\begin{enumerate}
+\item Berechne die H\"ohe auf die Basis und den Fl\"acheninhalt.
+\item Wie weit ist der Schwerpunkt $S$ von der Basis entfernt?
+\item Berechne den Inkreisradius.
+\item \stern Berechne den Umkreisradius $R$. \emph{Tipp:} $U$ liegt auf der Symmetrieachse. Stelle mit Pythagoras eine Gleichung f\"ur $R$ auf.
+\end{enumerate}
+\textbf{Rechtwinkliges Dreieck} mit den Katheten 5 cm und 12 cm (rechter Winkel bei $C$):
+\begin{enumerate}
+\item Berechne den Umkreisradius.
+\item Wie lang ist die Seitenhalbierende $s_c$ auf die Hypotenuse? \emph{Tipp:} Thaleskreis.
+\item Wie weit ist der Schwerpunkt $S$ von der Ecke $C$ entfernt?
+\item Berechne den Inkreisradius.
+\end{enumerate}
+
+\subsection{B5 \quad Winkel}
+Im Dreieck aus B3.4 gilt $\alpha = 70^\circ$ und $\beta = 50^\circ$.
+\begin{enumerate}
+\item Berechne den Winkel zwischen der H\"ohe $h_a$ und der Seite $c$.
+\item Berechne den Winkel $\angle BHC$. \emph{Tipp:} Betrachte das Viereck aus $A$, $H$ und den H\"ohenfusspunkten auf $b$ und $c$.
+\item \stern Zeige allgemein: In jedem Dreieck gilt $\angle AIB = 90^\circ + \dfrac{\gamma}{2}$.
+\end{enumerate}
+
+%==========================================================
+\section{Teil C -- Vertiefung (ca. 20 Min.)}
+
+\subsection{C1 \quad Begr\"unden}
+Weshalb schneiden sich die drei Mittelsenkrechten immer in einem einzigen Punkt? Erg\"anze die Begr\"undung:
+
+\begin{itemize}[itemsep=10pt]
+\item Jeder Punkt auf der Mittelsenkrechten von $AB$ ist gleich weit von \luecke\ und \luecke\ entfernt.
+\item Jeder Punkt auf der Mittelsenkrechten von $BC$ ist gleich weit von \luecke\ und \luecke\ entfernt.
+\item Der Schnittpunkt $U$ dieser beiden Linien ist also gleich weit von \rule{4.5cm}{0.4pt} entfernt.
+\item Deshalb liegt $U$ auch auf \rule{4.5cm}{0.4pt}, denn \rule{6cm}{0.4pt}\\[10pt] \rule{0.96\linewidth}{0.4pt}.
+\end{itemize}
+
+\stern Formuliere eine entsprechende Begr\"undung f\"ur die Winkelhalbierenden.
+
+\needspace{9cm}
+\subsection{C2 \quad Lage der Punkte je nach Dreiecksform}
+\"Uberlege dir (allenfalls mit einer Freihandskizze), wo die Punkte im spitz-, recht- und stumpfwinkligen Dreieck liegen. Trage ein, ob der Punkt innen, auf dem Rand (wo genau?) oder aussen liegt.
+
+\vspace{2pt}
+\renewcommand{\arraystretch}{2.1}
+\begin{tabularx}{\linewidth}{|>{\bfseries}c|L|L|L|}
+\hline
+Punkt & \textbf{spitzwinklig} & \textbf{rechtwinklig} & \textbf{stumpfwinklig} \\ \hline
+$U$ & & & \\ \hline
+$H$ & & & \\ \hline
+$S$ & & & \\ \hline
+$I$ & & & \\ \hline
+\end{tabularx}
+\renewcommand{\arraystretch}{1.25}
+
+\subsection{C3 \quad Besondere Dreiecke}
+\begin{enumerate}
+\item In welchem Dreieck fallen $U$, $H$, $S$ und $I$ zusammen? Begr\"unde.
+\item In einem gleichschenkligen Dreieck liegen alle vier Punkte auf einer gemeinsamen Geraden. Auf welcher, und weshalb?
+\end{enumerate}
+
+\subsection{C4 \quad Dreieck r\"uckw\"arts}
+Von einem Dreieck sind nur $A(1\,|\,2)$, $B(7\,|\,0)$ und der Schwerpunkt $S(4\,|\,3)$ bekannt. Bestimme die Koordinaten von $C$. \emph{Tipp:} Die Koordinaten von $S$ sind die Mittelwerte der Eckpunkt-Koordinaten.
+
+\subsection{C5 \quad \stern Euler-Gerade}
+In jedem Dreieck liegen $U$, $S$ und $H$ auf einer Geraden, der sogenannten Euler-Geraden. Dabei liegt $S$ zwischen $H$ und $U$, und es gilt $\overline{HS} : \overline{SU} = 2:1$.
+\begin{enumerate}
+\item Berechne mit $S$ und $U$ aus B1 die Koordinaten von $H$. Passt das Resultat zu B1.5?
+\item Liegt auch $I$ auf der Euler-Geraden? \emph{Tipp:} $I$ ist von der Seite $AB$ (auf der Geraden $y = 1$) genau $r$ entfernt.
+\item Weshalb ist die Euler-Gerade in einem gleichseitigen Dreieck nicht definiert?
+\end{enumerate}
+
+\label{AufgabenEnde}
+%==========================================================
+\newpage
+\setcounter{page}{1}
+\rhead{\small L\"osungen}
+\cfoot{\small L\"osungen, Seite \thepage}
+{\LARGE\bfseries L\"osungen}
+
+\section{Teil A}
+
+\subsection{A1}
+\small
+\begin{tabularx}{\linewidth}{|>{\bfseries}P{3.1cm}|L|P{3cm}|L|}
+\hline
+Linie & \textbf{Definition} & \textbf{Schnittpunkt} & \textbf{Eigenschaft} \\ \hline
+Mittelsenkrechte & senkrecht auf einer Seite, durch deren Mittelpunkt & Umkreis\-mittelpunkt $U$ & gleich weit von allen drei Ecken entfernt (Mittelpunkt des Umkreises) \\ \hline
+Winkel\-halbierende & halbiert einen Innenwinkel & Inkreis\-mittelpunkt $I$ & gleich weit von allen drei Seiten entfernt (Mittelpunkt des Inkreises) \\ \hline
+H\"ohe & durch eine Ecke, senkrecht auf die gegen\"uberliegende Seite (bzw.\ deren Verl\"angerung) & H\"ohen\-schnittpunkt $H$ & liegt mit $U$ und $S$ auf der Euler-Geraden \\ \hline
+Seiten\-halbierende & verbindet eine Ecke mit dem Mittelpunkt der gegen\"uberliegenden Seite & Schwerpunkt $S$ & teilt jede Seitenhalbierende im Verh\"altnis $2:1$ (von der Ecke aus); Gleichgewichtspunkt \\ \hline
+\end{tabularx}
+\normalsize
+
+\subsection{A2}
+\begin{enumerate}
+\item Falsch. Beim stumpfwinkligen Dreieck liegt $U$ aussen, beim rechtwinkligen auf der Hypotenusenmitte.
+\item Richtig. Alle Winkelhalbierenden verlaufen im Innern des Dreiecks.
+\item Falsch. Das Verh\"altnis ist $2:1$, von der Ecke aus gemessen.
+\item Richtig. Das ist die Ortslinien-Eigenschaft der Winkelhalbierenden.
+\item Richtig. Die beiden Katheten sind zugleich H\"ohen; sie schneiden sich in der Ecke beim rechten Winkel.
+\item Falsch. Das beschreibt die Mittelsenkrechte. Eine H\"ohe geht durch die gegen\"uberliegende Ecke.
+\item Richtig. Beide Teildreiecke haben gleich lange Grundseiten (halbe Seite) und dieselbe H\"ohe.
+\item Falsch. $U$ ist von den drei \textbf{Ecken} gleich weit entfernt, $I$ von den drei Seiten.
+\end{enumerate}
+
+\section{Teil B}
+
+\subsection{B1}
+\begin{enumerate}
+\item $S = \left(\frac{0+12+3}{3}\,\middle|\,\frac{1+1+10}{3}\right) = \mathbf{(5\,|\,4)}$.
+\item $A$ und $B$ haben dieselbe $y$-Koordinate, $AB$ ist also waagrecht. Die Mittelsenkrechte von $AB$ steht senkrecht dazu und geht durch den Mittelpunkt $(6\,|\,1)$, ist also die Gerade $x = 6$.
+\item $6^2 + (y-1)^2 = 3^2 + (y-10)^2 \;\Rightarrow\; 36 + y^2 - 2y + 1 = 9 + y^2 - 20y + 100 \;\Rightarrow\; 18y = 72 \;\Rightarrow\; y = 4$.\\
+$U = \mathbf{(6\,|\,4)}$, Umkreisradius $= \sqrt{36+9} = \sqrt{45} \approx \mathbf{6.71}$ \textbf{cm}.
+\item Weil $AB$ waagrecht ist: $h_c = 10 - 1 = \mathbf{9}$ \textbf{cm}, $A = \tfrac12 \cdot 12 \cdot 9 = \mathbf{54}$ \textbf{cm}$^2$.
+\item $h_c$ steht senkrecht auf $AB$ und geht durch $C$, liegt also auf der Geraden $x = 3$. Damit hat $H$ die $x$-Koordinate 3.
+\item $a = \sqrt{9^2+9^2} = \sqrt{162} \approx 12.73$ cm, $b = \sqrt{3^2+9^2} = \sqrt{90} \approx 9.49$ cm, $c = 12$ cm.\\
+$u \approx 34.21$ cm, \ $r = \dfrac{2A}{u} = \dfrac{108}{34.21} \approx \mathbf{3.16}$ \textbf{cm}.
+\end{enumerate}
+
+\subsection{B2}
+\begin{enumerate}
+\item Umkreismittelpunkt $U$: gleich weit von allen drei Ecken. Bei einem stark stumpfwinkligen Dreieck liegt $U$ ausserhalb und weit weg; das Depot st\"unde ausserhalb des Gebiets, alle Wege w\"aren unn\"otig lang.
+\item Inkreismittelpunkt $I$: gleich weit von allen drei Seiten (Strassen). Der gr\"osstm\"ogliche Sandkasten ist der Inkreis; sein Radius ist der Inkreisradius.
+\item Schwerpunkt $S$. Zwei Seitenmitten mit dem Lineal ausmessen, jeweils mit der gegen\"uberliegenden Ecke verbinden; der Schnittpunkt ist $S$.
+\end{enumerate}
+
+\subsection{B3}
+\begin{enumerate}
+\item Hypotenuse $= 10$ cm. Nach Thales ist sie ein Durchmesser des Umkreises, also Umkreisradius $= \mathbf{5}$ \textbf{cm}.
+\item $u = 6+8+10 = 24$ cm, $A = \tfrac12 \cdot 6 \cdot 8 = 24$ cm$^2$. Aus $24 = \tfrac12 \cdot r \cdot 24$ folgt $r = \mathbf{2}$ \textbf{cm}.
+\item $\overline{AS} = \tfrac23 \cdot 12 = \mathbf{8}$ \textbf{cm}, \ $\overline{SM_a} = \tfrac13 \cdot 12 = \mathbf{4}$ \textbf{cm}.
+\item Im Dreieck $ABI$ sind die Winkel bei $A$ und $B$ halbiert: $35^\circ$ und $25^\circ$. Also $\angle AIB = 180^\circ - 35^\circ - 25^\circ = \mathbf{120^\circ}$.
+\item Je \textbf{6 cm}$^\mathbf{2}$. Die zwei Teildreiecke an derselben Seitenmitte haben gleiche Grundseite und gleiche H\"ohe, sind also gleich gross. Da jede Seitenhalbierende das Dreieck halbiert, sind alle drei Paare gleich gross: $36 : 6 = 6$ cm$^2$.
+\end{enumerate}
+
+\subsection{B4}
+\textbf{Gleichschenkliges Dreieck}
+\begin{enumerate}
+\item $h = \sqrt{13^2 - 5^2} = \mathbf{12}$ \textbf{cm}, \ $A = \tfrac12 \cdot 10 \cdot 12 = \mathbf{60}$ \textbf{cm}$^\mathbf{2}$.
+\item Die H\"ohe auf die Basis ist zugleich Seitenhalbierende. $S$ teilt sie im Verh\"altnis $2:1$, ist also $\tfrac13 \cdot 12 = \mathbf{4}$ \textbf{cm} von der Basis entfernt.
+\item $u = 36$ cm, \ $r = \dfrac{2A}{u} = \dfrac{120}{36} = \dfrac{10}{3} \approx \mathbf{3.33}$ \textbf{cm}.
+\item Abstand von $U$ zur Basis: $12 - R$. Mit Pythagoras: $R^2 = 5^2 + (12-R)^2 \;\Rightarrow\; 24R = 169 \;\Rightarrow\; R = \dfrac{169}{24} \approx \mathbf{7.04}$ \textbf{cm}.
+\end{enumerate}
+\textbf{Rechtwinkliges Dreieck}
+\begin{enumerate}
+\item Hypotenuse $= \sqrt{5^2+12^2} = 13$ cm. Nach Thales ist sie ein Durchmesser, also Umkreisradius $= \mathbf{6.5}$ \textbf{cm}.
+\item $s_c$ verbindet $C$ mit dem Mittelpunkt der Hypotenuse, also mit $U$. Darum gilt $s_c$ = Umkreisradius $= \mathbf{6.5}$ \textbf{cm}.
+\item $\overline{CS} = \tfrac23 \cdot 6.5 = \tfrac{13}{3} \approx \mathbf{4.33}$ \textbf{cm}.
+\item $u = 30$ cm, $A = \tfrac12 \cdot 5 \cdot 12 = 30$ cm$^2$, \ $r = \dfrac{2A}{u} = \mathbf{2}$ \textbf{cm}.
+\end{enumerate}
+
+\subsection{B5}
+\begin{enumerate}
+\item $h_a$, die Seite $c$ und die Strecke von $B$ zum H\"ohenfusspunkt bilden ein rechtwinkliges Dreieck mit dem Winkel $\beta = 50^\circ$ bei $B$. Gesuchter Winkel: $90^\circ - 50^\circ = \mathbf{40^\circ}$.
+\item Im Viereck aus $A$, den beiden H\"ohenfusspunkten und $H$ sind zwei Winkel $90^\circ$. Winkel bei $H$: $360^\circ - 90^\circ - 90^\circ - 70^\circ = 110^\circ$. $\angle BHC$ ist sein Scheitelwinkel: $\mathbf{110^\circ}$ (allgemein $180^\circ - \alpha$).
+\item $\angle AIB = 180^\circ - \dfrac{\alpha}{2} - \dfrac{\beta}{2} = 180^\circ - \dfrac{\alpha+\beta}{2} = 180^\circ - \dfrac{180^\circ - \gamma}{2} = \mathbf{90^\circ + \dfrac{\gamma}{2}}$. Kontrolle mit B3.4: $90^\circ + 30^\circ = 120^\circ$.
+\end{enumerate}
+
+\section{Teil C}
+
+\subsection{C1}
+\ldots\ von $A$ und $B$ \ldots\ von $B$ und $C$ \ldots\ von $A$, $B$ und $C$ \ldots\ auf der Mittelsenkrechten von $AC$, denn er ist gleich weit von $A$ und $C$ entfernt.
+
+\stern Ein Punkt auf $w_\alpha$ ist gleich weit von $b$ und $c$ entfernt, einer auf $w_\beta$ gleich weit von $a$ und $c$. Der Schnittpunkt ist also gleich weit von $a$ und $b$ entfernt und liegt deshalb auch auf $w_\gamma$.
+
+\subsection{C2}
+\begin{tabularx}{\linewidth}{|>{\bfseries}c|L|L|L|}
+\hline
+Punkt & \textbf{spitzwinklig} & \textbf{rechtwinklig} & \textbf{stumpfwinklig} \\ \hline
+$U$ & innen & Mittelpunkt der Hypotenuse & aussen \\ \hline
+$H$ & innen & Ecke beim rechten Winkel & aussen \\ \hline
+$S$ & innen & innen & innen \\ \hline
+$I$ & innen & innen & innen \\ \hline
+\end{tabularx}
+
+\subsection{C3}
+\begin{enumerate}
+\item Im gleichseitigen Dreieck. Dort fallen Mittelsenkrechte, Winkelhalbierende, H\"ohe und Seitenhalbierende zu jeder Seite zusammen (Symmetrieachsen), also auch ihre Schnittpunkte.
+\item Auf der Symmetrieachse. Zur Basis fallen Mittelsenkrechte, H\"ohe, Seitenhalbierende und die Winkelhalbierende des Winkels an der Spitze zusammen.
+\end{enumerate}
+
+\subsection{C4}
+$x = 3 \cdot 4 - 1 - 7 = 4$, \ $y = 3 \cdot 3 - 2 - 0 = 7$, also $\mathbf{C(4\,|\,7)}$.
+
+\subsection{C5}
+\begin{enumerate}
+\item Von $U$ nach $S$ geht man um $(-1\,|\,0)$. Weil $\overline{HS}$ doppelt so lang ist wie $\overline{SU}$, gilt $H = S + 2 \cdot (-1\,|\,0) = \mathbf{(3\,|\,4)}$. Das passt zu B1.5: $x = 3$.
+\item Nein. $I$ hat die $y$-Koordinate $1 + r \approx 4.16$, liegt also nicht auf der Euler-Geraden $y = 4$. Nur in gleichschenkligen Dreiecken liegt $I$ im Allgemeinen auf der Euler-Geraden.
+\item $U$, $S$ und $H$ fallen in einem Punkt zusammen. Durch einen einzigen Punkt ist keine Gerade eindeutig festgelegt.
+\end{enumerate}
+
+\end{document}

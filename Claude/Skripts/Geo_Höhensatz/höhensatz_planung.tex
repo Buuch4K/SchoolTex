@@ -1,0 +1,126 @@
+\documentclass[11pt,oneside]{article}
+\input{../../../Header/packages.sty}
+\input{../../../Header/mathexpressions.sty}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Lektionsplanung: Der Höhensatz}
+\rhead{Jonas Guler (Gu)}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{14pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\linespread{1.15}
+
+\begin{document}
+{\Large\textbf{Lektionsplanung: Der Höhensatz}}\\[2mm]
+\begin{tabularx}{\textwidth}{@{}lX}
+	Thema: & Sätze im rechtwinkligen Dreieck, Höhensatz\\
+	Dauer: & 1 Lektion à 45 Minuten\\
+	Einbettung: & nach dem Satz des Pythagoras und dem Kathetensatz (Skript \textit{Sätze im rechtwinkligen Dreieck}, Abschnitt 3, und Lektion \textit{Der Kathetensatz})\\
+	Material: & Arbeitsblatt \texttt{höhensatz.pdf}, Taschenrechner, Geodreieck und Zirkel\\
+\end{tabularx}
+
+\section*{Lernziele}
+Die Lernenden \ldots
+\begin{itemize}[itemsep=0pt]
+	\item entdecken durch Konstruktion und an Zahlenbeispielen den Zusammenhang $h_c^2=p\cdot q$ und formulieren ihn als Vermutung.
+	\item können den Höhensatz in Worten und als Formel angeben und am Flächenbild (Höhenquadrat = Rechteck aus $p$ und $q$) erklären.
+	\item können den Höhensatz aus Pythagoras und Kathetensatz herleiten und kennen die ganze Satzgruppe des Pythagoras.
+	\item berechnen mit dem Höhensatz und den bekannten Sätzen fehlende Grössen im rechtwinkligen Dreieck und wenden den Satz bei Flächenverwandlungen an.
+\end{itemize}
+
+\textbf{Vorwissen:} Satz des Pythagoras, Kathetensatz $a^2=c\cdot q$, $b^2=c\cdot p$, Satz des Thales, Konstruktion einer Senkrechten.
+
+\textbf{Notation:} Wie im Skript und in der Kathetensatz-Lektion liegt $p$ bei $A$ (an der Kathete $b$) und $q$ bei $B$. Der Höhensatz selbst ist symmetrisch in $p$ und $q$, die Notation wird erst bei Rechnungen mit dem Kathetensatz wichtig.
+
+\section*{Ablauf}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{11mm}|>{\raggedright\arraybackslash}p{27mm}|X|>{\raggedright\arraybackslash}p{22mm}|}\hline
+	\textbf{Zeit} & \textbf{Phase} & \textbf{Inhalt und Aktivität} & \textbf{Sozialform}\\\hline
+	0'--3' & Einstieg & Begrüssung, kurze Repetition Kathetensatz (Merksatz abfragen). Lektionsziel: \textit{Nach den Katheten untersuchen wir heute die Höhe.} Arbeitsblatt austeilen. & Plenum\\\hline
+	3'--15' & Schüleraktivität (Entdeckung) & \textbf{Aufgabe 1.1, Teil A:} Dreieck aus $p=4.5$, $q=2$ mit Thaleskreis konstruieren, $h_c$ messen, Tabelle ausfüllen, Vermutung formulieren. \textbf{Teil B} (Beweis nur mit Pythagoras) für schnelle Paare. Häufige Hürde: Wie findet man $C$? Hinweis auf Thaleskreis über $\overline{AB}$ und Senkrechte in $H_c$. & Partnerarbeit\\\hline
+	15'--26' & Theorieinput & Vermutungen sammeln. \textbf{Satz 2.1} mit Flächenbild an der Wandtafel (Quadrat über $h_c$, Rechteck $p\times q$, $q$ heruntergeklappt). \textbf{Beweis} gemeinsam mit Pythagoras im Teildreieck und Kathetensatz; Teil B als zweiten Beweis von einem Paar vorstellen lassen. \textbf{Bemerkungen:} geometrisches Mittel, Symmetrie in $p$ und $q$, Übersichtstabelle Satzgruppe gemeinsam ausfüllen. \textbf{Beispiel 1} gemeinsam lösen (ca.\ 3'). & Plenum, Lehrervortrag mit Fragen\\\hline
+	26'--44' & Übungen & \textbf{Pflicht:} Aufgabe 3.1 a)--d), 3.2, 3.3 a)--d).\newline \textbf{Zusatz:} 3.1 e)--f), 3.3 e), 3.4 (Wurzeln konstruieren), 3.5 (Tunnel), 3.6 $\bigstar$ (Mittelwerte). Lösungen liegen bei der Lehrperson auf bzw.\ werden ab Min.\ 38 aufgelegt. & Einzel- oder Partnerarbeit\\\hline
+	44'--45' & Abschluss & Merksatz wiederholen lassen: \textit{Höhe$^2$ = Produkt der Hypotenusenabschnitte.} Hausaufgabe: Pflichtaufgaben fertig lösen. & Plenum\\\hline
+\end{tabularx}
+
+\section*{Tafelbild (Vorschlag)}
+\begin{minipage}{0.52\linewidth}
+	\textbf{Höhensatz}\\
+	Höhenquadrat = Rechteck aus den beiden Hypotenusenabschnitten:
+	\[h_c^2=p\cdot q\qquad\Leftrightarrow\qquad h_c=\sqrt{p\cdot q}\]
+	\textbf{Beweis:} (I) $h_c^2=b^2-p^2$ (Pythagoras in $\triangle AH_cC$),\\ (II) $b^2=c\cdot p$ (Kathetensatz).\\
+	$h_c^2=c\cdot p-p^2=p\,(c-p)=p\cdot q$.
+\end{minipage}
+\hfill
+\begin{minipage}{0.42\linewidth}
+	\centering
+	\begin{tikzpicture}[x=1cm, y=1cm, font=\footnotesize, scale=0.6]
+		\filldraw[fill=myblue, fill opacity=0.25, draw=black] (0.8,0) -- (3.2,0) -- (3.2,2.4) -- (0.8,2.4) -- cycle;
+		\filldraw[fill=orange, fill opacity=0.25, draw=black] (0,0) -- (3.2,0) -- (3.2,-1.8) -- (0,-1.8) -- cycle;
+		\draw[line width=1pt] (0,0) -- (5,0) -- (3.2,2.4) -- cycle;
+		\draw[red, line width=1pt] (3.2,2.4) -- (3.2,0);
+		\draw[dashed] (5,0) arc (0:-90:1.8);
+		\draw (1.7,1.5) node {$h_c^2$};
+		\draw (1.6,-0.9) node {$p\, q$};
+	\end{tikzpicture}
+\end{minipage}
+
+\section*{Mögliche Schwierigkeiten und Differenzierung}
+\begin{itemize}[itemsep=0pt]
+	\item \textbf{Konstruktion in 1.1:} Wer den Thaleskreis nicht sieht, erhält den Tipp \textit{Wo liegen alle Punkte, die mit $A$ und $B$ einen rechten Winkel bilden?}
+	\item \textbf{Verwechslung der Sätze:} Höhensatz und Kathetensatz werden oft vermischt ($h^2=c\cdot p$). Die Übersichtstabelle und das Flächenbild helfen, ebenso die Frage \textit{Welche Seite wird quadriert?}
+	\item \textbf{Höhe nicht auf die Hypotenuse:} Bei 3.1 f) zuerst mit Pythagoras $q$ bestimmen, erst dann den Höhensatz verwenden.
+	\item \textbf{Schwächere Lernende:} In 1.1 nur die Tabellenzeilen 2--4 ausfüllen und direkt die Vermutung formulieren.
+	\item \textbf{Stärkere Lernende:} Teil B von 1.1, Aufgaben 3.4--3.6; zusätzlich: Kehrsatz formulieren (\textit{Gilt $h_c^2=p\cdot q$, ist das Dreieck dann rechtwinklig?}).
+\end{itemize}
+
+\newpage
+\section*{Lösungen}
+\textbf{Aufgabe 1.1}
+\begin{itemize}[itemsep=0pt]
+	\item[a)--b)] $\overline{AB}=6.5$\,cm, $H_c$ mit $\overline{AH_c}=4.5$\,cm, Senkrechte in $H_c$ mit Thaleskreis schneiden. Messwert $h_c=3$\,cm.
+	\item[c)] Zeile 1: $c=6.5$, $h_c^2=9=p\cdot q$. Zeile 2: $c=10$, $16=16$. Zeile 3: $c=12.5$, $25=25$. Zeile 4: $c=10$, $9=9$.
+	\item[d)] Vermutung: $h_c^2=p\cdot q$.
+	\item[e)--f)] $a^2=h_c^2+q^2$, $b^2=h_c^2+p^2$. Einsetzen: $2h_c^2+p^2+q^2=p^2+2pq+q^2$, also $h_c^2=p\cdot q$.
+\end{itemize}
+
+\textbf{Beweis Satz 2.1:} (I) $h_c^2=b^2-p^2$, (II) $b^2=c\cdot p$, also $h_c^2=c\cdot p-p^2=p\,(c-p)=p\cdot q$.
+
+\textbf{Übersicht:} Pythagoras $a^2+b^2=c^2$ (Summe der Kathetenquadrate = Hypotenusenquadrat); Kathetensatz $a^2=c\cdot q$, $b^2=c\cdot p$ (Kathetenquadrat = Hypotenuse mal anliegender Abschnitt); Höhensatz $h_c^2=p\cdot q$ (Höhenquadrat = Produkt der Abschnitte).
+
+\textbf{Beispiel 1:} $p=\frac{h_c^2}{q}=\frac{36}{4}=9$\,cm, $c=13$\,cm, $a=\sqrt{c\cdot q}=\sqrt{52}=2\sqrt{13}\approx 7.21$\,cm, $b=\sqrt{c\cdot p}=\sqrt{117}=3\sqrt{13}\approx 10.82$\,cm, $A=\frac{c\cdot h_c}{2}=39$\,cm$^2$. Kontrolle: $\frac{a\cdot b}{2}=\frac{6\cdot 13}{2}=39$\,cm$^2$.
+
+\textbf{Aufgabe 3.1}
+\begin{enumerate}[label=\alph*), itemsep=0pt]
+	\item $h_c=\sqrt{16}=4$\,cm, $c=10$\,cm, $a=\sqrt{10\cdot 2}=2\sqrt5\approx 4.47$\,cm, $b=\sqrt{10\cdot 8}=4\sqrt5\approx 8.94$\,cm.
+	\item $q=\frac{144}{16}=9$\,cm, $c=25$\,cm.
+	\item $p=\frac{36}{3}=12$\,cm, $c=15$\,cm, $a=\sqrt{45}=3\sqrt5\approx 6.71$\,cm, $b=\sqrt{180}=6\sqrt5\approx 13.42$\,cm.
+	\item $q=8$\,cm, $h_c=\sqrt{16}=4$\,cm, $b=\sqrt{10\cdot 2}=2\sqrt5\approx 4.47$\,cm.
+	\item $h_c=\sqrt{25-9}=4$\,cm, $q=\frac{16}{3}\approx 5.33$\,cm, $c=\frac{25}{3}\approx 8.33$\,cm.
+	\item $q=\sqrt{169-144}=5$\,cm, $p=\frac{144}{5}=28.8$\,cm, $c=33.8$\,cm.
+\end{enumerate}
+
+\textbf{Aufgabe 3.2:} $p+q=5q=15$, also $q=3$\,cm, $p=12$\,cm, $h_c=\sqrt{36}=6$\,cm, $A=\frac{15\cdot 6}{2}=45$\,cm$^2$.
+
+\textbf{Aufgabe 3.3:} Nach Thales ist $\triangle ABC$ rechtwinklig bei $C$, $\overline{HC}$ ist die Höhe. Höhensatz: $\overline{HC}^2=6\cdot 2=12$\,cm$^2$ = Rechtecksfläche, also $\overline{HC}=\sqrt{12}\approx 3.46$\,cm.\\
+e) Gleich: Thaleskreis und Senkrechte. Anders: Beim Höhensatz ist die Strecke $\overline{AB}$ die Summe der Rechteckseiten ($8$\,cm) und das Quadrat liegt über der Höhe. Beim Kathetensatz ist $\overline{AB}$ die längere Rechteckseite ($6$\,cm), die kürzere wird darauf abgetragen und das Quadrat liegt über einer Kathete.
+
+\textbf{Aufgabe 3.4:} Es braucht $p\cdot q=10$ bzw.\ $p\cdot q=7$, z.B.\ a) $p=5$\,cm, $q=2$\,cm (oder $10$ und $1$), b) $p=7$\,cm, $q=1$\,cm (oder $3.5$ und $2$). Es gibt unendlich viele Möglichkeiten.
+
+\textbf{Aufgabe 3.5:}
+a) $p=1.5$\,m, $q=8.5$\,m: $h^2=12.75$, $h\approx 3.57$\,m.
+b) Die Kante des Lastwagens liegt $5-1.25=3.75$\,m vom Rand: $h^2=3.75\cdot 6.25\approx 23.44$, $h\approx 4.84$\,m $>4.5$\,m, er passt.
+c) $p\,(10-p)=16$ liefert $p=2$\,m (Probieren), also höchstens $10-2\cdot 2=6$\,m breit.
+
+\textbf{Aufgabe 3.6:} a) Der Radius $\overline{MC}$ (mit Mittelpunkt $M$ der Strecke) ist das arithmetische Mittel $\frac{p+q}{2}$, die Höhe $\overline{HC}$ ist nach dem Höhensatz das geometrische Mittel $\sqrt{p\cdot q}$. b) Im rechtwinkligen Dreieck $\triangle MHC$ ist $\overline{MC}$ die Hypotenuse, also $\overline{HC}\leq\overline{MC}$. Gleichheit genau dann, wenn $H=M$, also $p=q$.
+
+\section*{Quellen und Inspiration}
+\begin{itemize}[itemsep=0pt]
+	\item Geometrie 2 (Niederberger), Kap.\ \textit{Der Höhensatz}, S.\,83--84 (Herleitung, Aufgaben 1, 2, 5, 6, Vertiefung Nr.\,1).
+	\item Geometrie 1 Aufgaben, Kap.\,5.2 \textit{Höhensatz und Kathetensatz}, Nr.\,40, 41, 43.
+	\item Prüfungssammlung \texttt{SchoolTex/Exams} geprüft: Einzige thematisch passende Aufgabe (GZP25, Kathetenquadrate unterscheiden sich um $20$\,cm$^2$) wurde nicht verwendet.
+\end{itemize}
+\end{document}
